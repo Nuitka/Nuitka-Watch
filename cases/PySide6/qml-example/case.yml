@@ -3,7 +3,10 @@
 # yamllint disable rule:comments-indentation
 # too many spelling things, spell-checker: disable
 ---
-- case: latest
+- case: PySide6-latest
+  # Integer version, increased when results become invalidated by cases changes.
+  version: 1
+  filename: "PySideQmlPolarchartTest.py"
   # Requirements to do
   requirements:
     # First one is item under test.
@@ -12,12 +15,14 @@
     - Win32
     - Linux
     - macOS
-  python_version: "python_version >= 0x360"
+  python_version_req: "python_version >= 0x360"
   # Usable with Anaconda or not.
   anaconda: "no"
   # Does commercial compilation change things.
   commercial: "both"
   # Does this package create a GUI program.
   gui: "yes"
+  # Does this package have icons
+  icons: "yes"
   # Can this program be run automatically.
   interactive: "yes"
