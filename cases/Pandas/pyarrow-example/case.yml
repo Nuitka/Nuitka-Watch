@@ -1,0 +1,52 @@
+# yamllint disable rule:line-length
+# yamllint disable rule:indentation
+# yamllint disable rule:comments-indentation
+# too many spelling things, spell-checker: disable
+---
+- case: pandas+pyarrow-latest
+  # Integer version, increased when results become invalidated by cases changes.
+  version: 1
+  filename: "PandasPyrarrowUsing.py"
+  # Requirements to do
+  requirements:
+    # First one is item under test.
+    - pandas
+    - pyarrow
+  os:
+    - Win32
+    - Linux
+    - macOS
+  # Usable with Anaconda or not.
+  anaconda: "no"
+  # Does commercial compilation change things.
+  commercial: "no"
+  # Does this package create a GUI program.
+  gui: "no"
+  # Does this package have icons
+  icons: "no"
+  # Can this program be run automatically.
+  interactive: "no"
+
+- case: pandas1.x+pyarrow8.x
+  version: 1
+  filename: "PandasPyrarrowUsing.py"
+  # Requirements to do
+  requirements:
+    # First one is item under test.
+    - pandas<2
+    - pyarrow<9
+  os:
+    - Win32
+    - Linux
+    - macOS
+  # Usable with Anaconda or not.
+  anaconda: "no"
+  # Does commercial compilation change things.
+  commercial: "no"
+  # Does this package create a GUI program.
+  gui: "no"
+  # Does this package have icons
+  icons: "no"
+  # Can this program be run automatically.
+  interactive: "no"
+    # First one is item under test.
