@@ -25,9 +25,13 @@ pulls in the supported version of pipenv for a given Python.
     # For each python used:
     python -m pip install -r requirements.txt
 
-    # Go to the base of this repository, may also go to subfolders to
+    # Go to the base of this repository, may also go to sub-folders to
     # benefit from the structure.
     cd Nuitka-watch
 
     # Execute Nuitka watch. Nuitka does not have to be installed anywhere.
     python3 ../Nuitka/bin/nuitka-watch
+
+    # Execute Nuitka watch in latest version (Py2C) against e.g. a hotfix in Nuitka-develop
+    # with only 3.10 being done.
+    python3 ./Py2C/bin/nuitka-watch --python-version=3.10 --nuitka-binary=../Nuitka-develop/bin/nuitka
