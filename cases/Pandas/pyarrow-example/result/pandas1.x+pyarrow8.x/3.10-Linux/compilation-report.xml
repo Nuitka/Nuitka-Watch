@@ -1,4 +1,4 @@
-<nuitka-compilation-report nuitka_version="1.6rc" nuitka_commercial_version="2.1.0" completion="yes">
+<nuitka-compilation-report nuitka_version="1.7.2" nuitka_commercial_version="not installed" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" reason="Part of standard library">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -15,7 +15,7 @@
       <module_usage name="pandas.io.formats.style" finding="absolute" line="10" />
     </module_usages>
   </module>
-  <module name="__parents_main__" kind="CompiledPythonModule" reason="Autoenable multiprocessing freeze support">
+  <module name="__parents_main__" kind="CompiledPythonModule" reason="Auto enable multiprocessing freeze support">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -514,7 +514,7 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="dateutil" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="dateutil" kind="CompiledPythonPackage" reason="Containing package of 'dateutil.parser'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <distributions>
@@ -794,7 +794,7 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="email" kind="UncompiledPythonPackage" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
+  <module name="email" kind="UncompiledPythonPackage" reason="Containing package of 'email.message'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -1017,7 +1017,7 @@
     </module_usages>
   </module>
   <module name="email.utils" kind="UncompiledPythonModule" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
-    <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_socket" tags_used="use_socket" result="true" />
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_socket&quot;)" tags_used="has_builtin_module" result="false" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -1025,6 +1025,7 @@
       <module_usage name="re" finding="absolute" line="26" />
       <module_usage name="time" finding="built-in" line="27" />
       <module_usage name="random" finding="absolute" line="28" />
+      <module_usage name="socket" finding="absolute" line="29" />
       <module_usage name="datetime" finding="absolute" line="30" />
       <module_usage name="urllib.parse" finding="absolute" line="31" />
       <module_usage name="email._parseaddr" finding="absolute" line="33" />
@@ -1654,11 +1655,6 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="fractions" kind="UncompiledPythonModule" reason="Part of standard library">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
   <module name="ftplib" kind="UncompiledPythonModule" reason="Part of standard library">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -1752,7 +1748,7 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="http" kind="UncompiledPythonPackage" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
+  <module name="http" kind="UncompiledPythonPackage" reason="Containing package of 'http.server'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -1990,20 +1986,41 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="logging" kind="UncompiledPythonPackage" reason="Part of standard library">
+  <module name="logging" kind="UncompiledPythonPackage" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
-  <module name="logging.config" kind="UncompiledPythonModule" reason="Part of standard library">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
-  <module name="logging.handlers" kind="UncompiledPythonModule" reason="Part of standard library">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="sys" finding="built-in" line="1" />
+      <module_usage name="sys" finding="built-in" line="26" />
+      <module_usage name="os" finding="absolute" line="26" />
+      <module_usage name="time" finding="built-in" line="26" />
+      <module_usage name="io" finding="absolute" line="26" />
+      <module_usage name="re" finding="absolute" line="26" />
+      <module_usage name="traceback" finding="absolute" line="26" />
+      <module_usage name="warnings" finding="absolute" line="26" />
+      <module_usage name="weakref" finding="absolute" line="26" />
+      <module_usage name="collections.abc" finding="absolute" line="26" />
+      <module_usage name="string" finding="absolute" line="28" />
+      <module_usage name="string" finding="absolute" line="29" />
+      <module_usage name="threading" finding="absolute" line="42" />
+      <module_usage name="posixpath" finding="absolute" line="181" />
+      <module_usage name="posixpath" finding="absolute" line="318" />
+      <module_usage name="sys" finding="built-in" line="1018" />
+      <module_usage name="sys" finding="built-in" line="1021" />
+      <module_usage name="sys" finding="built-in" line="1022" />
+      <module_usage name="sys" finding="built-in" line="1023" />
+      <module_usage name="sys" finding="built-in" line="1031" />
+      <module_usage name="sys" finding="built-in" line="1034" />
+      <module_usage name="sys" finding="built-in" line="1038" />
+      <module_usage name="sys" finding="built-in" line="1044" />
+      <module_usage name="sys" finding="built-in" line="1074" />
+      <module_usage name="posixpath" finding="absolute" line="1152" />
+      <module_usage name="sys" finding="built-in" line="1239" />
+      <module_usage name="sys" finding="built-in" line="1706" />
+      <module_usage name="pickle" finding="absolute" line="1773" />
+      <module_usage name="atexit" finding="built-in" line="2198" />
+    </module_usages>
   </module>
   <module name="lzma" kind="UncompiledPythonModule" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
     <optimization-time pass="1" time="volatile" />
@@ -2068,7 +2085,6 @@
     <module_usages>
       <module_usage name="sys" finding="built-in" line="1" />
       <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="posixpath" finding="absolute" line="7" />
     </module_usages>
   </module>
   <module name="multiprocessing.connection" kind="UncompiledPythonModule" reason="Multiprocessing plugin needs this to monkey patch it.">
@@ -2405,6 +2421,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.resource_tracker" kind="UncompiledPythonModule" reason="Multiprocessing plugin needs this to monkey patch it.">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not module_mode" tags_used="module_mode" result="true" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -2562,7 +2579,7 @@
   </module>
   <module name="numpy" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
     <plugin-influence name="dll-files" influence="condition-used" condition="win32" tags_used="win32" result="false" />
-    <plugin-influence name="dll-files" influence="condition-used" condition="anaconda" tags_used="anaconda" result="false" />
+    <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;)" tags_used="is_conda_package" result="false" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <distributions>
@@ -2571,18 +2588,23 @@
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="built-in" line="1" />
-      <module_usage name="sys" finding="built-in" line="106" />
-      <module_usage name="warnings" finding="absolute" line="107" />
-      <module_usage name="numpy._globals" finding="relative" line="109" />
-      <module_usage name="sys" finding="built-in" line="122" />
+      <module_usage name="sys" finding="built-in" line="102" />
+      <module_usage name="warnings" finding="absolute" line="103" />
+      <module_usage name="numpy._globals" finding="relative" line="105" />
+      <module_usage name="numpy.exceptions" finding="relative" line="107" />
+      <module_usage name="sys" finding="built-in" line="119" />
+      <module_usage name="numpy" finding="relative" line="122" />
+      <module_usage name="numpy._distributor_init" finding="relative" line="122" />
       <module_usage name="numpy.__config__" finding="absolute" line="125" />
       <module_usage name="numpy" finding="relative" line="139" />
-      <module_usage name="numpy._distributor_init" finding="relative" line="139" />
+      <module_usage name="numpy.core" finding="relative" line="139" />
+      <module_usage name="numpy.core" finding="relative" line="140" />
       <module_usage name="numpy" finding="relative" line="141" />
-      <module_usage name="numpy.core" finding="relative" line="141" />
-      <module_usage name="numpy.core" finding="relative" line="142" />
+      <module_usage name="numpy.compat" finding="relative" line="141" />
+      <module_usage name="numpy" finding="relative" line="142" />
+      <module_usage name="numpy.exceptions" finding="relative" line="142" />
       <module_usage name="numpy" finding="relative" line="143" />
-      <module_usage name="numpy.compat" finding="relative" line="143" />
+      <module_usage name="numpy.dtypes" finding="relative" line="143" />
       <module_usage name="numpy" finding="relative" line="144" />
       <module_usage name="numpy.lib" finding="relative" line="144" />
       <module_usage name="numpy.lib" finding="relative" line="147" />
@@ -2602,19 +2624,16 @@
       <module_usage name="numpy.matrixlib" finding="relative" line="155" />
       <module_usage name="numpy.matrixlib" finding="relative" line="156" />
       <module_usage name="builtins" finding="built-in" line="159" />
-      <module_usage name="numpy.core" finding="relative" line="221" />
-      <module_usage name="numpy.core.round" finding="not-found" line="221" />
-      <module_usage name="numpy.core.abs" finding="not-found" line="221" />
-      <module_usage name="numpy.core.max" finding="not-found" line="221" />
-      <module_usage name="numpy.core.min" finding="not-found" line="221" />
-      <module_usage name="warnings" finding="absolute" line="275" />
-      <module_usage name="numpy.testing" finding="absolute" line="314" />
-      <module_usage name="numpy.testing" finding="relative" line="317" />
-      <module_usage name="numpy.testing.Tester" finding="not-found" line="317" />
-      <module_usage name="numpy._pytesttester" finding="absolute" line="331" />
-      <module_usage name="os" finding="absolute" line="395" />
-      <module_usage name="pathlib" finding="absolute" line="428" />
-      <module_usage name="numpy.version" finding="relative" line="436" />
+      <module_usage name="math" finding="built-in" line="219" />
+      <module_usage name="numpy.core" finding="relative" line="228" />
+      <module_usage name="numpy.core.abs" finding="not-found" line="228" />
+      <module_usage name="warnings" finding="absolute" line="282" />
+      <module_usage name="math" finding="built-in" line="283" />
+      <module_usage name="numpy.testing" finding="absolute" line="316" />
+      <module_usage name="numpy._pytesttester" finding="absolute" line="336" />
+      <module_usage name="os" finding="absolute" line="400" />
+      <module_usage name="pathlib" finding="absolute" line="437" />
+      <module_usage name="numpy.version" finding="relative" line="445" />
     </module_usages>
   </module>
   <module name="numpy.__config__" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2637,6 +2656,8 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="enum" finding="absolute" line="18" />
+      <module_usage name="numpy._utils" finding="relative" line="20" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="20" />
     </module_usages>
   </module>
   <module name="numpy._pytesttester" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2651,9 +2672,10 @@
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="built-in" line="1" />
       <module_usage name="__future__" finding="absolute" line="3" />
-      <module_usage name="numpy" finding="absolute" line="5" />
+      <module_usage name="numpy" finding="relative" line="5" />
       <module_usage name="numpy.ufunc" finding="not-found" line="5" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="6" />
+      <module_usage name="numpy._utils" finding="relative" line="6" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="6" />
       <module_usage name="typing" finding="absolute" line="7" />
       <module_usage name="numpy._typing._nested_sequence" finding="relative" line="92" />
       <module_usage name="numpy._typing._nbit" finding="relative" line="95" />
@@ -2662,7 +2684,6 @@
       <module_usage name="numpy._typing._shape" finding="relative" line="160" />
       <module_usage name="numpy._typing._dtype_like" finding="relative" line="164" />
       <module_usage name="numpy._typing._array_like" finding="relative" line="182" />
-      <module_usage name="numpy._typing._generic_alias" finding="relative" line="204" />
     </module_usages>
   </module>
   <module name="numpy._typing._array_like" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2670,26 +2691,25 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="sys" finding="built-in" line="5" />
-      <module_usage name="collections.abc" finding="absolute" line="6" />
-      <module_usage name="typing" finding="absolute" line="7" />
-      <module_usage name="numpy" finding="absolute" line="8" />
-      <module_usage name="numpy.ndarray" finding="not-found" line="8" />
-      <module_usage name="numpy.dtype" finding="not-found" line="8" />
-      <module_usage name="numpy.generic" finding="not-found" line="8" />
-      <module_usage name="numpy.bool_" finding="not-found" line="8" />
-      <module_usage name="numpy.unsignedinteger" finding="not-found" line="8" />
-      <module_usage name="numpy.integer" finding="not-found" line="8" />
-      <module_usage name="numpy.floating" finding="not-found" line="8" />
-      <module_usage name="numpy.complexfloating" finding="not-found" line="8" />
-      <module_usage name="numpy.number" finding="not-found" line="8" />
-      <module_usage name="numpy.timedelta64" finding="not-found" line="8" />
-      <module_usage name="numpy.datetime64" finding="not-found" line="8" />
-      <module_usage name="numpy.object_" finding="not-found" line="8" />
-      <module_usage name="numpy.void" finding="not-found" line="8" />
-      <module_usage name="numpy.str_" finding="not-found" line="8" />
-      <module_usage name="numpy.bytes_" finding="not-found" line="8" />
-      <module_usage name="numpy._typing._nested_sequence" finding="relative" line="25" />
+      <module_usage name="collections.abc" finding="absolute" line="3" />
+      <module_usage name="typing" finding="absolute" line="4" />
+      <module_usage name="numpy" finding="absolute" line="5" />
+      <module_usage name="numpy.ndarray" finding="not-found" line="5" />
+      <module_usage name="numpy.dtype" finding="not-found" line="5" />
+      <module_usage name="numpy.generic" finding="not-found" line="5" />
+      <module_usage name="numpy.bool_" finding="not-found" line="5" />
+      <module_usage name="numpy.unsignedinteger" finding="not-found" line="5" />
+      <module_usage name="numpy.integer" finding="not-found" line="5" />
+      <module_usage name="numpy.floating" finding="not-found" line="5" />
+      <module_usage name="numpy.complexfloating" finding="not-found" line="5" />
+      <module_usage name="numpy.number" finding="not-found" line="5" />
+      <module_usage name="numpy.timedelta64" finding="not-found" line="5" />
+      <module_usage name="numpy.datetime64" finding="not-found" line="5" />
+      <module_usage name="numpy.object_" finding="not-found" line="5" />
+      <module_usage name="numpy.void" finding="not-found" line="5" />
+      <module_usage name="numpy.str_" finding="not-found" line="5" />
+      <module_usage name="numpy.bytes_" finding="not-found" line="5" />
+      <module_usage name="numpy._typing._nested_sequence" finding="relative" line="22" />
     </module_usages>
   </module>
   <module name="numpy._typing._char_codes" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2703,23 +2723,11 @@
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
-      <module_usage name="typing" finding="absolute" line="1" />
-      <module_usage name="numpy" finding="absolute" line="14" />
-      <module_usage name="numpy._typing._shape" finding="relative" line="16" />
-      <module_usage name="numpy._typing._generic_alias" finding="relative" line="17" />
-      <module_usage name="numpy._typing._char_codes" finding="relative" line="19" />
-    </module_usages>
-  </module>
-  <module name="numpy._typing._generic_alias" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="sys" finding="built-in" line="3" />
-      <module_usage name="types" finding="absolute" line="4" />
-      <module_usage name="collections.abc" finding="absolute" line="5" />
-      <module_usage name="typing" finding="absolute" line="6" />
-      <module_usage name="numpy" finding="absolute" line="14" />
+      <module_usage name="collections.abc" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="2" />
+      <module_usage name="numpy" finding="absolute" line="12" />
+      <module_usage name="numpy._typing._shape" finding="relative" line="14" />
+      <module_usage name="numpy._typing._char_codes" finding="relative" line="16" />
     </module_usages>
   </module>
   <module name="numpy._typing._nbit" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2734,7 +2742,8 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="5" />
+      <module_usage name="collections.abc" finding="absolute" line="5" />
+      <module_usage name="typing" finding="absolute" line="6" />
     </module_usages>
   </module>
   <module name="numpy._typing._scalars" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2749,7 +2758,23 @@
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
-      <module_usage name="typing" finding="absolute" line="1" />
+      <module_usage name="collections.abc" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="2" />
+    </module_usages>
+  </module>
+  <module name="numpy._utils" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="sys" finding="built-in" line="1" />
+    </module_usages>
+  </module>
+  <module name="numpy._utils._inspect" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="types" finding="absolute" line="8" />
     </module_usages>
   </module>
   <module name="numpy._version" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2765,19 +2790,12 @@
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="built-in" line="1" />
-      <module_usage name="numpy.compat" finding="relative" line="11" />
-      <module_usage name="numpy.compat._inspect" finding="relative" line="11" />
-      <module_usage name="numpy.compat" finding="relative" line="12" />
-      <module_usage name="numpy.compat.py3k" finding="relative" line="12" />
-      <module_usage name="numpy.compat._inspect" finding="relative" line="13" />
+      <module_usage name="numpy._utils" finding="relative" line="12" />
+      <module_usage name="numpy._utils._inspect" finding="relative" line="12" />
+      <module_usage name="numpy._utils._inspect" finding="relative" line="13" />
+      <module_usage name="numpy.compat" finding="relative" line="14" />
       <module_usage name="numpy.compat.py3k" finding="relative" line="14" />
-    </module_usages>
-  </module>
-  <module name="numpy.compat._inspect" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="types" finding="absolute" line="8" />
+      <module_usage name="numpy.compat.py3k" finding="relative" line="15" />
     </module_usages>
   </module>
   <module name="numpy.compat.py3k" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2791,7 +2809,7 @@
       <module_usage name="numpy.compat.pickle5" finding="not-found" line="24" />
       <module_usage name="numpy.compat" finding="absolute" line="24" />
       <module_usage name="pickle" finding="absolute" line="26" />
-      <module_usage name="importlib.machinery" finding="absolute" line="132" />
+      <module_usage name="importlib.machinery" finding="absolute" line="140" />
     </module_usages>
   </module>
   <module name="numpy.core" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2831,32 +2849,30 @@
       <module_usage name="numpy.core.function_base" finding="relative" line="85" />
       <module_usage name="numpy.core" finding="relative" line="86" />
       <module_usage name="numpy.core._machar" finding="relative" line="86" />
-      <module_usage name="numpy.core._machar" finding="relative" line="87" />
-      <module_usage name="numpy.core" finding="relative" line="88" />
+      <module_usage name="numpy.core" finding="relative" line="87" />
+      <module_usage name="numpy.core.getlimits" finding="relative" line="87" />
       <module_usage name="numpy.core.getlimits" finding="relative" line="88" />
-      <module_usage name="numpy.core.getlimits" finding="relative" line="89" />
-      <module_usage name="numpy.core" finding="relative" line="90" />
+      <module_usage name="numpy.core" finding="relative" line="89" />
+      <module_usage name="numpy.core.shape_base" finding="relative" line="89" />
       <module_usage name="numpy.core.shape_base" finding="relative" line="90" />
-      <module_usage name="numpy.core.shape_base" finding="relative" line="91" />
-      <module_usage name="numpy.core" finding="relative" line="92" />
+      <module_usage name="numpy.core" finding="relative" line="91" />
+      <module_usage name="numpy.core.einsumfunc" finding="relative" line="91" />
       <module_usage name="numpy.core.einsumfunc" finding="relative" line="92" />
-      <module_usage name="numpy.core.einsumfunc" finding="relative" line="93" />
-      <module_usage name="numpy.core.fromnumeric" finding="relative" line="96" />
-      <module_usage name="numpy.core.numeric" finding="relative" line="97" />
-      <module_usage name="numpy.core" finding="relative" line="101" />
-      <module_usage name="numpy.core._add_newdocs" finding="relative" line="101" />
+      <module_usage name="numpy.core.numeric" finding="relative" line="95" />
+      <module_usage name="numpy.core" finding="relative" line="99" />
+      <module_usage name="numpy.core._add_newdocs" finding="relative" line="99" />
+      <module_usage name="numpy.core" finding="relative" line="100" />
+      <module_usage name="numpy.core._add_newdocs_scalars" finding="relative" line="100" />
       <module_usage name="numpy.core" finding="relative" line="102" />
-      <module_usage name="numpy.core._add_newdocs_scalars" finding="relative" line="102" />
+      <module_usage name="numpy.core._dtype_ctypes" finding="relative" line="102" />
+      <module_usage name="numpy.core" finding="relative" line="103" />
+      <module_usage name="numpy.core._internal" finding="relative" line="103" />
       <module_usage name="numpy.core" finding="relative" line="104" />
-      <module_usage name="numpy.core._dtype_ctypes" finding="relative" line="104" />
+      <module_usage name="numpy.core._dtype" finding="relative" line="104" />
       <module_usage name="numpy.core" finding="relative" line="105" />
-      <module_usage name="numpy.core._internal" finding="relative" line="105" />
-      <module_usage name="numpy.core" finding="relative" line="106" />
-      <module_usage name="numpy.core._dtype" finding="relative" line="106" />
-      <module_usage name="numpy.core" finding="relative" line="107" />
-      <module_usage name="numpy.core._methods" finding="relative" line="107" />
-      <module_usage name="copyreg" finding="absolute" line="166" />
-      <module_usage name="numpy._pytesttester" finding="absolute" line="176" />
+      <module_usage name="numpy.core._methods" finding="relative" line="105" />
+      <module_usage name="copyreg" finding="absolute" line="167" />
+      <module_usage name="numpy._pytesttester" finding="absolute" line="177" />
     </module_usages>
   </module>
   <module name="numpy.core._add_newdocs" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2909,7 +2925,8 @@
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
-      <module_usage name="numpy.core.overrides" finding="absolute" line="8" />
+      <module_usage name="numpy._utils" finding="relative" line="8" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="8" />
     </module_usages>
   </module>
   <module name="numpy.core._internal" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2920,19 +2937,21 @@
       <module_usage name="re" finding="absolute" line="8" />
       <module_usage name="sys" finding="built-in" line="9" />
       <module_usage name="warnings" finding="absolute" line="10" />
-      <module_usage name="numpy.core.multiarray" finding="relative" line="12" />
-      <module_usage name="ctypes" finding="absolute" line="14" />
-      <module_usage name="numpy" finding="absolute" line="221" />
+      <module_usage name="numpy.exceptions" finding="relative" line="12" />
+      <module_usage name="numpy.core.multiarray" finding="relative" line="13" />
+      <module_usage name="ctypes" finding="absolute" line="15" />
+      <module_usage name="numpy" finding="absolute" line="222" />
     </module_usages>
   </module>
   <module name="numpy.core._machar" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
-      <module_usage name="numpy.core.fromnumeric" finding="absolute" line="10" />
-      <module_usage name="numpy.core._ufunc_config" finding="absolute" line="11" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="12" />
-      <module_usage name="math" finding="built-in" line="333" />
+      <module_usage name="numpy.core.fromnumeric" finding="relative" line="10" />
+      <module_usage name="numpy.core._ufunc_config" finding="relative" line="11" />
+      <module_usage name="numpy._utils" finding="relative" line="12" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="12" />
+      <module_usage name="math" finding="built-in" line="332" />
     </module_usages>
   </module>
   <module name="numpy.core._methods" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -2956,7 +2975,6 @@
       <module_usage name="numpy.compat.pickle" finding="not-found" line="16" />
       <module_usage name="numpy.compat.os_fspath" finding="not-found" line="16" />
       <module_usage name="numpy.lib.stride_tricks" finding="absolute" line="84" />
-      <module_usage name="numpy.core.fromnumeric" finding="absolute" line="95" />
     </module_usages>
   </module>
   <module name="numpy.core._multiarray_tests" kind="PythonExtensionModule" reason="Extension module needed for standalone mode.">
@@ -2992,7 +3010,8 @@
       <module_usage name="collections.abc" finding="absolute" line="6" />
       <module_usage name="contextlib" finding="absolute" line="7" />
       <module_usage name="contextvars" finding="absolute" line="8" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="10" />
+      <module_usage name="numpy._utils" finding="relative" line="10" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="10" />
       <module_usage name="numpy.core.umath" finding="relative" line="11" />
       <module_usage name="numpy.core" finding="relative" line="16" />
       <module_usage name="numpy.core.umath" finding="relative" line="16" />
@@ -3020,8 +3039,8 @@
       <module_usage name="operator" finding="absolute" line="45" />
       <module_usage name="warnings" finding="absolute" line="46" />
       <module_usage name="contextlib" finding="absolute" line="47" />
-      <module_usage name="functools" finding="absolute" line="1638" />
-      <module_usage name="functools" finding="absolute" line="1640" />
+      <module_usage name="functools" finding="absolute" line="1662" />
+      <module_usage name="functools" finding="absolute" line="1664" />
     </module_usages>
   </module>
   <module name="numpy.core.defchararray" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3029,17 +3048,18 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="18" />
-      <module_usage name="numpy.core.numerictypes" finding="relative" line="19" />
-      <module_usage name="numpy.core.numeric" finding="relative" line="21" />
-      <module_usage name="numpy.core.numeric" finding="relative" line="22" />
-      <module_usage name="numpy.core.multiarray" finding="absolute" line="23" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="24" />
-      <module_usage name="numpy.core" finding="absolute" line="25" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="25" />
-      <module_usage name="numpy.compat" finding="absolute" line="26" />
-      <module_usage name="numpy.compat.asbytes" finding="not-found" line="26" />
-      <module_usage name="numpy" finding="absolute" line="27" />
-      <module_usage name="functools" finding="absolute" line="44" />
+      <module_usage name="numpy._utils" finding="relative" line="20" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="20" />
+      <module_usage name="numpy.core.numerictypes" finding="relative" line="21" />
+      <module_usage name="numpy.core.numeric" finding="relative" line="23" />
+      <module_usage name="numpy.core.numeric" finding="relative" line="24" />
+      <module_usage name="numpy.core.multiarray" finding="absolute" line="25" />
+      <module_usage name="numpy.core" finding="absolute" line="26" />
+      <module_usage name="numpy.core.overrides" finding="relative" line="26" />
+      <module_usage name="numpy.compat" finding="absolute" line="27" />
+      <module_usage name="numpy.compat.asbytes" finding="not-found" line="27" />
+      <module_usage name="numpy" finding="absolute" line="28" />
+      <module_usage name="functools" finding="absolute" line="45" />
     </module_usages>
   </module>
   <module name="numpy.core.einsumfunc" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3061,18 +3081,20 @@
       <module_usage name="types" finding="absolute" line="5" />
       <module_usage name="warnings" finding="absolute" line="6" />
       <module_usage name="numpy" finding="absolute" line="8" />
-      <module_usage name="numpy.core" finding="relative" line="9" />
-      <module_usage name="numpy.core.multiarray" finding="relative" line="9" />
+      <module_usage name="numpy._utils" finding="relative" line="9" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="9" />
       <module_usage name="numpy.core" finding="relative" line="10" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="10" />
+      <module_usage name="numpy.core.multiarray" finding="relative" line="10" />
       <module_usage name="numpy.core" finding="relative" line="11" />
-      <module_usage name="numpy.core.umath" finding="relative" line="11" />
+      <module_usage name="numpy.core.overrides" finding="relative" line="11" />
       <module_usage name="numpy.core" finding="relative" line="12" />
-      <module_usage name="numpy.core.numerictypes" finding="relative" line="12" />
-      <module_usage name="numpy.core.multiarray" finding="relative" line="13" />
-      <module_usage name="numpy.core" finding="relative" line="14" />
-      <module_usage name="numpy.core._methods" finding="relative" line="14" />
-      <module_usage name="functools" finding="absolute" line="33" />
+      <module_usage name="numpy.core.umath" finding="relative" line="12" />
+      <module_usage name="numpy.core" finding="relative" line="13" />
+      <module_usage name="numpy.core.numerictypes" finding="relative" line="13" />
+      <module_usage name="numpy.core.multiarray" finding="relative" line="14" />
+      <module_usage name="numpy.core" finding="relative" line="15" />
+      <module_usage name="numpy.core._methods" finding="relative" line="15" />
+      <module_usage name="functools" finding="absolute" line="35" />
     </module_usages>
   </module>
   <module name="numpy.core.function_base" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3083,13 +3105,14 @@
       <module_usage name="warnings" finding="absolute" line="2" />
       <module_usage name="operator" finding="absolute" line="3" />
       <module_usage name="types" finding="absolute" line="4" />
-      <module_usage name="numpy.core" finding="relative" line="6" />
-      <module_usage name="numpy.core.numeric" finding="relative" line="6" />
+      <module_usage name="numpy" finding="absolute" line="6" />
+      <module_usage name="numpy.core" finding="relative" line="7" />
       <module_usage name="numpy.core.numeric" finding="relative" line="7" />
-      <module_usage name="numpy.core.multiarray" finding="absolute" line="8" />
-      <module_usage name="numpy.core" finding="absolute" line="9" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="9" />
-      <module_usage name="functools" finding="absolute" line="14" />
+      <module_usage name="numpy.core.numeric" finding="relative" line="8" />
+      <module_usage name="numpy.core.multiarray" finding="absolute" line="9" />
+      <module_usage name="numpy.core" finding="absolute" line="10" />
+      <module_usage name="numpy.core.overrides" finding="relative" line="10" />
+      <module_usage name="functools" finding="absolute" line="15" />
     </module_usages>
   </module>
   <module name="numpy.core.getlimits" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3097,8 +3120,9 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="warnings" finding="absolute" line="6" />
-      <module_usage name="numpy.core._machar" finding="relative" line="8" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="9" />
+      <module_usage name="numpy._utils" finding="relative" line="8" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="8" />
+      <module_usage name="numpy.core._machar" finding="relative" line="9" />
       <module_usage name="numpy.core" finding="relative" line="10" />
       <module_usage name="numpy.core.numeric" finding="relative" line="10" />
       <module_usage name="numpy.core" finding="relative" line="11" />
@@ -3113,13 +3137,14 @@
     <module_usages>
       <module_usage name="contextlib" finding="absolute" line="1" />
       <module_usage name="numpy" finding="absolute" line="3" />
-      <module_usage name="numpy.core.numeric" finding="relative" line="4" />
-      <module_usage name="numpy.compat" finding="absolute" line="5" />
-      <module_usage name="numpy.compat.os_fspath" finding="not-found" line="5" />
-      <module_usage name="numpy.compat.is_pathlib_path" finding="not-found" line="5" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="6" />
-      <module_usage name="mmap" finding="absolute" line="211" />
-      <module_usage name="posixpath" finding="absolute" line="212" />
+      <module_usage name="numpy._utils" finding="relative" line="4" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="4" />
+      <module_usage name="numpy.core.numeric" finding="relative" line="5" />
+      <module_usage name="numpy.compat" finding="absolute" line="6" />
+      <module_usage name="numpy.compat.os_fspath" finding="not-found" line="6" />
+      <module_usage name="numpy.compat.is_pathlib_path" finding="not-found" line="6" />
+      <module_usage name="mmap" finding="absolute" line="212" />
+      <module_usage name="posixpath" finding="absolute" line="213" />
     </module_usages>
   </module>
   <module name="numpy.core.multiarray" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3133,7 +3158,7 @@
       <module_usage name="numpy.core._multiarray_umath" finding="relative" line="11" />
       <module_usage name="numpy.core._multiarray_umath" finding="relative" line="12" />
       <module_usage name="numpy.core._multiarray_umath" finding="relative" line="16" />
-      <module_usage name="functools" finding="absolute" line="79" />
+      <module_usage name="functools" finding="absolute" line="80" />
     </module_usages>
   </module>
   <module name="numpy.core.numeric" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3146,40 +3171,41 @@
       <module_usage name="sys" finding="built-in" line="4" />
       <module_usage name="warnings" finding="absolute" line="5" />
       <module_usage name="numbers" finding="absolute" line="6" />
-      <module_usage name="numpy" finding="absolute" line="8" />
-      <module_usage name="numpy.core" finding="relative" line="9" />
-      <module_usage name="numpy.core.multiarray" finding="relative" line="9" />
+      <module_usage name="builtins" finding="built-in" line="7" />
+      <module_usage name="numpy" finding="absolute" line="9" />
+      <module_usage name="numpy.core" finding="relative" line="10" />
       <module_usage name="numpy.core.multiarray" finding="relative" line="10" />
-      <module_usage name="numpy.core" finding="relative" line="22" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="22" />
-      <module_usage name="numpy.core" finding="relative" line="23" />
-      <module_usage name="numpy.core.umath" finding="relative" line="23" />
+      <module_usage name="numpy.core.multiarray" finding="relative" line="11" />
       <module_usage name="numpy.core" finding="relative" line="24" />
-      <module_usage name="numpy.core.shape_base" finding="relative" line="24" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="25" />
-      <module_usage name="numpy.core.umath" finding="relative" line="26" />
-      <module_usage name="numpy.core" finding="relative" line="27" />
-      <module_usage name="numpy.core.numerictypes" finding="relative" line="27" />
-      <module_usage name="numpy.core.numerictypes" finding="relative" line="28" />
-      <module_usage name="numpy.core._exceptions" finding="relative" line="29" />
-      <module_usage name="numpy.core._ufunc_config" finding="relative" line="30" />
-      <module_usage name="functools" finding="absolute" line="36" />
-      <module_usage name="numpy" finding="absolute" line="2186" />
-      <module_usage name="numpy.eye" finding="not-found" line="2186" />
-      <module_usage name="numpy.core.umath" finding="relative" line="2544" />
-      <module_usage name="numpy.core.numerictypes" finding="relative" line="2545" />
-      <module_usage name="numpy.core" finding="relative" line="2546" />
-      <module_usage name="numpy.core.fromnumeric" finding="relative" line="2546" />
-      <module_usage name="numpy.core.fromnumeric" finding="relative" line="2547" />
-      <module_usage name="numpy.core" finding="relative" line="2548" />
-      <module_usage name="numpy.core.arrayprint" finding="relative" line="2548" />
-      <module_usage name="numpy.core.arrayprint" finding="relative" line="2549" />
-      <module_usage name="numpy.core" finding="relative" line="2550" />
-      <module_usage name="numpy.core._asarray" finding="relative" line="2550" />
-      <module_usage name="numpy.core._asarray" finding="relative" line="2551" />
-      <module_usage name="numpy.core" finding="relative" line="2552" />
-      <module_usage name="numpy.core._ufunc_config" finding="relative" line="2552" />
-      <module_usage name="numpy.core._ufunc_config" finding="relative" line="2553" />
+      <module_usage name="numpy.core.overrides" finding="relative" line="24" />
+      <module_usage name="numpy.core" finding="relative" line="25" />
+      <module_usage name="numpy.core.umath" finding="relative" line="25" />
+      <module_usage name="numpy.core" finding="relative" line="26" />
+      <module_usage name="numpy.core.shape_base" finding="relative" line="26" />
+      <module_usage name="numpy.core.overrides" finding="relative" line="27" />
+      <module_usage name="numpy.core.umath" finding="relative" line="28" />
+      <module_usage name="numpy.core" finding="relative" line="29" />
+      <module_usage name="numpy.core.numerictypes" finding="relative" line="29" />
+      <module_usage name="numpy.core.numerictypes" finding="relative" line="30" />
+      <module_usage name="numpy.exceptions" finding="relative" line="31" />
+      <module_usage name="numpy.core._ufunc_config" finding="relative" line="32" />
+      <module_usage name="functools" finding="absolute" line="38" />
+      <module_usage name="numpy" finding="absolute" line="2159" />
+      <module_usage name="numpy.eye" finding="not-found" line="2159" />
+      <module_usage name="numpy.core.umath" finding="relative" line="2515" />
+      <module_usage name="numpy.core.numerictypes" finding="relative" line="2516" />
+      <module_usage name="numpy.core" finding="relative" line="2517" />
+      <module_usage name="numpy.core.fromnumeric" finding="relative" line="2517" />
+      <module_usage name="numpy.core.fromnumeric" finding="relative" line="2518" />
+      <module_usage name="numpy.core" finding="relative" line="2519" />
+      <module_usage name="numpy.core.arrayprint" finding="relative" line="2519" />
+      <module_usage name="numpy.core.arrayprint" finding="relative" line="2520" />
+      <module_usage name="numpy.core" finding="relative" line="2521" />
+      <module_usage name="numpy.core._asarray" finding="relative" line="2521" />
+      <module_usage name="numpy.core._asarray" finding="relative" line="2522" />
+      <module_usage name="numpy.core" finding="relative" line="2523" />
+      <module_usage name="numpy.core._ufunc_config" finding="relative" line="2523" />
+      <module_usage name="numpy.core._ufunc_config" finding="relative" line="2524" />
     </module_usages>
   </module>
   <module name="numpy.core.numerictypes" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3187,15 +3213,17 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="numbers" finding="absolute" line="82" />
-      <module_usage name="numpy.core.multiarray" finding="absolute" line="84" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="88" />
-      <module_usage name="numpy.core._string_helpers" finding="relative" line="100" />
-      <module_usage name="numpy.core._type_aliases" finding="relative" line="104" />
-      <module_usage name="numpy.core._dtype" finding="relative" line="113" />
-      <module_usage name="builtins" finding="built-in" line="117" />
-      <module_usage name="numpy.compat" finding="absolute" line="118" />
-      <module_usage name="numpy.compat.long" finding="not-found" line="118" />
-      <module_usage name="numpy.compat.unicode" finding="not-found" line="118" />
+      <module_usage name="warnings" finding="absolute" line="83" />
+      <module_usage name="numpy.core.multiarray" finding="relative" line="85" />
+      <module_usage name="numpy._utils" finding="relative" line="89" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="89" />
+      <module_usage name="numpy.core._string_helpers" finding="relative" line="101" />
+      <module_usage name="numpy.core._type_aliases" finding="relative" line="105" />
+      <module_usage name="numpy.core._dtype" finding="relative" line="114" />
+      <module_usage name="builtins" finding="built-in" line="118" />
+      <module_usage name="numpy.compat" finding="absolute" line="119" />
+      <module_usage name="numpy.compat.long" finding="not-found" line="119" />
+      <module_usage name="numpy.compat.unicode" finding="not-found" line="119" />
     </module_usages>
   </module>
   <module name="numpy.core.overrides" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3205,8 +3233,10 @@
       <module_usage name="collections" finding="absolute" line="2" />
       <module_usage name="functools" finding="absolute" line="3" />
       <module_usage name="os" finding="absolute" line="4" />
-      <module_usage name="numpy.core._multiarray_umath" finding="absolute" line="6" />
-      <module_usage name="numpy.compat._inspect" finding="absolute" line="8" />
+      <module_usage name="numpy._utils" finding="relative" line="6" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="6" />
+      <module_usage name="numpy._utils._inspect" finding="relative" line="7" />
+      <module_usage name="numpy.core._multiarray_umath" finding="absolute" line="8" />
     </module_usages>
   </module>
   <module name="numpy.core.records" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3217,13 +3247,14 @@
       <module_usage name="collections" finding="absolute" line="37" />
       <module_usage name="collections.Counter" finding="not-found" line="37" />
       <module_usage name="contextlib" finding="absolute" line="38" />
-      <module_usage name="numpy.core" finding="relative" line="40" />
-      <module_usage name="numpy.core.numeric" finding="relative" line="40" />
+      <module_usage name="numpy._utils" finding="relative" line="40" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="40" />
       <module_usage name="numpy.core" finding="relative" line="41" />
-      <module_usage name="numpy.core.numerictypes" finding="relative" line="41" />
-      <module_usage name="numpy.compat" finding="absolute" line="42" />
-      <module_usage name="numpy.compat.os_fspath" finding="not-found" line="42" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="43" />
+      <module_usage name="numpy.core.numeric" finding="relative" line="41" />
+      <module_usage name="numpy.core" finding="relative" line="42" />
+      <module_usage name="numpy.core.numerictypes" finding="relative" line="42" />
+      <module_usage name="numpy.compat" finding="absolute" line="43" />
+      <module_usage name="numpy.compat.os_fspath" finding="not-found" line="43" />
       <module_usage name="numpy.core.arrayprint" finding="relative" line="44" />
     </module_usages>
   </module>
@@ -3271,11 +3302,25 @@
       <module_usage name="numpy" finding="absolute" line="81" />
       <module_usage name="numpy.intp" finding="not-found" line="81" />
       <module_usage name="numpy.core._internal" finding="absolute" line="84" />
-      <module_usage name="warnings" finding="absolute" line="124" />
-      <module_usage name="posixpath" finding="absolute" line="132" />
+      <module_usage name="posixpath" finding="absolute" line="127" />
+      <module_usage name="sys" finding="built-in" line="129" />
+      <module_usage name="sysconfig" finding="absolute" line="130" />
+      <module_usage name="posixpath" finding="absolute" line="146" />
       <module_usage name="posixpath" finding="absolute" line="148" />
-      <module_usage name="posixpath" finding="absolute" line="150" />
     </module_usages>
+  </module>
+  <module name="numpy.dtypes" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="numpy" finding="absolute" line="69" />
+      <module_usage name="numpy.dtypes" finding="relative" line="69" />
+    </module_usages>
+  </module>
+  <module name="numpy.exceptions" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
   </module>
   <module name="numpy.fft" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
     <optimization-time pass="1" time="volatile" />
@@ -3329,68 +3374,69 @@
       <module_usage name="numpy.core.overrides" finding="absolute" line="6" />
     </module_usages>
   </module>
-  <module name="numpy.lib" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="numpy.lib" kind="CompiledPythonPackage" reason="Containing package of 'numpy.lib.format'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="built-in" line="1" />
-      <module_usage name="math" finding="built-in" line="14" />
-      <module_usage name="numpy.version" finding="absolute" line="16" />
+      <module_usage name="numpy.version" finding="absolute" line="15" />
+      <module_usage name="numpy.lib" finding="relative" line="19" />
+      <module_usage name="numpy.lib.mixins" finding="relative" line="19" />
       <module_usage name="numpy.lib" finding="relative" line="20" />
-      <module_usage name="numpy.lib.mixins" finding="relative" line="20" />
-      <module_usage name="numpy.lib" finding="relative" line="21" />
-      <module_usage name="numpy.lib.scimath" finding="relative" line="21" />
+      <module_usage name="numpy.lib.scimath" finding="relative" line="20" />
+      <module_usage name="numpy.lib" finding="relative" line="24" />
+      <module_usage name="numpy.lib.type_check" finding="relative" line="24" />
       <module_usage name="numpy.lib" finding="relative" line="25" />
-      <module_usage name="numpy.lib.type_check" finding="relative" line="25" />
+      <module_usage name="numpy.lib.index_tricks" finding="relative" line="25" />
       <module_usage name="numpy.lib" finding="relative" line="26" />
-      <module_usage name="numpy.lib.index_tricks" finding="relative" line="26" />
+      <module_usage name="numpy.lib.function_base" finding="relative" line="26" />
       <module_usage name="numpy.lib" finding="relative" line="27" />
-      <module_usage name="numpy.lib.function_base" finding="relative" line="27" />
+      <module_usage name="numpy.lib.nanfunctions" finding="relative" line="27" />
       <module_usage name="numpy.lib" finding="relative" line="28" />
-      <module_usage name="numpy.lib.nanfunctions" finding="relative" line="28" />
+      <module_usage name="numpy.lib.shape_base" finding="relative" line="28" />
       <module_usage name="numpy.lib" finding="relative" line="29" />
-      <module_usage name="numpy.lib.shape_base" finding="relative" line="29" />
+      <module_usage name="numpy.lib.stride_tricks" finding="relative" line="29" />
       <module_usage name="numpy.lib" finding="relative" line="30" />
-      <module_usage name="numpy.lib.stride_tricks" finding="relative" line="30" />
+      <module_usage name="numpy.lib.twodim_base" finding="relative" line="30" />
       <module_usage name="numpy.lib" finding="relative" line="31" />
-      <module_usage name="numpy.lib.twodim_base" finding="relative" line="31" />
+      <module_usage name="numpy.lib.ufunclike" finding="relative" line="31" />
       <module_usage name="numpy.lib" finding="relative" line="32" />
-      <module_usage name="numpy.lib.ufunclike" finding="relative" line="32" />
+      <module_usage name="numpy.lib.histograms" finding="relative" line="32" />
       <module_usage name="numpy.lib" finding="relative" line="33" />
-      <module_usage name="numpy.lib.histograms" finding="relative" line="33" />
+      <module_usage name="numpy.lib.polynomial" finding="relative" line="33" />
       <module_usage name="numpy.lib" finding="relative" line="34" />
-      <module_usage name="numpy.lib.polynomial" finding="relative" line="34" />
+      <module_usage name="numpy.lib.utils" finding="relative" line="34" />
       <module_usage name="numpy.lib" finding="relative" line="35" />
-      <module_usage name="numpy.lib.utils" finding="relative" line="35" />
+      <module_usage name="numpy.lib.arraysetops" finding="relative" line="35" />
       <module_usage name="numpy.lib" finding="relative" line="36" />
-      <module_usage name="numpy.lib.arraysetops" finding="relative" line="36" />
+      <module_usage name="numpy.lib.npyio" finding="relative" line="36" />
       <module_usage name="numpy.lib" finding="relative" line="37" />
-      <module_usage name="numpy.lib.npyio" finding="relative" line="37" />
+      <module_usage name="numpy.lib.arrayterator" finding="relative" line="37" />
       <module_usage name="numpy.lib" finding="relative" line="38" />
-      <module_usage name="numpy.lib.arrayterator" finding="relative" line="38" />
+      <module_usage name="numpy.lib.arraypad" finding="relative" line="38" />
       <module_usage name="numpy.lib" finding="relative" line="39" />
-      <module_usage name="numpy.lib.arraypad" finding="relative" line="39" />
-      <module_usage name="numpy.lib" finding="relative" line="40" />
-      <module_usage name="numpy.lib._version" finding="relative" line="40" />
-      <module_usage name="numpy.lib.type_check" finding="relative" line="42" />
-      <module_usage name="numpy.lib.index_tricks" finding="relative" line="43" />
-      <module_usage name="numpy.lib.function_base" finding="relative" line="44" />
-      <module_usage name="numpy.lib.nanfunctions" finding="relative" line="45" />
-      <module_usage name="numpy.lib.shape_base" finding="relative" line="46" />
-      <module_usage name="numpy.lib.stride_tricks" finding="relative" line="47" />
-      <module_usage name="numpy.lib.twodim_base" finding="relative" line="48" />
-      <module_usage name="numpy.lib.ufunclike" finding="relative" line="49" />
-      <module_usage name="numpy.lib.histograms" finding="relative" line="50" />
-      <module_usage name="numpy.lib.polynomial" finding="relative" line="52" />
-      <module_usage name="numpy.lib.utils" finding="relative" line="53" />
-      <module_usage name="numpy.lib.arraysetops" finding="relative" line="54" />
-      <module_usage name="numpy.lib.npyio" finding="relative" line="55" />
-      <module_usage name="numpy.lib.arrayterator" finding="relative" line="56" />
-      <module_usage name="numpy.lib.arraypad" finding="relative" line="57" />
-      <module_usage name="numpy.lib._version" finding="relative" line="58" />
-      <module_usage name="numpy.core._multiarray_umath" finding="absolute" line="59" />
-      <module_usage name="numpy._pytesttester" finding="absolute" line="77" />
+      <module_usage name="numpy.lib._version" finding="relative" line="39" />
+      <module_usage name="numpy.lib.type_check" finding="relative" line="41" />
+      <module_usage name="numpy.lib.index_tricks" finding="relative" line="42" />
+      <module_usage name="numpy.lib.function_base" finding="relative" line="43" />
+      <module_usage name="numpy.lib.nanfunctions" finding="relative" line="44" />
+      <module_usage name="numpy.lib.shape_base" finding="relative" line="45" />
+      <module_usage name="numpy.lib.stride_tricks" finding="relative" line="46" />
+      <module_usage name="numpy.lib.twodim_base" finding="relative" line="47" />
+      <module_usage name="numpy.lib.ufunclike" finding="relative" line="48" />
+      <module_usage name="numpy.lib.histograms" finding="relative" line="49" />
+      <module_usage name="numpy.lib.polynomial" finding="relative" line="51" />
+      <module_usage name="numpy.lib.utils" finding="relative" line="52" />
+      <module_usage name="numpy.lib.arraysetops" finding="relative" line="53" />
+      <module_usage name="numpy.lib.npyio" finding="relative" line="54" />
+      <module_usage name="numpy.lib.arrayterator" finding="relative" line="55" />
+      <module_usage name="numpy.lib.arraypad" finding="relative" line="56" />
+      <module_usage name="numpy.lib._version" finding="relative" line="57" />
+      <module_usage name="numpy.core._multiarray_umath" finding="absolute" line="58" />
+      <module_usage name="numpy._pytesttester" finding="absolute" line="76" />
+      <module_usage name="math" finding="built-in" line="82" />
+      <module_usage name="warnings" finding="absolute" line="83" />
     </module_usages>
   </module>
   <module name="numpy.lib._datasource" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3399,7 +3445,8 @@
     <module_usages>
       <module_usage name="os" finding="absolute" line="37" />
       <module_usage name="io" finding="absolute" line="38" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="40" />
+      <module_usage name="numpy._utils" finding="relative" line="40" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="40" />
       <module_usage name="bz2" finding="absolute" line="108" />
       <module_usage name="gzip" finding="absolute" line="114" />
       <module_usage name="lzma" finding="absolute" line="120" />
@@ -3478,10 +3525,10 @@
       <module_usage name="numpy.compat.isfileobj" finding="not-found" line="167" />
       <module_usage name="numpy.compat.os_fspath" finding="not-found" line="167" />
       <module_usage name="numpy.compat.pickle" finding="not-found" line="167" />
-      <module_usage name="struct" finding="absolute" line="376" />
-      <module_usage name="tokenize" finding="absolute" line="575" />
-      <module_usage name="io" finding="absolute" line="576" />
-      <module_usage name="struct" finding="absolute" line="599" />
+      <module_usage name="struct" finding="absolute" line="370" />
+      <module_usage name="tokenize" finding="absolute" line="569" />
+      <module_usage name="io" finding="absolute" line="570" />
+      <module_usage name="struct" finding="absolute" line="593" />
     </module_usages>
   </module>
   <module name="numpy.lib.function_base" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3493,15 +3540,16 @@
       <module_usage name="re" finding="absolute" line="3" />
       <module_usage name="sys" finding="built-in" line="4" />
       <module_usage name="warnings" finding="absolute" line="5" />
-      <module_usage name="numpy" finding="absolute" line="7" />
-      <module_usage name="numpy.core.numeric" finding="absolute" line="8" />
-      <module_usage name="numpy.core" finding="absolute" line="9" />
-      <module_usage name="numpy.core.transpose" finding="not-found" line="9" />
-      <module_usage name="numpy.core.numeric" finding="absolute" line="10" />
-      <module_usage name="numpy.core.umath" finding="absolute" line="14" />
-      <module_usage name="numpy.core.fromnumeric" finding="absolute" line="18" />
-      <module_usage name="numpy.core.numerictypes" finding="absolute" line="21" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="22" />
+      <module_usage name="numpy._utils" finding="relative" line="7" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="7" />
+      <module_usage name="numpy" finding="absolute" line="8" />
+      <module_usage name="numpy.core.numeric" finding="absolute" line="9" />
+      <module_usage name="numpy.core" finding="absolute" line="10" />
+      <module_usage name="numpy.core.transpose" finding="not-found" line="10" />
+      <module_usage name="numpy.core.numeric" finding="absolute" line="11" />
+      <module_usage name="numpy.core.umath" finding="absolute" line="15" />
+      <module_usage name="numpy.core.fromnumeric" finding="absolute" line="19" />
+      <module_usage name="numpy.core.numerictypes" finding="absolute" line="22" />
       <module_usage name="numpy.core" finding="absolute" line="23" />
       <module_usage name="numpy.core.overrides" finding="relative" line="23" />
       <module_usage name="numpy.core.function_base" finding="absolute" line="24" />
@@ -3536,18 +3584,20 @@
       <module_usage name="sys" finding="built-in" line="2" />
       <module_usage name="math" finding="built-in" line="3" />
       <module_usage name="warnings" finding="absolute" line="4" />
-      <module_usage name="numpy.core.numeric" finding="absolute" line="6" />
-      <module_usage name="numpy.core.numeric" finding="absolute" line="7" />
+      <module_usage name="numpy" finding="absolute" line="6" />
+      <module_usage name="numpy._utils" finding="relative" line="7" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="7" />
+      <module_usage name="numpy.core.numeric" finding="absolute" line="8" />
+      <module_usage name="numpy.core.numeric" finding="absolute" line="9" />
       <module_usage name="numpy.core.numerictypes" finding="absolute" line="10" />
       <module_usage name="numpy.matrixlib" finding="absolute" line="12" />
       <module_usage name="numpy.lib.function_base" finding="relative" line="13" />
       <module_usage name="numpy.core.multiarray" finding="absolute" line="14" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="15" />
-      <module_usage name="numpy.core" finding="absolute" line="16" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="16" />
-      <module_usage name="numpy.core.linspace" finding="not-found" line="16" />
-      <module_usage name="numpy.lib.stride_tricks" finding="absolute" line="17" />
-      <module_usage name="functools" finding="absolute" line="20" />
+      <module_usage name="numpy.core" finding="absolute" line="15" />
+      <module_usage name="numpy.core.overrides" finding="relative" line="15" />
+      <module_usage name="numpy.core.linspace" finding="not-found" line="15" />
+      <module_usage name="numpy.lib.stride_tricks" finding="absolute" line="16" />
+      <module_usage name="functools" finding="absolute" line="19" />
     </module_usages>
   </module>
   <module name="numpy.lib.mixins" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3605,12 +3655,12 @@
       <module_usage name="numpy.compat.pickle" finding="not-found" line="25" />
       <module_usage name="functools" finding="absolute" line="38" />
       <module_usage name="zipfile" finding="absolute" line="101" />
-      <module_usage name="zipfile" finding="absolute" line="692" />
-      <module_usage name="numpy.ma" finding="absolute" line="1959" />
-      <module_usage name="numpy.ma.MaskedArray" finding="not-found" line="1959" />
-      <module_usage name="numpy.ma.make_mask_descr" finding="not-found" line="1959" />
-      <module_usage name="numpy.ma.mrecords" finding="absolute" line="2504" />
-      <module_usage name="numpy.ma.mrecords" finding="absolute" line="2542" />
+      <module_usage name="zipfile" finding="absolute" line="716" />
+      <module_usage name="numpy.ma" finding="absolute" line="1962" />
+      <module_usage name="numpy.ma.MaskedArray" finding="not-found" line="1962" />
+      <module_usage name="numpy.ma.make_mask_descr" finding="not-found" line="1962" />
+      <module_usage name="numpy.ma.mrecords" finding="absolute" line="2505" />
+      <module_usage name="numpy.ma.mrecords" finding="absolute" line="2543" />
     </module_usages>
   </module>
   <module name="numpy.lib.polynomial" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3620,27 +3670,28 @@
       <module_usage name="functools" finding="absolute" line="9" />
       <module_usage name="re" finding="absolute" line="10" />
       <module_usage name="warnings" finding="absolute" line="11" />
-      <module_usage name="numpy.core.numeric" finding="absolute" line="12" />
-      <module_usage name="numpy.core" finding="absolute" line="14" />
-      <module_usage name="numpy.core.isscalar" finding="not-found" line="14" />
-      <module_usage name="numpy.core.abs" finding="not-found" line="14" />
-      <module_usage name="numpy.core.finfo" finding="not-found" line="14" />
-      <module_usage name="numpy.core.atleast_1d" finding="not-found" line="14" />
-      <module_usage name="numpy.core.hstack" finding="not-found" line="14" />
-      <module_usage name="numpy.core.dot" finding="not-found" line="14" />
-      <module_usage name="numpy.core.array" finding="not-found" line="14" />
-      <module_usage name="numpy.core.ones" finding="not-found" line="14" />
+      <module_usage name="numpy._utils" finding="relative" line="13" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="13" />
+      <module_usage name="numpy.core.numeric" finding="absolute" line="14" />
       <module_usage name="numpy.core" finding="absolute" line="16" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="16" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="17" />
-      <module_usage name="numpy.lib.twodim_base" finding="absolute" line="18" />
-      <module_usage name="numpy.lib.function_base" finding="absolute" line="19" />
-      <module_usage name="numpy.lib.type_check" finding="absolute" line="20" />
-      <module_usage name="numpy.linalg" finding="absolute" line="21" />
-      <module_usage name="numpy.linalg.eigvals" finding="not-found" line="21" />
-      <module_usage name="numpy.linalg.lstsq" finding="not-found" line="21" />
-      <module_usage name="numpy.linalg.inv" finding="not-found" line="21" />
-      <module_usage name="functools" finding="absolute" line="24" />
+      <module_usage name="numpy.core.isscalar" finding="not-found" line="16" />
+      <module_usage name="numpy.core.abs" finding="not-found" line="16" />
+      <module_usage name="numpy.core.finfo" finding="not-found" line="16" />
+      <module_usage name="numpy.core.atleast_1d" finding="not-found" line="16" />
+      <module_usage name="numpy.core.hstack" finding="not-found" line="16" />
+      <module_usage name="numpy.core.dot" finding="not-found" line="16" />
+      <module_usage name="numpy.core.array" finding="not-found" line="16" />
+      <module_usage name="numpy.core.ones" finding="not-found" line="16" />
+      <module_usage name="numpy.core" finding="absolute" line="18" />
+      <module_usage name="numpy.core.overrides" finding="relative" line="18" />
+      <module_usage name="numpy.lib.twodim_base" finding="absolute" line="19" />
+      <module_usage name="numpy.lib.function_base" finding="absolute" line="20" />
+      <module_usage name="numpy.lib.type_check" finding="absolute" line="21" />
+      <module_usage name="numpy.linalg" finding="absolute" line="22" />
+      <module_usage name="numpy.linalg.eigvals" finding="not-found" line="22" />
+      <module_usage name="numpy.linalg.lstsq" finding="not-found" line="22" />
+      <module_usage name="numpy.linalg.inv" finding="not-found" line="22" />
+      <module_usage name="functools" finding="absolute" line="25" />
     </module_usages>
   </module>
   <module name="numpy.lib.scimath" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3661,18 +3712,18 @@
       <module_usage name="functools" finding="absolute" line="1" />
       <module_usage name="numpy.core.numeric" finding="absolute" line="3" />
       <module_usage name="numpy.core.numeric" finding="absolute" line="4" />
-      <module_usage name="numpy.core.fromnumeric" finding="absolute" line="7" />
-      <module_usage name="numpy.core.multiarray" finding="absolute" line="8" />
-      <module_usage name="numpy.core" finding="absolute" line="9" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="9" />
-      <module_usage name="numpy.core" finding="absolute" line="10" />
-      <module_usage name="numpy.core.vstack" finding="not-found" line="10" />
-      <module_usage name="numpy.core.atleast_3d" finding="not-found" line="10" />
-      <module_usage name="numpy.core.numeric" finding="absolute" line="11" />
-      <module_usage name="numpy.core.shape_base" finding="absolute" line="12" />
-      <module_usage name="numpy.lib.index_tricks" finding="absolute" line="13" />
-      <module_usage name="numpy.matrixlib.defmatrix" finding="absolute" line="14" />
-      <module_usage name="functools" finding="absolute" line="25" />
+      <module_usage name="numpy.core.fromnumeric" finding="absolute" line="5" />
+      <module_usage name="numpy.core.multiarray" finding="absolute" line="6" />
+      <module_usage name="numpy.core" finding="absolute" line="7" />
+      <module_usage name="numpy.core.overrides" finding="relative" line="7" />
+      <module_usage name="numpy.core" finding="absolute" line="8" />
+      <module_usage name="numpy.core.vstack" finding="not-found" line="8" />
+      <module_usage name="numpy.core.atleast_3d" finding="not-found" line="8" />
+      <module_usage name="numpy.core.numeric" finding="absolute" line="9" />
+      <module_usage name="numpy.core.shape_base" finding="absolute" line="10" />
+      <module_usage name="numpy.lib.index_tricks" finding="absolute" line="11" />
+      <module_usage name="numpy.matrixlib.defmatrix" finding="absolute" line="12" />
+      <module_usage name="functools" finding="absolute" line="23" />
     </module_usages>
   </module>
   <module name="numpy.lib.stride_tricks" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3698,8 +3749,8 @@
       <module_usage name="numpy.core.iinfo" finding="not-found" line="14" />
       <module_usage name="numpy.lib.stride_tricks" finding="absolute" line="15" />
       <module_usage name="functools" finding="absolute" line="24" />
-      <module_usage name="numpy" finding="absolute" line="807" />
-      <module_usage name="numpy.histogramdd" finding="not-found" line="807" />
+      <module_usage name="numpy" finding="absolute" line="795" />
+      <module_usage name="numpy.histogramdd" finding="not-found" line="795" />
     </module_usages>
   </module>
   <module name="numpy.lib.type_check" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3707,18 +3758,17 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="4" />
-      <module_usage name="warnings" finding="absolute" line="5" />
+      <module_usage name="numpy._utils" finding="relative" line="11" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="11" />
       <module_usage name="numpy.core.numeric" finding="absolute" line="12" />
       <module_usage name="numpy.core.numeric" finding="absolute" line="13" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="14" />
-      <module_usage name="numpy.core" finding="absolute" line="15" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="15" />
-      <module_usage name="numpy.lib.ufunclike" finding="relative" line="16" />
-      <module_usage name="functools" finding="absolute" line="19" />
-      <module_usage name="numpy.core" finding="absolute" line="395" />
-      <module_usage name="numpy.core.getlimits" finding="relative" line="395" />
-      <module_usage name="numpy.core" finding="absolute" line="578" />
-      <module_usage name="numpy.core.getlimits" finding="relative" line="578" />
+      <module_usage name="numpy.core" finding="absolute" line="14" />
+      <module_usage name="numpy.core.overrides" finding="relative" line="14" />
+      <module_usage name="numpy.core.getlimits" finding="relative" line="14" />
+      <module_usage name="numpy.lib.ufunclike" finding="relative" line="15" />
+      <module_usage name="functools" finding="absolute" line="18" />
+      <module_usage name="numpy.core" finding="absolute" line="394" />
+      <module_usage name="numpy.core.getlimits" finding="relative" line="394" />
     </module_usages>
   </module>
   <module name="numpy.lib.ufunclike" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3727,8 +3777,8 @@
     <module_usages>
       <module_usage name="numpy.core.numeric" finding="absolute" line="8" />
       <module_usage name="numpy.core.overrides" finding="absolute" line="9" />
-      <module_usage name="warnings" finding="absolute" line="12" />
-      <module_usage name="functools" finding="absolute" line="13" />
+      <module_usage name="warnings" finding="absolute" line="10" />
+      <module_usage name="functools" finding="absolute" line="11" />
     </module_usages>
   </module>
   <module name="numpy.lib.utils" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3742,31 +3792,33 @@
       <module_usage name="re" finding="absolute" line="5" />
       <module_usage name="warnings" finding="absolute" line="6" />
       <module_usage name="functools" finding="absolute" line="7" />
-      <module_usage name="numpy.core.numerictypes" finding="absolute" line="9" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="10" />
-      <module_usage name="numpy.core" finding="absolute" line="11" />
-      <module_usage name="numpy.core.ndarray" finding="not-found" line="11" />
-      <module_usage name="numpy.core.ufunc" finding="not-found" line="11" />
-      <module_usage name="numpy.core.asarray" finding="not-found" line="11" />
-      <module_usage name="numpy" finding="absolute" line="12" />
-      <module_usage name="numpy.core._multiarray_umath" finding="absolute" line="68" />
-      <module_usage name="pprint" finding="absolute" line="71" />
-      <module_usage name="numpy.lib.threadpoolctl" finding="not-found" line="87" />
-      <module_usage name="numpy.lib" finding="absolute" line="87" />
-      <module_usage name="numpy" finding="absolute" line="115" />
-      <module_usage name="posixpath" finding="absolute" line="118" />
-      <module_usage name="numpy.core" finding="absolute" line="121" />
-      <module_usage name="posixpath" finding="absolute" line="122" />
-      <module_usage name="sys" finding="built-in" line="523" />
-      <module_usage name="inspect" finding="absolute" line="604" />
-      <module_usage name="sys" finding="built-in" line="613" />
-      <module_usage name="sys" finding="built-in" line="701" />
-      <module_usage name="inspect" finding="absolute" line="741" />
-      <module_usage name="inspect" finding="absolute" line="904" />
-      <module_usage name="io" finding="absolute" line="906" />
-      <module_usage name="inspect" finding="absolute" line="1023" />
-      <module_usage name="ast" finding="absolute" line="1082" />
-      <module_usage name="numpy.core._multiarray_umath" finding="absolute" line="1133" />
+      <module_usage name="platform" finding="absolute" line="8" />
+      <module_usage name="numpy._utils" finding="relative" line="10" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="10" />
+      <module_usage name="numpy.core.numerictypes" finding="absolute" line="11" />
+      <module_usage name="numpy.core" finding="absolute" line="12" />
+      <module_usage name="numpy.core.ndarray" finding="not-found" line="12" />
+      <module_usage name="numpy.core.ufunc" finding="not-found" line="12" />
+      <module_usage name="numpy.core.asarray" finding="not-found" line="12" />
+      <module_usage name="numpy" finding="absolute" line="13" />
+      <module_usage name="numpy.core._multiarray_umath" finding="absolute" line="42" />
+      <module_usage name="pprint" finding="absolute" line="45" />
+      <module_usage name="numpy.lib.threadpoolctl" finding="not-found" line="65" />
+      <module_usage name="numpy.lib" finding="absolute" line="65" />
+      <module_usage name="numpy" finding="absolute" line="93" />
+      <module_usage name="posixpath" finding="absolute" line="96" />
+      <module_usage name="numpy.core" finding="absolute" line="99" />
+      <module_usage name="posixpath" finding="absolute" line="100" />
+      <module_usage name="sys" finding="built-in" line="501" />
+      <module_usage name="inspect" finding="absolute" line="599" />
+      <module_usage name="sys" finding="built-in" line="608" />
+      <module_usage name="sys" finding="built-in" line="696" />
+      <module_usage name="inspect" finding="absolute" line="736" />
+      <module_usage name="inspect" finding="absolute" line="899" />
+      <module_usage name="io" finding="absolute" line="901" />
+      <module_usage name="inspect" finding="absolute" line="1018" />
+      <module_usage name="ast" finding="absolute" line="1077" />
+      <module_usage name="numpy.core._multiarray_umath" finding="absolute" line="1134" />
     </module_usages>
   </module>
   <module name="numpy.linalg" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3793,58 +3845,62 @@
       <module_usage name="functools" finding="absolute" line="17" />
       <module_usage name="operator" finding="absolute" line="18" />
       <module_usage name="warnings" finding="absolute" line="19" />
-      <module_usage name="numpy.core" finding="absolute" line="21" />
-      <module_usage name="numpy.core.array" finding="not-found" line="21" />
-      <module_usage name="numpy.core.asarray" finding="not-found" line="21" />
-      <module_usage name="numpy.core.zeros" finding="not-found" line="21" />
-      <module_usage name="numpy.core.empty" finding="not-found" line="21" />
-      <module_usage name="numpy.core.empty_like" finding="not-found" line="21" />
-      <module_usage name="numpy.core.intc" finding="not-found" line="21" />
-      <module_usage name="numpy.core.single" finding="not-found" line="21" />
-      <module_usage name="numpy.core.double" finding="not-found" line="21" />
-      <module_usage name="numpy.core.csingle" finding="not-found" line="21" />
-      <module_usage name="numpy.core.cdouble" finding="not-found" line="21" />
-      <module_usage name="numpy.core.inexact" finding="not-found" line="21" />
-      <module_usage name="numpy.core.complexfloating" finding="not-found" line="21" />
-      <module_usage name="numpy.core.newaxis" finding="not-found" line="21" />
-      <module_usage name="numpy.core.all" finding="not-found" line="21" />
-      <module_usage name="numpy.core.Inf" finding="not-found" line="21" />
-      <module_usage name="numpy.core.dot" finding="not-found" line="21" />
-      <module_usage name="numpy.core.add" finding="not-found" line="21" />
-      <module_usage name="numpy.core.multiply" finding="not-found" line="21" />
-      <module_usage name="numpy.core.sqrt" finding="not-found" line="21" />
-      <module_usage name="numpy.core.sum" finding="not-found" line="21" />
-      <module_usage name="numpy.core.isfinite" finding="not-found" line="21" />
-      <module_usage name="numpy.core.finfo" finding="not-found" line="21" />
-      <module_usage name="numpy.core.errstate" finding="not-found" line="21" />
-      <module_usage name="numpy.core.geterrobj" finding="not-found" line="21" />
-      <module_usage name="numpy.core.moveaxis" finding="not-found" line="21" />
-      <module_usage name="numpy.core.amin" finding="not-found" line="21" />
-      <module_usage name="numpy.core.amax" finding="not-found" line="21" />
-      <module_usage name="numpy.core.product" finding="not-found" line="21" />
-      <module_usage name="numpy.core.abs" finding="not-found" line="21" />
-      <module_usage name="numpy.core.atleast_2d" finding="not-found" line="21" />
-      <module_usage name="numpy.core.intp" finding="not-found" line="21" />
-      <module_usage name="numpy.core.asanyarray" finding="not-found" line="21" />
-      <module_usage name="numpy.core.object_" finding="not-found" line="21" />
-      <module_usage name="numpy.core.matmul" finding="not-found" line="21" />
-      <module_usage name="numpy.core.swapaxes" finding="not-found" line="21" />
-      <module_usage name="numpy.core.divide" finding="not-found" line="21" />
-      <module_usage name="numpy.core.count_nonzero" finding="not-found" line="21" />
-      <module_usage name="numpy.core.isnan" finding="not-found" line="21" />
-      <module_usage name="numpy.core.sign" finding="not-found" line="21" />
-      <module_usage name="numpy.core.argsort" finding="not-found" line="21" />
-      <module_usage name="numpy.core.sort" finding="not-found" line="21" />
-      <module_usage name="numpy.core.reciprocal" finding="not-found" line="21" />
-      <module_usage name="numpy.core.multiarray" finding="absolute" line="30" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="31" />
-      <module_usage name="numpy.core" finding="absolute" line="32" />
-      <module_usage name="numpy.core.overrides" finding="relative" line="32" />
-      <module_usage name="numpy.lib.twodim_base" finding="absolute" line="33" />
-      <module_usage name="numpy.linalg" finding="absolute" line="34" />
-      <module_usage name="numpy.linalg._umath_linalg" finding="relative" line="34" />
-      <module_usage name="functools" finding="absolute" line="37" />
-      <module_usage name="numpy" finding="absolute" line="1600" />
+      <module_usage name="typing" finding="absolute" line="20" />
+      <module_usage name="numpy._utils" finding="relative" line="22" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="22" />
+      <module_usage name="numpy.core" finding="absolute" line="23" />
+      <module_usage name="numpy.core.array" finding="not-found" line="23" />
+      <module_usage name="numpy.core.asarray" finding="not-found" line="23" />
+      <module_usage name="numpy.core.zeros" finding="not-found" line="23" />
+      <module_usage name="numpy.core.empty" finding="not-found" line="23" />
+      <module_usage name="numpy.core.empty_like" finding="not-found" line="23" />
+      <module_usage name="numpy.core.intc" finding="not-found" line="23" />
+      <module_usage name="numpy.core.single" finding="not-found" line="23" />
+      <module_usage name="numpy.core.double" finding="not-found" line="23" />
+      <module_usage name="numpy.core.csingle" finding="not-found" line="23" />
+      <module_usage name="numpy.core.cdouble" finding="not-found" line="23" />
+      <module_usage name="numpy.core.inexact" finding="not-found" line="23" />
+      <module_usage name="numpy.core.complexfloating" finding="not-found" line="23" />
+      <module_usage name="numpy.core.newaxis" finding="not-found" line="23" />
+      <module_usage name="numpy.core.all" finding="not-found" line="23" />
+      <module_usage name="numpy.core.Inf" finding="not-found" line="23" />
+      <module_usage name="numpy.core.dot" finding="not-found" line="23" />
+      <module_usage name="numpy.core.add" finding="not-found" line="23" />
+      <module_usage name="numpy.core.multiply" finding="not-found" line="23" />
+      <module_usage name="numpy.core.sqrt" finding="not-found" line="23" />
+      <module_usage name="numpy.core.sum" finding="not-found" line="23" />
+      <module_usage name="numpy.core.isfinite" finding="not-found" line="23" />
+      <module_usage name="numpy.core.finfo" finding="not-found" line="23" />
+      <module_usage name="numpy.core.errstate" finding="not-found" line="23" />
+      <module_usage name="numpy.core.geterrobj" finding="not-found" line="23" />
+      <module_usage name="numpy.core.moveaxis" finding="not-found" line="23" />
+      <module_usage name="numpy.core.amin" finding="not-found" line="23" />
+      <module_usage name="numpy.core.amax" finding="not-found" line="23" />
+      <module_usage name="numpy.core.prod" finding="not-found" line="23" />
+      <module_usage name="numpy.core.abs" finding="not-found" line="23" />
+      <module_usage name="numpy.core.atleast_2d" finding="not-found" line="23" />
+      <module_usage name="numpy.core.intp" finding="not-found" line="23" />
+      <module_usage name="numpy.core.asanyarray" finding="not-found" line="23" />
+      <module_usage name="numpy.core.object_" finding="not-found" line="23" />
+      <module_usage name="numpy.core.matmul" finding="not-found" line="23" />
+      <module_usage name="numpy.core.swapaxes" finding="not-found" line="23" />
+      <module_usage name="numpy.core.divide" finding="not-found" line="23" />
+      <module_usage name="numpy.core.count_nonzero" finding="not-found" line="23" />
+      <module_usage name="numpy.core.isnan" finding="not-found" line="23" />
+      <module_usage name="numpy.core.sign" finding="not-found" line="23" />
+      <module_usage name="numpy.core.argsort" finding="not-found" line="23" />
+      <module_usage name="numpy.core.sort" finding="not-found" line="23" />
+      <module_usage name="numpy.core.reciprocal" finding="not-found" line="23" />
+      <module_usage name="numpy.core.multiarray" finding="absolute" line="32" />
+      <module_usage name="numpy.core" finding="absolute" line="33" />
+      <module_usage name="numpy.core.overrides" finding="relative" line="33" />
+      <module_usage name="numpy.lib.twodim_base" finding="absolute" line="34" />
+      <module_usage name="numpy.linalg" finding="absolute" line="35" />
+      <module_usage name="numpy.linalg._umath_linalg" finding="relative" line="35" />
+      <module_usage name="numpy._typing" finding="absolute" line="37" />
+      <module_usage name="numpy._typing.NDArray" finding="not-found" line="37" />
+      <module_usage name="functools" finding="absolute" line="60" />
+      <module_usage name="numpy" finding="absolute" line="1639" />
     </module_usages>
   </module>
   <module name="numpy.ma" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3897,7 +3953,7 @@
       <module_usage name="numpy" finding="absolute" line="41" />
       <module_usage name="numpy.expand_dims" finding="not-found" line="41" />
       <module_usage name="numpy.core.numeric" finding="absolute" line="42" />
-      <module_usage name="copy" finding="absolute" line="6290" />
+      <module_usage name="copy" finding="absolute" line="6314" />
     </module_usages>
   </module>
   <module name="numpy.ma.extras" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3909,14 +3965,14 @@
       <module_usage name="numpy.ma" finding="relative" line="26" />
       <module_usage name="numpy.ma.core" finding="relative" line="26" />
       <module_usage name="numpy.ma.core" finding="relative" line="27" />
+      <module_usage name="numpy" finding="absolute" line="33" />
       <module_usage name="numpy" finding="absolute" line="34" />
-      <module_usage name="numpy" finding="absolute" line="35" />
-      <module_usage name="numpy.ndarray" finding="not-found" line="35" />
-      <module_usage name="numpy.array" finding="not-found" line="35" />
-      <module_usage name="numpy.core.multiarray" finding="absolute" line="36" />
-      <module_usage name="numpy.core.numeric" finding="absolute" line="37" />
-      <module_usage name="numpy.lib.function_base" finding="absolute" line="38" />
-      <module_usage name="numpy.lib.index_tricks" finding="absolute" line="39" />
+      <module_usage name="numpy.ndarray" finding="not-found" line="34" />
+      <module_usage name="numpy.array" finding="not-found" line="34" />
+      <module_usage name="numpy.core.multiarray" finding="absolute" line="35" />
+      <module_usage name="numpy.core.numeric" finding="absolute" line="36" />
+      <module_usage name="numpy.lib.function_base" finding="absolute" line="37" />
+      <module_usage name="numpy.lib.index_tricks" finding="absolute" line="38" />
     </module_usages>
   </module>
   <module name="numpy.ma.mrecords" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -3944,7 +4000,7 @@
       <module_usage name="numpy.core.records" finding="absolute" line="27" />
     </module_usages>
   </module>
-  <module name="numpy.matrixlib" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="numpy.matrixlib" kind="CompiledPythonPackage" reason="Containing package of 'numpy.matrixlib.defmatrix'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -3963,15 +4019,16 @@
       <module_usage name="sys" finding="built-in" line="3" />
       <module_usage name="warnings" finding="absolute" line="4" />
       <module_usage name="ast" finding="absolute" line="5" />
-      <module_usage name="numpy.core.numeric" finding="absolute" line="6" />
-      <module_usage name="numpy.core.numeric" finding="absolute" line="7" />
-      <module_usage name="numpy.core.overrides" finding="absolute" line="8" />
-      <module_usage name="numpy.linalg" finding="absolute" line="11" />
-      <module_usage name="numpy.linalg.matrix_power" finding="not-found" line="11" />
-      <module_usage name="numpy.linalg" finding="absolute" line="832" />
-      <module_usage name="numpy.linalg.inv" finding="not-found" line="832" />
-      <module_usage name="numpy.linalg" finding="absolute" line="834" />
-      <module_usage name="numpy.linalg.pinv" finding="not-found" line="834" />
+      <module_usage name="numpy._utils" finding="relative" line="7" />
+      <module_usage name="numpy._utils.set_module" finding="not-found" line="7" />
+      <module_usage name="numpy.core.numeric" finding="absolute" line="8" />
+      <module_usage name="numpy.core.numeric" finding="absolute" line="9" />
+      <module_usage name="numpy.linalg" finding="absolute" line="12" />
+      <module_usage name="numpy.linalg.matrix_power" finding="not-found" line="12" />
+      <module_usage name="numpy.linalg" finding="absolute" line="833" />
+      <module_usage name="numpy.linalg.inv" finding="not-found" line="833" />
+      <module_usage name="numpy.linalg" finding="absolute" line="835" />
+      <module_usage name="numpy.linalg.pinv" finding="not-found" line="835" />
     </module_usages>
   </module>
   <module name="numpy.polynomial" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
@@ -4185,6 +4242,9 @@
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="numpy._version" finding="relative" line="3" />
+      <module_usage name="numpy._version_meson" finding="not-found" line="10" />
+      <module_usage name="numpy" finding="not-found" line="10" />
+      <module_usage name="numpy._version" finding="relative" line="13" />
     </module_usages>
   </module>
   <module name="opcode" kind="UncompiledPythonModule" reason="Module needed for initializing Python">
@@ -4596,7 +4656,7 @@
       <module_usage name="json" finding="absolute" line="7" />
     </module_usages>
   </module>
-  <module name="pandas.api" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.api" kind="CompiledPythonPackage" reason="Containing package of 'pandas.api.types'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -4785,7 +4845,7 @@
       <module_usage name="pyarrow" finding="absolute" line="8" />
     </module_usages>
   </module>
-  <module name="pandas.core" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.core" kind="CompiledPythonPackage" reason="Containing package of 'pandas.core.dtypes'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -4811,71 +4871,6 @@
       <module_usage name="numpy" finding="absolute" line="9" />
       <module_usage name="pandas._typing" finding="absolute" line="11" />
       <module_usage name="pandas.compat._optional" finding="absolute" line="12" />
-    </module_usages>
-  </module>
-  <module name="pandas.core._numba.kernels" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="sys" finding="built-in" line="1" />
-      <module_usage name="pandas.core._numba.kernels.mean_" finding="absolute" line="1" />
-      <module_usage name="pandas.core._numba.kernels.min_max_" finding="absolute" line="2" />
-      <module_usage name="pandas.core._numba.kernels.sum_" finding="absolute" line="3" />
-      <module_usage name="pandas.core._numba.kernels.var_" finding="absolute" line="4" />
-    </module_usages>
-  </module>
-  <module name="pandas.core._numba.kernels.mean_" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="9" />
-      <module_usage name="pandas.core._numba.kernels.numba" finding="not-found" line="11" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="11" />
-      <module_usage name="numpy" finding="absolute" line="12" />
-      <module_usage name="pandas.core._numba.kernels.shared" finding="absolute" line="14" />
-    </module_usages>
-  </module>
-  <module name="pandas.core._numba.kernels.min_max_" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="9" />
-      <module_usage name="pandas.core._numba.kernels.numba" finding="not-found" line="11" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="11" />
-      <module_usage name="numpy" finding="absolute" line="12" />
-    </module_usages>
-  </module>
-  <module name="pandas.core._numba.kernels.shared" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="pandas.core._numba.kernels.numba" finding="not-found" line="3" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="3" />
-      <module_usage name="numpy" finding="absolute" line="4" />
-    </module_usages>
-  </module>
-  <module name="pandas.core._numba.kernels.sum_" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="9" />
-      <module_usage name="pandas.core._numba.kernels.numba" finding="not-found" line="11" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="11" />
-      <module_usage name="numpy" finding="absolute" line="12" />
-      <module_usage name="pandas.core._numba.kernels.shared" finding="absolute" line="14" />
-    </module_usages>
-  </module>
-  <module name="pandas.core._numba.kernels.var_" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="9" />
-      <module_usage name="pandas.core._numba.kernels.numba" finding="not-found" line="11" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="11" />
-      <module_usage name="numpy" finding="absolute" line="12" />
-      <module_usage name="pandas.core._numba.kernels.shared" finding="absolute" line="14" />
     </module_usages>
   </module>
   <module name="pandas.core.accessor" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
@@ -5024,7 +5019,7 @@
       <module_usage name="pandas.core.indexes.base" finding="absolute" line="1439" />
     </module_usages>
   </module>
-  <module name="pandas.core.array_algos" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.core.array_algos" kind="CompiledPythonPackage" reason="Containing package of 'pandas.core.array_algos.transforms'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -6148,7 +6143,7 @@
       <module_usage name="pandas.core.dtypes.missing" finding="absolute" line="55" />
     </module_usages>
   </module>
-  <module name="pandas.core.computation" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.core.computation" kind="CompiledPythonPackage" reason="Containing package of 'pandas.core.computation.expressions'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -6455,7 +6450,7 @@
       <module_usage name="pandas.Series" finding="not-found" line="348" />
     </module_usages>
   </module>
-  <module name="pandas.core.dtypes" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.core.dtypes" kind="CompiledPythonPackage" reason="Containing package of 'pandas.core.dtypes.generic'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -6939,7 +6934,7 @@
       <module_usage name="pandas.core.tools.datetimes" finding="absolute" line="10436" />
     </module_usages>
   </module>
-  <module name="pandas.core.groupby" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.core.groupby" kind="CompiledPythonPackage" reason="Containing package of 'pandas.core.groupby.generic'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -7024,6 +7019,7 @@
     </module_usages>
   </module>
   <module name="pandas.core.groupby.groupby" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_numba" tags_used="use_numba" result="true" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -7080,18 +7076,6 @@
       <module_usage name="pandas.core.util.numba_" finding="absolute" line="127" />
       <module_usage name="pandas.core.groupby.grouper" finding="absolute" line="963" />
       <module_usage name="pandas.core.reshape.concat" finding="absolute" line="1129" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="2179" />
-      <module_usage name="pandas.core._numba.kernels.sliding_mean" finding="not-found" line="2179" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="2267" />
-      <module_usage name="pandas.core._numba.kernels.sliding_var" finding="not-found" line="2267" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="2341" />
-      <module_usage name="pandas.core._numba.kernels.sliding_var" finding="not-found" line="2341" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="2445" />
-      <module_usage name="pandas.core._numba.kernels.sliding_sum" finding="not-found" line="2445" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="2484" />
-      <module_usage name="pandas.core._numba.kernels.sliding_min_max" finding="not-found" line="2484" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="2505" />
-      <module_usage name="pandas.core._numba.kernels.sliding_min_max" finding="not-found" line="2505" />
       <module_usage name="pandas.core.resample" finding="absolute" line="2801" />
       <module_usage name="pandas.core.window" finding="absolute" line="2812" />
       <module_usage name="pandas.core.window.RollingGroupby" finding="not-found" line="2812" />
@@ -7238,7 +7222,7 @@
       <module_usage name="pandas.core.construction" finding="absolute" line="524" />
     </module_usages>
   </module>
-  <module name="pandas.core.indexes" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.core.indexes" kind="CompiledPythonPackage" reason="Containing package of 'pandas.core.indexes.category'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -7783,7 +7767,7 @@
       <module_usage name="pandas.Series" finding="not-found" line="2085" />
     </module_usages>
   </module>
-  <module name="pandas.core.interchange" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.core.interchange" kind="CompiledPythonPackage" reason="Containing package of 'pandas.core.interchange.from_dataframe'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -8189,7 +8173,7 @@
       <module_usage name="pandas.core" finding="absolute" line="1566" />
     </module_usages>
   </module>
-  <module name="pandas.core.ops" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.core.ops" kind="CompiledPythonPackage" reason="Containing package of 'pandas.core.ops.common'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -8381,7 +8365,7 @@
       <module_usage name="pandas.DataFrame" finding="not-found" line="1045" />
     </module_usages>
   </module>
-  <module name="pandas.core.reshape" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.core.reshape" kind="CompiledPythonPackage" reason="Containing package of 'pandas.core.reshape.reshape'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -8817,7 +8801,7 @@
       <module_usage name="pandas.Series" finding="not-found" line="358" />
     </module_usages>
   </module>
-  <module name="pandas.core.tools" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.core.tools" kind="CompiledPythonPackage" reason="Containing package of 'pandas.core.tools.timedeltas'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -8931,7 +8915,7 @@
       <module_usage name="pandas.core.dtypes.missing" finding="absolute" line="16" />
     </module_usages>
   </module>
-  <module name="pandas.core.util" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.core.util" kind="CompiledPythonPackage" reason="Containing package of 'pandas.core.util.hashing'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -9091,6 +9075,7 @@
     </module_usages>
   </module>
   <module name="pandas.core.window.rolling" kind="CompiledPythonModule" reason="Instructed by user to follow to all non-standard library modules.">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_numba" tags_used="use_numba" result="true" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -9138,18 +9123,6 @@
       <module_usage name="pandas.core.groupby.ops" finding="absolute" line="734" />
       <module_usage name="pandas" finding="absolute" line="1435" />
       <module_usage name="pandas.Series" finding="not-found" line="1435" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="1472" />
-      <module_usage name="pandas.core._numba.kernels.sliding_sum" finding="not-found" line="1472" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="1497" />
-      <module_usage name="pandas.core._numba.kernels.sliding_min_max" finding="not-found" line="1497" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="1522" />
-      <module_usage name="pandas.core._numba.kernels.sliding_min_max" finding="not-found" line="1522" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="1547" />
-      <module_usage name="pandas.core._numba.kernels.sliding_mean" finding="not-found" line="1547" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="1593" />
-      <module_usage name="pandas.core._numba.kernels.sliding_var" finding="not-found" line="1593" />
-      <module_usage name="pandas.core._numba.kernels" finding="absolute" line="1622" />
-      <module_usage name="pandas.core._numba.kernels.sliding_var" finding="not-found" line="1622" />
       <module_usage name="pandas" finding="absolute" line="1712" />
       <module_usage name="pandas.Series" finding="not-found" line="1712" />
       <module_usage name="pandas" finding="absolute" line="1760" />
@@ -9170,7 +9143,7 @@
       <module_usage name="pandas._libs.tslibs.OutOfBoundsTimedelta" finding="not-found" line="10" />
     </module_usages>
   </module>
-  <module name="pandas.io" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.io" kind="CompiledPythonPackage" reason="Containing package of 'pandas.io.excel'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -9608,7 +9581,7 @@
       <module_usage name="pyarrow.feather" finding="relative" line="126" />
     </module_usages>
   </module>
-  <module name="pandas.io.formats" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.io.formats" kind="CompiledPythonPackage" reason="Containing package of 'pandas.io.formats.style'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -10618,7 +10591,7 @@
       <module_usage name="pandas.plotting._matplotlib" finding="absolute" line="1815" />
     </module_usages>
   </module>
-  <module name="pandas.plotting._matplotlib" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.plotting._matplotlib" kind="CompiledPythonPackage" reason="Containing package of 'pandas.plotting._matplotlib.compat'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -10947,7 +10920,7 @@
       <module_usage name="pandas.plotting._core" finding="absolute" line="9" />
     </module_usages>
   </module>
-  <module name="pandas.tseries" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.tseries" kind="CompiledPythonPackage" reason="Containing package of 'pandas.tseries.offsets'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -10997,7 +10970,7 @@
       <module_usage name="pandas._libs.tslibs.offsets" finding="absolute" line="3" />
     </module_usages>
   </module>
-  <module name="pandas.util" kind="CompiledPythonPackage" reason="Instructed by user to follow to all non-standard library modules.">
+  <module name="pandas.util" kind="CompiledPythonPackage" reason="Containing package of 'pandas.util.version'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -11374,8 +11347,6 @@
       <module_usage name="textwrap" finding="absolute" line="3" />
       <module_usage name="functools" finding="absolute" line="4" />
       <module_usage name="importlib.resources" finding="absolute" line="7" />
-      <module_usage name="pkg_resources._vendor.importlib_resources" finding="absolute" line="9" />
-      <module_usage name="pkg_resources._vendor.importlib_resources.files" finding="not-found" line="9" />
       <module_usage name="pkg_resources._vendor.jaraco.text.pkg_resources._vendor.functools" finding="not-found" line="11" />
       <module_usage name="pkg_resources._vendor.jaraco.text.pkg_resources._vendor" finding="not-found" line="11" />
       <module_usage name="pkg_resources._vendor.jaraco.text.pkg_resources" finding="not-found" line="11" />
@@ -11676,6 +11647,7 @@
     <module_usages />
   </module>
   <module name="platform" kind="UncompiledPythonModule" reason="Part of standard library">
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="macos" tags_used="macos" result="false" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -12231,6 +12203,8 @@
     <module_usages />
   </module>
   <module name="random" kind="UncompiledPythonModule" reason="Part of standard library">
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="python310_or_higher" tags_used="python310_or_higher" result="true" />
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="before_python310" tags_used="before_python310" result="false" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -12271,10 +12245,15 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="secrets" kind="UncompiledPythonModule" reason="Part of standard library">
+  <module name="secrets" kind="UncompiledPythonModule" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
-    <module_usages />
+    <module_usages>
+      <module_usage name="base64" finding="absolute" line="15" />
+      <module_usage name="binascii" finding="built-in" line="16" />
+      <module_usage name="hmac" finding="absolute" line="18" />
+      <module_usage name="random" finding="absolute" line="19" />
+    </module_usages>
   </module>
   <module name="selectors" kind="UncompiledPythonModule" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
     <optimization-time pass="1" time="volatile" />
@@ -12336,6 +12315,7 @@
     <module_usages />
   </module>
   <module name="socket" kind="UncompiledPythonModule" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_socket&quot;)" tags_used="has_builtin_module" result="false" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -12426,11 +12406,6 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="statistics" kind="UncompiledPythonModule" reason="Part of standard library">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
   <module name="string" kind="UncompiledPythonModule" reason="Part of standard library">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -12446,10 +12421,33 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="subprocess" kind="UncompiledPythonModule" reason="Part of standard library">
+  <module name="subprocess" kind="UncompiledPythonModule" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
-    <module_usages />
+    <module_usages>
+      <module_usage name="builtins" finding="built-in" line="43" />
+      <module_usage name="errno" finding="built-in" line="44" />
+      <module_usage name="io" finding="absolute" line="45" />
+      <module_usage name="os" finding="absolute" line="46" />
+      <module_usage name="time" finding="built-in" line="47" />
+      <module_usage name="signal" finding="absolute" line="48" />
+      <module_usage name="sys" finding="built-in" line="49" />
+      <module_usage name="threading" finding="absolute" line="50" />
+      <module_usage name="warnings" finding="absolute" line="51" />
+      <module_usage name="contextlib" finding="absolute" line="52" />
+      <module_usage name="time" finding="built-in" line="53" />
+      <module_usage name="types" finding="absolute" line="54" />
+      <module_usage name="fcntl" finding="built-in" line="57" />
+      <module_usage name="msvcrt" finding="not-found" line="69" />
+      <module_usage name="_winapi" finding="not-found" line="70" />
+      <module_usage name="_posixsubprocess" finding="built-in" line="74" />
+      <module_usage name="select" finding="built-in" line="75" />
+      <module_usage name="selectors" finding="absolute" line="76" />
+      <module_usage name="_winapi" finding="not-found" line="78" />
+      <module_usage name="grp" finding="built-in" line="882" />
+      <module_usage name="grp" finding="built-in" line="910" />
+      <module_usage name="pwd" finding="built-in" line="938" />
+    </module_usages>
   </module>
   <module name="symtable" kind="UncompiledPythonModule" reason="Part of standard library">
     <optimization-time pass="1" time="volatile" />
@@ -12664,7 +12662,7 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="xml" kind="UncompiledPythonPackage" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
+  <module name="xml" kind="UncompiledPythonPackage" reason="Containing package of 'xml.parsers'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -12672,7 +12670,7 @@
       <module_usage name="sys" finding="built-in" line="1" />
     </module_usages>
   </module>
-  <module name="xml.dom" kind="UncompiledPythonPackage" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
+  <module name="xml.dom" kind="UncompiledPythonPackage" reason="Containing package of 'xml.dom.minidom'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -12770,7 +12768,7 @@
       <module_usage name="urllib.request" finding="absolute" line="245" />
     </module_usages>
   </module>
-  <module name="xml.etree" kind="UncompiledPythonPackage" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
+  <module name="xml.etree" kind="UncompiledPythonPackage" reason="Containing package of 'xml.etree.ElementTree'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -12882,7 +12880,7 @@
       <module_usage name="xml.sax.saxutils" finding="relative" line="116" />
     </module_usages>
   </module>
-  <module name="xmlrpc" kind="UncompiledPythonPackage" reason="Instructed by user to follow all modules, including non-automatic standard library modules.">
+  <module name="xmlrpc" kind="UncompiledPythonPackage" reason="Containing package of 'xmlrpc.client'.">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -13634,10 +13632,10 @@
   <included_dll name="libsqlite3.so.0" dest_path="libsqlite3.so.0" source_path="/lib/x86_64-linux-gnu/libsqlite3.so.0" package="" ignored="no" reason="Used by '_sqlite3.so'" />
   <included_dll name="libssl.so.3" dest_path="libssl.so.3" source_path="/lib/x86_64-linux-gnu/libssl.so.3" package="" ignored="no" reason="Used by '_ssl.so'" />
   <included_dll name="libuuid.so.1" dest_path="libuuid.so.1" source_path="/lib/x86_64-linux-gnu/libuuid.so.1" package="" ignored="no" reason="Used by '_uuid.so'" />
-  <included_dll name="libopenblas64_p-r0-15028c96.3.21.so" dest_path="libopenblas64_p-r0-15028c96.3.21.so" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy.libs/libopenblas64_p-r0-15028c96.3.21.so" package="numpy.core" ignored="no" reason="Used by 'numpy/core/_multiarray_umath.so'" />
+  <included_dll name="libgcc_s.so.1" dest_path="libgcc_s.so.1" source_path="/lib/x86_64-linux-gnu/libgcc_s.so.1" package="numpy.core" ignored="no" reason="Used by 'numpy/core/_multiarray_tests.so'" />
+  <included_dll name="libopenblas64_p-r0-7a851222.3.23.so" dest_path="libopenblas64_p-r0-7a851222.3.23.so" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy.libs/libopenblas64_p-r0-7a851222.3.23.so" package="numpy.core" ignored="no" reason="Used by 'numpy/core/_multiarray_umath.so'" />
   <included_dll name="libgfortran-040039e1.so.5.0.0" dest_path="libgfortran-040039e1.so.5.0.0" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy.libs/libgfortran-040039e1.so.5.0.0" package="numpy.core" ignored="no" reason="Used by 'numpy/core/_multiarray_umath.so'" />
   <included_dll name="libquadmath-96973f99.so.0.0.0" dest_path="libquadmath-96973f99.so.0.0.0" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy.libs/libquadmath-96973f99.so.0.0.0" package="numpy.core" ignored="no" reason="Used by 'numpy/core/_multiarray_umath.so'" />
-  <included_dll name="libgcc_s.so.1" dest_path="libgcc_s.so.1" source_path="/lib/x86_64-linux-gnu/libgcc_s.so.1" package="numpy.core" ignored="no" reason="Used by 'numpy/core/_multiarray_umath.so'" />
   <included_dll name="libarrow.so.800" dest_path="libarrow.so.800" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libarrow.so.800" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_compute.so'" />
   <included_dll name="libarrow_python.so.800" dest_path="libarrow_python.so.800" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libarrow_python.so.800" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_compute.so'" />
   <included_dll name="libparquet.so.800" dest_path="libparquet.so.800" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libparquet.so.800" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_compute.so'" />
@@ -13649,12 +13647,11 @@
     <option value="/home/hayen/repos/Nuitka-Watch/cases/Pandas/pyarrow-example/PandasPyrarrowUsing.py" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=06b1913cd5cab928f16cfa4e80610d55" />
+    <option value="--report-user-provided=pipenv_hash=07ceb6917c69452a41e200ce99021ed1" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
     <plugin name="data-files" user_enabled="no" />
-    <plugin name="datafile-inclusion-ng" user_enabled="no" />
     <plugin name="delvewheel" user_enabled="no" />
     <plugin name="dll-files" user_enabled="no" />
     <plugin name="eventlet" user_enabled="no" />
@@ -13669,9 +13666,10 @@
     <plugin name="pbr-compat" user_enabled="no" />
     <plugin name="pkg-resources" user_enabled="no" />
     <plugin name="pywebview" user_enabled="no" />
+    <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
-    <distribution name="numpy" version="1.24.2" />
+    <distribution name="numpy" version="1.25.0" />
     <distribution name="pandas" version="1.5.3" />
     <distribution name="pyarrow" version="8.0.0" />
     <distribution name="python-dateutil" version="2.8.2" />
@@ -13689,6 +13687,6 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>06b1913cd5cab928f16cfa4e80610d55</pipenv_hash>
+    <pipenv_hash>07ceb6917c69452a41e200ce99021ed1</pipenv_hash>
   </user-data>
 </nuitka-compilation-report>
