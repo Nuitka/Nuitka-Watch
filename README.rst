@@ -18,7 +18,7 @@ release of Nuitka and a PyPI package.
 The ``nuitka-watch`` tool will scan for installed Pythons. Right now you are
 expected to install the dependencies in this requirement files, to make it
 suitable for testing. We might enable it to do this automatically. Basically it
-pulls in the supported version of pipenv for a given Python.
+pulls in the supported version of ``pipenv`` for a given Python.
 
 .. code:: bash
 
