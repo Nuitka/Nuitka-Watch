@@ -8,10 +8,6 @@
 # nuitka-project: --noinclude-custom-mode=matplotlib:warning
 # nuitka-project: --noinclude-custom-mode=pandas:warning
 
-## nuitka-project: --nofollow-import-to=sklearn.utils._testing
-## nuitka-project: --noinclude-custom-mode=sklearn.utils._testing:error
-
-
 from __future__ import print_function
 
 import importlib
