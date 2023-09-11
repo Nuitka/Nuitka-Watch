@@ -2,9 +2,8 @@
 # nuitka-project: --enable-plugin=no-qt
 
 
-import sklearn
 from sklearn.datasets import load_breast_cancer
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import classification_report
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.svm import SVC
 
@@ -21,6 +20,7 @@ model.fit(X_train, y_train)
 
 # print prediction results
 predictions = model.predict(X_test)
+print("REPORT1:")
 print(classification_report(y_test, predictions))
 
 # defining parameter range
@@ -31,14 +31,16 @@ param_grid = {
     "kernel": ["linear"],
 }
 
-grid = GridSearchCV(SVC(), param_grid, refit=True, verbose=3, n_jobs=-1)
+grid = GridSearchCV(SVC(), param_grid, refit=True, verbose=1, n_jobs=2)
 
 # fitting the model for grid search
 grid.fit(X_train, y_train)
 
 # print best parameter after tuning
+print("PARAMS:")
 print(grid.best_params_)
 grid_predictions = grid.predict(X_test)
 
 # print classification report
+print("REPORT2:")
 print(classification_report(y_test, grid_predictions))
