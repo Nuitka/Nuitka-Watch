@@ -1,6 +1,12 @@
 # nuitka-project: --standalone
 # nuitka-project: --enable-plugin=no-qt
 
+import os, sys
+
+if "NUITKA_LAUNCH_TOKEN" not in os.environ:
+    sys.exit("Error, need launch token or else fork bomb suspected.")
+else:
+    del os.environ["NUITKA_LAUNCH_TOKEN"]
 
 from sklearn.datasets import load_breast_cancer
 from sklearn.metrics import classification_report
