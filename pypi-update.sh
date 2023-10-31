@@ -1,2 +1,12 @@
 #!/bin/bash
-exec python3.10 ../Py2C/bin/nuitka-watch --python-version=3.10 --nuitka-binary=../Nuitka-develop/bin/nuitka
+set -e
+
+OS=`uname`
+
+if [ "$OS" = "Darwin" ]
+then
+    python3.10 ../Py2C/bin/nuitka-watch --python-version=3.10 --nuitka-binary=../Nuitka-develop/bin/nuitka
+    python3.11 ../Py2C/bin/nuitka-watch --python-version=3.11 --nuitka-binary=../Nuitka-develop/bin/nuitka
+else
+    python3.10 ../Py2C/bin/nuitka-watch --python-version=3.10 --nuitka-binary=../Nuitka-develop/bin/nuitka
+fi
