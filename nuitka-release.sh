@@ -10,8 +10,6 @@ then
     alias python3='/c/Python310_64/python.exe'
 fi
 
-alias
-
 if [ "$OS" = "Darwin" ]
 then
     python3 ../Py2C/bin/nuitka-watch --python-version=3.10 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka
