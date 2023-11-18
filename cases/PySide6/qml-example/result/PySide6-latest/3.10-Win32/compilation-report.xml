@@ -1,13 +1,13 @@
-<nuitka-compilation-report nuitka_version="1.8.6" nuitka_commercial_version="not installed" completion="yes">
-  <module name="PySide6" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.QtWidgets'." source_path="${sys.prefix}\lib\site-packages\PySide6\__init__.py">
+<?xml version='1.0' encoding='utf8'?>
+<nuitka-compilation-report nuitka_version="1.9rc8" nuitka_commercial_version="not installed" completion="yes">
+  <module name="PySide6" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.QtWidgets'." source_path="${sys.prefix}\lib\site-packages\PySide6\__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="version(&quot;PySide6&quot;) &lt; (6,6)" tags_used="version" result="false" />
     <plugin-influence name="options-nanny" influence="condition-used" condition="use_pyside6" tags_used="use_pyside6" result="true" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
-    <distributions>
-      <distribution-used name="PySide6" />
-      <distribution-used name="PySide6-Addons" />
-      <distribution-used name="PySide6-Essentials" />
-    </distributions>
+    <distribution-usages>
+      <distribution-usage name="shiboken6" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="built-in" line="2" />
@@ -16,7 +16,7 @@
       <module_usage name="shiboken6" finding="absolute" line="64" />
       <module_usage name="shiboken6.Shiboken" finding="relative" line="64" />
       <module_usage name="sys" finding="built-in" line="68" />
-      <module_usage name="PySide6" finding="relative" line="87" />
+      <module_usage name="PySide6" finding="absolute" line="87" />
       <module_usage name="PySide6.QtNetwork" finding="relative" line="87" />
     </module_usages>
   </module>
@@ -27,68 +27,66 @@
       <module_usage name="os" finding="absolute" line="1" />
     </module_usages>
   </module>
-  <module name="PySide6.QtCore" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtCore.pyd">
+  <module name="PySide6.QtCore" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtCore.pyd" distribution="PySide6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
-    <distributions>
-      <distribution-used name="PySide6" />
-    </distributions>
     <module_usages />
   </module>
-  <module name="PySide6.QtCore-postLoad" kind="CompiledPythonModule" usage="plugins" reason="According to Yaml configuration. Setting Qt library path to distribution folder. We need to avoid loading target&#10;system Qt plugins, which may be from another Qt version." source_path="${sys.prefix}\lib\site-packages\PySide6\PySide6\QtCore-postLoad.py">
+  <module name="PySide6.QtCore-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Setting Qt library path to distribution folder. We need to avoid loading target&#10;system Qt plugins, which may be from another Qt version." source_path="${sys.prefix}\lib\site-packages\PySide6\PySide6\QtCore-postLoad.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="PySide6" finding="absolute" line="11" />
-      <module_usage name="PySide6.QtCore" finding="relative" line="11" />
-      <module_usage name="PySide6.QtCore" finding="absolute" line="15" />
-      <module_usage name="os" finding="absolute" line="16" />
-      <module_usage name="ntpath" finding="absolute" line="23" />
-      <module_usage name="ntpath" finding="absolute" line="24" />
-      <module_usage name="ntpath" finding="absolute" line="31" />
-      <module_usage name="ntpath" finding="absolute" line="32" />
+      <module_usage name="PySide6.QtCore" finding="absolute" line="3" />
+      <module_usage name="os" finding="absolute" line="4" />
+      <module_usage name="ntpath" finding="absolute" line="11" />
+      <module_usage name="ntpath" finding="absolute" line="12" />
+      <module_usage name="ntpath" finding="absolute" line="19" />
+      <module_usage name="ntpath" finding="absolute" line="20" />
     </module_usages>
   </module>
-  <module name="PySide6.QtGui" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtGui.pyd">
+  <module name="PySide6.QtGui" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtGui.pyd" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtNetwork" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtNetwork.pyd">
+  <module name="PySide6.QtNetwork" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtNetwork.pyd" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtOpenGL" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtOpenGL.pyd">
+  <module name="PySide6.QtOpenGL" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtOpenGL.pyd" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtQml" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtQml.pyd">
+  <module name="PySide6.QtQml" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtQml.pyd" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtQuick" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtQuick.pyd">
+  <module name="PySide6.QtQuick" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtQuick.pyd" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtWidgets" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtWidgets.pyd">
+  <module name="PySide6.QtWidgets" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtWidgets.pyd" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.support" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.support.deprecated'." source_path="${sys.prefix}\lib\site-packages\PySide6\support\__init__.py">
+  <module name="PySide6.support" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.support.deprecated'." source_path="${sys.prefix}\lib\site-packages\PySide6\support\__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="shiboken6" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="shiboken6.Shiboken" finding="absolute" line="4" />
     </module_usages>
   </module>
-  <module name="PySide6.support.deprecated" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\PySide6\support\deprecated.py">
+  <module name="PySide6.support.deprecated" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\PySide6\support\deprecated.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -105,6 +103,11 @@
   <module name="__main__" kind="PythonMainModule" usage="root_module" reason="Root module" source_path="~\repos\Nuitka-Watch\cases\PySide6\qml-example\PySideQmlPolarchartTest.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="PySide6" />
+      <distribution-usage name="PySide6-Addons" />
+      <distribution-usage name="PySide6-Essentials" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="23" />
       <module_usage name="sys" finding="built-in" line="24" />
@@ -370,7 +373,6 @@
       <module_usage name="symtable" finding="absolute" line="1" />
       <module_usage name="sysconfig" finding="absolute" line="1" />
       <module_usage name="tarfile" finding="absolute" line="1" />
-      <module_usage name="textwrap" finding="absolute" line="1" />
       <module_usage name="threading" finding="absolute" line="1" />
       <module_usage name="timeit" finding="absolute" line="1" />
       <module_usage name="trace" finding="absolute" line="1" />
@@ -1136,7 +1138,7 @@
       <module_usage name="email._parseaddr" finding="absolute" line="35" />
       <module_usage name="email._parseaddr" finding="absolute" line="37" />
       <module_usage name="email.charset" finding="absolute" line="40" />
-      <module_usage name="socket" finding="absolute" line="192" />
+      <module_usage name="socket" finding="excluded" line="192" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'email.utils'" />
     </module_usages>
   </module>
   <module name="encodings" kind="UncompiledPythonPackage" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\encodings\__init__.py">
@@ -1146,7 +1148,7 @@
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="codecs" finding="absolute" line="31" />
       <module_usage name="sys" finding="built-in" line="32" />
-      <module_usage name="encodings" finding="relative" line="33" />
+      <module_usage name="encodings" finding="absolute" line="33" />
       <module_usage name="encodings.aliases" finding="relative" line="33" />
       <module_usage name="_winapi" finding="built-in" line="161" />
       <module_usage name="encodings.mbcs" finding="absolute" line="164" />
@@ -2061,6 +2063,7 @@
     </module_usages>
   </module>
   <module name="enum" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\enum.py">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="plugin(&quot;pyside6&quot;)" tags_used="plugin" result="true" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -2359,7 +2362,7 @@
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
-      <module_usage name="importlib" finding="relative" line="2" />
+      <module_usage name="importlib" finding="absolute" line="2" />
       <module_usage name="importlib._bootstrap" finding="relative" line="2" />
       <module_usage name="abc" finding="absolute" line="3" />
       <module_usage name="warnings" finding="absolute" line="4" />
@@ -2370,7 +2373,7 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="contextlib" finding="absolute" line="1" />
-      <module_usage name="importlib" finding="relative" line="3" />
+      <module_usage name="importlib" finding="absolute" line="3" />
       <module_usage name="importlib.abc" finding="relative" line="3" />
     </module_usages>
   </module>
@@ -2420,9 +2423,9 @@
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
-      <module_usage name="importlib" finding="relative" line="2" />
+      <module_usage name="importlib" finding="absolute" line="2" />
       <module_usage name="importlib._bootstrap_external" finding="relative" line="2" />
-      <module_usage name="importlib" finding="relative" line="3" />
+      <module_usage name="importlib" finding="absolute" line="3" />
       <module_usage name="importlib.machinery" finding="relative" line="3" />
       <module_usage name="_frozen_importlib" finding="built-in" line="5" />
       <module_usage name="_frozen_importlib_external" finding="built-in" line="11" />
@@ -2468,7 +2471,7 @@
       <module_usage name="itertools" finding="built-in" line="13" />
       <module_usage name="posixpath" finding="absolute" line="14" />
       <module_usage name="collections" finding="absolute" line="15" />
-      <module_usage name="importlib.metadata" finding="relative" line="17" />
+      <module_usage name="importlib.metadata" finding="absolute" line="17" />
       <module_usage name="importlib.metadata._adapters" finding="relative" line="17" />
       <module_usage name="importlib.metadata._meta" finding="relative" line="17" />
       <module_usage name="importlib.metadata._meta" finding="relative" line="18" />
@@ -2543,7 +2546,7 @@
       <module_usage name="collections" finding="absolute" line="1" />
       <module_usage name="zipfile" finding="absolute" line="2" />
       <module_usage name="pathlib" finding="absolute" line="3" />
-      <module_usage name="importlib" finding="relative" line="4" />
+      <module_usage name="importlib" finding="absolute" line="4" />
       <module_usage name="importlib.abc" finding="relative" line="4" />
     </module_usages>
   </module>
@@ -2553,7 +2556,7 @@
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="io" finding="absolute" line="2" />
-      <module_usage name="importlib" finding="relative" line="4" />
+      <module_usage name="importlib" finding="absolute" line="4" />
       <module_usage name="importlib._common" finding="relative" line="4" />
       <module_usage name="importlib._common" finding="relative" line="5" />
       <module_usage name="importlib.abc" finding="relative" line="6" />
@@ -3182,12 +3185,9 @@
       <module_usage name="time" finding="built-in" line="31" />
     </module_usages>
   </module>
-  <module name="shiboken6" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\shiboken6\__init__.py">
+  <module name="shiboken6" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\shiboken6\__init__.py" distribution="shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
-    <distributions>
-      <distribution-used name="shiboken6" />
-    </distributions>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="built-in" line="10" />
@@ -3209,7 +3209,7 @@
       <module_usage name="shiboken6.Shiboken" finding="absolute" line="27" />
     </module_usages>
   </module>
-  <module name="shiboken6.Shiboken" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\shiboken6\Shiboken.pyd">
+  <module name="shiboken6.Shiboken" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\shiboken6\Shiboken.pyd" distribution="shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -3524,7 +3524,7 @@
       <module_usage name="ntpath" finding="absolute" line="839" />
     </module_usages>
   </module>
-  <module name="textwrap" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\textwrap.py">
+  <module name="textwrap" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\textwrap.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -5301,15 +5301,15 @@
   <included_dll name="opengl32sw.dll" dest_path="opengl32sw.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\opengl32sw.dll" package="PySide6" ignored="no" reason="needed by OpenGL for 'PySide6'" />
   <included_dll name="python310.dll" dest_path="python310.dll" source_path="${sys.real_prefix}\python310.dll" package="" ignored="no" reason="Used by 'PySideQmlPolarchartTest.exe'" />
   <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.real_prefix}\vcruntime140.dll" package="" ignored="no" reason="Used by 'PySideQmlPolarchartTest.exe'" />
-  <included_dll name="pyside6.abi3.dll" dest_path="pyside6.abi3.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\pyside6.abi3.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
   <included_dll name="shiboken6.abi3.dll" dest_path="shiboken6.abi3.dll" source_path="${sys.prefix}\lib\site-packages\shiboken6\shiboken6.abi3.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
-  <included_dll name="python3.dll" dest_path="python3.dll" source_path="${sys.real_prefix}\python3.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
-  <included_dll name="qt6core.dll" dest_path="qt6core.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6core.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
-  <included_dll name="msvcp140.dll" dest_path="msvcp140.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\msvcp140.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
-  <included_dll name="vcruntime140_1.dll" dest_path="vcruntime140_1.dll" source_path="${sys.real_prefix}\vcruntime140_1.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="pyside6.abi3.dll" dest_path="pyside6.abi3.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\pyside6.abi3.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
   <included_dll name="msvcp140_1.dll" dest_path="msvcp140_1.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\msvcp140_1.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
-  <included_dll name="qt6gui.dll" dest_path="qt6gui.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6gui.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtGui.pyd'" />
+  <included_dll name="qt6core.dll" dest_path="qt6core.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6core.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="vcruntime140_1.dll" dest_path="vcruntime140_1.dll" source_path="${sys.real_prefix}\vcruntime140_1.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="msvcp140.dll" dest_path="msvcp140.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\msvcp140.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="python3.dll" dest_path="python3.dll" source_path="${sys.real_prefix}\python3.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
   <included_dll name="msvcp140_2.dll" dest_path="msvcp140_2.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\msvcp140_2.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtGui.pyd'" />
+  <included_dll name="qt6gui.dll" dest_path="qt6gui.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6gui.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtGui.pyd'" />
   <included_dll name="qt6network.dll" dest_path="qt6network.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6network.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtNetwork.pyd'" />
   <included_dll name="qt6opengl.dll" dest_path="qt6opengl.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6opengl.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtOpenGL.pyd'" />
   <included_dll name="pyside6qml.abi3.dll" dest_path="pyside6qml.abi3.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\pyside6qml.abi3.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtQml.pyd'" />
@@ -5328,15 +5328,15 @@
   <included_dll name="qt6labssharedimage.dll" dest_path="qt6labssharedimage.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6labssharedimage.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt\labs\sharedimage\sharedimageplugin.dll'" />
   <included_dll name="qt6labswavefrontmesh.dll" dest_path="qt6labswavefrontmesh.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6labswavefrontmesh.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt\labs\wavefrontmesh\qmlwavefrontmeshplugin.dll'" />
   <included_dll name="qt63dquickanimation.dll" dest_path="qt63dquickanimation.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dquickanimation.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Animation\quick3danimationplugin.dll'" />
-  <included_dll name="qt63danimation.dll" dest_path="qt63danimation.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63danimation.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Animation\quick3danimationplugin.dll'" />
-  <included_dll name="qt63dcore.dll" dest_path="qt63dcore.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dcore.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Animation\quick3danimationplugin.dll'" />
-  <included_dll name="qt6concurrent.dll" dest_path="qt6concurrent.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6concurrent.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Animation\quick3danimationplugin.dll'" />
   <included_dll name="qt63drender.dll" dest_path="qt63drender.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63drender.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Animation\quick3danimationplugin.dll'" />
+  <included_dll name="qt63danimation.dll" dest_path="qt63danimation.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63danimation.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Animation\quick3danimationplugin.dll'" />
+  <included_dll name="qt6concurrent.dll" dest_path="qt6concurrent.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6concurrent.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Animation\quick3danimationplugin.dll'" />
+  <included_dll name="qt63dcore.dll" dest_path="qt63dcore.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dcore.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Animation\quick3danimationplugin.dll'" />
   <included_dll name="qt63dquick.dll" dest_path="qt63dquick.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dquick.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Core\quick3dcoreplugin.dll'" />
-  <included_dll name="qt63dquickextras.dll" dest_path="qt63dquickextras.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dquickextras.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Extras\quick3dextrasplugin.dll'" />
-  <included_dll name="qt63dextras.dll" dest_path="qt63dextras.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dextras.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Extras\quick3dextrasplugin.dll'" />
   <included_dll name="qt63dinput.dll" dest_path="qt63dinput.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dinput.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Extras\quick3dextrasplugin.dll'" />
+  <included_dll name="qt63dextras.dll" dest_path="qt63dextras.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dextras.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Extras\quick3dextrasplugin.dll'" />
   <included_dll name="qt63dlogic.dll" dest_path="qt63dlogic.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dlogic.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Extras\quick3dextrasplugin.dll'" />
+  <included_dll name="qt63dquickextras.dll" dest_path="qt63dquickextras.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dquickextras.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Extras\quick3dextrasplugin.dll'" />
   <included_dll name="qt63dquickinput.dll" dest_path="qt63dquickinput.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dquickinput.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Input\quick3dinputplugin.dll'" />
   <included_dll name="qt63dquickrender.dll" dest_path="qt63dquickrender.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dquickrender.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt3D\Render\quick3drenderplugin.dll'" />
   <included_dll name="qt6shadertools.dll" dest_path="qt6shadertools.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6shadertools.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\Qt5Compat\GraphicalEffects\private\qtgraphicaleffectsprivateplugin.dll'" />
@@ -5346,15 +5346,15 @@
   <included_dll name="qt6qmlcore.dll" dest_path="qt6qmlcore.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6qmlcore.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtCore\qtqmlcoreplugin.dll'" />
   <included_dll name="qt6datavisualizationqml.dll" dest_path="qt6datavisualizationqml.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6datavisualizationqml.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtDataVisualization\datavisualizationqmlplugin.dll'" />
   <included_dll name="qt6datavisualization.dll" dest_path="qt6datavisualization.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6datavisualization.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtDataVisualization\datavisualizationqmlplugin.dll'" />
-  <included_dll name="qt6graphs.dll" dest_path="qt6graphs.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6graphs.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtGraphs\graphsplugin.dll'" />
   <included_dll name="qt6quickwidgets.dll" dest_path="qt6quickwidgets.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quickwidgets.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtGraphs\graphsplugin.dll'" />
-  <included_dll name="qt6quick3d.dll" dest_path="qt6quick3d.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quick3d.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtGraphs\graphsplugin.dll'" />
-  <included_dll name="qt6quick3druntimerender.dll" dest_path="qt6quick3druntimerender.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quick3druntimerender.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtGraphs\graphsplugin.dll'" />
   <included_dll name="qt6quick3dutils.dll" dest_path="qt6quick3dutils.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quick3dutils.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtGraphs\graphsplugin.dll'" />
+  <included_dll name="qt6quick3druntimerender.dll" dest_path="qt6quick3druntimerender.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quick3druntimerender.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtGraphs\graphsplugin.dll'" />
+  <included_dll name="qt6quick3d.dll" dest_path="qt6quick3d.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quick3d.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtGraphs\graphsplugin.dll'" />
+  <included_dll name="qt6graphs.dll" dest_path="qt6graphs.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6graphs.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtGraphs\graphsplugin.dll'" />
   <included_dll name="qt6location.dll" dest_path="qt6location.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6location.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtLocation\declarative_locationplugin.dll'" />
   <included_dll name="qt6quickshapes.dll" dest_path="qt6quickshapes.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quickshapes.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtLocation\declarative_locationplugin.dll'" />
-  <included_dll name="qt6positioningquick.dll" dest_path="qt6positioningquick.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6positioningquick.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtLocation\declarative_locationplugin.dll'" />
   <included_dll name="qt6positioning.dll" dest_path="qt6positioning.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6positioning.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtLocation\declarative_locationplugin.dll'" />
+  <included_dll name="qt6positioningquick.dll" dest_path="qt6positioningquick.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6positioningquick.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtLocation\declarative_locationplugin.dll'" />
   <included_dll name="qt6multimediaquick.dll" dest_path="qt6multimediaquick.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6multimediaquick.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtMultimedia\quickmultimediaplugin.dll'" />
   <included_dll name="qt6multimedia.dll" dest_path="qt6multimedia.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6multimedia.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtMultimedia\quickmultimediaplugin.dll'" />
   <included_dll name="qt6statemachineqml.dll" dest_path="qt6statemachineqml.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6statemachineqml.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQml\StateMachine\qtqmlstatemachineplugin.dll'" />
@@ -5363,13 +5363,13 @@
   <included_dll name="qt6qmlxmllistmodel.dll" dest_path="qt6qmlxmllistmodel.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6qmlxmllistmodel.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQml\XmlListModel\qmlxmllistmodelplugin.dll'" />
   <included_dll name="qt6quickcontrols2.dll" dest_path="qt6quickcontrols2.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quickcontrols2.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\Controls\qtquickcontrols2plugin.dll'" />
   <included_dll name="qt6quickcontrols2impl.dll" dest_path="qt6quickcontrols2impl.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quickcontrols2impl.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\Controls\Basic\impl\qtquickcontrols2basicstyleimplplugin.dll'" />
+  <included_dll name="qt6quickdialogs2utils.dll" dest_path="qt6quickdialogs2utils.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quickdialogs2utils.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\Dialogs\qtquickdialogsplugin.dll'" />
   <included_dll name="qt6quickdialogs2.dll" dest_path="qt6quickdialogs2.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quickdialogs2.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\Dialogs\qtquickdialogsplugin.dll'" />
   <included_dll name="qt6quickdialogs2quickimpl.dll" dest_path="qt6quickdialogs2quickimpl.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quickdialogs2quickimpl.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\Dialogs\qtquickdialogsplugin.dll'" />
-  <included_dll name="qt6quickdialogs2utils.dll" dest_path="qt6quickdialogs2utils.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quickdialogs2utils.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\Dialogs\qtquickdialogsplugin.dll'" />
   <included_dll name="qt6quickeffects.dll" dest_path="qt6quickeffects.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quickeffects.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\Effects\effectsplugin.dll'" />
   <included_dll name="qt6quicklayouts.dll" dest_path="qt6quicklayouts.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quicklayouts.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\Layouts\qquicklayoutsplugin.dll'" />
-  <included_dll name="qt6qmllocalstorage.dll" dest_path="qt6qmllocalstorage.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6qmllocalstorage.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\LocalStorage\qmllocalstorageplugin.dll'" />
   <included_dll name="qt6sql.dll" dest_path="qt6sql.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6sql.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\LocalStorage\qmllocalstorageplugin.dll'" />
+  <included_dll name="qt6qmllocalstorage.dll" dest_path="qt6qmllocalstorage.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6qmllocalstorage.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\LocalStorage\qmllocalstorageplugin.dll'" />
   <included_dll name="qt6quickparticles.dll" dest_path="qt6quickparticles.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quickparticles.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\Particles\particlesplugin.dll'" />
   <included_dll name="qt6pdfquick.dll" dest_path="qt6pdfquick.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6pdfquick.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\Pdf\pdfquickplugin.dll'" />
   <included_dll name="qt63dquickscene2d.dll" dest_path="qt63dquickscene2d.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt63dquickscene2d.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick\Scene2D\qtquickscene2dplugin.dll'" />
@@ -5381,14 +5381,14 @@
   <included_dll name="qt6quick3dhelpers.dll" dest_path="qt6quick3dhelpers.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quick3dhelpers.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick3D\Helpers\qtquick3dhelpersplugin.dll'" />
   <included_dll name="qt6quick3dparticleeffects.dll" dest_path="qt6quick3dparticleeffects.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quick3dparticleeffects.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick3D\ParticleEffects\qtquick3dparticleeffectsplugin.dll'" />
   <included_dll name="qt6quick3dparticles.dll" dest_path="qt6quick3dparticles.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quick3dparticles.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtQuick3D\Particles3D\qtquick3dparticles3dplugin.dll'" />
-  <included_dll name="qt6remoteobjectsqml.dll" dest_path="qt6remoteobjectsqml.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6remoteobjectsqml.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtRemoteObjects\declarative_remoteobjectsplugin.dll'" />
   <included_dll name="qt6remoteobjects.dll" dest_path="qt6remoteobjects.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6remoteobjects.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtRemoteObjects\declarative_remoteobjectsplugin.dll'" />
-  <included_dll name="qt6scxmlqml.dll" dest_path="qt6scxmlqml.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6scxmlqml.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtScxml\declarative_scxmlplugin.dll'" />
+  <included_dll name="qt6remoteobjectsqml.dll" dest_path="qt6remoteobjectsqml.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6remoteobjectsqml.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtRemoteObjects\declarative_remoteobjectsplugin.dll'" />
   <included_dll name="qt6scxml.dll" dest_path="qt6scxml.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6scxml.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtScxml\declarative_scxmlplugin.dll'" />
-  <included_dll name="qt6sensorsquick.dll" dest_path="qt6sensorsquick.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6sensorsquick.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtSensors\sensorsquickplugin.dll'" />
+  <included_dll name="qt6scxmlqml.dll" dest_path="qt6scxmlqml.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6scxmlqml.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtScxml\declarative_scxmlplugin.dll'" />
   <included_dll name="qt6sensors.dll" dest_path="qt6sensors.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6sensors.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtSensors\sensorsquickplugin.dll'" />
-  <included_dll name="qt6quicktest.dll" dest_path="qt6quicktest.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quicktest.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtTest\quicktestplugin.dll'" />
+  <included_dll name="qt6sensorsquick.dll" dest_path="qt6sensorsquick.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6sensorsquick.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtSensors\sensorsquickplugin.dll'" />
   <included_dll name="qt6test.dll" dest_path="qt6test.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6test.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtTest\quicktestplugin.dll'" />
+  <included_dll name="qt6quicktest.dll" dest_path="qt6quicktest.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6quicktest.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtTest\quicktestplugin.dll'" />
   <included_dll name="qt6texttospeech.dll" dest_path="qt6texttospeech.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6texttospeech.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtTextToSpeech\texttospeechqmlplugin.dll'" />
   <included_dll name="qt6webchannelquick.dll" dest_path="qt6webchannelquick.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6webchannelquick.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtWebChannel\webchannelquickplugin.dll'" />
   <included_dll name="qt6webchannel.dll" dest_path="qt6webchannel.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6webchannel.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qml\QtWebChannel\webchannelquickplugin.dll'" />
@@ -5428,10 +5428,10 @@
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
-    <distribution name="PySide6" version="6.6.0" />
-    <distribution name="PySide6-Addons" version="6.6.0" />
-    <distribution name="PySide6-Essentials" version="6.6.0" />
-    <distribution name="shiboken6" version="6.6.0" />
+    <distribution name="PySide6" version="6.6.0" installer="pip" />
+    <distribution name="PySide6-Addons" version="6.6.0" installer="pip" />
+    <distribution name="PySide6-Essentials" version="6.6.0" installer="pip" />
+    <distribution name="shiboken6" version="6.6.0" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}\Scripts\python.EXE" python_flavor="CPython Official" python_version="3.10.11" os_name="Windows" arch_name="x86_64">
     <search_path>
