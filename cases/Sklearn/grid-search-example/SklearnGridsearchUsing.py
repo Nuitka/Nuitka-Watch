@@ -8,6 +8,8 @@ if "NUITKA_LAUNCH_TOKEN" not in os.environ:
 else:
     del os.environ["NUITKA_LAUNCH_TOKEN"]
 
+# isort:start
+
 from sklearn.datasets import load_breast_cancer
 from sklearn.metrics import classification_report
 from sklearn.model_selection import GridSearchCV, train_test_split
