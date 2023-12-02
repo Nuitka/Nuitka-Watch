@@ -1,6 +1,8 @@
 # nuitka-project: --standalone
 # nuitka-project: --enable-plugin=no-qt
 
+# Relevant debugging option: --experimental=debug-self-forking
+
 import os, sys
 
 if "NUITKA_LAUNCH_TOKEN" not in os.environ:
