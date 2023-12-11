@@ -1,13 +1,10 @@
 <?xml version='1.0' encoding='utf8'?>
 <nuitka-compilation-report nuitka_version="1.9.4" nuitka_commercial_version="not installed" completion="yes">
-  <module name="PySide6" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.QtWidgets'." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
-    <plugin-influence name="implicit-imports" influence="condition-used" condition="version(&quot;PySide6&quot;) &lt; (6,6)" tags_used="version" result="true" />
+  <module name="PySide6" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.QtWidgets'." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="version(&quot;PySide6&quot;) &lt; (6,6)" tags_used="version" result="false" />
     <plugin-influence name="options-nanny" influence="condition-used" condition="use_pyside6" tags_used="use_pyside6" result="true" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
-    <distribution-usages>
-      <distribution-usage name="shiboken6" />
-    </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="2" />
@@ -18,25 +15,12 @@
       <module_usage name="sys" finding="absolute" line="68" />
     </module_usages>
   </module>
-  <module name="PySide6-postLoad" kind="CompiledPythonModule" usage="plugins" reason="According to Yaml configuration." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/PySide6-postLoad.py">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <distribution-usages>
-      <distribution-usage name="PySide6" />
-      <distribution-usage name="PySide6-Addons" />
-      <distribution-usage name="PySide6-Essentials" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="PySide6" finding="absolute" line="9" />
-      <module_usage name="PySide6.QtCore" finding="relative" line="9" />
-    </module_usages>
-  </module>
   <module name="PySide6.QtCore" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtCore.abi3.so" distribution="PySide6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtCore-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Setting Qt library path to distribution folder. We need to avoid loading target&#10;system Qt plugins, which may be from another Qt version." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/PySide6/QtCore-postLoad.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtCore-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Setting Qt library path to distribution folder. We need to avoid loading target&#10;system Qt plugins, which may be from another Qt version." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/PySide6/QtCore-postLoad.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -49,48 +33,45 @@
       <module_usage name="posixpath" finding="absolute" line="20" />
     </module_usages>
   </module>
-  <module name="PySide6.QtGui" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtGui.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtGui" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtGui.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtNetwork" kind="PythonExtensionModule" usage="plugin:pyside6" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtNetwork.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtNetwork" kind="PythonExtensionModule" usage="plugin:pyside6" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtNetwork.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtOpenGL" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtOpenGL.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtOpenGL" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtOpenGL.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtQml" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtQml.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtQml" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtQml.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtQuick" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtQuick.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtQuick" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtQuick.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtWidgets" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtWidgets.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtWidgets" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtWidgets.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.support" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.support.deprecated'." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/support/__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.support" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.support.deprecated'." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/support/__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
-    <distribution-usages>
-      <distribution-usage name="shiboken6" />
-    </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="shiboken6.Shiboken" finding="absolute" line="4" />
     </module_usages>
   </module>
-  <module name="PySide6.support.deprecated" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/support/deprecated.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.support.deprecated" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/support/deprecated.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -111,6 +92,7 @@
       <distribution-usage name="PySide6" />
       <distribution-usage name="PySide6-Addons" />
       <distribution-usage name="PySide6-Essentials" />
+      <distribution-usage name="shiboken6" />
     </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="23" />
@@ -3285,7 +3267,7 @@
       <module_usage name="sys" finding="absolute" line="13" />
     </module_usages>
   </module>
-  <module name="shiboken6" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/__init__.py" distribution="shiboken6">
+  <module name="shiboken6" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -3309,7 +3291,7 @@
       <module_usage name="shiboken6.Shiboken" finding="absolute" line="27" />
     </module_usages>
   </module>
-  <module name="shiboken6.Shiboken" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/Shiboken.abi3.so" distribution="shiboken6">
+  <module name="shiboken6.Shiboken" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/Shiboken.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -3962,25 +3944,25 @@
   <data_file name="qmlpolarchart/View2.qml" source="~/repos/Nuitka-Watch/cases/PySide6/qml-example/qmlpolarchart/View2.qml" size="4204" reason="specified data dir '/home/hayen/repos/Nuitka-Watch/cases/PySide6/qml-example/qmlpolarchart' on command line" tags="user,copy,data-dir-contents" />
   <data_file name="qmlpolarchart/View3.qml" source="~/repos/Nuitka-Watch/cases/PySide6/qml-example/qmlpolarchart/View3.qml" size="2872" reason="specified data dir '/home/hayen/repos/Nuitka-Watch/cases/PySide6/qml-example/qmlpolarchart' on command line" tags="user,copy,data-dir-contents" />
   <data_file name="qmlpolarchart/main.qml" source="~/repos/Nuitka-Watch/cases/PySide6/qml-example/qmlpolarchart/main.qml" size="2892" reason="specified data dir '/home/hayen/repos/Nuitka-Watch/cases/PySide6/qml-example/qmlpolarchart' on command line" tags="user,copy,data-dir-contents" />
-  <data_file name="PySide6/qml/builtins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/builtins.qmltypes" size="6691" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/builtins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/builtins.qmltypes" size="7231" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/jsroot.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/jsroot.qmltypes" size="156402" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/Qt/labs/animation/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/animation/plugins.qmltypes" size="3776" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/Qt/labs/animation/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/animation/plugins.qmltypes" size="4062" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt/labs/animation/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/animation/qmldir" size="221" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/Qt/labs/folderlistmodel/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/folderlistmodel/plugins.qmltypes" size="5572" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/Qt/labs/folderlistmodel/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/folderlistmodel/plugins.qmltypes" size="6116" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt/labs/folderlistmodel/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/folderlistmodel/qmldir" size="258" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/Qt/labs/platform/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/platform/plugins.qmltypes" size="42866" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/Qt/labs/platform/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/platform/plugins.qmltypes" size="42937" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt/labs/platform/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/platform/qmldir" size="222" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/Qt/labs/qmlmodels/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/qmlmodels/plugins.qmltypes" size="14864" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/Qt/labs/qmlmodels/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/qmlmodels/plugins.qmltypes" size="15147" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt/labs/qmlmodels/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/qmlmodels/qmldir" size="227" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt/labs/settings/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/settings/plugins.qmltypes" size="1583" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt/labs/settings/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/settings/qmldir" size="197" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt/labs/sharedimage/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/sharedimage/plugins.qmltypes" size="386" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt/labs/sharedimage/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/sharedimage/qmldir" size="208" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/Qt/labs/wavefrontmesh/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/wavefrontmesh/plugins.qmltypes" size="2324" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/Qt/labs/wavefrontmesh/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/wavefrontmesh/plugins.qmltypes" size="2428" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt/labs/wavefrontmesh/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt/labs/wavefrontmesh/qmldir" size="243" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt3D/Animation/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt3D/Animation/plugins.qmltypes" size="26775" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt3D/Animation/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt3D/Animation/qmldir" size="247" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/Qt3D/Core/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt3D/Core/plugins.qmltypes" size="51929" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/Qt3D/Core/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt3D/Core/plugins.qmltypes" size="65607" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt3D/Core/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt3D/Core/qmldir" size="199" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt3D/Extras/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt3D/Extras/plugins.qmltypes" size="64191" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt3D/Extras/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt3D/Extras/qmldir" size="233" reason="Qt QML datafile" tags="qml,copy" />
@@ -3998,7 +3980,7 @@
   <data_file name="PySide6/qml/Qt5Compat/GraphicalEffects/Desaturate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt5Compat/GraphicalEffects/Desaturate.qml" size="3119" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt5Compat/GraphicalEffects/DirectionalBlur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt5Compat/GraphicalEffects/DirectionalBlur.qml" size="8878" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt5Compat/GraphicalEffects/Displace.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt5Compat/GraphicalEffects/Displace.qml" size="5214" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/Qt5Compat/GraphicalEffects/DropShadow.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt5Compat/GraphicalEffects/DropShadow.qml" size="10378" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/Qt5Compat/GraphicalEffects/DropShadow.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt5Compat/GraphicalEffects/DropShadow.qml" size="11116" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt5Compat/GraphicalEffects/FastBlur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt5Compat/GraphicalEffects/FastBlur.qml" size="11383" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt5Compat/GraphicalEffects/GammaAdjust.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt5Compat/GraphicalEffects/GammaAdjust.qml" size="4237" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt5Compat/GraphicalEffects/GaussianBlur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt5Compat/GraphicalEffects/GaussianBlur.qml" size="11959" reason="Qt QML datafile" tags="qml,copy" />
@@ -4026,7 +4008,7 @@
   <data_file name="PySide6/qml/Qt5Compat/GraphicalEffects/private/GaussianMaskedBlur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt5Compat/GraphicalEffects/private/GaussianMaskedBlur.qml" size="2163" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt5Compat/GraphicalEffects/private/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt5Compat/GraphicalEffects/private/plugins.qmltypes" size="3189" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/Qt5Compat/GraphicalEffects/private/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/Qt5Compat/GraphicalEffects/private/qmldir" size="845" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtCharts/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCharts/plugins.qmltypes" size="185597" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtCharts/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCharts/plugins.qmltypes" size="185234" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtCharts/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCharts/qmldir" size="229" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtCharts/designer/ChartViewSpecifics.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCharts/designer/ChartViewSpecifics.qml" size="3584" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtCharts/designer/qtcharts.metainfo" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCharts/designer/qtcharts.metainfo" size="6579" reason="Qt QML datafile" tags="qml,copy" />
@@ -4078,7 +4060,7 @@
   <data_file name="PySide6/qml/QtCharts/designer/images/splineseries-polar-icon16.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCharts/designer/images/splineseries-polar-icon16.png" size="1357" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtCharts/designer/images/stackedbarseries-icon.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCharts/designer/images/stackedbarseries-icon.png" size="1127" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtCharts/designer/images/stackedbarseries-icon16.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCharts/designer/images/stackedbarseries-icon16.png" size="1116" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtCore/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCore/plugins.qmltypes" size="8851" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtCore/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCore/plugins.qmltypes" size="15142" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtCore/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCore/qmldir" size="208" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtDataVisualization/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtDataVisualization/plugins.qmltypes" size="152058" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtDataVisualization/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtDataVisualization/qmldir" size="245" reason="Qt QML datafile" tags="qml,copy" />
@@ -4095,18 +4077,28 @@
   <data_file name="PySide6/qml/QtDataVisualization/designer/images/scatter3d-icon16.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtDataVisualization/designer/images/scatter3d-icon16.png" size="1146" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtDataVisualization/designer/images/surface3d-icon.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtDataVisualization/designer/images/surface3d-icon.png" size="1413" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtDataVisualization/designer/images/surface3d-icon16.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtDataVisualization/designer/images/surface3d-icon16.png" size="1231" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtGraphs/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtGraphs/plugins.qmltypes" size="165345" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtGraphs/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtGraphs/qmldir" size="202" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtGraphs/qml/designer/Bars3DSpecifics.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtGraphs/qml/designer/Bars3DSpecifics.qml" size="10402" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtGraphs/qml/designer/GraphsCameraSection.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtGraphs/qml/designer/GraphsCameraSection.qml" size="637" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtGraphs/qml/designer/GraphsSection.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtGraphs/qml/designer/GraphsSection.qml" size="4842" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtGraphs/qml/designer/Scatter3DSpecifics.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtGraphs/qml/designer/Scatter3DSpecifics.qml" size="1992" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtGraphs/qml/designer/Surface3DSpecifics.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtGraphs/qml/designer/Surface3DSpecifics.qml" size="7701" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtGraphs/qml/designer/default/Bars3D.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtGraphs/qml/designer/default/Bars3D.qml" size="628" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtGraphs/qml/designer/default/Scatter3D.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtGraphs/qml/designer/default/Scatter3D.qml" size="560" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtGraphs/qml/designer/default/Surface3D.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtGraphs/qml/designer/default/Surface3D.qml" size="651" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtLocation/MapView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtLocation/MapView.qml" size="6201" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtLocation/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtLocation/plugins.qmltypes" size="95754" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtLocation/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtLocation/qmldir" size="222" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtLocation/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtLocation/plugins.qmltypes" size="94375" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtLocation/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtLocation/qmldir" size="270" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtMultimedia/Video.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtMultimedia/Video.qml" size="10450" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtMultimedia/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtMultimedia/plugins.qmltypes" size="63663" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtMultimedia/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtMultimedia/plugins.qmltypes" size="68813" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtMultimedia/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtMultimedia/qmldir" size="243" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtPositioning/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtPositioning/plugins.qmltypes" size="42174" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtPositioning/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtPositioning/plugins.qmltypes" size="40796" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtPositioning/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtPositioning/qmldir" size="226" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQml/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/qmldir" size="230" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQml/Base/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/Base/plugins.qmltypes" size="118751" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQml/Base/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/Base/plugins.qmltypes" size="120144" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQml/Base/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/Base/qmldir" size="188" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQml/Models/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/Models/plugins.qmltypes" size="52091" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQml/Models/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/Models/plugins.qmltypes" size="51174" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQml/Models/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/Models/qmldir" size="221" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQml/StateMachine/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/StateMachine/plugins.qmltypes" size="12807" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQml/StateMachine/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/StateMachine/qmldir" size="227" reason="Qt QML datafile" tags="qml,copy" />
@@ -4114,7 +4106,7 @@
   <data_file name="PySide6/qml/QtQml/WorkerScript/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/WorkerScript/qmldir" size="251" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQml/XmlListModel/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/XmlListModel/plugins.qmltypes" size="3977" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQml/XmlListModel/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQml/XmlListModel/qmldir" size="234" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/plugins.qmltypes" size="505946" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/plugins.qmltypes" size="541807" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/qmldir" size="206" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/plugins.qmltypes" size="215" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/qmldir" size="582" reason="Qt QML datafile" tags="qml,copy" />
@@ -4129,18 +4121,18 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/CalendarModel.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/CalendarModel.qml" size="195" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/CheckBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/CheckBox.qml" size="2297" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/CheckDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/CheckDelegate.qml" size="2736" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Basic/ComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/ComboBox.qml" size="4106" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Basic/ComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/ComboBox.qml" size="4118" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/Container.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/Container.qml" size="526" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/Control.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/Control.qml" size="540" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/DayOfWeekRow.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/DayOfWeekRow.qml" size="1086" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/DelayButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/DelayButton.qml" size="2422" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Basic/Dial.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/Dial.qml" size="1721" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Basic/Dial.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/Dial.qml" size="1795" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/Dialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/Dialog.qml" size="1588" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/DialogButtonBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/DialogButtonBox.qml" size="1362" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/Drawer.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/Drawer.qml" size="1586" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/Frame.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/Frame.qml" size="674" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/GroupBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/GroupBox.qml" size="1282" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Basic/HorizontalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/HorizontalHeaderView.qml" size="1536" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Basic/HorizontalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/HorizontalHeaderView.qml" size="1472" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/ItemDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/ItemDelegate.qml" size="1574" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/Label.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/Label.qml" size="323" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/Menu.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/Menu.qml" size="1387" reason="Qt QML datafile" tags="qml,copy" />
@@ -4178,20 +4170,20 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/ToolButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/ToolButton.qml" size="1287" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/ToolSeparator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/ToolSeparator.qml" size="814" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/ToolTip.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/ToolTip.qml" size="1058" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Basic/TreeViewDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/TreeViewDelegate.qml" size="3976" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Basic/TreeViewDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/TreeViewDelegate.qml" size="3961" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/Tumbler.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/Tumbler.qml" size="1793" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Basic/VerticalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/VerticalHeaderView.qml" size="1527" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Basic/VerticalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/VerticalHeaderView.qml" size="1463" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/WeekNumberColumn.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/WeekNumberColumn.qml" size="1092" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/plugins.qmltypes" size="10150" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/qmldir" size="3917" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Basic/impl/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/impl/plugins.qmltypes" size="3585" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Basic/impl/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/impl/plugins.qmltypes" size="3979" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Basic/impl/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Basic/impl/qmldir" size="267" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/ApplicationWindow.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/ApplicationWindow.qml" size="353" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/BusyIndicator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/BusyIndicator.qml" size="1155" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/Button.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/Button.qml" size="1239" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/CheckBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/CheckBox.qml" size="1481" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/CheckDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/CheckDelegate.qml" size="1943" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Fusion/ComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/ComboBox.qml" size="4873" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Fusion/ComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/ComboBox.qml" size="4885" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/DelayButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/DelayButton.qml" size="2791" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/Dial.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/Dial.qml" size="1371" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/Dialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/Dialog.qml" size="1858" reason="Qt QML datafile" tags="qml,copy" />
@@ -4199,7 +4191,7 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/Drawer.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/Drawer.qml" size="1938" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/Frame.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/Frame.qml" size="770" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/GroupBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/GroupBox.qml" size="1418" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Fusion/HorizontalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/HorizontalHeaderView.qml" size="1828" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Fusion/HorizontalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/HorizontalHeaderView.qml" size="1764" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/ItemDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/ItemDelegate.qml" size="1534" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/Label.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/Label.qml" size="390" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/Menu.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/Menu.qml" size="1645" reason="Qt QML datafile" tags="qml,copy" />
@@ -4234,10 +4226,10 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/ToolButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/ToolButton.qml" size="1226" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/ToolSeparator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/ToolSeparator.qml" size="1060" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/ToolTip.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/ToolTip.qml" size="1337" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Fusion/TreeViewDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/TreeViewDelegate.qml" size="3874" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Fusion/TreeViewDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/TreeViewDelegate.qml" size="3859" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/Tumbler.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/Tumbler.qml" size="1646" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Fusion/VerticalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/VerticalHeaderView.qml" size="1788" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Fusion/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/plugins.qmltypes" size="5030" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Fusion/VerticalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/VerticalHeaderView.qml" size="1724" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Fusion/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/plugins.qmltypes" size="5134" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/qmldir" size="3329" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/impl/ButtonPanel.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/impl/ButtonPanel.qml" size="1482" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Fusion/impl/CheckIndicator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Fusion/impl/CheckIndicator.qml" size="1987" reason="Qt QML datafile" tags="qml,copy" />
@@ -4252,7 +4244,7 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/Button.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/Button.qml" size="2646" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/CheckBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/CheckBox.qml" size="2999" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/CheckDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/CheckDelegate.qml" size="3298" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Imagine/ComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/ComboBox.qml" size="5807" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Imagine/ComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/ComboBox.qml" size="5819" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/DelayButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/DelayButton.qml" size="3857" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/Dial.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/Dial.qml" size="2507" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/Dialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/Dialog.qml" size="2624" reason="Qt QML datafile" tags="qml,copy" />
@@ -4260,7 +4252,7 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/Drawer.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/Drawer.qml" size="2133" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/Frame.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/Frame.qml" size="1338" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/GroupBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/GroupBox.qml" size="2288" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Imagine/HorizontalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/HorizontalHeaderView.qml" size="1536" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Imagine/HorizontalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/HorizontalHeaderView.qml" size="1472" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/ItemDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/ItemDelegate.qml" size="2185" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/Label.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/Label.qml" size="942" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/Menu.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/Menu.qml" size="2420" reason="Qt QML datafile" tags="qml,copy" />
@@ -4296,7 +4288,7 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/ToolSeparator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/ToolSeparator.qml" size="1851" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/ToolTip.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/ToolTip.qml" size="1923" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/Tumbler.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/Tumbler.qml" size="2273" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Imagine/VerticalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/VerticalHeaderView.qml" size="1527" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Imagine/VerticalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/VerticalHeaderView.qml" size="1463" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/plugins.qmltypes" size="1339" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/qmldir" size="3229" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/impl/OpacityMask.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/impl/OpacityMask.qml" size="876" reason="Qt QML datafile" tags="qml,copy" />
@@ -4304,10 +4296,10 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Imagine/impl/qtquickcontrols2imaginestyleimplplugin.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Imagine/impl/qtquickcontrols2imaginestyleimplplugin.qmltypes" size="215" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/ApplicationWindow.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/ApplicationWindow.qml" size="322" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/BusyIndicator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/BusyIndicator.qml" size="967" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/Button.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Button.qml" size="3228" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/Button.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Button.qml" size="3270" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/CheckBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/CheckBox.qml" size="1969" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/CheckDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/CheckDelegate.qml" size="2334" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/ComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/ComboBox.qml" size="4921" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/ComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/ComboBox.qml" size="4933" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/DelayButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/DelayButton.qml" size="2822" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/Dial.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Dial.qml" size="1750" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/Dialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Dialog.qml" size="3398" reason="Qt QML datafile" tags="qml,copy" />
@@ -4315,7 +4307,7 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Material/Drawer.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Drawer.qml" size="2201" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/Frame.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Frame.qml" size="1035" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/GroupBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/GroupBox.qml" size="1715" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/HorizontalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/HorizontalHeaderView.qml" size="1657" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/HorizontalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/HorizontalHeaderView.qml" size="1593" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/ItemDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/ItemDelegate.qml" size="1848" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/Label.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Label.qml" size="355" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/Menu.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Menu.qml" size="2596" reason="Qt QML datafile" tags="qml,copy" />
@@ -4323,7 +4315,7 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Material/MenuBarItem.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/MenuBarItem.qml" size="1707" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/MenuItem.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/MenuItem.qml" size="3028" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/MenuSeparator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/MenuSeparator.qml" size="737" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/Page.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Page.qml" size="925" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/Page.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Page.qml" size="1137" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/PageIndicator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/PageIndicator.qml" size="1369" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/Pane.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Pane.qml" size="1078" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/Popup.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Popup.qml" size="1956" reason="Qt QML datafile" tags="qml,copy" />
@@ -4339,23 +4331,23 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Material/Slider.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Slider.qml" size="4834" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/SpinBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/SpinBox.qml" size="4546" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/SplitView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/SplitView.qml" size="1600" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/StackView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/StackView.qml" size="2199" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/StackView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/StackView.qml" size="1678" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/SwipeDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/SwipeDelegate.qml" size="2155" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/SwipeView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/SwipeView.qml" size="1157" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/Switch.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Switch.qml" size="2356" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/Switch.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Switch.qml" size="2367" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/SwitchDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/SwitchDelegate.qml" size="2373" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/TabBar.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/TabBar.qml" size="1736" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/TabButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/TabButton.qml" size="1496" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/TextArea.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/TextArea.qml" size="3944" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/TextField.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/TextField.qml" size="3514" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/TextArea.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/TextArea.qml" size="4114" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/TextField.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/TextField.qml" size="3582" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/ToolBar.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/ToolBar.qml" size="978" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/ToolButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/ToolButton.qml" size="1869" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/ToolSeparator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/ToolSeparator.qml" size="841" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/ToolTip.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/ToolTip.qml" size="1516" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/TreeViewDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/TreeViewDelegate.qml" size="3901" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/TreeViewDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/TreeViewDelegate.qml" size="3886" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/Tumbler.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/Tumbler.qml" size="1613" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/VerticalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/VerticalHeaderView.qml" size="1648" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/plugins.qmltypes" size="19210" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/VerticalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/VerticalHeaderView.qml" size="1584" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/plugins.qmltypes" size="20445" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/qmldir" size="3451" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/impl/BoxShadow.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/impl/BoxShadow.qml" size="1674" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/impl/CheckIndicator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/impl/CheckIndicator.qml" size="2425" reason="Qt QML datafile" tags="qml,copy" />
@@ -4365,15 +4357,15 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Material/impl/RectangularGlow.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/impl/RectangularGlow.qml" size="6474" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/impl/RoundedElevationEffect.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/impl/RoundedElevationEffect.qml" size="1728" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/impl/SliderHandle.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/impl/SliderHandle.qml" size="1196" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/impl/SwitchIndicator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/impl/SwitchIndicator.qml" size="3902" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Material/impl/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/impl/plugins.qmltypes" size="9956" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/impl/SwitchIndicator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/impl/SwitchIndicator.qml" size="4122" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Material/impl/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/impl/plugins.qmltypes" size="10479" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Material/impl/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Material/impl/qmldir" size="1003" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/ApplicationWindow.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/ApplicationWindow.qml" size="594" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/BusyIndicator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/BusyIndicator.qml" size="942" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/Button.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/Button.qml" size="1891" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/CheckBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/CheckBox.qml" size="1545" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/CheckDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/CheckDelegate.qml" size="2459" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Universal/ComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/ComboBox.qml" size="5321" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Universal/ComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/ComboBox.qml" size="5333" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/DelayButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/DelayButton.qml" size="1907" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/Dial.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/Dial.qml" size="1859" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/Dialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/Dialog.qml" size="1817" reason="Qt QML datafile" tags="qml,copy" />
@@ -4381,7 +4373,7 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/Drawer.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/Drawer.qml" size="1587" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/Frame.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/Frame.qml" size="700" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/GroupBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/GroupBox.qml" size="1349" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Universal/HorizontalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/HorizontalHeaderView.qml" size="1682" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Universal/HorizontalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/HorizontalHeaderView.qml" size="1618" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/ItemDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/ItemDelegate.qml" size="1934" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/Label.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/Label.qml" size="359" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/Menu.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/Menu.qml" size="1464" reason="Qt QML datafile" tags="qml,copy" />
@@ -4418,7 +4410,7 @@
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/ToolSeparator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/ToolSeparator.qml" size="914" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/ToolTip.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/ToolTip.qml" size="1240" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/Tumbler.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/Tumbler.qml" size="1615" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/Universal/VerticalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/VerticalHeaderView.qml" size="1673" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/Universal/VerticalHeaderView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/VerticalHeaderView.qml" size="1609" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/plugins.qmltypes" size="8854" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/qmldir" size="3316" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/Universal/impl/CheckIndicator.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/Universal/impl/CheckIndicator.qml" size="2250" reason="Qt QML datafile" tags="qml,copy" />
@@ -4562,10 +4554,10 @@
   <data_file name="PySide6/qml/QtQuick/Controls/designer/images/tumbler-icon.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/designer/images/tumbler-icon.png" size="132" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/designer/images/tumbler-icon16.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/designer/images/tumbler-icon16.png" size="127" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/designer/images/tumbler-icon@2x.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/designer/images/tumbler-icon@2x.png" size="153" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Controls/impl/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/impl/plugins.qmltypes" size="47133" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Controls/impl/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/impl/plugins.qmltypes" size="48028" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Controls/impl/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Controls/impl/qmldir" size="286" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Dialogs/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Dialogs/plugins.qmltypes" size="16281" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Dialogs/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Dialogs/qmldir" size="225" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Dialogs/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Dialogs/qmldir" size="264" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Dialogs/quickimpl/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Dialogs/quickimpl/plugins.qmltypes" size="75472" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Dialogs/quickimpl/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Dialogs/quickimpl/qmldir" size="2675" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Dialogs/quickimpl/qml/ColorDialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Dialogs/quickimpl/qml/ColorDialog.qml" size="8576" reason="Qt QML datafile" tags="qml,copy" />
@@ -4615,9 +4607,9 @@
   <data_file name="PySide6/qml/QtQuick/Dialogs/quickimpl/qml/+Universal/FolderDialogDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Dialogs/quickimpl/qml/+Universal/FolderDialogDelegate.qml" size="1936" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Dialogs/quickimpl/qml/+Universal/FontDialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Dialogs/quickimpl/qml/+Universal/FontDialog.qml" size="3317" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Dialogs/quickimpl/qml/+Universal/MessageDialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Dialogs/quickimpl/qml/+Universal/MessageDialog.qml" size="3750" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Effects/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Effects/plugins.qmltypes" size="8795" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Effects/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Effects/plugins.qmltypes" size="9575" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Effects/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Effects/qmldir" size="211" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Layouts/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Layouts/plugins.qmltypes" size="13660" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Layouts/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Layouts/plugins.qmltypes" size="19353" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Layouts/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Layouts/qmldir" size="241" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/LocalStorage/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/LocalStorage/plugins.qmltypes" size="688" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/LocalStorage/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/LocalStorage/qmldir" size="218" reason="Qt QML datafile" tags="qml,copy" />
@@ -4625,26 +4617,26 @@
   <data_file name="PySide6/qml/QtQuick/NativeStyle/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/qmldir" size="1710" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultButton.qml" size="1709" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultCheckBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultCheckBox.qml" size="2446" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultComboBox.qml" size="3813" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultComboBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultComboBox.qml" size="3825" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultDial.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultDial.qml" size="1002" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultFrame.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultFrame.qml" size="1250" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultGroupBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultGroupBox.qml" size="2280" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultProgressBar.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultProgressBar.qml" size="1064" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultRadioButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultRadioButton.qml" size="2476" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultProgressBar.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultProgressBar.qml" size="954" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultRadioButton.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultRadioButton.qml" size="2309" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultScrollBar.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultScrollBar.qml" size="1205" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultSlider.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultSlider.qml" size="1797" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultSpinBox.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultSpinBox.qml" size="2551" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultTextArea.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultTextArea.qml" size="1847" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultTextField.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultTextField.qml" size="2291" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultTreeViewDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultTreeViewDelegate.qml" size="3785" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Particles/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Particles/plugins.qmltypes" size="68544" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/NativeStyle/controls/DefaultTreeViewDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/NativeStyle/controls/DefaultTreeViewDelegate.qml" size="3956" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Particles/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Particles/plugins.qmltypes" size="71502" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Particles/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Particles/qmldir" size="222" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Pdf/PdfLinkDelegate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Pdf/PdfLinkDelegate.qml" size="2526" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Pdf/PdfMultiPageView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Pdf/PdfMultiPageView.qml" size="27883" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Pdf/PdfMultiPageView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Pdf/PdfMultiPageView.qml" size="27587" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Pdf/PdfPageView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Pdf/PdfPageView.qml" size="14388" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Pdf/PdfScrollablePageView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Pdf/PdfScrollablePageView.qml" size="18206" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Pdf/PdfStyle.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Pdf/PdfStyle.qml" size="2471" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Pdf/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Pdf/plugins.qmltypes" size="22099" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Pdf/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Pdf/plugins.qmltypes" size="22283" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Pdf/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Pdf/qmldir" size="732" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Pdf/+Material/PdfStyle.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Pdf/+Material/PdfStyle.qml" size="702" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Pdf/+Universal/PdfStyle.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Pdf/+Universal/PdfStyle.qml" size="695" reason="Qt QML datafile" tags="qml,copy" />
@@ -4652,45 +4644,45 @@
   <data_file name="PySide6/qml/QtQuick/Scene2D/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Scene2D/qmldir" size="195" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Scene3D/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Scene3D/plugins.qmltypes" size="3042" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Scene3D/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Scene3D/qmldir" size="195" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Shapes/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Shapes/plugins.qmltypes" size="12348" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Shapes/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Shapes/plugins.qmltypes" size="14314" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Shapes/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Shapes/qmldir" size="199" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/Templates/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Templates/plugins.qmltypes" size="341759" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/Templates/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Templates/plugins.qmltypes" size="231777" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Templates/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Templates/qmldir" size="229" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Timeline/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Timeline/plugins.qmltypes" size="5416" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Timeline/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Timeline/qmldir" size="243" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/EnterKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/EnterKey.qml" size="208" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/HandwritingInputPanel.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/HandwritingInputPanel.qml" size="4964" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/InputPanel.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/InputPanel.qml" size="4931" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/plugins.qmltypes" size="35699" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/plugins.qmltypes" size="36859" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/qmldir" size="876" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/AlternativeKeys.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/AlternativeKeys.qml" size="4252" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/BackspaceKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/BackspaceKey.qml" size="735" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/BaseKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/BaseKey.qml" size="7653" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/ChangeLanguageKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/ChangeLanguageKey.qml" size="1731" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/CharacterPreviewBubble.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/CharacterPreviewBubble.qml" size="2106" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/EnterKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/EnterKey.qml" size="1207" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/FillerKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/FillerKey.qml" size="556" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/FlickKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/FlickKey.qml" size="3007" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/FunctionPopupList.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/FunctionPopupList.qml" size="3231" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/HandwritingModeKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/HandwritingModeKey.qml" size="1093" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/HideKeyboardKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/HideKeyboardKey.qml" size="751" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/InputModeKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/InputModeKey.qml" size="3961" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/Key.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/Key.qml" size="729" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/Keyboard.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/Keyboard.qml" size="82573" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/BackspaceKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/BackspaceKey.qml" size="743" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/BaseKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/BaseKey.qml" size="7669" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/ChangeLanguageKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/ChangeLanguageKey.qml" size="1920" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/CharacterPreviewBubble.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/CharacterPreviewBubble.qml" size="2122" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/EnterKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/EnterKey.qml" size="1215" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/FillerKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/FillerKey.qml" size="564" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/FlickKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/FlickKey.qml" size="3015" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/FunctionPopupList.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/FunctionPopupList.qml" size="3494" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/HandwritingModeKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/HandwritingModeKey.qml" size="1135" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/HideKeyboardKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/HideKeyboardKey.qml" size="919" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/InputModeKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/InputModeKey.qml" size="3969" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/Key.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/Key.qml" size="737" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/Keyboard.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/Keyboard.qml" size="83638" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/KeyboardColumn.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/KeyboardColumn.qml" size="1035" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/KeyboardLayout.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/KeyboardLayout.qml" size="4550" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/KeyboardLayoutLoader.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/KeyboardLayoutLoader.qml" size="3535" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/KeyboardRow.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/KeyboardRow.qml" size="966" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/ModeKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/ModeKey.qml" size="1296" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/ModeKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/ModeKey.qml" size="1304" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/MultiSoundEffect.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/MultiSoundEffect.qml" size="1366" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/MultitapInputMethod.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/MultitapInputMethod.qml" size="2930" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/NumberKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/NumberKey.qml" size="668" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/PopupList.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/PopupList.qml" size="1176" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/NumberKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/NumberKey.qml" size="676" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/PopupList.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/PopupList.qml" size="1240" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/SelectionControl.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/SelectionControl.qml" size="2999" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/ShadowInputControl.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/ShadowInputControl.qml" size="5432" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/ShiftKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/ShiftKey.qml" size="809" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/SpaceKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/SpaceKey.qml" size="715" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/SymbolModeKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/SymbolModeKey.qml" size="782" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/ShiftKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/ShiftKey.qml" size="817" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/SpaceKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/SpaceKey.qml" size="723" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/SymbolModeKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/SymbolModeKey.qml" size="790" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/TraceInputArea.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/TraceInputArea.qml" size="7286" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/TraceInputKey.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/TraceInputKey.qml" size="2993" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Components/WordCandidatePopupList.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Components/WordCandidatePopupList.qml" size="2756" reason="Qt QML datafile" tags="qml,copy" />
@@ -4700,17 +4692,17 @@
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Layouts/qtvkblayoutsplugin.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Layouts/qtvkblayoutsplugin.qmltypes" size="215" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/qmldir" size="513" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/qtvkbpluginsplugin.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/qtvkbpluginsplugin.qmltypes" size="215" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/Hangul/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/Hangul/plugins.qmltypes" size="651" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/Hangul/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/Hangul/plugins.qmltypes" size="732" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/Hangul/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/Hangul/qmldir" size="296" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/OpenWNN/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/OpenWNN/plugins.qmltypes" size="659" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/OpenWNN/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/OpenWNN/plugins.qmltypes" size="743" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/OpenWNN/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/OpenWNN/qmldir" size="301" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/Pinyin/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/Pinyin/plugins.qmltypes" size="651" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/Pinyin/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/Pinyin/plugins.qmltypes" size="732" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/Pinyin/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/Pinyin/qmldir" size="296" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/TCIme/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/TCIme/plugins.qmltypes" size="890" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/TCIme/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/TCIme/plugins.qmltypes" size="966" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/TCIme/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/TCIme/qmldir" size="291" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/Thai/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/Thai/plugins.qmltypes" size="639" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/Thai/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/Thai/plugins.qmltypes" size="716" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Plugins/Thai/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Plugins/Thai/qmldir" size="286" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Settings/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Settings/plugins.qmltypes" size="6431" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Settings/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Settings/plugins.qmltypes" size="6894" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Settings/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Settings/qmldir" size="245" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Styles/KeyIcon.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Styles/KeyIcon.qml" size="1304" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/VirtualKeyboard/Styles/KeyPanel.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/VirtualKeyboard/Styles/KeyPanel.qml" size="2358" reason="Qt QML datafile" tags="qml,copy" />
@@ -4726,7 +4718,7 @@
   <data_file name="PySide6/qml/QtQuick/Window/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Window/qmldir" size="205" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/Window/quickwindow.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/Window/quickwindow.qmltypes" size="215" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/tooling/Component.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/tooling/Component.qml" size="902" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick/tooling/Enum.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/tooling/Enum.qml" size="254" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick/tooling/Enum.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/tooling/Enum.qml" size="279" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/tooling/Member.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/tooling/Member.qml" size="204" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/tooling/Method.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/tooling/Method.qml" size="456" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/tooling/Module.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/tooling/Module.qml" size="252" reason="Qt QML datafile" tags="qml,copy" />
@@ -4735,7 +4727,7 @@
   <data_file name="PySide6/qml/QtQuick/tooling/Signal.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/tooling/Signal.qml" size="304" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/tooling/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/tooling/qmldir" size="567" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick/tooling/quicktooling.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick/tooling/quicktooling.qmltypes" size="215" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/plugins.qmltypes" size="185108" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/plugins.qmltypes" size="186920" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/qmldir" size="204" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/AssetUtils/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/AssetUtils/plugins.qmltypes" size="1878" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/AssetUtils/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/AssetUtils/qmldir" size="270" reason="Qt QML datafile" tags="qml,copy" />
@@ -4749,28 +4741,28 @@
   <data_file name="PySide6/qml/QtQuick3D/AssetUtils/designer/images/runtimeloader.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/AssetUtils/designer/images/runtimeloader.png" size="744" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/AssetUtils/designer/images/runtimeloader16.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/AssetUtils/designer/images/runtimeloader16.png" size="476" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/AssetUtils/designer/images/runtimeloader@2x.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/AssetUtils/designer/images/runtimeloader@2x.png" size="1441" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/AdditiveColorGradient.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/AdditiveColorGradient.qml" size="551" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/Blur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Blur.qml" size="410" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/BrushStrokes.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/BrushStrokes.qml" size="1055" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/ChromaticAberration.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/ChromaticAberration.qml" size="749" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/ColorMaster.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/ColorMaster.qml" size="597" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/DepthOfFieldHQBlur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/DepthOfFieldHQBlur.qml" size="1747" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/Desaturate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Desaturate.qml" size="427" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/DistortionRipple.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/DistortionRipple.qml" size="843" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/DistortionSphere.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/DistortionSphere.qml" size="722" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/DistortionSpiral.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/DistortionSpiral.qml" size="732" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/EdgeDetect.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/EdgeDetect.qml" size="586" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/Emboss.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Emboss.qml" size="429" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/Flip.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Flip.qml" size="459" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/Fxaa.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Fxaa.qml" size="1260" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/GaussianBlur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/GaussianBlur.qml" size="1201" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/HDRBloomTonemap.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/HDRBloomTonemap.qml" size="3687" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/MotionBlur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/MotionBlur.qml" size="3100" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/AdditiveColorGradient.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/AdditiveColorGradient.qml" size="530" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/Blur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Blur.qml" size="389" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/BrushStrokes.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/BrushStrokes.qml" size="1034" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/ChromaticAberration.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/ChromaticAberration.qml" size="728" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/ColorMaster.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/ColorMaster.qml" size="576" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/DepthOfFieldHQBlur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/DepthOfFieldHQBlur.qml" size="1722" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/Desaturate.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Desaturate.qml" size="406" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/DistortionRipple.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/DistortionRipple.qml" size="818" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/DistortionSphere.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/DistortionSphere.qml" size="697" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/DistortionSpiral.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/DistortionSpiral.qml" size="707" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/EdgeDetect.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/EdgeDetect.qml" size="561" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/Emboss.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Emboss.qml" size="408" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/Flip.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Flip.qml" size="438" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/Fxaa.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Fxaa.qml" size="1243" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/GaussianBlur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/GaussianBlur.qml" size="1176" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/HDRBloomTonemap.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/HDRBloomTonemap.qml" size="3666" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/MotionBlur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/MotionBlur.qml" size="3120" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Effects/Quick3DEffects.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Quick3DEffects.qmltypes" size="215" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/SCurveTonemap.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/SCurveTonemap.qml" size="1050" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/Scatter.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Scatter.qml" size="808" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/TiltShift.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/TiltShift.qml" size="1913" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Effects/Vignette.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Vignette.qml" size="552" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/SCurveTonemap.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/SCurveTonemap.qml" size="1029" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/Scatter.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Scatter.qml" size="783" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/TiltShift.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/TiltShift.qml" size="1888" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Effects/Vignette.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/Vignette.qml" size="531" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Effects/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/qmldir" size="979" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Effects/designer/AdditiveColorGradientSection.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/designer/AdditiveColorGradientSection.qml" size="693" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Effects/designer/AdditiveColorGradientSpecifics.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/designer/AdditiveColorGradientSpecifics.qml" size="291" reason="Qt QML datafile" tags="qml,copy" />
@@ -4818,13 +4810,13 @@
   <data_file name="PySide6/qml/QtQuick3D/Effects/designer/images/effect.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/designer/images/effect.png" size="411" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Effects/designer/images/effect16.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/designer/images/effect16.png" size="321" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Effects/designer/images/effect@2x.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Effects/designer/images/effect@2x.png" size="714" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Helpers/AxisHelper.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/AxisHelper.qml" size="2260" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Helpers/DebugView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/DebugView.qml" size="17629" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Helpers/ExtendedSceneEnvironment.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/ExtendedSceneEnvironment.qml" size="4063" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Helpers/LodManager.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/LodManager.qml" size="2594" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Helpers/OrbitCameraController.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/OrbitCameraController.qml" size="6429" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Helpers/WasdController.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/WasdController.qml" size="7907" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Helpers/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/plugins.qmltypes" size="19799" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Helpers/AxisHelper.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/AxisHelper.qml" size="2299" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Helpers/DebugView.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/DebugView.qml" size="18030" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Helpers/ExtendedSceneEnvironment.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/ExtendedSceneEnvironment.qml" size="4046" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Helpers/LodManager.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/LodManager.qml" size="2621" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Helpers/OrbitCameraController.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/OrbitCameraController.qml" size="6609" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Helpers/WasdController.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/WasdController.qml" size="8143" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Helpers/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/plugins.qmltypes" size="26955" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Helpers/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/qmldir" size="727" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Helpers/designer/AxisHelperSection.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/designer/AxisHelperSection.qml" size="3411" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Helpers/designer/AxisHelperSpecifics.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/designer/AxisHelperSpecifics.qml" size="333" reason="Qt QML datafile" tags="qml,copy" />
@@ -4899,7 +4891,7 @@
   <data_file name="PySide6/qml/QtQuick3D/Helpers/designer/images/wasdcontroller@2x.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/designer/images/wasdcontroller@2x.png" size="334" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Helpers/impl/DepthOfFieldBlur.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/impl/DepthOfFieldBlur.qml" size="1770" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Helpers/impl/LightmapperOutputWindow.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/impl/LightmapperOutputWindow.qml" size="837" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/Helpers/impl/SceneEffect.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/impl/SceneEffect.qml" size="19746" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/Helpers/impl/SceneEffect.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/impl/SceneEffect.qml" size="19822" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Helpers/impl/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/impl/plugins.qmltypes" size="4640" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Helpers/impl/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/impl/qmldir" size="408" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/Helpers/meshes/axisGrid.mesh" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/Helpers/meshes/axisGrid.mesh" size="128684" reason="Qt QML datafile" tags="qml,copy" />
@@ -5135,7 +5127,7 @@
   <data_file name="PySide6/qml/QtQuick3D/designer/View3DSection.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/designer/View3DSection.qml" size="2450" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/designer/View3DSpecifics.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/designer/View3DSpecifics.qml" size="276" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/designer/propertyGroups.json" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/designer/propertyGroups.json" size="3900" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtQuick3D/designer/quick3d.metainfo" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/designer/quick3d.metainfo" size="22417" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtQuick3D/designer/quick3d.metainfo" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/designer/quick3d.metainfo" size="25870" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/designer/images/camera.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/designer/images/camera.png" size="276" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/designer/images/camera16.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/designer/images/camera16.png" size="241" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtQuick3D/designer/images/camera@2x.png" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtQuick3D/designer/images/camera@2x.png" size="385" reason="Qt QML datafile" tags="qml,copy" />
@@ -5249,16 +5241,16 @@
   <data_file name="PySide6/qml/QtScxml/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtScxml/qmldir" size="206" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtSensors/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtSensors/plugins.qmltypes" size="31701" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtSensors/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtSensors/qmldir" size="197" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtTest/SignalSpy.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtTest/SignalSpy.qml" size="7356" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtTest/TestCase.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtTest/TestCase.qml" size="78207" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtTest/SignalSpy.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtTest/SignalSpy.qml" size="7832" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtTest/TestCase.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtTest/TestCase.qml" size="78326" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtTest/TestSchedule.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtTest/TestSchedule.qml" size="676" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtTest/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtTest/plugins.qmltypes" size="17393" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtTest/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtTest/qmldir" size="392" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtTest/testlogger.js" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtTest/testlogger.js" size="1438" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtTextToSpeech/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtTextToSpeech/plugins.qmltypes" size="7234" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtTextToSpeech/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtTextToSpeech/plugins.qmltypes" size="10914" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtTextToSpeech/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtTextToSpeech/qmldir" size="198" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWayland/Client/TextureSharing/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Client/TextureSharing/qmldir" size="243" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtWayland/Compositor/WaylandCompositor.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Compositor/WaylandCompositor.qmltypes" size="44125" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtWayland/Compositor/WaylandCompositor.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Compositor/WaylandCompositor.qmltypes" size="44164" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWayland/Compositor/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Compositor/qmldir" size="472" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWayland/Compositor/IviApplication/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Compositor/IviApplication/plugins.qmltypes" size="2499" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWayland/Compositor/IviApplication/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Compositor/IviApplication/qmldir" size="281" reason="Qt QML datafile" tags="qml,copy" />
@@ -5272,14 +5264,14 @@
   <data_file name="PySide6/qml/QtWayland/Compositor/XdgShell/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Compositor/XdgShell/qmldir" size="251" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWayland/Compositor/qmlfiles/WaylandCursorItem.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Compositor/qmlfiles/WaylandCursorItem.qml" size="1466" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWayland/Compositor/qmlfiles/WaylandOutputWindow.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Compositor/qmlfiles/WaylandOutputWindow.qml" size="589" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtWebChannel/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebChannel/plugins.qmltypes" size="2262" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtWebChannel/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebChannel/qmldir" size="172" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtWebEngine/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/plugins.qmltypes" size="99318" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtWebChannel/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebChannel/plugins.qmltypes" size="3573" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtWebChannel/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebChannel/qmldir" size="198" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtWebEngine/plugins.qmltypes" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/plugins.qmltypes" size="96288" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWebEngine/qmldir" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/qmldir" size="235" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWebEngine/ControlsDelegates/AlertDialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/ControlsDelegates/AlertDialog.qml" size="1774" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWebEngine/ControlsDelegates/AuthenticationDialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/ControlsDelegates/AuthenticationDialog.qml" size="2765" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWebEngine/ControlsDelegates/AutofillPopup.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/ControlsDelegates/AutofillPopup.qml" size="931" reason="Qt QML datafile" tags="qml,copy" />
-  <data_file name="PySide6/qml/QtWebEngine/ControlsDelegates/ColorDialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/ControlsDelegates/ColorDialog.qml" size="9376" reason="Qt QML datafile" tags="qml,copy" />
+  <data_file name="PySide6/qml/QtWebEngine/ControlsDelegates/ColorDialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/ControlsDelegates/ColorDialog.qml" size="319" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWebEngine/ControlsDelegates/ConfirmDialog.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/ControlsDelegates/ConfirmDialog.qml" size="2053" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWebEngine/ControlsDelegates/DirectoryPicker.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/ControlsDelegates/DirectoryPicker.qml" size="343" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWebEngine/ControlsDelegates/FilePicker.qml" source="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/ControlsDelegates/FilePicker.qml" size="334" reason="Qt QML datafile" tags="qml,copy" />
@@ -5374,6 +5366,7 @@
   <included_dll name="libqtchartsqml2plugin.so" dest_path="PySide6/qml/QtCharts/libqtchartsqml2plugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCharts/libqtchartsqml2plugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
   <included_dll name="libqtqmlcoreplugin.so" dest_path="PySide6/qml/QtCore/libqtqmlcoreplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtCore/libqtqmlcoreplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
   <included_dll name="libdatavisualizationqmlplugin.so" dest_path="PySide6/qml/QtDataVisualization/libdatavisualizationqmlplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtDataVisualization/libdatavisualizationqmlplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
+  <included_dll name="libgraphsplugin.so" dest_path="PySide6/qml/QtGraphs/libgraphsplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtGraphs/libgraphsplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
   <included_dll name="libdeclarative_locationplugin.so" dest_path="PySide6/qml/QtLocation/libdeclarative_locationplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtLocation/libdeclarative_locationplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
   <included_dll name="libquickmultimediaplugin.so" dest_path="PySide6/qml/QtMultimedia/libquickmultimediaplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtMultimedia/libquickmultimediaplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
   <included_dll name="libpositioningquickplugin.so" dest_path="PySide6/qml/QtPositioning/libpositioningquickplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtPositioning/libpositioningquickplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
@@ -5444,7 +5437,7 @@
   <included_dll name="libwaylandtexturesharingextensionplugin.so" dest_path="PySide6/qml/QtWayland/Compositor/TextureSharingExtension/libwaylandtexturesharingextensionplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Compositor/TextureSharingExtension/libwaylandtexturesharingextensionplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
   <included_dll name="libwaylandcompositorwlshellplugin.so" dest_path="PySide6/qml/QtWayland/Compositor/WlShell/libwaylandcompositorwlshellplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Compositor/WlShell/libwaylandcompositorwlshellplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
   <included_dll name="libwaylandcompositorxdgshellplugin.so" dest_path="PySide6/qml/QtWayland/Compositor/XdgShell/libwaylandcompositorxdgshellplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWayland/Compositor/XdgShell/libwaylandcompositorxdgshellplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
-  <included_dll name="libwebchannelplugin.so" dest_path="PySide6/qml/QtWebChannel/libwebchannelplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebChannel/libwebchannelplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
+  <included_dll name="libwebchannelquickplugin.so" dest_path="PySide6/qml/QtWebChannel/libwebchannelquickplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebChannel/libwebchannelquickplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
   <included_dll name="libqtwebenginequickplugin.so" dest_path="PySide6/qml/QtWebEngine/libqtwebenginequickplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/libqtwebenginequickplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
   <included_dll name="libqtwebenginequickdelegatesplugin.so" dest_path="PySide6/qml/QtWebEngine/ControlsDelegates/libqtwebenginequickdelegatesplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebEngine/ControlsDelegates/libqtwebenginequickdelegatesplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
   <included_dll name="libqmlwebsocketsplugin.so" dest_path="PySide6/qml/QtWebSockets/libqmlwebsocketsplugin.so" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/qml/QtWebSockets/libqmlwebsocketsplugin.so" package="PySide6" ignored="no" reason="Qt QML plugin DLL" />
@@ -5452,17 +5445,17 @@
   <included_dll name="libssl.so.3" dest_path="libssl.so.3" source_path="/lib/x86_64-linux-gnu/libssl.so.3" package="PySide6.QtNetwork" ignored="no" reason="needed by 'PySide6.QtNetwork'" />
   <included_dll name="libexpat.so.1" dest_path="libexpat.so.1" source_path="/lib/x86_64-linux-gnu/libexpat.so.1" package="" ignored="no" reason="Used by 'PySideQmlPolarchartTest.bin'" />
   <included_dll name="libicudata.so.56" dest_path="libicudata.so.56" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libicudata.so.56" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libshiboken6.abi3.so.6.5" dest_path="libshiboken6.abi3.so.6.5" source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/libshiboken6.abi3.so.6.5" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libpyside6.abi3.so.6.5" dest_path="libpyside6.abi3.so.6.5" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/libpyside6.abi3.so.6.5" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
+  <included_dll name="libshiboken6.abi3.so.6.6" dest_path="libshiboken6.abi3.so.6.6" source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/libshiboken6.abi3.so.6.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
   <included_dll name="libicuuc.so.56" dest_path="libicuuc.so.56" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libicuuc.so.56" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
   <included_dll name="libicui18n.so.56" dest_path="libicui18n.so.56" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libicui18n.so.56" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
   <included_dll name="libQt6Core.so.6" dest_path="libQt6Core.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Core.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
+  <included_dll name="libpyside6.abi3.so.6.6" dest_path="libpyside6.abi3.so.6.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/libpyside6.abi3.so.6.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
   <included_dll name="libQt6DBus.so.6" dest_path="libQt6DBus.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6DBus.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtGui.so'" />
   <included_dll name="libQt6Gui.so.6" dest_path="libQt6Gui.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Gui.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtGui.so'" />
   <included_dll name="libQt6Network.so.6" dest_path="libQt6Network.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Network.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtNetwork.so'" />
   <included_dll name="libQt6OpenGL.so.6" dest_path="libQt6OpenGL.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6OpenGL.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtOpenGL.so'" />
   <included_dll name="libQt6Qml.so.6" dest_path="libQt6Qml.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Qml.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtQml.so'" />
-  <included_dll name="libpyside6qml.abi3.so.6.5" dest_path="libpyside6qml.abi3.so.6.5" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/libpyside6qml.abi3.so.6.5" package="PySide6" ignored="no" reason="Used by 'PySide6/QtQml.so'" />
+  <included_dll name="libpyside6qml.abi3.so.6.6" dest_path="libpyside6qml.abi3.so.6.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/libpyside6qml.abi3.so.6.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtQml.so'" />
   <included_dll name="libQt6Quick.so.6" dest_path="libQt6Quick.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Quick.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtQuick.so'" />
   <included_dll name="libQt6QmlModels.so.6" dest_path="libQt6QmlModels.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6QmlModels.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtQuick.so'" />
   <included_dll name="libQt6Widgets.so.6" dest_path="libQt6Widgets.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Widgets.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtWidgets.so'" />
@@ -5503,6 +5496,11 @@
   <included_dll name="libQt6QmlCore.so.6" dest_path="libQt6QmlCore.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6QmlCore.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtCore/libqtqmlcoreplugin.so'" />
   <included_dll name="libQt6DataVisualization.so.6" dest_path="libQt6DataVisualization.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6DataVisualization.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtDataVisualization/libdatavisualizationqmlplugin.so'" />
   <included_dll name="libQt6DataVisualizationQml.so.6" dest_path="libQt6DataVisualizationQml.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6DataVisualizationQml.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtDataVisualization/libdatavisualizationqmlplugin.so'" />
+  <included_dll name="libQt6Quick3DRuntimeRender.so.6" dest_path="libQt6Quick3DRuntimeRender.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Quick3DRuntimeRender.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtGraphs/libgraphsplugin.so'" />
+  <included_dll name="libQt6QuickWidgets.so.6" dest_path="libQt6QuickWidgets.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6QuickWidgets.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtGraphs/libgraphsplugin.so'" />
+  <included_dll name="libQt6Quick3DUtils.so.6" dest_path="libQt6Quick3DUtils.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Quick3DUtils.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtGraphs/libgraphsplugin.so'" />
+  <included_dll name="libQt6Graphs.so.6" dest_path="libQt6Graphs.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Graphs.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtGraphs/libgraphsplugin.so'" />
+  <included_dll name="libQt6Quick3D.so.6" dest_path="libQt6Quick3D.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Quick3D.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtGraphs/libgraphsplugin.so'" />
   <included_dll name="libQt6PositioningQuick.so.6" dest_path="libQt6PositioningQuick.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6PositioningQuick.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtLocation/libdeclarative_locationplugin.so'" />
   <included_dll name="libQt6Location.so.6" dest_path="libQt6Location.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Location.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtLocation/libdeclarative_locationplugin.so'" />
   <included_dll name="libQt6QuickShapes.so.6" dest_path="libQt6QuickShapes.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6QuickShapes.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtLocation/libdeclarative_locationplugin.so'" />
@@ -5527,9 +5525,6 @@
   <included_dll name="libQt63DQuickScene2D.so.6" dest_path="libQt63DQuickScene2D.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt63DQuickScene2D.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtQuick/Scene2D/libqtquickscene2dplugin.so'" />
   <included_dll name="libQt6QuickTimeline.so.6" dest_path="libQt6QuickTimeline.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6QuickTimeline.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtQuick/Timeline/libqtquicktimelineplugin.so'" />
   <included_dll name="libQt6VirtualKeyboard.so.6" dest_path="libQt6VirtualKeyboard.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6VirtualKeyboard.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtQuick/VirtualKeyboard/libqtvkbplugin.so'" />
-  <included_dll name="libQt6Quick3DUtils.so.6" dest_path="libQt6Quick3DUtils.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Quick3DUtils.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtQuick3D/libqquick3dplugin.so'" />
-  <included_dll name="libQt6Quick3D.so.6" dest_path="libQt6Quick3D.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Quick3D.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtQuick3D/libqquick3dplugin.so'" />
-  <included_dll name="libQt6Quick3DRuntimeRender.so.6" dest_path="libQt6Quick3DRuntimeRender.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Quick3DRuntimeRender.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtQuick3D/libqquick3dplugin.so'" />
   <included_dll name="libQt6Quick3DAssetUtils.so.6" dest_path="libQt6Quick3DAssetUtils.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Quick3DAssetUtils.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtQuick3D/AssetUtils/libqtquick3dassetutilsplugin.so'" />
   <included_dll name="libQt6Quick3DAssetImport.so.6" dest_path="libQt6Quick3DAssetImport.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Quick3DAssetImport.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtQuick3D/AssetUtils/libqtquick3dassetutilsplugin.so'" />
   <included_dll name="libQt6Quick3DEffects.so.6" dest_path="libQt6Quick3DEffects.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Quick3DEffects.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtQuick3D/Effects/libqtquick3deffectplugin.so'" />
@@ -5547,7 +5542,8 @@
   <included_dll name="libQt6Test.so.6" dest_path="libQt6Test.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Test.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtTest/libquicktestplugin.so'" />
   <included_dll name="libQt6TextToSpeech.so.6" dest_path="libQt6TextToSpeech.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6TextToSpeech.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtTextToSpeech/libtexttospeechqmlplugin.so'" />
   <included_dll name="libQt6WaylandCompositor.so.6" dest_path="libQt6WaylandCompositor.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6WaylandCompositor.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtWayland/Compositor/libqwaylandcompositorplugin.so'" />
-  <included_dll name="libQt6WebChannel.so.6" dest_path="libQt6WebChannel.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6WebChannel.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtWebChannel/libwebchannelplugin.so'" />
+  <included_dll name="libQt6WebChannelQuick.so.6" dest_path="libQt6WebChannelQuick.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6WebChannelQuick.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtWebChannel/libwebchannelquickplugin.so'" />
+  <included_dll name="libQt6WebChannel.so.6" dest_path="libQt6WebChannel.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6WebChannel.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtWebChannel/libwebchannelquickplugin.so'" />
   <included_dll name="libQt6WebEngineCore.so.6" dest_path="libQt6WebEngineCore.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6WebEngineCore.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtWebEngine/libqtwebenginequickplugin.so'" />
   <included_dll name="libQt6WebEngineQuick.so.6" dest_path="libQt6WebEngineQuick.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6WebEngineQuick.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtWebEngine/libqtwebenginequickplugin.so'" />
   <included_dll name="libQt6WebEngineQuickDelegatesQml.so.6" dest_path="libQt6WebEngineQuickDelegatesQml.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6WebEngineQuickDelegatesQml.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtWebEngine/ControlsDelegates/libqtwebenginequickdelegatesplugin.so'" />
@@ -5561,7 +5557,7 @@
     <option value="/home/hayen/repos/Nuitka-Watch/cases/PySide6/qml-example/PySideQmlPolarchartTest.py" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=fb7d744ebfd70eeaaa9e0444fc3aacc3" />
+    <option value="--report-user-provided=pipenv_hash=954e6d6704e4e13b34ed6afcfa9bdf5a" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -5584,10 +5580,10 @@
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
-    <distribution name="PySide6" version="6.5.2" installer="pip" />
-    <distribution name="PySide6-Addons" version="6.5.2" installer="pip" />
-    <distribution name="PySide6-Essentials" version="6.5.2" installer="pip" />
-    <distribution name="shiboken6" version="6.5.2" installer="pip" />
+    <distribution name="PySide6" version="6.6.1" installer="pip" />
+    <distribution name="PySide6-Addons" version="6.6.1" installer="pip" />
+    <distribution name="PySide6-Essentials" version="6.6.1" installer="pip" />
+    <distribution name="shiboken6" version="6.6.1" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}/bin/python" python_flavor="Debian Python" python_version="3.10.12" os_name="Linux" arch_name="x86_64">
     <search_path>
@@ -5599,6 +5595,6 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>fb7d744ebfd70eeaaa9e0444fc3aacc3</pipenv_hash>
+    <pipenv_hash>954e6d6704e4e13b34ed6afcfa9bdf5a</pipenv_hash>
   </user-data>
 </nuitka-compilation-report>

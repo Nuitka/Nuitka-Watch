@@ -3495,14 +3495,11 @@
       <module_usage name="OpenGL.arrays.GLubyteArray" finding="not-found" line="148" />
     </module_usages>
   </module>
-  <module name="PySide6" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.QtOpenGLWidgets'." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
-    <plugin-influence name="implicit-imports" influence="condition-used" condition="version(&quot;PySide6&quot;) &lt; (6,6)" tags_used="version" result="true" />
+  <module name="PySide6" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.QtOpenGLWidgets'." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="version(&quot;PySide6&quot;) &lt; (6,6)" tags_used="version" result="false" />
     <plugin-influence name="options-nanny" influence="condition-used" condition="use_pyside6" tags_used="use_pyside6" result="true" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
-    <distribution-usages>
-      <distribution-usage name="shiboken6" />
-    </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="2" />
@@ -3513,25 +3510,12 @@
       <module_usage name="sys" finding="absolute" line="68" />
     </module_usages>
   </module>
-  <module name="PySide6-postLoad" kind="CompiledPythonModule" usage="plugins" reason="According to Yaml configuration." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/PySide6-postLoad.py">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <distribution-usages>
-      <distribution-usage name="PySide6" />
-      <distribution-usage name="PySide6-Addons" />
-      <distribution-usage name="PySide6-Essentials" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="PySide6" finding="absolute" line="9" />
-      <module_usage name="PySide6.QtCore" finding="relative" line="9" />
-    </module_usages>
-  </module>
   <module name="PySide6.QtCore" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtCore.abi3.so" distribution="PySide6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtCore-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Setting Qt library path to distribution folder. We need to avoid loading target&#10;system Qt plugins, which may be from another Qt version." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/PySide6/QtCore-postLoad.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtCore-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Setting Qt library path to distribution folder. We need to avoid loading target&#10;system Qt plugins, which may be from another Qt version." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/PySide6/QtCore-postLoad.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -3544,38 +3528,35 @@
       <module_usage name="posixpath" finding="absolute" line="20" />
     </module_usages>
   </module>
-  <module name="PySide6.QtGui" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtGui.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtGui" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtGui.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtOpenGL" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtOpenGL.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtOpenGL" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtOpenGL.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtOpenGLWidgets" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtOpenGLWidgets.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtOpenGLWidgets" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtOpenGLWidgets.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.QtWidgets" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtWidgets.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.QtWidgets" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtWidgets.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="PySide6.support" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.support.deprecated'." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/support/__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.support" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.support.deprecated'." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/support/__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
-    <distribution-usages>
-      <distribution-usage name="shiboken6" />
-    </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="shiboken6.Shiboken" finding="absolute" line="4" />
     </module_usages>
   </module>
-  <module name="PySide6.support.deprecated" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/support/deprecated.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials">
+  <module name="PySide6.support.deprecated" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/support/deprecated.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -6294,7 +6275,7 @@
       <module_usage name="re" finding="absolute" line="3" />
       <module_usage name="json" finding="absolute" line="5" />
       <module_usage name="json.scanner" finding="relative" line="5" />
-      <module_usage name="_json" finding="excluded" line="7" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'json.decoder'" />
+      <module_usage name="_json" finding="absolute" line="7" />
     </module_usages>
   </module>
   <module name="json.encoder" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/json/encoder.py">
@@ -6303,9 +6284,9 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="3" />
-      <module_usage name="_json" finding="excluded" line="6" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'json.encoder'" />
-      <module_usage name="_json" finding="excluded" line="10" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'json.encoder'" />
-      <module_usage name="_json" finding="excluded" line="14" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'json.encoder'" />
+      <module_usage name="_json" finding="absolute" line="6" />
+      <module_usage name="_json" finding="absolute" line="10" />
+      <module_usage name="_json" finding="absolute" line="14" />
     </module_usages>
   </module>
   <module name="json.scanner" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/json/scanner.py">
@@ -6314,7 +6295,7 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="3" />
-      <module_usage name="_json" finding="excluded" line="5" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'json.scanner'" />
+      <module_usage name="_json" finding="absolute" line="5" />
     </module_usages>
   </module>
   <module name="keyword" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.10/keyword.py">
@@ -6827,7 +6808,7 @@
       <module_usage name="sys" finding="absolute" line="13" />
     </module_usages>
   </module>
-  <module name="shiboken6" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/__init__.py" distribution="shiboken6">
+  <module name="shiboken6" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -6851,7 +6832,7 @@
       <module_usage name="shiboken6.Shiboken" finding="absolute" line="27" />
     </module_usages>
   </module>
-  <module name="shiboken6.Shiboken" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/Shiboken.abi3.so" distribution="shiboken6">
+  <module name="shiboken6.Shiboken" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/Shiboken.abi3.so" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -7563,9 +7544,9 @@
   <included_dll name="libicui18n.so.56" dest_path="libicui18n.so.56" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libicui18n.so.56" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
   <included_dll name="libicuuc.so.56" dest_path="libicuuc.so.56" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libicuuc.so.56" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
   <included_dll name="libQt6Core.so.6" dest_path="libQt6Core.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Core.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libshiboken6.abi3.so.6.5" dest_path="libshiboken6.abi3.so.6.5" source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/libshiboken6.abi3.so.6.5" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
+  <included_dll name="libpyside6.abi3.so.6.6" dest_path="libpyside6.abi3.so.6.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/libpyside6.abi3.so.6.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
   <included_dll name="libicudata.so.56" dest_path="libicudata.so.56" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libicudata.so.56" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libpyside6.abi3.so.6.5" dest_path="libpyside6.abi3.so.6.5" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/libpyside6.abi3.so.6.5" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
+  <included_dll name="libshiboken6.abi3.so.6.6" dest_path="libshiboken6.abi3.so.6.6" source_path="${sys.prefix}/lib/python3.10/site-packages/shiboken6/libshiboken6.abi3.so.6.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
   <included_dll name="libQt6DBus.so.6" dest_path="libQt6DBus.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6DBus.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtGui.so'" />
   <included_dll name="libQt6Gui.so.6" dest_path="libQt6Gui.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6Gui.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtGui.so'" />
   <included_dll name="libQt6OpenGL.so.6" dest_path="libQt6OpenGL.so.6" source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/Qt/lib/libQt6OpenGL.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtOpenGL.so'" />
@@ -7591,7 +7572,7 @@
     <option value="/home/hayen/repos/Nuitka-Watch/cases/PySide6/opengl-example/PySideOpenGLTest.py" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=86a2180df353baff99b0dbbe04045b2a" />
+    <option value="--report-user-provided=pipenv_hash=31ce03eb0f8037b052d818322842aba2" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -7615,10 +7596,10 @@
   </plugins>
   <distributions>
     <distribution name="PyOpenGL" version="3.1.7" installer="pip" />
-    <distribution name="PySide6" version="6.5.2" installer="pip" />
-    <distribution name="PySide6-Addons" version="6.5.2" installer="pip" />
-    <distribution name="PySide6-Essentials" version="6.5.2" installer="pip" />
-    <distribution name="shiboken6" version="6.5.2" installer="pip" />
+    <distribution name="PySide6" version="6.6.1" installer="pip" />
+    <distribution name="PySide6-Addons" version="6.6.1" installer="pip" />
+    <distribution name="PySide6-Essentials" version="6.6.1" installer="pip" />
+    <distribution name="shiboken6" version="6.6.1" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}/bin/python" python_flavor="Debian Python" python_version="3.10.12" os_name="Linux" arch_name="x86_64">
     <search_path>
@@ -7630,6 +7611,6 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>86a2180df353baff99b0dbbe04045b2a</pipenv_hash>
+    <pipenv_hash>31ce03eb0f8037b052d818322842aba2</pipenv_hash>
   </user-data>
 </nuitka-compilation-report>
