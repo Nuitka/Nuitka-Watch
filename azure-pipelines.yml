@@ -21,6 +21,11 @@ jobs:
       script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
       workingDirectory: '..'
 
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.10.x'
+      addToPath: true
+
   - task: CmdLine@2
     inputs:
       script: 'python -m pip install -r requirements.txt'
@@ -45,6 +50,11 @@ jobs:
     inputs:
       script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
       workingDirectory: '..'
+
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.10.x'
+      addToPath: true
 
   - task: CmdLine@2
     inputs:
@@ -71,9 +81,14 @@ jobs:
       script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
       workingDirectory: '..'
 
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.10.x'
+      addToPath: true
+
   - task: CmdLine@2
     inputs:
-      script: 'python -m pip install -r requirements.txt'
+      script: 'python.exe -m pip install -r requirements.txt'
 
   - task: CmdLine@2
     inputs:
