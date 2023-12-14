@@ -20,6 +20,10 @@ steps:
     script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
     workingDirectory: '..'
 
+- task: CmdLine@2
+  inputs:
+    script: 'python -m pip install -r requirements.txt'
+
 - task: Bash@3
   inputs:
     filePath: 'nuitka-release.sh'
