@@ -10,10 +10,16 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: CmdLine@2
+  inputs:
+    script: 'git clone --shallow -b factory https://github.com/Nuitka/Nuitka.git Py2C'
+    workingDirectory: '..'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: CmdLine@2
+  inputs:
+    script: 'git clone --shallow -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
+    workingDirectory: '..'
+
+- task: Bash@3
+  inputs:
+    filePath: 'nuitka-release.sh'
