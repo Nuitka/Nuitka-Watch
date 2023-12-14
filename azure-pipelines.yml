@@ -3,27 +3,78 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- main
+jobs:
+- job:
+  displayName: 'Ubuntu develop'
+  timeoutInMinutes: 0
+  pool:
+    vmImage: ubuntu-latest
 
-pool:
-  vmImage: ubuntu-latest
+  steps:
+  - task: CmdLine@2
+    inputs:
+      script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C'
+      workingDirectory: '..'
 
-steps:
-- task: CmdLine@2
-  inputs:
-    script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C'
-    workingDirectory: '..'
+  - task: CmdLine@2
+    inputs:
+      script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
+      workingDirectory: '..'
 
-- task: CmdLine@2
-  inputs:
-    script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
-    workingDirectory: '..'
+  - task: CmdLine@2
+    inputs:
+      script: 'python -m pip install -r requirements.txt'
 
-- task: CmdLine@2
-  inputs:
-    script: 'python -m pip install -r requirements.txt'
+  - task: Bash@3
+    inputs:
+      filePath: 'nuitka-release.sh'
 
-- task: Bash@3
-  inputs:
-    filePath: 'nuitka-release.sh'
+- job:
+  displayName: 'MacOS develop'
+  timeoutInMinutes: 0
+  pool:
+    vmImage: macos-latest
+
+  steps:
+  - task: CmdLine@2
+    inputs:
+      script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C'
+      workingDirectory: '..'
+
+  - task: CmdLine@2
+    inputs:
+      script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
+      workingDirectory: '..'
+
+  - task: CmdLine@2
+    inputs:
+      script: 'python -m pip install -r requirements.txt'
+
+  - task: Bash@3
+    inputs:
+      filePath: 'nuitka-release.sh'
+
+- job:
+  displayName: 'Windows develop'
+  timeoutInMinutes: 0
+  pool:
+    vmImage: windows-latest
+
+  steps:
+  - task: CmdLine@2
+    inputs:
+      script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C'
+      workingDirectory: '..'
+
+  - task: CmdLine@2
+    inputs:
+      script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
+      workingDirectory: '..'
+
+  - task: CmdLine@2
+    inputs:
+      script: 'python -m pip install -r requirements.txt'
+
+  - task: CmdLine@2
+    inputs:
+      script: 'python3 ../Py2C/bin/nuitka-watch --python-version=3.10 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka'
