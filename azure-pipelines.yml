@@ -13,6 +13,16 @@ jobs:
   steps:
   - task: CmdLine@2
     inputs:
+      script: 'curl -o python.pkg https://www.python.org/ftp/python/3.10.11/python-3.10.11-macos11.pkg'
+      workingDirectory: '..'
+
+  - task: CmdLine@2
+    inputs:
+      script: 'sudo installer -pkg python.pkg -target /'
+      workingDirectory: '..'
+  
+  - task: CmdLine@2
+    inputs:
       script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C'
       workingDirectory: '..'
 
@@ -20,11 +30,6 @@ jobs:
     inputs:
       script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
       workingDirectory: '..'
-
-  - task: UsePythonVersion@0
-    inputs:
-      versionSpec: '3.10.x'
-      addToPath: true
 
   - task: CmdLine@2
     inputs:
@@ -51,10 +56,12 @@ jobs:
       script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
       workingDirectory: '..'
 
-  - task: UsePythonVersion@0
+  - task: Cache@2
     inputs:
-      versionSpec: '3.10.x'
-      addToPath: true
+      key: '"macos-pipenv" | $(Build.BuildNumber)'
+      path: '~/Library/Caches/pipenv'
+      restoreKeys: |
+       "macos-pipenv"
 
   - task: CmdLine@2
     inputs:
