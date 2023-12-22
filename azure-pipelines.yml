@@ -10,17 +10,7 @@ jobs:
   pool:
     vmImage: ubuntu-latest
 
-  steps:
-  - task: CmdLine@2
-    inputs:
-      script: 'curl -o python.pkg https://www.python.org/ftp/python/3.10.11/python-3.10.11-macos11.pkg'
-      workingDirectory: '..'
-
-  - task: CmdLine@2
-    inputs:
-      script: 'sudo installer -pkg python.pkg -target /'
-      workingDirectory: '..'
-  
+  steps:  
   - task: CmdLine@2
     inputs:
       script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C'
@@ -48,6 +38,16 @@ jobs:
   steps:
   - task: CmdLine@2
     inputs:
+      script: 'curl -o python.pkg https://www.python.org/ftp/python/3.10.11/python-3.10.11-macos11.pkg'
+      workingDirectory: '..'
+
+  - task: CmdLine@2
+    inputs:
+      script: 'sudo installer -pkg python.pkg -target /'
+      workingDirectory: '..'
+
+  - task: CmdLine@2
+    inputs:
       script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C'
       workingDirectory: '..'
 
@@ -58,7 +58,7 @@ jobs:
 
   - task: Cache@2
     inputs:
-      key: '"macos-pipenv" | $(Build.BuildNumber)'
+      key: '"macos-pipenv" | "$(Build.BuildNumber)"'
       path: '~/Library/Caches/pipenv'
       restoreKeys: |
        "macos-pipenv"
