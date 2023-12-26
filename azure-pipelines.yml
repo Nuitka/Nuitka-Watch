@@ -24,7 +24,7 @@ jobs:
   - task: Cache@2
     inputs:
       key: '"ubuntu-pipenv" | "$(Build.BuildNumber)"'
-      path: '~/.cache/pipenv'
+      path: '../pipenv_cache'
       restoreKeys: |
        "ubuntu-pipenv"
 
@@ -32,9 +32,9 @@ jobs:
     inputs:
       script: 'python -m pip install -r requirements.txt'
 
-  - task: Bash@3
+  - task: CmdLine@2
     inputs:
-      filePath: 'nuitka-release.sh'
+      script: 'PIPENV_CACHE_DIR=$(pwd)/../pipenv_cache nuitka-release.sh'
 
 - job:
   displayName: 'MacOS develop'
@@ -55,6 +55,10 @@ jobs:
 
   - task: CmdLine@2
     inputs:
+      script: 'sudo bash /Applications/Python*/Install\ Certificates.command'
+
+  - task: CmdLine@2
+    inputs:
       script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C'
       workingDirectory: '..'
 
@@ -66,7 +70,7 @@ jobs:
   - task: Cache@2
     inputs:
       key: '"macos-pipenv" | "$(Build.BuildNumber)"'
-      path: '~/Library/Caches/pipenv'
+      path: '../pipenv_cache'
       restoreKeys: |
        "macos-pipenv"
 
@@ -76,7 +80,7 @@ jobs:
 
   - task: CmdLine@2
     inputs:
-      script: 'PATH=/usr/local/bin:$PATH bash nuitka-release.sh'
+      script: 'PATH=/usr/local/bin:$PATH PIPENV_CACHE_DIR=$(pwd)/../pipenv_cache bash nuitka-release.sh'
 
 - job:
   displayName: 'Windows develop'
@@ -103,7 +107,7 @@ jobs:
   - task: Cache@2
     inputs:
       key: '"windows-pipenv" | "$(Build.BuildNumber)"'
-      path: '%LOCALAPPDATA%\pipenv\pipenv\Cache'
+      path: '../pipenv_cache'
       restoreKeys: |
        "windows-pipenv"
 
@@ -114,3 +118,5 @@ jobs:
   - task: CmdLine@2
     inputs:
       script: 'python3 ../Py2C/bin/nuitka-watch --python-version=3.10 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka'
+    env:
+      PIPENV_CACHE_DIR: '$(Agent.BuildDirectory)/../pipenv_cache'
