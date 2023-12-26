@@ -67,9 +67,9 @@ jobs:
     inputs:
       script: 'PATH=/usr/local/bin:$PATH python3 -m pip install -r requirements.txt'
 
-  - task: Bash@3
+  - task: CmdLine@2
     inputs:
-      filePath: 'PATH=/usr/local/bin:$PATH nuitka-release.sh'
+      script: 'PATH=/usr/local/bin:$PATH bash nuitka-release.sh'
 
 - job:
   displayName: 'Windows develop'
