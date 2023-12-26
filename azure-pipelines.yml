@@ -65,11 +65,11 @@ jobs:
 
   - task: CmdLine@2
     inputs:
-      script: 'python -m pip install -r requirements.txt'
+      script: 'PATH=/usr/local/bin:$PATH python -m pip install -r requirements.txt'
 
   - task: Bash@3
     inputs:
-      filePath: 'nuitka-release.sh'
+      filePath: 'PATH=/usr/local/bin:$PATH nuitka-release.sh'
 
 - job:
   displayName: 'Windows develop'
