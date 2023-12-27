@@ -99,14 +99,12 @@ jobs:
   - task: CmdLine@2
     inputs:
       script: |
-        @echo on
         git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C
       workingDirectory: '..'
 
   - task: CmdLine@2
     inputs:
       script: |
-        @echo on
         git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop
       workingDirectory: '..'
 
@@ -133,4 +131,4 @@ jobs:
         set PIPENV_CACHE_DIR=%CD%\..\pipenv_cache
         if not exist "%PIPENV_CACHE_DIR%" mkdir %PIPENV_CACHE_DIR%
         python3 ..\Nuitka-develop\bin\nuitka --version
-        python3 ../Py2C/bin/nuitka-watch --python-version=3.10 --no-pipenv-update --nuitka-binary=..\Nuitka-develop\bin\nuitka'
+        python3 ../Py2C/bin/nuitka-watch --python-version=3.10 --no-pipenv-update --nuitka-binary=..\Nuitka-develop\bin\nuitka
