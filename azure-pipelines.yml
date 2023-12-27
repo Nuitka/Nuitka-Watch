@@ -46,6 +46,12 @@ jobs:
     vmImage: macos-latest
 
   steps:
+  - task: InstallAppleCertificate@2
+    inputs:
+      certSecureFile: 'macos_test_cert.p12'
+      certPwd: 'test'
+      keychain: 'temp'
+
   - task: CmdLine@2
     inputs:
       script: NONINTERACTIVE=1 sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
