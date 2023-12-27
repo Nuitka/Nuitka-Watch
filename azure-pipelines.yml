@@ -101,7 +101,7 @@ jobs:
 
   - task: UsePythonVersion@0
     inputs:
-      versionSpec: '3.10.x'
+      versionSpec: '3.10'
       addToPath: true
 
   - task: Cache@2
@@ -117,9 +117,7 @@ jobs:
 
   - task: CmdLine@2
     inputs:
-      script: '
-      set PIPENV_CACHE_DIR=%CD%/../pipenv_cache
-      if not exist "%PIPENV_CACHE_DIR%" mkdir %PIPENV_CACHE_DIR%
-      python3 ../Py2C/bin/nuitka-watch --python-version=3.10 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka'
-    env:
-      PIPENV_CACHE_DIR: '$(Agent.BuildDirectory)/../pipenv_cache'
+      script: |
+        set PIPENV_CACHE_DIR=%CD%/../pipenv_cache
+        if not exist "%PIPENV_CACHE_DIR%" mkdir %PIPENV_CACHE_DIR%
+        python3 ../Py2C/bin/nuitka-watch --python-version=3.10 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka'
