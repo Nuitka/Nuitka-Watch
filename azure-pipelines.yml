@@ -75,16 +75,17 @@ jobs:
 
   - task: CmdLine@2
     inputs:
-      script: 'python3.10 -m pip install -r requirements.txt'
+      script: 'PATH=/usr/local/bin:$PATH python3.10 -m pip install -r requirements.txt'
 
   - task: CmdLine@2
     inputs:
-      script: 'python3.11 -m pip install -r requirements.txt'
+      script: 'PATH=/usr/local/bin:$PATH python3.11 -m pip install -r requirements.txt'
 
   - task: CmdLine@2
     inputs:
       script: |
         export PIPENV_CACHE_DIR=$(pwd)/../pipenv_cache
+        export PATH=/usr/local/bin:$PATH
         python3.10 ../Nuitka-develop/bin/nuitka --version
         bash nuitka-release.sh
 
