@@ -58,20 +58,6 @@ jobs:
 
   - task: CmdLine@2
     inputs:
-      script: 'curl -o python.pkg https://www.python.org/ftp/python/3.10.11/python-3.10.11-macos11.pkg'
-      workingDirectory: '..'
-
-  - task: CmdLine@2
-    inputs:
-      script: 'sudo installer -pkg python.pkg -target /'
-      workingDirectory: '..'
-
-  - task: CmdLine@2
-    inputs:
-      script: 'sudo bash "/Applications/Python 3.10/Install Certificates.command"'
-
-  - task: CmdLine@2
-    inputs:
       script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C'
       workingDirectory: '..'
 
@@ -89,14 +75,17 @@ jobs:
 
   - task: CmdLine@2
     inputs:
-      script: 'PATH=/Library/Frameworks/Python.framework/Versions/3.10/bin:$PATH python3 -m pip install -r requirements.txt'
+      script: 'python3.10 -m pip install -r requirements.txt'
+
+  - task: CmdLine@2
+    inputs:
+      script: 'python3.11 -m pip install -r requirements.txt'
 
   - task: CmdLine@2
     inputs:
       script: |
-        export PATH=/Library/Frameworks/Python.framework/Versions/3.10/bin:$PATH
         export PIPENV_CACHE_DIR=$(pwd)/../pipenv_cache
-        python3 ../Nuitka-develop/bin/nuitka --version
+        python3.10 ../Nuitka-develop/bin/nuitka --version
         bash nuitka-release.sh
 
 - job:
