@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="1.9.4" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="1.9.6" nuitka_commercial_version="not installed" completion="yes">
   <module name="PySide6" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.QtWidgets'." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
-    <plugin-influence name="implicit-imports" influence="condition-used" condition="version(&quot;PySide6&quot;) &lt; (6,6)" tags_used="version" result="false" />
     <plugin-influence name="options-nanny" influence="condition-used" condition="use_pyside6" tags_used="use_pyside6" result="true" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -13,6 +12,22 @@
       <module_usage name="shiboken6" finding="absolute" line="64" />
       <module_usage name="shiboken6.Shiboken" finding="relative" line="64" />
       <module_usage name="sys" finding="absolute" line="68" />
+    </module_usages>
+  </module>
+  <module name="PySide6-postLoad" kind="CompiledPythonModule" usage="plugins" reason="According to Yaml configuration." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/PySide6-postLoad.py">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="PySide6" />
+      <distribution-usage name="PySide6-Addons" />
+      <distribution-usage name="PySide6-Essentials" />
+      <distribution-usage name="shiboken6" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="PySide6" finding="absolute" line="9" />
+      <module_usage name="PySide6.QtCore" finding="relative" line="9" />
+      <module_usage name="PySide6" finding="absolute" line="22" />
+      <module_usage name="PySide6.QtCore" finding="relative" line="22" />
     </module_usages>
   </module>
   <module name="PySide6.QtCore" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/PySide6/QtCore.abi3.so" distribution="PySide6">
@@ -5555,6 +5570,7 @@
     <option value="--include-data-dir=/home/hayen/repos/Nuitka-Watch/cases/PySide6/qml-example/qmlpolarchart=qmlpolarchart" />
     <option value="--linux-onefile-icon=/home/hayen/repos/Nuitka-Watch/cases/PySide6/qml-example/qmlpolarchart/Example-Icon.png" />
     <option value="/home/hayen/repos/Nuitka-Watch/cases/PySide6/qml-example/PySideQmlPolarchartTest.py" />
+    <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
     <option value="--report-user-provided=pipenv_hash=954e6d6704e4e13b34ed6afcfa9bdf5a" />
@@ -5597,4 +5613,5 @@
   <user-data>
     <pipenv_hash>954e6d6704e4e13b34ed6afcfa9bdf5a</pipenv_hash>
   </user-data>
+  <output run_filename="${cwd}/PySideQmlPolarchartTest.dist/PySideQmlPolarchartTest.bin" />
 </nuitka-compilation-report>
