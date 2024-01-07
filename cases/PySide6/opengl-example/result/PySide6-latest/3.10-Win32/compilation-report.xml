@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="1.9.4" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="1.9.7" nuitka_commercial_version="not installed" completion="yes">
   <module name="OpenGL" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\OpenGL\__init__.py" distribution="PyOpenGL">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -3455,7 +3455,6 @@
     </module_usages>
   </module>
   <module name="PySide6" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.QtOpenGLWidgets'." source_path="${sys.prefix}\lib\site-packages\PySide6\__init__.py" distribution="PySide6,PySide6-Addons,PySide6-Essentials,shiboken6">
-    <plugin-influence name="implicit-imports" influence="condition-used" condition="version(&quot;PySide6&quot;) &lt; (6,6)" tags_used="version" result="false" />
     <plugin-influence name="options-nanny" influence="condition-used" condition="use_pyside6" tags_used="use_pyside6" result="true" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -3469,6 +3468,22 @@
       <module_usage name="sys" finding="absolute" line="68" />
       <module_usage name="PySide6" finding="absolute" line="87" />
       <module_usage name="PySide6.QtNetwork" finding="relative" line="87" />
+    </module_usages>
+  </module>
+  <module name="PySide6-postLoad" kind="CompiledPythonModule" usage="plugins" reason="According to Yaml configuration." source_path="${sys.prefix}\lib\site-packages\PySide6\PySide6-postLoad.py">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="PySide6" />
+      <distribution-usage name="PySide6-Addons" />
+      <distribution-usage name="PySide6-Essentials" />
+      <distribution-usage name="shiboken6" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="PySide6" finding="absolute" line="9" />
+      <module_usage name="PySide6.QtCore" finding="relative" line="9" />
+      <module_usage name="PySide6" finding="absolute" line="22" />
+      <module_usage name="PySide6.QtCore" finding="relative" line="22" />
     </module_usages>
   </module>
   <module name="PySide6-preLoad" kind="CompiledPythonModule" usage="plugins" reason="Adding binary folder to runtime 'PATH' environment variable for proper Qt loading." source_path="${sys.prefix}\lib\site-packages\PySide6\PySide6-preLoad.py">
@@ -7460,6 +7475,7 @@
     <option value="--standalone" />
     <option value="--enable-plugin=pyside6" />
     <option value="C:\Users\kayha\repos\Nuitka-Watch\cases\PySide6\opengl-example\PySideOpenGLTest.py" />
+    <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
     <option value="--report-user-provided=pipenv_hash=31ce03eb0f8037b052d818322842aba2" />
@@ -7505,4 +7521,5 @@
   <user-data>
     <pipenv_hash>31ce03eb0f8037b052d818322842aba2</pipenv_hash>
   </user-data>
+  <output run_filename="${cwd}\PySideOpenGLTest.dist\PySideOpenGLTest.exe" />
 </nuitka-compilation-report>
