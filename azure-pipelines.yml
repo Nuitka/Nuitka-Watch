@@ -35,8 +35,8 @@ jobs:
     inputs:
       script: |
         export PIPENV_CACHE_DIR=$(pwd)/../pipenv_cache
-        ../Nuitka-develop/bin/nuitka --version
-        bash nuitka-release.sh
+        python3.11 ../Nuitka-develop/bin/nuitka --version
+        python3.11 ../Py2C/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka
 
 - job:
   displayName: 'MacOS develop'
