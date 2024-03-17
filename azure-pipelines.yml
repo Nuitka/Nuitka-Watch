@@ -37,7 +37,9 @@ jobs:
         export PIPENV_CACHE_DIR=$(pwd)/../pipenv_cache
         python3.11 ../Nuitka-develop/bin/nuitka --version
         python3.11 ../Py2C/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka
-
+    env:
+      "GITHUB_TOKEN": "$(NOBODY_BOT_IDENTITY)"
+      
 - job:
   displayName: 'MacOS develop'
   timeoutInMinutes: 0
