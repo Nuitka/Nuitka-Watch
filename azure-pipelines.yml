@@ -12,13 +12,15 @@ jobs:
   steps:  
   - task: CmdLine@2
     inputs:
-      script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C'
+      script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Nuitka-factory'
       workingDirectory: '..'
 
   - task: CmdLine@2
     inputs:
-      script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
+      script: 'git clone --depth=1 -b $NUITKA_BRANCH_NAME https://github.com/Nuitka/Nuitka.git Nuitka-develop'
       workingDirectory: '..'
+    env:
+      "NUITKA_BRANCH_NAME": "$(NUITKA_BRANCH_NAME)"
 
   - task: Cache@2
     inputs:
@@ -36,12 +38,12 @@ jobs:
       script: |
         export PIPENV_CACHE_DIR=$(pwd)/../pipenv_cache
         python3.11 ../Nuitka-develop/bin/nuitka --version
-        python3.11 ../Py2C/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka
+        python3.11 ../Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka
     env:
       "GITHUB_TOKEN": "$(NOBODY_BOT_IDENTITY)"
       
 - job:
-  displayName: 'MacOS develop'
+  displayName: 'MacOS'
   timeoutInMinutes: 0
   pool:
     vmImage: macos-latest
@@ -73,13 +75,15 @@ jobs:
 
   - task: CmdLine@2
     inputs:
-      script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C'
+      script: 'git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Nuitka-factory'
       workingDirectory: '..'
 
   - task: CmdLine@2
     inputs:
-      script: 'git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop'
+      script: 'git clone --depth=1 -b $NUITKA_BRANCH_NAME https://github.com/Nuitka/Nuitka.git Nuitka-develop'
       workingDirectory: '..'
+    env:
+      "NUITKA_BRANCH_NAME": "$(NUITKA_BRANCH_NAME)"
 
   - task: Cache@2
     inputs:
@@ -109,7 +113,7 @@ jobs:
         bash nuitka-release.sh
 
 - job:
-  displayName: 'Windows develop'
+  displayName: 'Windows'
   timeoutInMinutes: 0
   pool: DevOps-Windows
 
@@ -117,14 +121,16 @@ jobs:
   - task: CmdLine@2
     inputs:
       script: |
-        git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Py2C
+        git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Nuitka-factory
       workingDirectory: '..'
 
   - task: CmdLine@2
     inputs:
       script: |
-        git clone --depth=1 -b develop https://github.com/Nuitka/Nuitka.git Nuitka-develop
+        git clone --depth=1 -b %NUITKA_BRANCH_NAME% https://github.com/Nuitka/Nuitka.git Nuitka-develop
       workingDirectory: '..'
+    env:
+      "NUITKA_BRANCH_NAME": "$(NUITKA_BRANCH_NAME)"
 
   - task: Cache@2
     inputs:
@@ -143,5 +149,5 @@ jobs:
         @echo on
         set PIPENV_CACHE_DIR=%CD%\..\pipenv_cache
         if not exist "%PIPENV_CACHE_DIR%" mkdir %PIPENV_CACHE_DIR%
-        python ..\Nuitka-develop\bin\nuitka --version
-        python ../Py2C/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=..\Nuitka-develop\bin\nuitka
+        python ../Nuitka-develop/bin/nuitka --version
+        python ../Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=..\Nuitka-develop\bin\nuitka
