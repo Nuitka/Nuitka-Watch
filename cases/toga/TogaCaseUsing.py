@@ -1,5 +1,6 @@
 # nuitka-project: --standalone
 import toga
+import sys
 
 def button_handler(widget):
     print("hello")
