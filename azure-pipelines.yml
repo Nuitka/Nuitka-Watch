@@ -36,11 +36,13 @@ jobs:
       - task: CmdLine@2
         inputs:
           script: |
-            echo "On branch watch branch $SOURCE_BRANCH for $NUITKA_BRANCH_NAME"
+            set -x
+            echo "On branch Nuitka-Watch branch $SOURCE_BRANCH for $NUITKA_BRANCH_NAME"
 
             # Azure doesn't really tell what git branch it is, make this known
             # in git for lookup
             git branch $SOURCE_BRANCH
+            git status
 
             export PIPENV_CACHE_DIR=$(pwd)/../pipenv_cache
             python3.11 ../Nuitka-develop/bin/nuitka --version
