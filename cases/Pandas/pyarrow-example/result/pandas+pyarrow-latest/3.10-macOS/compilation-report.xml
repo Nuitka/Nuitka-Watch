@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.1rc8" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.1.4" nuitka_commercial_version="not installed" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -14708,6 +14708,11 @@
       <module_usage name="posixpath" finding="absolute" line="461" />
     </module_usages>
   </module>
+  <module name="pyarrow._acero" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_acero.cpython-310-darwin.so" distribution="pyarrow">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="pyarrow._compute" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_compute.cpython-310-darwin.so" distribution="pyarrow">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -14764,6 +14769,11 @@
     <module_usages />
   </module>
   <module name="pyarrow._hdfsio" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_hdfsio.cpython-310-darwin.so" distribution="pyarrow">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="pyarrow._json" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_json.cpython-310-darwin.so" distribution="pyarrow">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -17104,6 +17114,7 @@
   <included_extension name="aggregations.so" dest_path="pandas/_libs/window/aggregations.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pandas/_libs/window/aggregations.cpython-310-darwin.so" package="pandas._libs.window" ignored="no" reason="used extension module" />
   <included_extension name="indexers.so" dest_path="pandas/_libs/window/indexers.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pandas/_libs/window/indexers.cpython-310-darwin.so" package="pandas._libs.window" ignored="no" reason="used extension module" />
   <included_extension name="writers.so" dest_path="pandas/_libs/writers.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pandas/_libs/writers.cpython-310-darwin.so" package="pandas._libs" ignored="no" reason="used extension module" />
+  <included_extension name="_acero.so" dest_path="pyarrow/_acero.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_acero.cpython-310-darwin.so" package="pyarrow" ignored="no" reason="used extension module" />
   <included_extension name="_compute.so" dest_path="pyarrow/_compute.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_compute.cpython-310-darwin.so" package="pyarrow" ignored="no" reason="used extension module" />
   <included_extension name="_dataset.so" dest_path="pyarrow/_dataset.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_dataset.cpython-310-darwin.so" package="pyarrow" ignored="no" reason="used extension module" />
   <included_extension name="_dataset_orc.so" dest_path="pyarrow/_dataset_orc.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_dataset_orc.cpython-310-darwin.so" package="pyarrow" ignored="no" reason="used extension module" />
@@ -17114,6 +17125,7 @@
   <included_extension name="_gcsfs.so" dest_path="pyarrow/_gcsfs.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_gcsfs.cpython-310-darwin.so" package="pyarrow" ignored="no" reason="used extension module" />
   <included_extension name="_hdfs.so" dest_path="pyarrow/_hdfs.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_hdfs.cpython-310-darwin.so" package="pyarrow" ignored="no" reason="used extension module" />
   <included_extension name="_hdfsio.so" dest_path="pyarrow/_hdfsio.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_hdfsio.cpython-310-darwin.so" package="pyarrow" ignored="no" reason="used extension module" />
+  <included_extension name="_json.so" dest_path="pyarrow/_json.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_json.cpython-310-darwin.so" package="pyarrow" ignored="no" reason="used extension module" />
   <included_extension name="_parquet.so" dest_path="pyarrow/_parquet.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_parquet.cpython-310-darwin.so" package="pyarrow" ignored="no" reason="used extension module" />
   <included_extension name="_s3fs.so" dest_path="pyarrow/_s3fs.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/_s3fs.cpython-310-darwin.so" package="pyarrow" ignored="no" reason="used extension module" />
   <included_extension name="lib.so" dest_path="pyarrow/lib.so" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/lib.cpython-310-darwin.so" package="pyarrow" ignored="no" reason="used extension module" />
@@ -17129,11 +17141,11 @@
   <included_dll name="libquadmath.0.dylib" dest_path="libquadmath.0.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/.dylibs/libquadmath.0.dylib" package="numpy.core" ignored="no" reason="Used by 'numpy/core/_multiarray_umath.so'" />
   <included_dll name="libopenblas64_.0.dylib" dest_path="libopenblas64_.0.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/.dylibs/libopenblas64_.0.dylib" package="numpy.core" ignored="no" reason="Used by 'numpy/core/_multiarray_umath.so'" />
   <included_dll name="libgcc_s.1.1.dylib" dest_path="libgcc_s.1.1.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/.dylibs/libgcc_s.1.1.dylib" package="numpy.core" ignored="no" reason="Used by 'numpy/core/_multiarray_umath.so'" />
-  <included_dll name="libarrow_acero.1400.dylib" dest_path="libarrow_acero.1400.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libarrow_acero.1400.dylib" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_compute.so'" />
-  <included_dll name="libarrow_python.dylib" dest_path="libarrow_python.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libarrow_python.dylib" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_compute.so'" />
-  <included_dll name="libparquet.1400.dylib" dest_path="libparquet.1400.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libparquet.1400.dylib" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_compute.so'" />
-  <included_dll name="libarrow.1400.dylib" dest_path="libarrow.1400.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libarrow.1400.dylib" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_compute.so'" />
-  <included_dll name="libarrow_dataset.1400.dylib" dest_path="libarrow_dataset.1400.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libarrow_dataset.1400.dylib" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_compute.so'" />
+  <included_dll name="libarrow_acero.1400.dylib" dest_path="libarrow_acero.1400.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libarrow_acero.1400.dylib" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" />
+  <included_dll name="libarrow_python.dylib" dest_path="libarrow_python.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libarrow_python.dylib" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" />
+  <included_dll name="libparquet.1400.dylib" dest_path="libparquet.1400.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libparquet.1400.dylib" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" />
+  <included_dll name="libarrow.1400.dylib" dest_path="libarrow.1400.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libarrow.1400.dylib" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" />
+  <included_dll name="libarrow_dataset.1400.dylib" dest_path="libarrow_dataset.1400.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/pyarrow/libarrow_dataset.1400.dylib" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" />
   <command_line>
     <option value="--standalone" />
     <option value="--noinclude-default-mode=error" />
