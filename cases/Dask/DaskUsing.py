@@ -1,4 +1,6 @@
 # nuitka-project: --standalone
+# nuitka-project: --noinclude-dask-mode=allow
+# nuitka-project: --noinclude-numba-mode=allow
 
 import dask.array as da
 import numpy as np
