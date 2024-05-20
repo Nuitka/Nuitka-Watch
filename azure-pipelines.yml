@@ -12,12 +12,12 @@ jobs:
     steps:
       - task: CmdLine@2
         inputs:
-          script: "git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Nuitka-factory"
+          script: "git clone --depth=1 -b factory https://github.com/KRRT7/Nuitka-Watch.git Nuitka-factory"
           workingDirectory: ".."
 
       - task: CmdLine@2
         inputs:
-          script: "git clone --depth=1 -b $NUITKA_BRANCH_NAME https://github.com/Nuitka/Nuitka.git Nuitka-develop"
+          script: "git clone --depth=1 -b $NUITKA_BRANCH_NAME https://github.com/KRRT7/Nuitka-Watch.git Nuitka-develop"
           workingDirectory: ".."
         env:
           "NUITKA_BRANCH_NAME": "$(NUITKA_BRANCH_NAME)"
@@ -101,12 +101,12 @@ jobs:
 
       - task: CmdLine@2
         inputs:
-          script: "git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Nuitka-factory"
+          script: "git clone --depth=1 -b factory https://github.com/KRRT7/Nuitka-Watch.git Nuitka-factory"
           workingDirectory: ".."
 
       - task: CmdLine@2
         inputs:
-          script: "git clone --depth=1 -b $NUITKA_BRANCH_NAME https://github.com/Nuitka/Nuitka.git Nuitka-develop"
+          script: "git clone --depth=1 -b $NUITKA_BRANCH_NAME https://github.com/KRRT7/Nuitka-Watch.git Nuitka-develop"
           workingDirectory: ".."
         env:
           "NUITKA_BRANCH_NAME": "$(NUITKA_BRANCH_NAME)"
@@ -147,13 +147,13 @@ jobs:
       - task: CmdLine@2
         inputs:
           script: |
-            git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Nuitka-factory
+            git clone --depth=1 -b factory https://github.com/KRRT7/Nuitka-Watch.git Nuitka-factory
           workingDirectory: ".."
 
       - task: CmdLine@2
         inputs:
           script: |
-            git clone --depth=1 -b %NUITKA_BRANCH_NAME% https://github.com/Nuitka/Nuitka.git Nuitka-develop
+            git clone --depth=1 -b %NUITKA_BRANCH_NAME% https://github.com/KRRT7/Nuitka-Watch.git Nuitka-develop
           workingDirectory: ".."
         env:
           "NUITKA_BRANCH_NAME": "$(NUITKA_BRANCH_NAME)"
