@@ -62,6 +62,10 @@ jobs:
             else
               PR_ARG=""
             fi
+
+            Xvfb :100 &
+            export DISPLAY=:100
+
             python3.11 ../Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka $PR_ARG
         env:
           "GITHUB_TOKEN": "$(NOBODY_BOT_IDENTITY)"
