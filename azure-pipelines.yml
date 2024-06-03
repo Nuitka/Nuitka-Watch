@@ -17,7 +17,8 @@ jobs:
 
       - task: CmdLine@2
         inputs:
-          script: "git clone --depth=1 -b $NUITKA_BRANCH_NAME https://github.com/Nuitka/Nuitka.git Nuitka-develop"
+          script: |
+            git clone --depth=1 -b $NUITKA_BRANCH_NAME https://github.com/Nuitka/Nuitka.git Nuitka-develop"
           workingDirectory: ".."
         env:
           "NUITKA_BRANCH_NAME": "$(NUITKA_BRANCH_NAME)"
@@ -31,7 +32,8 @@ jobs:
 
       - task: CmdLine@2
         inputs:
-          script: "python3.11 -m pip install -r requirements.txt"
+          script: |
+            python3.11 -m pip install -r requirements.txt
 
       - task: CmdLine@2
         inputs:
