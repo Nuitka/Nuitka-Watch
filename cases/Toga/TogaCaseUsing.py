@@ -1,4 +1,8 @@
 # nuitka-project: --standalone
+
+# Requires GTK packages on the system:
+# apt-get install --no-install-recommends libgirepository1.0-dev libcairo
+
 import toga
 import sys
 
