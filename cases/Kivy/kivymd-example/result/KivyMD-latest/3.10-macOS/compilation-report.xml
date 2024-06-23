@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.3.3" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.3.4" nuitka_commercial_version="not installed" completion="yes">
   <module name="PIL" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/PIL/__init__.py" distribution="Pillow">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -4851,6 +4851,23 @@
       <module_usage name="kivy.setupconfig" finding="absolute" line="25" />
     </module_usages>
   </module>
+  <module name="kivy.core.clipboard._clipboard_sdl2" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/core/clipboard/_clipboard_sdl2.cpython-310-darwin.so" distribution="Kivy">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="kivy.core.clipboard.clipboard_sdl2" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/core/clipboard/clipboard_sdl2.py" distribution="Kivy">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="kivy.utils" finding="absolute" line="7" />
+      <module_usage name="kivy.core.clipboard" finding="absolute" line="8" />
+      <module_usage name="kivy.core.clipboard.ClipboardBase" finding="not-found" line="8" />
+      <module_usage name="kivy.core.clipboard._clipboard_sdl2" finding="absolute" line="14" />
+      <module_usage name="kivy.core" finding="absolute" line="17" />
+      <module_usage name="kivy.core.handle_win_lib_import_error" finding="not-found" line="17" />
+    </module_usages>
+  </module>
   <module name="kivy.core.gl" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/core/gl/__init__.py" distribution="Kivy">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -5282,6 +5299,11 @@
     <module_usages />
   </module>
   <module name="kivy.graphics.cgl_backend.cgl_glew" kind="PythonExtensionModule" usage="plugin:kivy" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/graphics/cgl_backend/cgl_glew.cpython-310-darwin.so" distribution="Kivy">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="kivy.graphics.cgl_backend.cgl_sdl2" kind="PythonExtensionModule" usage="plugin:kivy" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/graphics/cgl_backend/cgl_sdl2.cpython-310-darwin.so" distribution="Kivy">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -9523,6 +9545,7 @@
     </module_usages>
   </module>
   <module name="opcode" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.10/opcode.py">
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="python313_or_higher" tags_used="python313_or_higher" result="false" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -10980,6 +11003,7 @@
   <included_extension name="_clock.so" dest_path="kivy/_clock.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/_clock.cpython-310-darwin.so" package="kivy" ignored="no" reason="used extension module" />
   <included_extension name="_event.so" dest_path="kivy/_event.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/_event.cpython-310-darwin.so" package="kivy" ignored="no" reason="used extension module" />
   <included_extension name="_metrics.so" dest_path="kivy/_metrics.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/_metrics.cpython-310-darwin.so" package="kivy" ignored="no" reason="used extension module" />
+  <included_extension name="_clipboard_sdl2.so" dest_path="kivy/core/clipboard/_clipboard_sdl2.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/core/clipboard/_clipboard_sdl2.cpython-310-darwin.so" package="kivy.core.clipboard" ignored="no" reason="used extension module" />
   <included_extension name="_img_sdl2.so" dest_path="kivy/core/image/_img_sdl2.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/core/image/_img_sdl2.cpython-310-darwin.so" package="kivy.core.image" ignored="no" reason="used extension module" />
   <included_extension name="img_imageio.so" dest_path="kivy/core/image/img_imageio.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/core/image/img_imageio.cpython-310-darwin.so" package="kivy.core.image" ignored="no" reason="used extension module" />
   <included_extension name="_text_sdl2.so" dest_path="kivy/core/text/_text_sdl2.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/core/text/_text_sdl2.cpython-310-darwin.so" package="kivy.core.text" ignored="no" reason="used extension module" />
@@ -10991,6 +11015,7 @@
   <included_extension name="cgl.so" dest_path="kivy/graphics/cgl.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/graphics/cgl.cpython-310-darwin.so" package="kivy.graphics" ignored="no" reason="used extension module" />
   <included_extension name="cgl_gl.so" dest_path="kivy/graphics/cgl_backend/cgl_gl.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/graphics/cgl_backend/cgl_gl.cpython-310-darwin.so" package="kivy.graphics.cgl_backend" ignored="no" reason="used extension module" />
   <included_extension name="cgl_glew.so" dest_path="kivy/graphics/cgl_backend/cgl_glew.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/graphics/cgl_backend/cgl_glew.cpython-310-darwin.so" package="kivy.graphics.cgl_backend" ignored="no" reason="used extension module" />
+  <included_extension name="cgl_sdl2.so" dest_path="kivy/graphics/cgl_backend/cgl_sdl2.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/graphics/cgl_backend/cgl_sdl2.cpython-310-darwin.so" package="kivy.graphics.cgl_backend" ignored="no" reason="used extension module" />
   <included_extension name="compiler.so" dest_path="kivy/graphics/compiler.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/graphics/compiler.cpython-310-darwin.so" package="kivy.graphics" ignored="no" reason="used extension module" />
   <included_extension name="context.so" dest_path="kivy/graphics/context.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/graphics/context.cpython-310-darwin.so" package="kivy.graphics" ignored="no" reason="used extension module" />
   <included_extension name="context_instructions.so" dest_path="kivy/graphics/context_instructions.so" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/graphics/context_instructions.cpython-310-darwin.so" package="kivy.graphics" ignored="no" reason="used extension module" />
@@ -11037,10 +11062,10 @@
   <included_dll name="libwebp.7.dylib" dest_path="libwebp.7.dylib" source_path="${sys.prefix}/lib/python3.10/site-packages/PIL/.dylibs/libwebp.7.dylib" package="PIL" ignored="no" reason="Used by 'PIL/_webp.so'" />
   <included_dll name="libssl.1.1.dylib" dest_path="libssl.1.1.dylib" source_path="${sys.real_prefix}/lib/libssl.1.1.dylib" package="" ignored="no" reason="Used by '_hashlib.so'" />
   <included_dll name="libcrypto.1.1.dylib" dest_path="libcrypto.1.1.dylib" source_path="${sys.real_prefix}/lib/libcrypto.1.1.dylib" package="" ignored="no" reason="Used by '_hashlib.so'" />
-  <included_dll name="SDL2" dest_path="SDL2" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/.dylibs/SDL2" package="kivy.core.image" ignored="no" reason="Used by 'kivy/core/image/_img_sdl2.so'" />
-  <included_dll name="SDL2_image" dest_path="SDL2_image" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/.dylibs/SDL2_image" package="kivy.core.image" ignored="no" reason="Used by 'kivy/core/image/_img_sdl2.so'" />
-  <included_dll name="SDL2_ttf" dest_path="SDL2_ttf" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/.dylibs/SDL2_ttf" package="kivy.core.image" ignored="no" reason="Used by 'kivy/core/image/_img_sdl2.so'" />
-  <included_dll name="SDL2_mixer" dest_path="SDL2_mixer" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/.dylibs/SDL2_mixer" package="kivy.core.image" ignored="no" reason="Used by 'kivy/core/image/_img_sdl2.so'" />
+  <included_dll name="SDL2" dest_path="SDL2" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/.dylibs/SDL2" package="kivy.core.clipboard" ignored="no" reason="Used by 'kivy/core/clipboard/_clipboard_sdl2.so'" />
+  <included_dll name="SDL2_image" dest_path="SDL2_image" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/.dylibs/SDL2_image" package="kivy.core.clipboard" ignored="no" reason="Used by 'kivy/core/clipboard/_clipboard_sdl2.so'" />
+  <included_dll name="SDL2_ttf" dest_path="SDL2_ttf" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/.dylibs/SDL2_ttf" package="kivy.core.clipboard" ignored="no" reason="Used by 'kivy/core/clipboard/_clipboard_sdl2.so'" />
+  <included_dll name="SDL2_mixer" dest_path="SDL2_mixer" source_path="${sys.prefix}/lib/python3.10/site-packages/kivy/.dylibs/SDL2_mixer" package="kivy.core.clipboard" ignored="no" reason="Used by 'kivy/core/clipboard/_clipboard_sdl2.so'" />
   <included_dll name="libncursesw.5.dylib" dest_path="libncursesw.5.dylib" source_path="${sys.real_prefix}/lib/libncursesw.5.dylib" package="" ignored="no" reason="Used by 'readline.so'" />
   <command_line>
     <option value="--standalone" />
