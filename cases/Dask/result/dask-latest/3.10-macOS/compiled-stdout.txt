@@ -1,36 +1,36 @@
 dask.array<random_sample, shape=(10000, 10000), dtype=float64, chunksize=(1000, 1000), chunktype=numpy.ndarray>
 dask.array<mean_agg-aggregate, shape=(5000,), dtype=float64, chunksize=(500,), chunktype=numpy.ndarray>
 <xarray.DataArray (time: 4, space: 3)> Size: 96B
-array([[0.93888647, 0.05742664, 0.36726463],
-       [0.11559699, 0.1252895 , 0.64934304],
-       [0.14147768, 0.71873308, 0.89375879],
-       [0.30942682, 0.45892031, 0.7490992 ]])
+array([[0.51623592, 0.96087525, 0.59753543],
+       [0.68119775, 0.05548829, 0.67519709],
+       [0.93013504, 0.32105138, 0.11513343],
+       [0.19933531, 0.55000203, 0.18093498]])
 Coordinates:
   * time     (time) datetime64[ns] 32B 2000-01-01 2000-01-02 ... 2000-01-04
   * space    (space) <U2 24B 'IA' 'IL' 'IN'
                         name    id         x         y
 timestamp                                             
-2000-01-01 00:00:00    Wendy   947  0.821900 -0.185337
-2000-01-01 00:00:01      Ray   995 -0.465956 -0.876435
-2000-01-01 00:00:02    Quinn  1095 -0.050686  0.233471
-2000-01-01 00:00:03    Wendy  1056  0.547727 -0.071304
-2000-01-01 00:00:04  Michael  1015 -0.906943 -0.884655
+2000-01-01 00:00:00    Frank  1044 -0.861543 -0.966221
+2000-01-01 00:00:01  Norbert  1004  0.237168 -0.898253
+2000-01-01 00:00:02  Michael   950  0.688004  0.207043
+2000-01-01 00:00:03    Sarah  1017 -0.264222 -0.035673
+2000-01-01 00:00:04    Wendy   987  0.126365 -0.105007
 name    string[pyarrow]
 id                int64
 x               float64
 y               float64
 dtype: object
-                      name    id     x     y
-timestamp                                   
-2000-01-01 00:00:00  Wendy   947  0.82 -0.19
-2000-01-01 00:00:01    Ray   995 -0.47 -0.88
-2000-01-01 00:00:02  Quinn  1095 -0.05  0.23
+                        name    id     x     y
+timestamp                                     
+2000-01-01 00:00:00    Frank  1044 -0.86 -0.97
+2000-01-01 00:00:01  Norbert  1004  0.24 -0.90
+2000-01-01 00:00:02  Michael   950  0.69  0.21
 Dask Series Structure:
 npartitions=1
     float64
         ...
 Dask Name: getitem, 8 expressions
-Expr=(((Filter(frame=ArrowStringConversion(frame=FromMap(667c412)), predicate=ArrowStringConversion(frame=FromMap(667c412))['y'] > 0))[['name', 'x']]).std(ddof=1, numeric_only=False, split_out=None, observed=False))['x']
+Expr=(((Filter(frame=ArrowStringConversion(frame=FromMap(677c290)), predicate=ArrowStringConversion(frame=FromMap(677c290))['y'] > 0))[['name', 'x']]).std(ddof=1, numeric_only=False, split_out=None, observed=False))['x']
 name
 Bob         0.58
 Dan         0.58
@@ -46,35 +46,35 @@ Xavier      0.58
 Name: x, Length: 26, dtype: float64
                x    y
 name                 
-Kevin      85.45  1.0
-Sarah    -202.88  1.0
-Patricia -217.81  1.0
-Alice    -217.99  1.0
-Ingrid     84.01  1.0
+Patricia -136.39  1.0
+Ingrid     37.96  1.0
+Alice     -50.64  1.0
+Kevin     359.92  1.0
+Sarah     205.61  1.0
 ...          ...  ...
-Oliver   -170.20  1.0
-Hannah    167.27  1.0
-Ray      -136.04  1.0
-Xavier   -359.82  1.0
-Ursula     62.84  1.0
+Ray       170.57  1.0
+Jerry    -396.12  1.0
+Ursula    132.12  1.0
+Quinn     206.97  1.0
+Oliver     36.28  1.0
 
 [26 rows x 2 columns]
                         name    id  ...  x_aggregated  y_aggregated
 timestamp                           ...                            
-2000-01-01 00:00:00    Wendy   947  ...        118.49           1.0
-2000-01-01 00:00:01      Ray   995  ...       -136.04           1.0
-2000-01-01 00:00:02    Quinn  1095  ...         13.47           1.0
-2000-01-01 00:00:03    Wendy  1056  ...        118.49           1.0
-2000-01-01 00:00:04  Michael  1015  ...        -74.14           1.0
+2000-01-01 00:00:00    Frank  1044  ...        -83.40           1.0
+2000-01-01 00:00:01  Norbert  1004  ...       -122.57           1.0
+2000-01-01 00:00:02  Michael   950  ...       -140.96           1.0
+2000-01-01 00:00:03    Sarah  1017  ...        205.61           1.0
+2000-01-01 00:00:04    Wendy   987  ...        214.26           1.0
 
 [5 rows x 6 columns]
                             x         y
 timestamp                              
-2000-01-01 00:00:00  2.79e-03 -1.65e-02
-2000-01-01 01:00:00  9.43e-03  5.25e-03
-2000-01-01 02:00:00  3.90e-03  7.91e-03
-2000-01-01 03:00:00 -1.14e-03  3.55e-04
-2000-01-01 04:00:00 -1.59e-02 -7.91e-03
+2000-01-01 00:00:00 -7.13e-03 -4.83e-03
+2000-01-01 01:00:00  9.24e-03  3.11e-03
+2000-01-01 02:00:00  7.75e-04 -1.33e-02
+2000-01-01 03:00:00  1.22e-02 -3.18e-04
+2000-01-01 04:00:00  1.39e-02  6.42e-04
 [[-1.06377997  0.67640868  1.06935647 -0.21758002  0.46021477 -0.39916689
   -0.07918751  1.20938491 -0.78531472 -0.17218611 -1.08535744 -0.99311895
    0.30693511  0.06405769 -1.0542328  -0.52749607 -0.0741832  -0.35562842
@@ -102,11 +102,11 @@ GridSearchCV(cv=3,
                          'kernel': ['rbf', 'poly', 'sigmoid'],
                          'shrinking': [True, False]})
    mean_fit_time  std_fit_time  ...  std_test_score  rank_test_score
-0           0.11      7.70e-03  ...        7.04e-04               41
-1           0.10      6.02e-03  ...        7.04e-04               41
-2           0.07      1.76e-03  ...        7.04e-04               41
-3           0.07      8.30e-03  ...        7.04e-04               41
-4           0.13      1.94e-03  ...        7.04e-04               41
+0           0.11      1.64e-03  ...        7.04e-04               41
+1           0.11      1.07e-02  ...        7.04e-04               41
+2           0.07      1.30e-02  ...        7.04e-04               41
+3           0.07      3.99e-03  ...        7.04e-04               41
+4           0.13      1.23e-02  ...        7.04e-04               41
 
 [5 rows x 14 columns]
 [0 1 1 1 0]
