@@ -419,6 +419,11 @@
       <module_usage name="pydoc" finding="absolute" line="102" />
     </module_usages>
   </module>
+  <module name="_socket" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_socket.pyd">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="_strptime" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\_strptime.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -486,22 +491,19 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="sys" finding="absolute" line="1" />
-      <module_usage name="sysconfig" finding="absolute" line="2" />
-      <module_usage name="os" finding="absolute" line="3" />
-      <module_usage name="importlib.machinery" finding="absolute" line="4" />
-      <module_usage name="importlib._bootstrap" finding="absolute" line="5" />
+      <module_usage name="sys" finding="absolute" line="2" />
+      <module_usage name="re" finding="absolute" line="3" />
+      <module_usage name="glob" finding="absolute" line="4" />
+      <module_usage name="platform" finding="absolute" line="5" />
       <module_usage name="importlib" finding="absolute" line="6" />
-      <module_usage name="importlib.machinery" finding="absolute" line="7" />
-      <module_usage name="inspect" finding="absolute" line="8" />
-      <module_usage name="re" finding="absolute" line="9" />
-      <module_usage name="ntpath" finding="absolute" line="21" />
-      <module_usage name="ntpath" finding="absolute" line="33" />
-      <module_usage name="ntpath" finding="absolute" line="66" />
-      <module_usage name="ntpath" finding="absolute" line="78" />
-      <module_usage name="ntpath" finding="absolute" line="103" />
-      <module_usage name="ntpath" finding="absolute" line="120" />
-      <module_usage name="ntpath" finding="absolute" line="122" />
+      <module_usage name="importlib.abc" finding="absolute" line="7" />
+      <module_usage name="importlib.machinery" finding="absolute" line="8" />
+      <module_usage name="types" finding="absolute" line="9" />
+      <module_usage name="ntpath" finding="absolute" line="13" />
+      <module_usage name="ntpath" finding="absolute" line="15" />
+      <module_usage name="ntpath" finding="absolute" line="30" />
+      <module_usage name="ntpath" finding="absolute" line="32" />
+      <module_usage name="ntpath" finding="absolute" line="75" />
     </module_usages>
   </module>
   <module name="ast" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\ast.py">
@@ -3269,6 +3271,22 @@
       <module_usage name="sys" finding="absolute" line="250" />
     </module_usages>
   </module>
+  <module name="socket" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\socket.py">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="_socket" finding="absolute" line="51" />
+      <module_usage name="_socket" finding="absolute" line="52" />
+      <module_usage name="os" finding="absolute" line="54" />
+      <module_usage name="sys" finding="absolute" line="54" />
+      <module_usage name="io" finding="absolute" line="54" />
+      <module_usage name="selectors" finding="absolute" line="54" />
+      <module_usage name="enum" finding="absolute" line="55" />
+      <module_usage name="errno" finding="absolute" line="58" />
+      <module_usage name="array" finding="absolute" line="549" />
+      <module_usage name="array" finding="absolute" line="561" />
+    </module_usages>
+  </module>
   <module name="socketserver" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\socketserver.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -3784,20 +3802,20 @@
     <memory_usage name="before_running_scons" value="volatile" />
   </performance>
   <data_file name="testing.eml" source="~\repos\Nuitka-Watch\cases\Aspose\testing.eml" size="2613" reason="specified data file 'C:\Users\kayha\repos\Nuitka-Watch\cases\Aspose/testing.eml=testing.eml' on command line" tags="user,copy" />
-  <data_file name="aspose\email.cp310-win_amd64.pyd" source="${sys.prefix}\lib\site-packages\aspose\email.cp310-win_amd64.pyd" size="8049152" reason="package data for 'aspose'" tags="config,copy" />
-  <data_file name="aspose\pycore.cp310-win_amd64.pyd" source="${sys.prefix}\lib\site-packages\aspose\pycore.cp310-win_amd64.pyd" size="118272" reason="package data for 'aspose'" tags="config,copy" />
-  <data_file name="aspose\pygc.cp310-win_amd64.pyd" source="${sys.prefix}\lib\site-packages\aspose\pygc.cp310-win_amd64.pyd" size="106496" reason="package data for 'aspose'" tags="config,copy" />
-  <data_file name="aspose\pyreflection.cp310-win_amd64.pyd" source="${sys.prefix}\lib\site-packages\aspose\pyreflection.cp310-win_amd64.pyd" size="317952" reason="package data for 'aspose'" tags="config,copy" />
-  <data_file name="aspose\assemblies\email\Aspose.Email.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\Aspose.Email.dll" size="8574264" reason="package data for 'aspose'" tags="config,copy" />
-  <data_file name="aspose\assemblies\email\System.Formats.Asn1.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\System.Formats.Asn1.dll" size="85632" reason="package data for 'aspose'" tags="config,copy" />
+  <data_file name="aspose\email.cp310-win_amd64.pyd" source="${sys.prefix}\lib\site-packages\aspose\email.cp310-win_amd64.pyd" size="8235520" reason="package data for 'aspose'" tags="config,copy" />
+  <data_file name="aspose\pycore.cp310-win_amd64.pyd" source="${sys.prefix}\lib\site-packages\aspose\pycore.cp310-win_amd64.pyd" size="118784" reason="package data for 'aspose'" tags="config,copy" />
+  <data_file name="aspose\pygc.cp310-win_amd64.pyd" source="${sys.prefix}\lib\site-packages\aspose\pygc.cp310-win_amd64.pyd" size="107008" reason="package data for 'aspose'" tags="config,copy" />
+  <data_file name="aspose\pyreflection.cp310-win_amd64.pyd" source="${sys.prefix}\lib\site-packages\aspose\pyreflection.cp310-win_amd64.pyd" size="321024" reason="package data for 'aspose'" tags="config,copy" />
+  <data_file name="aspose\assemblies\email\Aspose.Email.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\Aspose.Email.dll" size="8641336" reason="package data for 'aspose'" tags="config,copy" />
+  <data_file name="aspose\assemblies\email\System.Formats.Asn1.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\System.Formats.Asn1.dll" size="103584" reason="package data for 'aspose'" tags="config,copy" />
   <data_file name="aspose\assemblies\email\System.Runtime.CompilerServices.Unsafe.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\System.Runtime.CompilerServices.Unsafe.dll" size="18024" reason="package data for 'aspose'" tags="config,copy" />
   <data_file name="aspose\assemblies\email\System.Security.Cryptography.Cng.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\System.Security.Cryptography.Cng.dll" size="200072" reason="package data for 'aspose'" tags="config,copy" />
-  <data_file name="aspose\assemblies\email\System.Security.Cryptography.Pkcs.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\System.Security.Cryptography.Pkcs.dll" size="262792" reason="package data for 'aspose'" tags="config,copy" />
-  <data_file name="aspose\assemblies\email\System.Text.Encoding.CodePages.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\System.Text.Encoding.CodePages.dll" size="760976" reason="package data for 'aspose'" tags="config,copy" />
-  <data_file name="aspose\assemblies\email\WrpInterop.Aspose.Email.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\WrpInterop.Aspose.Email.dll" size="2421760" reason="package data for 'aspose'" tags="config,copy" />
+  <data_file name="aspose\assemblies\email\System.Security.Cryptography.Pkcs.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\System.Security.Cryptography.Pkcs.dll" size="266000" reason="package data for 'aspose'" tags="config,copy" />
+  <data_file name="aspose\assemblies\email\System.Text.Encoding.CodePages.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\System.Text.Encoding.CodePages.dll" size="762648" reason="package data for 'aspose'" tags="config,copy" />
+  <data_file name="aspose\assemblies\email\WrpInterop.Aspose.Email.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\email\WrpInterop.Aspose.Email.dll" size="2457600" reason="package data for 'aspose'" tags="config,copy" />
   <data_file name="aspose\assemblies\pycore\WrpInterop.Aspose.PyCore.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\pycore\WrpInterop.Aspose.PyCore.dll" size="93696" reason="package data for 'aspose'" tags="config,copy" />
-  <data_file name="aspose\assemblies\pygc\Aspose.PyGC.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\pygc\Aspose.PyGC.dll" size="97280" reason="package data for 'aspose'" tags="config,copy" />
-  <data_file name="aspose\assemblies\pyreflection\WrpInterop.Aspose.PyReflection.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\pyreflection\WrpInterop.Aspose.PyReflection.dll" size="122368" reason="package data for 'aspose'" tags="config,copy" />
+  <data_file name="aspose\assemblies\pygc\Aspose.PyGC.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\pygc\Aspose.PyGC.dll" size="97792" reason="package data for 'aspose'" tags="config,copy" />
+  <data_file name="aspose\assemblies\pyreflection\WrpInterop.Aspose.PyReflection.dll" source="${sys.prefix}\lib\site-packages\aspose\assemblies\pyreflection\WrpInterop.Aspose.PyReflection.dll" size="122880" reason="package data for 'aspose'" tags="config,copy" />
   <data_file name="aspose\netcore\netcore3.1\Microsoft.CSharp.dll" source="${sys.prefix}\lib\site-packages\aspose\netcore\netcore3.1\Microsoft.CSharp.dll" size="798624" reason="package data for 'aspose'" tags="config,copy" />
   <data_file name="aspose\netcore\netcore3.1\Microsoft.DiaSymReader.Native.amd64.dll" source="${sys.prefix}\lib\site-packages\aspose\netcore\netcore3.1\Microsoft.DiaSymReader.Native.amd64.dll" size="1495800" reason="package data for 'aspose'" tags="config,copy" />
   <data_file name="aspose\netcore\netcore3.1\Microsoft.VisualBasic.Core.dll" source="${sys.prefix}\lib\site-packages\aspose\netcore\netcore3.1\Microsoft.VisualBasic.Core.dll" size="1210784" reason="package data for 'aspose'" tags="config,copy" />
@@ -4022,6 +4040,7 @@
   <included_extension name="_decimal.pyd" dest_path="_decimal.pyd" source_path="${sys.real_prefix}\DLLs\_decimal.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_hashlib.pyd" dest_path="_hashlib.pyd" source_path="${sys.real_prefix}\DLLs\_hashlib.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_lzma.pyd" dest_path="_lzma.pyd" source_path="${sys.real_prefix}\DLLs\_lzma.pyd" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_socket.pyd" dest_path="_socket.pyd" source_path="${sys.real_prefix}\DLLs\_socket.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="select.pyd" dest_path="select.pyd" source_path="${sys.real_prefix}\DLLs\select.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="unicodedata.pyd" dest_path="unicodedata.pyd" source_path="${sys.real_prefix}\DLLs\unicodedata.pyd" package="" ignored="no" reason="used extension module" />
   <included_dll name="python310.dll" dest_path="python310.dll" source_path="${sys.real_prefix}\python310.dll" package="" ignored="no" reason="Used by 'AsposeUsing.exe'" />
@@ -4034,7 +4053,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=ea5445563058cf7bd9c99c75457d6215" />
+    <option value="--report-user-provided=pipenv_hash=2fb11870552453ee048a37f6294b7662" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -4056,7 +4075,7 @@
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
-    <distribution name="Aspose.Email-for-Python-via-NET" version="24.1" installer="pip" />
+    <distribution name="Aspose.Email-for-Python-via-NET" version="24.6" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}\Scripts\python.EXE" python_flavor="CPython Official" python_version="3.10.11" os_name="Windows" os_release="11" arch_name="x86_64">
     <search_path>
@@ -4070,7 +4089,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>ea5445563058cf7bd9c99c75457d6215</pipenv_hash>
+    <pipenv_hash>2fb11870552453ee048a37f6294b7662</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}\AsposeUsing.dist\AsposeUsing.exe" />
 </nuitka-compilation-report>
