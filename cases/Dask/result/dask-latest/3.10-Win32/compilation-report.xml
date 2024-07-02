@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.3.9" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.3.10" nuitka_commercial_version="not installed" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -492,7 +492,7 @@
       <module_usage name="sys" finding="absolute" line="11" />
       <module_usage name="os" finding="absolute" line="36" />
       <module_usage name="ntpath" finding="absolute" line="40" />
-      <module_usage name="pydoc" finding="absolute" line="102" />
+      <module_usage name="pydoc" finding="excluded" line="102" exclusion_reason="according to yaml 'no-auto-follow' configuration of '_sitebuiltins' for 'pydoc'" />
     </module_usages>
   </module>
   <module name="_socket" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_socket.pyd">
@@ -32611,7 +32611,7 @@
     </module_usages>
   </module>
   <module name="scipy._distributor_init" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\scipy\_distributor_init.py" distribution="scipy">
-    <plugin-influence name="anti-bloat" influence="condition-used" condition="win32 and version(&quot;scipy&quot;) &gt;= (1, 9, 2)" tags_used="win32,version" result="true" />
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="win32 and (1,14) &gt; version(&quot;scipy&quot;) &gt;= (1,9,2)" tags_used="win32,version" result="true" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
