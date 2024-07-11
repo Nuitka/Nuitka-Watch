@@ -18,4 +18,4 @@ else
     NUITKA_WATCH="../Nuitka-factory"
 fi
 
-PYTHONPATH=$NUITKA_WATCH python3 $NUITKA_WATCH/nuitka/tools/watch/AutoStage.py
+PYTHONPATH=$NUITKA_WATCH python3 $NUITKA_WATCH/nuitka/tools/watch/AutoStage.py $@
