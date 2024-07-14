@@ -68,7 +68,7 @@ jobs:
             Xvfb :100 &
             export DISPLAY=:100
 
-            python3.11 ../Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka $PR_ARG
+            python3.11 ../Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka $PR_ARG --jobs=-2
         env:
           "GITHUB_TOKEN": "$(NOBODY_BOT_IDENTITY)"
           "SOURCE_BRANCH": "$(Build.SourceBranchName)"
@@ -143,7 +143,7 @@ jobs:
             export PIPENV_CACHE_DIR=$(pwd)/../pipenv_cache
             export PATH=/Library/Frameworks/Python.framework/Versions/3.10/bin:$PATH
             python3.10 ../Nuitka-develop/bin/nuitka --version
-            bash nuitka-release.sh
+            bash nuitka-release.sh --jobs=-2
 
   - job:
     displayName: "Windows"
@@ -183,4 +183,4 @@ jobs:
             set PIPENV_CACHE_DIR=%CD%\..\pipenv_cache
             if not exist "%PIPENV_CACHE_DIR%" mkdir %PIPENV_CACHE_DIR%
             python ../Nuitka-develop/bin/nuitka --version
-            python ../Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=..\Nuitka-develop\bin\nuitka
+            python ../Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=..\Nuitka-develop\bin\nuitka --jobs=-2
