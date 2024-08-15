@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.2.2" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.4.3" nuitka_commercial_version="not installed" completion="yes">
   <module name="Unit3" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="~/repos/Nuitka-Watch/cases/DelphiFMX/Unit3.py">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="21" merged_total="246" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="33" />
     <distribution-usages>
       <distribution-usage name="delphifmx" />
     </distribution-usages>
@@ -18,8 +18,8 @@
     <module_usages />
   </module>
   <module name="__main__" kind="PythonMainModule" usage="root_module" reason="Root module" source_path="~/repos/Nuitka-Watch/cases/DelphiFMX/DelphiFMXTest.py">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="2" merged_total="5" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
     <distribution-usages>
       <distribution-usage name="delphifmx" />
     </distribution-usages>
@@ -138,7 +138,6 @@
       <module_usage name="encodings.mac_turkish" finding="absolute" line="1" />
       <module_usage name="encodings.palmos" finding="absolute" line="1" />
       <module_usage name="encodings.ptcp154" finding="absolute" line="1" />
-      <module_usage name="encodings.punycode" finding="absolute" line="1" />
       <module_usage name="encodings.quopri_codec" finding="absolute" line="1" />
       <module_usage name="encodings.raw_unicode_escape" finding="absolute" line="1" />
       <module_usage name="encodings.shift_jis" finding="absolute" line="1" />
@@ -227,6 +226,7 @@
       <module_usage name="encodings.bz2_codec" finding="absolute" line="1" />
       <module_usage name="encodings.hex_codec" finding="absolute" line="1" />
       <module_usage name="encodings.idna" finding="absolute" line="1" />
+      <module_usage name="encodings.punycode" finding="absolute" line="1" />
       <module_usage name="encodings.rot_13" finding="absolute" line="1" />
       <module_usage name="fcntl" finding="absolute" line="1" />
       <module_usage name="filecmp" finding="absolute" line="1" />
@@ -454,9 +454,6 @@
       <module_usage name="posixpath" finding="absolute" line="46" />
       <module_usage name="contextlib" finding="absolute" line="61" />
       <module_usage name="tempfile" finding="absolute" line="63" />
-      <module_usage name="sys" finding="absolute" line="431" />
-      <module_usage name="sys" finding="absolute" line="432" />
-      <module_usage name="sys" finding="absolute" line="433" />
     </module_usages>
   </module>
   <module name="_pickle" kind="PythonExtensionModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_pickle.cpython-310-darwin.so">
@@ -620,14 +617,7 @@
       <module_usage name="shutil" finding="absolute" line="169" />
       <module_usage name="textwrap" finding="absolute" line="646" />
       <module_usage name="textwrap" finding="absolute" line="651" />
-      <module_usage name="sys" finding="absolute" line="1125" />
-      <module_usage name="sys" finding="absolute" line="1262" />
       <module_usage name="warnings" finding="absolute" line="2387" />
-      <module_usage name="sys" finding="absolute" line="2550" />
-      <module_usage name="sys" finding="absolute" line="2555" />
-      <module_usage name="sys" finding="absolute" line="2561" />
-      <module_usage name="sys" finding="absolute" line="2569" />
-      <module_usage name="sys" finding="absolute" line="2581" />
     </module_usages>
   </module>
   <module name="array" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/array.cpython-310-darwin.so">
@@ -688,7 +678,6 @@
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
-      <module_usage name="builtins" finding="absolute" line="12" />
       <module_usage name="io" finding="absolute" line="13" />
       <module_usage name="os" finding="absolute" line="14" />
       <module_usage name="_compression" finding="absolute" line="15" />
@@ -720,7 +709,6 @@
       <module_usage name="locale" finding="absolute" line="42" />
       <module_usage name="tempfile" finding="absolute" line="43" />
       <module_usage name="warnings" finding="absolute" line="44" />
-      <module_usage name="sys" finding="absolute" line="854" />
       <module_usage name="traceback" finding="absolute" line="887" />
       <module_usage name="re" finding="absolute" line="992" />
     </module_usages>
@@ -739,7 +727,6 @@
       <module_usage name="time" finding="absolute" line="31" />
       <module_usage name="tokenize" finding="absolute" line="32" />
       <module_usage name="traceback" finding="absolute" line="33" />
-      <module_usage name="sys" finding="absolute" line="266" />
     </module_usages>
   </module>
   <module name="chunk" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/chunk.py">
@@ -755,7 +742,6 @@
     <module_usages>
       <module_usage name="string" finding="absolute" line="45" />
       <module_usage name="sys" finding="absolute" line="45" />
-      <module_usage name="sys" finding="absolute" line="94" />
       <module_usage name="readline" finding="absolute" line="108" />
       <module_usage name="readline" finding="absolute" line="144" />
       <module_usage name="readline" finding="absolute" line="258" />
@@ -768,7 +754,6 @@
       <module_usage name="sys" finding="absolute" line="8" />
       <module_usage name="traceback" finding="absolute" line="9" />
       <module_usage name="codeop" finding="absolute" line="10" />
-      <module_usage name="sys" finding="absolute" line="159" />
       <module_usage name="readline" finding="absolute" line="298" />
     </module_usages>
   </module>
@@ -998,8 +983,8 @@
     <plugin-influence name="dll-files" influence="condition-used" condition="android32" tags_used="android32" result="false" />
     <plugin-influence name="dll-files" influence="condition-used" condition="macos and arch_amd64" tags_used="macos,arch_amd64" result="false" />
     <plugin-influence name="dll-files" influence="condition-used" condition="macos and arch_arm64" tags_used="macos,arch_arm64" result="true" />
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="67" merged_total="623" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="110" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="1" />
@@ -1015,8 +1000,8 @@
     </module_usages>
   </module>
   <module name="delphifmx.darwin_arm" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/delphifmx/darwin_arm.py" distribution="delphifmx">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="8" merged_total="46" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="4" merged_total="10" />
     <module_usages>
       <module_usage name="ctypes" finding="absolute" line="7" />
       <module_usage name="ctypes" finding="absolute" line="11" />
@@ -1213,7 +1198,6 @@
     <module_usages>
       <module_usage name="sys" finding="absolute" line="14" />
       <module_usage name="io" finding="absolute" line="15" />
-      <module_usage name="sys" finding="absolute" line="62" />
     </module_usages>
   </module>
   <module name="email.message" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/email/message.py">
@@ -2030,7 +2014,7 @@
       <module_usage name="codecs" finding="absolute" line="10" />
     </module_usages>
   </module>
-  <module name="encodings.punycode" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.10/encodings/punycode.py">
+  <module name="encodings.punycode" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/encodings/punycode.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -2237,7 +2221,6 @@
       <module_usage name="warnings" finding="absolute" line="215" />
       <module_usage name="warnings" finding="absolute" line="224" />
       <module_usage name="warnings" finding="absolute" line="266" />
-      <module_usage name="sys" finding="absolute" line="377" />
       <module_usage name="posixpath" finding="absolute" line="424" />
       <module_usage name="gzip" finding="absolute" line="426" />
       <module_usage name="bz2" finding="absolute" line="429" />
@@ -2476,8 +2459,6 @@
       <module_usage name="io" finding="absolute" line="27" />
       <module_usage name="ssl" finding="absolute" line="30" />
       <module_usage name="hmac" finding="absolute" line="628" />
-      <module_usage name="sys" finding="absolute" line="1251" />
-      <module_usage name="sys" finding="absolute" line="1252" />
       <module_usage name="warnings" finding="absolute" line="1314" />
     </module_usages>
   </module>
@@ -2490,7 +2471,6 @@
       <module_usage name="os" finding="absolute" line="148" />
       <module_usage name="glob" finding="absolute" line="154" />
       <module_usage name="posixpath" finding="absolute" line="155" />
-      <module_usage name="sys" finding="absolute" line="161" />
     </module_usages>
   </module>
   <module name="imp" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/imp.py">
@@ -2654,7 +2634,6 @@
       <module_usage name="importlib.abc" finding="absolute" line="26" />
       <module_usage name="itertools" finding="absolute" line="27" />
       <module_usage name="typing" finding="absolute" line="28" />
-      <module_usage name="functools" finding="absolute" line="269" />
       <module_usage name="functools" finding="absolute" line="418" />
       <module_usage name="pep517" finding="not-found" line="587" />
       <module_usage name="functools" finding="absolute" line="590" />
@@ -2919,19 +2898,8 @@
       <module_usage name="posixpath" finding="absolute" line="181" />
       <module_usage name="posixpath" finding="absolute" line="318" />
       <module_usage name="io" finding="absolute" line="631" />
-      <module_usage name="sys" finding="absolute" line="1018" />
-      <module_usage name="sys" finding="absolute" line="1021" />
-      <module_usage name="sys" finding="absolute" line="1022" />
-      <module_usage name="sys" finding="absolute" line="1023" />
-      <module_usage name="sys" finding="absolute" line="1031" />
-      <module_usage name="sys" finding="absolute" line="1034" />
-      <module_usage name="sys" finding="absolute" line="1038" />
-      <module_usage name="sys" finding="absolute" line="1044" />
-      <module_usage name="sys" finding="absolute" line="1074" />
-      <module_usage name="sys" finding="absolute" line="1239" />
       <module_usage name="posixpath" finding="absolute" line="1568" />
       <module_usage name="io" finding="absolute" line="1574" />
-      <module_usage name="sys" finding="absolute" line="1706" />
       <module_usage name="pickle" finding="absolute" line="1773" />
       <module_usage name="atexit" finding="absolute" line="2198" />
     </module_usages>
@@ -2988,7 +2956,6 @@
       <module_usage name="posixpath" finding="absolute" line="93" />
       <module_usage name="posixpath" finding="absolute" line="164" />
       <module_usage name="posixpath" finding="absolute" line="165" />
-      <module_usage name="posixpath" finding="absolute" line="599" />
     </module_usages>
   </module>
   <module name="netrc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/netrc.py">
@@ -3037,6 +3004,7 @@
     </module_usages>
   </module>
   <module name="opcode" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.10/opcode.py">
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="python313_or_higher" tags_used="python313_or_higher" result="false" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -3093,11 +3061,8 @@
       <module_usage name="operator" finding="absolute" line="12" />
       <module_usage name="stat" finding="absolute" line="13" />
       <module_usage name="urllib.parse" finding="absolute" line="14" />
-      <module_usage name="os" finding="absolute" line="288" />
       <module_usage name="pwd" finding="absolute" line="342" />
       <module_usage name="grp" finding="absolute" line="349" />
-      <module_usage name="posixpath" finding="absolute" line="356" />
-      <module_usage name="posixpath" finding="absolute" line="358" />
       <module_usage name="posixpath" finding="absolute" line="1011" />
     </module_usages>
   </module>
@@ -3172,7 +3137,6 @@
       <module_usage name="zipimport" finding="absolute" line="370" />
       <module_usage name="zipimport" finding="absolute" line="371" />
       <module_usage name="inspect" finding="absolute" line="378" />
-      <module_usage name="sys" finding="absolute" line="586" />
       <module_usage name="re" finding="absolute" line="679" />
     </module_usages>
   </module>
@@ -3201,7 +3165,6 @@
       <module_usage name="java.lang" finding="not-found" line="477" />
       <module_usage name="socket" finding="absolute" line="577" />
       <module_usage name="posixpath" finding="absolute" line="593" />
-      <module_usage name="posixpath" finding="absolute" line="594" />
       <module_usage name="posixpath" finding="absolute" line="595" />
       <module_usage name="subprocess" finding="absolute" line="612" />
       <module_usage name="struct" finding="absolute" line="664" />
@@ -3262,7 +3225,6 @@
       <module_usage name="sys" finding="absolute" line="40" />
       <module_usage name="types" finding="absolute" line="41" />
       <module_usage name="io" finding="absolute" line="42" />
-      <module_usage name="sys" finding="absolute" line="146" />
       <module_usage name="time" finding="absolute" line="640" />
     </module_usages>
   </module>
@@ -3279,7 +3241,6 @@
       <module_usage name="functools" finding="absolute" line="30" />
       <module_usage name="dataclasses" finding="absolute" line="31" />
       <module_usage name="typing" finding="absolute" line="32" />
-      <module_usage name="sys" finding="absolute" line="108" />
     </module_usages>
   </module>
   <module name="py_compile" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/py_compile.py">
@@ -3294,7 +3255,6 @@
       <module_usage name="posixpath" finding="absolute" line="11" />
       <module_usage name="sys" finding="absolute" line="12" />
       <module_usage name="traceback" finding="absolute" line="13" />
-      <module_usage name="sys" finding="absolute" line="152" />
       <module_usage name="argparse" finding="absolute" line="177" />
     </module_usages>
   </module>
@@ -3470,15 +3430,11 @@
       <module_usage name="tarfile" finding="absolute" line="917" />
       <module_usage name="posixpath" finding="absolute" line="949" />
       <module_usage name="zipfile" finding="absolute" line="966" />
-      <module_usage name="posixpath" finding="absolute" line="984" />
       <module_usage name="posixpath" finding="absolute" line="986" />
-      <module_usage name="posixpath" finding="absolute" line="987" />
       <module_usage name="posixpath" finding="absolute" line="995" />
-      <module_usage name="posixpath" finding="absolute" line="996" />
       <module_usage name="posixpath" finding="absolute" line="998" />
       <module_usage name="posixpath" finding="absolute" line="999" />
       <module_usage name="posixpath" finding="absolute" line="1004" />
-      <module_usage name="posixpath" finding="absolute" line="1005" />
       <module_usage name="posixpath" finding="absolute" line="1007" />
       <module_usage name="zipfile" finding="absolute" line="1197" />
       <module_usage name="posixpath" finding="absolute" line="1211" />
@@ -3508,7 +3464,6 @@
       <module_usage name="os" finding="absolute" line="237" />
       <module_usage name="glob" finding="absolute" line="243" />
       <module_usage name="posixpath" finding="absolute" line="244" />
-      <module_usage name="sys" finding="absolute" line="250" />
     </module_usages>
   </module>
   <module name="socket" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/socket.py">
@@ -3538,10 +3493,7 @@
       <module_usage name="threading" finding="absolute" line="130" />
       <module_usage name="io" finding="absolute" line="131" />
       <module_usage name="time" finding="absolute" line="132" />
-      <module_usage name="sys" finding="absolute" line="376" />
-      <module_usage name="sys" finding="absolute" line="378" />
       <module_usage name="traceback" finding="absolute" line="379" />
-      <module_usage name="sys" finding="absolute" line="381" />
       <module_usage name="io" finding="absolute" line="838" />
     </module_usages>
   </module>
@@ -3666,6 +3618,7 @@
     </module_usages>
   </module>
   <module name="sysconfig" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/sysconfig.py">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not win32" tags_used="win32" result="true" />
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -3673,13 +3626,8 @@
       <module_usage name="sys" finding="absolute" line="4" />
       <module_usage name="posixpath" finding="absolute" line="5" />
       <module_usage name="posixpath" finding="absolute" line="74" />
-      <module_usage name="posixpath" finding="absolute" line="126" />
-      <module_usage name="posixpath" finding="absolute" line="127" />
-      <module_usage name="posixpath" finding="absolute" line="128" />
-      <module_usage name="posixpath" finding="absolute" line="129" />
       <module_usage name="posixpath" finding="absolute" line="163" />
       <module_usage name="posixpath" finding="absolute" line="222" />
-      <module_usage name="posixpath" finding="absolute" line="223" />
       <module_usage name="re" finding="absolute" line="268" />
       <module_usage name="posixpath" finding="absolute" line="392" />
       <module_usage name="posixpath" finding="absolute" line="399" />
@@ -3692,8 +3640,6 @@
       <module_usage name="posixpath" finding="absolute" line="634" />
       <module_usage name="_osx_support" finding="absolute" line="646" />
       <module_usage name="warnings" finding="absolute" line="665" />
-      <module_usage name="_aix_support" finding="absolute" line="733" />
-      <module_usage name="re" finding="absolute" line="737" />
       <module_usage name="_osx_support" finding="absolute" line="743" />
       <module_usage name="re" finding="absolute" line="763" />
     </module_usages>
@@ -3702,7 +3648,6 @@
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
-      <module_usage name="builtins" finding="absolute" line="39" />
       <module_usage name="sys" finding="absolute" line="40" />
       <module_usage name="os" finding="absolute" line="41" />
       <module_usage name="io" finding="absolute" line="42" />
@@ -3714,7 +3659,6 @@
       <module_usage name="re" finding="absolute" line="48" />
       <module_usage name="pwd" finding="absolute" line="51" />
       <module_usage name="grp" finding="absolute" line="55" />
-      <module_usage name="sys" finding="absolute" line="261" />
       <module_usage name="zlib" finding="absolute" line="365" />
       <module_usage name="bz2" finding="absolute" line="378" />
       <module_usage name="lzma" finding="absolute" line="390" />
@@ -3728,9 +3672,6 @@
       <module_usage name="posixpath" finding="absolute" line="2100" />
       <module_usage name="posixpath" finding="absolute" line="2263" />
       <module_usage name="zlib" finding="absolute" line="2373" />
-      <module_usage name="posixpath" finding="absolute" line="2404" />
-      <module_usage name="posixpath" finding="absolute" line="2408" />
-      <module_usage name="sys" finding="absolute" line="2488" />
     </module_usages>
   </module>
   <module name="textwrap" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/textwrap.py">
@@ -3756,7 +3697,6 @@
       <module_usage name="collections.deque" finding="not-found" line="14" />
       <module_usage name="warnings" finding="absolute" line="404" />
       <module_usage name="warnings" finding="absolute" line="563" />
-      <module_usage name="sys" finding="absolute" line="880" />
       <module_usage name="warnings" finding="absolute" line="1212" />
       <module_usage name="warnings" finding="absolute" line="1223" />
       <module_usage name="warnings" finding="absolute" line="1234" />
@@ -3765,8 +3705,6 @@
       <module_usage name="traceback" finding="absolute" line="1256" />
       <module_usage name="collections" finding="absolute" line="1257" />
       <module_usage name="collections.namedtuple" finding="not-found" line="1257" />
-      <module_usage name="sys" finding="absolute" line="1274" />
-      <module_usage name="sys" finding="absolute" line="1275" />
       <module_usage name="warnings" finding="absolute" line="1448" />
       <module_usage name="warnings" finding="absolute" line="1469" />
       <module_usage name="functools" finding="absolute" line="1506" />
@@ -3786,7 +3724,6 @@
       <module_usage name="linecache" finding="absolute" line="154" />
       <module_usage name="traceback" finding="absolute" line="154" />
       <module_usage name="getopt" finding="absolute" line="260" />
-      <module_usage name="sys" finding="absolute" line="290" />
       <module_usage name="os" finding="absolute" line="310" />
       <module_usage name="warnings" finding="absolute" line="367" />
     </module_usages>
@@ -3800,7 +3737,6 @@
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
-      <module_usage name="builtins" finding="absolute" line="27" />
       <module_usage name="codecs" finding="absolute" line="28" />
       <module_usage name="collections" finding="absolute" line="29" />
       <module_usage name="functools" finding="absolute" line="30" />
@@ -3829,17 +3765,12 @@
       <module_usage name="pickle" finding="absolute" line="61" />
       <module_usage name="time" finding="absolute" line="62" />
       <module_usage name="threading" finding="absolute" line="64" />
-      <module_usage name="posixpath" finding="absolute" line="71" />
       <module_usage name="posixpath" finding="absolute" line="122" />
       <module_usage name="posixpath" finding="absolute" line="133" />
       <module_usage name="posixpath" finding="absolute" line="136" />
       <module_usage name="posixpath" finding="absolute" line="146" />
       <module_usage name="posixpath" finding="absolute" line="150" />
-      <module_usage name="sys" finding="absolute" line="178" />
       <module_usage name="posixpath" finding="absolute" line="271" />
-      <module_usage name="sys" finding="absolute" line="294" />
-      <module_usage name="sys" finding="absolute" line="304" />
-      <module_usage name="sys" finding="absolute" line="381" />
       <module_usage name="__main__" finding="not-found" line="439" />
     </module_usages>
   </module>
@@ -3851,8 +3782,6 @@
       <module_usage name="itertools" finding="absolute" line="4" />
       <module_usage name="linecache" finding="absolute" line="5" />
       <module_usage name="sys" finding="absolute" line="6" />
-      <module_usage name="sys" finding="absolute" line="23" />
-      <module_usage name="sys" finding="absolute" line="118" />
     </module_usages>
   </module>
   <module name="tracemalloc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/tracemalloc.py">
@@ -3927,9 +3856,6 @@
       <module_usage name="binascii" finding="absolute" line="33" />
       <module_usage name="os" finding="absolute" line="34" />
       <module_usage name="sys" finding="absolute" line="35" />
-      <module_usage name="sys" finding="absolute" line="65" />
-      <module_usage name="sys" finding="absolute" line="140" />
-      <module_usage name="sys" finding="absolute" line="158" />
     </module_usages>
   </module>
   <module name="warnings" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.10/warnings.py">
@@ -3937,11 +3863,9 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="3" />
-      <module_usage name="sys" finding="absolute" line="23" />
       <module_usage name="linecache" finding="absolute" line="41" />
       <module_usage name="tracemalloc" finding="absolute" line="56" />
       <module_usage name="re" finding="absolute" line="152" />
-      <module_usage name="sys" finding="absolute" line="210" />
       <module_usage name="re" finding="absolute" line="224" />
       <module_usage name="builtins" finding="absolute" line="255" />
       <module_usage name="linecache" finding="absolute" line="366" />
@@ -3983,9 +3907,6 @@
       <module_usage name="posixpath" finding="absolute" line="413" />
       <module_usage name="posixpath" finding="absolute" line="416" />
       <module_usage name="getopt" finding="absolute" line="693" />
-      <module_usage name="sys" finding="absolute" line="700" />
-      <module_usage name="sys" finding="absolute" line="701" />
-      <module_usage name="sys" finding="absolute" line="708" />
     </module_usages>
   </module>
   <module name="xdrlib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/xdrlib.py">
@@ -4052,7 +3973,6 @@
       <module_usage name="posixpath" finding="absolute" line="1681" />
       <module_usage name="posixpath" finding="absolute" line="1683" />
       <module_usage name="posixpath" finding="absolute" line="1685" />
-      <module_usage name="posixpath" finding="absolute" line="1686" />
       <module_usage name="warnings" finding="absolute" line="1707" />
       <module_usage name="posixpath" finding="absolute" line="1973" />
       <module_usage name="posixpath" finding="absolute" line="1975" />
@@ -4143,12 +4063,13 @@
     <plugin name="pbr-compat" user_enabled="no" />
     <plugin name="pkg-resources" user_enabled="no" />
     <plugin name="pywebview" user_enabled="no" />
+    <plugin name="spacy" user_enabled="no" />
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
     <distribution name="delphifmx" version="1.0.8" installer="pip" />
   </distributions>
-  <python python_exe="${sys.prefix}/bin/python" python_flavor="CPython Official" python_version="3.10.8" os_name="Darwin" os_release="14.4.1" arch_name="arm64">
+  <python python_exe="${sys.prefix}/bin/python" python_flavor="CPython Official" python_version="3.10.8" os_name="Darwin" os_release="14.5" arch_name="arm64">
     <search_path>
       <path value="${cwd}" />
       <path value="~/repos/Nuitka-Watch/cases/DelphiFMX" />

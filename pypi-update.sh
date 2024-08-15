@@ -8,6 +8,9 @@ echo "Running on $OS..."
 if [[ $OS = MINGW* ]]
 then
     alias python3='/c/Python310_64/python.exe'
+    alias python3.10='/c/Python310_64/python.exe'
+    alias python3.11='/c/Python311_64/python.exe'
+    alias python3.12='/c/Python312_64/python.exe'
 fi
 
 # This enables my private development slightly better.
@@ -20,8 +23,8 @@ fi
 
 if [ "$OS" = "Darwin" ]
 then
-    python3 $NUITKA_WATCH/bin/nuitka-watch --python-version=3.10 --nuitka-binary=../Nuitka-develop/bin/nuitka $@
-    python3 $NUITKA_WATCH/bin/nuitka-watch --python-version=3.11 --nuitka-binary=../Nuitka-develop/bin/nuitka $@
+    python3.10 $NUITKA_WATCH/bin/nuitka-watch --python-version=3.10 --nuitka-binary=../Nuitka-develop/bin/nuitka $@
+    python3.11 $NUITKA_WATCH/bin/nuitka-watch --python-version=3.11 --nuitka-binary=../Nuitka-develop/bin/nuitka $@
 else
-    python3 $NUITKA_WATCH/bin/nuitka-watch --python-version=3.10 --nuitka-binary=../Nuitka-develop/bin/nuitka $@
+    python3.10 $NUITKA_WATCH/bin/nuitka-watch --python-version=3.10 --nuitka-binary=../Nuitka-develop/bin/nuitka $@
 fi
