@@ -4060,6 +4060,9 @@
   <module name="pydantic.mypy" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pydantic\mypy.py" distribution="pydantic">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="129" merged_total="15487" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="120" merged_total="2120" />
+    <distribution-usages>
+      <distribution-usage name="tomli" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
       <module_usage name="sys" finding="absolute" line="5" />
@@ -4085,7 +4088,7 @@
       <module_usage name="pydantic.version" finding="absolute" line="81" />
       <module_usage name="mypy.types" finding="not-found" line="84" />
       <module_usage name="mypy.types" finding="not-found" line="87" />
-      <module_usage name="tomli" finding="not-found" line="1305" />
+      <module_usage name="tomli" finding="absolute" line="1305" />
       <module_usage name="warnings" finding="absolute" line="1307" />
     </module_usages>
   </module>
@@ -4836,6 +4839,46 @@
       <module_usage name="token" finding="absolute" line="41" />
     </module_usages>
   </module>
+  <module name="tomli" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\tomli\__init__.py" distribution="tomli">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="3" merged_total="15" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="3" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="tomli._parser" finding="relative" line="8" />
+    </module_usages>
+  </module>
+  <module name="tomli._parser" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\tomli\_parser.py" distribution="tomli">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="78" merged_total="7613" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="78" merged_total="1223" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="5" />
+      <module_usage name="collections.abc" finding="absolute" line="7" />
+      <module_usage name="string" finding="absolute" line="8" />
+      <module_usage name="types" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="tomli._re" finding="relative" line="12" />
+      <module_usage name="tomli._types" finding="relative" line="20" />
+    </module_usages>
+  </module>
+  <module name="tomli._re" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\tomli\_re.py" distribution="tomli">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="21" merged_total="465" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="103" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="5" />
+      <module_usage name="datetime" finding="absolute" line="7" />
+      <module_usage name="functools" finding="absolute" line="8" />
+      <module_usage name="re" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="tomli._types" finding="relative" line="12" />
+    </module_usages>
+  </module>
+  <module name="tomli._types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\tomli\_types.py" distribution="tomli">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="3" merged_total="12" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="3" />
+    <module_usages>
+      <module_usage name="typing" finding="absolute" line="5" />
+    </module_usages>
+  </module>
   <module name="trace" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\trace.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -5147,6 +5190,7 @@
     <distribution name="annotated-types" version="0.7.0" installer="pip" />
     <distribution name="pydantic" version="2.8.2" installer="pip" />
     <distribution name="pydantic_core" version="2.20.1" installer="pip" />
+    <distribution name="tomli" version="2.0.1" installer="pip" />
     <distribution name="typing_extensions" version="4.12.2" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}\Scripts\python.EXE" python_flavor="CPython Official" python_version="3.10.11" os_name="Windows" os_release="11" arch_name="x86_64">
@@ -5158,6 +5202,7 @@
       <path value="${sys.real_prefix}" />
       <path value="${sys.prefix}" />
       <path value="${sys.prefix}\lib\site-packages" />
+      <path value="${sys.prefix}\lib\site-packages\setuptools\_vendor" />
     </search_path>
   </python>
   <user-data>

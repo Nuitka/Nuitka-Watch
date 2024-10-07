@@ -386,7 +386,7 @@
     <module_usages />
   </module>
   <module name="_osx_support" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\_osx_support.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="82" merged_total="5440" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" />
@@ -455,7 +455,7 @@
     <module_usages />
   </module>
   <module name="_sitebuiltins" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\_sitebuiltins.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="16" merged_total="1824" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="11" />
@@ -539,7 +539,7 @@
     </module_usages>
   </module>
   <module name="ast" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\ast.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="187" merged_total="23615" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="27" />
@@ -1041,8 +1041,76 @@
       <module_usage name="warnings" finding="absolute" line="14" />
     </module_usages>
   </module>
+  <module name="backports" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\backports\__init__.py" distribution="backports.tarfile">
+    <optimization-time pass="1" time="volatile" micro_passes="5" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="pkgutil" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="backports.tarfile" kind="CompiledPythonPackage" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\backports\tarfile\__init__.py" distribution="backports.tarfile">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="136" merged_total="37159" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="135" merged_total="5043" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="sys" finding="absolute" line="39" />
+      <module_usage name="os" finding="absolute" line="40" />
+      <module_usage name="io" finding="absolute" line="41" />
+      <module_usage name="shutil" finding="absolute" line="42" />
+      <module_usage name="stat" finding="absolute" line="43" />
+      <module_usage name="time" finding="absolute" line="44" />
+      <module_usage name="struct" finding="absolute" line="45" />
+      <module_usage name="copy" finding="absolute" line="46" />
+      <module_usage name="re" finding="absolute" line="47" />
+      <module_usage name="backports.tarfile.compat.py38" finding="relative" line="49" />
+      <module_usage name="pwd" finding="not-found" line="52" />
+      <module_usage name="grp" finding="not-found" line="56" />
+      <module_usage name="zlib" finding="absolute" line="370" />
+      <module_usage name="bz2" finding="absolute" line="383" />
+      <module_usage name="lzma" finding="absolute" line="395" />
+      <module_usage name="ntpath" finding="absolute" line="762" />
+      <module_usage name="ntpath" finding="absolute" line="767" />
+      <module_usage name="ntpath" finding="absolute" line="772" />
+      <module_usage name="ntpath" finding="absolute" line="773" />
+      <module_usage name="ntpath" finding="absolute" line="808" />
+      <module_usage name="ntpath" finding="absolute" line="811" />
+      <module_usage name="ntpath" finding="absolute" line="815" />
+      <module_usage name="ntpath" finding="absolute" line="817" />
+      <module_usage name="ntpath" finding="absolute" line="818" />
+      <module_usage name="warnings" finding="absolute" line="911" />
+      <module_usage name="warnings" finding="absolute" line="920" />
+      <module_usage name="gzip" finding="absolute" line="1889" />
+      <module_usage name="bz2" finding="absolute" line="1922" />
+      <module_usage name="lzma" finding="absolute" line="1950" />
+      <module_usage name="ntpath" finding="absolute" line="2049" />
+      <module_usage name="ntpath" finding="absolute" line="2215" />
+      <module_usage name="warnings" finding="absolute" line="2253" />
+      <module_usage name="ntpath" finding="absolute" line="2310" />
+      <module_usage name="ntpath" finding="absolute" line="2357" />
+      <module_usage name="ntpath" finding="absolute" line="2365" />
+      <module_usage name="ntpath" finding="absolute" line="2546" />
+      <module_usage name="zlib" finding="absolute" line="2667" />
+      <module_usage name="argparse" finding="absolute" line="2842" />
+      <module_usage name="ntpath" finding="absolute" line="2912" />
+    </module_usages>
+  </module>
+  <module name="backports.tarfile.compat" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\backports\tarfile\compat\__init__.py" distribution="backports.tarfile">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="backports.tarfile.compat.py38" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\backports\tarfile\compat\py38.py" distribution="backports.tarfile">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="3" merged_total="17" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="1" />
+    </module_usages>
+  </module>
   <module name="base64" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\base64.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="74" merged_total="5646" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="9" />
@@ -1051,7 +1119,7 @@
     </module_usages>
   </module>
   <module name="binhex" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\binhex.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="43" merged_total="7357" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="24" />
@@ -1065,7 +1133,7 @@
   </module>
   <module name="bisect" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\bisect.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_bisect&quot;)" tags_used="has_builtin_module" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="36" merged_total="601" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_bisect" finding="absolute" line="104" />
@@ -1082,7 +1150,7 @@
     </module_usages>
   </module>
   <module name="calendar" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\calendar.py">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="51" merged_total="12720" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="8" />
@@ -1313,7 +1381,7 @@
     </module_usages>
   </module>
   <module name="copy" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\copy.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="45" merged_total="2281" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="51" />
@@ -1341,7 +1409,7 @@
     </module_usages>
   </module>
   <module name="ctypes" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\ctypes\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="50" merged_total="8753" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -1408,7 +1476,7 @@
   </module>
   <module name="datetime" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\datetime.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_datetime&quot;)" tags_used="has_builtin_module" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="179" merged_total="22336" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="time" finding="absolute" line="11" />
@@ -1676,7 +1744,7 @@
     </module_usages>
   </module>
   <module name="difflib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\difflib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="131" merged_total="20240" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="heapq" finding="absolute" line="33" />
@@ -1688,7 +1756,7 @@
     </module_usages>
   </module>
   <module name="dis" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\dis.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="74" merged_total="4834" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="3" />
@@ -1922,7 +1990,7 @@
   </module>
   <module name="email.utils" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\email\utils.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_socket&quot;)" tags_used="has_builtin_module" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="35" merged_total="3114" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="25" />
@@ -2862,7 +2930,7 @@
   </module>
   <module name="enum" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\enum.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="plugin(&quot;pyside6&quot;)" tags_used="plugin" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="92" merged_total="14013" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="1" />
@@ -2938,7 +3006,7 @@
     </module_usages>
   </module>
   <module name="ftplib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\ftplib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="61" merged_total="10362" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="39" />
@@ -3058,7 +3126,7 @@
     <module_usages />
   </module>
   <module name="gzip" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\gzip.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="80" merged_total="5806" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="struct" finding="absolute" line="8" />
@@ -3099,7 +3167,7 @@
   </module>
   <module name="heapq" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\heapq.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_heapq&quot;)" tags_used="has_builtin_module" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="51" merged_total="3891" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_heapq" finding="absolute" line="581" />
@@ -3245,7 +3313,7 @@
     </module_usages>
   </module>
   <module name="imghdr" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\imghdr.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="756" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" />
@@ -3531,7 +3599,7 @@
     </module_usages>
   </module>
   <module name="inspect" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\inspect.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="191" merged_total="32869" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="36" />
@@ -3582,6 +3650,79 @@
     <module_usages>
       <module_usage name="functools" finding="absolute" line="14" />
       <module_usage name="re" finding="absolute" line="641" />
+    </module_usages>
+  </module>
+  <module name="jaraco" kind="CompiledPythonNamespacePackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\jaraco" distribution="jaraco.context,jaraco.functools,jaraco.text">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="jaraco.context" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\jaraco\context.py" distribution="jaraco.context,jaraco.functools,jaraco.text">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="27" merged_total="2400" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="370" />
+    <distribution-usages>
+      <distribution-usage name="backports.tarfile" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="contextlib" finding="absolute" line="3" />
+      <module_usage name="functools" finding="absolute" line="4" />
+      <module_usage name="operator" finding="absolute" line="5" />
+      <module_usage name="os" finding="absolute" line="6" />
+      <module_usage name="shutil" finding="absolute" line="7" />
+      <module_usage name="subprocess" finding="absolute" line="8" />
+      <module_usage name="sys" finding="absolute" line="9" />
+      <module_usage name="tempfile" finding="absolute" line="10" />
+      <module_usage name="urllib.request" finding="absolute" line="11" />
+      <module_usage name="warnings" finding="absolute" line="12" />
+      <module_usage name="typing" finding="absolute" line="13" />
+      <module_usage name="backports" finding="absolute" line="17" />
+      <module_usage name="backports.tarfile" finding="relative" line="17" />
+      <module_usage name="ntpath" finding="absolute" line="181" />
+    </module_usages>
+  </module>
+  <module name="jaraco.functools" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\jaraco\functools\__init__.py" distribution="jaraco.context,jaraco.functools,jaraco.text">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="19" merged_total="1633" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="231" />
+    <distribution-usages>
+      <distribution-usage name="more-itertools" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="collections.abc" finding="absolute" line="1" />
+      <module_usage name="functools" finding="absolute" line="2" />
+      <module_usage name="inspect" finding="absolute" line="3" />
+      <module_usage name="itertools" finding="absolute" line="4" />
+      <module_usage name="operator" finding="absolute" line="5" />
+      <module_usage name="time" finding="absolute" line="6" />
+      <module_usage name="types" finding="absolute" line="7" />
+      <module_usage name="warnings" finding="absolute" line="8" />
+      <module_usage name="more_itertools" finding="absolute" line="10" />
+      <module_usage name="functools" finding="absolute" line="307" />
+      <module_usage name="functools" finding="absolute" line="370" />
+      <module_usage name="functools" finding="absolute" line="389" />
+      <module_usage name="functools" finding="absolute" line="442" />
+      <module_usage name="functools" finding="absolute" line="633" />
+    </module_usages>
+  </module>
+  <module name="jaraco.text" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\jaraco\text\__init__.py" distribution="jaraco.context,jaraco.functools,jaraco.text">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="3131" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="28" merged_total="445" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="re" finding="absolute" line="1" />
+      <module_usage name="itertools" finding="absolute" line="2" />
+      <module_usage name="textwrap" finding="absolute" line="3" />
+      <module_usage name="functools" finding="absolute" line="4" />
+      <module_usage name="importlib.resources" finding="absolute" line="7" />
+      <module_usage name="jaraco.functools" finding="absolute" line="11" />
+      <module_usage name="jaraco.functools.compose" finding="not-found" line="11" />
+      <module_usage name="jaraco.functools.method_cache" finding="not-found" line="11" />
+      <module_usage name="jaraco.context" finding="absolute" line="12" />
+      <module_usage name="jaraco.text" finding="absolute" line="231" />
     </module_usages>
   </module>
   <module name="jinja2" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jinja2\__init__.py" distribution="Jinja2">
@@ -3857,7 +3998,7 @@
   </module>
   <module name="jinja2.lexer" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jinja2\lexer.py" distribution="Jinja2">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="before_python3" tags_used="before_python3" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="149" merged_total="9002" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="149" merged_total="9009" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="126" merged_total="1026" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="7" />
@@ -3872,7 +4013,7 @@
     </module_usages>
   </module>
   <module name="jinja2.loaders" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jinja2\loaders.py" distribution="Jinja2">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="79" merged_total="13212" />
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="79" merged_total="13217" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="58" merged_total="1410" />
     <module_usages>
       <module_usage name="importlib.util" finding="absolute" line="5" />
@@ -3941,7 +4082,7 @@
     </module_usages>
   </module>
   <module name="jinja2.parser" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jinja2\parser.py" distribution="Jinja2">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="454" merged_total="16898" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="454" merged_total="16903" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="216" merged_total="2285" />
     <module_usages>
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3955,7 +4096,7 @@
     </module_usages>
   </module>
   <module name="jinja2.runtime" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jinja2\runtime.py" distribution="Jinja2">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="162" merged_total="9195" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="162" merged_total="9200" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="99" merged_total="1261" />
     <distribution-usages>
       <distribution-usage name="MarkupSafe" />
@@ -4051,7 +4192,7 @@
   </module>
   <module name="json.decoder" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\json\decoder.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_json&quot;)" tags_used="has_builtin_module" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="88" merged_total="3241" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="3" />
@@ -4062,7 +4203,7 @@
   </module>
   <module name="json.encoder" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\json\encoder.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_json&quot;)" tags_used="has_builtin_module" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="72" merged_total="3588" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="3" />
@@ -4073,7 +4214,7 @@
   </module>
   <module name="json.scanner" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\json\scanner.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_json&quot;)" tags_used="has_builtin_module" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="83" merged_total="646" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="3" />
@@ -4081,7 +4222,7 @@
     </module_usages>
   </module>
   <module name="keyword" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\keyword.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
@@ -4099,7 +4240,7 @@
     </module_usages>
   </module>
   <module name="locale" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\locale.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="89" merged_total="5481" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="13" />
@@ -4155,7 +4296,7 @@
     </module_usages>
   </module>
   <module name="mailcap" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\mailcap.py">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="76" merged_total="4860" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" />
@@ -4197,7 +4338,7 @@
     <module_usages />
   </module>
   <module name="mimetypes" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\mimetypes.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="55" merged_total="3610" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="26" />
@@ -4209,7 +4350,7 @@
     </module_usages>
   </module>
   <module name="modulefinder" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\modulefinder.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="67" merged_total="8859" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="dis" finding="absolute" line="3" />
@@ -4222,6 +4363,55 @@
       <module_usage name="ntpath" finding="absolute" line="93" />
       <module_usage name="ntpath" finding="absolute" line="164" />
       <module_usage name="ntpath" finding="absolute" line="165" />
+    </module_usages>
+  </module>
+  <module name="more_itertools" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\more_itertools\__init__.py" distribution="more-itertools">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="more_itertools.more" finding="relative" line="3" />
+      <module_usage name="more_itertools.recipes" finding="relative" line="4" />
+    </module_usages>
+  </module>
+  <module name="more_itertools.more" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\more_itertools\more.py" distribution="more-itertools">
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="99" merged_total="39284" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="85" merged_total="4606" />
+    <module_usages>
+      <module_usage name="math" finding="absolute" line="1" />
+      <module_usage name="warnings" finding="absolute" line="2" />
+      <module_usage name="collections" finding="absolute" line="4" />
+      <module_usage name="collections.Counter" finding="not-found" line="4" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="4" />
+      <module_usage name="collections.deque" finding="not-found" line="4" />
+      <module_usage name="collections.abc" finding="relative" line="4" />
+      <module_usage name="collections.abc" finding="absolute" line="5" />
+      <module_usage name="functools" finding="absolute" line="6" />
+      <module_usage name="heapq" finding="absolute" line="7" />
+      <module_usage name="itertools" finding="absolute" line="8" />
+      <module_usage name="math" finding="absolute" line="24" />
+      <module_usage name="queue" finding="absolute" line="25" />
+      <module_usage name="random" finding="absolute" line="26" />
+      <module_usage name="operator" finding="absolute" line="27" />
+      <module_usage name="sys" finding="absolute" line="28" />
+      <module_usage name="time" finding="absolute" line="29" />
+      <module_usage name="more_itertools.recipes" finding="relative" line="31" />
+      <module_usage name="concurrent.futures" finding="absolute" line="3723" />
+    </module_usages>
+  </module>
+  <module name="more_itertools.recipes" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\more_itertools\recipes.py" distribution="more-itertools">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="49" merged_total="5877" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="763" />
+    <module_usages>
+      <module_usage name="math" finding="absolute" line="11" />
+      <module_usage name="operator" finding="absolute" line="12" />
+      <module_usage name="collections" finding="absolute" line="14" />
+      <module_usage name="collections.deque" finding="not-found" line="14" />
+      <module_usage name="collections.abc" finding="absolute" line="15" />
+      <module_usage name="functools" finding="absolute" line="16" />
+      <module_usage name="itertools" finding="absolute" line="17" />
+      <module_usage name="random" finding="absolute" line="31" />
+      <module_usage name="itertools" finding="absolute" line="325" />
     </module_usages>
   </module>
   <module name="multiprocessing" kind="UncompiledPythonPackage" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\lib\multiprocessing\__init__.py">
@@ -4544,7 +4734,7 @@
   </module>
   <module name="multiprocessing.resource_tracker" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\lib\multiprocessing\resource_tracker.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not module_mode" tags_used="module_mode" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="34" merged_total="3071" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="18" />
@@ -4635,7 +4825,7 @@
   </module>
   <module name="multiprocessing.util" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\lib\multiprocessing\util.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_unittest" tags_used="use_unittest" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="37" merged_total="3648" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="10" />
@@ -7139,7 +7329,7 @@
     </module_usages>
   </module>
   <module name="numpy.testing" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\numpy\testing\__init__.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="437" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -7203,6 +7393,166 @@
       <module_usage name="io" finding="absolute" line="984" />
       <module_usage name="io" finding="absolute" line="1027" />
       <module_usage name="nt" finding="absolute" line="1117" />
+    </module_usages>
+  </module>
+  <module name="packaging" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\__init__.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="packaging._elffile" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\_elffile.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="11" />
+      <module_usage name="enum" finding="absolute" line="13" />
+      <module_usage name="os" finding="absolute" line="14" />
+      <module_usage name="struct" finding="absolute" line="15" />
+      <module_usage name="typing" finding="absolute" line="16" />
+    </module_usages>
+  </module>
+  <module name="packaging._manylinux" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\_manylinux.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="collections" finding="absolute" line="3" />
+      <module_usage name="contextlib" finding="absolute" line="4" />
+      <module_usage name="functools" finding="absolute" line="5" />
+      <module_usage name="os" finding="absolute" line="6" />
+      <module_usage name="re" finding="absolute" line="7" />
+      <module_usage name="sys" finding="absolute" line="8" />
+      <module_usage name="warnings" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="packaging._elffile" finding="relative" line="12" />
+      <module_usage name="ctypes" finding="absolute" line="109" />
+      <module_usage name="_manylinux" finding="not-found" line="187" />
+    </module_usages>
+  </module>
+  <module name="packaging._musllinux" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\_musllinux.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="7" />
+      <module_usage name="functools" finding="absolute" line="9" />
+      <module_usage name="re" finding="absolute" line="10" />
+      <module_usage name="subprocess" finding="absolute" line="11" />
+      <module_usage name="sys" finding="absolute" line="12" />
+      <module_usage name="typing" finding="absolute" line="13" />
+      <module_usage name="packaging._elffile" finding="relative" line="15" />
+    </module_usages>
+  </module>
+  <module name="packaging._parser" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\_parser.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="7" />
+      <module_usage name="ast" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="packaging._tokenizer" finding="relative" line="12" />
+    </module_usages>
+  </module>
+  <module name="packaging._structures" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\_structures.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="packaging._tokenizer" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\_tokenizer.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="contextlib" finding="absolute" line="3" />
+      <module_usage name="re" finding="absolute" line="4" />
+      <module_usage name="dataclasses" finding="absolute" line="5" />
+      <module_usage name="typing" finding="absolute" line="6" />
+      <module_usage name="packaging.specifiers" finding="relative" line="8" />
+    </module_usages>
+  </module>
+  <module name="packaging.markers" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\markers.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="5" />
+      <module_usage name="operator" finding="absolute" line="7" />
+      <module_usage name="os" finding="absolute" line="8" />
+      <module_usage name="platform" finding="absolute" line="9" />
+      <module_usage name="sys" finding="absolute" line="10" />
+      <module_usage name="typing" finding="absolute" line="11" />
+      <module_usage name="packaging._parser" finding="relative" line="13" />
+      <module_usage name="packaging._parser" finding="relative" line="14" />
+      <module_usage name="packaging._tokenizer" finding="relative" line="15" />
+      <module_usage name="packaging.specifiers" finding="relative" line="16" />
+      <module_usage name="packaging.utils" finding="relative" line="17" />
+    </module_usages>
+  </module>
+  <module name="packaging.requirements" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\requirements.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="4" />
+      <module_usage name="typing" finding="absolute" line="6" />
+      <module_usage name="packaging._parser" finding="relative" line="8" />
+      <module_usage name="packaging._tokenizer" finding="relative" line="9" />
+      <module_usage name="packaging.markers" finding="relative" line="10" />
+      <module_usage name="packaging.specifiers" finding="relative" line="11" />
+      <module_usage name="packaging.utils" finding="relative" line="12" />
+    </module_usages>
+  </module>
+  <module name="packaging.specifiers" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\specifiers.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="11" />
+      <module_usage name="abc" finding="absolute" line="13" />
+      <module_usage name="itertools" finding="absolute" line="14" />
+      <module_usage name="re" finding="absolute" line="15" />
+      <module_usage name="typing" finding="absolute" line="16" />
+      <module_usage name="packaging.utils" finding="relative" line="18" />
+      <module_usage name="packaging.version" finding="relative" line="19" />
+    </module_usages>
+  </module>
+  <module name="packaging.tags" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\tags.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="5" />
+      <module_usage name="logging" finding="absolute" line="7" />
+      <module_usage name="platform" finding="absolute" line="8" />
+      <module_usage name="re" finding="absolute" line="9" />
+      <module_usage name="struct" finding="absolute" line="10" />
+      <module_usage name="subprocess" finding="absolute" line="11" />
+      <module_usage name="sys" finding="absolute" line="12" />
+      <module_usage name="sysconfig" finding="absolute" line="13" />
+      <module_usage name="importlib.machinery" finding="absolute" line="14" />
+      <module_usage name="typing" finding="absolute" line="15" />
+      <module_usage name="packaging" finding="absolute" line="23" />
+      <module_usage name="packaging._manylinux" finding="relative" line="23" />
+      <module_usage name="packaging._musllinux" finding="relative" line="23" />
+    </module_usages>
+  </module>
+  <module name="packaging.utils" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\utils.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="5" />
+      <module_usage name="re" finding="absolute" line="7" />
+      <module_usage name="typing" finding="absolute" line="8" />
+      <module_usage name="packaging.tags" finding="relative" line="10" />
+      <module_usage name="packaging.version" finding="relative" line="11" />
+    </module_usages>
+  </module>
+  <module name="packaging.version" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\packaging\version.py" distribution="packaging">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="10" />
+      <module_usage name="itertools" finding="absolute" line="12" />
+      <module_usage name="re" finding="absolute" line="13" />
+      <module_usage name="typing" finding="absolute" line="14" />
+      <module_usage name="packaging._structures" finding="relative" line="16" />
     </module_usages>
   </module>
   <module name="pandas" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pandas\__init__.py" distribution="pandas">
@@ -14673,7 +15023,7 @@
     </module_usages>
   </module>
   <module name="pickle" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\pickle.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="352" merged_total="17323" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="26" />
@@ -14698,7 +15048,7 @@
     </module_usages>
   </module>
   <module name="pickletools" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\pickletools.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="167" merged_total="6724" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="codecs" finding="absolute" line="13" />
@@ -14724,73 +15074,83 @@
   </module>
   <module name="pkg_resources" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\__init__.py" distribution="setuptools">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not macos" tags_used="macos" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="77" merged_total="32123" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="85" merged_total="33181" />
     <optimization-time pass="2" time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="packaging" />
+      <distribution-usage name="jaraco.context" />
+      <distribution-usage name="jaraco.functools" />
+      <distribution-usage name="jaraco.text" />
+      <distribution-usage name="platformdirs" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="sys" finding="absolute" line="20" />
-      <module_usage name="os" finding="absolute" line="21" />
-      <module_usage name="io" finding="absolute" line="22" />
-      <module_usage name="time" finding="absolute" line="23" />
-      <module_usage name="re" finding="absolute" line="24" />
-      <module_usage name="types" finding="absolute" line="25" />
-      <module_usage name="zipfile" finding="absolute" line="26" />
-      <module_usage name="zipimport" finding="absolute" line="27" />
-      <module_usage name="warnings" finding="absolute" line="28" />
-      <module_usage name="stat" finding="absolute" line="29" />
-      <module_usage name="functools" finding="absolute" line="30" />
-      <module_usage name="pkgutil" finding="absolute" line="31" />
-      <module_usage name="operator" finding="absolute" line="32" />
-      <module_usage name="platform" finding="absolute" line="33" />
-      <module_usage name="collections" finding="absolute" line="34" />
-      <module_usage name="email.parser" finding="absolute" line="36" />
-      <module_usage name="errno" finding="absolute" line="37" />
-      <module_usage name="tempfile" finding="absolute" line="38" />
-      <module_usage name="textwrap" finding="absolute" line="39" />
-      <module_usage name="inspect" finding="absolute" line="40" />
-      <module_usage name="ntpath" finding="absolute" line="41" />
-      <module_usage name="posixpath" finding="absolute" line="42" />
-      <module_usage name="importlib" finding="absolute" line="43" />
-      <module_usage name="pkgutil" finding="absolute" line="44" />
-      <module_usage name="_imp" finding="absolute" line="47" />
-      <module_usage name="imp" finding="absolute" line="50" />
-      <module_usage name="os" finding="absolute" line="58" />
-      <module_usage name="os" finding="absolute" line="61" />
-      <module_usage name="os" finding="absolute" line="68" />
-      <module_usage name="ntpath" finding="absolute" line="69" />
-      <module_usage name="importlib.machinery" finding="absolute" line="72" />
-      <module_usage name="pkg_resources._vendor.text" finding="not-found" line="79" />
-      <module_usage name="pkg_resources.extern" finding="absolute" line="85" />
-      <module_usage name="pkg_resources.extern.platformdirs" finding="not-found" line="85" />
-      <module_usage name="pkg_resources.extern" finding="absolute" line="86" />
-      <module_usage name="pkg_resources.extern.packaging" finding="not-found" line="86" />
-      <module_usage name="pkg_resources._vendor.version" finding="not-found" line="88" />
-      <module_usage name="pkg_resources._vendor.specifiers" finding="not-found" line="89" />
-      <module_usage name="pkg_resources._vendor.requirements" finding="not-found" line="90" />
-      <module_usage name="pkg_resources._vendor.markers" finding="not-found" line="91" />
-      <module_usage name="pkg_resources._vendor.utils" finding="not-found" line="92" />
-      <module_usage name="sysconfig" finding="absolute" line="436" />
-      <module_usage name="__main__" finding="not-found" line="624" />
-      <module_usage name="ntpath" finding="absolute" line="1277" />
-      <module_usage name="io" finding="absolute" line="1497" />
-      <module_usage name="linecache" finding="absolute" line="1563" />
-      <module_usage name="ntpath" finding="absolute" line="1592" />
-      <module_usage name="ntpath" finding="absolute" line="1649" />
-      <module_usage name="ntpath" finding="absolute" line="1688" />
-      <module_usage name="ntpath" finding="absolute" line="1707" />
-      <module_usage name="ntpath" finding="absolute" line="1870" />
-      <module_usage name="ntpath" finding="absolute" line="2054" />
-      <module_usage name="ntpath" finding="absolute" line="2096" />
-      <module_usage name="ntpath" finding="absolute" line="2101" />
-      <module_usage name="ntpath" finding="absolute" line="2124" />
-      <module_usage name="ntpath" finding="absolute" line="2128" />
-      <module_usage name="ntpath" finding="absolute" line="2132" />
-      <module_usage name="ntpath" finding="absolute" line="2143" />
-      <module_usage name="ntpath" finding="absolute" line="2225" />
-      <module_usage name="ntpath" finding="absolute" line="2387" />
-      <module_usage name="ntpath" finding="absolute" line="2413" />
-      <module_usage name="ntpath" finding="absolute" line="2455" />
-      <module_usage name="ntpath" finding="absolute" line="2656" />
+      <module_usage name="__future__" finding="absolute" line="20" />
+      <module_usage name="sys" finding="absolute" line="22" />
+      <module_usage name="_imp" finding="absolute" line="27" />
+      <module_usage name="collections" finding="absolute" line="28" />
+      <module_usage name="email.parser" finding="absolute" line="29" />
+      <module_usage name="errno" finding="absolute" line="30" />
+      <module_usage name="functools" finding="absolute" line="31" />
+      <module_usage name="importlib" finding="absolute" line="32" />
+      <module_usage name="importlib.abc" finding="absolute" line="33" />
+      <module_usage name="importlib.machinery" finding="absolute" line="34" />
+      <module_usage name="inspect" finding="absolute" line="35" />
+      <module_usage name="io" finding="absolute" line="36" />
+      <module_usage name="ntpath" finding="absolute" line="37" />
+      <module_usage name="operator" finding="absolute" line="38" />
+      <module_usage name="os" finding="absolute" line="39" />
+      <module_usage name="pkgutil" finding="absolute" line="40" />
+      <module_usage name="platform" finding="absolute" line="41" />
+      <module_usage name="posixpath" finding="absolute" line="43" />
+      <module_usage name="re" finding="absolute" line="44" />
+      <module_usage name="stat" finding="absolute" line="45" />
+      <module_usage name="tempfile" finding="absolute" line="46" />
+      <module_usage name="textwrap" finding="absolute" line="47" />
+      <module_usage name="time" finding="absolute" line="48" />
+      <module_usage name="types" finding="absolute" line="49" />
+      <module_usage name="warnings" finding="absolute" line="50" />
+      <module_usage name="zipfile" finding="absolute" line="51" />
+      <module_usage name="zipimport" finding="absolute" line="52" />
+      <module_usage name="pkgutil" finding="absolute" line="53" />
+      <module_usage name="typing" finding="absolute" line="54" />
+      <module_usage name="ntpath" finding="absolute" line="74" />
+      <module_usage name="os" finding="absolute" line="79" />
+      <module_usage name="ntpath" finding="absolute" line="80" />
+      <module_usage name="os" finding="absolute" line="83" />
+      <module_usage name="packaging.markers" finding="absolute" line="90" />
+      <module_usage name="packaging.requirements" finding="absolute" line="91" />
+      <module_usage name="packaging.specifiers" finding="absolute" line="92" />
+      <module_usage name="packaging.utils" finding="absolute" line="93" />
+      <module_usage name="packaging.version" finding="absolute" line="94" />
+      <module_usage name="jaraco.text" finding="absolute" line="95" />
+      <module_usage name="jaraco.text.drop_comment" finding="not-found" line="95" />
+      <module_usage name="jaraco.text.join_continuation" finding="not-found" line="95" />
+      <module_usage name="jaraco.text.yield_lines" finding="not-found" line="95" />
+      <module_usage name="platformdirs" finding="absolute" line="96" />
+      <module_usage name="platformdirs.user_cache_dir" finding="not-found" line="96" />
+      <module_usage name="sysconfig" finding="absolute" line="451" />
+      <module_usage name="__main__" finding="not-found" line="654" />
+      <module_usage name="ntpath" finding="absolute" line="1454" />
+      <module_usage name="io" finding="absolute" line="1677" />
+      <module_usage name="linecache" finding="absolute" line="1745" />
+      <module_usage name="ntpath" finding="absolute" line="1778" />
+      <module_usage name="ntpath" finding="absolute" line="1835" />
+      <module_usage name="ntpath" finding="absolute" line="1876" />
+      <module_usage name="ntpath" finding="absolute" line="1895" />
+      <module_usage name="ntpath" finding="absolute" line="2068" />
+      <module_usage name="ntpath" finding="absolute" line="2256" />
+      <module_usage name="ntpath" finding="absolute" line="2304" />
+      <module_usage name="ntpath" finding="absolute" line="2308" />
+      <module_usage name="ntpath" finding="absolute" line="2333" />
+      <module_usage name="ntpath" finding="absolute" line="2337" />
+      <module_usage name="ntpath" finding="absolute" line="2341" />
+      <module_usage name="ntpath" finding="absolute" line="2351" />
+      <module_usage name="ntpath" finding="absolute" line="2432" />
+      <module_usage name="ntpath" finding="absolute" line="2605" />
+      <module_usage name="ntpath" finding="absolute" line="2640" />
+      <module_usage name="ntpath" finding="absolute" line="2690" />
+      <module_usage name="ntpath" finding="absolute" line="2940" />
     </module_usages>
   </module>
   <module name="pkg_resources-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Registering Nuitka loader with &quot;pkg_resources&quot;." source_path="${sys.prefix}\lib\site-packages\pkg_resources\pkg_resources-postLoad.py">
@@ -14803,452 +15163,6 @@
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="os" finding="absolute" line="3" />
       <module_usage name="pkg_resources" finding="absolute" line="4" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\__init__.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.importlib_resources" kind="UncompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\importlib_resources\__init__.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="pkg_resources._vendor.importlib_resources._common" finding="relative" line="3" />
-      <module_usage name="pkg_resources._vendor.importlib_resources._legacy" finding="relative" line="9" />
-      <module_usage name="pkg_resources._vendor.importlib_resources.abc" finding="relative" line="20" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.importlib_resources._adapters" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\importlib_resources\_adapters.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="contextlib" finding="absolute" line="1" />
-      <module_usage name="io" finding="absolute" line="2" />
-      <module_usage name="pkg_resources._vendor.importlib_resources" finding="absolute" line="4" />
-      <module_usage name="pkg_resources._vendor.importlib_resources.abc" finding="relative" line="4" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.importlib_resources._common" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\importlib_resources\_common.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="pathlib" finding="absolute" line="2" />
-      <module_usage name="tempfile" finding="absolute" line="3" />
-      <module_usage name="functools" finding="absolute" line="4" />
-      <module_usage name="contextlib" finding="absolute" line="5" />
-      <module_usage name="types" finding="absolute" line="6" />
-      <module_usage name="importlib" finding="absolute" line="7" />
-      <module_usage name="inspect" finding="absolute" line="8" />
-      <module_usage name="warnings" finding="absolute" line="9" />
-      <module_usage name="itertools" finding="absolute" line="10" />
-      <module_usage name="typing" finding="absolute" line="12" />
-      <module_usage name="pkg_resources._vendor.importlib_resources.abc" finding="relative" line="13" />
-      <module_usage name="pkg_resources._vendor.importlib_resources._compat" finding="relative" line="15" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.importlib_resources._compat" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\importlib_resources\_compat.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="abc" finding="absolute" line="3" />
-      <module_usage name="os" finding="absolute" line="4" />
-      <module_usage name="sys" finding="absolute" line="5" />
-      <module_usage name="pathlib" finding="absolute" line="6" />
-      <module_usage name="contextlib" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="8" />
-      <module_usage name="zipfile" finding="absolute" line="12" />
-      <module_usage name="typing" finding="absolute" line="18" />
-      <module_usage name="typing" finding="absolute" line="26" />
-      <module_usage name="pkg_resources._vendor.importlib_resources" finding="absolute" line="48" />
-      <module_usage name="pkg_resources._vendor.importlib_resources.readers" finding="relative" line="48" />
-      <module_usage name="pkg_resources._vendor.importlib_resources._adapters" finding="relative" line="48" />
-      <module_usage name="pkg_resources._vendor.importlib_resources" finding="absolute" line="99" />
-      <module_usage name="pkg_resources._vendor.importlib_resources._adapters" finding="relative" line="99" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.importlib_resources._itertools" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\importlib_resources\_itertools.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="itertools" finding="absolute" line="1" />
-      <module_usage name="typing" finding="absolute" line="3" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.importlib_resources._legacy" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\importlib_resources\_legacy.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="functools" finding="absolute" line="1" />
-      <module_usage name="os" finding="absolute" line="2" />
-      <module_usage name="pathlib" finding="absolute" line="3" />
-      <module_usage name="types" finding="absolute" line="4" />
-      <module_usage name="warnings" finding="absolute" line="5" />
-      <module_usage name="typing" finding="absolute" line="7" />
-      <module_usage name="pkg_resources._vendor.importlib_resources" finding="absolute" line="9" />
-      <module_usage name="pkg_resources._vendor.importlib_resources._common" finding="relative" line="9" />
-      <module_usage name="ntpath" finding="absolute" line="36" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.importlib_resources.abc" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\importlib_resources\abc.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="abc" finding="absolute" line="1" />
-      <module_usage name="io" finding="absolute" line="2" />
-      <module_usage name="itertools" finding="absolute" line="3" />
-      <module_usage name="pathlib" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="pkg_resources._vendor.importlib_resources._compat" finding="relative" line="7" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.importlib_resources.readers" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\importlib_resources\readers.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="1" />
-      <module_usage name="pathlib" finding="absolute" line="2" />
-      <module_usage name="operator" finding="absolute" line="3" />
-      <module_usage name="pkg_resources._vendor.importlib_resources" finding="absolute" line="5" />
-      <module_usage name="pkg_resources._vendor.importlib_resources.abc" finding="relative" line="5" />
-      <module_usage name="pkg_resources._vendor.importlib_resources._itertools" finding="relative" line="7" />
-      <module_usage name="pkg_resources._vendor.importlib_resources._compat" finding="relative" line="8" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.jaraco" kind="UncompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\jaraco\__init__.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.jaraco.context" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\jaraco\context.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="subprocess" finding="absolute" line="2" />
-      <module_usage name="contextlib" finding="absolute" line="3" />
-      <module_usage name="functools" finding="absolute" line="4" />
-      <module_usage name="tempfile" finding="absolute" line="5" />
-      <module_usage name="shutil" finding="absolute" line="6" />
-      <module_usage name="operator" finding="absolute" line="7" />
-      <module_usage name="warnings" finding="absolute" line="8" />
-      <module_usage name="functools" finding="absolute" line="39" />
-      <module_usage name="ntpath" finding="absolute" line="110" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.jaraco.functools" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\jaraco\functools.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="functools" finding="absolute" line="1" />
-      <module_usage name="time" finding="absolute" line="2" />
-      <module_usage name="inspect" finding="absolute" line="3" />
-      <module_usage name="collections" finding="absolute" line="4" />
-      <module_usage name="types" finding="absolute" line="5" />
-      <module_usage name="itertools" finding="absolute" line="6" />
-      <module_usage name="warnings" finding="absolute" line="7" />
-      <module_usage name="pkg_resources._vendor.more_itertools" finding="absolute" line="9" />
-      <module_usage name="typing" finding="absolute" line="11" />
-      <module_usage name="functools" finding="absolute" line="347" />
-      <module_usage name="functools" finding="absolute" line="399" />
-      <module_usage name="functools" finding="absolute" line="418" />
-      <module_usage name="functools" finding="absolute" line="470" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.jaraco.text" kind="UncompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\jaraco\text\__init__.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="3125" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="re" finding="absolute" line="1" />
-      <module_usage name="itertools" finding="absolute" line="2" />
-      <module_usage name="textwrap" finding="absolute" line="3" />
-      <module_usage name="functools" finding="absolute" line="4" />
-      <module_usage name="importlib.resources" finding="absolute" line="7" />
-      <module_usage name="pkg_resources._vendor.functools" finding="not-found" line="11" />
-      <module_usage name="pkg_resources._vendor.context" finding="not-found" line="12" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.more_itertools" kind="UncompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\more_itertools\__init__.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="pkg_resources._vendor.more_itertools.more" finding="relative" line="3" />
-      <module_usage name="pkg_resources._vendor.more_itertools.recipes" finding="relative" line="4" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.more_itertools.more" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\more_itertools\more.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="warnings" finding="absolute" line="1" />
-      <module_usage name="collections" finding="absolute" line="3" />
-      <module_usage name="collections.Counter" finding="not-found" line="3" />
-      <module_usage name="collections.defaultdict" finding="not-found" line="3" />
-      <module_usage name="collections.deque" finding="not-found" line="3" />
-      <module_usage name="collections.abc" finding="relative" line="3" />
-      <module_usage name="collections.abc" finding="absolute" line="4" />
-      <module_usage name="functools" finding="absolute" line="5" />
-      <module_usage name="heapq" finding="absolute" line="6" />
-      <module_usage name="itertools" finding="absolute" line="7" />
-      <module_usage name="math" finding="absolute" line="21" />
-      <module_usage name="queue" finding="absolute" line="22" />
-      <module_usage name="random" finding="absolute" line="23" />
-      <module_usage name="operator" finding="absolute" line="24" />
-      <module_usage name="sys" finding="absolute" line="25" />
-      <module_usage name="time" finding="absolute" line="26" />
-      <module_usage name="pkg_resources._vendor.more_itertools.recipes" finding="relative" line="28" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.more_itertools.recipes" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\more_itertools\recipes.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="math" finding="absolute" line="10" />
-      <module_usage name="operator" finding="absolute" line="11" />
-      <module_usage name="warnings" finding="absolute" line="12" />
-      <module_usage name="collections" finding="absolute" line="14" />
-      <module_usage name="collections.deque" finding="not-found" line="14" />
-      <module_usage name="collections.abc" finding="absolute" line="15" />
-      <module_usage name="functools" finding="absolute" line="16" />
-      <module_usage name="itertools" finding="absolute" line="17" />
-      <module_usage name="random" finding="absolute" line="31" />
-      <module_usage name="itertools" finding="absolute" line="300" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging" kind="UncompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\__init__.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging._elffile" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\_elffile.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="enum" finding="absolute" line="11" />
-      <module_usage name="os" finding="absolute" line="12" />
-      <module_usage name="struct" finding="absolute" line="13" />
-      <module_usage name="typing" finding="absolute" line="14" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging._manylinux" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\_manylinux.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="1" />
-      <module_usage name="contextlib" finding="absolute" line="2" />
-      <module_usage name="functools" finding="absolute" line="3" />
-      <module_usage name="os" finding="absolute" line="4" />
-      <module_usage name="re" finding="absolute" line="5" />
-      <module_usage name="sys" finding="absolute" line="6" />
-      <module_usage name="warnings" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="8" />
-      <module_usage name="pkg_resources._vendor.packaging._elffile" finding="relative" line="10" />
-      <module_usage name="ctypes" finding="absolute" line="98" />
-      <module_usage name="_manylinux" finding="not-found" line="176" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging._musllinux" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\_musllinux.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="functools" finding="absolute" line="7" />
-      <module_usage name="re" finding="absolute" line="8" />
-      <module_usage name="subprocess" finding="absolute" line="9" />
-      <module_usage name="sys" finding="absolute" line="10" />
-      <module_usage name="typing" finding="absolute" line="11" />
-      <module_usage name="pkg_resources._vendor.packaging._elffile" finding="relative" line="13" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging._parser" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\_parser.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="ast" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="8" />
-      <module_usage name="pkg_resources._vendor.packaging._tokenizer" finding="relative" line="10" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging._structures" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\_structures.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
-  <module name="pkg_resources._vendor.packaging._tokenizer" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\_tokenizer.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="contextlib" finding="absolute" line="1" />
-      <module_usage name="re" finding="absolute" line="2" />
-      <module_usage name="dataclasses" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="pkg_resources._vendor.packaging.specifiers" finding="relative" line="6" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging.markers" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\markers.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="operator" finding="absolute" line="5" />
-      <module_usage name="os" finding="absolute" line="6" />
-      <module_usage name="platform" finding="absolute" line="7" />
-      <module_usage name="sys" finding="absolute" line="8" />
-      <module_usage name="typing" finding="absolute" line="9" />
-      <module_usage name="pkg_resources._vendor.packaging._parser" finding="relative" line="11" />
-      <module_usage name="pkg_resources._vendor.packaging._tokenizer" finding="relative" line="19" />
-      <module_usage name="pkg_resources._vendor.packaging.specifiers" finding="relative" line="20" />
-      <module_usage name="pkg_resources._vendor.packaging.utils" finding="relative" line="21" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging.requirements" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\requirements.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="urllib.parse" finding="absolute" line="5" />
-      <module_usage name="typing" finding="absolute" line="6" />
-      <module_usage name="pkg_resources._vendor.packaging._parser" finding="relative" line="8" />
-      <module_usage name="pkg_resources._vendor.packaging._tokenizer" finding="relative" line="9" />
-      <module_usage name="pkg_resources._vendor.packaging.markers" finding="relative" line="10" />
-      <module_usage name="pkg_resources._vendor.packaging.specifiers" finding="relative" line="11" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging.specifiers" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\specifiers.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="abc" finding="absolute" line="11" />
-      <module_usage name="itertools" finding="absolute" line="12" />
-      <module_usage name="re" finding="absolute" line="13" />
-      <module_usage name="typing" finding="absolute" line="14" />
-      <module_usage name="pkg_resources._vendor.packaging.utils" finding="relative" line="26" />
-      <module_usage name="pkg_resources._vendor.packaging.version" finding="relative" line="27" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging.tags" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\tags.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="logging" finding="absolute" line="5" />
-      <module_usage name="platform" finding="absolute" line="6" />
-      <module_usage name="subprocess" finding="absolute" line="7" />
-      <module_usage name="sys" finding="absolute" line="8" />
-      <module_usage name="sysconfig" finding="absolute" line="9" />
-      <module_usage name="importlib.machinery" finding="absolute" line="10" />
-      <module_usage name="typing" finding="absolute" line="11" />
-      <module_usage name="pkg_resources._vendor.packaging" finding="absolute" line="24" />
-      <module_usage name="pkg_resources._vendor.packaging._manylinux" finding="relative" line="24" />
-      <module_usage name="pkg_resources._vendor.packaging._musllinux" finding="relative" line="24" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging.utils" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\utils.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="re" finding="absolute" line="5" />
-      <module_usage name="typing" finding="absolute" line="6" />
-      <module_usage name="pkg_resources._vendor.packaging.tags" finding="relative" line="8" />
-      <module_usage name="pkg_resources._vendor.packaging.version" finding="relative" line="9" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.packaging.version" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\packaging\version.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="10" />
-      <module_usage name="itertools" finding="absolute" line="11" />
-      <module_usage name="re" finding="absolute" line="12" />
-      <module_usage name="typing" finding="absolute" line="13" />
-      <module_usage name="pkg_resources._vendor.packaging._structures" finding="relative" line="15" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.platformdirs" kind="UncompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\platformdirs\__init__.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="__future__" finding="absolute" line="5" />
-      <module_usage name="os" finding="absolute" line="7" />
-      <module_usage name="sys" finding="absolute" line="8" />
-      <module_usage name="pathlib" finding="absolute" line="9" />
-      <module_usage name="typing" finding="absolute" line="12" />
-      <module_usage name="pkg_resources._vendor.platformdirs.api" finding="relative" line="16" />
-      <module_usage name="pkg_resources._vendor.platformdirs.version" finding="relative" line="17" />
-      <module_usage name="pkg_resources._vendor.platformdirs.version" finding="relative" line="18" />
-      <module_usage name="pkg_resources._vendor.platformdirs.windows" finding="relative" line="23" />
-      <module_usage name="pkg_resources._vendor.platformdirs.android" finding="relative" line="34" />
-      <module_usage name="pkg_resources._vendor.platformdirs.android" finding="relative" line="37" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.platformdirs.android" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\platformdirs\android.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="os" finding="absolute" line="3" />
-      <module_usage name="re" finding="absolute" line="4" />
-      <module_usage name="sys" finding="absolute" line="5" />
-      <module_usage name="functools" finding="absolute" line="6" />
-      <module_usage name="typing" finding="absolute" line="7" />
-      <module_usage name="pkg_resources._vendor.platformdirs.api" finding="relative" line="9" />
-      <module_usage name="ntpath" finding="absolute" line="59" />
-      <module_usage name="ntpath" finding="absolute" line="77" />
-      <module_usage name="jnius" finding="not-found" line="86" />
-      <module_usage name="jnius" finding="not-found" line="107" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.platformdirs.api" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\platformdirs\api.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="os" finding="absolute" line="3" />
-      <module_usage name="sys" finding="absolute" line="4" />
-      <module_usage name="abc" finding="absolute" line="5" />
-      <module_usage name="pathlib" finding="absolute" line="6" />
-      <module_usage name="typing" finding="absolute" line="9" />
-      <module_usage name="ntpath" finding="absolute" line="66" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources._vendor.platformdirs.version" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\platformdirs\version.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
-  <module name="pkg_resources._vendor.platformdirs.windows" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\_vendor\platformdirs\windows.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="ctypes" finding="absolute" line="3" />
-      <module_usage name="os" finding="absolute" line="4" />
-      <module_usage name="sys" finding="absolute" line="5" />
-      <module_usage name="functools" finding="absolute" line="6" />
-      <module_usage name="typing" finding="absolute" line="7" />
-      <module_usage name="pkg_resources._vendor.platformdirs.api" finding="relative" line="9" />
-      <module_usage name="ntpath" finding="absolute" line="44" />
-      <module_usage name="ntpath" finding="absolute" line="83" />
-      <module_usage name="ntpath" finding="absolute" line="99" />
-      <module_usage name="ntpath" finding="absolute" line="106" />
-      <module_usage name="winreg" finding="absolute" line="138" />
-      <module_usage name="winreg" finding="absolute" line="173" />
-    </module_usages>
-  </module>
-  <module name="pkg_resources.extern" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pkg_resources\extern\__init__.py" distribution="setuptools">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="importlib.util" finding="absolute" line="1" />
-      <module_usage name="sys" finding="absolute" line="2" />
     </module_usages>
   </module>
   <module name="pkgutil" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\pkgutil.py">
@@ -15277,7 +15191,7 @@
   </module>
   <module name="platform" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\platform.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not macos" tags_used="macos" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="86" merged_total="8734" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="115" />
@@ -15302,6 +15216,84 @@
       <module_usage name="ntpath" finding="absolute" line="595" />
       <module_usage name="struct" finding="absolute" line="664" />
       <module_usage name="vms_lib" finding="not-found" line="740" />
+    </module_usages>
+  </module>
+  <module name="platformdirs" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\platformdirs\__init__.py" distribution="platformdirs">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="31" merged_total="323" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="26" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="__future__" finding="absolute" line="8" />
+      <module_usage name="os" finding="absolute" line="10" />
+      <module_usage name="sys" finding="absolute" line="11" />
+      <module_usage name="platformdirs.api" finding="relative" line="14" />
+      <module_usage name="platformdirs.version" finding="relative" line="15" />
+      <module_usage name="platformdirs.version" finding="relative" line="16" />
+      <module_usage name="platformdirs.windows" finding="absolute" line="25" />
+      <module_usage name="platformdirs.android" finding="absolute" line="35" />
+      <module_usage name="platformdirs.android" finding="absolute" line="38" />
+    </module_usages>
+  </module>
+  <module name="platformdirs.android" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\platformdirs\android.py" distribution="platformdirs">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="70" merged_total="1631" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="70" merged_total="292" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" />
+      <module_usage name="os" finding="absolute" line="5" />
+      <module_usage name="re" finding="absolute" line="6" />
+      <module_usage name="sys" finding="absolute" line="7" />
+      <module_usage name="functools" finding="absolute" line="8" />
+      <module_usage name="typing" finding="absolute" line="9" />
+      <module_usage name="platformdirs.api" finding="relative" line="11" />
+      <module_usage name="ntpath" finding="absolute" line="69" />
+      <module_usage name="ntpath" finding="absolute" line="110" />
+      <module_usage name="android" finding="not-found" line="128" />
+      <module_usage name="jnius" finding="not-found" line="138" />
+      <module_usage name="jnius" finding="not-found" line="172" />
+      <module_usage name="jnius" finding="not-found" line="188" />
+      <module_usage name="jnius" finding="not-found" line="204" />
+      <module_usage name="jnius" finding="not-found" line="220" />
+      <module_usage name="jnius" finding="not-found" line="236" />
+    </module_usages>
+  </module>
+  <module name="platformdirs.api" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\platformdirs\api.py" distribution="platformdirs">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="241" merged_total="2406" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="241" merged_total="462" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" />
+      <module_usage name="os" finding="absolute" line="5" />
+      <module_usage name="abc" finding="absolute" line="6" />
+      <module_usage name="pathlib" finding="absolute" line="7" />
+      <module_usage name="ntpath" finding="absolute" line="86" />
+    </module_usages>
+  </module>
+  <module name="platformdirs.version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\platformdirs\version.py" distribution="platformdirs">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="1" merged_total="1" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages />
+  </module>
+  <module name="platformdirs.windows" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\setuptools\_vendor\platformdirs\windows.py" distribution="platformdirs">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="71" merged_total="1765" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="71" merged_total="289" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" />
+      <module_usage name="os" finding="absolute" line="5" />
+      <module_usage name="sys" finding="absolute" line="6" />
+      <module_usage name="functools" finding="absolute" line="7" />
+      <module_usage name="platformdirs.api" finding="relative" line="10" />
+      <module_usage name="ntpath" finding="absolute" line="49" />
+      <module_usage name="ntpath" finding="absolute" line="94" />
+      <module_usage name="ntpath" finding="absolute" line="134" />
+      <module_usage name="ntpath" finding="absolute" line="167" />
+      <module_usage name="ntpath" finding="absolute" line="170" />
+      <module_usage name="ntpath" finding="absolute" line="173" />
+      <module_usage name="ntpath" finding="absolute" line="176" />
+      <module_usage name="ntpath" finding="absolute" line="179" />
+      <module_usage name="winreg" finding="absolute" line="206" />
+      <module_usage name="ctypes" finding="absolute" line="219" />
+      <module_usage name="ntpath" finding="absolute" line="247" />
+      <module_usage name="ctypes" finding="absolute" line="254" />
+      <module_usage name="winreg" finding="absolute" line="261" />
     </module_usages>
   </module>
   <module name="poplib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\poplib.py">
@@ -15704,7 +15696,7 @@
     </module_usages>
   </module>
   <module name="pyclbr" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\pyclbr.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="59" merged_total="2307" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="ast" finding="absolute" line="44" />
@@ -15713,7 +15705,7 @@
     </module_usages>
   </module>
   <module name="pydoc" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\pydoc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="212" merged_total="39879" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="57" />
@@ -15837,7 +15829,7 @@
     </module_usages>
   </module>
   <module name="quopri" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\quopri.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="124" merged_total="2779" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="15" />
@@ -15846,7 +15838,7 @@
     </module_usages>
   </module>
   <module name="random" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\random.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="90" merged_total="6301" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="warnings" finding="absolute" line="48" />
@@ -16061,7 +16053,7 @@
     </module_usages>
   </module>
   <module name="sndhdr" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\sndhdr.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="1426" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="35" />
@@ -16280,7 +16272,7 @@
   </module>
   <module name="sysconfig" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\sysconfig.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not win32" tags_used="win32" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="99" merged_total="7172" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" />
@@ -16306,7 +16298,7 @@
     </module_usages>
   </module>
   <module name="tarfile" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\tarfile.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="140" merged_total="31062" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="40" />
@@ -16368,7 +16360,7 @@
     </module_usages>
   </module>
   <module name="threading" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\threading.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="55" merged_total="12346" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" />
@@ -16420,7 +16412,7 @@
     <module_usages />
   </module>
   <module name="tokenize" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\tokenize.py">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="350" merged_total="9994" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="codecs" finding="absolute" line="28" />
@@ -16436,7 +16428,7 @@
     </module_usages>
   </module>
   <module name="trace" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\trace.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="58" merged_total="6879" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="linecache" finding="absolute" line="52" />
@@ -16606,7 +16598,7 @@
     </module_usages>
   </module>
   <module name="uu" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\uu.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="76" merged_total="1610" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="33" />
@@ -16922,7 +16914,7 @@
     </module_usages>
   </module>
   <module name="xml.sax.xmlreader" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\xml\sax\xmlreader.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="1395" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="xml.sax" finding="absolute" line="4" />
@@ -16958,7 +16950,7 @@
     </module_usages>
   </module>
   <module name="zipfile" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\zipfile.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="165" merged_total="25520" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="6" />
@@ -17007,6 +16999,7 @@
     <memory_usage name="before_c_code_generation" value="volatile" />
     <memory_usage name="before_running_scons" value="volatile" />
   </performance>
+  <data_file name="jaraco\text\Lorem ipsum.txt" source="${sys.prefix}\lib\site-packages\setuptools\_vendor\jaraco\text\Lorem ipsum.txt" size="1335" reason="package data for 'jaraco.text'" tags="config,copy" />
   <data_file name="pandas\io\formats\templates\html.tpl" source="${sys.prefix}\lib\site-packages\pandas\io\formats\templates\html.tpl" size="412" reason="package data directory 'templates' for 'pandas.io.formats'" tags="config,copy,data-dir-contents" />
   <data_file name="pandas\io\formats\templates\html_style.tpl" source="${sys.prefix}\lib\site-packages\pandas\io\formats\templates\html_style.tpl" size="694" reason="package data directory 'templates' for 'pandas.io.formats'" tags="config,copy,data-dir-contents" />
   <data_file name="pandas\io\formats\templates\html_table.tpl" source="${sys.prefix}\lib\site-packages\pandas\io\formats\templates\html_table.tpl" size="1811" reason="package data directory 'templates' for 'pandas.io.formats'" tags="config,copy,data-dir-contents" />
@@ -17754,12 +17747,19 @@
   <distributions>
     <distribution name="Jinja2" version="3.1.4" installer="pip" />
     <distribution name="MarkupSafe" version="2.1.5" installer="pip" />
+    <distribution name="backports.tarfile" version="1.2.0" installer="pip" />
+    <distribution name="jaraco.context" version="5.3.0" installer="pip" />
+    <distribution name="jaraco.functools" version="4.0.1" installer="pip" />
+    <distribution name="jaraco.text" version="3.12.1" installer="pip" />
+    <distribution name="more-itertools" version="10.3.0" installer="pip" />
     <distribution name="numpy" version="2.0.0" installer="pip" />
+    <distribution name="packaging" version="24.1" installer="pip" />
     <distribution name="pandas" version="2.2.2" installer="pip" />
+    <distribution name="platformdirs" version="4.2.2" installer="pip" />
     <distribution name="pyarrow" version="16.1.0" installer="pip" />
     <distribution name="python-dateutil" version="2.9.0.post0" installer="pip" />
     <distribution name="pytz" version="2024.1" installer="pip" />
-    <distribution name="setuptools" version="68.0.0" installer="pip" />
+    <distribution name="setuptools" version="74.1.3" installer="pip" />
     <distribution name="six" version="1.16.0" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}\Scripts\python.EXE" python_flavor="CPython Official" python_version="3.10.11" os_name="Windows" os_release="11" arch_name="x86_64">
@@ -17771,6 +17771,7 @@
       <path value="${sys.real_prefix}" />
       <path value="${sys.prefix}" />
       <path value="${sys.prefix}\lib\site-packages" />
+      <path value="${sys.prefix}\lib\site-packages\setuptools\_vendor" />
     </search_path>
   </python>
   <user-data>
