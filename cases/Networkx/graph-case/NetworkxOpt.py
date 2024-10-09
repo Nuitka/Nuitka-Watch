@@ -12,6 +12,7 @@
 # nuitka-project: --noinclude-custom-mode=pandas.util.testing:error
 # nuitka-project: --noinclude-custom-mode=pandas.testing:error
 # nuitka-project: --noinclude-custom-mode=pandas.util._tester:error
+# nuitka-project: --noinclude-numba-mode=allow 
 
 from __future__ import print_function
 
