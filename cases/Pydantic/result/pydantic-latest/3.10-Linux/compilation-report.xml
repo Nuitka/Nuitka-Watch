@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.4.5" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.4.6" nuitka_commercial_version="not installed" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -4215,6 +4215,9 @@
   <module name="pydantic.mypy" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/mypy.py" distribution="pydantic">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="129" merged_total="15487" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="120" merged_total="2120" />
+    <distribution-usages>
+      <distribution-usage name="tomli" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
       <module_usage name="sys" finding="absolute" line="5" />
@@ -4240,7 +4243,7 @@
       <module_usage name="pydantic.version" finding="absolute" line="81" />
       <module_usage name="mypy.types" finding="not-found" line="84" />
       <module_usage name="mypy.types" finding="not-found" line="87" />
-      <module_usage name="tomli" finding="not-found" line="1305" />
+      <module_usage name="tomli" finding="absolute" line="1305" />
       <module_usage name="warnings" finding="absolute" line="1307" />
     </module_usages>
   </module>
@@ -4985,6 +4988,46 @@
       <module_usage name="token" finding="absolute" line="41" />
     </module_usages>
   </module>
+  <module name="tomli" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/tomli/__init__.py" distribution="tomli">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="3" merged_total="15" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="3" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="tomli._parser" finding="relative" line="8" />
+    </module_usages>
+  </module>
+  <module name="tomli._parser" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/tomli/_parser.py" distribution="tomli">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="78" merged_total="7613" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="78" merged_total="1223" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="5" />
+      <module_usage name="collections.abc" finding="absolute" line="7" />
+      <module_usage name="string" finding="absolute" line="8" />
+      <module_usage name="types" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="tomli._re" finding="relative" line="12" />
+      <module_usage name="tomli._types" finding="relative" line="20" />
+    </module_usages>
+  </module>
+  <module name="tomli._re" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/tomli/_re.py" distribution="tomli">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="21" merged_total="465" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="103" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="5" />
+      <module_usage name="datetime" finding="absolute" line="7" />
+      <module_usage name="functools" finding="absolute" line="8" />
+      <module_usage name="re" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="tomli._types" finding="relative" line="12" />
+    </module_usages>
+  </module>
+  <module name="tomli._types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/tomli/_types.py" distribution="tomli">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="3" merged_total="12" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="3" />
+    <module_usages>
+      <module_usage name="typing" finding="absolute" line="5" />
+    </module_usages>
+  </module>
   <module name="trace" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/trace.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -5296,9 +5339,9 @@
   <included_extension name="unicodedata.so" dest_path="unicodedata.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/unicodedata.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
   <included_extension name="zlib.so" dest_path="zlib.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/zlib.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
   <included_dll name="libbz2.so.1.0" dest_path="libbz2.so.1.0" source_path="/lib/x86_64-linux-gnu/libbz2.so.1.0" package="" ignored="no" reason="Used by '_bz2.so'" />
-  <included_dll name="libcrypto.so.3" dest_path="libcrypto.so.3" source_path="/lib/x86_64-linux-gnu/libcrypto.so.3" package="" ignored="no" reason="Used by '_hashlib.so'" />
+  <included_dll name="libcrypto.so.1.1" dest_path="libcrypto.so.1.1" source_path="/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1" package="" ignored="no" reason="Used by '_hashlib.so'" />
   <included_dll name="liblzma.so.5" dest_path="liblzma.so.5" source_path="/lib/x86_64-linux-gnu/liblzma.so.5" package="" ignored="no" reason="Used by '_lzma.so'" />
-  <included_dll name="libuuid.so.1" dest_path="libuuid.so.1" source_path="/lib/x86_64-linux-gnu/libuuid.so.1" package="" ignored="no" reason="Used by '_uuid.so'" />
+  <included_dll name="libuuid.so.1" dest_path="libuuid.so.1" source_path="/usr/lib/x86_64-linux-gnu/libuuid.so.1" package="" ignored="no" reason="Used by '_uuid.so'" />
   <command_line>
     <option value="--standalone" />
     <option value="/home/hayen/repos/Nuitka-Watch/cases/Pydantic/PydanticUsing.py" />
@@ -5331,15 +5374,17 @@
     <distribution name="annotated-types" version="0.7.0" installer="pip" />
     <distribution name="pydantic" version="2.8.2" installer="pip" />
     <distribution name="pydantic_core" version="2.20.1" installer="pip" />
+    <distribution name="tomli" version="2.0.1" installer="pip" />
     <distribution name="typing_extensions" version="4.12.2" installer="pip" />
   </distributions>
-  <python python_exe="${sys.prefix}/bin/python" python_flavor="Unknown" python_version="3.10.7" os_name="Linux" os_release="Ubuntu-Debian-24.04" arch_name="x86_64">
+  <python python_exe="${sys.prefix}/bin/python" python_flavor="Unknown" python_version="3.10.7" os_name="Linux" os_release="Debian-11" arch_name="x86_64">
     <search_path>
       <path value="${cwd}" />
       <path value="~/repos/Nuitka-Watch/cases/Pydantic" />
       <path value="${sys.real_prefix}/lib/python3.10" />
       <path value="${sys.real_prefix}/lib/python3.10/lib-dynload" />
       <path value="${sys.prefix}/lib/python3.10/site-packages" />
+      <path value="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor" />
     </search_path>
   </python>
   <user-data>
