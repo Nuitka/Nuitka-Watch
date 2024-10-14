@@ -7,6 +7,7 @@
 # nuitka-project: --nofollow-import-to=sklearn._build_utils
 # nuitka-project: --noinclude-custom-mode=matplotlib:warning
 # nuitka-project: --noinclude-custom-mode=pandas:warning
+# nuitka-project: --noinclude-numba-mode=allow 
 
 from __future__ import print_function
 
