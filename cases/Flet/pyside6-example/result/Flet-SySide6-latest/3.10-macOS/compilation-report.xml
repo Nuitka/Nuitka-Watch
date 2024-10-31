@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.4.11" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.5rc11" nuitka_commercial_version="not installed" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -744,6 +744,14 @@
       <module_usage name="anyio._core._typedattr" finding="relative" line="67" />
     </module_usages>
   </module>
+  <module name="anyio-preLoad" kind="CompiledPythonModule" usage="plugins" reason="Monkey patching &quot;anyio&quot; load environment." source_path="${sys.prefix}/lib/python3.10/site-packages/anyio/anyio-preLoad.py">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
   <module name="anyio._backends" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'anyio._backends._asyncio'." source_path="${sys.prefix}/lib/python3.10/site-packages/anyio/_backends/__init__.py" distribution="anyio">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
@@ -885,8 +893,8 @@
     </module_usages>
   </module>
   <module name="anyio._core._fileio" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/anyio/_core/_fileio.py" distribution="anyio">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="147" merged_total="3489" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="44" merged_total="448" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="147" merged_total="3485" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="44" merged_total="447" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="os" finding="absolute" line="3" />
@@ -902,6 +910,7 @@
       <module_usage name="anyio.abc" finding="relative" line="21" />
       <module_usage name="anyio.abc.AsyncResource" finding="not-found" line="21" />
       <module_usage name="posixpath" finding="absolute" line="452" />
+      <module_usage name="os" finding="absolute" line="576" />
     </module_usages>
   </module>
   <module name="anyio._core._resources" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/anyio/_core/_resources.py" distribution="anyio">
@@ -926,8 +935,8 @@
     </module_usages>
   </module>
   <module name="anyio._core._sockets" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/anyio/_core/_sockets.py" distribution="anyio">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="61" merged_total="4497" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="51" merged_total="719" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="61" merged_total="4493" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="51" merged_total="718" />
     <distribution-usages>
       <distribution-usage name="exceptiongroup" />
       <distribution-usage name="idna" />
@@ -2416,8 +2425,8 @@
     </module_usages>
   </module>
   <module name="click._compat" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/click/_compat.py" distribution="click">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="96" merged_total="3245" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="62" merged_total="510" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="96" merged_total="3242" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="62" merged_total="509" />
     <module_usages>
       <module_usage name="codecs" finding="absolute" line="1" />
       <module_usage name="io" finding="absolute" line="2" />
@@ -2482,7 +2491,7 @@
     </module_usages>
   </module>
   <module name="click.core" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/click/core.py" distribution="click">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="314" merged_total="27291" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="314" merged_total="27290" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="190" merged_total="4932" />
     <module_usages>
       <module_usage name="enum" finding="absolute" line="1" />
@@ -2654,8 +2663,8 @@
     </module_usages>
   </module>
   <module name="click.types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/click/types.py" distribution="click">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="110" merged_total="11559" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="101" merged_total="2151" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="110" merged_total="11556" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="101" merged_total="2150" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="stat" finding="absolute" line="2" />
@@ -3330,7 +3339,7 @@
     </module_usages>
   </module>
   <module name="dns.name" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dns/name.py" distribution="dnspython">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="124" merged_total="13283" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="124" merged_total="13282" />
     <optimization-time pass="2" time="volatile" />
     <distribution-usages>
       <distribution-usage name="idna" />
@@ -11191,8 +11200,8 @@
     </module_usages>
   </module>
   <module name="httpx._utils" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/httpx/_utils.py" distribution="httpx">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="61" merged_total="3740" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="59" merged_total="477" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="61" merged_total="3728" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="59" merged_total="475" />
     <distribution-usages>
       <distribution-usage name="sniffio" />
     </distribution-usages>
@@ -11846,8 +11855,8 @@
     </module_usages>
   </module>
   <module name="multipart.decoders" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/multipart/decoders.py" distribution="python-multipart">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="677" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="92" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="673" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="91" />
     <module_usages>
       <module_usage name="base64" finding="absolute" line="1" />
       <module_usage name="binascii" finding="absolute" line="2" />
@@ -15699,7 +15708,7 @@
     </module_usages>
   </module>
   <module name="rich.progress" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/rich/progress.py" distribution="rich">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="416" merged_total="17534" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="416" merged_total="17526" />
     <optimization-time pass="2" time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -16142,6 +16151,7 @@
       <module_usage name="posixpath" finding="absolute" line="216" />
       <module_usage name="posixpath" finding="absolute" line="222" />
       <module_usage name="posixpath" finding="absolute" line="298" />
+      <module_usage name="os" finding="absolute" line="300" />
       <module_usage name="posixpath" finding="absolute" line="355" />
       <module_usage name="posixpath" finding="absolute" line="416" />
       <module_usage name="posixpath" finding="absolute" line="433" />
@@ -16150,8 +16160,12 @@
       <module_usage name="posixpath" finding="absolute" line="592" />
       <module_usage name="posixpath" finding="absolute" line="612" />
       <module_usage name="posixpath" finding="absolute" line="635" />
+      <module_usage name="os" finding="absolute" line="646" />
       <module_usage name="posixpath" finding="absolute" line="656" />
       <module_usage name="posixpath" finding="absolute" line="672" />
+      <module_usage name="os" finding="absolute" line="682" />
+      <module_usage name="os" finding="absolute" line="685" />
+      <module_usage name="os" finding="absolute" line="714" />
       <module_usage name="posixpath" finding="absolute" line="723" />
       <module_usage name="posixpath" finding="absolute" line="736" />
       <module_usage name="posixpath" finding="absolute" line="746" />
@@ -16597,8 +16611,8 @@
     </module_usages>
   </module>
   <module name="starlette.responses" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/starlette/responses.py" distribution="starlette">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="3594" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="40" merged_total="672" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="3591" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="40" merged_total="671" />
     <distribution-usages>
       <distribution-usage name="anyio" />
     </distribution-usages>
@@ -16622,11 +16636,12 @@
       <module_usage name="starlette.concurrency" finding="absolute" line="20" />
       <module_usage name="starlette.datastructures" finding="absolute" line="21" />
       <module_usage name="starlette.types" finding="absolute" line="22" />
+      <module_usage name="os" finding="absolute" line="315" />
     </module_usages>
   </module>
   <module name="starlette.routing" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/starlette/routing.py" distribution="starlette">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="70" merged_total="11301" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="67" merged_total="1793" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="70" merged_total="11296" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="67" merged_total="1792" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="contextlib" finding="absolute" line="3" />
@@ -16658,8 +16673,8 @@
     </module_usages>
   </module>
   <module name="starlette.staticfiles" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/starlette/staticfiles.py" distribution="starlette">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="68" merged_total="2256" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="66" merged_total="418" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="68" merged_total="2250" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="66" merged_total="416" />
     <distribution-usages>
       <distribution-usage name="anyio" />
     </distribution-usages>
@@ -16685,6 +16700,7 @@
       <module_usage name="posixpath" finding="absolute" line="157" />
       <module_usage name="posixpath" finding="absolute" line="158" />
       <module_usage name="posixpath" finding="absolute" line="159" />
+      <module_usage name="os" finding="absolute" line="193" />
     </module_usages>
   </module>
   <module name="starlette.status" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/starlette/status.py" distribution="starlette">
@@ -17607,8 +17623,8 @@
     </module_usages>
   </module>
   <module name="uvicorn.server" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/uvicorn/server.py" distribution="uvicorn">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="97" merged_total="3280" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="77" merged_total="612" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="97" merged_total="3277" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="76" merged_total="611" />
     <distribution-usages>
       <distribution-usage name="click" />
     </distribution-usages>
@@ -18712,6 +18728,7 @@
     <plugin name="options-nanny" user_enabled="no" />
     <plugin name="pbr-compat" user_enabled="no" />
     <plugin name="pkg-resources" user_enabled="no" />
+    <plugin name="playwright" user_enabled="no" />
     <plugin name="pywebview" user_enabled="no" />
     <plugin name="spacy" user_enabled="no" />
     <plugin name="transformers" user_enabled="no" />
