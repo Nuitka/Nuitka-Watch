@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.5rc11" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.5.1" nuitka_commercial_version="not installed" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -4339,7 +4339,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing" kind="UncompiledPythonPackage" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}/lib/python3.10/multiprocessing/__init__.py">
-    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="7" merged_total="149" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -4397,7 +4397,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.context" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}/lib/python3.10/multiprocessing/context.py">
-    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="82" merged_total="4626" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -4737,7 +4737,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.spawn" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}/lib/python3.10/multiprocessing/spawn.py">
-    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="72" merged_total="1528" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="11" />
@@ -7394,6 +7394,7 @@
     </module_usages>
   </module>
   <module name="pandas" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pandas/__init__.py" distribution="pandas">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_numba" tags_used="use_numba" result="true" />
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="56" merged_total="784" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="56" merged_total="154" />
     <module_usages>
@@ -8046,33 +8047,6 @@
       <module_usage name="pandas.compat._optional" finding="absolute" line="15" />
     </module_usages>
   </module>
-  <module name="pandas.core._numba.extensions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pandas/core/_numba/extensions.py" distribution="pandas">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="69" merged_total="5000" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="69" merged_total="944" />
-    <distribution-usages>
-      <distribution-usage name="numpy" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="11" />
-      <module_usage name="contextlib" finding="absolute" line="13" />
-      <module_usage name="operator" finding="absolute" line="14" />
-      <module_usage name="numba" finding="not-found" line="16" />
-      <module_usage name="numba" finding="not-found" line="17" />
-      <module_usage name="numba.core" finding="not-found" line="18" />
-      <module_usage name="numba.core.datamodel" finding="not-found" line="19" />
-      <module_usage name="numba.core.extending" finding="not-found" line="20" />
-      <module_usage name="numba.core.imputils" finding="not-found" line="33" />
-      <module_usage name="numpy" finding="absolute" line="34" />
-      <module_usage name="pandas._libs" finding="absolute" line="36" />
-      <module_usage name="pandas._libs.lib" finding="relative" line="36" />
-      <module_usage name="pandas.core.indexes.base" finding="absolute" line="38" />
-      <module_usage name="pandas.core.indexing" finding="absolute" line="39" />
-      <module_usage name="pandas.core.internals" finding="absolute" line="40" />
-      <module_usage name="pandas.core.internals.SingleBlockManager" finding="not-found" line="40" />
-      <module_usage name="pandas.core.series" finding="absolute" line="41" />
-      <module_usage name="numba.typed" finding="not-found" line="257" />
-    </module_usages>
-  </module>
   <module name="pandas.core.accessor" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pandas/core/accessor.py" distribution="pandas">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="33" merged_total="911" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="128" />
@@ -8227,12 +8201,12 @@
       <module_usage name="pandas.Series" finding="not-found" line="1103" />
       <module_usage name="pandas" finding="absolute" line="1147" />
       <module_usage name="pandas.Series" finding="not-found" line="1147" />
-      <module_usage name="pandas.core._numba.extensions" finding="absolute" line="1151" />
-      <module_usage name="pandas.core._numba.extensions" finding="absolute" line="1174" />
+      <module_usage name="pandas.core._numba.extensions" finding="excluded" line="1151" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'pandas' for 'pandas.core._numba.extensions'" />
+      <module_usage name="pandas.core._numba.extensions" finding="excluded" line="1174" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'pandas' for 'pandas.core._numba.extensions'" />
       <module_usage name="pandas" finding="absolute" line="1289" />
       <module_usage name="pandas.Series" finding="not-found" line="1289" />
-      <module_usage name="pandas.core._numba.extensions" finding="absolute" line="1290" />
-      <module_usage name="pandas.core._numba.extensions" finding="absolute" line="1318" />
+      <module_usage name="pandas.core._numba.extensions" finding="excluded" line="1290" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'pandas' for 'pandas.core._numba.extensions'" />
+      <module_usage name="pandas.core._numba.extensions" finding="excluded" line="1318" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'pandas' for 'pandas.core._numba.extensions'" />
       <module_usage name="pandas.core.groupby.generic" finding="absolute" line="1578" />
       <module_usage name="pandas.core.indexes.base" finding="absolute" line="1768" />
       <module_usage name="pandas.core.indexes.base" finding="absolute" line="1852" />
@@ -10353,7 +10327,7 @@
     </module_usages>
   </module>
   <module name="pandas.core.generic" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pandas/core/generic.py" distribution="pandas">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="1285" merged_total="63388" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="1285" merged_total="63383" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="1277" merged_total="8640" />
     <distribution-usages>
       <distribution-usage name="numpy" />

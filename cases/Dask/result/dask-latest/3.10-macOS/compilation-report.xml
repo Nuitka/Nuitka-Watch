@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.5rc11" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.5.1" nuitka_commercial_version="not installed" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="8" merged_total="81" />
     <optimization-time pass="2" time="volatile" />
@@ -1728,7 +1728,7 @@
     </module_usages>
   </module>
   <module name="code" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/code.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="33" merged_total="1751" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="1830" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="8" />
@@ -12237,8 +12237,8 @@
     </module_usages>
   </module>
   <module name="fsspec.implementations.local" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/fsspec/implementations/local.py" distribution="fsspec">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="128" merged_total="4018" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="670" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="128" merged_total="4113" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="46" merged_total="697" />
     <module_usages>
       <module_usage name="datetime" finding="absolute" line="1" />
       <module_usage name="io" finding="absolute" line="2" />
@@ -12489,7 +12489,7 @@
     </module_usages>
   </module>
   <module name="glob" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/glob.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="62" merged_total="2814" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="62" merged_total="2872" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="contextlib" finding="absolute" line="3" />
@@ -15160,7 +15160,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.context" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}/lib/python3.10/multiprocessing/context.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="82" merged_total="4624" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="82" merged_total="4621" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -15517,7 +15517,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.spawn" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}/lib/python3.10/multiprocessing/spawn.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="72" merged_total="1657" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="72" merged_total="1528" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="11" />
@@ -23972,6 +23972,7 @@
     </module_usages>
   </module>
   <module name="pandas" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pandas/__init__.py" distribution="pandas">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_numba" tags_used="use_numba" result="false" />
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="56" merged_total="784" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="56" merged_total="154" />
     <module_usages>
