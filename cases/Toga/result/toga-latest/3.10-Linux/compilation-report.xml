@@ -190,6 +190,7 @@
       <module_usage name="_strptime" finding="absolute" line="1" />
       <module_usage name="_struct" finding="absolute" line="1" />
       <module_usage name="_sysconfigdata__linux_x86_64-linux-gnu" finding="absolute" line="1" />
+      <module_usage name="_sysconfigdata_d_linux_x86_64-linux-gnu" finding="absolute" line="1" />
       <module_usage name="_threading_local" finding="absolute" line="1" />
       <module_usage name="_weakrefset" finding="absolute" line="1" />
       <module_usage name="base64" finding="absolute" line="1" />
@@ -607,6 +608,11 @@
     <module_usages />
   </module>
   <module name="_sysconfigdata__linux_x86_64-linux-gnu" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/_sysconfigdata__linux_x86_64-linux-gnu.py">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="_sysconfigdata_d_linux_x86_64-linux-gnu" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/_sysconfigdata_d_linux_x86_64-linux-gnu.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -1312,9 +1318,9 @@
     <module_usages>
       <module_usage name="string" finding="absolute" line="45" />
       <module_usage name="sys" finding="absolute" line="45" />
-      <module_usage name="readline" finding="absolute" line="108" />
-      <module_usage name="readline" finding="absolute" line="144" />
-      <module_usage name="readline" finding="absolute" line="258" />
+      <module_usage name="readline" finding="not-found" line="108" />
+      <module_usage name="readline" finding="not-found" line="144" />
+      <module_usage name="readline" finding="not-found" line="258" />
     </module_usages>
   </module>
   <module name="code" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/code.py">
@@ -1324,7 +1330,7 @@
       <module_usage name="sys" finding="absolute" line="8" />
       <module_usage name="traceback" finding="absolute" line="9" />
       <module_usage name="codeop" finding="absolute" line="10" />
-      <module_usage name="readline" finding="absolute" line="298" />
+      <module_usage name="readline" finding="not-found" line="298" />
     </module_usages>
   </module>
   <module name="codecs" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.10/codecs.py">
@@ -3798,7 +3804,7 @@
       <module_usage name="re" finding="absolute" line="641" />
     </module_usages>
   </module>
-  <module name="jaraco" kind="CompiledPythonNamespacePackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/jaraco" distribution="jaraco.context,jaraco.functools,jaraco.text">
+  <module name="jaraco" kind="CompiledPythonNamespacePackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/jaraco" distribution="jaraco.collections,jaraco.context,jaraco.functools,jaraco.text">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -3806,7 +3812,7 @@
       <module_usage name="os" finding="absolute" line="1" />
     </module_usages>
   </module>
-  <module name="jaraco.context" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/jaraco/context.py" distribution="jaraco.context,jaraco.functools,jaraco.text">
+  <module name="jaraco.context" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/jaraco/context.py" distribution="jaraco.collections,jaraco.context,jaraco.functools,jaraco.text">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="27" merged_total="2400" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="370" />
     <distribution-usages>
@@ -3830,7 +3836,7 @@
       <module_usage name="posixpath" finding="absolute" line="181" />
     </module_usages>
   </module>
-  <module name="jaraco.functools" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/jaraco/functools/__init__.py" distribution="jaraco.context,jaraco.functools,jaraco.text">
+  <module name="jaraco.functools" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/jaraco/functools/__init__.py" distribution="jaraco.collections,jaraco.context,jaraco.functools,jaraco.text">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="19" merged_total="1734" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="231" />
     <distribution-usages>
@@ -3854,7 +3860,7 @@
       <module_usage name="functools" finding="absolute" line="633" />
     </module_usages>
   </module>
-  <module name="jaraco.text" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/jaraco/text/__init__.py" distribution="jaraco.context,jaraco.functools,jaraco.text">
+  <module name="jaraco.text" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/jaraco/text/__init__.py" distribution="jaraco.collections,jaraco.context,jaraco.functools,jaraco.text">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="3131" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="28" merged_total="445" />
     <module_usages>
@@ -4674,7 +4680,7 @@
       <module_usage name="typing" finding="absolute" line="10" />
       <module_usage name="packaging._elffile" finding="relative" line="12" />
       <module_usage name="ctypes" finding="absolute" line="109" />
-      <module_usage name="_manylinux" finding="not-found" line="187" />
+      <module_usage name="_manylinux" finding="not-found" line="188" />
     </module_usages>
   </module>
   <module name="packaging._musllinux" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/packaging/_musllinux.py" distribution="packaging">
@@ -4784,10 +4790,11 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
-      <module_usage name="re" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="8" />
-      <module_usage name="packaging.tags" finding="relative" line="10" />
-      <module_usage name="packaging.version" finding="relative" line="11" />
+      <module_usage name="functools" finding="absolute" line="7" />
+      <module_usage name="re" finding="absolute" line="8" />
+      <module_usage name="typing" finding="absolute" line="9" />
+      <module_usage name="packaging.tags" finding="relative" line="11" />
+      <module_usage name="packaging.version" finding="relative" line="12" />
     </module_usages>
   </module>
   <module name="packaging.version" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/packaging/version.py" distribution="packaging">
@@ -4880,6 +4887,7 @@
     <optimization-time pass="2" time="volatile" />
     <distribution-usages>
       <distribution-usage name="packaging" />
+      <distribution-usage name="jaraco.collections" />
       <distribution-usage name="jaraco.context" />
       <distribution-usage name="jaraco.functools" />
       <distribution-usage name="jaraco.text" />
@@ -4914,45 +4922,46 @@
       <module_usage name="warnings" finding="absolute" line="50" />
       <module_usage name="zipfile" finding="absolute" line="51" />
       <module_usage name="zipimport" finding="absolute" line="52" />
-      <module_usage name="pkgutil" finding="absolute" line="53" />
-      <module_usage name="typing" finding="absolute" line="54" />
-      <module_usage name="posixpath" finding="absolute" line="74" />
-      <module_usage name="os" finding="absolute" line="79" />
-      <module_usage name="posixpath" finding="absolute" line="80" />
-      <module_usage name="os" finding="absolute" line="83" />
-      <module_usage name="packaging.markers" finding="absolute" line="90" />
-      <module_usage name="packaging.requirements" finding="absolute" line="91" />
-      <module_usage name="packaging.specifiers" finding="absolute" line="92" />
-      <module_usage name="packaging.utils" finding="absolute" line="93" />
-      <module_usage name="packaging.version" finding="absolute" line="94" />
-      <module_usage name="jaraco.text" finding="absolute" line="95" />
-      <module_usage name="jaraco.text.drop_comment" finding="not-found" line="95" />
-      <module_usage name="jaraco.text.join_continuation" finding="not-found" line="95" />
-      <module_usage name="jaraco.text.yield_lines" finding="not-found" line="95" />
-      <module_usage name="platformdirs" finding="absolute" line="96" />
-      <module_usage name="platformdirs.user_cache_dir" finding="not-found" line="96" />
-      <module_usage name="sysconfig" finding="absolute" line="451" />
-      <module_usage name="__main__" finding="not-found" line="654" />
-      <module_usage name="posixpath" finding="absolute" line="1454" />
-      <module_usage name="io" finding="absolute" line="1677" />
-      <module_usage name="linecache" finding="absolute" line="1745" />
-      <module_usage name="posixpath" finding="absolute" line="1778" />
-      <module_usage name="posixpath" finding="absolute" line="1835" />
-      <module_usage name="posixpath" finding="absolute" line="1876" />
-      <module_usage name="posixpath" finding="absolute" line="1895" />
-      <module_usage name="posixpath" finding="absolute" line="2068" />
-      <module_usage name="posixpath" finding="absolute" line="2256" />
-      <module_usage name="posixpath" finding="absolute" line="2304" />
-      <module_usage name="posixpath" finding="absolute" line="2308" />
-      <module_usage name="posixpath" finding="absolute" line="2333" />
-      <module_usage name="posixpath" finding="absolute" line="2337" />
-      <module_usage name="posixpath" finding="absolute" line="2341" />
-      <module_usage name="posixpath" finding="absolute" line="2351" />
-      <module_usage name="posixpath" finding="absolute" line="2432" />
-      <module_usage name="posixpath" finding="absolute" line="2605" />
-      <module_usage name="posixpath" finding="absolute" line="2640" />
-      <module_usage name="posixpath" finding="absolute" line="2690" />
-      <module_usage name="posixpath" finding="absolute" line="2940" />
+      <module_usage name="collections.abc" finding="absolute" line="53" />
+      <module_usage name="pkgutil" finding="absolute" line="54" />
+      <module_usage name="typing" finding="absolute" line="55" />
+      <module_usage name="posixpath" finding="absolute" line="69" />
+      <module_usage name="os" finding="absolute" line="74" />
+      <module_usage name="posixpath" finding="absolute" line="75" />
+      <module_usage name="os" finding="absolute" line="78" />
+      <module_usage name="packaging.markers" finding="absolute" line="85" />
+      <module_usage name="packaging.requirements" finding="absolute" line="86" />
+      <module_usage name="packaging.specifiers" finding="absolute" line="87" />
+      <module_usage name="packaging.utils" finding="absolute" line="88" />
+      <module_usage name="packaging.version" finding="absolute" line="89" />
+      <module_usage name="jaraco.text" finding="absolute" line="90" />
+      <module_usage name="jaraco.text.drop_comment" finding="not-found" line="90" />
+      <module_usage name="jaraco.text.join_continuation" finding="not-found" line="90" />
+      <module_usage name="jaraco.text.yield_lines" finding="not-found" line="90" />
+      <module_usage name="platformdirs" finding="absolute" line="91" />
+      <module_usage name="platformdirs.user_cache_dir" finding="not-found" line="91" />
+      <module_usage name="sysconfig" finding="absolute" line="446" />
+      <module_usage name="__main__" finding="not-found" line="649" />
+      <module_usage name="posixpath" finding="absolute" line="1449" />
+      <module_usage name="io" finding="absolute" line="1672" />
+      <module_usage name="linecache" finding="absolute" line="1740" />
+      <module_usage name="posixpath" finding="absolute" line="1773" />
+      <module_usage name="posixpath" finding="absolute" line="1830" />
+      <module_usage name="posixpath" finding="absolute" line="1871" />
+      <module_usage name="posixpath" finding="absolute" line="1890" />
+      <module_usage name="posixpath" finding="absolute" line="2063" />
+      <module_usage name="posixpath" finding="absolute" line="2251" />
+      <module_usage name="posixpath" finding="absolute" line="2299" />
+      <module_usage name="posixpath" finding="absolute" line="2303" />
+      <module_usage name="posixpath" finding="absolute" line="2328" />
+      <module_usage name="posixpath" finding="absolute" line="2332" />
+      <module_usage name="posixpath" finding="absolute" line="2336" />
+      <module_usage name="posixpath" finding="absolute" line="2346" />
+      <module_usage name="posixpath" finding="absolute" line="2427" />
+      <module_usage name="posixpath" finding="absolute" line="2600" />
+      <module_usage name="posixpath" finding="absolute" line="2635" />
+      <module_usage name="posixpath" finding="absolute" line="2685" />
+      <module_usage name="posixpath" finding="absolute" line="2935" />
     </module_usages>
   </module>
   <module name="pkg_resources-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Registering Nuitka loader with &quot;pkg_resources&quot;." source_path="${sys.prefix}/lib/python3.10/site-packages/pkg_resources/pkg_resources-postLoad.py">
@@ -5257,7 +5266,7 @@
       <module_usage name="__main__" finding="not-found" line="35" />
       <module_usage name="keyword" finding="absolute" line="116" />
       <module_usage name="re" finding="absolute" line="149" />
-      <module_usage name="readline" finding="absolute" line="210" />
+      <module_usage name="readline" finding="not-found" line="210" />
     </module_usages>
   </module>
   <module name="runpy" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/runpy.py">
@@ -5781,8 +5790,8 @@
     </module_usages>
   </module>
   <module name="toga.app" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/toga/app.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="147" merged_total="6334" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="99" merged_total="778" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="147" merged_total="6416" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="99" merged_total="790" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="asyncio" finding="absolute" line="3" />
@@ -5822,8 +5831,8 @@
     </module_usages>
   </module>
   <module name="toga.command" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/toga/command.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="62" merged_total="2522" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="34" merged_total="353" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="62" merged_total="2527" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="34" merged_total="354" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="collections.abc" finding="absolute" line="3" />
@@ -5857,8 +5866,8 @@
     </module_usages>
   </module>
   <module name="toga.documents" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/toga/documents.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="58" merged_total="3762" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="53" merged_total="479" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="58" merged_total="3769" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="53" merged_total="480" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="itertools" finding="absolute" line="3" />
@@ -5866,7 +5875,6 @@
       <module_usage name="abc" finding="absolute" line="5" />
       <module_usage name="collections.abc" finding="absolute" line="6" />
       <module_usage name="pathlib" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="8" />
       <module_usage name="toga" finding="absolute" line="10" />
       <module_usage name="toga" finding="absolute" line="11" />
       <module_usage name="toga.dialogs" finding="relative" line="11" />
@@ -5902,7 +5910,8 @@
       <module_usage name="traceback" finding="absolute" line="6" />
       <module_usage name="warnings" finding="absolute" line="7" />
       <module_usage name="abc" finding="absolute" line="8" />
-      <module_usage name="typing" finding="absolute" line="9" />
+      <module_usage name="collections.abc" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="10" />
     </module_usages>
   </module>
   <module name="toga.hardware" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/toga/hardware/__init__.py" distribution="toga-core">
@@ -5949,8 +5958,8 @@
     </module_usages>
   </module>
   <module name="toga.images" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/toga/images.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="89" merged_total="1305" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="72" merged_total="219" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="89" merged_total="1300" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="72" merged_total="218" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="importlib" finding="absolute" line="3" />
@@ -6073,14 +6082,13 @@
     </module_usages>
   </module>
   <module name="toga.statusicons" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/toga/statusicons.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="1785" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="286" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="1790" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="287" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="3" />
       <module_usage name="abc" finding="absolute" line="4" />
       <module_usage name="collections.abc" finding="absolute" line="5" />
-      <module_usage name="typing" finding="absolute" line="6" />
       <module_usage name="toga" finding="absolute" line="8" />
       <module_usage name="toga.command" finding="absolute" line="9" />
       <module_usage name="toga.handlers" finding="absolute" line="10" />
@@ -7576,30 +7584,42 @@
     <memory_usage name="before_c_code_generation" value="volatile" />
     <memory_usage name="before_running_scons" value="volatile" />
   </performance>
-  <data_file name="girepository/Atk-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Atk-1.0.typelib" size="74264" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Atk-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Atk-1.0.typelib" size="74448" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Atspi-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Atspi-2.0.typelib" size="54636" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
   <data_file name="girepository/DBus-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/DBus-1.0.typelib" size="712" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
   <data_file name="girepository/DBusGLib-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/DBusGLib-1.0.typelib" size="560" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/GIRepository-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GIRepository-2.0.typelib" size="28216" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/GIRepository-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GIRepository-2.0.typelib" size="28936" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
   <data_file name="girepository/GL-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GL-1.0.typelib" size="948" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/GLib-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GLib-2.0.typelib" size="201972" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/GModule-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GModule-2.0.typelib" size="1340" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/GObject-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GObject-2.0.typelib" size="59324" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/Gdk-3.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Gdk-3.0.typelib" size="235816" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/GdkPixbuf-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GdkPixbuf-2.0.typelib" size="16268" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/GLib-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GLib-2.0.typelib" size="208716" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/GModule-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GModule-2.0.typelib" size="1668" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/GObject-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GObject-2.0.typelib" size="61732" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Gdk-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Gdk-2.0.typelib" size="237940" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Gdk-3.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Gdk-3.0.typelib" size="235840" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/GdkPixbuf-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GdkPixbuf-2.0.typelib" size="19872" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
   <data_file name="girepository/GdkPixdata-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GdkPixdata-2.0.typelib" size="2372" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/GdkX11-3.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GdkX11-3.0.typelib" size="10928" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/Gio-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Gio-2.0.typelib" size="355120" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/Gtk-3.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Gtk-3.0.typelib" size="677812" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/HarfBuzz-0.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/HarfBuzz-0.0.typelib" size="119284" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/Pango-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Pango-1.0.typelib" size="71284" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/GdkX11-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GdkX11-2.0.typelib" size="5768" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/GdkX11-3.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GdkX11-3.0.typelib" size="10944" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Gio-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Gio-2.0.typelib" size="365972" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Gst-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Gst-1.0.typelib" size="241200" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/GstBase-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GstBase-1.0.typelib" size="54452" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/GstCheck-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GstCheck-1.0.typelib" size="14636" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/GstController-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GstController-1.0.typelib" size="7212" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/GstNet-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/GstNet-1.0.typelib" size="6532" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Gtk-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Gtk-2.0.typelib" size="583720" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Gtk-3.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Gtk-3.0.typelib" size="679292" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/HarfBuzz-0.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/HarfBuzz-0.0.typelib" size="130016" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Notify-0.7.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Notify-0.7.typelib" size="5204" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Pango-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Pango-1.0.typelib" size="76664" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
   <data_file name="girepository/PangoCairo-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/PangoCairo-1.0.typelib" size="4412" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/PangoFT2-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/PangoFT2-1.0.typelib" size="2824" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/PangoFc-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/PangoFc-1.0.typelib" size="3404" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/PangoFT2-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/PangoFT2-1.0.typelib" size="2856" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/PangoFc-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/PangoFc-1.0.typelib" size="3928" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
   <data_file name="girepository/PangoOT-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/PangoOT-1.0.typelib" size="5584" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/PangoXft-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/PangoXft-1.0.typelib" size="4248" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/PangoXft-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/PangoXft-1.0.typelib" size="4280" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Secret-1.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Secret-1.typelib" size="25780" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
   <data_file name="girepository/Vulkan-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Vulkan-1.0.typelib" size="59380" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/Wnck-3.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/Wnck-3.0.typelib" size="32520" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
   <data_file name="girepository/cairo-1.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/cairo-1.0.typelib" size="14344" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
-  <data_file name="girepository/fontconfig-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/fontconfig-2.0.typelib" size="348" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
+  <data_file name="girepository/fontconfig-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/fontconfig-2.0.typelib" size="400" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
   <data_file name="girepository/freetype2-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/freetype2-2.0.typelib" size="420" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
   <data_file name="girepository/libxml2-2.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/libxml2-2.0.typelib" size="668" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
   <data_file name="girepository/xfixes-4.0.typelib" source="/usr/lib/x86_64-linux-gnu/girepository-1.0/xfixes-4.0.typelib" size="240" reason="typelib files for gi modules" tags="copy,data-dir-contents" />
@@ -7661,17 +7681,17 @@
   <included_extension name="unicodedata.so" dest_path="unicodedata.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/unicodedata.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
   <included_extension name="zlib.so" dest_path="zlib.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/zlib.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
   <included_dll name="libbz2.so.1.0" dest_path="libbz2.so.1.0" source_path="/lib/x86_64-linux-gnu/libbz2.so.1.0" package="" ignored="no" reason="Used by '_bz2.so'" />
-  <included_dll name="libffi.so.7" dest_path="libffi.so.7" source_path="/usr/lib/x86_64-linux-gnu/libffi.so.7" package="" ignored="no" reason="Used by '_ctypes.so'" />
-  <included_dll name="libcrypto.so.1.1" dest_path="libcrypto.so.1.1" source_path="/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1" package="" ignored="no" reason="Used by '_hashlib.so'" />
+  <included_dll name="libffi.so.8" dest_path="libffi.so.8" source_path="/lib/x86_64-linux-gnu/libffi.so.8" package="" ignored="no" reason="Used by '_ctypes.so'" />
+  <included_dll name="libcrypto.so.3" dest_path="libcrypto.so.3" source_path="/lib/x86_64-linux-gnu/libcrypto.so.3" package="" ignored="no" reason="Used by '_hashlib.so'" />
   <included_dll name="liblzma.so.5" dest_path="liblzma.so.5" source_path="/lib/x86_64-linux-gnu/liblzma.so.5" package="" ignored="no" reason="Used by '_lzma.so'" />
-  <included_dll name="libssl.so.1.1" dest_path="libssl.so.1.1" source_path="/usr/lib/x86_64-linux-gnu/libssl.so.1.1" package="" ignored="no" reason="Used by '_ssl.so'" />
+  <included_dll name="libssl.so.3" dest_path="libssl.so.3" source_path="/lib/x86_64-linux-gnu/libssl.so.3" package="" ignored="no" reason="Used by '_ssl.so'" />
   <command_line>
     <option value="--standalone" />
     <option value="/home/hayen/repos/Nuitka-Watch/cases/Toga/TogaUsing.py" />
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=3180bb889b6a4f5adb4972cf3380849a" />
+    <option value="--report-user-provided=pipenv_hash=64451eea10e4c986bbb088948379393d" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -7696,19 +7716,20 @@
   <distributions>
     <distribution name="PyGObject" version="3.50.0" installer="pip" />
     <distribution name="backports.tarfile" version="1.2.0" installer="pip" />
+    <distribution name="jaraco.collections" version="5.1.0" installer="pip" />
     <distribution name="jaraco.context" version="5.3.0" installer="pip" />
     <distribution name="jaraco.functools" version="4.0.1" installer="pip" />
     <distribution name="jaraco.text" version="3.12.1" installer="pip" />
     <distribution name="more-itertools" version="10.3.0" installer="pip" />
-    <distribution name="packaging" version="24.1" installer="pip" />
+    <distribution name="packaging" version="24.2" installer="uv" />
     <distribution name="platformdirs" version="4.2.2" installer="pip" />
     <distribution name="pycairo" version="1.27.0" installer="pip" />
-    <distribution name="setuptools" version="74.1.3" installer="pip" />
-    <distribution name="toga-core" version="0.4.7" installer="pip" />
-    <distribution name="toga-gtk" version="0.4.7" installer="pip" />
+    <distribution name="setuptools" version="75.6.0" installer="pip" />
+    <distribution name="toga-core" version="0.4.8" installer="pip" />
+    <distribution name="toga-gtk" version="0.4.8" installer="pip" />
     <distribution name="travertino" version="0.3.0" installer="pip" />
   </distributions>
-  <python python_exe="${sys.prefix}/bin/python" python_flavor="Unknown" python_version="3.10.7" os_name="Linux" os_release="Debian-11" arch_name="x86_64" filesystem_encoding="utf-8">
+  <python python_exe="${sys.prefix}/bin/python" python_flavor="Unknown" python_version="3.10.7" os_name="Linux" os_release="Debian-12" arch_name="x86_64" filesystem_encoding="utf-8">
     <search_path>
       <path value="${cwd}" />
       <path value="~/repos/Nuitka-Watch/cases/Toga" />
@@ -7719,7 +7740,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>3180bb889b6a4f5adb4972cf3380849a</pipenv_hash>
+    <pipenv_hash>64451eea10e4c986bbb088948379393d</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}/TogaUsing.dist/TogaUsing.bin" />
 </nuitka-compilation-report>

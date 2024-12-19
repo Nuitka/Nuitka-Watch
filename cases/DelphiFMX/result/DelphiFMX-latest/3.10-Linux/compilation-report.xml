@@ -202,6 +202,7 @@
       <module_usage name="_strptime" finding="absolute" line="1" />
       <module_usage name="_struct" finding="absolute" line="1" />
       <module_usage name="_sysconfigdata__linux_x86_64-linux-gnu" finding="absolute" line="1" />
+      <module_usage name="_sysconfigdata_d_linux_x86_64-linux-gnu" finding="absolute" line="1" />
       <module_usage name="_threading_local" finding="absolute" line="1" />
       <module_usage name="_weakrefset" finding="absolute" line="1" />
       <module_usage name="base64" finding="absolute" line="1" />
@@ -580,6 +581,11 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
+  <module name="_sysconfigdata_d_linux_x86_64-linux-gnu" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/_sysconfigdata_d_linux_x86_64-linux-gnu.py">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="_threading_local" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/_threading_local.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -742,9 +748,9 @@
     <module_usages>
       <module_usage name="string" finding="absolute" line="45" />
       <module_usage name="sys" finding="absolute" line="45" />
-      <module_usage name="readline" finding="absolute" line="108" />
-      <module_usage name="readline" finding="absolute" line="144" />
-      <module_usage name="readline" finding="absolute" line="258" />
+      <module_usage name="readline" finding="not-found" line="108" />
+      <module_usage name="readline" finding="not-found" line="144" />
+      <module_usage name="readline" finding="not-found" line="258" />
     </module_usages>
   </module>
   <module name="code" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/code.py">
@@ -754,7 +760,7 @@
       <module_usage name="sys" finding="absolute" line="8" />
       <module_usage name="traceback" finding="absolute" line="9" />
       <module_usage name="codeop" finding="absolute" line="10" />
-      <module_usage name="readline" finding="absolute" line="298" />
+      <module_usage name="readline" finding="not-found" line="298" />
     </module_usages>
   </module>
   <module name="codecs" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.10/codecs.py">
@@ -3311,7 +3317,7 @@
       <module_usage name="__main__" finding="not-found" line="35" />
       <module_usage name="keyword" finding="absolute" line="116" />
       <module_usage name="re" finding="absolute" line="149" />
-      <module_usage name="readline" finding="absolute" line="210" />
+      <module_usage name="readline" finding="not-found" line="210" />
     </module_usages>
   </module>
   <module name="sched" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/sched.py">
@@ -3986,8 +3992,8 @@
   <included_extension name="zlib.so" dest_path="zlib.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/zlib.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
   <included_dll name="libDelphiFMX.so" dest_path="delphifmx/Linux64/libDelphiFMX.so" source_path="${sys.prefix}/lib/python3.10/site-packages/delphifmx/Linux64/libDelphiFMX.so" package="delphifmx" ignored="no" reason="Yaml config of 'delphifmx'" />
   <included_dll name="libbz2.so.1.0" dest_path="libbz2.so.1.0" source_path="/lib/x86_64-linux-gnu/libbz2.so.1.0" package="" ignored="no" reason="Used by '_bz2.so'" />
-  <included_dll name="libffi.so.7" dest_path="libffi.so.7" source_path="/usr/lib/x86_64-linux-gnu/libffi.so.7" package="" ignored="no" reason="Used by '_ctypes.so'" />
-  <included_dll name="libcrypto.so.1.1" dest_path="libcrypto.so.1.1" source_path="/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1" package="" ignored="no" reason="Used by '_hashlib.so'" />
+  <included_dll name="libffi.so.8" dest_path="libffi.so.8" source_path="/lib/x86_64-linux-gnu/libffi.so.8" package="" ignored="no" reason="Used by '_ctypes.so'" />
+  <included_dll name="libcrypto.so.3" dest_path="libcrypto.so.3" source_path="/lib/x86_64-linux-gnu/libcrypto.so.3" package="" ignored="no" reason="Used by '_hashlib.so'" />
   <included_dll name="liblzma.so.5" dest_path="liblzma.so.5" source_path="/lib/x86_64-linux-gnu/liblzma.so.5" package="" ignored="no" reason="Used by '_lzma.so'" />
   <command_line>
     <option value="--standalone" />
@@ -3996,7 +4002,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=4d5d62f1fd1eab4a524df700f66a7947" />
+    <option value="--report-user-provided=pipenv_hash=503cfcb2f7aa694038abdc15c6774179" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -4019,9 +4025,9 @@
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
-    <distribution name="delphifmx" version="1.0.8" installer="pip" />
+    <distribution name="delphifmx" version="1.0.9" installer="pip" />
   </distributions>
-  <python python_exe="${sys.prefix}/bin/python" python_flavor="Unknown" python_version="3.10.7" os_name="Linux" os_release="Debian-11" arch_name="x86_64" filesystem_encoding="utf-8">
+  <python python_exe="${sys.prefix}/bin/python" python_flavor="Unknown" python_version="3.10.7" os_name="Linux" os_release="Debian-12" arch_name="x86_64" filesystem_encoding="utf-8">
     <search_path>
       <path value="${cwd}" />
       <path value="~/repos/Nuitka-Watch/cases/DelphiFMX" />
@@ -4032,7 +4038,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>4d5d62f1fd1eab4a524df700f66a7947</pipenv_hash>
+    <pipenv_hash>503cfcb2f7aa694038abdc15c6774179</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}/DelphiFMXTest.dist/DelphiFMXTest.bin" />
 </nuitka-compilation-report>
