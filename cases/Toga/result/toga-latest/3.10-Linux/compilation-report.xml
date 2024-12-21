@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.4.11" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.5" nuitka_commercial_version="not installed" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -1136,8 +1136,8 @@
     </module_usages>
   </module>
   <module name="backports.tarfile" kind="CompiledPythonPackage" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/setuptools/_vendor/backports/tarfile/__init__.py" distribution="backports.tarfile">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="136" merged_total="37471" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="135" merged_total="5043" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="136" merged_total="37461" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="135" merged_total="5041" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="39" />
@@ -5362,6 +5362,7 @@
       <module_usage name="posixpath" finding="absolute" line="216" />
       <module_usage name="posixpath" finding="absolute" line="222" />
       <module_usage name="posixpath" finding="absolute" line="298" />
+      <module_usage name="os" finding="absolute" line="300" />
       <module_usage name="posixpath" finding="absolute" line="355" />
       <module_usage name="posixpath" finding="absolute" line="416" />
       <module_usage name="posixpath" finding="absolute" line="433" />
@@ -5370,8 +5371,12 @@
       <module_usage name="posixpath" finding="absolute" line="592" />
       <module_usage name="posixpath" finding="absolute" line="612" />
       <module_usage name="posixpath" finding="absolute" line="635" />
+      <module_usage name="os" finding="absolute" line="646" />
       <module_usage name="posixpath" finding="absolute" line="656" />
       <module_usage name="posixpath" finding="absolute" line="672" />
+      <module_usage name="os" finding="absolute" line="682" />
+      <module_usage name="os" finding="absolute" line="685" />
+      <module_usage name="os" finding="absolute" line="714" />
       <module_usage name="posixpath" finding="absolute" line="723" />
       <module_usage name="posixpath" finding="absolute" line="736" />
       <module_usage name="posixpath" finding="absolute" line="746" />
@@ -7685,6 +7690,57 @@
   <included_dll name="libcrypto.so.3" dest_path="libcrypto.so.3" source_path="/lib/x86_64-linux-gnu/libcrypto.so.3" package="" ignored="no" reason="Used by '_hashlib.so'" />
   <included_dll name="liblzma.so.5" dest_path="liblzma.so.5" source_path="/lib/x86_64-linux-gnu/liblzma.so.5" package="" ignored="no" reason="Used by '_lzma.so'" />
   <included_dll name="libssl.so.3" dest_path="libssl.so.3" source_path="/lib/x86_64-linux-gnu/libssl.so.3" package="" ignored="no" reason="Used by '_ssl.so'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libcairo.so.2" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpixman-1.so.0" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfontconfig.so.1" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpng16.so.16" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb-shm.so.0" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb-render.so.0" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXrender.so.1" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXext.so.6" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libexpat.so.1" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="cairo/_cairo.so" reason="no outside dependencies allowed for 'cairo._cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="gi/_gi.so" reason="no outside dependencies allowed for 'gi._gi'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgirepository-1.0.so.1" used_by="gi/_gi.so" reason="no outside dependencies allowed for 'gi._gi'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgobject-2.0.so.0" used_by="gi/_gi.so" reason="no outside dependencies allowed for 'gi._gi'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libffi.so.8" used_by="gi/_gi.so" reason="no outside dependencies allowed for 'gi._gi'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="gi/_gi.so" reason="no outside dependencies allowed for 'gi._gi'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgmodule-2.0.so.0" used_by="gi/_gi.so" reason="no outside dependencies allowed for 'gi._gi'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgio-2.0.so.0" used_by="gi/_gi.so" reason="no outside dependencies allowed for 'gi._gi'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libmount.so.1" used_by="gi/_gi.so" reason="no outside dependencies allowed for 'gi._gi'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libselinux.so.1" used_by="gi/_gi.so" reason="no outside dependencies allowed for 'gi._gi'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libblkid.so.1" used_by="gi/_gi.so" reason="no outside dependencies allowed for 'gi._gi'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgobject-2.0.so.0" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libcairo.so.2" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libcairo-gobject.so.2" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libffi.so.8" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpixman-1.so.0" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfontconfig.so.1" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpng16.so.16" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb-shm.so.0" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb-render.so.0" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXrender.so.1" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXext.so.6" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libexpat.so.1" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="gi/_gi_cairo.so" reason="no outside dependencies allowed for 'gi._gi_cairo'" />
   <command_line>
     <option value="--standalone" />
     <option value="/home/hayen/repos/Nuitka-Watch/cases/Toga/TogaUsing.py" />
@@ -7709,6 +7765,7 @@
     <plugin name="options-nanny" user_enabled="no" />
     <plugin name="pbr-compat" user_enabled="no" />
     <plugin name="pkg-resources" user_enabled="no" />
+    <plugin name="playwright" user_enabled="no" />
     <plugin name="pywebview" user_enabled="no" />
     <plugin name="spacy" user_enabled="no" />
     <plugin name="transformers" user_enabled="no" />

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.4.11" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.5" nuitka_commercial_version="not installed" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -940,12 +940,15 @@
   <module name="cv2" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/__init__.py" distribution="opencv-python-headless">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone and before_python312 and not nuitka_python" tags_used="standalone,before_python312,nuitka_python" result="true" />
     <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone and python312_or_higher and not nuitka_python" tags_used="standalone,python312_or_higher" result="false" />
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone" tags_used="standalone" result="true" />
+    <plugin-influence name="anti-bloat" influence="variable-used" variable="cv2_extra_sub_modules" tags_used="repr,get_variable" value="('dnn', 'ocl', 'ipp', 'ogl', 'flann', 'mat_wrapper', 'barcode', 'samples', 'segmentation', 'fisheye', 'gapi', 'parallel', 'videoio_registry', 'typing', 'data', 'aruco', 'ml', 'Error', 'cuda', 'detail', 'utils', 'misc')" />
     <plugin-influence name="implicit-imports" influence="condition-used" condition="linux and standalone" tags_used="linux,standalone" result="true" />
+    <plugin-influence name="implicit-imports" influence="variable-used" variable="cv2_extra_sub_modules" tags_used="get_variable" value="('dnn', 'ocl', 'ipp', 'ogl', 'flann', 'mat_wrapper', 'barcode', 'samples', 'segmentation', 'fisheye', 'gapi', 'parallel', 'videoio_registry', 'typing', 'data', 'aruco', 'ml', 'Error', 'cuda', 'detail', 'utils', 'misc')" />
     <plugin-influence name="options-nanny" influence="condition-used" condition="version(get_dist_name(&quot;cv2&quot;)) &lt; (4,6)" tags_used="version,get_dist_name" result="false" />
     <plugin-influence name="dll-files" influence="condition-used" condition="linux" tags_used="linux" result="true" />
     <plugin-influence name="dll-files" influence="condition-used" condition="win32" tags_used="win32" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="199" merged_total="1851" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="96" merged_total="302" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="195" merged_total="1721" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="93" merged_total="289" />
     <distribution-usages>
       <distribution-usage name="numpy" />
     </distribution-usages>
@@ -956,7 +959,6 @@
       <module_usage name="sys" finding="absolute" line="6" />
       <module_usage name="numpy" finding="absolute" line="11" />
       <module_usage name="numpy.core.multiarray" finding="absolute" line="12" />
-      <module_usage name="posixpath" finding="absolute" line="56" />
       <module_usage name="sys" finding="absolute" line="69" />
       <module_usage name="copy" finding="absolute" line="71" />
       <module_usage name="platform" finding="absolute" line="83" />
@@ -972,10 +974,115 @@
       <module_usage name="posixpath" finding="absolute" line="181" />
     </module_usages>
   </module>
+  <module name="cv2.Error" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/Error" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.aruco" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/aruco" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.barcode" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/barcode" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.cuda" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/cuda" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
   <module name="cv2.cv2" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/cv2.abi3.so" distribution="opencv-python-headless">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
+  </module>
+  <module name="cv2.data" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/data/__init__.py" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="posixpath" finding="absolute" line="3" />
+    </module_usages>
+  </module>
+  <module name="cv2.detail" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/detail" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.dnn" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/dnn" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.fisheye" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/fisheye" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.flann" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/flann" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.gapi" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/gapi/__init__.py" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="295" merged_total="5656" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="295" merged_total="755" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="sys" finding="absolute" line="3" />
+      <module_usage name="cv2" finding="absolute" line="4" />
+    </module_usages>
+  </module>
+  <module name="cv2.gapi.wip" kind="CompiledPythonNamespacePackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/gapi/wip" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.gapi.wip.draw" kind="CompiledPythonNamespacePackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/gapi/wip/draw" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.ipp" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/ipp" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
   </module>
   <module name="cv2.load_config_py3" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/load_config_py3.py" distribution="opencv-python-headless">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="172" />
@@ -985,10 +1092,120 @@
       <module_usage name="sys" finding="absolute" line="3" />
     </module_usages>
   </module>
+  <module name="cv2.mat_wrapper" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/mat_wrapper/__init__.py" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="189" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="38" />
+    <distribution-usages>
+      <distribution-usage name="numpy" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="numpy" finding="absolute" line="3" />
+      <module_usage name="cv2" finding="absolute" line="4" />
+      <module_usage name="typing" finding="absolute" line="5" />
+    </module_usages>
+  </module>
+  <module name="cv2.misc" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/misc/__init__.py" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="cv2.misc.version" finding="relative" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.misc.version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/misc/version.py" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="4" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="cv2" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.ml" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/ml" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.ocl" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/ocl" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.ogl" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/ogl" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.parallel" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/parallel" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.samples" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/samples" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.segmentation" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/segmentation" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="cv2.typing" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/typing/__init__.py" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="1" merged_total="4" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <distribution-usages>
+      <distribution-usage name="numpy" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="numpy" finding="absolute" line="60" />
+      <module_usage name="typing" finding="absolute" line="61" />
+      <module_usage name="cv2.dnn" finding="absolute" line="62" />
+      <module_usage name="cv2.gapi.wip.draw" finding="absolute" line="63" />
+      <module_usage name="cv2.mat_wrapper" finding="absolute" line="64" />
+      <module_usage name="cv2" finding="absolute" line="65" />
+    </module_usages>
+  </module>
+  <module name="cv2.utils" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/utils/__init__.py" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="9" merged_total="20" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="collections" finding="absolute" line="1" />
+      <module_usage name="collections.namedtuple" finding="not-found" line="1" />
+      <module_usage name="cv2" finding="absolute" line="3" />
+    </module_usages>
+  </module>
   <module name="cv2.version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/version.py" distribution="opencv-python-headless">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages />
+  </module>
+  <module name="cv2.videoio_registry" kind="CompiledPythonNamespacePackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/cv2/videoio_registry" distribution="opencv-python-headless">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
   </module>
   <module name="dataclasses" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/dataclasses.py">
     <optimization-time pass="1" time="volatile" />
@@ -3110,7 +3327,7 @@
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_setuptools" tags_used="use_setuptools" result="true" />
     <plugin-influence name="dll-files" influence="condition-used" condition="win32" tags_used="win32" result="false" />
     <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;)" tags_used="is_conda_package" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="322" merged_total="4485" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="322" merged_total="3745" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="322" merged_total="736" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -3659,8 +3876,8 @@
     </module_usages>
   </module>
   <module name="numpy._core._machar" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/_core/_machar.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="306" merged_total="2699" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="253" merged_total="507" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="306" merged_total="2685" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="250" merged_total="503" />
     <module_usages>
       <module_usage name="numpy._core.fromnumeric" finding="relative" line="10" />
       <module_usage name="numpy._core._ufunc_config" finding="relative" line="11" />
@@ -3777,8 +3994,8 @@
     </module_usages>
   </module>
   <module name="numpy._core.einsumfunc" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/_core/einsumfunc.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="156" merged_total="13213" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="119" merged_total="1412" />
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="156" merged_total="13181" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="119" merged_total="1408" />
     <module_usages>
       <module_usage name="itertools" finding="absolute" line="5" />
       <module_usage name="operator" finding="absolute" line="6" />
@@ -3963,8 +4180,8 @@
     </module_usages>
   </module>
   <module name="numpy._core.records" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/_core/records.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="110" merged_total="6721" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="68" merged_total="1047" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="110" merged_total="6716" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="68" merged_total="1046" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="4" />
       <module_usage name="warnings" finding="absolute" line="5" />
@@ -4638,8 +4855,8 @@
     </module_usages>
   </module>
   <module name="numpy.fft._pocketfft" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/fft/_pocketfft.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="83" merged_total="1870" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="68" merged_total="343" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="83" merged_total="1866" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="68" merged_total="342" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="33" />
       <module_usage name="warnings" finding="absolute" line="34" />
@@ -4674,7 +4891,7 @@
     </module_usages>
   </module>
   <module name="numpy.lib" kind="CompiledPythonPackage" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/lib/__init__.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="24" merged_total="125" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="104" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="18" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -4799,8 +5016,8 @@
     </module_usages>
   </module>
   <module name="numpy.lib._function_base_impl" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="272" merged_total="28239" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="231" merged_total="3805" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="272" merged_total="28233" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="231" merged_total="3804" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="1" />
       <module_usage name="collections.abc" finding="absolute" line="2" />
@@ -5007,8 +5224,8 @@
     </module_usages>
   </module>
   <module name="numpy.lib._twodim_base_impl" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/lib/_twodim_base_impl.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="33" merged_total="1816" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="324" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="33" merged_total="1821" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="325" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="4" />
       <module_usage name="operator" finding="absolute" line="5" />
@@ -5380,8 +5597,8 @@
     </module_usages>
   </module>
   <module name="numpy.polynomial._polybase" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/polynomial/_polybase.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="293" merged_total="7689" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="272" merged_total="1190" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="293" merged_total="7694" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="272" merged_total="1191" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="9" />
       <module_usage name="abc" finding="absolute" line="10" />
@@ -5393,8 +5610,8 @@
     </module_usages>
   </module>
   <module name="numpy.polynomial.chebyshev" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/polynomial/chebyshev.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="121" merged_total="8445" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="108" merged_total="1160" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="121" merged_total="8433" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="108" merged_total="1158" />
     <module_usages>
       <module_usage name="numpy" finding="absolute" line="110" />
       <module_usage name="numpy.linalg" finding="absolute" line="111" />
@@ -5470,8 +5687,8 @@
     </module_usages>
   </module>
   <module name="numpy.polynomial.polyutils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/polynomial/polyutils.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="165" merged_total="6331" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="130" merged_total="868" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="165" merged_total="6325" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="130" merged_total="867" />
     <module_usages>
       <module_usage name="operator" finding="absolute" line="21" />
       <module_usage name="functools" finding="absolute" line="22" />
@@ -5995,6 +6212,7 @@
       <module_usage name="posixpath" finding="absolute" line="216" />
       <module_usage name="posixpath" finding="absolute" line="222" />
       <module_usage name="posixpath" finding="absolute" line="298" />
+      <module_usage name="os" finding="absolute" line="300" />
       <module_usage name="posixpath" finding="absolute" line="355" />
       <module_usage name="posixpath" finding="absolute" line="416" />
       <module_usage name="posixpath" finding="absolute" line="433" />
@@ -6003,8 +6221,12 @@
       <module_usage name="posixpath" finding="absolute" line="592" />
       <module_usage name="posixpath" finding="absolute" line="612" />
       <module_usage name="posixpath" finding="absolute" line="635" />
+      <module_usage name="os" finding="absolute" line="646" />
       <module_usage name="posixpath" finding="absolute" line="656" />
       <module_usage name="posixpath" finding="absolute" line="672" />
+      <module_usage name="os" finding="absolute" line="682" />
+      <module_usage name="os" finding="absolute" line="685" />
+      <module_usage name="os" finding="absolute" line="714" />
       <module_usage name="posixpath" finding="absolute" line="723" />
       <module_usage name="posixpath" finding="absolute" line="736" />
       <module_usage name="posixpath" finding="absolute" line="746" />
@@ -6734,21 +6956,26 @@
   <included_dll name="libcrypto.so.3" dest_path="libcrypto.so.3" source_path="/lib/x86_64-linux-gnu/libcrypto.so.3" package="" ignored="no" reason="Used by '_hashlib.so'" />
   <included_dll name="liblzma.so.5" dest_path="liblzma.so.5" source_path="/lib/x86_64-linux-gnu/liblzma.so.5" package="" ignored="no" reason="Used by '_lzma.so'" />
   <included_dll name="libssl.so.3" dest_path="libssl.so.3" source_path="/lib/x86_64-linux-gnu/libssl.so.3" package="" ignored="no" reason="Used by '_ssl.so'" />
-  <included_dll name="libavcodec-9aae324f.so.59.37.100" dest_path="libavcodec-9aae324f.so.59.37.100" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libavcodec-9aae324f.so.59.37.100" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
   <included_dll name="libpng16-1bde1c40.so.16.43.0" dest_path="libpng16-1bde1c40.so.16.43.0" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libpng16-1bde1c40.so.16.43.0" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
-  <included_dll name="libopenblas-r0-f650aae0.3.3.so" dest_path="libopenblas-r0-f650aae0.3.3.so" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libopenblas-r0-f650aae0.3.3.so" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
+  <included_dll name="libavcodec-9aae324f.so.59.37.100" dest_path="libavcodec-9aae324f.so.59.37.100" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libavcodec-9aae324f.so.59.37.100" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
   <included_dll name="libavformat-3ff1be5b.so.59.27.100" dest_path="libavformat-3ff1be5b.so.59.27.100" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libavformat-3ff1be5b.so.59.27.100" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
-  <included_dll name="libgfortran-91cc3cb1.so.3.0.0" dest_path="libgfortran-91cc3cb1.so.3.0.0" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libgfortran-91cc3cb1.so.3.0.0" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
-  <included_dll name="libcrypto-337dac8b.so.1.1" dest_path="libcrypto-337dac8b.so.1.1" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libcrypto-337dac8b.so.1.1" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
+  <included_dll name="libavutil-a0a0531e.so.57.28.100" dest_path="libavutil-a0a0531e.so.57.28.100" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libavutil-a0a0531e.so.57.28.100" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
+  <included_dll name="libswscale-2c3c8be7.so.6.7.100" dest_path="libswscale-2c3c8be7.so.6.7.100" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libswscale-2c3c8be7.so.6.7.100" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
+  <included_dll name="libopenblas-r0-f650aae0.3.3.so" dest_path="libopenblas-r0-f650aae0.3.3.so" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libopenblas-r0-f650aae0.3.3.so" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
   <included_dll name="libswresample-2ec4394e.so.4.7.100" dest_path="libswresample-2ec4394e.so.4.7.100" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libswresample-2ec4394e.so.4.7.100" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
   <included_dll name="libvpx-c3a7933e.so.9.0.0" dest_path="libvpx-c3a7933e.so.9.0.0" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libvpx-c3a7933e.so.9.0.0" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
-  <included_dll name="libquadmath-96973f99.so.0.0.0" dest_path="libquadmath-96973f99.so.0.0.0" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libquadmath-96973f99.so.0.0.0" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
-  <included_dll name="libswscale-2c3c8be7.so.6.7.100" dest_path="libswscale-2c3c8be7.so.6.7.100" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libswscale-2c3c8be7.so.6.7.100" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
-  <included_dll name="libavutil-a0a0531e.so.57.28.100" dest_path="libavutil-a0a0531e.so.57.28.100" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libavutil-a0a0531e.so.57.28.100" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
   <included_dll name="libssl-28bef1ac.so.1.1" dest_path="libssl-28bef1ac.so.1.1" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libssl-28bef1ac.so.1.1" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
-  <included_dll name="libquadmath-96973f99-934c22de.so.0.0.0" dest_path="libquadmath-96973f99-934c22de.so.0.0.0" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0" package="numpy._core" ignored="no" reason="Used by 'numpy/_core/_multiarray_umath.so'" />
-  <included_dll name="libgfortran-040039e1-0352e75f.so.5.0.0" dest_path="libgfortran-040039e1-0352e75f.so.5.0.0" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0" package="numpy._core" ignored="no" reason="Used by 'numpy/_core/_multiarray_umath.so'" />
+  <included_dll name="libcrypto-337dac8b.so.1.1" dest_path="libcrypto-337dac8b.so.1.1" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libcrypto-337dac8b.so.1.1" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
+  <included_dll name="libgfortran-91cc3cb1.so.3.0.0" dest_path="libgfortran-91cc3cb1.so.3.0.0" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libgfortran-91cc3cb1.so.3.0.0" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
+  <included_dll name="libquadmath-96973f99.so.0.0.0" dest_path="libquadmath-96973f99.so.0.0.0" source_path="${sys.prefix}/lib/python3.10/site-packages/opencv_python_headless.libs/libquadmath-96973f99.so.0.0.0" package="cv2" ignored="no" reason="Used by 'cv2/cv2.so'" />
   <included_dll name="libscipy_openblas64_-6bb31eeb.so" dest_path="libscipy_openblas64_-6bb31eeb.so" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy.libs/libscipy_openblas64_-6bb31eeb.so" package="numpy._core" ignored="no" reason="Used by 'numpy/_core/_multiarray_umath.so'" />
+  <included_dll name="libgfortran-040039e1-0352e75f.so.5.0.0" dest_path="libgfortran-040039e1-0352e75f.so.5.0.0" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0" package="numpy._core" ignored="no" reason="Used by 'numpy/_core/_multiarray_umath.so'" />
+  <included_dll name="libquadmath-96973f99-934c22de.so.0.0.0" dest_path="libquadmath-96973f99-934c22de.so.0.0.0" source_path="${sys.prefix}/lib/python3.10/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0" package="numpy._core" ignored="no" reason="Used by 'numpy/_core/_multiarray_umath.so'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="cv2/cv2.so" reason="no outside dependencies allowed for 'cv2.cv2'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="numpy/_core/_multiarray_tests.so" reason="no outside dependencies allowed for 'numpy._core._multiarray_tests'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="numpy/_core/_multiarray_umath.so" reason="no outside dependencies allowed for 'numpy._core._multiarray_umath'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="numpy/fft/_pocketfft_umath.so" reason="no outside dependencies allowed for 'numpy.fft._pocketfft_umath'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="numpy/linalg/_umath_linalg.so" reason="no outside dependencies allowed for 'numpy.linalg._umath_linalg'" />
   <command_line>
     <option value="--standalone" />
     <option value="--include-data-file=/home/hayen/repos/Nuitka-Watch/cases/OpenCV/Example-Icon.png=Example-Icon.png" />
@@ -6774,6 +7001,7 @@
     <plugin name="options-nanny" user_enabled="no" />
     <plugin name="pbr-compat" user_enabled="no" />
     <plugin name="pkg-resources" user_enabled="no" />
+    <plugin name="playwright" user_enabled="no" />
     <plugin name="pywebview" user_enabled="no" />
     <plugin name="spacy" user_enabled="no" />
     <plugin name="transformers" user_enabled="no" />
