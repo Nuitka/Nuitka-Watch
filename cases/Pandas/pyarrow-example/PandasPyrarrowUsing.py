@@ -1,6 +1,7 @@
 # nuitka-project: --standalone
 # nuitka-project: --noinclude-default-mode=error
 # nuitka-project: --noinclude-custom-mode=numpy.distutils:error
+# nuitka-project: --noinclude-numba-mode=allow 
 
 import os
 
