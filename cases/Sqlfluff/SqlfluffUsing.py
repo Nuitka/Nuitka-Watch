@@ -1,3 +1,5 @@
+# nuitka-project: --standalone
+
 import sqlfluff, pprint
 
 chkstr = "select * from tbl where col1 = 'foo';"
