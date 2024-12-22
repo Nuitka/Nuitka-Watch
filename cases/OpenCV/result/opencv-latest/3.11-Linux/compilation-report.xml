@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.5.7" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.5.8" nuitka_commercial_version="not installed" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -884,8 +884,10 @@
     <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone and before_python312 and not nuitka_python" tags_used="standalone,before_python312,nuitka_python" result="true" />
     <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone and python312_or_higher and not nuitka_python" tags_used="standalone,python312_or_higher" result="false" />
     <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone" tags_used="standalone" result="true" />
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not is_conda_package(&quot;cv2&quot;)" tags_used="is_conda_package" result="true" />
     <plugin-influence name="anti-bloat" influence="variable-used" variable="cv2_extra_sub_modules" tags_used="repr,get_variable" value="('dnn', 'ocl', 'ipp', 'ogl', 'flann', 'mat_wrapper', 'barcode', 'samples', 'segmentation', 'fisheye', 'gapi', 'parallel', 'videoio_registry', 'typing', 'data', 'aruco', 'ml', 'Error', 'cuda', 'detail', 'utils', 'misc')" />
     <plugin-influence name="implicit-imports" influence="condition-used" condition="linux and standalone" tags_used="linux,standalone" result="true" />
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="not is_conda_package(&quot;cv2&quot;)" tags_used="is_conda_package" result="true" />
     <plugin-influence name="implicit-imports" influence="variable-used" variable="cv2_extra_sub_modules" tags_used="get_variable" value="('dnn', 'ocl', 'ipp', 'ogl', 'flann', 'mat_wrapper', 'barcode', 'samples', 'segmentation', 'fisheye', 'gapi', 'parallel', 'videoio_registry', 'typing', 'data', 'aruco', 'ml', 'Error', 'cuda', 'detail', 'utils', 'misc')" />
     <plugin-influence name="options-nanny" influence="condition-used" condition="version(get_dist_name(&quot;cv2&quot;)) &lt; (4,6)" tags_used="version,get_dist_name" result="false" />
     <plugin-influence name="dll-files" influence="condition-used" condition="linux" tags_used="linux" result="true" />
