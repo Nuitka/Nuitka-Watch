@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.4.9" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.5.7" nuitka_commercial_version="not installed" completion="yes">
   <module name="PIL" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/PIL/__init__.py" distribution="pillow">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="15" merged_total="183" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="30" />
@@ -308,8 +308,8 @@
   <module name="PIL.Image" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/PIL/Image.py" distribution="pillow">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not plugin(&quot;pyqt5&quot;) and not plugin(&quot;pyqt6&quot;) and not plugin(&quot;pyside2&quot;) and not plugin(&quot;pyside6&quot;) and not plugin(&quot;no-qt&quot;)" tags_used="plugin" result="true" />
     <plugin-influence name="anti-bloat" influence="condition-used" condition="plugin(&quot;no-qt&quot;)" tags_used="plugin" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="217" merged_total="36082" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="191" merged_total="4800" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="217" merged_total="36071" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="191" merged_total="4799" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="27" />
       <module_usage name="abc" finding="absolute" line="29" />
@@ -531,7 +531,7 @@
     </module_usages>
   </module>
   <module name="PIL.ImageFont" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/PIL/ImageFont.py" distribution="pillow">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="78" merged_total="6169" />
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="78" merged_total="6270" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="48" merged_total="625" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="28" />
@@ -887,7 +887,7 @@
     </module_usages>
   </module>
   <module name="PIL.PdfParser" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/PIL/PdfParser.py" distribution="pillow">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="308" merged_total="16812" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="308" merged_total="16711" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="265" merged_total="1912" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
@@ -5126,7 +5126,7 @@
     </module_usages>
   </module>
   <module name="kivy.atlas" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/atlas.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="63" merged_total="4345" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="63" merged_total="4350" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="57" merged_total="513" />
     <distribution-usages>
       <distribution-usage name="pillow" />
@@ -5262,6 +5262,10 @@
     </module_usages>
   </module>
   <module name="kivy.core.clipboard" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/clipboard/__init__.py" distribution="Kivy">
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="win32" tags_used="win32" result="false" />
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="macos and has_module(&quot;pyobjus&quot;)" tags_used="macos" result="false" />
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="macos and not has_module(&quot;pyobjus&quot;)" tags_used="macos" result="false" />
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="linux" tags_used="linux" result="true" />
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="19" merged_total="676" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="102" />
     <module_usages>
@@ -5272,6 +5276,71 @@
       <module_usage name="kivy.core.core_select_lib" finding="not-found" line="23" />
       <module_usage name="kivy.utils" finding="absolute" line="24" />
       <module_usage name="kivy.setupconfig" finding="absolute" line="25" />
+    </module_usages>
+  </module>
+  <module name="kivy.core.clipboard._clipboard_ext" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/clipboard/_clipboard_ext.py" distribution="Kivy">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="416" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="80" />
+    <module_usages>
+      <module_usage name="kivy.core.clipboard" finding="absolute" line="7" />
+      <module_usage name="kivy.core.clipboard.ClipboardBase" finding="not-found" line="7" />
+    </module_usages>
+  </module>
+  <module name="kivy.core.clipboard._clipboard_sdl2" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/clipboard/_clipboard_sdl2.cpython-311-x86_64-linux-gnu.so" distribution="Kivy">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="kivy.core.clipboard.clipboard_dbusklipper" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/clipboard/clipboard_dbusklipper.py" distribution="Kivy">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="227" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="41" />
+    <module_usages>
+      <module_usage name="kivy.utils" finding="absolute" line="7" />
+      <module_usage name="kivy.core.clipboard" finding="absolute" line="8" />
+      <module_usage name="kivy.core.clipboard.ClipboardBase" finding="not-found" line="8" />
+      <module_usage name="dbus" finding="not-found" line="14" />
+    </module_usages>
+  </module>
+  <module name="kivy.core.clipboard.clipboard_gtk3" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/clipboard/clipboard_gtk3.py" distribution="Kivy">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="271" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="63" />
+    <module_usages>
+      <module_usage name="kivy.utils" finding="absolute" line="7" />
+      <module_usage name="kivy.support" finding="absolute" line="8" />
+      <module_usage name="kivy.core.clipboard" finding="absolute" line="9" />
+      <module_usage name="kivy.core.clipboard.ClipboardBase" finding="not-found" line="9" />
+      <module_usage name="gi" finding="not-found" line="14" />
+      <module_usage name="gi.repository" finding="not-found" line="16" />
+    </module_usages>
+  </module>
+  <module name="kivy.core.clipboard.clipboard_sdl2" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/clipboard/clipboard_sdl2.py" distribution="Kivy">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="221" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="46" />
+    <module_usages>
+      <module_usage name="kivy.utils" finding="absolute" line="7" />
+      <module_usage name="kivy.core.clipboard" finding="absolute" line="8" />
+      <module_usage name="kivy.core.clipboard.ClipboardBase" finding="not-found" line="8" />
+      <module_usage name="kivy.core.clipboard._clipboard_sdl2" finding="absolute" line="14" />
+      <module_usage name="kivy.core" finding="absolute" line="17" />
+      <module_usage name="kivy.core.handle_win_lib_import_error" finding="not-found" line="17" />
+    </module_usages>
+  </module>
+  <module name="kivy.core.clipboard.clipboard_xclip" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/clipboard/clipboard_xclip.py" distribution="Kivy">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="279" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="55" />
+    <module_usages>
+      <module_usage name="kivy.utils" finding="absolute" line="8" />
+      <module_usage name="kivy.core.clipboard._clipboard_ext" finding="absolute" line="9" />
+      <module_usage name="subprocess" finding="absolute" line="15" />
+    </module_usages>
+  </module>
+  <module name="kivy.core.clipboard.clipboard_xsel" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/clipboard/clipboard_xsel.py" distribution="Kivy">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="299" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="59" />
+    <module_usages>
+      <module_usage name="kivy.utils" finding="absolute" line="8" />
+      <module_usage name="kivy.core.clipboard._clipboard_ext" finding="absolute" line="9" />
+      <module_usage name="subprocess" finding="absolute" line="15" />
     </module_usages>
   </module>
   <module name="kivy.core.gl" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/gl/__init__.py" distribution="Kivy">
@@ -5380,7 +5449,7 @@
     </module_usages>
   </module>
   <module name="kivy.core.text" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/text/__init__.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="212" merged_total="9315" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="212" merged_total="9320" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="188" merged_total="1266" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -5496,8 +5565,8 @@
     </module_usages>
   </module>
   <module name="kivy.core.window" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/window/__init__.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="335" merged_total="14594" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="335" merged_total="1959" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="335" merged_total="14588" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="335" merged_total="1958" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="posixpath" finding="absolute" line="13" />
@@ -5675,7 +5744,7 @@
       <module_usage name="kivy.factory" finding="absolute" line="3" />
     </module_usages>
   </module>
-  <module name="kivy.graphics" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/graphics/__init__.py" distribution="Kivy">
+  <module name="kivy.graphics" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/graphics/__init__.py" distribution="Kivy">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="144" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="48" />
     <module_usages>
@@ -6349,6 +6418,38 @@
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages />
+  </module>
+  <module name="kivy.support" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/support.py" distribution="Kivy">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="54" merged_total="1126" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="54" merged_total="206" />
+    <module_usages>
+      <module_usage name="kivy.clock" finding="absolute" line="18" />
+      <module_usage name="gi.repository" finding="not-found" line="21" />
+      <module_usage name="gobject" finding="not-found" line="23" />
+      <module_usage name="kivy.core.window" finding="absolute" line="58" />
+      <module_usage name="kivy.core.window.Window" finding="not-found" line="58" />
+      <module_usage name="android" finding="not-found" line="72" />
+      <module_usage name="kivy.clock" finding="absolute" line="77" />
+      <module_usage name="kivy.logger" finding="absolute" line="78" />
+      <module_usage name="pygame" finding="not-found" line="79" />
+      <module_usage name="kivy.app" finding="absolute" line="95" />
+      <module_usage name="kivy.base" finding="absolute" line="96" />
+      <module_usage name="kivy.logger" finding="absolute" line="97" />
+      <module_usage name="kivy.core.window" finding="absolute" line="98" />
+      <module_usage name="kivy.core.window.Window" finding="not-found" line="98" />
+      <module_usage name="twisted" finding="not-found" line="170" />
+      <module_usage name="twisted.internet" finding="not-found" line="181" />
+      <module_usage name="twisted.internet" finding="not-found" line="185" />
+      <module_usage name="twisted.internet.error" finding="not-found" line="186" />
+      <module_usage name="collections" finding="absolute" line="188" />
+      <module_usage name="collections.deque" finding="not-found" line="188" />
+      <module_usage name="kivy.base" finding="absolute" line="189" />
+      <module_usage name="kivy.logger" finding="absolute" line="190" />
+      <module_usage name="kivy.clock" finding="absolute" line="191" />
+      <module_usage name="sys" finding="absolute" line="236" />
+      <module_usage name="twisted" finding="not-found" line="255" />
+      <module_usage name="kivy.base" finding="absolute" line="261" />
+    </module_usages>
   </module>
   <module name="kivy.uix" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/uix/__init__.py" distribution="Kivy">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
@@ -7230,7 +7331,7 @@
     </module_usages>
   </module>
   <module name="kivy.uix.widget" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/uix/widget.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="175" merged_total="9233" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="175" merged_total="9127" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="174" merged_total="1255" />
     <module_usages>
       <module_usage name="kivy.event" finding="absolute" line="239" />
@@ -7260,7 +7361,7 @@
     </module_usages>
   </module>
   <module name="kivy.utils" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/utils.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="33" merged_total="2997" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="33" merged_total="3098" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="33" merged_total="459" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="24" />
@@ -7404,7 +7505,7 @@
       <module_usage name="kivymd.fonts_path" finding="not-found" line="12" />
     </module_usages>
   </module>
-  <module name="kivymd.icon_definitions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/icon_definitions.py" distribution="kivymd">
+  <module name="kivymd.icon_definitions" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/icon_definitions.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="301" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages />
@@ -7547,7 +7648,7 @@
       <module_usage name="posixpath" finding="absolute" line="66" />
     </module_usages>
   </module>
-  <module name="kivymd.uix" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'kivymd.uix.widget'." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="649" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="77" />
     <distribution-usages>
@@ -7563,7 +7664,7 @@
       <module_usage name="kivymd.uix.behaviors.SpecificBackgroundColorBehavior" finding="not-found" line="8" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.anchorlayout" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/anchorlayout.py" distribution="kivymd">
+  <module name="kivymd.uix.anchorlayout" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/anchorlayout.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="100" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="33" />
     <distribution-usages>
@@ -7578,7 +7679,7 @@
       <module_usage name="kivymd.uix.behaviors.DeclarativeBehavior" finding="not-found" line="38" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.backdrop" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/backdrop/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.backdrop" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/backdrop/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -7611,7 +7712,7 @@
       <module_usage name="posixpath" finding="absolute" line="210" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.banner" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/banner/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.banner" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/banner/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -7652,7 +7753,7 @@
       <module_usage name="posixpath" finding="absolute" line="173" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.behaviors" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/behaviors/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.behaviors" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/behaviors/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="6" merged_total="39" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="6" merged_total="13" />
     <module_usages>
@@ -7671,7 +7772,7 @@
     </module_usages>
   </module>
   <module name="kivymd.uix.behaviors.backgroundcolor_behavior" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/behaviors/backgroundcolor_behavior.py" distribution="kivymd">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="60" merged_total="1092" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="60" merged_total="1099" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="47" merged_total="180" />
     <distribution-usages>
       <distribution-usage name="Kivy" />
@@ -7862,7 +7963,7 @@
       <module_usage name="kivy.properties" finding="absolute" line="57" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.bottomnavigation" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/bottomnavigation/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.bottomnavigation" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/bottomnavigation/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="6" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
     <module_usages>
@@ -7907,7 +8008,7 @@
       <module_usage name="posixpath" finding="absolute" line="271" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.bottomsheet" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/bottomsheet/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.bottomsheet" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/bottomsheet/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="8" merged_total="24" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="8" />
     <module_usages>
@@ -7949,7 +8050,7 @@
       <module_usage name="posixpath" finding="absolute" line="589" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.boxlayout" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/boxlayout.py" distribution="kivymd">
+  <module name="kivymd.uix.boxlayout" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/boxlayout.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="100" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="33" />
     <distribution-usages>
@@ -7964,7 +8065,7 @@
       <module_usage name="kivymd.uix.behaviors.DeclarativeBehavior" finding="not-found" line="92" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.button" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/button/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.button" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/button/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="14" merged_total="42" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="14" />
     <module_usages>
@@ -8013,7 +8114,7 @@
       <module_usage name="posixpath" finding="absolute" line="702" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.card" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/card/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.card" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/card/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="5" merged_total="15" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="5" merged_total="5" />
     <module_usages>
@@ -8056,7 +8157,7 @@
       <module_usage name="posixpath" finding="absolute" line="719" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.carousel" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/carousel.py" distribution="kivymd">
+  <module name="kivymd.uix.carousel" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/carousel.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="104" merged_total="1700" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="97" merged_total="313" />
     <distribution-usages>
@@ -8070,7 +8171,7 @@
       <module_usage name="kivymd.uix.behaviors.DeclarativeBehavior" finding="not-found" line="61" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.chip" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/chip/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.chip" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/chip/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="6" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
     <module_usages>
@@ -8113,7 +8214,7 @@
       <module_usage name="posixpath" finding="absolute" line="745" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.circularlayout" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/circularlayout.py" distribution="kivymd">
+  <module name="kivymd.uix.circularlayout" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/circularlayout.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="46" merged_total="1228" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="44" merged_total="207" />
     <distribution-usages>
@@ -8125,7 +8226,7 @@
       <module_usage name="kivymd.uix.floatlayout" finding="absolute" line="52" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.controllers" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/controllers/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.controllers" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/controllers/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -8146,7 +8247,7 @@
       <module_usage name="kivy.metrics" finding="absolute" line="38" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.datatables" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/datatables/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.datatables" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/datatables/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -8201,7 +8302,7 @@
       <module_usage name="posixpath" finding="absolute" line="75" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.dialog" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/dialog/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.dialog" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/dialog/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="6" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
     <module_usages>
@@ -8241,7 +8342,7 @@
       <module_usage name="posixpath" finding="absolute" line="98" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.dropdownitem" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/dropdownitem/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.dropdownitem" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/dropdownitem/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -8272,7 +8373,7 @@
       <module_usage name="posixpath" finding="absolute" line="59" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.expansionpanel" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/expansionpanel/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.expansionpanel" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/expansionpanel/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="5" merged_total="15" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="5" merged_total="5" />
     <module_usages>
@@ -8314,7 +8415,7 @@
       <module_usage name="posixpath" finding="absolute" line="175" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.filemanager" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/filemanager/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.filemanager" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/filemanager/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -8377,7 +8478,7 @@
       <module_usage name="posixpath" finding="absolute" line="812" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.fitimage" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/fitimage/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.fitimage" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/fitimage/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -8403,7 +8504,7 @@
       <module_usage name="kivymd.uix.boxlayout" finding="absolute" line="136" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.floatlayout" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/floatlayout.py" distribution="kivymd">
+  <module name="kivymd.uix.floatlayout" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/floatlayout.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="100" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="33" />
     <distribution-usages>
@@ -8418,7 +8519,7 @@
       <module_usage name="kivymd.uix.behaviors.DeclarativeBehavior" finding="not-found" line="40" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.gridlayout" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/gridlayout.py" distribution="kivymd">
+  <module name="kivymd.uix.gridlayout" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/gridlayout.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="100" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="33" />
     <distribution-usages>
@@ -8433,7 +8534,7 @@
       <module_usage name="kivymd.uix.behaviors.DeclarativeBehavior" finding="not-found" line="90" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.hero" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/hero.py" distribution="kivymd">
+  <module name="kivymd.uix.hero" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/hero.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="328" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="76" />
     <distribution-usages>
@@ -8444,7 +8545,7 @@
       <module_usage name="kivymd.uix.boxlayout" finding="absolute" line="564" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.imagelist" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/imagelist/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.imagelist" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/imagelist/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -8479,7 +8580,7 @@
       <module_usage name="posixpath" finding="absolute" line="93" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.label" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/label/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.label" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/label/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="6" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
     <module_usages>
@@ -8526,7 +8627,7 @@
       <module_usage name="kivymd.uix.selectioncontrol.MDCheckbox" finding="not-found" line="949" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.list" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/list/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.list" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/list/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="30" merged_total="90" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="30" />
     <module_usages>
@@ -8567,7 +8668,7 @@
       <module_usage name="posixpath" finding="absolute" line="975" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.menu" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/menu/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.menu" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/menu/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -8612,7 +8713,7 @@
       <module_usage name="posixpath" finding="absolute" line="649" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.navigationdrawer" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/navigationdrawer/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.navigationdrawer" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/navigationdrawer/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="7" merged_total="21" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="7" merged_total="7" />
     <module_usages>
@@ -8655,7 +8756,7 @@
       <module_usage name="posixpath" finding="absolute" line="566" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.navigationrail" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/navigationrail/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.navigationrail" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/navigationrail/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="4" merged_total="12" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="4" merged_total="4" />
     <module_usages>
@@ -8698,7 +8799,7 @@
       <module_usage name="posixpath" finding="absolute" line="579" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.pickers" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/pickers/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.pickers" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/pickers/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -8869,7 +8970,7 @@
       <module_usage name="posixpath" finding="absolute" line="177" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.progressbar" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/progressbar/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.progressbar" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/progressbar/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -8899,7 +9000,7 @@
       <module_usage name="posixpath" finding="absolute" line="156" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.recyclegridlayout" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/recyclegridlayout.py" distribution="kivymd">
+  <module name="kivymd.uix.recyclegridlayout" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/recyclegridlayout.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="100" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="33" />
     <distribution-usages>
@@ -8914,7 +9015,7 @@
       <module_usage name="kivymd.uix.behaviors.DeclarativeBehavior" finding="not-found" line="90" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.recycleview" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/recycleview.py" distribution="kivymd">
+  <module name="kivymd.uix.recycleview" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/recycleview.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="100" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="33" />
     <distribution-usages>
@@ -8930,7 +9031,7 @@
       <module_usage name="kivymd.uix.behaviors.DeclarativeBehavior" finding="not-found" line="39" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.refreshlayout" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/refreshlayout/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.refreshlayout" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/refreshlayout/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -8963,7 +9064,7 @@
       <module_usage name="posixpath" finding="absolute" line="132" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.relativelayout" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/relativelayout.py" distribution="kivymd">
+  <module name="kivymd.uix.relativelayout" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/relativelayout.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="100" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="33" />
     <distribution-usages>
@@ -8978,7 +9079,7 @@
       <module_usage name="kivymd.uix.behaviors.DeclarativeBehavior" finding="not-found" line="36" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.responsivelayout" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/responsivelayout.py" distribution="kivymd">
+  <module name="kivymd.uix.responsivelayout" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/responsivelayout.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="26" merged_total="375" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="70" />
     <distribution-usages>
@@ -8991,7 +9092,7 @@
       <module_usage name="kivymd.uix.controllers.WindowController" finding="not-found" line="120" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.screen" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/screen.py" distribution="kivymd">
+  <module name="kivymd.uix.screen" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/screen.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="250" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="55" />
     <distribution-usages>
@@ -9008,7 +9109,7 @@
       <module_usage name="kivymd.uix.hero" finding="absolute" line="38" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.screenmanager" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/screenmanager.py" distribution="kivymd">
+  <module name="kivymd.uix.screenmanager" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/screenmanager.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="28" merged_total="1192" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="26" merged_total="157" />
     <distribution-usages>
@@ -9028,7 +9129,7 @@
       <module_usage name="kivymd.uix.transition.MDSlideTransition" finding="not-found" line="88" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.scrollview" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/scrollview.py" distribution="kivymd">
+  <module name="kivymd.uix.scrollview" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/scrollview.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="106" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="35" />
     <distribution-usages>
@@ -9041,7 +9142,7 @@
       <module_usage name="kivymd.uix.behaviors.SpecificBackgroundColorBehavior" finding="not-found" line="37" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.segmentedbutton" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/segmentedbutton/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.segmentedbutton" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/segmentedbutton/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="6" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
     <module_usages>
@@ -9078,7 +9179,7 @@
       <module_usage name="posixpath" finding="absolute" line="305" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.segmentedcontrol" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/segmentedcontrol/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.segmentedcontrol" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/segmentedcontrol/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="6" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
     <module_usages>
@@ -9113,7 +9214,7 @@
       <module_usage name="posixpath" finding="absolute" line="131" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.selection" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/selection/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.selection" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/selection/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -9150,7 +9251,7 @@
       <module_usage name="posixpath" finding="absolute" line="285" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.selectioncontrol" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/selectioncontrol/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.selectioncontrol" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/selectioncontrol/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="3" merged_total="9" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="3" />
     <module_usages>
@@ -9190,7 +9291,7 @@
       <module_usage name="posixpath" finding="absolute" line="295" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.slider" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/slider/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.slider" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/slider/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -9218,7 +9319,7 @@
       <module_usage name="posixpath" finding="absolute" line="34" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.sliverappbar" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/sliverappbar/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.sliverappbar" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/sliverappbar/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="3" merged_total="9" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="3" />
     <module_usages>
@@ -9248,7 +9349,7 @@
       <module_usage name="posixpath" finding="absolute" line="137" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.snackbar" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/snackbar/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.snackbar" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/snackbar/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="4" merged_total="12" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="4" merged_total="4" />
     <module_usages>
@@ -9289,7 +9390,7 @@
       <module_usage name="posixpath" finding="absolute" line="315" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.spinner" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/spinner/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.spinner" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/spinner/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -9319,7 +9420,7 @@
       <module_usage name="posixpath" finding="absolute" line="131" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.stacklayout" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/stacklayout.py" distribution="kivymd">
+  <module name="kivymd.uix.stacklayout" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/stacklayout.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="100" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="33" />
     <distribution-usages>
@@ -9334,7 +9435,7 @@
       <module_usage name="kivymd.uix.behaviors.DeclarativeBehavior" finding="not-found" line="92" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.swiper" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/swiper/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.swiper" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/swiper/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="6" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
     <module_usages>
@@ -9366,7 +9467,7 @@
       <module_usage name="posixpath" finding="absolute" line="221" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.tab" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/tab/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.tab" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/tab/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="3" merged_total="9" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="3" />
     <module_usages>
@@ -9413,8 +9514,8 @@
       <module_usage name="posixpath" finding="absolute" line="963" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.taptargetview" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/taptargetview.py" distribution="kivymd">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="152" merged_total="4082" />
+  <module name="kivymd.uix.taptargetview" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/taptargetview.py" distribution="kivymd">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="152" merged_total="4075" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="145" merged_total="735" />
     <distribution-usages>
       <distribution-usage name="Kivy" />
@@ -9433,7 +9534,7 @@
       <module_usage name="kivymd.theming" finding="absolute" line="245" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.templates" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/templates/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.templates" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/templates/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
@@ -9509,7 +9610,7 @@
       <module_usage name="kivymd.uix.behaviors.StencilBehavior" finding="not-found" line="18" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.textfield" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/textfield/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.textfield" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/textfield/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="6" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
     <module_usages>
@@ -9547,7 +9648,7 @@
       <module_usage name="posixpath" finding="absolute" line="311" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.toolbar" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/toolbar/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.toolbar" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/toolbar/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="5" merged_total="15" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="5" merged_total="5" />
     <module_usages>
@@ -9607,7 +9708,7 @@
       <module_usage name="posixpath" finding="absolute" line="702" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.tooltip" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/tooltip/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.tooltip" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/tooltip/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="6" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
     <module_usages>
@@ -9644,7 +9745,7 @@
       <module_usage name="posixpath" finding="absolute" line="94" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.transition" kind="CompiledPythonPackage" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/transition/__init__.py" distribution="kivymd">
+  <module name="kivymd.uix.transition" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/transition/__init__.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="3" merged_total="9" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="3" />
     <module_usages>
@@ -9668,7 +9769,7 @@
       <module_usage name="kivymd.uix.screenmanager" finding="absolute" line="49" />
     </module_usages>
   </module>
-  <module name="kivymd.uix.widget" kind="CompiledPythonModule" usage="plugin:kivy" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/widget.py" distribution="kivymd">
+  <module name="kivymd.uix.widget" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/kivymd/uix/widget.py" distribution="kivymd">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="100" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="33" />
     <distribution-usages>
@@ -11371,6 +11472,7 @@
       <module_usage name="posixpath" finding="absolute" line="218" />
       <module_usage name="posixpath" finding="absolute" line="224" />
       <module_usage name="posixpath" finding="absolute" line="300" />
+      <module_usage name="os" finding="absolute" line="302" />
       <module_usage name="posixpath" finding="absolute" line="357" />
       <module_usage name="posixpath" finding="absolute" line="418" />
       <module_usage name="posixpath" finding="absolute" line="435" />
@@ -11379,8 +11481,12 @@
       <module_usage name="posixpath" finding="absolute" line="595" />
       <module_usage name="posixpath" finding="absolute" line="615" />
       <module_usage name="posixpath" finding="absolute" line="638" />
+      <module_usage name="os" finding="absolute" line="649" />
       <module_usage name="posixpath" finding="absolute" line="659" />
       <module_usage name="posixpath" finding="absolute" line="675" />
+      <module_usage name="os" finding="absolute" line="685" />
+      <module_usage name="os" finding="absolute" line="688" />
+      <module_usage name="os" finding="absolute" line="722" />
       <module_usage name="posixpath" finding="absolute" line="731" />
       <module_usage name="posixpath" finding="absolute" line="744" />
       <module_usage name="posixpath" finding="absolute" line="756" />
@@ -11726,7 +11832,11 @@
       <module_usage name="posixpath" finding="absolute" line="91" />
       <module_usage name="posixpath" finding="absolute" line="104" />
       <module_usage name="posixpath" finding="absolute" line="118" />
+      <module_usage name="os" finding="absolute" line="127" />
       <module_usage name="os" finding="absolute" line="129" />
+      <module_usage name="os" finding="absolute" line="130" />
+      <module_usage name="os" finding="absolute" line="158" />
+      <module_usage name="os" finding="absolute" line="163" />
       <module_usage name="posixpath" finding="absolute" line="166" />
       <module_usage name="posixpath" finding="absolute" line="177" />
       <module_usage name="errno" finding="absolute" line="183" />
@@ -12498,6 +12608,7 @@
   <included_extension name="_clock.so" dest_path="kivy/_clock.so" source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/_clock.cpython-311-x86_64-linux-gnu.so" package="kivy" ignored="no" reason="used extension module" />
   <included_extension name="_event.so" dest_path="kivy/_event.so" source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/_event.cpython-311-x86_64-linux-gnu.so" package="kivy" ignored="no" reason="used extension module" />
   <included_extension name="_metrics.so" dest_path="kivy/_metrics.so" source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/_metrics.cpython-311-x86_64-linux-gnu.so" package="kivy" ignored="no" reason="used extension module" />
+  <included_extension name="_clipboard_sdl2.so" dest_path="kivy/core/clipboard/_clipboard_sdl2.so" source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/clipboard/_clipboard_sdl2.cpython-311-x86_64-linux-gnu.so" package="kivy.core.clipboard" ignored="no" reason="used extension module" />
   <included_extension name="_img_sdl2.so" dest_path="kivy/core/image/_img_sdl2.so" source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/image/_img_sdl2.cpython-311-x86_64-linux-gnu.so" package="kivy.core.image" ignored="no" reason="used extension module" />
   <included_extension name="_text_sdl2.so" dest_path="kivy/core/text/_text_sdl2.so" source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/text/_text_sdl2.cpython-311-x86_64-linux-gnu.so" package="kivy.core.text" ignored="no" reason="used extension module" />
   <included_extension name="text_layout.so" dest_path="kivy/core/text/text_layout.so" source_path="${sys.prefix}/lib/python3.11/site-packages/kivy/core/text/text_layout.cpython-311-x86_64-linux-gnu.so" package="kivy.core.text" ignored="no" reason="used extension module" />
@@ -12532,34 +12643,67 @@
   <included_extension name="readline.so" dest_path="readline.so" source_path="${sys.real_prefix}/lib/python3.11/lib-dynload/readline.cpython-311-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
   <included_extension name="termios.so" dest_path="termios.so" source_path="${sys.real_prefix}/lib/python3.11/lib-dynload/termios.cpython-311-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
   <included_dll name="libexpat.so.1" dest_path="libexpat.so.1" source_path="/lib/x86_64-linux-gnu/libexpat.so.1" package="" ignored="no" reason="Used by 'KivyMDTest.bin'" />
+  <included_dll name="libtiff-0a86184d.so.6.0.2" dest_path="libtiff-0a86184d.so.6.0.2" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libtiff-0a86184d.so.6.0.2" package="PIL" ignored="no" reason="Used by 'PIL/_imaging.so'" />
+  <included_dll name="libjpeg-77ae51ab.so.62.4.0" dest_path="libjpeg-77ae51ab.so.62.4.0" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libjpeg-77ae51ab.so.62.4.0" package="PIL" ignored="no" reason="Used by 'PIL/_imaging.so'" />
+  <included_dll name="libopenjp2-05423b53.so" dest_path="libopenjp2-05423b53.so" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libopenjp2-05423b53.so" package="PIL" ignored="no" reason="Used by 'PIL/_imaging.so'" />
   <included_dll name="libxcb-b8a56d01.so.1.1.0" dest_path="libxcb-b8a56d01.so.1.1.0" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libxcb-b8a56d01.so.1.1.0" package="PIL" ignored="no" reason="Used by 'PIL/_imaging.so'" />
   <included_dll name="liblzma-13fa198c.so.5.4.5" dest_path="liblzma-13fa198c.so.5.4.5" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/liblzma-13fa198c.so.5.4.5" package="PIL" ignored="no" reason="Used by 'PIL/_imaging.so'" />
   <included_dll name="libXau-154567c4.so.6.0.0" dest_path="libXau-154567c4.so.6.0.0" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libXau-154567c4.so.6.0.0" package="PIL" ignored="no" reason="Used by 'PIL/_imaging.so'" />
-  <included_dll name="libjpeg-77ae51ab.so.62.4.0" dest_path="libjpeg-77ae51ab.so.62.4.0" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libjpeg-77ae51ab.so.62.4.0" package="PIL" ignored="no" reason="Used by 'PIL/_imaging.so'" />
-  <included_dll name="libopenjp2-05423b53.so" dest_path="libopenjp2-05423b53.so" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libopenjp2-05423b53.so" package="PIL" ignored="no" reason="Used by 'PIL/_imaging.so'" />
-  <included_dll name="libtiff-0a86184d.so.6.0.2" dest_path="libtiff-0a86184d.so.6.0.2" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libtiff-0a86184d.so.6.0.2" package="PIL" ignored="no" reason="Used by 'PIL/_imaging.so'" />
   <included_dll name="liblcms2-e69eef39.so.2.0.16" dest_path="liblcms2-e69eef39.so.2.0.16" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/liblcms2-e69eef39.so.2.0.16" package="PIL" ignored="no" reason="Used by 'PIL/_imagingcms.so'" />
-  <included_dll name="libbrotlicommon-3ecfe81c.so.1" dest_path="libbrotlicommon-3ecfe81c.so.1" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libbrotlicommon-3ecfe81c.so.1" package="PIL" ignored="no" reason="Used by 'PIL/_imagingft.so'" />
   <included_dll name="libfreetype-be14bf51.so.6.20.1" dest_path="libfreetype-be14bf51.so.6.20.1" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libfreetype-be14bf51.so.6.20.1" package="PIL" ignored="no" reason="Used by 'PIL/_imagingft.so'" />
-  <included_dll name="libbrotlidec-ba690955.so.1" dest_path="libbrotlidec-ba690955.so.1" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libbrotlidec-ba690955.so.1" package="PIL" ignored="no" reason="Used by 'PIL/_imagingft.so'" />
   <included_dll name="libharfbuzz-89381d8f.so.0.60850.0" dest_path="libharfbuzz-89381d8f.so.0.60850.0" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libharfbuzz-89381d8f.so.0.60850.0" package="PIL" ignored="no" reason="Used by 'PIL/_imagingft.so'" />
   <included_dll name="libpng16-58efbb84.so.16.43.0" dest_path="libpng16-58efbb84.so.16.43.0" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libpng16-58efbb84.so.16.43.0" package="PIL" ignored="no" reason="Used by 'PIL/_imagingft.so'" />
-  <included_dll name="libsharpyuv-898c0cb5.so.0.1.0" dest_path="libsharpyuv-898c0cb5.so.0.1.0" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libsharpyuv-898c0cb5.so.0.1.0" package="PIL" ignored="no" reason="Used by 'PIL/_webp.so'" />
+  <included_dll name="libbrotlidec-ba690955.so.1" dest_path="libbrotlidec-ba690955.so.1" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libbrotlidec-ba690955.so.1" package="PIL" ignored="no" reason="Used by 'PIL/_imagingft.so'" />
+  <included_dll name="libbrotlicommon-3ecfe81c.so.1" dest_path="libbrotlicommon-3ecfe81c.so.1" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libbrotlicommon-3ecfe81c.so.1" package="PIL" ignored="no" reason="Used by 'PIL/_imagingft.so'" />
   <included_dll name="libwebp-2fd3cdca.so.7.1.9" dest_path="libwebp-2fd3cdca.so.7.1.9" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libwebp-2fd3cdca.so.7.1.9" package="PIL" ignored="no" reason="Used by 'PIL/_webp.so'" />
-  <included_dll name="libwebpdemux-f2642bcc.so.2.0.15" dest_path="libwebpdemux-f2642bcc.so.2.0.15" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libwebpdemux-f2642bcc.so.2.0.15" package="PIL" ignored="no" reason="Used by 'PIL/_webp.so'" />
   <included_dll name="libwebpmux-d524b4d5.so.3.1.0" dest_path="libwebpmux-d524b4d5.so.3.1.0" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libwebpmux-d524b4d5.so.3.1.0" package="PIL" ignored="no" reason="Used by 'PIL/_webp.so'" />
+  <included_dll name="libwebpdemux-f2642bcc.so.2.0.15" dest_path="libwebpdemux-f2642bcc.so.2.0.15" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libwebpdemux-f2642bcc.so.2.0.15" package="PIL" ignored="no" reason="Used by 'PIL/_webp.so'" />
+  <included_dll name="libsharpyuv-898c0cb5.so.0.1.0" dest_path="libsharpyuv-898c0cb5.so.0.1.0" source_path="${sys.prefix}/lib/python3.11/site-packages/pillow.libs/libsharpyuv-898c0cb5.so.0.1.0" package="PIL" ignored="no" reason="Used by 'PIL/_webp.so'" />
   <included_dll name="libbz2.so.1.0" dest_path="libbz2.so.1.0" source_path="/lib/x86_64-linux-gnu/libbz2.so.1.0" package="" ignored="no" reason="Used by '_bz2.so'" />
   <included_dll name="libffi.so.8" dest_path="libffi.so.8" source_path="/lib/x86_64-linux-gnu/libffi.so.8" package="" ignored="no" reason="Used by '_ctypes.so'" />
   <included_dll name="libcrypto.so.3" dest_path="libcrypto.so.3" source_path="/lib/x86_64-linux-gnu/libcrypto.so.3" package="" ignored="no" reason="Used by '_hashlib.so'" />
   <included_dll name="liblzma.so.5" dest_path="liblzma.so.5" source_path="/lib/x86_64-linux-gnu/liblzma.so.5" package="" ignored="no" reason="Used by '_lzma.so'" />
   <included_dll name="libssl.so.3" dest_path="libssl.so.3" source_path="/lib/x86_64-linux-gnu/libssl.so.3" package="" ignored="no" reason="Used by '_ssl.so'" />
-  <included_dll name="libpng15-ce838cd1.so.15.13.0" dest_path="libpng15-ce838cd1.so.15.13.0" source_path="${sys.prefix}/lib/python3.11/site-packages/Kivy.libs/libpng15-ce838cd1.so.15.13.0" package="kivy.core.image" ignored="no" reason="Used by 'kivy/core/image/_img_sdl2.so'" />
-  <included_dll name="libSDL2_mixer-2-2c7d4995.0.so.0.600.3" dest_path="libSDL2_mixer-2-2c7d4995.0.so.0.600.3" source_path="${sys.prefix}/lib/python3.11/site-packages/Kivy.libs/libSDL2_mixer-2-2c7d4995.0.so.0.600.3" package="kivy.core.image" ignored="no" reason="Used by 'kivy/core/image/_img_sdl2.so'" />
-  <included_dll name="libSDL2-2-e2929101.0.so.0.2800.5" dest_path="libSDL2-2-e2929101.0.so.0.2800.5" source_path="${sys.prefix}/lib/python3.11/site-packages/Kivy.libs/libSDL2-2-e2929101.0.so.0.2800.5" package="kivy.core.image" ignored="no" reason="Used by 'kivy/core/image/_img_sdl2.so'" />
-  <included_dll name="libSDL2_image-2-e98a3508.0.so.0.800.0" dest_path="libSDL2_image-2-e98a3508.0.so.0.800.0" source_path="${sys.prefix}/lib/python3.11/site-packages/Kivy.libs/libSDL2_image-2-e98a3508.0.so.0.800.0" package="kivy.core.image" ignored="no" reason="Used by 'kivy/core/image/_img_sdl2.so'" />
-  <included_dll name="libSDL2_ttf-2-d4968664.0.so.0.2000.2" dest_path="libSDL2_ttf-2-d4968664.0.so.0.2000.2" source_path="${sys.prefix}/lib/python3.11/site-packages/Kivy.libs/libSDL2_ttf-2-d4968664.0.so.0.2000.2" package="kivy.core.image" ignored="no" reason="Used by 'kivy/core/image/_img_sdl2.so'" />
+  <included_dll name="libSDL2-2-e2929101.0.so.0.2800.5" dest_path="libSDL2-2-e2929101.0.so.0.2800.5" source_path="${sys.prefix}/lib/python3.11/site-packages/Kivy.libs/libSDL2-2-e2929101.0.so.0.2800.5" package="kivy.core.clipboard" ignored="no" reason="Used by 'kivy/core/clipboard/_clipboard_sdl2.so'" />
+  <included_dll name="libSDL2_ttf-2-d4968664.0.so.0.2000.2" dest_path="libSDL2_ttf-2-d4968664.0.so.0.2000.2" source_path="${sys.prefix}/lib/python3.11/site-packages/Kivy.libs/libSDL2_ttf-2-d4968664.0.so.0.2000.2" package="kivy.core.clipboard" ignored="no" reason="Used by 'kivy/core/clipboard/_clipboard_sdl2.so'" />
+  <included_dll name="libSDL2_image-2-e98a3508.0.so.0.800.0" dest_path="libSDL2_image-2-e98a3508.0.so.0.800.0" source_path="${sys.prefix}/lib/python3.11/site-packages/Kivy.libs/libSDL2_image-2-e98a3508.0.so.0.800.0" package="kivy.core.clipboard" ignored="no" reason="Used by 'kivy/core/clipboard/_clipboard_sdl2.so'" />
+  <included_dll name="libSDL2_mixer-2-2c7d4995.0.so.0.600.3" dest_path="libSDL2_mixer-2-2c7d4995.0.so.0.600.3" source_path="${sys.prefix}/lib/python3.11/site-packages/Kivy.libs/libSDL2_mixer-2-2c7d4995.0.so.0.600.3" package="kivy.core.clipboard" ignored="no" reason="Used by 'kivy/core/clipboard/_clipboard_sdl2.so'" />
+  <included_dll name="libpng15-ce838cd1.so.15.13.0" dest_path="libpng15-ce838cd1.so.15.13.0" source_path="${sys.prefix}/lib/python3.11/site-packages/Kivy.libs/libpng15-ce838cd1.so.15.13.0" package="kivy.core.clipboard" ignored="no" reason="Used by 'kivy/core/clipboard/_clipboard_sdl2.so'" />
   <included_dll name="libreadline.so.8" dest_path="libreadline.so.8" source_path="/lib/x86_64-linux-gnu/libreadline.so.8" package="" ignored="no" reason="Used by 'readline.so'" />
   <included_dll name="libtinfo.so.6" dest_path="libtinfo.so.6" source_path="/lib/x86_64-linux-gnu/libtinfo.so.6" package="" ignored="no" reason="Used by 'readline.so'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="kivy/core/clipboard/_clipboard_sdl2.so" reason="no outside dependencies allowed for 'kivy.core.clipboard._clipboard_sdl2'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="kivy/core/image/_img_sdl2.so" reason="no outside dependencies allowed for 'kivy.core.image._img_sdl2'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="kivy/core/text/_text_sdl2.so" reason="no outside dependencies allowed for 'kivy.core.text._text_sdl2'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="kivy/core/window/_window_sdl2.so" reason="no outside dependencies allowed for 'kivy.core.window._window_sdl2'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="kivy/core/window/window_x11.so" reason="no outside dependencies allowed for 'kivy.core.window.window_x11'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXrender.so.1" used_by="kivy/core/window/window_x11.so" reason="no outside dependencies allowed for 'kivy.core.window.window_x11'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="kivy/core/window/window_x11.so" reason="no outside dependencies allowed for 'kivy.core.window.window_x11'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="kivy/core/window/window_x11.so" reason="no outside dependencies allowed for 'kivy.core.window.window_x11'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLX.so.0" used_by="kivy/core/window/window_x11.so" reason="no outside dependencies allowed for 'kivy.core.window.window_x11'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="kivy/core/window/window_x11.so" reason="no outside dependencies allowed for 'kivy.core.window.window_x11'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="kivy/core/window/window_x11.so" reason="no outside dependencies allowed for 'kivy.core.window.window_x11'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="kivy/core/window/window_x11.so" reason="no outside dependencies allowed for 'kivy.core.window.window_x11'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="kivy/core/window/window_x11.so" reason="no outside dependencies allowed for 'kivy.core.window.window_x11'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="kivy/core/window/window_x11.so" reason="no outside dependencies allowed for 'kivy.core.window.window_x11'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="kivy/graphics/cgl_backend/cgl_gl.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_gl'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="kivy/graphics/cgl_backend/cgl_gl.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_gl'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLX.so.0" used_by="kivy/graphics/cgl_backend/cgl_gl.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_gl'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="kivy/graphics/cgl_backend/cgl_gl.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_gl'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="kivy/graphics/cgl_backend/cgl_gl.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_gl'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="kivy/graphics/cgl_backend/cgl_gl.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_gl'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="kivy/graphics/cgl_backend/cgl_gl.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_gl'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="kivy/graphics/cgl_backend/cgl_gl.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_gl'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="kivy/graphics/cgl_backend/cgl_gl.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_gl'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="kivy/graphics/cgl_backend/cgl_glew.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_glew'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="kivy/graphics/cgl_backend/cgl_glew.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_glew'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLX.so.0" used_by="kivy/graphics/cgl_backend/cgl_glew.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_glew'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="kivy/graphics/cgl_backend/cgl_glew.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_glew'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="kivy/graphics/cgl_backend/cgl_glew.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_glew'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="kivy/graphics/cgl_backend/cgl_glew.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_glew'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="kivy/graphics/cgl_backend/cgl_glew.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_glew'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="kivy/graphics/cgl_backend/cgl_glew.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_glew'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="kivy/graphics/cgl_backend/cgl_glew.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_glew'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="kivy/graphics/cgl_backend/cgl_sdl2.so" reason="no outside dependencies allowed for 'kivy.graphics.cgl_backend.cgl_sdl2'" />
   <command_line>
     <option value="--standalone" />
     <option value="/home/hayen/repos/Nuitka-Watch/cases/Kivy/kivymd-example/KivyMDTest.py" />
@@ -12584,6 +12728,7 @@
     <plugin name="options-nanny" user_enabled="no" />
     <plugin name="pbr-compat" user_enabled="no" />
     <plugin name="pkg-resources" user_enabled="no" />
+    <plugin name="playwright" user_enabled="no" />
     <plugin name="pywebview" user_enabled="no" />
     <plugin name="spacy" user_enabled="no" />
     <plugin name="transformers" user_enabled="no" />
