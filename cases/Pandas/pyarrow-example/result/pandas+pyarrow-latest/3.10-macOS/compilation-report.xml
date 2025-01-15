@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.5.9" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.6rc10" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -4851,7 +4851,7 @@
   <module name="numpy" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/__init__.py" distribution="numpy">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_setuptools" tags_used="use_setuptools" result="true" />
     <plugin-influence name="dll-files" influence="condition-used" condition="win32" tags_used="win32" result="false" />
-    <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;)" tags_used="is_conda_package" result="false" />
+    <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;) and version(&quot;numpy&quot;) &lt; (2,)" tags_used="is_conda_package" result="false" />
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="324" merged_total="4000" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="324" merged_total="785" />
     <module_usages>
