@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.5.9" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.6rc11" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <module name="PIL" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/PIL/__init__.py" distribution="pillow">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="15" merged_total="183" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="30" />
@@ -486,7 +486,7 @@
       <module_usage name="collections.abc" finding="absolute" line="21" />
       <module_usage name="types" finding="absolute" line="22" />
       <module_usage name="typing" finding="absolute" line="23" />
-      <module_usage name="numpy" finding="absolute" line="420" />
+      <module_usage name="numpy" finding="excluded" line="420" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'PIL' for 'numpy'" />
       <module_usage name="PIL" finding="absolute" line="595" />
       <module_usage name="PIL.Image" finding="relative" line="595" />
     </module_usages>
@@ -7519,7 +7519,7 @@
   <module name="numpy" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/numpy/__init__.py" distribution="numpy">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_setuptools" tags_used="use_setuptools" result="true" />
     <plugin-influence name="dll-files" influence="condition-used" condition="win32" tags_used="win32" result="false" />
-    <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;)" tags_used="is_conda_package" result="false" />
+    <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;) and version(&quot;numpy&quot;) &lt; (2,)" tags_used="is_conda_package" result="false" />
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="321" merged_total="3731" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="321" merged_total="733" />
     <module_usages>

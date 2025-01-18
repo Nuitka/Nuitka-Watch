@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.5.6" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.6rc11" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -4930,7 +4930,7 @@
   <module name="numpy" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/__init__.py" distribution="numpy">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_setuptools" tags_used="use_setuptools" result="true" />
     <plugin-influence name="dll-files" influence="condition-used" condition="win32" tags_used="win32" result="false" />
-    <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;)" tags_used="is_conda_package" result="false" />
+    <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;) and version(&quot;numpy&quot;) &lt; (2,)" tags_used="is_conda_package" result="false" />
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="322" merged_total="3745" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="322" merged_total="736" />
     <module_usages>
@@ -18626,6 +18626,11 @@
       <module_usage name="matplotlib.pyplot" finding="not-found" line="696" />
     </module_usages>
   </module>
+  <module name="sklearn.tree._partitioner" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/tree/_partitioner.cpython-310-x86_64-linux-gnu.so" distribution="scikit-learn">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="sklearn.tree._reingold_tilford" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/tree/_reingold_tilford.py" distribution="scikit-learn">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="94" merged_total="2503" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="94" merged_total="379" />
@@ -20397,6 +20402,7 @@
   <included_extension name="_libsvm.so" dest_path="sklearn/svm/_libsvm.so" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/svm/_libsvm.cpython-310-x86_64-linux-gnu.so" package="sklearn.svm" ignored="no" reason="used extension module" />
   <included_extension name="_libsvm_sparse.so" dest_path="sklearn/svm/_libsvm_sparse.so" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/svm/_libsvm_sparse.cpython-310-x86_64-linux-gnu.so" package="sklearn.svm" ignored="no" reason="used extension module" />
   <included_extension name="_criterion.so" dest_path="sklearn/tree/_criterion.so" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/tree/_criterion.cpython-310-x86_64-linux-gnu.so" package="sklearn.tree" ignored="no" reason="used extension module" />
+  <included_extension name="_partitioner.so" dest_path="sklearn/tree/_partitioner.so" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/tree/_partitioner.cpython-310-x86_64-linux-gnu.so" package="sklearn.tree" ignored="no" reason="used extension module" />
   <included_extension name="_splitter.so" dest_path="sklearn/tree/_splitter.so" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/tree/_splitter.cpython-310-x86_64-linux-gnu.so" package="sklearn.tree" ignored="no" reason="used extension module" />
   <included_extension name="_tree.so" dest_path="sklearn/tree/_tree.so" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/tree/_tree.cpython-310-x86_64-linux-gnu.so" package="sklearn.tree" ignored="no" reason="used extension module" />
   <included_extension name="_utils.so" dest_path="sklearn/tree/_utils.so" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/tree/_utils.cpython-310-x86_64-linux-gnu.so" package="sklearn.tree" ignored="no" reason="used extension module" />

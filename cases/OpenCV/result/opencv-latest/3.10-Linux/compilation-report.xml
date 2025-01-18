@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.5.6" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.6rc11" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -941,8 +941,10 @@
     <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone and before_python312 and not nuitka_python" tags_used="standalone,before_python312,nuitka_python" result="true" />
     <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone and python312_or_higher and not nuitka_python" tags_used="standalone,python312_or_higher" result="false" />
     <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone" tags_used="standalone" result="true" />
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not is_conda_package(&quot;cv2&quot;)" tags_used="is_conda_package" result="true" />
     <plugin-influence name="anti-bloat" influence="variable-used" variable="cv2_extra_sub_modules" tags_used="repr,get_variable" value="('dnn', 'ocl', 'ipp', 'ogl', 'flann', 'mat_wrapper', 'barcode', 'samples', 'segmentation', 'fisheye', 'gapi', 'parallel', 'videoio_registry', 'typing', 'data', 'aruco', 'ml', 'Error', 'cuda', 'detail', 'utils', 'misc')" />
     <plugin-influence name="implicit-imports" influence="condition-used" condition="linux and standalone" tags_used="linux,standalone" result="true" />
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="not is_conda_package(&quot;cv2&quot;)" tags_used="is_conda_package" result="true" />
     <plugin-influence name="implicit-imports" influence="variable-used" variable="cv2_extra_sub_modules" tags_used="get_variable" value="('dnn', 'ocl', 'ipp', 'ogl', 'flann', 'mat_wrapper', 'barcode', 'samples', 'segmentation', 'fisheye', 'gapi', 'parallel', 'videoio_registry', 'typing', 'data', 'aruco', 'ml', 'Error', 'cuda', 'detail', 'utils', 'misc')" />
     <plugin-influence name="options-nanny" influence="condition-used" condition="version(get_dist_name(&quot;cv2&quot;)) &lt; (4,6)" tags_used="version,get_dist_name" result="false" />
     <plugin-influence name="dll-files" influence="condition-used" condition="linux" tags_used="linux" result="true" />
@@ -3335,7 +3337,7 @@
   <module name="numpy" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/__init__.py" distribution="numpy">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_setuptools" tags_used="use_setuptools" result="true" />
     <plugin-influence name="dll-files" influence="condition-used" condition="win32" tags_used="win32" result="false" />
-    <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;)" tags_used="is_conda_package" result="false" />
+    <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;) and version(&quot;numpy&quot;) &lt; (2,)" tags_used="is_conda_package" result="false" />
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="322" merged_total="3745" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="322" merged_total="736" />
     <module_usages>
@@ -4550,14 +4552,14 @@
     </module_usages>
   </module>
   <module name="numpy.f2py.__version__" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/f2py/__version__.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="numpy.version" finding="absolute" line="1" />
     </module_usages>
   </module>
   <module name="numpy.f2py._backends" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/f2py/_backends/__init__.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="43" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -4566,7 +4568,7 @@
     </module_usages>
   </module>
   <module name="numpy.f2py._backends._backend" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/f2py/_backends/_backend.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="16" merged_total="193" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
@@ -4606,7 +4608,7 @@
     </module_usages>
   </module>
   <module name="numpy.f2py._isocbind" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/f2py/_isocbind.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="8" merged_total="154" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
@@ -4644,7 +4646,7 @@
     </module_usages>
   </module>
   <module name="numpy.f2py.cb_rules" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/f2py/cb_rules.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="191" merged_total="2933" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="numpy.f2py" finding="absolute" line="11" />
@@ -4668,7 +4670,7 @@
     </module_usages>
   </module>
   <module name="numpy.f2py.common_rules" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/f2py/common_rules.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="132" merged_total="2503" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="numpy.f2py" finding="absolute" line="11" />
@@ -4779,7 +4781,7 @@
     </module_usages>
   </module>
   <module name="numpy.f2py.func2subr" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/f2py/func2subr.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="155" merged_total="5133" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="copy" finding="absolute" line="12" />
@@ -5805,7 +5807,7 @@
     </module_usages>
   </module>
   <module name="numpy.testing" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/testing/__init__.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="437" />
+    <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
