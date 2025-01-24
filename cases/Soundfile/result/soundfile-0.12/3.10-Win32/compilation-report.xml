@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.5.9" nuitka_commercial_version="not installed" completion="yes">
+<nuitka-compilation-report nuitka_version="2.6" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\__future__.py">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -2934,7 +2934,7 @@
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_setuptools" tags_used="use_setuptools" result="true" />
     <plugin-influence name="delvewheel" influence="detection" detection="delvewheel_version" value="'1.9.0'" />
     <plugin-influence name="dll-files" influence="condition-used" condition="win32" tags_used="win32" result="true" />
-    <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;)" tags_used="is_conda_package" result="false" />
+    <plugin-influence name="dll-files" influence="condition-used" condition="is_conda_package(&quot;numpy&quot;) and version(&quot;numpy&quot;) &lt; (2,)" tags_used="is_conda_package" result="false" />
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="322" merged_total="3823" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="322" merged_total="750" />
     <module_usages>
@@ -4201,7 +4201,7 @@
     <module_usages />
   </module>
   <module name="numpy.f2py.auxfuncs" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\numpy\f2py\auxfuncs.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="78" merged_total="10946" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="pprint" finding="absolute" line="11" />
@@ -4272,7 +4272,7 @@
     </module_usages>
   </module>
   <module name="numpy.f2py.crackfortran" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\numpy\f2py\crackfortran.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="852" merged_total="84672" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="139" />
@@ -4378,7 +4378,7 @@
     </module_usages>
   </module>
   <module name="numpy.f2py.rules" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\numpy\f2py\rules.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="155" merged_total="8205" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="49" />
@@ -5908,9 +5908,6 @@
     </module_usages>
   </module>
   <module name="soundfile" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\soundfile.py" distribution="soundfile">
-    <plugin-influence name="dll-files" influence="condition-used" condition="win32 and arch_amd64" tags_used="win32,arch_amd64" result="true" />
-    <plugin-influence name="dll-files" influence="condition-used" condition="win32 and arch_x86" tags_used="win32,arch_x86" result="false" />
-    <plugin-influence name="dll-files" influence="condition-used" condition="macos" tags_used="macos" result="false" />
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="100" merged_total="11774" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="100" merged_total="1586" />
     <distribution-usages>
@@ -6549,9 +6546,9 @@
   <included_extension name="mtrand.pyd" dest_path="numpy\random\mtrand.pyd" source_path="${sys.prefix}\lib\site-packages\numpy\random\mtrand.cp310-win_amd64.pyd" package="numpy.random" ignored="no" reason="used extension module" />
   <included_extension name="select.pyd" dest_path="select.pyd" source_path="${sys.real_prefix}\DLLs\select.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="unicodedata.pyd" dest_path="unicodedata.pyd" source_path="${sys.real_prefix}\DLLs\unicodedata.pyd" package="" ignored="no" reason="used extension module" />
+  <included_dll name="libsndfile_64bit.dll" dest_path="_soundfile_data\libsndfile_64bit.dll" source_path="${sys.prefix}\lib\site-packages\_soundfile_data\libsndfile_64bit.dll" package="_soundfile_data" ignored="no" reason="Yaml config of '_soundfile_data'" />
   <included_dll name="libscipy_openblas64_-43e11ff0749b8cbe0a615c9cf6737e0e.dll" dest_path="numpy.libs\libscipy_openblas64_-43e11ff0749b8cbe0a615c9cf6737e0e.dll" source_path="${sys.prefix}\lib\site-packages\numpy.libs\libscipy_openblas64_-43e11ff0749b8cbe0a615c9cf6737e0e.dll" package="numpy" ignored="no" reason="needed by 'numpy'" />
   <included_dll name="msvcp140-d64049c6e3865410a7dda6a7e9f0c575.dll" dest_path="numpy.libs\msvcp140-d64049c6e3865410a7dda6a7e9f0c575.dll" source_path="${sys.prefix}\lib\site-packages\numpy.libs\msvcp140-d64049c6e3865410a7dda6a7e9f0c575.dll" package="numpy" ignored="no" reason="needed by 'numpy'" />
-  <included_dll name="libsndfile_64bit.dll" dest_path="_soundfile_data\libsndfile_64bit.dll" source_path="${sys.prefix}\lib\site-packages\_soundfile_data\libsndfile_64bit.dll" package="soundfile" ignored="no" reason="Yaml config of 'soundfile'" />
   <included_dll name="python310.dll" dest_path="python310.dll" source_path="${sys.real_prefix}\python310.dll" package="" ignored="no" reason="Used by 'SoundfileUsing.exe'" />
   <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.real_prefix}\vcruntime140.dll" package="" ignored="no" reason="Used by 'SoundfileUsing.exe'" />
   <included_dll name="libffi-7.dll" dest_path="libffi-7.dll" source_path="${sys.real_prefix}\dlls\libffi-7.dll" package="" ignored="no" reason="Used by '_ctypes.pyd'" />
