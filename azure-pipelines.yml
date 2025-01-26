@@ -73,6 +73,10 @@ jobs:
           "GITHUB_TOKEN": "$(NOBODY_BOT_IDENTITY)"
           "SOURCE_BRANCH": "$(Build.SourceBranchName)"
           "NUITKA_BRANCH_NAME": "$(NUITKA_BRANCH_NAME)"
+          "GIT_AUTHOR_NAME": "Nuitka Nobody Bot"
+          "GIT_COMMITTER_NAME": "Nuitka Nobody Bot"
+          "GIT_AUTHOR_EMAIL": "nuitka-nobody-bot@nuitka.net"
+          "GIT_COMMITTER_EMAIL": "nuitka-nobody-bot@nuitka.net"
 
   - job:
     displayName: "MacOS"
@@ -184,3 +188,11 @@ jobs:
             if not exist "%PIPENV_CACHE_DIR%" mkdir %PIPENV_CACHE_DIR%
             python ../Nuitka-develop/bin/nuitka --version
             python ../Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=..\Nuitka-develop\bin\nuitka --jobs=-2
+        env:
+          "GITHUB_TOKEN": "$(NOBODY_BOT_IDENTITY)"
+          "SOURCE_BRANCH": "$(Build.SourceBranchName)"
+          "NUITKA_BRANCH_NAME": "$(NUITKA_BRANCH_NAME)"
+          "GIT_AUTHOR_NAME": "Nuitka Nobody Bot"
+          "GIT_COMMITTER_NAME": "Nuitka Nobody Bot"
+          "GIT_AUTHOR_EMAIL": "nuitka-nobody-bot@nuitka.net"
+          "GIT_COMMITTER_EMAIL": "nuitka-nobody-bot@nuitka.net"
