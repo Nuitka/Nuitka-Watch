@@ -21,7 +21,7 @@ else
     NUITKA_WATCH="../Nuitka-factory"
 fi
 
-if [ "$OS" = "Darwin" ]
+if [ "$OS" = "Darwin" -o "$OS" = "Linux" ]
 then
     python3.10 $NUITKA_WATCH/bin/nuitka-watch --python-version=3.10 --nuitka-binary=../Nuitka-develop/bin/nuitka $@
     python3.11 $NUITKA_WATCH/bin/nuitka-watch --python-version=3.11 --nuitka-binary=../Nuitka-develop/bin/nuitka $@
