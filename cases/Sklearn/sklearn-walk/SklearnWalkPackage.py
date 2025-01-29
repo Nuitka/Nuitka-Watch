@@ -24,16 +24,20 @@ def walkPackage(package_name, package):
     for item in pkgutil.iter_modules(package.__path__):
         if item.name == "tests":
             continue
+        if item.name == "_build_utils":
+            continue
 
         full_name = "%s.%s" % (package_name, item.name)
         print("Containing", item, full_name)
 
         importlib.import_module(full_name)
         imported = sys.modules[full_name]
-        print(imported)
+        print("->", imported)
 
         if item.ispkg:
             walkPackage(full_name, imported)
 
 
 walkPackage("sklearn", sklearn)
+
+print("OK.")
