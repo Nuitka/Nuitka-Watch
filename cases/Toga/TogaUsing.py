@@ -4,10 +4,10 @@
 # apt-get install --no-install-recommends libgirepository1.0-dev libcairo
 
 import toga
-import sys
+import os
 
 def button_handler(widget):
-    print("hello")
+    print("hello button")
 
 def build(app):
     box = toga.Box()
@@ -18,7 +18,10 @@ def build(app):
     return box
 
 def main():
-    return toga.App("First App", "org.nuitka.helloworld", startup=build)
+    app = toga.App("First App", "org.nuitka.helloworld", startup=build)
+
+    if os.getenv("NUITKA_TEST_INTERACTIVE") != "0":
+        app.main_loop()
 
 if __name__ == "__main__":
     main()
