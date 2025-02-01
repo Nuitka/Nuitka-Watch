@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.6.1" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="2.6.2" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="8" merged_total="81" />
     <optimization-time pass="2" time="volatile" />
@@ -21299,6 +21299,7 @@
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="1" />
       <module_usage name="numba.core.utils" finding="absolute" line="2" />
+      <module_usage name="numba.core.types" finding="absolute" line="3" />
     </module_usages>
   </module>
   <module name="numbers" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/numbers.py">
@@ -23771,7 +23772,7 @@
     </module_usages>
   </module>
   <module name="numpy.testing" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/numpy/testing/__init__.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="437" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="595" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -40568,6 +40569,7 @@
     </module_usages>
   </module>
   <module name="sklearn" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/sklearn/__init__.py" distribution="scikit-learn">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_pytest" tags_used="use_pytest" result="true" />
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="211" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="40" />
     <distribution-usages>
@@ -41281,7 +41283,7 @@
       <module_usage name="sklearn.utils._chunking" finding="relative" line="14" />
       <module_usage name="sklearn.utils._optional_dependencies" finding="relative" line="15" />
       <module_usage name="sklearn.utils.fixes" finding="relative" line="16" />
-      <module_usage name="pandas" finding="absolute" line="364" />
+      <module_usage name="pandas" finding="excluded" line="364" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn' for 'pandas'" />
     </module_usages>
   </module>
   <module name="sklearn.datasets._base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/sklearn/datasets/_base.py" distribution="scikit-learn">
@@ -44528,7 +44530,7 @@
       <module_usage name="sklearn.utils._missing" finding="relative" line="6" />
       <module_usage name="sklearn.utils._param_validation" finding="relative" line="7" />
       <module_usage name="sklearn.utils.fixes" finding="relative" line="8" />
-      <module_usage name="pandas" finding="excluded" line="15" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn.utils' for 'pandas'" />
+      <module_usage name="pandas" finding="excluded" line="15" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn' for 'pandas'" />
     </module_usages>
   </module>
   <module name="sklearn.utils._metadata_requests" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/sklearn/utils/_metadata_requests.py" distribution="scikit-learn">
@@ -44557,7 +44559,7 @@
       <module_usage name="math" finding="absolute" line="1" />
       <module_usage name="numbers" finding="absolute" line="2" />
       <module_usage name="contextlib" finding="absolute" line="3" />
-      <module_usage name="pandas" finding="excluded" line="61" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn.utils' for 'pandas'" />
+      <module_usage name="pandas" finding="excluded" line="61" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn' for 'pandas'" />
       <module_usage name="pandas.NA" finding="not-found" line="61" />
     </module_usages>
   </module>
@@ -44574,7 +44576,7 @@
     </distribution-usages>
     <module_usages>
       <module_usage name="matplotlib" finding="not-found" line="13" />
-      <module_usage name="pandas" finding="excluded" line="38" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn.utils' for 'pandas'" />
+      <module_usage name="pandas" finding="excluded" line="38" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn' for 'pandas'" />
     </module_usages>
   </module>
   <module name="sklearn.utils._param_validation" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/sklearn/utils/_param_validation.py" distribution="scikit-learn">
@@ -44600,7 +44602,7 @@
       <module_usage name="scipy.sparse.issparse" finding="not-found" line="11" />
       <module_usage name="sklearn._config" finding="relative" line="13" />
       <module_usage name="sklearn.utils.validation" finding="relative" line="14" />
-      <module_usage name="pandas" finding="excluded" line="329" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn.utils' for 'pandas'" />
+      <module_usage name="pandas" finding="excluded" line="329" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn' for 'pandas'" />
     </module_usages>
   </module>
   <module name="sklearn.utils._plotting" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/sklearn/utils/_plotting.py" distribution="scikit-learn">
@@ -45074,7 +45076,7 @@
       <module_usage name="sklearn.utils.fixes" finding="relative" line="27" />
       <module_usage name="sklearn.utils._isfinite" finding="relative" line="28" />
       <module_usage name="sklearn.utils.fixes" finding="relative" line="29" />
-      <module_usage name="pandas" finding="excluded" line="677" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn.utils' for 'pandas'" />
+      <module_usage name="pandas" finding="excluded" line="677" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn' for 'pandas'" />
       <module_usage name="pandas.SparseDtype" finding="not-found" line="677" />
       <module_usage name="pandas.api.types" finding="absolute" line="678" />
       <module_usage name="pandas.api.types.is_bool_dtype" finding="not-found" line="678" />
@@ -45082,9 +45084,9 @@
       <module_usage name="pandas.api.types.is_integer_dtype" finding="not-found" line="678" />
       <module_usage name="pandas.api.types" finding="absolute" line="694" />
       <module_usage name="pandas.api.types.is_extension_array_dtype" finding="not-found" line="694" />
-      <module_usage name="pandas" finding="excluded" line="871" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn.utils' for 'pandas'" />
+      <module_usage name="pandas" finding="excluded" line="871" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn' for 'pandas'" />
       <module_usage name="pandas.SparseDtype" finding="not-found" line="871" />
-      <module_usage name="pandas" finding="excluded" line="950" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn.utils' for 'pandas'" />
+      <module_usage name="pandas" finding="excluded" line="950" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'sklearn' for 'pandas'" />
       <module_usage name="pandas.SparseDtype" finding="not-found" line="950" />
       <module_usage name="sklearn.utils" finding="absolute" line="2173" />
       <module_usage name="sklearn.utils._safe_indexing" finding="not-found" line="2173" />
