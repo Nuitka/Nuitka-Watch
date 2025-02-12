@@ -20,10 +20,19 @@ else
     NUITKA_WATCH="../Nuitka-factory"
 fi
 
-if [ "$OS" = "Darwin" -o "$OS" = "Linux" ]
+if [ "$OS" = "Darwin" ]
 then
-    python3.10 $NUITKA_WATCH/bin/nuitka-watch --python-version=3.10 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka $@
-    python3.11 $NUITKA_WATCH/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka $@
+    declare -a PYTHON_VERSIONS=("3.10" "3.11")
+elif [ "$OS" = "Linux" ]
+then
+    declare -a PYTHON_VERSIONS=("3.10" "3.11")
 else
-    python3.10 $NUITKA_WATCH/bin/nuitka-watch --python-version=3.10 --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka $@
+    declare -a PYTHON_VERSIONS=("3.10")
 fi
+
+echo "Doing Python versions $PYTHON_VERSIONS"
+
+for PYTHON_VERSION in "${PYTHON_VERSIONS[@]}"
+do
+    python${PYTHON_VERSION} $NUITKA_WATCH/bin/nuitka-watch --python-version=${PYTHON_VERSION} --no-pipenv-update --nuitka-binary=../Nuitka-develop/bin/nuitka $@
+done
