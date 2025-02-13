@@ -15,6 +15,7 @@ fi
 # This enables my private development slightly better.
 if [ -d "../Py2C" ]
 then
+    PATH=/opt/self-built-pythons/bin/:$PATH
     NUITKA_WATCH="../Py2C"
 else
     NUITKA_WATCH="../Nuitka-factory"
@@ -25,7 +26,7 @@ then
     declare -a PYTHON_VERSIONS=("3.10" "3.11")
 elif [ "$OS" = "Linux" ]
 then
-    declare -a PYTHON_VERSIONS=("3.10" "3.11")
+    declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12")
 else
     declare -a PYTHON_VERSIONS=("3.10")
 fi
