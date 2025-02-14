@@ -7,9 +7,15 @@ OS=`uname`
 echo "Running on $OS..."
 if [[ $OS = MINGW* ]]
 then
-    alias python3.10='/c/Python310_64/python.exe'
-    alias python3.11='/c/Python311_64/python.exe'
-    alias python3.12='/c/Python312_64/python.exe'
+    python3.10() {
+        '/c/Python310_64/python.exe' $@
+    }
+    python3.11() {
+        '/c/Python311_64/python.exe' $@
+    }
+    python3.12() {
+        '/c/Python312_64/python.exe' $@
+    }
 fi
 
 # This enables my private development slightly better.
