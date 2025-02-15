@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.6.5" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="2.6.6" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="8" merged_total="81" />
     <optimization-time pass="2" time="volatile" />
@@ -997,7 +997,7 @@
   <module name="cv2" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/cv2/__init__.py" distribution="opencv-python-headless">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone and before_python312 and not nuitka_python" tags_used="standalone,before_python312" result="false" />
     <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone and python312_or_higher and not nuitka_python" tags_used="standalone,python312_or_higher,nuitka_python" result="true" />
-    <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone" tags_used="standalone" result="true" />
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="standalone and not is_conda_package(&quot;cv2&quot;)" tags_used="standalone,is_conda_package" result="true" />
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not is_conda_package(&quot;cv2&quot;)" tags_used="is_conda_package" result="true" />
     <plugin-influence name="anti-bloat" influence="variable-used" variable="cv2_extra_sub_modules" tags_used="repr,get_variable" value="('dnn', 'ocl', 'ipp', 'ogl', 'flann', 'mat_wrapper', 'barcode', 'samples', 'segmentation', 'fisheye', 'gapi', 'parallel', 'videoio_registry', 'typing', 'data', 'aruco', 'ml', 'Error', 'cuda', 'detail', 'utils', 'misc')" />
     <plugin-influence name="implicit-imports" influence="condition-used" condition="linux and standalone" tags_used="linux,standalone" result="true" />
