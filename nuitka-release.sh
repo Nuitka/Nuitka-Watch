@@ -40,7 +40,7 @@ elif [ "$OS" = "Linux" ]
 then
     declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12")
 else
-    declare -a PYTHON_VERSIONS=("3.10")
+    declare -a PYTHON_VERSIONS=("3.10" "3.12")
 fi
 
 echo "Doing Python versions $PYTHON_VERSIONS"
