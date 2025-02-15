@@ -1,3 +1,3 @@
- Xvfb :100
- DISPLAY=:100
- export DISPLAY
+Xvfb :100
+DISPLAY=:100
+export DISPLAY

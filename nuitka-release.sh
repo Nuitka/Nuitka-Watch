@@ -17,6 +17,7 @@ if [ -d "../Py2C" ]
 then
     PATH=/opt/self-built-pythons/bin/:$PATH
     NUITKA_WATCH="../Py2C"
+    . fake-x11-display.sh || true
 else
     NUITKA_WATCH="../Nuitka-factory"
 fi
