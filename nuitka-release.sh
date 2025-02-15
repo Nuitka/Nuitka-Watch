@@ -15,9 +15,14 @@ fi
 # This enables my private development slightly better.
 if [ -d "../Py2C" ]
 then
+    # Self compiled Pythons over system pythons.
     PATH=/opt/self-built-pythons/bin/:$PATH
+
     NUITKA_WATCH="../Py2C"
-    . fake-x11-display.sh || true
+    if [ "$OS" = "Linux" ]
+    then
+        . fake-x11-display.sh || true
+    fi
 else
     NUITKA_WATCH="../Nuitka-factory"
 fi
