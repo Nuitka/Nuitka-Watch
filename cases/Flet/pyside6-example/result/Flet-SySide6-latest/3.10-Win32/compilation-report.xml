@@ -4492,6 +4492,9 @@
   <module name="flet.app" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\flet\app.py" distribution="flet">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="114" merged_total="3147" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="102" merged_total="600" />
+    <distribution-usages>
+      <distribution-usage name="flet-desktop" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="asyncio" finding="absolute" line="1" />
       <module_usage name="concurrent.futures" finding="absolute" line="2" />
@@ -4516,7 +4519,9 @@
       <module_usage name="flet.utils.pip" finding="absolute" line="23" />
       <module_usage name="flet" finding="absolute" line="28" />
       <module_usage name="flet_web.fastapi.serve_fastapi_web_app" finding="not-found" line="52" />
-      <module_usage name="flet_desktop" finding="not-found" line="185" />
+      <module_usage name="flet_desktop" finding="absolute" line="185" />
+      <module_usage name="flet_desktop.close_flet_view" finding="not-found" line="185" />
+      <module_usage name="flet_desktop.open_flet_view_async" finding="not-found" line="185" />
       <module_usage name="flet.flet_socket_server" finding="absolute" line="214" />
       <module_usage name="flet_web.fastapi.serve_fastapi_web_app" finding="not-found" line="285" />
       <module_usage name="flet_js" finding="not-found" line="316" />
@@ -7171,12 +7176,15 @@
   <module name="flet.utils.pip" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\flet\utils\pip.py" distribution="flet">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="33" merged_total="375" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="92" />
+    <distribution-usages>
+      <distribution-usage name="flet-desktop" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="subprocess" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="2" />
       <module_usage name="flet.version" finding="absolute" line="4" />
       <module_usage name="flet.version" finding="absolute" line="31" />
-      <module_usage name="flet_desktop.version" finding="not-found" line="32" />
+      <module_usage name="flet_desktop.version" finding="absolute" line="32" />
       <module_usage name="flet.version" finding="absolute" line="44" />
       <module_usage name="flet_web.version" finding="not-found" line="45" />
       <module_usage name="flet.version" finding="absolute" line="57" />
@@ -7229,6 +7237,53 @@
       <module_usage name="flet.utils.is_windows" finding="not-found" line="8" />
       <module_usage name="flet.utils.which" finding="not-found" line="8" />
     </module_usages>
+  </module>
+  <module name="flet_desktop" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\flet_desktop\__init__.py" distribution="flet-desktop">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="275" merged_total="2676" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="216" merged_total="507" />
+    <distribution-usages>
+      <distribution-usage name="flet" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="asyncio" finding="absolute" line="1" />
+      <module_usage name="logging" finding="absolute" line="2" />
+      <module_usage name="os" finding="absolute" line="3" />
+      <module_usage name="signal" finding="absolute" line="4" />
+      <module_usage name="stat" finding="absolute" line="5" />
+      <module_usage name="subprocess" finding="absolute" line="6" />
+      <module_usage name="tarfile" finding="absolute" line="7" />
+      <module_usage name="tempfile" finding="absolute" line="8" />
+      <module_usage name="urllib.request" finding="absolute" line="9" />
+      <module_usage name="zipfile" finding="absolute" line="10" />
+      <module_usage name="pathlib" finding="absolute" line="11" />
+      <module_usage name="flet_desktop" finding="absolute" line="13" />
+      <module_usage name="flet_desktop.version" finding="absolute" line="14" />
+      <module_usage name="flet.utils" finding="absolute" line="15" />
+      <module_usage name="flet.utils.get_arch" finding="not-found" line="15" />
+      <module_usage name="flet.utils.is_linux" finding="not-found" line="15" />
+      <module_usage name="flet.utils.is_macos" finding="not-found" line="15" />
+      <module_usage name="flet.utils.is_windows" finding="not-found" line="15" />
+      <module_usage name="flet.utils.random_string" finding="not-found" line="15" />
+      <module_usage name="flet.utils.safe_tar_extractall" finding="not-found" line="15" />
+      <module_usage name="ntpath" finding="absolute" line="72" />
+      <module_usage name="ntpath" finding="absolute" line="76" />
+      <module_usage name="ntpath" finding="absolute" line="85" />
+      <module_usage name="ntpath" finding="absolute" line="94" />
+      <module_usage name="ntpath" finding="absolute" line="110" />
+      <module_usage name="ntpath" finding="absolute" line="114" />
+      <module_usage name="ntpath" finding="absolute" line="132" />
+      <module_usage name="ntpath" finding="absolute" line="156" />
+      <module_usage name="ntpath" finding="absolute" line="159" />
+      <module_usage name="ntpath" finding="absolute" line="180" />
+      <module_usage name="flet.version" finding="absolute" line="209" />
+      <module_usage name="flet.version" finding="absolute" line="210" />
+    </module_usages>
+  </module>
+  <module name="flet_desktop.version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\flet_desktop\version.py" distribution="flet-desktop">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages />
   </module>
   <module name="fnmatch" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\fnmatch.py">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="211" merged_total="2142" />
@@ -12814,7 +12869,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=22cabdbd8393041254b8923589523193" />
+    <option value="--report-user-provided=pipenv_hash=aad5edcfae31fbb9929660d15e12c35b" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -12846,6 +12901,7 @@
     <distribution name="colorama" version="0.4.6" installer="pip" />
     <distribution name="exceptiongroup" version="1.2.2" installer="pip" />
     <distribution name="flet" version="0.26.0" installer="pip" />
+    <distribution name="flet-desktop" version="0.26.0" installer="pip" />
     <distribution name="h11" version="0.14.0" installer="pip" />
     <distribution name="httpcore" version="1.0.7" installer="pip" />
     <distribution name="httpx" version="0.28.1" installer="pip" />
@@ -12870,7 +12926,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>22cabdbd8393041254b8923589523193</pipenv_hash>
+    <pipenv_hash>aad5edcfae31fbb9929660d15e12c35b</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}\FletTest.dist\FletTest.exe" />
 </nuitka-compilation-report>
