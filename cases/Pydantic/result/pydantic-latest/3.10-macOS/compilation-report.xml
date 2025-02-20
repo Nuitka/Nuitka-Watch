@@ -590,6 +590,11 @@
       <module_usage name="types" finding="absolute" line="6" />
     </module_usages>
   </module>
+  <module name="_zoneinfo" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_zoneinfo.cpython-310-darwin.so">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="abc" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.10/abc.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="28" merged_total="2006" />
     <optimization-time pass="2" time="volatile" />
@@ -3214,14 +3219,15 @@
     </module_usages>
   </module>
   <module name="pydantic" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/__init__.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="117" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="23" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="339" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="67" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="1" />
-      <module_usage name="pydantic._migration" finding="relative" line="3" />
-      <module_usage name="pydantic.version" finding="relative" line="4" />
-      <module_usage name="importlib" finding="absolute" line="399" />
+      <module_usage name="importlib" finding="absolute" line="2" />
+      <module_usage name="warnings" finding="absolute" line="3" />
+      <module_usage name="pydantic._migration" finding="relative" line="5" />
+      <module_usage name="pydantic.version" finding="relative" line="6" />
     </module_usages>
   </module>
   <module name="pydantic._internal" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/__init__.py" distribution="pydantic">
@@ -3232,8 +3238,8 @@
     </module_usages>
   </module>
   <module name="pydantic._internal._config" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_config.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="72" merged_total="2066" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="72" merged_total="387" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="59" merged_total="2010" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="59" merged_total="377" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
@@ -3242,31 +3248,29 @@
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="warnings" finding="absolute" line="3" />
       <module_usage name="contextlib" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="12" />
-      <module_usage name="typing_extensions" finding="absolute" line="13" />
-      <module_usage name="pydantic.aliases" finding="absolute" line="18" />
-      <module_usage name="pydantic.config" finding="absolute" line="19" />
-      <module_usage name="pydantic.errors" finding="absolute" line="20" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="21" />
+      <module_usage name="re" finding="absolute" line="5" />
+      <module_usage name="typing" finding="absolute" line="6" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="13" />
+      <module_usage name="typing_extensions" finding="absolute" line="14" />
+      <module_usage name="pydantic.aliases" finding="absolute" line="19" />
+      <module_usage name="pydantic.config" finding="absolute" line="20" />
+      <module_usage name="pydantic.errors" finding="absolute" line="21" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="22" />
     </module_usages>
   </module>
-  <module name="pydantic._internal._core_metadata" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_core_metadata.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="611" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="113" />
-    <distribution-usages>
-      <distribution-usage name="typing_extensions" />
-    </distribution-usages>
+  <module name="pydantic._internal._core_metadata" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_core_metadata.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="38" merged_total="401" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="97" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="typing_extensions" finding="absolute" line="6" />
+      <module_usage name="warnings" finding="absolute" line="4" />
+      <module_usage name="pydantic.json_schema" finding="absolute" line="50" />
     </module_usages>
   </module>
   <module name="pydantic._internal._core_utils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_core_utils.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="48" merged_total="4719" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="878" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="54" merged_total="5107" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="51" merged_total="938" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
@@ -3277,19 +3281,21 @@
       <module_usage name="collections" finding="absolute" line="4" />
       <module_usage name="collections.defaultdict" finding="not-found" line="4" />
       <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="pydantic_core" finding="absolute" line="13" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="13" />
-      <module_usage name="pydantic_core" finding="absolute" line="14" />
-      <module_usage name="typing_extensions" finding="absolute" line="15" />
-      <module_usage name="pydantic._internal" finding="absolute" line="17" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="17" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="18" />
-      <module_usage name="rich" finding="not-found" line="557" />
+      <module_usage name="pydantic_core" finding="absolute" line="7" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="7" />
+      <module_usage name="pydantic_core" finding="absolute" line="8" />
+      <module_usage name="typing_extensions" finding="absolute" line="9" />
+      <module_usage name="pydantic.errors" finding="absolute" line="11" />
+      <module_usage name="pydantic._internal" finding="absolute" line="12" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="12" />
+      <module_usage name="pydantic._internal._core_metadata" finding="relative" line="13" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="14" />
+      <module_usage name="rich" finding="not-found" line="599" />
     </module_usages>
   </module>
-  <module name="pydantic._internal._dataclasses" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_dataclasses.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="50" merged_total="664" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="123" />
+  <module name="pydantic._internal._dataclasses" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_dataclasses.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="57" merged_total="698" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="53" merged_total="130" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
@@ -3305,24 +3311,24 @@
       <module_usage name="pydantic_core.core_schema" finding="absolute" line="11" />
       <module_usage name="typing_extensions" finding="absolute" line="17" />
       <module_usage name="pydantic.errors" finding="absolute" line="19" />
-      <module_usage name="pydantic.fields" finding="absolute" line="20" />
-      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="21" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="22" />
-      <module_usage name="pydantic._internal" finding="absolute" line="23" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="23" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="23" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="23" />
-      <module_usage name="pydantic._internal._fields" finding="relative" line="24" />
-      <module_usage name="pydantic._internal._generate_schema" finding="absolute" line="25" />
-      <module_usage name="pydantic._internal._generics" finding="relative" line="26" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="27" />
+      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="20" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="21" />
+      <module_usage name="pydantic._internal" finding="absolute" line="22" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="22" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="22" />
+      <module_usage name="pydantic._internal._fields" finding="relative" line="23" />
+      <module_usage name="pydantic._internal._generate_schema" finding="absolute" line="24" />
+      <module_usage name="pydantic._internal._generics" finding="relative" line="25" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="26" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="27" />
       <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="28" />
       <module_usage name="pydantic._internal._signature" finding="relative" line="29" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="30" />
     </module_usages>
   </module>
   <module name="pydantic._internal._decorators" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_decorators.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="98" merged_total="7823" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="86" merged_total="1049" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="98" merged_total="7899" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="86" merged_total="1063" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
@@ -3342,8 +3348,11 @@
       <module_usage name="pydantic.errors" finding="absolute" line="15" />
       <module_usage name="pydantic._internal._core_utils" finding="relative" line="16" />
       <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="17" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="18" />
-      <module_usage name="pydantic.fields" finding="absolute" line="486" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="18" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="19" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="20" />
+      <module_usage name="pydantic.fields" finding="absolute" line="189" />
+      <module_usage name="pydantic.fields" finding="absolute" line="498" />
     </module_usages>
   </module>
   <module name="pydantic._internal._discriminated_union" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_discriminated_union.py" distribution="pydantic">
@@ -3376,35 +3385,34 @@
     </module_usages>
   </module>
   <module name="pydantic._internal._fields" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_fields.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="70" merged_total="5020" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="63" merged_total="542" />
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="86" merged_total="6104" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="80" merged_total="661" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
+      <distribution-usage name="typing_extensions" />
       <distribution-usage name="annotated-types" />
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
       <module_usage name="dataclasses" finding="absolute" line="5" />
-      <module_usage name="sys" finding="absolute" line="6" />
-      <module_usage name="warnings" finding="absolute" line="7" />
-      <module_usage name="copy" finding="absolute" line="8" />
-      <module_usage name="functools" finding="absolute" line="9" />
+      <module_usage name="warnings" finding="absolute" line="6" />
+      <module_usage name="copy" finding="absolute" line="7" />
+      <module_usage name="functools" finding="absolute" line="8" />
+      <module_usage name="inspect" finding="absolute" line="9" />
       <module_usage name="typing" finding="absolute" line="10" />
       <module_usage name="pydantic_core" finding="absolute" line="12" />
-      <module_usage name="pydantic.errors" finding="absolute" line="14" />
-      <module_usage name="pydantic._internal" finding="absolute" line="16" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="16" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="17" />
-      <module_usage name="pydantic._internal._docs_extraction" finding="relative" line="18" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="19" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="20" />
-      <module_usage name="annotated_types" finding="absolute" line="81" />
-      <module_usage name="annotated_types.BaseMetadata" finding="not-found" line="81" />
-      <module_usage name="pydantic.fields" finding="absolute" line="130" />
-      <module_usage name="pydantic.main" finding="absolute" line="150" />
-      <module_usage name="pydantic.fields" finding="absolute" line="257" />
-      <module_usage name="pydantic.fields" finding="absolute" line="272" />
-      <module_usage name="pydantic.fields" finding="absolute" line="302" />
+      <module_usage name="typing_extensions" finding="absolute" line="13" />
+      <module_usage name="pydantic.errors" finding="absolute" line="15" />
+      <module_usage name="pydantic._internal" finding="absolute" line="17" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="17" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="18" />
+      <module_usage name="pydantic._internal._docs_extraction" finding="relative" line="19" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="20" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="21" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="22" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="23" />
+      <module_usage name="annotated_types" finding="absolute" line="55" />
+      <module_usage name="annotated_types.BaseMetadata" finding="not-found" line="55" />
     </module_usages>
   </module>
   <module name="pydantic._internal._forward_ref" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_forward_ref.py" distribution="pydantic">
@@ -3417,85 +3425,88 @@
     </module_usages>
   </module>
   <module name="pydantic._internal._generate_schema" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_generate_schema.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="188" merged_total="29531" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="174" merged_total="4067" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="250" merged_total="31189" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="238" merged_total="4295" />
     <distribution-usages>
-      <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
+      <distribution-usage name="pydantic_core" />
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
       <module_usage name="collections.abc" finding="absolute" line="5" />
       <module_usage name="dataclasses" finding="absolute" line="6" />
-      <module_usage name="inspect" finding="absolute" line="7" />
-      <module_usage name="re" finding="absolute" line="8" />
-      <module_usage name="sys" finding="absolute" line="9" />
-      <module_usage name="typing" finding="absolute" line="10" />
-      <module_usage name="warnings" finding="absolute" line="11" />
-      <module_usage name="contextlib" finding="absolute" line="12" />
-      <module_usage name="copy" finding="absolute" line="13" />
-      <module_usage name="enum" finding="absolute" line="14" />
-      <module_usage name="functools" finding="absolute" line="15" />
-      <module_usage name="inspect" finding="absolute" line="16" />
-      <module_usage name="itertools" finding="absolute" line="17" />
-      <module_usage name="operator" finding="absolute" line="18" />
-      <module_usage name="types" finding="absolute" line="19" />
-      <module_usage name="typing" finding="absolute" line="20" />
-      <module_usage name="warnings" finding="absolute" line="36" />
-      <module_usage name="pydantic_core" finding="absolute" line="38" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="38" />
-      <module_usage name="typing_extensions" finding="absolute" line="39" />
-      <module_usage name="pydantic.aliases" finding="absolute" line="41" />
-      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="42" />
-      <module_usage name="pydantic.config" finding="absolute" line="43" />
-      <module_usage name="pydantic.errors" finding="absolute" line="44" />
-      <module_usage name="pydantic.json_schema" finding="absolute" line="45" />
-      <module_usage name="pydantic.version" finding="relative" line="46" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="47" />
-      <module_usage name="pydantic._internal" finding="absolute" line="48" />
-      <module_usage name="pydantic._internal._core_utils" finding="relative" line="48" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="48" />
-      <module_usage name="pydantic._internal._discriminated_union" finding="relative" line="48" />
-      <module_usage name="pydantic._internal._known_annotated_metadata" finding="relative" line="48" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="48" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="49" />
-      <module_usage name="pydantic._internal._core_metadata" finding="relative" line="50" />
-      <module_usage name="pydantic._internal._core_utils" finding="relative" line="51" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="62" />
-      <module_usage name="pydantic._internal._docs_extraction" finding="relative" line="76" />
-      <module_usage name="pydantic._internal._fields" finding="relative" line="77" />
-      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="78" />
-      <module_usage name="pydantic._internal._generics" finding="relative" line="79" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="80" />
-      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="81" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="82" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="83" />
-      <module_usage name="pydantic.dataclasses" finding="relative" line="223" />
-      <module_usage name="pydantic.main" finding="absolute" line="224" />
-      <module_usage name="pydantic.root_model" finding="absolute" line="225" />
-      <module_usage name="pydantic._internal._dataclasses" finding="relative" line="226" />
-      <module_usage name="pydantic.main" finding="absolute" line="780" />
-      <module_usage name="pydantic._internal._std_types_schema" finding="relative" line="858" />
-      <module_usage name="pydantic" finding="absolute" line="1097" />
-      <module_usage name="pydantic.aliases" finding="absolute" line="1097" />
-      <module_usage name="pydantic.fields" finding="absolute" line="1098" />
-      <module_usage name="pydantic.fields" finding="absolute" line="1269" />
-      <module_usage name="pydantic.fields" finding="absolute" line="1405" />
-      <module_usage name="pydantic._internal._std_types_schema" finding="relative" line="1497" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="1505" />
-      <module_usage name="pydantic._internal" finding="absolute" line="1525" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="1525" />
-      <module_usage name="pydantic.dataclasses" finding="relative" line="1591" />
-      <module_usage name="pydantic.fields" finding="absolute" line="1816" />
-      <module_usage name="pydantic._internal._std_types_schema" finding="relative" line="1833" />
-      <module_usage name="pydantic.fields" finding="absolute" line="1897" />
-      <module_usage name="pydantic.fields" finding="absolute" line="1941" />
-      <module_usage name="pydantic.main" finding="absolute" line="2217" />
+      <module_usage name="datetime" finding="absolute" line="7" />
+      <module_usage name="inspect" finding="absolute" line="8" />
+      <module_usage name="os" finding="absolute" line="9" />
+      <module_usage name="pathlib" finding="absolute" line="10" />
+      <module_usage name="re" finding="absolute" line="11" />
+      <module_usage name="sys" finding="absolute" line="12" />
+      <module_usage name="typing" finding="absolute" line="13" />
+      <module_usage name="warnings" finding="absolute" line="14" />
+      <module_usage name="contextlib" finding="absolute" line="15" />
+      <module_usage name="copy" finding="absolute" line="16" />
+      <module_usage name="decimal" finding="absolute" line="17" />
+      <module_usage name="enum" finding="absolute" line="18" />
+      <module_usage name="fractions" finding="absolute" line="19" />
+      <module_usage name="functools" finding="absolute" line="20" />
+      <module_usage name="inspect" finding="absolute" line="21" />
+      <module_usage name="ipaddress" finding="absolute" line="22" />
+      <module_usage name="itertools" finding="absolute" line="23" />
+      <module_usage name="operator" finding="absolute" line="24" />
+      <module_usage name="types" finding="absolute" line="25" />
+      <module_usage name="typing" finding="absolute" line="26" />
+      <module_usage name="uuid" finding="absolute" line="42" />
+      <module_usage name="warnings" finding="absolute" line="43" />
+      <module_usage name="typing_extensions" finding="absolute" line="45" />
+      <module_usage name="pydantic_core" finding="absolute" line="46" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="46" />
+      <module_usage name="typing_extensions" finding="absolute" line="56" />
+      <module_usage name="pydantic.aliases" finding="absolute" line="58" />
+      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="59" />
+      <module_usage name="pydantic.config" finding="absolute" line="60" />
+      <module_usage name="pydantic.errors" finding="absolute" line="61" />
+      <module_usage name="pydantic.functional_validators" finding="absolute" line="62" />
+      <module_usage name="pydantic.json_schema" finding="absolute" line="63" />
+      <module_usage name="pydantic.version" finding="relative" line="64" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="65" />
+      <module_usage name="pydantic._internal" finding="absolute" line="66" />
+      <module_usage name="pydantic._internal._core_utils" finding="relative" line="66" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="66" />
+      <module_usage name="pydantic._internal._discriminated_union" finding="relative" line="66" />
+      <module_usage name="pydantic._internal._known_annotated_metadata" finding="relative" line="66" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="66" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="67" />
+      <module_usage name="pydantic._internal._core_metadata" finding="relative" line="68" />
+      <module_usage name="pydantic._internal._core_utils" finding="relative" line="69" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="79" />
+      <module_usage name="pydantic._internal._docs_extraction" finding="relative" line="93" />
+      <module_usage name="pydantic._internal._fields" finding="relative" line="94" />
+      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="95" />
+      <module_usage name="pydantic._internal._generics" finding="relative" line="96" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="97" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="98" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="99" />
+      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="100" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="101" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="451" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="485" />
+      <module_usage name="pydantic.v1" finding="absolute" line="772" />
+      <module_usage name="pydantic.v1.BaseModel" finding="not-found" line="772" />
+      <module_usage name="types" finding="absolute" line="836" />
+      <module_usage name="zoneinfo" finding="absolute" line="1599" />
+      <module_usage name="zoneinfo.ZoneInfo" finding="not-found" line="1599" />
+      <module_usage name="zoneinfo.ZoneInfoNotFoundError" finding="not-found" line="1599" />
+      <module_usage name="pydantic._internal._serializers" finding="relative" line="1655" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="1663" />
+      <module_usage name="pydantic._internal" finding="absolute" line="1683" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="1683" />
+      <module_usage name="pydantic.dataclasses" finding="relative" line="1742" />
+      <module_usage name="pydantic._internal._std_types_schema" finding="relative" line="1988" />
     </module_usages>
   </module>
   <module name="pydantic._internal._generics" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_generics.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="79" merged_total="3845" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="57" merged_total="604" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="95" merged_total="4058" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="71" merged_total="640" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
     </distribution-usages>
@@ -3512,9 +3523,10 @@
       <module_usage name="typing" finding="absolute" line="10" />
       <module_usage name="weakref" finding="absolute" line="11" />
       <module_usage name="typing_extensions" finding="absolute" line="13" />
-      <module_usage name="pydantic._internal._core_utils" finding="relative" line="15" />
-      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="16" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="17" />
+      <module_usage name="pydantic._internal" finding="absolute" line="15" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="15" />
+      <module_usage name="pydantic._internal._core_utils" finding="relative" line="16" />
+      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="17" />
       <module_usage name="pydantic._internal._utils" finding="relative" line="18" />
       <module_usage name="typing" finding="absolute" line="21" />
     </module_usages>
@@ -3529,6 +3541,16 @@
       <module_usage name="posixpath" finding="absolute" line="11" />
     </module_usages>
   </module>
+  <module name="pydantic._internal._import_utils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_import_utils.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="3" merged_total="24" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="8" />
+    <module_usages>
+      <module_usage name="functools" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="2" />
+      <module_usage name="pydantic.main" finding="absolute" line="11" />
+      <module_usage name="pydantic.fields" finding="absolute" line="18" />
+    </module_usages>
+  </module>
   <module name="pydantic._internal._internal_dataclass" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_internal_dataclass.py" distribution="pydantic">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="1" merged_total="1" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
@@ -3537,8 +3559,8 @@
     </module_usages>
   </module>
   <module name="pydantic._internal._known_annotated_metadata" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_known_annotated_metadata.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="94" merged_total="2842" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="77" merged_total="388" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="116" merged_total="3142" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="89" merged_total="431" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="annotated-types" />
@@ -3553,16 +3575,16 @@
       <module_usage name="pydantic_core" finding="absolute" line="8" />
       <module_usage name="pydantic_core.core_schema" finding="absolute" line="9" />
       <module_usage name="pydantic._internal._fields" finding="relative" line="11" />
-      <module_usage name="annotated_types" finding="absolute" line="139" />
-      <module_usage name="pydantic.fields" finding="absolute" line="141" />
-      <module_usage name="annotated_types" finding="absolute" line="169" />
-      <module_usage name="annotated_types" finding="absolute" line="201" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="203" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="12" />
+      <module_usage name="annotated_types" finding="absolute" line="124" />
+      <module_usage name="annotated_types" finding="absolute" line="154" />
+      <module_usage name="annotated_types" finding="absolute" line="186" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="188" />
     </module_usages>
   </module>
   <module name="pydantic._internal._mock_val_ser" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_mock_val_ser.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="20" merged_total="1007" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="179" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="20" merged_total="1108" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="195" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
@@ -3574,28 +3596,28 @@
       <module_usage name="typing_extensions" finding="absolute" line="6" />
       <module_usage name="pydantic.errors" finding="absolute" line="8" />
       <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="9" />
-      <module_usage name="pydantic.dataclasses" finding="relative" line="162" />
+      <module_usage name="pydantic.dataclasses" finding="relative" line="203" />
     </module_usages>
   </module>
   <module name="pydantic._internal._model_construction" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_model_construction.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="159" merged_total="6453" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="134" merged_total="1019" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="167" merged_total="6858" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="142" merged_total="1078" />
     <distribution-usages>
-      <distribution-usage name="typing_extensions" />
       <distribution-usage name="pydantic_core" />
+      <distribution-usage name="typing_extensions" />
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
       <module_usage name="builtins" finding="absolute" line="5" />
       <module_usage name="operator" finding="absolute" line="6" />
-      <module_usage name="typing" finding="absolute" line="7" />
-      <module_usage name="warnings" finding="absolute" line="8" />
-      <module_usage name="weakref" finding="absolute" line="9" />
-      <module_usage name="abc" finding="absolute" line="10" />
-      <module_usage name="functools" finding="absolute" line="11" />
-      <module_usage name="types" finding="absolute" line="12" />
-      <module_usage name="typing" finding="absolute" line="13" />
-      <module_usage name="typing_extensions" finding="absolute" line="15" />
+      <module_usage name="sys" finding="absolute" line="7" />
+      <module_usage name="typing" finding="absolute" line="8" />
+      <module_usage name="warnings" finding="absolute" line="9" />
+      <module_usage name="weakref" finding="absolute" line="10" />
+      <module_usage name="abc" finding="absolute" line="11" />
+      <module_usage name="functools" finding="absolute" line="12" />
+      <module_usage name="types" finding="absolute" line="13" />
+      <module_usage name="typing" finding="absolute" line="14" />
       <module_usage name="pydantic_core" finding="absolute" line="16" />
       <module_usage name="typing_extensions" finding="absolute" line="17" />
       <module_usage name="pydantic.errors" finding="absolute" line="19" />
@@ -3606,23 +3628,37 @@
       <module_usage name="pydantic._internal._fields" finding="relative" line="24" />
       <module_usage name="pydantic._internal._generate_schema" finding="absolute" line="25" />
       <module_usage name="pydantic._internal._generics" finding="relative" line="26" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="27" />
-      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="28" />
-      <module_usage name="pydantic._internal._signature" finding="relative" line="29" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="30" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="31" />
-      <module_usage name="pydantic._internal._validate_call" finding="relative" line="32" />
-      <module_usage name="pydantic.main" finding="absolute" line="120" />
-      <module_usage name="pydantic.root_model" finding="absolute" line="144" />
-      <module_usage name="pydantic.main" finding="absolute" line="252" />
-      <module_usage name="pydantic.main" finding="absolute" line="303" />
-      <module_usage name="pydantic.fields" finding="absolute" line="336" />
-      <module_usage name="pydantic.fields" finding="absolute" line="698" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="27" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="28" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="29" />
+      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="30" />
+      <module_usage name="pydantic._internal._signature" finding="relative" line="31" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="32" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="39" />
+      <module_usage name="pydantic.root_model" finding="absolute" line="162" />
+      <module_usage name="pydantic.fields" finding="absolute" line="383" />
+      <module_usage name="pydantic.fields" finding="absolute" line="777" />
+    </module_usages>
+  </module>
+  <module name="pydantic._internal._namespace_utils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_namespace_utils.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="1581" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="210" />
+    <distribution-usages>
+      <distribution-usage name="typing_extensions" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="sys" finding="absolute" line="3" />
+      <module_usage name="collections.abc" finding="absolute" line="4" />
+      <module_usage name="contextlib" finding="absolute" line="5" />
+      <module_usage name="functools" finding="absolute" line="6" />
+      <module_usage name="typing" finding="absolute" line="7" />
+      <module_usage name="typing_extensions" finding="absolute" line="9" />
     </module_usages>
   </module>
   <module name="pydantic._internal._repr" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_repr.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="89" merged_total="1558" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="63" merged_total="235" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="91" merged_total="1699" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="72" merged_total="258" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
     </distribution-usages>
@@ -3651,9 +3687,25 @@
       <module_usage name="pydantic.annotated_handlers" finding="absolute" line="10" />
     </module_usages>
   </module>
+  <module name="pydantic._internal._serializers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_serializers.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="209" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="40" />
+    <distribution-usages>
+      <distribution-usage name="pydantic_core" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="collections" finding="absolute" line="3" />
+      <module_usage name="collections.abc" finding="absolute" line="4" />
+      <module_usage name="typing" finding="absolute" line="5" />
+      <module_usage name="typing" finding="absolute" line="6" />
+      <module_usage name="pydantic_core" finding="absolute" line="8" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="8" />
+    </module_usages>
+  </module>
   <module name="pydantic._internal._signature" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_signature.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="44" merged_total="1171" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="44" merged_total="230" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="42" merged_total="1208" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="42" merged_total="229" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
     </distribution-usages>
@@ -3663,85 +3715,74 @@
       <module_usage name="inspect" finding="absolute" line="4" />
       <module_usage name="typing" finding="absolute" line="5" />
       <module_usage name="pydantic_core" finding="absolute" line="7" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="9" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="10" />
-      <module_usage name="pydantic.fields" finding="absolute" line="46" />
-      <module_usage name="itertools" finding="absolute" line="77" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="9" />
+      <module_usage name="pydantic.fields" finding="absolute" line="55" />
+      <module_usage name="itertools" finding="absolute" line="87" />
     </module_usages>
   </module>
   <module name="pydantic._internal._std_types_schema" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_std_types_schema.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="99" merged_total="4971" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="77" merged_total="894" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="99" merged_total="3191" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="76" merged_total="604" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
       <distribution-usage name="pydantic_core" />
     </distribution-usages>
     <module_usages>
-      <module_usage name="__future__" finding="absolute" line="6" />
-      <module_usage name="collections" finding="absolute" line="8" />
-      <module_usage name="collections.abc" finding="absolute" line="9" />
-      <module_usage name="dataclasses" finding="absolute" line="10" />
-      <module_usage name="decimal" finding="absolute" line="11" />
-      <module_usage name="inspect" finding="absolute" line="12" />
-      <module_usage name="os" finding="absolute" line="13" />
-      <module_usage name="typing" finding="absolute" line="14" />
-      <module_usage name="enum" finding="absolute" line="15" />
+      <module_usage name="__future__" finding="absolute" line="9" />
+      <module_usage name="collections" finding="absolute" line="11" />
+      <module_usage name="collections.abc" finding="absolute" line="12" />
+      <module_usage name="dataclasses" finding="absolute" line="13" />
+      <module_usage name="os" finding="absolute" line="14" />
+      <module_usage name="typing" finding="absolute" line="15" />
       <module_usage name="functools" finding="absolute" line="16" />
-      <module_usage name="ipaddress" finding="absolute" line="17" />
-      <module_usage name="operator" finding="absolute" line="18" />
-      <module_usage name="typing" finding="absolute" line="19" />
-      <module_usage name="typing_extensions" finding="absolute" line="21" />
-      <module_usage name="pydantic_core" finding="absolute" line="22" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="22" />
-      <module_usage name="typing_extensions" finding="absolute" line="30" />
-      <module_usage name="pydantic.errors" finding="absolute" line="32" />
-      <module_usage name="pydantic.fields" finding="absolute" line="33" />
-      <module_usage name="pydantic.types" finding="absolute" line="34" />
-      <module_usage name="pydantic.config" finding="absolute" line="36" />
-      <module_usage name="pydantic.json_schema" finding="absolute" line="37" />
-      <module_usage name="pydantic._internal" finding="absolute" line="38" />
-      <module_usage name="pydantic._internal._known_annotated_metadata" finding="relative" line="38" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="38" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="38" />
-      <module_usage name="pydantic._internal._core_utils" finding="relative" line="39" />
-      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="40" />
-      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="41" />
-      <module_usage name="datetime" finding="absolute" line="174" />
-      <module_usage name="uuid" finding="absolute" line="197" />
-      <module_usage name="pathlib" finding="absolute" line="208" />
+      <module_usage name="typing" finding="absolute" line="17" />
+      <module_usage name="typing_extensions" finding="absolute" line="19" />
+      <module_usage name="pydantic_core" finding="absolute" line="20" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="20" />
+      <module_usage name="typing_extensions" finding="absolute" line="25" />
+      <module_usage name="pydantic._internal._serializers" finding="absolute" line="27" />
+      <module_usage name="pydantic.errors" finding="absolute" line="28" />
+      <module_usage name="pydantic.types" finding="absolute" line="29" />
+      <module_usage name="pydantic.json_schema" finding="absolute" line="31" />
+      <module_usage name="pydantic._internal" finding="absolute" line="32" />
+      <module_usage name="pydantic._internal._known_annotated_metadata" finding="relative" line="32" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="32" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="33" />
+      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="35" />
+      <module_usage name="pathlib" finding="absolute" line="69" />
     </module_usages>
   </module>
   <module name="pydantic._internal._typing_extra" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_typing_extra.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="20" merged_total="2301" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="278" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="22" merged_total="3550" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="439" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
-      <module_usage name="dataclasses" finding="absolute" line="5" />
+      <module_usage name="collections.abc" finding="absolute" line="5" />
       <module_usage name="re" finding="absolute" line="6" />
       <module_usage name="sys" finding="absolute" line="7" />
       <module_usage name="types" finding="absolute" line="8" />
       <module_usage name="typing" finding="absolute" line="9" />
       <module_usage name="warnings" finding="absolute" line="10" />
-      <module_usage name="collections.abc" finding="absolute" line="11" />
-      <module_usage name="functools" finding="absolute" line="12" />
-      <module_usage name="types" finding="absolute" line="13" />
-      <module_usage name="typing" finding="absolute" line="14" />
-      <module_usage name="typing_extensions" finding="absolute" line="16" />
-      <module_usage name="typing" finding="absolute" line="22" />
-      <module_usage name="typing" finding="absolute" line="24" />
-      <module_usage name="typing" finding="absolute" line="33" />
-      <module_usage name="typing_extensions" finding="absolute" line="37" />
-      <module_usage name="types" finding="absolute" line="61" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="123" />
-      <module_usage name="eval_type_backport" finding="not-found" line="271" />
+      <module_usage name="functools" finding="absolute" line="11" />
+      <module_usage name="typing" finding="absolute" line="12" />
+      <module_usage name="typing_extensions" finding="absolute" line="14" />
+      <module_usage name="typing_extensions" finding="absolute" line="15" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="17" />
+      <module_usage name="types" finding="absolute" line="23" />
+      <module_usage name="types" finding="absolute" line="24" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="363" />
+      <module_usage name="zoneinfo" finding="absolute" line="375" />
+      <module_usage name="zoneinfo.ZoneInfo" finding="not-found" line="375" />
+      <module_usage name="eval_type_backport" finding="not-found" line="639" />
     </module_usages>
   </module>
   <module name="pydantic._internal._utils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_utils.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="43" merged_total="3512" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="457" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="43" merged_total="3560" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="460" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
     </distribution-usages>
@@ -3756,39 +3797,21 @@
       <module_usage name="collections.defaultdict" finding="not-found" line="12" />
       <module_usage name="collections.deque" finding="not-found" line="12" />
       <module_usage name="copy" finding="absolute" line="13" />
-      <module_usage name="itertools" finding="absolute" line="14" />
-      <module_usage name="types" finding="absolute" line="15" />
-      <module_usage name="typing" finding="absolute" line="16" />
-      <module_usage name="typing_extensions" finding="absolute" line="18" />
-      <module_usage name="pydantic._internal" finding="absolute" line="20" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="20" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="20" />
-      <module_usage name="pydantic.main" finding="absolute" line="88" />
-    </module_usages>
-  </module>
-  <module name="pydantic._internal._validate_call" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_validate_call.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="83" merged_total="653" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="81" merged_total="128" />
-    <distribution-usages>
-      <distribution-usage name="pydantic_core" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="inspect" finding="absolute" line="3" />
-      <module_usage name="functools" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="pydantic_core" finding="absolute" line="7" />
-      <module_usage name="pydantic.config" finding="absolute" line="9" />
-      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="10" />
-      <module_usage name="pydantic._internal" finding="absolute" line="11" />
-      <module_usage name="pydantic._internal._generate_schema" finding="relative" line="11" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="11" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="12" />
+      <module_usage name="functools" finding="absolute" line="14" />
+      <module_usage name="inspect" finding="absolute" line="15" />
+      <module_usage name="itertools" finding="absolute" line="16" />
+      <module_usage name="types" finding="absolute" line="17" />
+      <module_usage name="typing" finding="absolute" line="18" />
+      <module_usage name="typing_extensions" finding="absolute" line="20" />
+      <module_usage name="pydantic._internal" finding="absolute" line="22" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="22" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="22" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="23" />
     </module_usages>
   </module>
   <module name="pydantic._internal._validators" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_internal/_validators.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="27" merged_total="1030" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="152" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="27" merged_total="1640" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="294" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
     </distribution-usages>
@@ -3797,12 +3820,14 @@
       <module_usage name="math" finding="absolute" line="8" />
       <module_usage name="re" finding="absolute" line="9" />
       <module_usage name="typing" finding="absolute" line="10" />
-      <module_usage name="ipaddress" finding="absolute" line="11" />
-      <module_usage name="typing" finding="absolute" line="12" />
-      <module_usage name="pydantic_core" finding="absolute" line="14" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="14" />
-      <module_usage name="pydantic_core._pydantic_core" finding="absolute" line="15" />
-      <module_usage name="importlib" finding="absolute" line="87" />
+      <module_usage name="decimal" finding="absolute" line="11" />
+      <module_usage name="fractions" finding="absolute" line="12" />
+      <module_usage name="ipaddress" finding="absolute" line="13" />
+      <module_usage name="typing" finding="absolute" line="14" />
+      <module_usage name="pydantic_core" finding="absolute" line="16" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="16" />
+      <module_usage name="pydantic_core._pydantic_core" finding="absolute" line="17" />
+      <module_usage name="importlib" finding="absolute" line="89" />
     </module_usages>
   </module>
   <module name="pydantic._migration" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/_migration.py" distribution="pydantic">
@@ -3888,17 +3913,18 @@
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="typing_extensions" finding="absolute" line="7" />
-      <module_usage name="pydantic._migration" finding="relative" line="9" />
-      <module_usage name="pydantic.aliases" finding="absolute" line="10" />
-      <module_usage name="pydantic.errors" finding="absolute" line="11" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="1040" />
+      <module_usage name="re" finding="absolute" line="5" />
+      <module_usage name="typing" finding="absolute" line="6" />
+      <module_usage name="typing_extensions" finding="absolute" line="8" />
+      <module_usage name="pydantic._migration" finding="relative" line="10" />
+      <module_usage name="pydantic.aliases" finding="absolute" line="11" />
+      <module_usage name="pydantic.errors" finding="absolute" line="12" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="1036" />
     </module_usages>
   </module>
   <module name="pydantic.dataclasses" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/dataclasses.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="58" merged_total="1224" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="52" merged_total="165" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="82" merged_total="1569" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="75" merged_total="214" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
     </distribution-usages>
@@ -3908,18 +3934,20 @@
       <module_usage name="sys" finding="absolute" line="6" />
       <module_usage name="types" finding="absolute" line="7" />
       <module_usage name="typing" finding="absolute" line="8" />
-      <module_usage name="typing_extensions" finding="absolute" line="10" />
-      <module_usage name="pydantic._internal" finding="relative" line="12" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="12" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="12" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="12" />
+      <module_usage name="warnings" finding="absolute" line="9" />
+      <module_usage name="typing_extensions" finding="absolute" line="11" />
       <module_usage name="pydantic._internal" finding="relative" line="13" />
-      <module_usage name="pydantic._internal._dataclasses" finding="relative" line="13" />
-      <module_usage name="pydantic._migration" finding="relative" line="14" />
-      <module_usage name="pydantic.config" finding="absolute" line="15" />
-      <module_usage name="pydantic.errors" finding="absolute" line="16" />
-      <module_usage name="pydantic.fields" finding="absolute" line="17" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="193" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="13" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="13" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="13" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="13" />
+      <module_usage name="pydantic._internal" finding="relative" line="14" />
+      <module_usage name="pydantic._internal._dataclasses" finding="relative" line="14" />
+      <module_usage name="pydantic._migration" finding="relative" line="15" />
+      <module_usage name="pydantic.config" finding="absolute" line="16" />
+      <module_usage name="pydantic.errors" finding="absolute" line="17" />
+      <module_usage name="pydantic.fields" finding="absolute" line="18" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="195" />
     </module_usages>
   </module>
   <module name="pydantic.datetime_parse" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/datetime_parse.py" distribution="pydantic">
@@ -3998,12 +4026,12 @@
       <module_usage name="typing" finding="absolute" line="10" />
       <module_usage name="uuid" finding="absolute" line="11" />
       <module_usage name="typing_extensions" finding="absolute" line="13" />
-      <module_usage name="pydantic.color" finding="relative" line="15" />
-      <module_usage name="pydantic.networks" finding="absolute" line="16" />
-      <module_usage name="pydantic.types" finding="absolute" line="17" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="18" />
-      <module_usage name="dataclasses" finding="absolute" line="91" />
-      <module_usage name="pydantic.main" finding="absolute" line="93" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="15" />
+      <module_usage name="pydantic.color" finding="relative" line="16" />
+      <module_usage name="pydantic.networks" finding="absolute" line="17" />
+      <module_usage name="pydantic.types" finding="absolute" line="18" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="19" />
+      <module_usage name="dataclasses" finding="absolute" line="92" />
     </module_usages>
   </module>
   <module name="pydantic.deprecated.parse" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/deprecated/parse.py" distribution="pydantic">
@@ -4053,8 +4081,8 @@
     </module_usages>
   </module>
   <module name="pydantic.fields" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/fields.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="101" merged_total="9750" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="94" merged_total="1319" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="113" merged_total="10146" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="106" merged_total="1382" />
     <distribution-usages>
       <distribution-usage name="annotated-types" />
       <distribution-usage name="typing_extensions" />
@@ -4085,15 +4113,17 @@
       <module_usage name="pydantic._internal._repr" finding="relative" line="21" />
       <module_usage name="pydantic._internal._typing_extra" finding="relative" line="21" />
       <module_usage name="pydantic._internal._utils" finding="relative" line="21" />
-      <module_usage name="pydantic.aliases" finding="absolute" line="22" />
-      <module_usage name="pydantic.config" finding="absolute" line="23" />
-      <module_usage name="pydantic.errors" finding="absolute" line="24" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="25" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="22" />
+      <module_usage name="pydantic.aliases" finding="absolute" line="23" />
+      <module_usage name="pydantic.config" finding="absolute" line="24" />
+      <module_usage name="pydantic.errors" finding="absolute" line="25" />
+      <module_usage name="pydantic.json_schema" finding="absolute" line="26" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="27" />
     </module_usages>
   </module>
   <module name="pydantic.functional_validators" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/functional_validators.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="2829" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="528" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="3139" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="571" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
@@ -4105,21 +4135,19 @@
       <module_usage name="functools" finding="absolute" line="7" />
       <module_usage name="types" finding="absolute" line="8" />
       <module_usage name="typing" finding="absolute" line="9" />
+      <module_usage name="pydantic_core" finding="absolute" line="11" />
       <module_usage name="pydantic_core.core_schema" finding="absolute" line="11" />
       <module_usage name="pydantic_core.core_schema" finding="absolute" line="12" />
       <module_usage name="typing_extensions" finding="absolute" line="13" />
-      <module_usage name="pydantic" finding="absolute" line="15" />
-      <module_usage name="pydantic.GetCoreSchemaHandler" finding="not-found" line="15" />
-      <module_usage name="pydantic._internal" finding="relative" line="16" />
-      <module_usage name="pydantic._internal._core_metadata" finding="relative" line="16" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="16" />
-      <module_usage name="pydantic._internal._generics" finding="relative" line="16" />
-      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="16" />
-      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="17" />
-      <module_usage name="pydantic.errors" finding="absolute" line="18" />
-      <module_usage name="typing_extensions" finding="absolute" line="21" />
-      <module_usage name="pydantic.errors" finding="absolute" line="161" />
-      <module_usage name="pydantic.errors" finding="absolute" line="645" />
+      <module_usage name="pydantic._internal" finding="relative" line="15" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="15" />
+      <module_usage name="pydantic._internal._generics" finding="relative" line="15" />
+      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="15" />
+      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="16" />
+      <module_usage name="pydantic.errors" finding="absolute" line="17" />
+      <module_usage name="typing_extensions" finding="absolute" line="20" />
+      <module_usage name="pydantic.errors" finding="absolute" line="208" />
+      <module_usage name="pydantic.errors" finding="absolute" line="773" />
     </module_usages>
   </module>
   <module name="pydantic.json" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/json.py" distribution="pydantic">
@@ -4130,8 +4158,8 @@
     </module_usages>
   </module>
   <module name="pydantic.json_schema" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/json_schema.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="125" merged_total="27078" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="57" merged_total="2872" />
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="128" merged_total="29559" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="81" merged_total="3146" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
@@ -4141,39 +4169,42 @@
       <module_usage name="dataclasses" finding="absolute" line="14" />
       <module_usage name="inspect" finding="absolute" line="15" />
       <module_usage name="math" finding="absolute" line="16" />
-      <module_usage name="re" finding="absolute" line="17" />
-      <module_usage name="warnings" finding="absolute" line="18" />
-      <module_usage name="collections" finding="absolute" line="19" />
-      <module_usage name="collections.defaultdict" finding="not-found" line="19" />
-      <module_usage name="copy" finding="absolute" line="20" />
-      <module_usage name="dataclasses" finding="absolute" line="21" />
+      <module_usage name="os" finding="absolute" line="17" />
+      <module_usage name="re" finding="absolute" line="18" />
+      <module_usage name="warnings" finding="absolute" line="19" />
+      <module_usage name="collections" finding="absolute" line="20" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="20" />
+      <module_usage name="copy" finding="absolute" line="21" />
       <module_usage name="enum" finding="absolute" line="22" />
       <module_usage name="typing" finding="absolute" line="23" />
-      <module_usage name="pydantic_core" finding="absolute" line="40" />
       <module_usage name="pydantic_core" finding="absolute" line="41" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="41" />
+      <module_usage name="pydantic_core" finding="absolute" line="42" />
       <module_usage name="pydantic_core.core_schema" finding="absolute" line="42" />
-      <module_usage name="typing_extensions" finding="absolute" line="43" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="45" />
-      <module_usage name="pydantic._internal" finding="relative" line="47" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="47" />
-      <module_usage name="pydantic._internal._core_metadata" finding="relative" line="47" />
-      <module_usage name="pydantic._internal._core_utils" finding="relative" line="47" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="47" />
-      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="47" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="47" />
-      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="47" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="47" />
-      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="57" />
-      <module_usage name="pydantic.config" finding="absolute" line="58" />
-      <module_usage name="pydantic.errors" finding="absolute" line="59" />
-      <module_usage name="pydantic.type_adapter" finding="absolute" line="2061" />
-      <module_usage name="pydantic.main" finding="absolute" line="2253" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="43" />
+      <module_usage name="typing_extensions" finding="absolute" line="44" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="46" />
+      <module_usage name="pydantic._internal" finding="relative" line="48" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="48" />
+      <module_usage name="pydantic._internal._core_metadata" finding="relative" line="48" />
+      <module_usage name="pydantic._internal._core_utils" finding="relative" line="48" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="48" />
+      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="48" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="48" />
+      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="48" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="48" />
+      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="58" />
+      <module_usage name="pydantic.config" finding="absolute" line="59" />
+      <module_usage name="pydantic.errors" finding="absolute" line="60" />
+      <module_usage name="pydantic.main" finding="absolute" line="1501" />
+      <module_usage name="pydantic.root_model" finding="absolute" line="1502" />
+      <module_usage name="pydantic._internal._dataclasses" finding="relative" line="1674" />
+      <module_usage name="pydantic.type_adapter" finding="absolute" line="2161" />
+      <module_usage name="pydantic.main" finding="absolute" line="2357" />
     </module_usages>
   </module>
   <module name="pydantic.main" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/main.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="387" merged_total="12591" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="367" merged_total="1966" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="406" merged_total="12796" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="386" merged_total="1997" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
@@ -4186,53 +4217,55 @@
       <module_usage name="typing" finding="absolute" line="8" />
       <module_usage name="warnings" finding="absolute" line="9" />
       <module_usage name="copy" finding="absolute" line="10" />
-      <module_usage name="typing" finding="absolute" line="11" />
-      <module_usage name="pydantic_core" finding="absolute" line="27" />
-      <module_usage name="typing_extensions" finding="absolute" line="28" />
+      <module_usage name="functools" finding="absolute" line="11" />
+      <module_usage name="typing" finding="absolute" line="12" />
       <module_usage name="pydantic_core" finding="absolute" line="29" />
       <module_usage name="typing_extensions" finding="absolute" line="30" />
-      <module_usage name="pydantic._internal" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._fields" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._generics" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._model_construction" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="32" />
-      <module_usage name="pydantic._migration" finding="relative" line="44" />
-      <module_usage name="pydantic.aliases" finding="absolute" line="45" />
-      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="46" />
-      <module_usage name="pydantic.config" finding="absolute" line="47" />
-      <module_usage name="pydantic.errors" finding="absolute" line="48" />
-      <module_usage name="pydantic.json_schema" finding="absolute" line="49" />
-      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="50" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="51" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1157" />
-      <module_usage name="pydantic.deprecated.parse" finding="relative" line="1157" />
-      <module_usage name="json" finding="absolute" line="1168" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1210" />
-      <module_usage name="pydantic.deprecated.parse" finding="relative" line="1210" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1287" />
-      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1287" />
-      <module_usage name="json" finding="absolute" line="1345" />
-      <module_usage name="pydantic.deprecated.json" finding="relative" line="1347" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1385" />
-      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1385" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1398" />
-      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1398" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1412" />
-      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1412" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1425" />
-      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1425" />
-      <module_usage name="pydantic.fields" finding="absolute" line="1537" />
+      <module_usage name="pydantic_core" finding="absolute" line="31" />
+      <module_usage name="typing_extensions" finding="absolute" line="32" />
+      <module_usage name="pydantic._internal" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._fields" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._generics" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._model_construction" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="34" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="34" />
+      <module_usage name="pydantic._migration" finding="relative" line="48" />
+      <module_usage name="pydantic.aliases" finding="absolute" line="49" />
+      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="50" />
+      <module_usage name="pydantic.config" finding="absolute" line="51" />
+      <module_usage name="pydantic.errors" finding="absolute" line="52" />
+      <module_usage name="pydantic.json_schema" finding="absolute" line="53" />
+      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="54" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="55" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1245" />
+      <module_usage name="pydantic.deprecated.parse" finding="relative" line="1245" />
+      <module_usage name="json" finding="absolute" line="1256" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1299" />
+      <module_usage name="pydantic.deprecated.parse" finding="relative" line="1299" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1380" />
+      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1380" />
+      <module_usage name="json" finding="absolute" line="1441" />
+      <module_usage name="pydantic.deprecated.json" finding="relative" line="1443" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1485" />
+      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1485" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1499" />
+      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1499" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1514" />
+      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1514" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1528" />
+      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1528" />
     </module_usages>
   </module>
   <module name="pydantic.mypy" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/mypy.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="129" merged_total="15487" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="120" merged_total="2120" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="133" merged_total="15693" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="124" merged_total="2148" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
       <module_usage name="sys" finding="absolute" line="5" />
@@ -4243,28 +4276,25 @@
       <module_usage name="mypy.nodes" finding="not-found" line="11" />
       <module_usage name="mypy.options" finding="not-found" line="45" />
       <module_usage name="mypy.plugin" finding="not-found" line="46" />
-      <module_usage name="mypy.plugins" finding="not-found" line="55" />
-      <module_usage name="mypy.plugins.common" finding="not-found" line="56" />
-      <module_usage name="mypy.semanal" finding="not-found" line="59" />
-      <module_usage name="mypy.server.trigger" finding="not-found" line="60" />
-      <module_usage name="mypy.state" finding="not-found" line="61" />
-      <module_usage name="mypy.typeops" finding="not-found" line="62" />
-      <module_usage name="mypy.types" finding="not-found" line="63" />
-      <module_usage name="mypy.typevars" finding="not-found" line="76" />
-      <module_usage name="mypy.util" finding="not-found" line="77" />
-      <module_usage name="mypy.version" finding="not-found" line="78" />
-      <module_usage name="pydantic._internal" finding="absolute" line="80" />
-      <module_usage name="pydantic._internal._fields" finding="relative" line="80" />
-      <module_usage name="pydantic.version" finding="absolute" line="81" />
-      <module_usage name="mypy.types" finding="not-found" line="84" />
-      <module_usage name="mypy.types" finding="not-found" line="87" />
-      <module_usage name="tomli" finding="not-found" line="1305" />
-      <module_usage name="warnings" finding="absolute" line="1307" />
+      <module_usage name="mypy.plugins.common" finding="not-found" line="54" />
+      <module_usage name="mypy.semanal" finding="not-found" line="57" />
+      <module_usage name="mypy.server.trigger" finding="not-found" line="58" />
+      <module_usage name="mypy.state" finding="not-found" line="59" />
+      <module_usage name="mypy.typeops" finding="not-found" line="60" />
+      <module_usage name="mypy.types" finding="not-found" line="61" />
+      <module_usage name="mypy.typevars" finding="not-found" line="73" />
+      <module_usage name="mypy.util" finding="not-found" line="74" />
+      <module_usage name="mypy.version" finding="not-found" line="75" />
+      <module_usage name="pydantic._internal" finding="absolute" line="77" />
+      <module_usage name="pydantic._internal._fields" finding="relative" line="77" />
+      <module_usage name="pydantic.version" finding="absolute" line="78" />
+      <module_usage name="tomli" finding="not-found" line="1312" />
+      <module_usage name="warnings" finding="absolute" line="1314" />
     </module_usages>
   </module>
   <module name="pydantic.networks" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/networks.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="26" merged_total="2070" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="265" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="82" merged_total="7918" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="1106" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
@@ -4273,20 +4303,25 @@
       <module_usage name="__future__" finding="absolute" line="3" />
       <module_usage name="dataclasses" finding="absolute" line="5" />
       <module_usage name="re" finding="absolute" line="6" />
-      <module_usage name="importlib.metadata" finding="absolute" line="7" />
-      <module_usage name="ipaddress" finding="absolute" line="8" />
-      <module_usage name="typing" finding="absolute" line="9" />
-      <module_usage name="pydantic_core" finding="absolute" line="11" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="11" />
-      <module_usage name="typing_extensions" finding="absolute" line="12" />
-      <module_usage name="pydantic._internal" finding="relative" line="14" />
-      <module_usage name="pydantic._internal._fields" finding="relative" line="14" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="14" />
-      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="14" />
-      <module_usage name="pydantic._migration" finding="relative" line="15" />
-      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="16" />
-      <module_usage name="pydantic.json_schema" finding="absolute" line="17" />
-      <module_usage name="email_validator" finding="not-found" line="404" />
+      <module_usage name="dataclasses" finding="absolute" line="7" />
+      <module_usage name="functools" finding="absolute" line="8" />
+      <module_usage name="importlib.metadata" finding="absolute" line="9" />
+      <module_usage name="ipaddress" finding="absolute" line="10" />
+      <module_usage name="typing" finding="absolute" line="11" />
+      <module_usage name="pydantic_core" finding="absolute" line="13" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="13" />
+      <module_usage name="pydantic_core" finding="absolute" line="20" />
+      <module_usage name="pydantic_core" finding="absolute" line="21" />
+      <module_usage name="typing_extensions" finding="absolute" line="22" />
+      <module_usage name="pydantic.errors" finding="absolute" line="24" />
+      <module_usage name="pydantic._internal" finding="relative" line="26" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="26" />
+      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="26" />
+      <module_usage name="pydantic._migration" finding="relative" line="27" />
+      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="28" />
+      <module_usage name="pydantic.json_schema" finding="absolute" line="29" />
+      <module_usage name="pydantic.type_adapter" finding="absolute" line="30" />
+      <module_usage name="email_validator" finding="not-found" line="925" />
     </module_usages>
   </module>
   <module name="pydantic.parse" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/parse.py" distribution="pydantic">
@@ -4367,8 +4402,8 @@
     </module_usages>
   </module>
   <module name="pydantic.type_adapter" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/type_adapter.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="105" merged_total="3008" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="103" merged_total="555" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="55" merged_total="2385" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="54" merged_total="452" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
@@ -4376,28 +4411,30 @@
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
       <module_usage name="sys" finding="absolute" line="5" />
-      <module_usage name="contextlib" finding="absolute" line="6" />
-      <module_usage name="dataclasses" finding="absolute" line="7" />
-      <module_usage name="functools" finding="absolute" line="8" />
-      <module_usage name="typing" finding="absolute" line="9" />
-      <module_usage name="pydantic_core" finding="absolute" line="26" />
-      <module_usage name="typing_extensions" finding="absolute" line="27" />
-      <module_usage name="pydantic.errors" finding="absolute" line="29" />
-      <module_usage name="pydantic.main" finding="absolute" line="30" />
-      <module_usage name="pydantic._internal" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._generate_schema" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="32" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="32" />
-      <module_usage name="pydantic.config" finding="absolute" line="33" />
-      <module_usage name="pydantic.json_schema" finding="absolute" line="34" />
-      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="41" />
+      <module_usage name="dataclasses" finding="absolute" line="6" />
+      <module_usage name="types" finding="absolute" line="7" />
+      <module_usage name="typing" finding="absolute" line="8" />
+      <module_usage name="pydantic_core" finding="absolute" line="19" />
+      <module_usage name="typing_extensions" finding="absolute" line="20" />
+      <module_usage name="pydantic.errors" finding="absolute" line="22" />
+      <module_usage name="pydantic.main" finding="absolute" line="23" />
+      <module_usage name="pydantic._internal" finding="relative" line="25" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="25" />
+      <module_usage name="pydantic._internal._generate_schema" finding="relative" line="25" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="25" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="25" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="25" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="25" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="25" />
+      <module_usage name="pydantic.config" finding="absolute" line="26" />
+      <module_usage name="pydantic.errors" finding="absolute" line="27" />
+      <module_usage name="pydantic.json_schema" finding="absolute" line="28" />
+      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="35" />
     </module_usages>
   </module>
-  <module name="pydantic.types" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/types.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="44" merged_total="11101" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="1568" />
+  <module name="pydantic.types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/types.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="42" merged_total="11548" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="1629" />
     <distribution-usages>
       <distribution-usage name="annotated-types" />
       <distribution-usage name="pydantic_core" />
@@ -4430,12 +4467,12 @@
       <module_usage name="pydantic._internal._typing_extra" finding="relative" line="39" />
       <module_usage name="pydantic._internal._utils" finding="relative" line="39" />
       <module_usage name="pydantic._internal._validators" finding="relative" line="39" />
-      <module_usage name="pydantic._migration" finding="relative" line="47" />
-      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="48" />
-      <module_usage name="pydantic.errors" finding="absolute" line="49" />
-      <module_usage name="pydantic.json_schema" finding="absolute" line="50" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="51" />
-      <module_usage name="pydantic.fields" finding="absolute" line="2828" />
+      <module_usage name="pydantic._migration" finding="relative" line="40" />
+      <module_usage name="pydantic.annotated_handlers" finding="absolute" line="41" />
+      <module_usage name="pydantic.errors" finding="absolute" line="42" />
+      <module_usage name="pydantic.json_schema" finding="absolute" line="43" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="44" />
+      <module_usage name="pydantic.fields" finding="absolute" line="3038" />
     </module_usages>
   </module>
   <module name="pydantic.typing" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/typing.py" distribution="pydantic">
@@ -4450,6 +4487,449 @@
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
       <module_usage name="pydantic._migration" finding="relative" line="3" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/__init__.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="3" merged_total="36" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="12" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="pydantic.v1" finding="absolute" line="2" />
+      <module_usage name="pydantic.v1.dataclasses" finding="relative" line="2" />
+      <module_usage name="pydantic.v1.annotated_types" finding="absolute" line="3" />
+      <module_usage name="pydantic.v1.class_validators" finding="absolute" line="4" />
+      <module_usage name="pydantic.v1.config" finding="absolute" line="5" />
+      <module_usage name="pydantic.v1.decorator" finding="absolute" line="6" />
+      <module_usage name="pydantic.v1.env_settings" finding="absolute" line="7" />
+      <module_usage name="pydantic.v1.error_wrappers" finding="absolute" line="8" />
+      <module_usage name="pydantic.v1.errors" finding="absolute" line="9" />
+      <module_usage name="pydantic.v1.fields" finding="absolute" line="10" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="11" />
+      <module_usage name="pydantic.v1.networks" finding="absolute" line="12" />
+      <module_usage name="pydantic.v1.parse" finding="absolute" line="13" />
+      <module_usage name="pydantic.v1.tools" finding="absolute" line="14" />
+      <module_usage name="pydantic.v1.types" finding="absolute" line="15" />
+      <module_usage name="pydantic.v1.version" finding="absolute" line="16" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.annotated_types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/annotated_types.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="587" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="111" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="2" />
+      <module_usage name="pydantic.v1.fields" finding="absolute" line="4" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="5" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="6" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.class_validators" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/class_validators.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="53" merged_total="3510" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="525" />
+    <module_usages>
+      <module_usage name="warnings" finding="absolute" line="1" />
+      <module_usage name="collections" finding="absolute" line="2" />
+      <module_usage name="collections.ChainMap" finding="not-found" line="2" />
+      <module_usage name="functools" finding="absolute" line="3" />
+      <module_usage name="itertools" finding="absolute" line="4" />
+      <module_usage name="types" finding="absolute" line="5" />
+      <module_usage name="typing" finding="absolute" line="6" />
+      <module_usage name="pydantic.v1.errors" finding="absolute" line="8" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="9" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="10" />
+      <module_usage name="inspect" finding="absolute" line="210" />
+      <module_usage name="inspect" finding="absolute" line="252" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.color" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/color.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="25" max_branch_merge="82" merged_total="18417" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="80" merged_total="723" />
+    <module_usages>
+      <module_usage name="math" finding="absolute" line="10" />
+      <module_usage name="re" finding="absolute" line="11" />
+      <module_usage name="colorsys" finding="absolute" line="12" />
+      <module_usage name="typing" finding="absolute" line="13" />
+      <module_usage name="pydantic.v1.errors" finding="absolute" line="15" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="16" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.config" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/config.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="221" merged_total="3006" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="123" merged_total="512" />
+    <distribution-usages>
+      <distribution-usage name="typing_extensions" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="json" finding="absolute" line="1" />
+      <module_usage name="enum" finding="absolute" line="2" />
+      <module_usage name="typing" finding="absolute" line="3" />
+      <module_usage name="typing_extensions" finding="absolute" line="5" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="7" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="8" />
+      <module_usage name="pydantic.v1.version" finding="absolute" line="9" />
+      <module_usage name="typing_extensions" finding="absolute" line="44" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.dataclasses" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/dataclasses.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="60" merged_total="3588" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="42" merged_total="536" />
+    <distribution-usages>
+      <distribution-usage name="typing_extensions" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="copy" finding="absolute" line="34" />
+      <module_usage name="dataclasses" finding="absolute" line="35" />
+      <module_usage name="sys" finding="absolute" line="36" />
+      <module_usage name="contextlib" finding="absolute" line="37" />
+      <module_usage name="functools" finding="absolute" line="38" />
+      <module_usage name="functools" finding="absolute" line="41" />
+      <module_usage name="typing" finding="absolute" line="46" />
+      <module_usage name="typing_extensions" finding="absolute" line="48" />
+      <module_usage name="pydantic.v1.class_validators" finding="absolute" line="50" />
+      <module_usage name="pydantic.v1.config" finding="absolute" line="51" />
+      <module_usage name="pydantic.v1.error_wrappers" finding="absolute" line="52" />
+      <module_usage name="pydantic.v1.errors" finding="absolute" line="53" />
+      <module_usage name="pydantic.v1.fields" finding="absolute" line="54" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="55" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="56" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.datetime_parse" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/datetime_parse.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="47" merged_total="1977" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="44" merged_total="376" />
+    <module_usages>
+      <module_usage name="re" finding="absolute" line="17" />
+      <module_usage name="datetime" finding="absolute" line="18" />
+      <module_usage name="typing" finding="absolute" line="19" />
+      <module_usage name="pydantic.v1" finding="absolute" line="21" />
+      <module_usage name="pydantic.v1.errors" finding="relative" line="21" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.decorator" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/decorator.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="88" merged_total="5801" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="83" merged_total="793" />
+    <module_usages>
+      <module_usage name="functools" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="2" />
+      <module_usage name="pydantic.v1" finding="absolute" line="4" />
+      <module_usage name="pydantic.v1.validator" finding="not-found" line="4" />
+      <module_usage name="pydantic.v1.config" finding="absolute" line="5" />
+      <module_usage name="pydantic.v1.errors" finding="absolute" line="6" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="7" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="8" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="9" />
+      <module_usage name="inspect" finding="absolute" line="62" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.env_settings" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/env_settings.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="97" merged_total="7185" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="94" merged_total="978" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="warnings" finding="absolute" line="2" />
+      <module_usage name="pathlib" finding="absolute" line="3" />
+      <module_usage name="typing" finding="absolute" line="4" />
+      <module_usage name="pydantic.v1.config" finding="absolute" line="6" />
+      <module_usage name="pydantic.v1.fields" finding="absolute" line="7" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="8" />
+      <module_usage name="pydantic.v1.types" finding="absolute" line="9" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="10" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="11" />
+      <module_usage name="dotenv" finding="not-found" line="330" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.error_wrappers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/error_wrappers.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="1685" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="307" />
+    <module_usages>
+      <module_usage name="json" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="2" />
+      <module_usage name="pydantic.v1.json" finding="absolute" line="4" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="5" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.errors" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/errors.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="29" merged_total="20168" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="3284" />
+    <module_usages>
+      <module_usage name="decimal" finding="absolute" line="1" />
+      <module_usage name="pathlib" finding="absolute" line="2" />
+      <module_usage name="typing" finding="absolute" line="3" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="5" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.fields" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/fields.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="473" merged_total="19958" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="328" merged_total="2747" />
+    <distribution-usages>
+      <distribution-usage name="typing_extensions" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="copy" finding="absolute" line="1" />
+      <module_usage name="re" finding="absolute" line="2" />
+      <module_usage name="collections" finding="absolute" line="3" />
+      <module_usage name="collections.Counter" finding="not-found" line="3" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="3" />
+      <module_usage name="collections.deque" finding="not-found" line="3" />
+      <module_usage name="collections.abc" finding="absolute" line="4" />
+      <module_usage name="typing" finding="absolute" line="5" />
+      <module_usage name="typing_extensions" finding="absolute" line="29" />
+      <module_usage name="pydantic.v1" finding="absolute" line="31" />
+      <module_usage name="pydantic.v1.errors" finding="relative" line="31" />
+      <module_usage name="pydantic.v1.class_validators" finding="absolute" line="32" />
+      <module_usage name="pydantic.v1.error_wrappers" finding="absolute" line="33" />
+      <module_usage name="pydantic.v1.errors" finding="absolute" line="34" />
+      <module_usage name="pydantic.v1.types" finding="absolute" line="35" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="36" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="51" />
+      <module_usage name="pydantic.v1.validators" finding="absolute" line="62" />
+      <module_usage name="pydantic.v1.schema" finding="absolute" line="493" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="1163" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.json" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/json.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="593" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="101" />
+    <module_usages>
+      <module_usage name="datetime" finding="absolute" line="1" />
+      <module_usage name="collections" finding="absolute" line="2" />
+      <module_usage name="collections.deque" finding="not-found" line="2" />
+      <module_usage name="decimal" finding="absolute" line="3" />
+      <module_usage name="enum" finding="absolute" line="4" />
+      <module_usage name="ipaddress" finding="absolute" line="5" />
+      <module_usage name="pathlib" finding="absolute" line="6" />
+      <module_usage name="re" finding="absolute" line="7" />
+      <module_usage name="types" finding="absolute" line="8" />
+      <module_usage name="typing" finding="absolute" line="9" />
+      <module_usage name="uuid" finding="absolute" line="10" />
+      <module_usage name="pydantic.v1.color" finding="absolute" line="12" />
+      <module_usage name="pydantic.v1.networks" finding="absolute" line="13" />
+      <module_usage name="pydantic.v1.types" finding="absolute" line="14" />
+      <module_usage name="dataclasses" finding="absolute" line="73" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="75" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.main" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/main.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="527" merged_total="24084" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="512" merged_total="2973" />
+    <distribution-usages>
+      <distribution-usage name="typing_extensions" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="warnings" finding="absolute" line="1" />
+      <module_usage name="abc" finding="absolute" line="2" />
+      <module_usage name="copy" finding="absolute" line="3" />
+      <module_usage name="enum" finding="absolute" line="4" />
+      <module_usage name="functools" finding="absolute" line="5" />
+      <module_usage name="pathlib" finding="absolute" line="6" />
+      <module_usage name="types" finding="absolute" line="7" />
+      <module_usage name="typing" finding="absolute" line="8" />
+      <module_usage name="typing_extensions" finding="absolute" line="27" />
+      <module_usage name="pydantic.v1.class_validators" finding="absolute" line="29" />
+      <module_usage name="pydantic.v1.config" finding="absolute" line="30" />
+      <module_usage name="pydantic.v1.error_wrappers" finding="absolute" line="31" />
+      <module_usage name="pydantic.v1.errors" finding="absolute" line="32" />
+      <module_usage name="pydantic.v1.fields" finding="absolute" line="33" />
+      <module_usage name="pydantic.v1.json" finding="absolute" line="42" />
+      <module_usage name="pydantic.v1.parse" finding="absolute" line="43" />
+      <module_usage name="pydantic.v1.schema" finding="absolute" line="44" />
+      <module_usage name="pydantic.v1.types" finding="absolute" line="45" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="46" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="56" />
+      <module_usage name="pydantic.v1.json" finding="absolute" line="672" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.networks" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/networks.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="256" merged_total="12136" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="244" merged_total="2017" />
+    <module_usages>
+      <module_usage name="re" finding="absolute" line="1" />
+      <module_usage name="ipaddress" finding="absolute" line="2" />
+      <module_usage name="typing" finding="absolute" line="12" />
+      <module_usage name="pydantic.v1" finding="absolute" line="30" />
+      <module_usage name="pydantic.v1.errors" finding="relative" line="30" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="31" />
+      <module_usage name="pydantic.v1.validators" finding="absolute" line="32" />
+      <module_usage name="email_validator" finding="not-found" line="578" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.parse" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/parse.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="47" merged_total="462" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="110" />
+    <module_usages>
+      <module_usage name="json" finding="absolute" line="1" />
+      <module_usage name="pickle" finding="absolute" line="2" />
+      <module_usage name="enum" finding="absolute" line="3" />
+      <module_usage name="pathlib" finding="absolute" line="4" />
+      <module_usage name="typing" finding="absolute" line="5" />
+      <module_usage name="pydantic.v1.types" finding="absolute" line="7" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.schema" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/schema.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="214" merged_total="10784" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="163" merged_total="1727" />
+    <distribution-usages>
+      <distribution-usage name="typing_extensions" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="re" finding="absolute" line="1" />
+      <module_usage name="warnings" finding="absolute" line="2" />
+      <module_usage name="collections" finding="absolute" line="3" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="3" />
+      <module_usage name="dataclasses" finding="absolute" line="4" />
+      <module_usage name="datetime" finding="absolute" line="5" />
+      <module_usage name="decimal" finding="absolute" line="6" />
+      <module_usage name="enum" finding="absolute" line="7" />
+      <module_usage name="ipaddress" finding="absolute" line="8" />
+      <module_usage name="pathlib" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="uuid" finding="absolute" line="30" />
+      <module_usage name="typing_extensions" finding="absolute" line="32" />
+      <module_usage name="pydantic.v1.fields" finding="absolute" line="34" />
+      <module_usage name="pydantic.v1.json" finding="absolute" line="49" />
+      <module_usage name="pydantic.v1.networks" finding="absolute" line="50" />
+      <module_usage name="pydantic.v1.types" finding="absolute" line="51" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="72" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="83" />
+      <module_usage name="inspect" finding="absolute" line="99" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="381" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="448" />
+      <module_usage name="inspect" finding="absolute" line="568" />
+      <module_usage name="inspect" finding="absolute" line="661" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="841" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="977" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.tools" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/tools.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="13" merged_total="201" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="40" />
+    <module_usages>
+      <module_usage name="json" finding="absolute" line="1" />
+      <module_usage name="functools" finding="absolute" line="2" />
+      <module_usage name="pathlib" finding="absolute" line="3" />
+      <module_usage name="typing" finding="absolute" line="4" />
+      <module_usage name="pydantic.v1.parse" finding="absolute" line="6" />
+      <module_usage name="pydantic.v1.types" finding="absolute" line="7" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="8" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="24" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/types.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="97" merged_total="20245" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="93" merged_total="3282" />
+    <module_usages>
+      <module_usage name="abc" finding="absolute" line="1" />
+      <module_usage name="math" finding="absolute" line="2" />
+      <module_usage name="re" finding="absolute" line="3" />
+      <module_usage name="warnings" finding="absolute" line="4" />
+      <module_usage name="datetime" finding="absolute" line="5" />
+      <module_usage name="decimal" finding="absolute" line="6" />
+      <module_usage name="enum" finding="absolute" line="7" />
+      <module_usage name="pathlib" finding="absolute" line="8" />
+      <module_usage name="types" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="uuid" finding="absolute" line="28" />
+      <module_usage name="weakref" finding="absolute" line="29" />
+      <module_usage name="pydantic.v1" finding="absolute" line="31" />
+      <module_usage name="pydantic.v1.errors" finding="relative" line="31" />
+      <module_usage name="pydantic.v1.datetime_parse" finding="absolute" line="32" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="33" />
+      <module_usage name="pydantic.v1.validators" finding="absolute" line="34" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.typing" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/typing.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="43" merged_total="3623" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="450" />
+    <distribution-usages>
+      <distribution-usage name="typing_extensions" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="2" />
+      <module_usage name="collections.abc" finding="absolute" line="3" />
+      <module_usage name="os" finding="absolute" line="4" />
+      <module_usage name="typing" finding="absolute" line="5" />
+      <module_usage name="typing_extensions" finding="absolute" line="30" />
+      <module_usage name="typing" finding="absolute" line="39" />
+      <module_usage name="typing" finding="absolute" line="41" />
+      <module_usage name="typing" finding="absolute" line="44" />
+      <module_usage name="types" finding="absolute" line="50" />
+      <module_usage name="typing" finding="absolute" line="111" />
+      <module_usage name="typing" finding="absolute" line="144" />
+      <module_usage name="typing" finding="absolute" line="195" />
+      <module_usage name="typing_extensions" finding="absolute" line="197" />
+      <module_usage name="types" finding="absolute" line="248" />
+      <module_usage name="typing" finding="absolute" line="249" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="443" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="453" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.utils" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/utils.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="81" merged_total="10030" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="77" merged_total="1341" />
+    <distribution-usages>
+      <distribution-usage name="typing_extensions" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="keyword" finding="absolute" line="1" />
+      <module_usage name="warnings" finding="absolute" line="2" />
+      <module_usage name="weakref" finding="absolute" line="3" />
+      <module_usage name="collections" finding="absolute" line="4" />
+      <module_usage name="collections.OrderedDict" finding="not-found" line="4" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="4" />
+      <module_usage name="collections.deque" finding="not-found" line="4" />
+      <module_usage name="copy" finding="absolute" line="5" />
+      <module_usage name="itertools" finding="absolute" line="6" />
+      <module_usage name="types" finding="absolute" line="7" />
+      <module_usage name="typing" finding="absolute" line="8" />
+      <module_usage name="typing_extensions" finding="absolute" line="29" />
+      <module_usage name="pydantic.v1.errors" finding="absolute" line="31" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="32" />
+      <module_usage name="pydantic.v1.version" finding="absolute" line="42" />
+      <module_usage name="importlib" finding="absolute" line="127" />
+      <module_usage name="inspect" finding="absolute" line="242" />
+      <module_usage name="pydantic.v1.config" finding="absolute" line="244" />
+      <module_usage name="pydantic.v1.main" finding="absolute" line="302" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.validators" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/validators.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="109" merged_total="6074" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="103" merged_total="732" />
+    <module_usages>
+      <module_usage name="math" finding="absolute" line="1" />
+      <module_usage name="re" finding="absolute" line="2" />
+      <module_usage name="collections" finding="absolute" line="3" />
+      <module_usage name="collections.OrderedDict" finding="not-found" line="3" />
+      <module_usage name="collections.deque" finding="not-found" line="3" />
+      <module_usage name="collections.abc" finding="absolute" line="4" />
+      <module_usage name="datetime" finding="absolute" line="5" />
+      <module_usage name="decimal" finding="absolute" line="6" />
+      <module_usage name="enum" finding="absolute" line="7" />
+      <module_usage name="ipaddress" finding="absolute" line="8" />
+      <module_usage name="pathlib" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="uuid" finding="absolute" line="29" />
+      <module_usage name="warnings" finding="absolute" line="30" />
+      <module_usage name="pydantic.v1" finding="absolute" line="32" />
+      <module_usage name="pydantic.v1.errors" finding="relative" line="32" />
+      <module_usage name="pydantic.v1.datetime_parse" finding="absolute" line="33" />
+      <module_usage name="pydantic.v1.typing" finding="absolute" line="34" />
+      <module_usage name="pydantic.v1.utils" finding="absolute" line="45" />
+      <module_usage name="pydantic.v1.annotated_types" finding="absolute" line="598" />
+      <module_usage name="pydantic.v1.annotated_types" finding="absolute" line="623" />
+      <module_usage name="pydantic.v1.dataclasses" finding="absolute" line="702" />
+    </module_usages>
+  </module>
+  <module name="pydantic.v1.version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/v1/version.py" distribution="pydantic">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_setuptools" tags_used="use_setuptools" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="332" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="62" />
+    <module_usages>
+      <module_usage name="cython" finding="not-found" line="6" />
+      <module_usage name="platform" finding="absolute" line="17" />
+      <module_usage name="sys" finding="absolute" line="18" />
+      <module_usage name="importlib" finding="absolute" line="19" />
+      <module_usage name="pathlib" finding="absolute" line="20" />
     </module_usages>
   </module>
   <module name="pydantic.validators" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/validators.py" distribution="pydantic">
@@ -4478,8 +4958,8 @@
     </module_usages>
   </module>
   <module name="pydantic.warnings" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic/warnings.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="21" merged_total="805" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="186" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="21" merged_total="1078" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="250" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
       <module_usage name="pydantic.version" finding="relative" line="5" />
@@ -4499,7 +4979,7 @@
       <module_usage name="pydantic_core._pydantic_core" finding="relative" line="6" />
       <module_usage name="pydantic_core.core_schema" finding="absolute" line="30" />
       <module_usage name="typing_extensions" finding="absolute" line="33" />
-      <module_usage name="typing" finding="absolute" line="40" />
+      <module_usage name="typing_extensions" finding="absolute" line="38" />
     </module_usages>
   </module>
   <module name="pydantic_core._pydantic_core" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic_core/_pydantic_core.cpython-310-darwin.so" distribution="pydantic_core">
@@ -4508,8 +4988,8 @@
     <module_usages />
   </module>
   <module name="pydantic_core.core_schema" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pydantic_core/core_schema.py" distribution="pydantic_core">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="45" merged_total="18386" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="2917" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="45" merged_total="18884" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="2997" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
     </distribution-usages>
@@ -4526,7 +5006,7 @@
       <module_usage name="typing_extensions" finding="absolute" line="23" />
       <module_usage name="typing" finding="absolute" line="30" />
       <module_usage name="pydantic_core" finding="absolute" line="39" />
-      <module_usage name="warnings" finding="absolute" line="4057" />
+      <module_usage name="warnings" finding="absolute" line="4207" />
     </module_usages>
   </module>
   <module name="pyexpat" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/pyexpat.cpython-310-darwin.so">
@@ -4941,6 +5421,29 @@
       <module_usage name="zlib" finding="absolute" line="2373" />
     </module_usages>
   </module>
+  <module name="tempfile" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/tempfile.py">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="53" merged_total="4930" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="functools" finding="absolute" line="39" />
+      <module_usage name="warnings" finding="absolute" line="40" />
+      <module_usage name="io" finding="absolute" line="41" />
+      <module_usage name="os" finding="absolute" line="42" />
+      <module_usage name="shutil" finding="absolute" line="43" />
+      <module_usage name="errno" finding="absolute" line="44" />
+      <module_usage name="random" finding="absolute" line="45" />
+      <module_usage name="sys" finding="absolute" line="46" />
+      <module_usage name="types" finding="absolute" line="47" />
+      <module_usage name="weakref" finding="absolute" line="48" />
+      <module_usage name="_thread" finding="absolute" line="49" />
+      <module_usage name="posixpath" finding="absolute" line="201" />
+      <module_usage name="posixpath" finding="absolute" line="253" />
+      <module_usage name="posixpath" finding="absolute" line="365" />
+      <module_usage name="posixpath" finding="absolute" line="408" />
+      <module_usage name="io" finding="absolute" line="672" />
+      <module_usage name="io" finding="absolute" line="675" />
+    </module_usages>
+  </module>
   <module name="textwrap" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/textwrap.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="203" merged_total="2645" />
     <optimization-time pass="2" time="volatile" />
@@ -5304,6 +5807,63 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
+  <module name="zoneinfo" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/zoneinfo/__init__.py">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="68" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="zoneinfo" finding="absolute" line="10" />
+      <module_usage name="zoneinfo._tzpath" finding="relative" line="10" />
+      <module_usage name="zoneinfo._common" finding="absolute" line="11" />
+      <module_usage name="_zoneinfo" finding="absolute" line="14" />
+      <module_usage name="zoneinfo._zoneinfo" finding="absolute" line="16" />
+    </module_usages>
+  </module>
+  <module name="zoneinfo._common" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/zoneinfo/_common.py">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="89" merged_total="1432" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="struct" finding="absolute" line="1" />
+      <module_usage name="importlib.resources" finding="absolute" line="5" />
+      <module_usage name="importlib.resources" finding="absolute" line="12" />
+    </module_usages>
+  </module>
+  <module name="zoneinfo._tzpath" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/zoneinfo/_tzpath.py">
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="38" merged_total="2526" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="sysconfig" finding="absolute" line="2" />
+      <module_usage name="posixpath" finding="absolute" line="16" />
+      <module_usage name="posixpath" finding="absolute" line="36" />
+      <module_usage name="warnings" finding="absolute" line="40" />
+      <module_usage name="posixpath" finding="absolute" line="54" />
+      <module_usage name="posixpath" finding="absolute" line="69" />
+      <module_usage name="posixpath" finding="absolute" line="76" />
+      <module_usage name="posixpath" finding="absolute" line="80" />
+      <module_usage name="posixpath" finding="absolute" line="95" />
+      <module_usage name="importlib.resources" finding="absolute" line="114" />
+      <module_usage name="posixpath" finding="absolute" line="150" />
+      <module_usage name="posixpath" finding="absolute" line="152" />
+    </module_usages>
+  </module>
+  <module name="zoneinfo._zoneinfo" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/zoneinfo/_zoneinfo.py">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="74" merged_total="7197" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="bisect" finding="absolute" line="1" />
+      <module_usage name="calendar" finding="absolute" line="2" />
+      <module_usage name="collections" finding="absolute" line="3" />
+      <module_usage name="functools" finding="absolute" line="4" />
+      <module_usage name="re" finding="absolute" line="5" />
+      <module_usage name="weakref" finding="absolute" line="6" />
+      <module_usage name="datetime" finding="absolute" line="7" />
+      <module_usage name="zoneinfo" finding="absolute" line="9" />
+      <module_usage name="zoneinfo._common" finding="relative" line="9" />
+      <module_usage name="zoneinfo._tzpath" finding="relative" line="9" />
+      <module_usage name="pickle" finding="absolute" line="209" />
+    </module_usages>
+  </module>
   <performance>
     <memory_usage name="after_launch" value="volatile" />
     <memory_usage name="before_c_code_generation" value="volatile" />
@@ -5338,6 +5898,7 @@
   <included_extension name="_statistics.so" dest_path="_statistics.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_statistics.cpython-310-darwin.so" package="" ignored="no" reason="used extension module" />
   <included_extension name="_struct.so" dest_path="_struct.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_struct.cpython-310-darwin.so" package="" ignored="no" reason="used extension module" />
   <included_extension name="_uuid.so" dest_path="_uuid.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_uuid.cpython-310-darwin.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_zoneinfo.so" dest_path="_zoneinfo.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_zoneinfo.cpython-310-darwin.so" package="" ignored="no" reason="used extension module" />
   <included_extension name="array.so" dest_path="array.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/array.cpython-310-darwin.so" package="" ignored="no" reason="used extension module" />
   <included_extension name="binascii.so" dest_path="binascii.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/binascii.cpython-310-darwin.so" package="" ignored="no" reason="required extension module for CPython library startup" />
   <included_extension name="fcntl.so" dest_path="fcntl.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/fcntl.cpython-310-darwin.so" package="" ignored="no" reason="used extension module" />
@@ -5357,7 +5918,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=c60f6298232ba9d0e2504e7046af68e6" />
+    <option value="--report-user-provided=pipenv_hash=9274c42364fe10c2a63b7ac90a8536ac" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -5382,8 +5943,8 @@
   </plugins>
   <distributions>
     <distribution name="annotated-types" version="0.7.0" installer="pip" />
-    <distribution name="pydantic" version="2.8.2" installer="pip" />
-    <distribution name="pydantic_core" version="2.20.1" installer="pip" />
+    <distribution name="pydantic" version="2.10.6" installer="pip" />
+    <distribution name="pydantic_core" version="2.27.2" installer="pip" />
     <distribution name="typing_extensions" version="4.12.2" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}/bin/python" python_flavor="CPython Official" python_version="3.10.8" os_name="Darwin" os_release="15.0.1" arch_name="arm64" filesystem_encoding="utf-8">
@@ -5396,7 +5957,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>c60f6298232ba9d0e2504e7046af68e6</pipenv_hash>
+    <pipenv_hash>9274c42364fe10c2a63b7ac90a8536ac</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}/PydanticUsing.dist/PydanticUsing.bin" />
 </nuitka-compilation-report>
