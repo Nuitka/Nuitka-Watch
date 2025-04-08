@@ -5,7 +5,7 @@
 
 """PySide6 port of the opengl/hellogl2 example from Qt v5.x"""
 
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 # nuitka-project: --enable-plugin=pyside6
 
 from argparse import ArgumentParser, RawTextHelpFormatter

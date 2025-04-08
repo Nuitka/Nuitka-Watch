@@ -1,4 +1,4 @@
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 
 from sqlglot import transpile
 

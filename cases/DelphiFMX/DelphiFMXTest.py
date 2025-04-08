@@ -1,4 +1,4 @@
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 # nuitka-project: --include-data-file={MAIN_DIRECTORY}/Unit3.pyfmx=Unit3.pyfmx
 
 from delphifmx import *

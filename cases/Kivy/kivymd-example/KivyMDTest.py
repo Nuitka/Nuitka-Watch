@@ -1,4 +1,4 @@
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 
 from kivy.core.window import Window
 from kivy.lang import Builder

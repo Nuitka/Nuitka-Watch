@@ -1,4 +1,4 @@
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 
 from jsonschema import ValidationError, validate
 

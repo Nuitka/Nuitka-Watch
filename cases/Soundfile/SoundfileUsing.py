@@ -1,4 +1,4 @@
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 # nuitka-project: --include-data-file={MAIN_DIRECTORY}/test-44100Hz-be-1ch-4bytes.wav=test-44100Hz-be-1ch-4bytes.wav
 
 from __future__ import print_function

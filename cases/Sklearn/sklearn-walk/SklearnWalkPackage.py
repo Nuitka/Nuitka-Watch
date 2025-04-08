@@ -1,4 +1,4 @@
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 # nuitka-project: --noinclude-default-mode=error
 # nuitka-project: --include-package=sklearn
 # nuitka-project: --nofollow-import-to=sklearn.*.tests

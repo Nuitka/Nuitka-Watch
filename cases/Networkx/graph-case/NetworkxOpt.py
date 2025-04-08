@@ -1,4 +1,4 @@
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 # maybe it's disabled standalone
 # nuitka-project: --follow-imports
 # nuitka-project: --enable-plugin=no-qt

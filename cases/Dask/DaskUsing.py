@@ -1,4 +1,4 @@
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 # nuitka-project: --noinclude-dask-mode=allow
 # nuitka-project: --noinclude-numba-mode=allow
 

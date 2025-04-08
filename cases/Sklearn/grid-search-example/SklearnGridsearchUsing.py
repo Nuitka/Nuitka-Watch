@@ -1,4 +1,4 @@
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 # nuitka-project: --enable-plugin=no-qt
 
 # Relevant debugging option: --experimental=debug-self-forking

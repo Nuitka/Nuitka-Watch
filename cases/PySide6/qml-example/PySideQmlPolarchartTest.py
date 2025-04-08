@@ -4,7 +4,7 @@
 # nuitka-project: --enable-plugin=pyside6
 
 # For standalone, the Qt plugins must be included, and this uses QML so add that too.
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 # nuitka-project: --include-qt-plugins=sensible,qml
 
 # Commercial file inclusion vs. free file inclusion.

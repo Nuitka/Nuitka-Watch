@@ -1,4 +1,4 @@
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 # nuitka-project: --include-data-file={MAIN_DIRECTORY}/Example-Icon.png=Example-Icon.png
 
 import os

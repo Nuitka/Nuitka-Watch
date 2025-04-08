@@ -1,4 +1,4 @@
-# nuitka-project: --standalone
+# nuitka-project: --mode=standalone
 
 # Requires GTK packages on the system:
 # apt-get install --no-install-recommends libgirepository1.0-dev libcairo
