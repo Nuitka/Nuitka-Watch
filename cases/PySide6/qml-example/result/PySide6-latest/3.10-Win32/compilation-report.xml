@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.6.9" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="2.7rc10" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <module name="PySide6" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\PySide6\__init__.py" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
     <plugin-influence name="options-nanny" influence="condition-used" condition="use_pyside6" tags_used="use_pyside6" result="true" />
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="40" merged_total="1542" />
@@ -18,9 +18,9 @@
       <module_usage name="PySide6.QtNetwork" finding="relative" line="89" />
     </module_usages>
   </module>
-  <module name="PySide6-postLoad" kind="CompiledPythonModule" usage="plugins" reason="According to Yaml 'post-import-code' configuration." source_path="${sys.prefix}\lib\site-packages\PySide6\PySide6-postLoad.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="33" merged_total="309" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="52" />
+  <module name="PySide6-postLoad" kind="CompiledPythonModule" usage="plugins" reason="According to Yaml 'post-import-code' configuration. Loading Qt application icon from Windows resources." source_path="${sys.prefix}\lib\site-packages\PySide6\PySide6-postLoad.py">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="53" merged_total="999" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="44" merged_total="167" />
     <distribution-usages>
       <distribution-usage name="PySide6" />
       <distribution-usage name="PySide6_Addons" />
@@ -29,6 +29,13 @@
     <module_usages>
       <module_usage name="PySide6" finding="absolute" line="26" />
       <module_usage name="PySide6.QtCore" finding="relative" line="26" />
+      <module_usage name="PySide6.QtWidgets" finding="absolute" line="31" />
+      <module_usage name="PySide6.QtGui" finding="absolute" line="34" />
+      <module_usage name="ctypes" finding="absolute" line="41" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="42" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="43" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="48" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="49" />
     </module_usages>
   </module>
   <module name="PySide6-preLoad" kind="CompiledPythonModule" usage="plugins" reason="Adding binary folder to runtime 'PATH' environment variable for proper Qt loading." source_path="${sys.prefix}\lib\site-packages\PySide6\PySide6-preLoad.py">
@@ -435,6 +442,11 @@
       <module_usage name="sys" finding="absolute" line="4" />
     </module_usages>
   </module>
+  <module name="_ctypes" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_ctypes.pyd">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="_decimal" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_decimal.pyd">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -829,6 +841,55 @@
       <module_usage name="_csv" finding="absolute" line="7" />
       <module_usage name="_csv" finding="absolute" line="12" />
       <module_usage name="io" finding="absolute" line="14" />
+    </module_usages>
+  </module>
+  <module name="ctypes" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\ctypes\__init__.py">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="50" merged_total="8753" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="3" />
+      <module_usage name="sys" finding="absolute" line="3" />
+      <module_usage name="types" finding="absolute" line="4" />
+      <module_usage name="_ctypes" finding="absolute" line="8" />
+      <module_usage name="_ctypes" finding="absolute" line="9" />
+      <module_usage name="_ctypes" finding="absolute" line="10" />
+      <module_usage name="_ctypes" finding="absolute" line="11" />
+      <module_usage name="_ctypes" finding="absolute" line="12" />
+      <module_usage name="_ctypes" finding="absolute" line="13" />
+      <module_usage name="struct" finding="absolute" line="15" />
+      <module_usage name="_ctypes" finding="absolute" line="21" />
+      <module_usage name="_ctypes" finding="absolute" line="33" />
+      <module_usage name="_ctypes" finding="absolute" line="110" />
+      <module_usage name="_ctypes" finding="absolute" line="111" />
+      <module_usage name="_ctypes" finding="absolute" line="138" />
+      <module_usage name="_ctypes" finding="absolute" line="139" />
+      <module_usage name="_ctypes" finding="absolute" line="140" />
+      <module_usage name="struct" finding="absolute" line="145" />
+      <module_usage name="_ctypes" finding="absolute" line="252" />
+      <module_usage name="nt" finding="absolute" line="362" />
+      <module_usage name="_ctypes" finding="absolute" line="414" />
+      <module_usage name="_ctypes" finding="absolute" line="472" />
+      <module_usage name="_ctypes" finding="absolute" line="493" />
+      <module_usage name="_ctypes" finding="absolute" line="520" />
+      <module_usage name="comtypes.server.inprocserver" finding="not-found" line="535" />
+      <module_usage name="comtypes.server.inprocserver" finding="not-found" line="543" />
+      <module_usage name="ctypes._endian" finding="absolute" line="548" />
+    </module_usages>
+  </module>
+  <module name="ctypes._endian" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\ctypes\_endian.py">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="528" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="1" />
+      <module_usage name="ctypes" finding="absolute" line="2" />
+    </module_usages>
+  </module>
+  <module name="ctypes.wintypes" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\ctypes\wintypes.py">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="30" merged_total="2074" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="ctypes" finding="absolute" line="2" />
     </module_usages>
   </module>
   <module name="dataclasses" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\dataclasses.py">
@@ -6136,6 +6197,7 @@
   <included_extension name="QtQuick.pyd" dest_path="PySide6\QtQuick.pyd" source_path="${sys.prefix}\lib\site-packages\PySide6\QtQuick.pyd" package="PySide6" ignored="no" reason="used extension module" />
   <included_extension name="QtWidgets.pyd" dest_path="PySide6\QtWidgets.pyd" source_path="${sys.prefix}\lib\site-packages\PySide6\QtWidgets.pyd" package="PySide6" ignored="no" reason="used extension module" />
   <included_extension name="_bz2.pyd" dest_path="_bz2.pyd" source_path="${sys.real_prefix}\DLLs\_bz2.pyd" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_ctypes.pyd" dest_path="_ctypes.pyd" source_path="${sys.real_prefix}\DLLs\_ctypes.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_decimal.pyd" dest_path="_decimal.pyd" source_path="${sys.real_prefix}\DLLs\_decimal.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_hashlib.pyd" dest_path="_hashlib.pyd" source_path="${sys.real_prefix}\DLLs\_hashlib.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_lzma.pyd" dest_path="_lzma.pyd" source_path="${sys.real_prefix}\DLLs\_lzma.pyd" package="" ignored="no" reason="used extension module" />
@@ -6278,6 +6340,7 @@
   <included_dll name="qt6qmlmodels.dll" dest_path="qt6qmlmodels.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6qmlmodels.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtQuick.pyd'" />
   <included_dll name="qt6qmlworkerscript.dll" dest_path="qt6qmlworkerscript.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6qmlworkerscript.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtQuick.pyd'" />
   <included_dll name="qt6widgets.dll" dest_path="qt6widgets.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6widgets.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtWidgets.pyd'" />
+  <included_dll name="libffi-7.dll" dest_path="libffi-7.dll" source_path="${sys.real_prefix}\dlls\libffi-7.dll" package="" ignored="no" reason="Used by '_ctypes.pyd'" />
   <included_dll name="libcrypto-1_1.dll" dest_path="libcrypto-1_1.dll" source_path="${sys.real_prefix}\dlls\libcrypto-1_1.dll" package="" ignored="no" reason="Used by '_hashlib.pyd'" />
   <included_dll name="shiboken6.abi3.dll" dest_path="shiboken6.abi3.dll" source_path="${sys.prefix}\lib\site-packages\shiboken6\shiboken6.abi3.dll" package="shiboken6" ignored="no" reason="Used by 'shiboken6\Shiboken.pyd'" />
   <included_dll name="qt6svg.dll" dest_path="qt6svg.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6svg.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qt-plugins\iconengines\qsvgicon.dll'" />
