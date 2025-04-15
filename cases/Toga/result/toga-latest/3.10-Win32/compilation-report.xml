@@ -6,14 +6,17 @@
     <module_usages />
   </module>
   <module name="__main__" kind="PythonMainModule" usage="root_module" reason="Root module" source_path="~\repos\Nuitka-Watch\cases\Toga\TogaUsing.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="142" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="26" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="130" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="23" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
     </distribution-usages>
     <module_usages>
       <module_usage name="toga" finding="absolute" line="6" />
       <module_usage name="os" finding="absolute" line="7" />
+      <module_usage name="toga.widgets.box" finding="absolute" line="13" />
+      <module_usage name="toga.widgets.button" finding="absolute" line="14" />
+      <module_usage name="toga.app" finding="absolute" line="21" />
       <module_usage name="_collections_abc" finding="absolute" line="1" />
       <module_usage name="abc" finding="absolute" line="1" />
       <module_usage name="ast" finding="absolute" line="1" />
@@ -282,14 +285,17 @@
     </module_usages>
   </module>
   <module name="__parents_main__" kind="CompiledPythonModule" usage="plugins" reason="Auto enable multiprocessing freeze support" source_path="~\repos\Nuitka-Watch\cases\Toga\TogaUsing.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="358" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="67" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="346" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="64" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
     </distribution-usages>
     <module_usages>
       <module_usage name="toga" finding="absolute" line="6" />
       <module_usage name="os" finding="absolute" line="7" />
+      <module_usage name="toga.widgets.box" finding="absolute" line="13" />
+      <module_usage name="toga.widgets.button" finding="absolute" line="14" />
+      <module_usage name="toga.app" finding="absolute" line="21" />
       <module_usage name="sys" finding="absolute" line="30" />
       <module_usage name="multiprocessing.spawn" finding="absolute" line="33" />
     </module_usages>
@@ -3118,6 +3124,20 @@
       <module_usage name="gettext" finding="absolute" line="38" />
     </module_usages>
   </module>
+  <module name="getpass" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\getpass.py">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="1531" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="contextlib" finding="absolute" line="17" />
+      <module_usage name="io" finding="absolute" line="18" />
+      <module_usage name="os" finding="absolute" line="19" />
+      <module_usage name="sys" finding="absolute" line="20" />
+      <module_usage name="warnings" finding="absolute" line="21" />
+      <module_usage name="pwd" finding="not-found" line="168" />
+      <module_usage name="termios" finding="not-found" line="173" />
+      <module_usage name="msvcrt" finding="absolute" line="179" />
+    </module_usages>
+  </module>
   <module name="gettext" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\gettext.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="73" merged_total="9528" />
     <optimization-time pass="2" time="volatile" />
@@ -3285,6 +3305,27 @@
       <module_usage name="urllib.parse" finding="absolute" line="80" />
       <module_usage name="ssl" finding="absolute" line="1395" />
       <module_usage name="warnings" finding="absolute" line="1415" />
+    </module_usages>
+  </module>
+  <module name="http.cookiejar" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\http\cookiejar.py">
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="88" merged_total="26998" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="31" />
+      <module_usage name="copy" finding="absolute" line="32" />
+      <module_usage name="datetime" finding="absolute" line="33" />
+      <module_usage name="re" finding="absolute" line="34" />
+      <module_usage name="time" finding="absolute" line="35" />
+      <module_usage name="urllib.parse" finding="absolute" line="36" />
+      <module_usage name="urllib.request" finding="absolute" line="36" />
+      <module_usage name="threading" finding="absolute" line="37" />
+      <module_usage name="http.client" finding="absolute" line="38" />
+      <module_usage name="calendar" finding="absolute" line="39" />
+      <module_usage name="logging" finding="absolute" line="49" />
+      <module_usage name="io" finding="absolute" line="70" />
+      <module_usage name="warnings" finding="absolute" line="70" />
+      <module_usage name="traceback" finding="absolute" line="70" />
+      <module_usage name="io" finding="absolute" line="71" />
     </module_usages>
   </module>
   <module name="imaplib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\imaplib.py">
@@ -5209,58 +5250,22 @@
   </module>
   <module name="toga" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\__init__.py" distribution="toga-core">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_setuptools" tags_used="use_setuptools" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="520" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="85" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="317" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="57" />
+    <distribution-usages>
+      <distribution-usage name="travertino" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="warnings" finding="absolute" line="3" />
-      <module_usage name="pathlib" finding="absolute" line="4" />
-      <module_usage name="toga.app" finding="relative" line="6" />
-      <module_usage name="toga.colors" finding="relative" line="7" />
-      <module_usage name="toga.command" finding="relative" line="8" />
-      <module_usage name="toga.dialogs" finding="relative" line="9" />
-      <module_usage name="toga.documents" finding="relative" line="19" />
-      <module_usage name="toga.fonts" finding="relative" line="20" />
-      <module_usage name="toga.icons" finding="relative" line="21" />
-      <module_usage name="toga.images" finding="relative" line="22" />
-      <module_usage name="toga.keys" finding="relative" line="23" />
-      <module_usage name="toga.statusicons" finding="relative" line="24" />
-      <module_usage name="toga.types" finding="relative" line="25" />
-      <module_usage name="toga.widgets.activityindicator" finding="relative" line="26" />
-      <module_usage name="toga.widgets.base" finding="relative" line="27" />
-      <module_usage name="toga.widgets.box" finding="relative" line="28" />
-      <module_usage name="toga.widgets.button" finding="relative" line="29" />
-      <module_usage name="toga.widgets.canvas" finding="relative" line="30" />
-      <module_usage name="toga.widgets.dateinput" finding="relative" line="31" />
-      <module_usage name="toga.widgets.detailedlist" finding="relative" line="32" />
-      <module_usage name="toga.widgets.divider" finding="relative" line="33" />
-      <module_usage name="toga.widgets.imageview" finding="relative" line="34" />
-      <module_usage name="toga.widgets.label" finding="relative" line="35" />
-      <module_usage name="toga.widgets.mapview" finding="relative" line="36" />
-      <module_usage name="toga.widgets.multilinetextinput" finding="relative" line="37" />
-      <module_usage name="toga.widgets.numberinput" finding="relative" line="38" />
-      <module_usage name="toga.widgets.optioncontainer" finding="relative" line="39" />
-      <module_usage name="toga.widgets.passwordinput" finding="relative" line="40" />
-      <module_usage name="toga.widgets.progressbar" finding="relative" line="41" />
-      <module_usage name="toga.widgets.scrollcontainer" finding="relative" line="42" />
-      <module_usage name="toga.widgets.selection" finding="relative" line="43" />
-      <module_usage name="toga.widgets.slider" finding="relative" line="44" />
-      <module_usage name="toga.widgets.splitcontainer" finding="relative" line="45" />
-      <module_usage name="toga.widgets.switch" finding="relative" line="46" />
-      <module_usage name="toga.widgets.table" finding="relative" line="47" />
-      <module_usage name="toga.widgets.textinput" finding="relative" line="48" />
-      <module_usage name="toga.widgets.timeinput" finding="relative" line="49" />
-      <module_usage name="toga.widgets.tree" finding="relative" line="50" />
-      <module_usage name="toga.widgets.webview" finding="relative" line="51" />
-      <module_usage name="toga.window" finding="relative" line="52" />
-      <module_usage name="setuptools_scm" finding="not-found" line="144" />
-      <module_usage name="importlib.metadata" finding="absolute" line="157" />
+      <module_usage name="importlib" finding="absolute" line="1" />
+      <module_usage name="warnings" finding="absolute" line="2" />
+      <module_usage name="travertino" finding="absolute" line="4" />
+      <module_usage name="travertino._package_version" finding="not-found" line="4" />
     </module_usages>
   </module>
   <module name="toga.app" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\app.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="148" merged_total="6417" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="99" merged_total="790" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="147" merged_total="7154" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="93" merged_total="871" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="asyncio" finding="absolute" line="3" />
@@ -5270,23 +5275,21 @@
       <module_usage name="warnings" finding="absolute" line="7" />
       <module_usage name="webbrowser" finding="absolute" line="8" />
       <module_usage name="collections.abc" finding="absolute" line="9" />
-      <module_usage name="email.message" finding="absolute" line="10" />
-      <module_usage name="pathlib" finding="absolute" line="11" />
-      <module_usage name="typing" finding="absolute" line="12" />
-      <module_usage name="weakref" finding="absolute" line="13" />
-      <module_usage name="toga.command" finding="absolute" line="15" />
-      <module_usage name="toga.documents" finding="absolute" line="16" />
-      <module_usage name="toga.handlers" finding="absolute" line="17" />
-      <module_usage name="toga.hardware.camera" finding="absolute" line="18" />
-      <module_usage name="toga.hardware.location" finding="absolute" line="19" />
-      <module_usage name="toga.icons" finding="absolute" line="20" />
-      <module_usage name="toga.paths" finding="absolute" line="21" />
-      <module_usage name="toga.platform" finding="absolute" line="22" />
-      <module_usage name="toga.screens" finding="absolute" line="23" />
-      <module_usage name="toga.statusicons" finding="absolute" line="24" />
-      <module_usage name="toga.widgets.base" finding="absolute" line="25" />
-      <module_usage name="toga.window" finding="absolute" line="26" />
-      <module_usage name="importlib.metadata" finding="absolute" line="267" />
+      <module_usage name="pathlib" finding="absolute" line="10" />
+      <module_usage name="typing" finding="absolute" line="11" />
+      <module_usage name="toga.command" finding="absolute" line="13" />
+      <module_usage name="toga.constants" finding="absolute" line="14" />
+      <module_usage name="toga.constants.WindowState" finding="not-found" line="14" />
+      <module_usage name="toga.documents" finding="absolute" line="15" />
+      <module_usage name="toga.handlers" finding="absolute" line="16" />
+      <module_usage name="toga.icons" finding="absolute" line="17" />
+      <module_usage name="toga.paths" finding="absolute" line="18" />
+      <module_usage name="toga.platform" finding="absolute" line="19" />
+      <module_usage name="toga.statusicons" finding="absolute" line="20" />
+      <module_usage name="toga.window" finding="absolute" line="21" />
+      <module_usage name="importlib.metadata" finding="absolute" line="242" />
+      <module_usage name="toga.hardware.camera" finding="relative" line="689" />
+      <module_usage name="toga.hardware.location" finding="relative" line="713" />
     </module_usages>
   </module>
   <module name="toga.colors" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\colors.py" distribution="toga-core">
@@ -5300,8 +5303,8 @@
     </module_usages>
   </module>
   <module name="toga.command" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\command.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="62" merged_total="2534" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="34" merged_total="354" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="62" merged_total="2504" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="34" merged_total="351" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="collections.abc" finding="absolute" line="3" />
@@ -5313,8 +5316,8 @@
     </module_usages>
   </module>
   <module name="toga.constants" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\constants\__init__.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="22" merged_total="662" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="162" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="22" merged_total="807" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="198" />
     <distribution-usages>
       <distribution-usage name="travertino" />
     </distribution-usages>
@@ -5335,8 +5338,8 @@
     </module_usages>
   </module>
   <module name="toga.documents" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\documents.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="58" merged_total="3769" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="53" merged_total="480" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="58" merged_total="3732" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="53" merged_total="473" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="itertools" finding="absolute" line="3" />
@@ -5345,15 +5348,14 @@
       <module_usage name="collections.abc" finding="absolute" line="6" />
       <module_usage name="pathlib" finding="absolute" line="7" />
       <module_usage name="toga" finding="absolute" line="10" />
-      <module_usage name="toga" finding="absolute" line="11" />
-      <module_usage name="toga.dialogs" finding="relative" line="11" />
-      <module_usage name="toga.handlers" finding="absolute" line="12" />
-      <module_usage name="toga.window" finding="absolute" line="13" />
+      <module_usage name="toga.dialogs" finding="absolute" line="11" />
+      <module_usage name="toga.window" finding="absolute" line="12" />
+      <module_usage name="toga.dialogs" finding="absolute" line="433" />
     </module_usages>
   </module>
   <module name="toga.fonts" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\fonts.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="33" merged_total="787" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="154" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="33" merged_total="783" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="153" />
     <distribution-usages>
       <distribution-usage name="travertino" />
     </distribution-usages>
@@ -5366,11 +5368,12 @@
       <module_usage name="travertino.fonts" finding="absolute" line="21" />
       <module_usage name="toga" finding="absolute" line="23" />
       <module_usage name="toga.platform" finding="absolute" line="24" />
+      <module_usage name="toga.app" finding="absolute" line="93" />
     </module_usages>
   </module>
   <module name="toga.handlers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\handlers.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="1867" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="336" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="1873" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="340" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="asyncio" finding="absolute" line="3" />
@@ -5414,21 +5417,23 @@
     </module_usages>
   </module>
   <module name="toga.icons" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\icons.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="46" merged_total="1839" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="46" merged_total="242" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="46" merged_total="1788" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="44" merged_total="237" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="3" />
-      <module_usage name="warnings" finding="absolute" line="4" />
-      <module_usage name="collections.abc" finding="absolute" line="5" />
-      <module_usage name="pathlib" finding="absolute" line="6" />
-      <module_usage name="toga" finding="absolute" line="9" />
-      <module_usage name="toga.platform" finding="absolute" line="10" />
+      <module_usage name="collections.abc" finding="absolute" line="4" />
+      <module_usage name="pathlib" finding="absolute" line="5" />
+      <module_usage name="toga" finding="absolute" line="8" />
+      <module_usage name="toga.platform" finding="absolute" line="9" />
+      <module_usage name="toga.app" finding="absolute" line="91" />
+      <module_usage name="toga.app" finding="absolute" line="99" />
+      <module_usage name="toga.app" finding="absolute" line="127" />
     </module_usages>
   </module>
   <module name="toga.images" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\images.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="89" merged_total="1300" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="72" merged_total="218" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="89" merged_total="1314" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="71" merged_total="222" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="importlib" finding="absolute" line="3" />
@@ -5441,7 +5446,7 @@
       <module_usage name="warnings" finding="absolute" line="10" />
       <module_usage name="toga" finding="absolute" line="12" />
       <module_usage name="toga.platform" finding="absolute" line="13" />
-      <module_usage name="importlib.metadata" finding="absolute" line="16" />
+      <module_usage name="toga.app" finding="absolute" line="130" />
     </module_usages>
   </module>
   <module name="toga.keys" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\keys.py" distribution="toga-core">
@@ -5453,19 +5458,19 @@
     </module_usages>
   </module>
   <module name="toga.paths" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\paths.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="40" merged_total="351" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="41" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="40" merged_total="325" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="37" />
     <module_usages>
-      <module_usage name="importlib.util" finding="absolute" line="1" />
-      <module_usage name="sys" finding="absolute" line="2" />
-      <module_usage name="pathlib" finding="absolute" line="3" />
-      <module_usage name="toga" finding="absolute" line="5" />
-      <module_usage name="toga.platform" finding="absolute" line="6" />
+      <module_usage name="sys" finding="absolute" line="1" />
+      <module_usage name="pathlib" finding="absolute" line="2" />
+      <module_usage name="toga" finding="absolute" line="4" />
+      <module_usage name="toga.platform" finding="absolute" line="5" />
+      <module_usage name="toga.app" finding="absolute" line="29" />
     </module_usages>
   </module>
   <module name="toga.platform" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\platform.py" distribution="toga-core">
     <plugin-influence name="anti-bloat" influence="variable-used" variable="toga_backend_module_name" tags_used="get_variable" value="'toga_winforms.factory'" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="1" merged_total="1" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="19" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <distribution-usages>
       <distribution-usage name="toga-winforms" />
@@ -5476,8 +5481,8 @@
       <module_usage name="os" finding="absolute" line="4" />
       <module_usage name="sys" finding="absolute" line="5" />
       <module_usage name="functools" finding="absolute" line="6" />
-      <module_usage name="types" finding="absolute" line="7" />
-      <module_usage name="importlib.metadata" finding="absolute" line="10" />
+      <module_usage name="importlib.metadata" finding="absolute" line="7" />
+      <module_usage name="types" finding="absolute" line="8" />
       <module_usage name="toga_winforms.factory" finding="absolute" line="1" />
     </module_usages>
   </module>
@@ -5551,8 +5556,8 @@
     </module_usages>
   </module>
   <module name="toga.statusicons" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\statusicons.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="1790" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="287" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="1784" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="286" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="3" />
@@ -5563,6 +5568,9 @@
       <module_usage name="toga.handlers" finding="absolute" line="10" />
       <module_usage name="toga.icons" finding="absolute" line="11" />
       <module_usage name="toga.platform" finding="absolute" line="12" />
+      <module_usage name="toga.app" finding="absolute" line="81" />
+      <module_usage name="toga.app" finding="absolute" line="126" />
+      <module_usage name="toga.app" finding="absolute" line="174" />
     </module_usages>
   </module>
   <module name="toga.style" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\style\__init__.py" distribution="toga-core">
@@ -5575,32 +5583,43 @@
     </module_usages>
   </module>
   <module name="toga.style.applicator" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\style\applicator.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="20" merged_total="353" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="55" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="20" merged_total="386" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="58" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="warnings" finding="absolute" line="3" />
     </module_usages>
   </module>
+  <module name="toga.style.mixin" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\style\mixin.py" distribution="toga-core">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="235" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="32" />
+    <module_usages />
+  </module>
   <module name="toga.style.pack" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\style\pack.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="142" merged_total="6680" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="116" merged_total="1302" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="297" merged_total="9295" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="296" merged_total="1753" />
     <distribution-usages>
       <distribution-usage name="travertino" />
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="travertino.constants" finding="absolute" line="5" />
-      <module_usage name="travertino.declaration" finding="absolute" line="32" />
-      <module_usage name="travertino.layout" finding="absolute" line="33" />
-      <module_usage name="travertino.node" finding="absolute" line="34" />
-      <module_usage name="travertino.size" finding="absolute" line="35" />
-      <module_usage name="toga.fonts" finding="absolute" line="37" />
+      <module_usage name="sys" finding="absolute" line="3" />
+      <module_usage name="warnings" finding="absolute" line="4" />
+      <module_usage name="dataclasses" finding="absolute" line="5" />
+      <module_usage name="typing" finding="absolute" line="6" />
+      <module_usage name="travertino.constants" finding="absolute" line="11" />
+      <module_usage name="travertino.layout" finding="absolute" line="40" />
+      <module_usage name="travertino.properties.aliased" finding="absolute" line="41" />
+      <module_usage name="travertino.properties.shorthand" finding="absolute" line="42" />
+      <module_usage name="travertino.properties.validated" finding="absolute" line="43" />
+      <module_usage name="travertino.size" finding="absolute" line="44" />
+      <module_usage name="travertino.style" finding="absolute" line="45" />
+      <module_usage name="toga.fonts" finding="absolute" line="47" />
     </module_usages>
   </module>
   <module name="toga.types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\types.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="507" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="107" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="547" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="109" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="sys" finding="absolute" line="3" />
@@ -5615,18 +5634,9 @@
       <module_usage name="os" finding="absolute" line="1" />
     </module_usages>
   </module>
-  <module name="toga.widgets.activityindicator" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\activityindicator.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="291" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="57" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="toga.widgets.base" finding="relative" line="5" />
-    </module_usages>
-  </module>
   <module name="toga.widgets.base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\base.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="51" merged_total="1523" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="51" merged_total="252" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="52" merged_total="1667" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="52" merged_total="287" />
     <distribution-usages>
       <distribution-usage name="travertino" />
     </distribution-usages>
@@ -5634,103 +5644,121 @@
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="builtins" finding="absolute" line="3" />
       <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="travertino.declaration" finding="absolute" line="6" />
+      <module_usage name="warnings" finding="absolute" line="5" />
       <module_usage name="travertino.node" finding="absolute" line="7" />
-      <module_usage name="toga.platform" finding="absolute" line="9" />
-      <module_usage name="toga.style" finding="absolute" line="10" />
-      <module_usage name="toga.style.Pack" finding="not-found" line="10" />
-      <module_usage name="toga.style.TogaApplicator" finding="not-found" line="10" />
+      <module_usage name="travertino.style" finding="absolute" line="8" />
+      <module_usage name="toga.platform" finding="absolute" line="10" />
+      <module_usage name="toga.style" finding="absolute" line="11" />
+      <module_usage name="toga.style.Pack" finding="not-found" line="11" />
+      <module_usage name="toga.style.TogaApplicator" finding="not-found" line="11" />
+      <module_usage name="toga.style.mixin" finding="absolute" line="12" />
     </module_usages>
   </module>
   <module name="toga.widgets.box" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\box.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="16" merged_total="219" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="47" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="31" merged_total="283" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="47" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="collections.abc" finding="absolute" line="3" />
-      <module_usage name="toga.widgets.base" finding="relative" line="5" />
+      <module_usage name="toga.widgets.base" finding="absolute" line="5" />
     </module_usages>
   </module>
   <module name="toga.widgets.button" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\button.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="27" merged_total="633" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="139" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="28" merged_total="633" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="28" merged_total="138" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
       <module_usage name="toga" finding="absolute" line="5" />
       <module_usage name="toga.handlers" finding="absolute" line="6" />
-      <module_usage name="toga.widgets.base" finding="relative" line="8" />
+      <module_usage name="toga.widgets.base" finding="absolute" line="8" />
+      <module_usage name="toga.icons" finding="absolute" line="119" />
+      <module_usage name="toga.icons" finding="absolute" line="130" />
     </module_usages>
   </module>
-  <module name="toga.widgets.canvas" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\canvas.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="122" merged_total="12928" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="122" merged_total="1600" />
+  <module name="toga.widgets.canvas" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\canvas\__init__.py" distribution="toga-core">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="78" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="26" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="toga.widgets.canvas.canvas" finding="relative" line="1" />
+      <module_usage name="toga.widgets.canvas.context" finding="relative" line="2" />
+      <module_usage name="toga.widgets.canvas.drawingobject" finding="relative" line="3" />
+      <module_usage name="toga.widgets.canvas.geometry" finding="relative" line="22" />
+    </module_usages>
+  </module>
+  <module name="toga.widgets.canvas.canvas" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\canvas\canvas.py" distribution="toga-core">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="94" merged_total="1181" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="94" merged_total="235" />
     <distribution-usages>
       <distribution-usage name="travertino" />
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="warnings" finding="absolute" line="3" />
-      <module_usage name="abc" finding="absolute" line="4" />
-      <module_usage name="collections.abc" finding="absolute" line="5" />
-      <module_usage name="contextlib" finding="absolute" line="6" />
-      <module_usage name="math" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="8" />
-      <module_usage name="travertino.colors" finding="absolute" line="17" />
-      <module_usage name="toga" finding="absolute" line="19" />
-      <module_usage name="toga.colors" finding="absolute" line="20" />
-      <module_usage name="toga.constants" finding="absolute" line="21" />
-      <module_usage name="toga.constants.Baseline" finding="not-found" line="21" />
-      <module_usage name="toga.constants.FillRule" finding="not-found" line="21" />
-      <module_usage name="toga.fonts" finding="absolute" line="22" />
-      <module_usage name="toga.handlers" finding="absolute" line="27" />
-      <module_usage name="toga.widgets.base" finding="relative" line="29" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.dateinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\dateinput.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="48" merged_total="1621" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="293" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="datetime" finding="absolute" line="3" />
-      <module_usage name="warnings" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="toga" finding="absolute" line="7" />
-      <module_usage name="toga.handlers" finding="absolute" line="8" />
-      <module_usage name="toga.widgets.base" finding="relative" line="10" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.detailedlist" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\detailedlist.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="71" merged_total="1441" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="71" merged_total="295" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="warnings" finding="absolute" line="3" />
-      <module_usage name="collections.abc" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="toga" finding="absolute" line="7" />
-      <module_usage name="toga.handlers" finding="absolute" line="8" />
-      <module_usage name="toga.sources" finding="absolute" line="9" />
-      <module_usage name="toga.sources.ListSource" finding="not-found" line="9" />
-      <module_usage name="toga.sources.Row" finding="not-found" line="9" />
-      <module_usage name="toga.sources.Source" finding="not-found" line="9" />
-      <module_usage name="toga.widgets.base" finding="relative" line="11" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.divider" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\divider.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="29" merged_total="305" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="64" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="toga.constants" finding="absolute" line="5" />
-      <module_usage name="toga.constants.Direction" finding="not-found" line="5" />
-      <module_usage name="toga.widgets.base" finding="relative" line="7" />
+      <module_usage name="travertino.colors" finding="absolute" line="11" />
+      <module_usage name="toga" finding="absolute" line="13" />
+      <module_usage name="toga.colors" finding="absolute" line="14" />
+      <module_usage name="toga.constants" finding="absolute" line="15" />
+      <module_usage name="toga.constants.FillRule" finding="not-found" line="15" />
+      <module_usage name="toga.fonts" finding="absolute" line="16" />
+      <module_usage name="toga.handlers" finding="absolute" line="21" />
+      <module_usage name="toga.widgets.base" finding="absolute" line="23" />
+      <module_usage name="toga.widgets.canvas.context" finding="relative" line="24" />
+      <module_usage name="toga.images" finding="absolute" line="326" />
+    </module_usages>
+  </module>
+  <module name="toga.widgets.canvas.context" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\canvas\context.py" distribution="toga-core">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="74" merged_total="3069" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="74" merged_total="550" />
+    <distribution-usages>
+      <distribution-usage name="travertino" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="collections.abc" finding="absolute" line="3" />
+      <module_usage name="contextlib" finding="absolute" line="4" />
+      <module_usage name="math" finding="absolute" line="5" />
+      <module_usage name="typing" finding="absolute" line="6" />
+      <module_usage name="travertino.colors" finding="absolute" line="8" />
+      <module_usage name="toga" finding="absolute" line="10" />
+      <module_usage name="toga.colors" finding="absolute" line="11" />
+      <module_usage name="toga.constants" finding="absolute" line="12" />
+      <module_usage name="toga.constants.Baseline" finding="not-found" line="12" />
+      <module_usage name="toga.constants.FillRule" finding="not-found" line="12" />
+      <module_usage name="toga.fonts" finding="absolute" line="13" />
+      <module_usage name="toga.widgets.canvas.drawingobject" finding="relative" line="15" />
+    </module_usages>
+  </module>
+  <module name="toga.widgets.canvas.drawingobject" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\canvas\drawingobject.py" distribution="toga-core">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="31" merged_total="3423" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="657" />
+    <distribution-usages>
+      <distribution-usage name="travertino" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="abc" finding="absolute" line="3" />
+      <module_usage name="math" finding="absolute" line="4" />
+      <module_usage name="typing" finding="absolute" line="5" />
+      <module_usage name="travertino.colors" finding="absolute" line="7" />
+      <module_usage name="toga.colors" finding="absolute" line="9" />
+      <module_usage name="toga.constants" finding="absolute" line="10" />
+      <module_usage name="toga.constants.Baseline" finding="not-found" line="10" />
+      <module_usage name="toga.constants.FillRule" finding="not-found" line="10" />
+      <module_usage name="toga.fonts" finding="absolute" line="11" />
+    </module_usages>
+  </module>
+  <module name="toga.widgets.canvas.geometry" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\canvas\geometry.py" distribution="toga-core">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="35" merged_total="917" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="33" merged_total="127" />
+    <module_usages>
+      <module_usage name="math" finding="absolute" line="1" />
     </module_usages>
   </module>
   <module name="toga.widgets.imageview" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\imageview.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="71" merged_total="664" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="61" merged_total="141" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="71" merged_total="667" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="61" merged_total="142" />
     <distribution-usages>
       <distribution-usage name="travertino" />
     </distribution-usages>
@@ -5741,228 +5769,51 @@
       <module_usage name="toga" finding="absolute" line="7" />
       <module_usage name="toga.style.pack" finding="absolute" line="8" />
       <module_usage name="toga.widgets.base" finding="absolute" line="9" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.label" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\label.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="255" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="55" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="toga.widgets.base" finding="relative" line="3" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.mapview" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\mapview.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="1305" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="197" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="collections.abc" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="toga" finding="absolute" line="6" />
-      <module_usage name="toga.handlers" finding="absolute" line="7" />
-      <module_usage name="toga.widgets.base" finding="relative" line="9" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.multilinetextinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\multilinetextinput.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="36" merged_total="568" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="108" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="toga" finding="absolute" line="5" />
-      <module_usage name="toga.handlers" finding="absolute" line="6" />
-      <module_usage name="toga.widgets.base" finding="relative" line="8" />
+      <module_usage name="toga.images" finding="absolute" line="125" />
+      <module_usage name="toga.images" finding="absolute" line="130" />
     </module_usages>
   </module>
   <module name="toga.widgets.numberinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\numberinput.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="62" merged_total="1758" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="62" merged_total="397" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="49" merged_total="1532" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="49" merged_total="346" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="re" finding="absolute" line="3" />
       <module_usage name="sys" finding="absolute" line="4" />
-      <module_usage name="warnings" finding="absolute" line="5" />
-      <module_usage name="decimal" finding="absolute" line="6" />
-      <module_usage name="typing" finding="absolute" line="7" />
-      <module_usage name="toga" finding="absolute" line="9" />
-      <module_usage name="toga.handlers" finding="absolute" line="10" />
-      <module_usage name="toga.widgets.base" finding="relative" line="12" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.optioncontainer" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\optioncontainer.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="44" merged_total="2688" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="44" merged_total="461" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="sys" finding="absolute" line="3" />
-      <module_usage name="collections.abc" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="toga" finding="absolute" line="7" />
-      <module_usage name="toga.handlers" finding="absolute" line="8" />
-      <module_usage name="toga.platform" finding="absolute" line="9" />
-      <module_usage name="toga.widgets.base" finding="relative" line="11" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.passwordinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\passwordinput.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="135" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="31" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="toga.widgets.textinput" finding="relative" line="3" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.progressbar" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\progressbar.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="38" merged_total="514" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="38" merged_total="97" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="toga.widgets.base" finding="relative" line="5" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.scrollcontainer" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\scrollcontainer.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="83" merged_total="1168" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="83" merged_total="216" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="toga.handlers" finding="absolute" line="5" />
-      <module_usage name="toga.types" finding="absolute" line="6" />
-      <module_usage name="toga.widgets.base" finding="relative" line="8" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.selection" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\selection.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="38" merged_total="1243" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="234" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="warnings" finding="absolute" line="3" />
-      <module_usage name="collections.abc" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="toga" finding="absolute" line="7" />
-      <module_usage name="toga.handlers" finding="absolute" line="8" />
-      <module_usage name="toga.sources" finding="absolute" line="9" />
-      <module_usage name="toga.sources.ListSource" finding="not-found" line="9" />
-      <module_usage name="toga.sources.Source" finding="not-found" line="9" />
-      <module_usage name="toga.widgets.base" finding="relative" line="11" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.slider" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\slider.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="80" merged_total="3574" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="80" merged_total="645" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="warnings" finding="absolute" line="3" />
-      <module_usage name="abc" finding="absolute" line="4" />
-      <module_usage name="contextlib" finding="absolute" line="5" />
+      <module_usage name="decimal" finding="absolute" line="5" />
       <module_usage name="typing" finding="absolute" line="6" />
       <module_usage name="toga" finding="absolute" line="8" />
       <module_usage name="toga.handlers" finding="absolute" line="9" />
-      <module_usage name="toga.widgets.base" finding="relative" line="11" />
+      <module_usage name="toga.widgets.base" finding="absolute" line="11" />
     </module_usages>
   </module>
-  <module name="toga.widgets.splitcontainer" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\splitcontainer.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="51" merged_total="1065" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="51" merged_total="193" />
+  <module name="toga.widgets.slider" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\slider.py" distribution="toga-core">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="74" merged_total="3336" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="74" merged_total="600" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="sys" finding="absolute" line="3" />
-      <module_usage name="collections.abc" finding="absolute" line="4" />
-      <module_usage name="toga.app" finding="absolute" line="7" />
-      <module_usage name="toga.constants" finding="absolute" line="8" />
-      <module_usage name="toga.constants.Direction" finding="not-found" line="8" />
-      <module_usage name="toga.window" finding="absolute" line="9" />
-      <module_usage name="toga.widgets.base" finding="relative" line="11" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.switch" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\switch.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="28" merged_total="524" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="28" merged_total="109" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="toga" finding="absolute" line="5" />
-      <module_usage name="toga.handlers" finding="absolute" line="6" />
-      <module_usage name="toga.widgets.base" finding="relative" line="8" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.table" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\table.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="69" merged_total="2010" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="69" merged_total="352" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="warnings" finding="absolute" line="3" />
-      <module_usage name="collections.abc" finding="absolute" line="4" />
+      <module_usage name="abc" finding="absolute" line="3" />
+      <module_usage name="contextlib" finding="absolute" line="4" />
       <module_usage name="typing" finding="absolute" line="5" />
       <module_usage name="toga" finding="absolute" line="7" />
       <module_usage name="toga.handlers" finding="absolute" line="8" />
-      <module_usage name="toga.sources" finding="absolute" line="9" />
-      <module_usage name="toga.sources.ListSource" finding="not-found" line="9" />
-      <module_usage name="toga.sources.Row" finding="not-found" line="9" />
-      <module_usage name="toga.sources.Source" finding="not-found" line="9" />
-      <module_usage name="toga.sources.accessors" finding="absolute" line="10" />
-      <module_usage name="toga.widgets.base" finding="relative" line="12" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.textinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\textinput.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="70" merged_total="1655" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="70" merged_total="290" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="collections.abc" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="toga" finding="absolute" line="6" />
-      <module_usage name="toga.handlers" finding="absolute" line="7" />
-      <module_usage name="toga.widgets.base" finding="relative" line="9" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.timeinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\timeinput.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="1577" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="284" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="datetime" finding="absolute" line="3" />
-      <module_usage name="warnings" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="toga" finding="absolute" line="7" />
-      <module_usage name="toga.handlers" finding="absolute" line="8" />
-      <module_usage name="toga.widgets.base" finding="relative" line="10" />
-    </module_usages>
-  </module>
-  <module name="toga.widgets.tree" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\tree.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="67" merged_total="1834" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="67" merged_total="324" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="warnings" finding="absolute" line="3" />
-      <module_usage name="collections.abc" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="toga" finding="absolute" line="7" />
-      <module_usage name="toga.handlers" finding="absolute" line="8" />
-      <module_usage name="toga.sources" finding="absolute" line="9" />
-      <module_usage name="toga.sources.Node" finding="not-found" line="9" />
-      <module_usage name="toga.sources.Source" finding="not-found" line="9" />
-      <module_usage name="toga.sources.TreeSource" finding="not-found" line="9" />
-      <module_usage name="toga.sources.accessors" finding="absolute" line="10" />
-      <module_usage name="toga.style" finding="absolute" line="11" />
-      <module_usage name="toga.style.Pack" finding="not-found" line="11" />
-      <module_usage name="toga.widgets.base" finding="relative" line="13" />
+      <module_usage name="toga.widgets.base" finding="absolute" line="10" />
     </module_usages>
   </module>
   <module name="toga.widgets.webview" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\widgets\webview.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="883" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="150" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="36" merged_total="1086" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="188" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="asyncio" finding="absolute" line="3" />
       <module_usage name="typing" finding="absolute" line="4" />
       <module_usage name="toga.handlers" finding="absolute" line="6" />
-      <module_usage name="toga.widgets.base" finding="relative" line="8" />
+      <module_usage name="toga.widgets.base" finding="absolute" line="8" />
     </module_usages>
   </module>
   <module name="toga.window" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga\window.py" distribution="toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="131" merged_total="4327" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="46" merged_total="689" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="158" merged_total="5255" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="56" merged_total="857" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="warnings" finding="absolute" line="3" />
@@ -5971,15 +5822,16 @@
       <module_usage name="pathlib" finding="absolute" line="6" />
       <module_usage name="typing" finding="absolute" line="7" />
       <module_usage name="toga" finding="absolute" line="9" />
-      <module_usage name="toga" finding="absolute" line="10" />
-      <module_usage name="toga.dialogs" finding="relative" line="10" />
+      <module_usage name="toga.dialogs" finding="absolute" line="10" />
       <module_usage name="toga.command" finding="absolute" line="11" />
-      <module_usage name="toga.handlers" finding="absolute" line="12" />
-      <module_usage name="toga.images" finding="absolute" line="13" />
-      <module_usage name="toga.platform" finding="absolute" line="14" />
-      <module_usage name="toga.types" finding="absolute" line="15" />
-      <module_usage name="toga" finding="absolute" line="186" />
-      <module_usage name="toga.App" finding="not-found" line="186" />
+      <module_usage name="toga.constants" finding="absolute" line="12" />
+      <module_usage name="toga.constants.WindowState" finding="not-found" line="12" />
+      <module_usage name="toga.handlers" finding="absolute" line="13" />
+      <module_usage name="toga.images" finding="absolute" line="14" />
+      <module_usage name="toga.platform" finding="absolute" line="15" />
+      <module_usage name="toga.types" finding="absolute" line="16" />
+      <module_usage name="toga.app" finding="absolute" line="218" />
+      <module_usage name="toga.app" finding="absolute" line="301" />
     </module_usages>
   </module>
   <module name="toga_winforms" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\__init__.py" distribution="toga-winforms">
@@ -5987,28 +5839,30 @@
     <plugin-influence name="dll-files" influence="condition-used" condition="win32 and arch_x86" tags_used="win32,arch_x86" result="false" />
     <plugin-influence name="dll-files" influence="condition-used" condition="win32 and arch_amd64" tags_used="win32,arch_amd64" result="true" />
     <plugin-influence name="dll-files" influence="condition-used" condition="win32" tags_used="win32" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="2" merged_total="30" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="6" />
     <distribution-usages>
       <distribution-usage name="pythonnet" />
-      <distribution-usage name="toga-core" />
+      <distribution-usage name="travertino" />
     </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="clr" finding="absolute" line="1" />
-      <module_usage name="toga" finding="absolute" line="3" />
+      <module_usage name="travertino" finding="absolute" line="2" />
+      <module_usage name="toga_winforms.libs.user32" finding="relative" line="4" />
+      <module_usage name="System.Windows.Forms" finding="not-found" line="26" />
     </module_usages>
   </module>
   <module name="toga_winforms.app" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\app.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="54" merged_total="2569" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="53" merged_total="343" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="32" merged_total="2122" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="268" />
     <module_usages>
       <module_usage name="asyncio" finding="absolute" line="1" />
       <module_usage name="re" finding="absolute" line="2" />
       <module_usage name="sys" finding="absolute" line="3" />
       <module_usage name="threading" finding="absolute" line="4" />
-      <module_usage name="ctypes" finding="absolute" line="5" />
-      <module_usage name="System.Windows.Forms" finding="not-found" line="7" />
+      <module_usage name="System.Windows.Forms" finding="not-found" line="6" />
+      <module_usage name="Microsoft.Win32" finding="not-found" line="7" />
       <module_usage name="System" finding="not-found" line="8" />
       <module_usage name="System.Media" finding="not-found" line="9" />
       <module_usage name="System.Net" finding="not-found" line="10" />
@@ -6019,8 +5873,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.colors" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\colors.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="25" merged_total="123" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="28" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="25" merged_total="149" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="30" />
     <distribution-usages>
       <distribution-usage name="travertino" />
     </distribution-usages>
@@ -6030,7 +5884,7 @@
     </module_usages>
   </module>
   <module name="toga_winforms.command" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\command.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="87" merged_total="622" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="87" merged_total="598" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="79" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
@@ -6039,16 +5893,15 @@
       <module_usage name="sys" finding="absolute" line="1" />
       <module_usage name="System.ComponentModel" finding="not-found" line="3" />
       <module_usage name="toga" finding="absolute" line="5" />
-      <module_usage name="toga.Command" finding="not-found" line="5" />
-      <module_usage name="toga.Group" finding="not-found" line="5" />
-      <module_usage name="toga.Key" finding="not-found" line="5" />
+      <module_usage name="toga.command" finding="absolute" line="5" />
+      <module_usage name="toga.keys" finding="absolute" line="5" />
       <module_usage name="toga_winforms.keys" finding="absolute" line="6" />
       <module_usage name="toga_winforms.libs.wrapper" finding="absolute" line="7" />
     </module_usages>
   </module>
   <module name="toga_winforms.container" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\container.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="21" merged_total="562" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="85" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="658" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="103" />
     <module_usages>
       <module_usage name="System.Windows.Forms" finding="not-found" line="1" />
       <module_usage name="System.Drawing" finding="not-found" line="2" />
@@ -6056,15 +5909,16 @@
     </module_usages>
   </module>
   <module name="toga_winforms.dialogs" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\dialogs.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="106" merged_total="3241" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="105" merged_total="581" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="118" merged_total="3344" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="117" merged_total="600" />
     <module_usages>
       <module_usage name="asyncio" finding="absolute" line="1" />
       <module_usage name="pathlib" finding="absolute" line="2" />
       <module_usage name="System.Windows.Forms" finding="not-found" line="4" />
       <module_usage name="System.Drawing" finding="not-found" line="5" />
-      <module_usage name="System.Windows.Forms" finding="not-found" line="12" />
-      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="14" />
+      <module_usage name="System.Windows.Forms" finding="not-found" line="10" />
+      <module_usage name="toga_winforms.libs.user32" finding="relative" line="12" />
+      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="13" />
     </module_usages>
   </module>
   <module name="toga_winforms.factory" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\factory.py" distribution="toga-winforms">
@@ -6075,7 +5929,6 @@
     </distribution-usages>
     <module_usages>
       <module_usage name="toga" finding="absolute" line="1" />
-      <module_usage name="toga.NotImplementedWarning" finding="not-found" line="1" />
       <module_usage name="toga_winforms" finding="absolute" line="3" />
       <module_usage name="toga_winforms.dialogs" finding="relative" line="3" />
       <module_usage name="toga_winforms.app" finding="relative" line="4" />
@@ -6169,8 +6022,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.libs.extensions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\libs\extensions.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="2" merged_total="8" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="2" merged_total="16" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="4" />
     <distribution-usages>
       <distribution-usage name="pythonnet" />
     </distribution-usages>
@@ -6180,7 +6033,7 @@
       <module_usage name="pathlib" finding="absolute" line="3" />
       <module_usage name="clr" finding="absolute" line="5" />
       <module_usage name="Microsoft.Web.WebView2.Core" finding="not-found" line="30" />
-      <module_usage name="Microsoft.Web.WebView2.WinForms" finding="not-found" line="33" />
+      <module_usage name="Microsoft.Web.WebView2.WinForms" finding="not-found" line="34" />
     </module_usages>
   </module>
   <module name="toga_winforms.libs.fonts" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\libs\fonts.py" distribution="toga-winforms">
@@ -6214,6 +6067,23 @@
       <module_usage name="System.Threading.Tasks" finding="not-found" line="9" />
     </module_usages>
   </module>
+  <module name="toga_winforms.libs.shcore" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\libs\shcore.py" distribution="toga-winforms">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="4" merged_total="10" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="3" />
+    <module_usages>
+      <module_usage name="ctypes" finding="absolute" line="1" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="toga_winforms.libs.user32" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\libs\user32.py" distribution="toga-winforms">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="3" merged_total="21" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="4" />
+    <module_usages>
+      <module_usage name="ctypes" finding="absolute" line="1" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="1" />
+      <module_usage name="System" finding="not-found" line="3" />
+    </module_usages>
+  </module>
   <module name="toga_winforms.libs.wrapper" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\libs\wrapper.py" distribution="toga-winforms">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="8" merged_total="146" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="5" merged_total="25" />
@@ -6222,32 +6092,37 @@
     </module_usages>
   </module>
   <module name="toga_winforms.paths" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\paths.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="191" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="185" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="7" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
     </distribution-usages>
     <module_usages>
       <module_usage name="pathlib" finding="absolute" line="1" />
-      <module_usage name="toga" finding="absolute" line="3" />
-      <module_usage name="toga.App" finding="not-found" line="3" />
+      <module_usage name="toga.app" finding="absolute" line="3" />
     </module_usages>
   </module>
   <module name="toga_winforms.screens" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\screens.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="415" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="70" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="31" merged_total="684" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="170" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
     </distribution-usages>
     <module_usages>
-      <module_usage name="System.Drawing" finding="not-found" line="1" />
-      <module_usage name="System.IO" finding="not-found" line="8" />
-      <module_usage name="toga.screens" finding="absolute" line="10" />
-      <module_usage name="toga.types" finding="absolute" line="11" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="1" />
+      <module_usage name="System.Drawing" finding="not-found" line="3" />
+      <module_usage name="System.IO" finding="not-found" line="10" />
+      <module_usage name="toga.app" finding="absolute" line="12" />
+      <module_usage name="toga.screens" finding="absolute" line="13" />
+      <module_usage name="toga.types" finding="absolute" line="14" />
+      <module_usage name="toga_winforms.libs" finding="relative" line="16" />
+      <module_usage name="toga_winforms.libs.shcore" finding="relative" line="16" />
+      <module_usage name="toga_winforms.libs.user32" finding="relative" line="16" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="17" />
     </module_usages>
   </module>
   <module name="toga_winforms.statusicons" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\statusicons.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="1038" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="1037" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="177" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
@@ -6257,6 +6132,7 @@
       <module_usage name="toga" finding="absolute" line="3" />
       <module_usage name="toga.command" finding="absolute" line="4" />
       <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="6" />
+      <module_usage name="toga.app" finding="absolute" line="17" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\__init__.py" distribution="toga-winforms">
@@ -6267,8 +6143,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\base.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="36" merged_total="1012" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="143" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="40" merged_total="1503" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="40" merged_total="246" />
     <distribution-usages>
       <distribution-usage name="travertino" />
       <distribution-usage name="toga-core" />
@@ -6277,36 +6153,42 @@
       <module_usage name="abc" finding="absolute" line="1" />
       <module_usage name="decimal" finding="absolute" line="2" />
       <module_usage name="System.Drawing" finding="not-found" line="4" />
-      <module_usage name="travertino.size" finding="absolute" line="10" />
-      <module_usage name="toga.colors" finding="absolute" line="12" />
-      <module_usage name="toga_winforms.colors" finding="absolute" line="13" />
+      <module_usage name="travertino.size" finding="absolute" line="9" />
+      <module_usage name="toga.colors" finding="absolute" line="11" />
+      <module_usage name="toga_winforms.colors" finding="absolute" line="12" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.box" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\box.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="131" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="135" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="30" />
+    <distribution-usages>
+      <distribution-usage name="toga-core" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="System.Windows.Forms" finding="not-found" line="1" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="3" />
+      <module_usage name="toga.colors" finding="absolute" line="3" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="5" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.button" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\button.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="332" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="56" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="358" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="58" />
     <distribution-usages>
       <distribution-usage name="travertino" />
+      <distribution-usage name="toga-core" />
     </distribution-usages>
     <module_usages>
       <module_usage name="decimal" finding="absolute" line="1" />
       <module_usage name="System.Windows.Forms" finding="not-found" line="3" />
       <module_usage name="travertino.size" finding="absolute" line="4" />
-      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="6" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="7" />
+      <module_usage name="toga.colors" finding="absolute" line="6" />
+      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="8" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="9" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.canvas" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\canvas.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="33" merged_total="3511" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="33" merged_total="632" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="44" merged_total="3627" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="43" merged_total="650" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
     </distribution-usages>
@@ -6318,15 +6200,19 @@
       <module_usage name="System.Drawing.Drawing2D" finding="not-found" line="15" />
       <module_usage name="System.Drawing.Imaging" finding="not-found" line="22" />
       <module_usage name="System.IO" finding="not-found" line="23" />
-      <module_usage name="toga.widgets.canvas" finding="absolute" line="25" />
-      <module_usage name="toga_winforms.colors" finding="absolute" line="26" />
-      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="28" />
-      <module_usage name="toga_winforms.widgets.box" finding="relative" line="29" />
+      <module_usage name="toga.colors" finding="absolute" line="25" />
+      <module_usage name="toga.constants" finding="absolute" line="26" />
+      <module_usage name="toga.constants.Baseline" finding="not-found" line="26" />
+      <module_usage name="toga.constants.FillRule" finding="not-found" line="26" />
+      <module_usage name="toga.widgets.canvas" finding="absolute" line="27" />
+      <module_usage name="toga_winforms.colors" finding="absolute" line="28" />
+      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="30" />
+      <module_usage name="toga_winforms.widgets.box" finding="relative" line="31" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.dateinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\dateinput.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="321" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="45" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="317" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="44" />
     <module_usages>
       <module_usage name="datetime" finding="absolute" line="1" />
       <module_usage name="decimal" finding="absolute" line="2" />
@@ -6349,8 +6235,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.divider" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\divider.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="41" merged_total="295" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="37" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="41" merged_total="301" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="38" />
     <distribution-usages>
       <distribution-usage name="travertino" />
     </distribution-usages>
@@ -6362,7 +6248,7 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.imageview" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\imageview.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="23" merged_total="365" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="23" merged_total="369" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="74" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
@@ -6371,27 +6257,30 @@
       <module_usage name="decimal" finding="absolute" line="1" />
       <module_usage name="System.Windows.Forms" finding="not-found" line="3" />
       <module_usage name="System.Drawing" finding="not-found" line="4" />
-      <module_usage name="toga.widgets.imageview" finding="absolute" line="6" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="8" />
+      <module_usage name="toga.colors" finding="absolute" line="6" />
+      <module_usage name="toga.widgets.imageview" finding="absolute" line="7" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="9" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.label" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\label.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="223" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="227" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="34" />
     <distribution-usages>
       <distribution-usage name="travertino" />
+      <distribution-usage name="toga-core" />
     </distribution-usages>
     <module_usages>
       <module_usage name="decimal" finding="absolute" line="1" />
       <module_usage name="System.Windows.Forms" finding="not-found" line="3" />
       <module_usage name="travertino.size" finding="absolute" line="4" />
-      <module_usage name="toga_winforms.libs.fonts" finding="absolute" line="6" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="8" />
+      <module_usage name="toga.colors" finding="absolute" line="6" />
+      <module_usage name="toga_winforms.libs.fonts" finding="absolute" line="7" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="9" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.mapview" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\mapview.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="47" merged_total="1238" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="217" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="47" merged_total="1234" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="216" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
     </distribution-usages>
@@ -6409,6 +6298,7 @@
       <module_usage name="toga_winforms.libs.extensions" finding="absolute" line="12" />
       <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="18" />
       <module_usage name="toga_winforms.widgets.base" finding="relative" line="19" />
+      <module_usage name="toga.app" finding="absolute" line="95" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.multilinetextinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\multilinetextinput.py" distribution="toga-winforms">
@@ -6428,8 +6318,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.numberinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\numberinput.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="21" merged_total="461" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="69" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="21" merged_total="457" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="68" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
     </distribution-usages>
@@ -6471,8 +6361,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.scrollcontainer" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\scrollcontainer.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="943" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="139" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="38" merged_total="965" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="143" />
     <distribution-usages>
       <distribution-usage name="travertino" />
     </distribution-usages>
@@ -6487,8 +6377,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.selection" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\selection.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="885" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="152" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="880" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="151" />
     <module_usages>
       <module_usage name="contextlib" finding="absolute" line="1" />
       <module_usage name="decimal" finding="absolute" line="2" />
@@ -6498,7 +6388,7 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.slider" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\slider.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="365" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="369" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="61" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
@@ -6506,9 +6396,10 @@
     <module_usages>
       <module_usage name="decimal" finding="absolute" line="1" />
       <module_usage name="System.Windows.Forms" finding="not-found" line="3" />
-      <module_usage name="toga.widgets.slider" finding="absolute" line="5" />
-      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="7" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="8" />
+      <module_usage name="toga.colors" finding="absolute" line="5" />
+      <module_usage name="toga.widgets.slider" finding="absolute" line="6" />
+      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="8" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="9" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.splitcontainer" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\splitcontainer.py" distribution="toga-winforms">
@@ -6527,22 +6418,24 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.switch" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\switch.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="294" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="298" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="53" />
     <distribution-usages>
       <distribution-usage name="travertino" />
+      <distribution-usage name="toga-core" />
     </distribution-usages>
     <module_usages>
       <module_usage name="decimal" finding="absolute" line="1" />
       <module_usage name="System.Windows.Forms" finding="not-found" line="3" />
       <module_usage name="travertino.size" finding="absolute" line="4" />
-      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="6" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="7" />
+      <module_usage name="toga.colors" finding="absolute" line="6" />
+      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="8" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="9" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.table" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\table.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="72" merged_total="2190" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="70" merged_total="386" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="76" merged_total="2617" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="74" merged_total="469" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
     </distribution-usages>
@@ -6552,11 +6445,12 @@
       <module_usage name="toga" finding="absolute" line="5" />
       <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="7" />
       <module_usage name="toga_winforms.widgets.base" finding="relative" line="8" />
+      <module_usage name="toga.widgets.base" finding="absolute" line="221" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.textinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\textinput.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="39" merged_total="635" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="96" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="39" merged_total="631" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="95" />
     <module_usages>
       <module_usage name="ctypes" finding="absolute" line="1" />
       <module_usage name="ctypes.wintypes" finding="absolute" line="2" />
@@ -6569,8 +6463,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.timeinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\timeinput.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="335" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="45" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="331" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="44" />
     <module_usages>
       <module_usage name="datetime" finding="absolute" line="1" />
       <module_usage name="decimal" finding="absolute" line="2" />
@@ -6581,28 +6475,31 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.webview" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\widgets\webview.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="54" merged_total="1230" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="52" merged_total="207" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="58" merged_total="1531" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="56" merged_total="267" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
     </distribution-usages>
     <module_usages>
       <module_usage name="json" finding="absolute" line="1" />
       <module_usage name="webbrowser" finding="absolute" line="2" />
-      <module_usage name="System.Windows.Forms" finding="not-found" line="4" />
-      <module_usage name="System" finding="not-found" line="5" />
-      <module_usage name="System.Drawing" finding="not-found" line="10" />
-      <module_usage name="System.Threading.Tasks" finding="not-found" line="11" />
-      <module_usage name="toga" finding="absolute" line="13" />
-      <module_usage name="toga.widgets.webview" finding="absolute" line="14" />
-      <module_usage name="toga_winforms.libs.extensions" finding="absolute" line="15" />
-      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="21" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="22" />
+      <module_usage name="http.cookiejar" finding="absolute" line="3" />
+      <module_usage name="System.Windows.Forms" finding="not-found" line="5" />
+      <module_usage name="System" finding="not-found" line="6" />
+      <module_usage name="System.Collections.Generic" finding="not-found" line="11" />
+      <module_usage name="System.Drawing" finding="not-found" line="12" />
+      <module_usage name="System.Threading.Tasks" finding="not-found" line="13" />
+      <module_usage name="toga" finding="absolute" line="15" />
+      <module_usage name="toga.widgets.webview" finding="absolute" line="16" />
+      <module_usage name="toga_winforms.libs.extensions" finding="absolute" line="17" />
+      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="24" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="25" />
+      <module_usage name="toga.app" finding="absolute" line="93" />
     </module_usages>
   </module>
   <module name="toga_winforms.window" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\toga_winforms\window.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="49" merged_total="2559" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="48" merged_total="435" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="129" merged_total="4328" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="96" merged_total="757" />
     <distribution-usages>
       <distribution-usage name="toga-core" />
     </distribution-usages>
@@ -6612,12 +6509,16 @@
       <module_usage name="System.Drawing" finding="not-found" line="6" />
       <module_usage name="System.Drawing.Imaging" finding="not-found" line="7" />
       <module_usage name="System.IO" finding="not-found" line="8" />
-      <module_usage name="toga.command" finding="absolute" line="10" />
-      <module_usage name="toga.types" finding="absolute" line="11" />
-      <module_usage name="toga_winforms.container" finding="relative" line="13" />
-      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="14" />
-      <module_usage name="toga_winforms.screens" finding="relative" line="15" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="16" />
+      <module_usage name="toga.app" finding="absolute" line="10" />
+      <module_usage name="toga.command" finding="absolute" line="11" />
+      <module_usage name="toga.constants" finding="absolute" line="12" />
+      <module_usage name="toga.constants.WindowState" finding="not-found" line="12" />
+      <module_usage name="toga.types" finding="absolute" line="13" />
+      <module_usage name="toga_winforms.container" finding="relative" line="15" />
+      <module_usage name="toga_winforms.fonts" finding="relative" line="16" />
+      <module_usage name="toga_winforms.libs.wrapper" finding="relative" line="17" />
+      <module_usage name="toga_winforms.screens" finding="relative" line="18" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="19" />
     </module_usages>
   </module>
   <module name="token" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\token.py">
@@ -6692,19 +6593,20 @@
   </module>
   <module name="travertino" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\__init__.py" distribution="travertino">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_setuptools" tags_used="use_setuptools" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="5" merged_total="41" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="4" merged_total="9" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="77" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="6" merged_total="14" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="setuptools_scm" finding="not-found" line="4" />
-      <module_usage name="importlib.metadata" finding="absolute" line="17" />
+      <module_usage name="setuptools_scm" finding="not-found" line="5" />
+      <module_usage name="importlib.metadata" finding="absolute" line="18" />
     </module_usages>
   </module>
   <module name="travertino.colors" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\colors.py" distribution="travertino">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="107" merged_total="3074" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="107" merged_total="566" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="107" merged_total="4383" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="107" merged_total="813" />
     <module_usages>
-      <module_usage name="travertino.constants" finding="relative" line="2" />
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="travertino.constants" finding="relative" line="4" />
     </module_usages>
   </module>
   <module name="travertino.constants" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\constants.py" distribution="travertino">
@@ -6712,34 +6614,85 @@
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages />
   </module>
-  <module name="travertino.declaration" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\declaration.py" distribution="travertino">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="117" merged_total="2408" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="355" />
-    <module_usages>
-      <module_usage name="travertino.colors" finding="relative" line="1" />
-    </module_usages>
-  </module>
   <module name="travertino.fonts" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\fonts.py" distribution="travertino">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="71" merged_total="1179" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="57" merged_total="165" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="743" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="90" />
     <module_usages>
       <module_usage name="travertino.constants" finding="relative" line="1" />
     </module_usages>
   </module>
   <module name="travertino.layout" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\layout.py" distribution="travertino">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="67" merged_total="834" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="108" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="67" merged_total="774" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="96" />
     <module_usages />
   </module>
   <module name="travertino.node" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\node.py" distribution="travertino">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="528" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="73" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="40" merged_total="695" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="91" />
     <module_usages />
   </module>
+  <module name="travertino.properties" kind="CompiledPythonNamespacePackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\properties" distribution="travertino">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="1" merged_total="2" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="_frozen_importlib_external" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="travertino.properties.aliased" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\properties\aliased.py" distribution="travertino">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="36" merged_total="651" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="100" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="warnings" finding="absolute" line="3" />
+    </module_usages>
+  </module>
+  <module name="travertino.properties.choices" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\properties\choices.py" distribution="travertino">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="488" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="76" />
+    <module_usages>
+      <module_usage name="travertino.colors" finding="relative" line="1" />
+    </module_usages>
+  </module>
+  <module name="travertino.properties.immutablelist" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\properties\immutablelist.py" distribution="travertino">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="145" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="1" merged_total="6" />
+    <module_usages>
+      <module_usage name="collections.abc" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="travertino.properties.shorthand" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\properties\shorthand.py" distribution="travertino">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="562" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="91" />
+    <module_usages>
+      <module_usage name="travertino.constants" finding="relative" line="1" />
+    </module_usages>
+  </module>
+  <module name="travertino.properties.validated" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\properties\validated.py" distribution="travertino">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="834" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="135" />
+    <module_usages>
+      <module_usage name="collections.abc" finding="absolute" line="1" />
+      <module_usage name="travertino.properties.choices" finding="relative" line="3" />
+      <module_usage name="travertino.properties.immutablelist" finding="relative" line="4" />
+    </module_usages>
+  </module>
   <module name="travertino.size" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\size.py" distribution="travertino">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="354" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="39" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="8" merged_total="158" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="4" merged_total="18" />
     <module_usages />
+  </module>
+  <module name="travertino.style" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\travertino\style.py" distribution="travertino">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="51" merged_total="1551" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="255" />
+    <module_usages>
+      <module_usage name="collections" finding="absolute" line="1" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="1" />
+      <module_usage name="collections.abc" finding="absolute" line="2" />
+      <module_usage name="warnings" finding="absolute" line="3" />
+      <module_usage name="travertino.properties.shorthand" finding="relative" line="5" />
+      <module_usage name="travertino.properties.validated" finding="relative" line="6" />
+    </module_usages>
   </module>
   <module name="types" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\types.py">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="37" merged_total="1792" />
@@ -6778,6 +6731,15 @@
       <module_usage name="os" finding="absolute" line="1" />
     </module_usages>
   </module>
+  <module name="urllib.error" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\urllib\error.py">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="26" merged_total="891" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="io" finding="absolute" line="13" />
+      <module_usage name="urllib.response" finding="absolute" line="14" />
+      <module_usage name="io" finding="absolute" line="46" />
+    </module_usages>
+  </module>
   <module name="urllib.parse" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\urllib\parse.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="68" merged_total="14156" />
     <optimization-time pass="2" time="volatile" />
@@ -6790,6 +6752,60 @@
       <module_usage name="collections" finding="absolute" line="245" />
       <module_usage name="collections.namedtuple" finding="not-found" line="245" />
       <module_usage name="unicodedata" finding="absolute" line="423" />
+    </module_usages>
+  </module>
+  <module name="urllib.request" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\urllib\request.py">
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="90" merged_total="45719" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="base64" finding="absolute" line="84" />
+      <module_usage name="bisect" finding="absolute" line="85" />
+      <module_usage name="email" finding="absolute" line="86" />
+      <module_usage name="hashlib" finding="absolute" line="87" />
+      <module_usage name="http.client" finding="absolute" line="88" />
+      <module_usage name="io" finding="absolute" line="89" />
+      <module_usage name="os" finding="absolute" line="90" />
+      <module_usage name="posixpath" finding="absolute" line="91" />
+      <module_usage name="re" finding="absolute" line="92" />
+      <module_usage name="socket" finding="absolute" line="93" />
+      <module_usage name="string" finding="absolute" line="94" />
+      <module_usage name="sys" finding="absolute" line="95" />
+      <module_usage name="time" finding="absolute" line="96" />
+      <module_usage name="tempfile" finding="absolute" line="97" />
+      <module_usage name="contextlib" finding="absolute" line="98" />
+      <module_usage name="warnings" finding="absolute" line="99" />
+      <module_usage name="urllib.error" finding="absolute" line="102" />
+      <module_usage name="urllib.parse" finding="absolute" line="103" />
+      <module_usage name="urllib.response" finding="absolute" line="108" />
+      <module_usage name="ssl" finding="absolute" line="112" />
+      <module_usage name="warnings" finding="absolute" line="192" />
+      <module_usage name="http.cookiejar" finding="absolute" line="1400" />
+      <module_usage name="email.utils" finding="absolute" line="1499" />
+      <module_usage name="mimetypes" finding="absolute" line="1500" />
+      <module_usage name="ftplib" finding="absolute" line="1533" />
+      <module_usage name="mimetypes" finding="absolute" line="1534" />
+      <module_usage name="io" finding="absolute" line="1669" />
+      <module_usage name="nturl2path" finding="absolute" line="1678" />
+      <module_usage name="ntpath" finding="absolute" line="1831" />
+      <module_usage name="email.utils" finding="absolute" line="2009" />
+      <module_usage name="mimetypes" finding="absolute" line="2010" />
+      <module_usage name="mimetypes" finding="absolute" line="2043" />
+      <module_usage name="ftplib" finding="absolute" line="2055" />
+      <module_usage name="io" finding="absolute" line="2134" />
+      <module_usage name="getpass" finding="absolute" line="2340" />
+      <module_usage name="ftplib" finding="absolute" line="2377" />
+      <module_usage name="ftplib" finding="absolute" line="2412" />
+      <module_usage name="ftplib" finding="absolute" line="2421" />
+      <module_usage name="fnmatch" finding="absolute" line="2573" />
+      <module_usage name="winreg" finding="absolute" line="2669" />
+      <module_usage name="winreg" finding="absolute" line="2721" />
+    </module_usages>
+  </module>
+  <module name="urllib.response" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\urllib\response.py">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="759" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="tempfile" finding="absolute" line="9" />
     </module_usages>
   </module>
   <module name="uu" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\uu.py">
@@ -6996,7 +7012,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=a264a4c5a81d43da10dce99553d45b56" />
+    <option value="--report-user-provided=pipenv_hash=f6166379078ddb036cac87754884f16d" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -7024,9 +7040,9 @@
     <distribution name="clr_loader" version="0.2.7.post0" installer="pip" />
     <distribution name="pycparser" version="2.22" installer="pip" />
     <distribution name="pythonnet" version="3.0.5" installer="pip" />
-    <distribution name="toga-core" version="0.4.9" installer="pip" />
-    <distribution name="toga-winforms" version="0.4.9" installer="pip" />
-    <distribution name="travertino" version="0.3.0" installer="pip" />
+    <distribution name="toga-core" version="0.5.0" installer="pip" />
+    <distribution name="toga-winforms" version="0.5.0" installer="pip" />
+    <distribution name="travertino" version="0.5.0" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}\Scripts\python.EXE" python_flavor="CPython Official" python_version="3.10.11" os_name="Windows" os_release="11" arch_name="x86_64" filesystem_encoding="utf-8">
     <search_path>
@@ -7041,7 +7057,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>a264a4c5a81d43da10dce99553d45b56</pipenv_hash>
+    <pipenv_hash>f6166379078ddb036cac87754884f16d</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}\TogaUsing.dist\TogaUsing.exe" />
 </nuitka-compilation-report>
