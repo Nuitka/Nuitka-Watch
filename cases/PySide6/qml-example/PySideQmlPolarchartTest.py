@@ -17,7 +17,7 @@
 #    nuitka-project: --linux-onefile-icon={MAIN_DIRECTORY}/qmlpolarchart/Example-Icon.png
 # nuitka-project-if: {OS} == "Darwin":
 #    nuitka-project: --macos-app-icon={MAIN_DIRECTORY}/qmlpolarchart/Example-Icon.png
-#    nuitka-project: --macos-create-app-bundle
+#    nuitka-project: --mode=app
 #    nuitka-project: --macos-sign-identity="Nuitka Test Company"
 
 import os
