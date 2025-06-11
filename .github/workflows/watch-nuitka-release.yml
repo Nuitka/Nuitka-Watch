@@ -1,0 +1,92 @@
+name: Nuitka Watch Release
+# makes little sense, spell-checker: disable
+on:
+  push:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+    inputs:
+      nuitka_branch_name:
+        description: 'Nuitka branch to use (e.g., main, develop, factory, release/X.Y, hotfix/X.Y.Z)'
+        required: true
+        default: 'main'
+        type: string
+
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: Maxwell-Win-x64
+    env:
+      NUITKA_BRANCH_NAME: "${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.nuitka_branch_name) || 'main' }}"
+    strategy:
+      matrix:
+        python_version:
+            - '3.10'
+            - '3.12'
+
+    name: Windows Python ${{ matrix.python_version }}
+    steps:
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v4
+        with:
+          path: Nuitka-Watch
+          fetch-depth: 0
+
+      - name: 🐍 Use Python ${{ matrix.python_version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python_version }}
+
+      - uses: ilammy/msvc-dev-cmd@v1
+
+      - name: 🧳 Install Nuitka and dependencies
+        run: |
+          set -x
+          pip install --no-python-version-warning --disable-pip-version-check -r requirements-devel.txt
+          pip install --no-python-version-warning --disable-pip-version-check -U --force-reinstall "https://github.com/Nuitka/Nuitka/archive/${NUITKA_BRANCH_NAME}.zip"
+
+          git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Nuitka-factory
+          git clone --depth=1 -b $NUITKA_BRANCH_NAME https://github.com/Nuitka/Nuitka.git Nuitka-develop
+
+          python Nuitka-develop/bin/nuitka --version
+        shell: bash
+
+      - name: 🧪 Run Nuitka Watch test cases
+        run: |
+            set -x
+            echo "On branch Nuitka-Watch branch $SOURCE_BRANCH for $NUITKA_BRANCH_NAME"
+
+            # git branch $SOURCE_BRANCH
+            git status
+
+            export PIPENV_CACHE_DIR=$(pwd)/pipenv_cache
+
+            if [[ "$NUITKA_BRANCH_NAME" = hotfix/* ]]
+            then
+              PR_ARG='--pr=hotfix,GitHub-generated'
+            elif [[ "$NUITKA_BRANCH_NAME" = release/* ]]
+            then
+              PR_ARG='--pr=release,GitHub-generated'
+            elif [[ $NUITKA_BRANCH_NAME = develop ]]
+            then
+              PR_ARG='--pr=develop,GitHub-generated'
+            elif [[ $NUITKA_BRANCH_NAME = factory ]]
+            then
+              PR_ARG='--pr=factory,GitHub-generated'
+            else
+              PR_ARG=""
+            fi
+
+            python3.11 /Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=Nuitka-develop/bin/nuitka $PR_ARG --jobs=-2 Nuitka-Watch
+        env:
+          "GITHUB_TOKEN": "${{ secrets.NOBODY_BOT_IDENTITY }}"
+          "SOURCE_BRANCH": "${{ github.ref_name }}"
+          "GIT_AUTHOR_NAME": "Nuitka Nobody Bot"
+          "GIT_COMMITTER_NAME": "Nuitka Nobody Bot"
+          "GIT_AUTHOR_EMAIL": "nuitka-nobody-bot@nuitka.net"
+          "GIT_COMMITTER_EMAIL": "nuitka-nobody-bot@nuitka.net"
+        shell: bash
