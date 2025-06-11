@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   windows:
-    runs-on: Maxwell-Win-x64
+    runs-on: [self-hosted, Windows]
     env:
       NUITKA_BRANCH_NAME: "${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.nuitka_branch_name) || 'main' }}"
     strategy:
