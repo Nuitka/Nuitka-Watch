@@ -41,7 +41,7 @@ jobs:
       - name: 🧳 Install Nuitka and dependencies
         run: |
           set -x
-          pip install --no-python-version-warning --disable-pip-version-check -r requirements.txt
+          pip install --no-python-version-warning --disable-pip-version-check -r Nuitka-Watch/requirements-devel.txt
           pip install --no-python-version-warning --disable-pip-version-check -U --force-reinstall "https://github.com/Nuitka/Nuitka/archive/${NUITKA_BRANCH_NAME}.zip"
 
           git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Nuitka-factory
@@ -76,7 +76,7 @@ jobs:
               PR_ARG=""
             fi
 
-            python3.11 Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=Nuitka-develop/bin/nuitka $PR_ARG --jobs=-2 Nuitka-Watch
+            python${{ matrix.python_version }} Nuitka-factory/bin/nuitka-watch --python-version=${{ matrix.python_version }} --no-pipenv-update --nuitka-binary=Nuitka-develop/bin/nuitka $PR_ARG --jobs=-2 Nuitka-Watch
         env:
           "GITHUB_TOKEN": "${{ secrets.NOBODY_BOT_IDENTITY }}"
           "SOURCE_BRANCH": "${{ github.ref_name }}"
