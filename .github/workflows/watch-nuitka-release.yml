@@ -41,7 +41,7 @@ jobs:
       - name: 🧳 Install Nuitka and dependencies
         run: |
           set -x
-          pip install --no-python-version-warning --disable-pip-version-check -r requirements-devel.txt
+          pip install --no-python-version-warning --disable-pip-version-check -r requirements.txt
           pip install --no-python-version-warning --disable-pip-version-check -U --force-reinstall "https://github.com/Nuitka/Nuitka/archive/${NUITKA_BRANCH_NAME}.zip"
 
           git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Nuitka-factory
