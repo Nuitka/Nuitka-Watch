@@ -41,13 +41,19 @@ jobs:
       - name: 🧳 Install Nuitka and dependencies
         run: |
           set -x
-          pip install --no-python-version-warning --disable-pip-version-check -r Nuitka-Watch/requirements.txt
-          pip install --no-python-version-warning --disable-pip-version-check -U --force-reinstall "https://github.com/Nuitka/Nuitka/archive/${NUITKA_BRANCH_NAME}.zip"
+          python${{ matrix.python_version }} -m pip install --no-python-version-warning --disable-pip-version-check -r Nuitka-Watch/requirements.txt
+          python${{ matrix.python_version }} -m pip install --no-python-version-warning --disable-pip-version-check -U --force-reinstall "https://github.com/Nuitka/Nuitka/archive/${NUITKA_BRANCH_NAME}.zip"
 
-          git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Nuitka-factory
-          git clone --depth=1 -b $NUITKA_BRANCH_NAME https://github.com/Nuitka/Nuitka.git Nuitka-develop
+          if [ ! -d Nuitka-factory ]
+          then
+            git clone --depth=1 -b factory https://github.com/Nuitka/Nuitka.git Nuitka-factory
+          fi
+          if [ ! -d Nuitka-develop ]
+          then
+            git clone --depth=1 -b $NUITKA_BRANCH_NAME https://github.com/Nuitka/Nuitka.git Nuitka-develop
+          fi
 
-          python Nuitka-develop/bin/nuitka --version
+          python${{ matrix.python_version }} Nuitka-develop/bin/nuitka --version
         shell: bash
 
       - name: 🧪 Run Nuitka Watch test cases
