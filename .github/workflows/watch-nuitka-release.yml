@@ -36,11 +36,6 @@ jobs:
           path: Nuitka-Watch
           fetch-depth: 0
 
-      - name: 🐍 Use Python ${{ matrix.python_version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python_version }}
-
       - uses: ilammy/msvc-dev-cmd@v1
 
       - name: 🧳 Install Nuitka and dependencies
@@ -81,7 +76,7 @@ jobs:
               PR_ARG=""
             fi
 
-            python3.11 /Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=Nuitka-develop/bin/nuitka $PR_ARG --jobs=-2 Nuitka-Watch
+            python3.11 Nuitka-factory/bin/nuitka-watch --python-version=3.11 --no-pipenv-update --nuitka-binary=Nuitka-develop/bin/nuitka $PR_ARG --jobs=-2 Nuitka-Watch
         env:
           "GITHUB_TOKEN": "${{ secrets.NOBODY_BOT_IDENTITY }}"
           "SOURCE_BRANCH": "${{ github.ref_name }}"
