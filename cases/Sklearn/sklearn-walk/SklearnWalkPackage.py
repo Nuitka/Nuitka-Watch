@@ -24,7 +24,24 @@ def walkPackage(package_name, package):
     for item in pkgutil.iter_modules(package.__path__):
         if item.name == "tests":
             continue
+        if item.name == "conftest":
+            continue
+        if item.name == "_testing":
+            continue
         if item.name == "_build_utils":
+            continue
+
+        # Not requiring cupy, because it has system requirements, potentially
+        # hard to meet, spell-checker: ignore cupy
+        if item.name == "cupy":
+            continue
+
+        # Not requiring dask, we cover that separately.
+        if item.name == "dask":
+            continue
+
+        # Not requiring torch, we cover that separately.
+        if item.name == "torch":
             continue
 
         full_name = "%s.%s" % (package_name, item.name)
