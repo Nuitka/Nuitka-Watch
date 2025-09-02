@@ -1,6 +1,118 @@
 <?xml version='1.0' encoding='utf8'?>
 <nuitka-compilation-report nuitka_version="2.7.13" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
-  <module name="__future__" kind="UncompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\__future__.py">
+  <module name="PySide6" kind="CompiledPythonPackage" usage="import" reason="Included to allow post load workaround code." source_path="${sys.prefix}\Lib\site-packages\PySide6\__init__.py" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <plugin-influence name="options-nanny" influence="condition-used" condition="use_pyside6" tags_used="use_pyside6" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="40" merged_total="1547" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="226" />
+    <distribution-usages>
+      <distribution-usage name="shiboken6" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="sys" finding="absolute" line="2" />
+      <module_usage name="pathlib" finding="absolute" line="3" />
+      <module_usage name="types" finding="absolute" line="4" />
+      <module_usage name="shiboken6" finding="absolute" line="66" />
+      <module_usage name="shiboken6.Shiboken" finding="relative" line="66" />
+      <module_usage name="PySide6" finding="absolute" line="89" />
+      <module_usage name="PySide6.QtNetwork" finding="relative" line="89" />
+    </module_usages>
+  </module>
+  <module name="PySide6-postLoad" kind="CompiledPythonModule" usage="plugins" reason="According to Yaml 'post-import-code' configuration." source_path="${sys.prefix}\Lib\site-packages\PySide6\PySide6-postLoad.py">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="356" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="40" />
+    <distribution-usages>
+      <distribution-usage name="PySide6" />
+      <distribution-usage name="PySide6_Addons" />
+      <distribution-usage name="PySide6_Essentials" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="PySide6" finding="absolute" line="25" />
+      <module_usage name="PySide6.QtCore" finding="relative" line="25" />
+    </module_usages>
+  </module>
+  <module name="PySide6-preLoad" kind="CompiledPythonModule" usage="plugins" reason="Adding binary folder to runtime 'PATH' environment variable for proper Qt loading." source_path="${sys.prefix}\Lib\site-packages\PySide6\PySide6-preLoad.py">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="6" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="PySide6.QtCore" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\Lib\site-packages\PySide6\QtCore.pyd" distribution="PySide6">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="PySide6.QtCore-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Setting Qt library path to distribution folder. We need to avoid loading target&#10;system Qt plugins, which may be from another Qt version." source_path="${sys.prefix}\Lib\site-packages\PySide6\PySide6\QtCore-postLoad.py" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="1" merged_total="1" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="PySide6.QtCore" finding="absolute" line="3" />
+      <module_usage name="os" finding="absolute" line="4" />
+      <module_usage name="ntpath" finding="absolute" line="11" />
+      <module_usage name="ntpath" finding="absolute" line="19" />
+    </module_usages>
+  </module>
+  <module name="PySide6.QtGui" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\Lib\site-packages\PySide6\QtGui.pyd" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="PySide6.QtNetwork" kind="PythonExtensionModule" usage="import fromlist" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\Lib\site-packages\PySide6\QtNetwork.pyd" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="PySide6.QtWidgets" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\Lib\site-packages\PySide6\QtWidgets.pyd" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="PySide6.support" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.support.deprecated'." source_path="${sys.prefix}\Lib\site-packages\PySide6\support\__init__.py" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <distribution-usages>
+      <distribution-usage name="shiboken6" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="__future__" finding="absolute" line="3" />
+      <module_usage name="shiboken6.Shiboken" finding="absolute" line="5" />
+    </module_usages>
+  </module>
+  <module name="PySide6.support.deprecated" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PySide6\support\deprecated.py" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" />
+    </module_usages>
+  </module>
+  <module name="PySide6QtAds" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PySide6QtAds\__init__.py">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="13" merged_total="154" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="50" />
+    <distribution-usages>
+      <distribution-usage name="PySide6" />
+      <distribution-usage name="PySide6_Addons" />
+      <distribution-usage name="PySide6_Essentials" />
+      <distribution-usage name="shiboken6" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="platform" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="4" />
+      <module_usage name="PySide6" finding="absolute" line="4" />
+      <module_usage name="shiboken6" finding="absolute" line="4" />
+      <module_usage name="PySide6QtAds.PySide6QtAds" finding="relative" line="7" />
+      <module_usage name="PySide6QtAds.PySide6QtAds" finding="relative" line="10" />
+    </module_usages>
+  </module>
+  <module name="PySide6QtAds.PySide6QtAds" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\Lib\site-packages\PySide6QtAds\PySide6QtAds.pyd">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="8" merged_total="81" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -10,16 +122,13 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="__main__" kind="PythonMainModule" usage="root_module" reason="Root module" source_path="~\repos\Nuitka-Watch\cases\Pydantic\PydanticUsing.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="227" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="38" />
-    <distribution-usages>
-      <distribution-usage name="pydantic" />
-    </distribution-usages>
+  <module name="__main__" kind="PythonMainModule" usage="root_module" reason="Root module" source_path="~\repos\Nuitka-Watch\cases\PySide6\qtads-example\PySide6QtAdsUsing.py">
+    <optimization-time pass="1" time="volatile" micro_passes="4" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
-      <module_usage name="__future__" finding="absolute" line="3" />
-      <module_usage name="pydantic" finding="absolute" line="5" />
-      <module_usage name="pydantic.BaseModel" finding="not-found" line="5" />
+      <module_usage name="PySide6QtAds" finding="absolute" line="4" />
+      <module_usage name="PySide6QtAds" finding="absolute" line="8" />
+      <module_usage name="PySide6QtAds.CDockWidget" finding="not-found" line="8" />
       <module_usage name="_collections_abc" finding="absolute" line="1" />
       <module_usage name="abc" finding="absolute" line="1" />
       <module_usage name="ast" finding="absolute" line="1" />
@@ -309,20 +418,6 @@
       <module_usage name="zipfile._path.glob" finding="absolute" line="1" />
     </module_usages>
   </module>
-  <module name="__parents_main__" kind="CompiledPythonModule" usage="plugins" reason="Auto enable multiprocessing freeze support" source_path="~\repos\Nuitka-Watch\cases\Pydantic\PydanticUsing.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="412" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="79" />
-    <distribution-usages>
-      <distribution-usage name="pydantic" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="3" />
-      <module_usage name="pydantic" finding="absolute" line="5" />
-      <module_usage name="pydantic.BaseModel" finding="not-found" line="5" />
-      <module_usage name="sys" finding="absolute" line="19" />
-      <module_usage name="multiprocessing.spawn" finding="absolute" line="22" />
-    </module_usages>
-  </module>
   <module name="__phello__" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\__phello__\__init__.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="2" merged_total="4" />
     <optimization-time pass="2" time="volatile" />
@@ -358,11 +453,6 @@
       <module_usage name="subprocess" finding="absolute" line="53" />
     </module_usages>
   </module>
-  <module name="_asyncio" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_asyncio.pyd">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
   <module name="_bz2" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_bz2.pyd">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -391,11 +481,6 @@
       <module_usage name="sys" finding="absolute" line="4" />
     </module_usages>
   </module>
-  <module name="_ctypes" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_ctypes.pyd">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
   <module name="_decimal" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_decimal.pyd">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -418,11 +503,6 @@
       <module_usage name="re" finding="absolute" line="8" />
     </module_usages>
   </module>
-  <module name="_multiprocessing" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_multiprocessing.pyd">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
   <module name="_osx_support" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\_osx_support.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="82" merged_total="5490" />
     <optimization-time pass="2" time="volatile" />
@@ -435,11 +515,6 @@
       <module_usage name="contextlib" finding="absolute" line="61" />
       <module_usage name="tempfile" finding="absolute" line="63" />
     </module_usages>
-  </module>
-  <module name="_overlapped" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_overlapped.pyd">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
   </module>
   <module name="_py_abc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\_py_abc.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="55" merged_total="1835" />
@@ -506,11 +581,6 @@
       <module_usage name="decimal" finding="absolute" line="16" />
     </module_usages>
   </module>
-  <module name="_queue" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_queue.pyd">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
   <module name="_sitebuiltins" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\_sitebuiltins.py">
     <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="16" merged_total="1824" />
     <optimization-time pass="2" time="volatile" />
@@ -522,11 +592,6 @@
     </module_usages>
   </module>
   <module name="_socket" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_socket.pyd">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
-  <module name="_ssl" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_ssl.pyd">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -556,11 +621,6 @@
       <module_usage name="contextlib" finding="absolute" line="132" />
       <module_usage name="threading" finding="absolute" line="242" />
     </module_usages>
-  </module>
-  <module name="_uuid" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_uuid.pyd">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
   </module>
   <module name="_weakrefset" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\_weakrefset.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="46" merged_total="2203" />
@@ -600,7 +660,7 @@
     </module_usages>
   </module>
   <module name="ast" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\ast.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="191" merged_total="24681" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="191" merged_total="24774" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="27" />
@@ -620,533 +680,6 @@
       <module_usage name="warnings" finding="absolute" line="583" />
       <module_usage name="warnings" finding="absolute" line="610" />
       <module_usage name="warnings" finding="absolute" line="1801" />
-    </module_usages>
-  </module>
-  <module name="asyncio" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="1" merged_total="1" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="sys" finding="absolute" line="5" />
-      <module_usage name="asyncio.base_events" finding="absolute" line="8" />
-      <module_usage name="asyncio.coroutines" finding="absolute" line="9" />
-      <module_usage name="asyncio.events" finding="absolute" line="10" />
-      <module_usage name="asyncio.exceptions" finding="absolute" line="11" />
-      <module_usage name="asyncio.futures" finding="absolute" line="12" />
-      <module_usage name="asyncio.locks" finding="absolute" line="13" />
-      <module_usage name="asyncio.protocols" finding="absolute" line="14" />
-      <module_usage name="asyncio.runners" finding="absolute" line="15" />
-      <module_usage name="asyncio.queues" finding="absolute" line="16" />
-      <module_usage name="asyncio.streams" finding="absolute" line="17" />
-      <module_usage name="asyncio.subprocess" finding="absolute" line="18" />
-      <module_usage name="asyncio.tasks" finding="absolute" line="19" />
-      <module_usage name="asyncio.taskgroups" finding="absolute" line="20" />
-      <module_usage name="asyncio.timeouts" finding="absolute" line="21" />
-      <module_usage name="asyncio.threads" finding="absolute" line="22" />
-      <module_usage name="asyncio.transports" finding="absolute" line="23" />
-      <module_usage name="asyncio.windows_events" finding="absolute" line="43" />
-    </module_usages>
-  </module>
-  <module name="asyncio.base_events" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\base_events.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="110" merged_total="22033" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="16" />
-      <module_usage name="collections.abc" finding="absolute" line="17" />
-      <module_usage name="concurrent.futures" finding="absolute" line="18" />
-      <module_usage name="errno" finding="absolute" line="19" />
-      <module_usage name="functools" finding="absolute" line="20" />
-      <module_usage name="heapq" finding="absolute" line="21" />
-      <module_usage name="itertools" finding="absolute" line="22" />
-      <module_usage name="os" finding="absolute" line="23" />
-      <module_usage name="socket" finding="absolute" line="24" />
-      <module_usage name="stat" finding="absolute" line="25" />
-      <module_usage name="subprocess" finding="absolute" line="26" />
-      <module_usage name="threading" finding="absolute" line="27" />
-      <module_usage name="time" finding="absolute" line="28" />
-      <module_usage name="traceback" finding="absolute" line="29" />
-      <module_usage name="sys" finding="absolute" line="30" />
-      <module_usage name="warnings" finding="absolute" line="31" />
-      <module_usage name="weakref" finding="absolute" line="32" />
-      <module_usage name="ssl" finding="absolute" line="35" />
-      <module_usage name="asyncio" finding="absolute" line="39" />
-      <module_usage name="asyncio.constants" finding="relative" line="39" />
-      <module_usage name="asyncio" finding="absolute" line="40" />
-      <module_usage name="asyncio.coroutines" finding="relative" line="40" />
-      <module_usage name="asyncio" finding="absolute" line="41" />
-      <module_usage name="asyncio.events" finding="relative" line="41" />
-      <module_usage name="asyncio" finding="absolute" line="42" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="42" />
-      <module_usage name="asyncio" finding="absolute" line="43" />
-      <module_usage name="asyncio.futures" finding="relative" line="43" />
-      <module_usage name="asyncio" finding="absolute" line="44" />
-      <module_usage name="asyncio.protocols" finding="relative" line="44" />
-      <module_usage name="asyncio" finding="absolute" line="45" />
-      <module_usage name="asyncio.sslproto" finding="relative" line="45" />
-      <module_usage name="asyncio" finding="absolute" line="46" />
-      <module_usage name="asyncio.staggered" finding="relative" line="46" />
-      <module_usage name="asyncio" finding="absolute" line="47" />
-      <module_usage name="asyncio.tasks" finding="relative" line="47" />
-      <module_usage name="asyncio" finding="absolute" line="48" />
-      <module_usage name="asyncio.transports" finding="relative" line="48" />
-      <module_usage name="asyncio" finding="absolute" line="49" />
-      <module_usage name="asyncio.trsock" finding="relative" line="49" />
-      <module_usage name="asyncio.log" finding="absolute" line="50" />
-      <module_usage name="functools" finding="absolute" line="1109" />
-    </module_usages>
-  </module>
-  <module name="asyncio.base_futures" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\base_futures.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="448" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="reprlib" finding="absolute" line="3" />
-      <module_usage name="asyncio" finding="absolute" line="5" />
-      <module_usage name="asyncio.format_helpers" finding="relative" line="5" />
-    </module_usages>
-  </module>
-  <module name="asyncio.base_subprocess" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\base_subprocess.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="56" merged_total="2841" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="1" />
-      <module_usage name="subprocess" finding="absolute" line="2" />
-      <module_usage name="warnings" finding="absolute" line="3" />
-      <module_usage name="asyncio" finding="absolute" line="5" />
-      <module_usage name="asyncio.protocols" finding="relative" line="5" />
-      <module_usage name="asyncio" finding="absolute" line="6" />
-      <module_usage name="asyncio.transports" finding="relative" line="6" />
-      <module_usage name="asyncio.log" finding="absolute" line="7" />
-    </module_usages>
-  </module>
-  <module name="asyncio.base_tasks" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\base_tasks.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="50" merged_total="866" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="linecache" finding="absolute" line="1" />
-      <module_usage name="reprlib" finding="absolute" line="2" />
-      <module_usage name="traceback" finding="absolute" line="3" />
-      <module_usage name="asyncio" finding="absolute" line="5" />
-      <module_usage name="asyncio.base_futures" finding="relative" line="5" />
-      <module_usage name="asyncio" finding="absolute" line="6" />
-      <module_usage name="asyncio.coroutines" finding="relative" line="6" />
-    </module_usages>
-  </module>
-  <module name="asyncio.constants" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\constants.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="20" merged_total="154" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="enum" finding="absolute" line="5" />
-    </module_usages>
-  </module>
-  <module name="asyncio.coroutines" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\coroutines.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="537" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections.abc" finding="absolute" line="3" />
-      <module_usage name="inspect" finding="absolute" line="4" />
-      <module_usage name="os" finding="absolute" line="5" />
-      <module_usage name="sys" finding="absolute" line="6" />
-      <module_usage name="types" finding="absolute" line="7" />
-    </module_usages>
-  </module>
-  <module name="asyncio.events" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\events.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="83" merged_total="2929" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="contextvars" finding="absolute" line="18" />
-      <module_usage name="os" finding="absolute" line="19" />
-      <module_usage name="signal" finding="absolute" line="20" />
-      <module_usage name="socket" finding="absolute" line="21" />
-      <module_usage name="subprocess" finding="absolute" line="22" />
-      <module_usage name="sys" finding="absolute" line="23" />
-      <module_usage name="threading" finding="absolute" line="24" />
-      <module_usage name="asyncio" finding="absolute" line="26" />
-      <module_usage name="asyncio.format_helpers" finding="relative" line="26" />
-      <module_usage name="warnings" finding="absolute" line="696" />
-      <module_usage name="asyncio" finding="absolute" line="779" />
-      <module_usage name="asyncio.DefaultEventLoopPolicy" finding="not-found" line="779" />
-      <module_usage name="_asyncio" finding="absolute" line="848" />
-    </module_usages>
-  </module>
-  <module name="asyncio.exceptions" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\exceptions.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="15" merged_total="1242" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
-  <module name="asyncio.format_helpers" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\format_helpers.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="708" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="functools" finding="absolute" line="1" />
-      <module_usage name="inspect" finding="absolute" line="2" />
-      <module_usage name="reprlib" finding="absolute" line="3" />
-      <module_usage name="sys" finding="absolute" line="4" />
-      <module_usage name="traceback" finding="absolute" line="5" />
-      <module_usage name="asyncio" finding="absolute" line="7" />
-      <module_usage name="asyncio.constants" finding="relative" line="7" />
-      <module_usage name="functools" finding="absolute" line="15" />
-      <module_usage name="functools" finding="absolute" line="45" />
-    </module_usages>
-  </module>
-  <module name="asyncio.futures" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\futures.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="45" merged_total="2197" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="concurrent.futures" finding="absolute" line="7" />
-      <module_usage name="contextvars" finding="absolute" line="8" />
-      <module_usage name="logging" finding="absolute" line="9" />
-      <module_usage name="sys" finding="absolute" line="10" />
-      <module_usage name="types" finding="absolute" line="11" />
-      <module_usage name="asyncio" finding="absolute" line="13" />
-      <module_usage name="asyncio.base_futures" finding="relative" line="13" />
-      <module_usage name="asyncio" finding="absolute" line="14" />
-      <module_usage name="asyncio.events" finding="relative" line="14" />
-      <module_usage name="asyncio" finding="absolute" line="15" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="15" />
-      <module_usage name="asyncio" finding="absolute" line="16" />
-      <module_usage name="asyncio.format_helpers" finding="relative" line="16" />
-      <module_usage name="_asyncio" finding="absolute" line="423" />
-    </module_usages>
-  </module>
-  <module name="asyncio.locks" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\locks.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="4937" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="6" />
-      <module_usage name="enum" finding="absolute" line="7" />
-      <module_usage name="asyncio" finding="absolute" line="9" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="9" />
-      <module_usage name="asyncio" finding="absolute" line="10" />
-      <module_usage name="asyncio.mixins" finding="relative" line="10" />
-    </module_usages>
-  </module>
-  <module name="asyncio.log" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\log.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="logging" finding="absolute" line="3" />
-    </module_usages>
-  </module>
-  <module name="asyncio.mixins" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\mixins.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="221" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="threading" finding="absolute" line="3" />
-      <module_usage name="asyncio" finding="absolute" line="4" />
-      <module_usage name="asyncio.events" finding="relative" line="4" />
-    </module_usages>
-  </module>
-  <module name="asyncio.proactor_events" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\proactor_events.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="59" merged_total="7941" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="io" finding="absolute" line="9" />
-      <module_usage name="os" finding="absolute" line="10" />
-      <module_usage name="socket" finding="absolute" line="11" />
-      <module_usage name="warnings" finding="absolute" line="12" />
-      <module_usage name="signal" finding="absolute" line="13" />
-      <module_usage name="threading" finding="absolute" line="14" />
-      <module_usage name="collections" finding="absolute" line="15" />
-      <module_usage name="asyncio" finding="absolute" line="17" />
-      <module_usage name="asyncio.base_events" finding="relative" line="17" />
-      <module_usage name="asyncio" finding="absolute" line="18" />
-      <module_usage name="asyncio.constants" finding="relative" line="18" />
-      <module_usage name="asyncio" finding="absolute" line="19" />
-      <module_usage name="asyncio.futures" finding="relative" line="19" />
-      <module_usage name="asyncio" finding="absolute" line="20" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="20" />
-      <module_usage name="asyncio" finding="absolute" line="21" />
-      <module_usage name="asyncio.protocols" finding="relative" line="21" />
-      <module_usage name="asyncio" finding="absolute" line="22" />
-      <module_usage name="asyncio.sslproto" finding="relative" line="22" />
-      <module_usage name="asyncio" finding="absolute" line="23" />
-      <module_usage name="asyncio.transports" finding="relative" line="23" />
-      <module_usage name="asyncio" finding="absolute" line="24" />
-      <module_usage name="asyncio.trsock" finding="relative" line="24" />
-      <module_usage name="asyncio.log" finding="absolute" line="25" />
-    </module_usages>
-  </module>
-  <module name="asyncio.protocols" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\protocols.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="1112" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
-  <module name="asyncio.queues" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\queues.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="2481" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="3" />
-      <module_usage name="heapq" finding="absolute" line="4" />
-      <module_usage name="types" finding="absolute" line="5" />
-      <module_usage name="asyncio" finding="absolute" line="7" />
-      <module_usage name="asyncio.locks" finding="relative" line="7" />
-      <module_usage name="asyncio" finding="absolute" line="8" />
-      <module_usage name="asyncio.mixins" finding="relative" line="8" />
-    </module_usages>
-  </module>
-  <module name="asyncio.runners" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\runners.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="55" merged_total="1525" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="contextvars" finding="absolute" line="3" />
-      <module_usage name="enum" finding="absolute" line="4" />
-      <module_usage name="functools" finding="absolute" line="5" />
-      <module_usage name="threading" finding="absolute" line="6" />
-      <module_usage name="signal" finding="absolute" line="7" />
-      <module_usage name="asyncio" finding="absolute" line="8" />
-      <module_usage name="asyncio.coroutines" finding="relative" line="8" />
-      <module_usage name="asyncio" finding="absolute" line="9" />
-      <module_usage name="asyncio.events" finding="relative" line="9" />
-      <module_usage name="asyncio" finding="absolute" line="10" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="10" />
-      <module_usage name="asyncio" finding="absolute" line="11" />
-      <module_usage name="asyncio.tasks" finding="relative" line="11" />
-      <module_usage name="asyncio" finding="absolute" line="12" />
-      <module_usage name="asyncio.constants" finding="relative" line="12" />
-      <module_usage name="functools" finding="absolute" line="105" />
-    </module_usages>
-  </module>
-  <module name="asyncio.selector_events" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\selector_events.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="74" merged_total="14893" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="9" />
-      <module_usage name="errno" finding="absolute" line="10" />
-      <module_usage name="functools" finding="absolute" line="11" />
-      <module_usage name="itertools" finding="absolute" line="12" />
-      <module_usage name="os" finding="absolute" line="13" />
-      <module_usage name="selectors" finding="absolute" line="14" />
-      <module_usage name="socket" finding="absolute" line="15" />
-      <module_usage name="warnings" finding="absolute" line="16" />
-      <module_usage name="weakref" finding="absolute" line="17" />
-      <module_usage name="ssl" finding="absolute" line="19" />
-      <module_usage name="asyncio" finding="absolute" line="23" />
-      <module_usage name="asyncio.base_events" finding="relative" line="23" />
-      <module_usage name="asyncio" finding="absolute" line="24" />
-      <module_usage name="asyncio.constants" finding="relative" line="24" />
-      <module_usage name="asyncio" finding="absolute" line="25" />
-      <module_usage name="asyncio.events" finding="relative" line="25" />
-      <module_usage name="asyncio" finding="absolute" line="26" />
-      <module_usage name="asyncio.futures" finding="relative" line="26" />
-      <module_usage name="asyncio" finding="absolute" line="27" />
-      <module_usage name="asyncio.protocols" finding="relative" line="27" />
-      <module_usage name="asyncio" finding="absolute" line="28" />
-      <module_usage name="asyncio.sslproto" finding="relative" line="28" />
-      <module_usage name="asyncio" finding="absolute" line="29" />
-      <module_usage name="asyncio.transports" finding="relative" line="29" />
-      <module_usage name="asyncio" finding="absolute" line="30" />
-      <module_usage name="asyncio.trsock" finding="relative" line="30" />
-      <module_usage name="asyncio.log" finding="absolute" line="31" />
-      <module_usage name="functools" finding="absolute" line="393" />
-      <module_usage name="functools" finding="absolute" line="434" />
-      <module_usage name="functools" finding="absolute" line="474" />
-      <module_usage name="functools" finding="absolute" line="516" />
-      <module_usage name="functools" finding="absolute" line="564" />
-      <module_usage name="functools" finding="absolute" line="613" />
-      <module_usage name="functools" finding="absolute" line="669" />
-      <module_usage name="functools" finding="absolute" line="728" />
-    </module_usages>
-  </module>
-  <module name="asyncio.sslproto" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\sslproto.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="98" merged_total="7612" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="5" />
-      <module_usage name="enum" finding="absolute" line="6" />
-      <module_usage name="warnings" finding="absolute" line="7" />
-      <module_usage name="ssl" finding="absolute" line="9" />
-      <module_usage name="asyncio" finding="absolute" line="13" />
-      <module_usage name="asyncio.constants" finding="relative" line="13" />
-      <module_usage name="asyncio" finding="absolute" line="14" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="14" />
-      <module_usage name="asyncio" finding="absolute" line="15" />
-      <module_usage name="asyncio.protocols" finding="relative" line="15" />
-      <module_usage name="asyncio" finding="absolute" line="16" />
-      <module_usage name="asyncio.transports" finding="relative" line="16" />
-      <module_usage name="asyncio.log" finding="absolute" line="17" />
-    </module_usages>
-  </module>
-  <module name="asyncio.staggered" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\staggered.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="38" merged_total="1197" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="contextlib" finding="absolute" line="5" />
-      <module_usage name="typing" finding="absolute" line="6" />
-      <module_usage name="asyncio" finding="absolute" line="8" />
-      <module_usage name="asyncio.events" finding="relative" line="8" />
-      <module_usage name="asyncio" finding="absolute" line="9" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="9" />
-      <module_usage name="asyncio" finding="absolute" line="10" />
-      <module_usage name="asyncio.locks" finding="relative" line="10" />
-      <module_usage name="asyncio" finding="absolute" line="11" />
-      <module_usage name="asyncio.tasks" finding="relative" line="11" />
-    </module_usages>
-  </module>
-  <module name="asyncio.streams" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\streams.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="80" merged_total="6490" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="5" />
-      <module_usage name="socket" finding="absolute" line="6" />
-      <module_usage name="sys" finding="absolute" line="7" />
-      <module_usage name="warnings" finding="absolute" line="8" />
-      <module_usage name="weakref" finding="absolute" line="9" />
-      <module_usage name="asyncio" finding="absolute" line="14" />
-      <module_usage name="asyncio.coroutines" finding="relative" line="14" />
-      <module_usage name="asyncio" finding="absolute" line="15" />
-      <module_usage name="asyncio.events" finding="relative" line="15" />
-      <module_usage name="asyncio" finding="absolute" line="16" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="16" />
-      <module_usage name="asyncio" finding="absolute" line="17" />
-      <module_usage name="asyncio.format_helpers" finding="relative" line="17" />
-      <module_usage name="asyncio" finding="absolute" line="18" />
-      <module_usage name="asyncio.protocols" finding="relative" line="18" />
-      <module_usage name="asyncio.log" finding="absolute" line="19" />
-      <module_usage name="asyncio.tasks" finding="absolute" line="20" />
-    </module_usages>
-  </module>
-  <module name="asyncio.subprocess" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\subprocess.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="40" merged_total="2099" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="subprocess" finding="absolute" line="3" />
-      <module_usage name="asyncio" finding="absolute" line="5" />
-      <module_usage name="asyncio.events" finding="relative" line="5" />
-      <module_usage name="asyncio" finding="absolute" line="6" />
-      <module_usage name="asyncio.protocols" finding="relative" line="6" />
-      <module_usage name="asyncio" finding="absolute" line="7" />
-      <module_usage name="asyncio.streams" finding="relative" line="7" />
-      <module_usage name="asyncio" finding="absolute" line="8" />
-      <module_usage name="asyncio.tasks" finding="relative" line="8" />
-      <module_usage name="asyncio.log" finding="absolute" line="9" />
-    </module_usages>
-  </module>
-  <module name="asyncio.taskgroups" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\taskgroups.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="73" merged_total="1474" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="asyncio" finding="absolute" line="7" />
-      <module_usage name="asyncio.events" finding="relative" line="7" />
-      <module_usage name="asyncio" finding="absolute" line="8" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="8" />
-      <module_usage name="asyncio" finding="absolute" line="9" />
-      <module_usage name="asyncio.tasks" finding="relative" line="9" />
-    </module_usages>
-  </module>
-  <module name="asyncio.tasks" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\tasks.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="91" merged_total="7634" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="concurrent.futures" finding="absolute" line="13" />
-      <module_usage name="contextvars" finding="absolute" line="14" />
-      <module_usage name="functools" finding="absolute" line="15" />
-      <module_usage name="inspect" finding="absolute" line="16" />
-      <module_usage name="itertools" finding="absolute" line="17" />
-      <module_usage name="types" finding="absolute" line="18" />
-      <module_usage name="warnings" finding="absolute" line="19" />
-      <module_usage name="weakref" finding="absolute" line="20" />
-      <module_usage name="types" finding="absolute" line="21" />
-      <module_usage name="asyncio" finding="absolute" line="23" />
-      <module_usage name="asyncio.base_tasks" finding="relative" line="23" />
-      <module_usage name="asyncio" finding="absolute" line="24" />
-      <module_usage name="asyncio.coroutines" finding="relative" line="24" />
-      <module_usage name="asyncio" finding="absolute" line="25" />
-      <module_usage name="asyncio.events" finding="relative" line="25" />
-      <module_usage name="asyncio" finding="absolute" line="26" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="26" />
-      <module_usage name="asyncio" finding="absolute" line="27" />
-      <module_usage name="asyncio.futures" finding="relative" line="27" />
-      <module_usage name="asyncio" finding="absolute" line="28" />
-      <module_usage name="asyncio.timeouts" finding="relative" line="28" />
-      <module_usage name="_asyncio" finding="absolute" line="404" />
-      <module_usage name="functools" finding="absolute" line="571" />
-      <module_usage name="asyncio.queues" finding="absolute" line="605" />
-      <module_usage name="_asyncio" finding="absolute" line="1050" />
-    </module_usages>
-  </module>
-  <module name="asyncio.threads" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\threads.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="90" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="functools" finding="absolute" line="3" />
-      <module_usage name="contextvars" finding="absolute" line="4" />
-      <module_usage name="asyncio" finding="absolute" line="6" />
-      <module_usage name="asyncio.events" finding="relative" line="6" />
-      <module_usage name="functools" finding="absolute" line="24" />
-    </module_usages>
-  </module>
-  <module name="asyncio.timeouts" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\timeouts.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="54" merged_total="1018" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="enum" finding="absolute" line="1" />
-      <module_usage name="types" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="asyncio" finding="absolute" line="6" />
-      <module_usage name="asyncio.events" finding="relative" line="6" />
-      <module_usage name="asyncio" finding="absolute" line="7" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="7" />
-      <module_usage name="asyncio" finding="absolute" line="8" />
-      <module_usage name="asyncio.tasks" finding="relative" line="8" />
-    </module_usages>
-  </module>
-  <module name="asyncio.transports" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\transports.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="1724" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
-  <module name="asyncio.trsock" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\trsock.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="464" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="socket" finding="absolute" line="1" />
-    </module_usages>
-  </module>
-  <module name="asyncio.windows_events" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\windows_events.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="48" merged_total="9568" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="3" />
-      <module_usage name="_overlapped" finding="absolute" line="8" />
-      <module_usage name="_winapi" finding="absolute" line="9" />
-      <module_usage name="errno" finding="absolute" line="10" />
-      <module_usage name="math" finding="absolute" line="11" />
-      <module_usage name="msvcrt" finding="absolute" line="12" />
-      <module_usage name="socket" finding="absolute" line="13" />
-      <module_usage name="struct" finding="absolute" line="14" />
-      <module_usage name="time" finding="absolute" line="15" />
-      <module_usage name="weakref" finding="absolute" line="16" />
-      <module_usage name="asyncio" finding="absolute" line="18" />
-      <module_usage name="asyncio.events" finding="relative" line="18" />
-      <module_usage name="asyncio" finding="absolute" line="19" />
-      <module_usage name="asyncio.base_subprocess" finding="relative" line="19" />
-      <module_usage name="asyncio" finding="absolute" line="20" />
-      <module_usage name="asyncio.futures" finding="relative" line="20" />
-      <module_usage name="asyncio" finding="absolute" line="21" />
-      <module_usage name="asyncio.exceptions" finding="relative" line="21" />
-      <module_usage name="asyncio" finding="absolute" line="22" />
-      <module_usage name="asyncio.proactor_events" finding="relative" line="22" />
-      <module_usage name="asyncio" finding="absolute" line="23" />
-      <module_usage name="asyncio.selector_events" finding="relative" line="23" />
-      <module_usage name="asyncio" finding="absolute" line="24" />
-      <module_usage name="asyncio.tasks" finding="relative" line="24" />
-      <module_usage name="asyncio" finding="absolute" line="25" />
-      <module_usage name="asyncio.windows_utils" finding="relative" line="25" />
-      <module_usage name="asyncio.log" finding="absolute" line="26" />
-    </module_usages>
-  </module>
-  <module name="asyncio.windows_utils" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\windows_utils.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="45" merged_total="1477" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="3" />
-      <module_usage name="_winapi" finding="absolute" line="8" />
-      <module_usage name="itertools" finding="absolute" line="9" />
-      <module_usage name="msvcrt" finding="absolute" line="10" />
-      <module_usage name="os" finding="absolute" line="11" />
-      <module_usage name="subprocess" finding="absolute" line="12" />
-      <module_usage name="tempfile" finding="absolute" line="13" />
-      <module_usage name="warnings" finding="absolute" line="14" />
     </module_usages>
   </module>
   <module name="base64" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\base64.py">
@@ -1273,7 +806,7 @@
     </module_usages>
   </module>
   <module name="collections" kind="UncompiledPythonPackage" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\collections\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="124" merged_total="16767" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="124" merged_total="16517" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -1310,68 +843,6 @@
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="31" merged_total="757" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
-  </module>
-  <module name="concurrent" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\concurrent\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-    </module_usages>
-  </module>
-  <module name="concurrent.futures" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\concurrent\futures\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="120" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="concurrent.futures._base" finding="absolute" line="8" />
-      <module_usage name="concurrent.futures.process" finding="absolute" line="44" />
-      <module_usage name="concurrent.futures.thread" finding="absolute" line="49" />
-    </module_usages>
-  </module>
-  <module name="concurrent.futures._base" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\concurrent\futures\_base.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="39" merged_total="10806" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="6" />
-      <module_usage name="logging" finding="absolute" line="7" />
-      <module_usage name="threading" finding="absolute" line="8" />
-      <module_usage name="time" finding="absolute" line="9" />
-      <module_usage name="types" finding="absolute" line="10" />
-    </module_usages>
-  </module>
-  <module name="concurrent.futures.process" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\concurrent\futures\process.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="118" merged_total="8351" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="48" />
-      <module_usage name="concurrent.futures" finding="absolute" line="49" />
-      <module_usage name="concurrent.futures._base" finding="relative" line="49" />
-      <module_usage name="queue" finding="absolute" line="50" />
-      <module_usage name="multiprocessing" finding="absolute" line="51" />
-      <module_usage name="multiprocessing.connection" finding="absolute" line="54" />
-      <module_usage name="multiprocessing.queues" finding="absolute" line="55" />
-      <module_usage name="threading" finding="absolute" line="56" />
-      <module_usage name="weakref" finding="absolute" line="57" />
-      <module_usage name="functools" finding="absolute" line="58" />
-      <module_usage name="itertools" finding="absolute" line="59" />
-      <module_usage name="sys" finding="absolute" line="60" />
-      <module_usage name="traceback" finding="absolute" line="61" />
-      <module_usage name="multiprocessing.synchronize" finding="absolute" line="611" />
-    </module_usages>
-  </module>
-  <module name="concurrent.futures.thread" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\concurrent\futures\thread.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="2419" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="concurrent.futures" finding="absolute" line="8" />
-      <module_usage name="concurrent.futures._base" finding="relative" line="8" />
-      <module_usage name="itertools" finding="absolute" line="9" />
-      <module_usage name="queue" finding="absolute" line="10" />
-      <module_usage name="threading" finding="absolute" line="11" />
-      <module_usage name="types" finding="absolute" line="12" />
-      <module_usage name="weakref" finding="absolute" line="13" />
-      <module_usage name="os" finding="absolute" line="14" />
-    </module_usages>
   </module>
   <module name="configparser" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\configparser.py">
     <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="159" merged_total="21123" />
@@ -1425,7 +896,7 @@
     </module_usages>
   </module>
   <module name="copyreg" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\copyreg.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="38" merged_total="1538" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="38" merged_total="1437" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="34" />
@@ -1441,50 +912,6 @@
       <module_usage name="_csv" finding="absolute" line="8" />
       <module_usage name="_csv" finding="absolute" line="14" />
       <module_usage name="io" finding="absolute" line="16" />
-    </module_usages>
-  </module>
-  <module name="ctypes" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\ctypes\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="55" merged_total="8819" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="os" finding="absolute" line="3" />
-      <module_usage name="sys" finding="absolute" line="3" />
-      <module_usage name="types" finding="absolute" line="4" />
-      <module_usage name="_ctypes" finding="absolute" line="8" />
-      <module_usage name="_ctypes" finding="absolute" line="9" />
-      <module_usage name="_ctypes" finding="absolute" line="10" />
-      <module_usage name="_ctypes" finding="absolute" line="11" />
-      <module_usage name="_ctypes" finding="absolute" line="12" />
-      <module_usage name="_ctypes" finding="absolute" line="13" />
-      <module_usage name="_ctypes" finding="absolute" line="14" />
-      <module_usage name="struct" finding="absolute" line="16" />
-      <module_usage name="_ctypes" finding="absolute" line="22" />
-      <module_usage name="_ctypes" finding="absolute" line="34" />
-      <module_usage name="_ctypes" finding="absolute" line="110" />
-      <module_usage name="_ctypes" finding="absolute" line="111" />
-      <module_usage name="_ctypes" finding="absolute" line="141" />
-      <module_usage name="_ctypes" finding="absolute" line="142" />
-      <module_usage name="_ctypes" finding="absolute" line="143" />
-      <module_usage name="struct" finding="absolute" line="148" />
-      <module_usage name="_ctypes" finding="absolute" line="255" />
-      <module_usage name="nt" finding="absolute" line="367" />
-      <module_usage name="_ctypes" finding="absolute" line="419" />
-      <module_usage name="_ctypes" finding="absolute" line="480" />
-      <module_usage name="_ctypes" finding="absolute" line="501" />
-      <module_usage name="_ctypes" finding="absolute" line="528" />
-      <module_usage name="comtypes.server.inprocserver" finding="not-found" line="543" />
-      <module_usage name="comtypes.server.inprocserver" finding="not-found" line="551" />
-      <module_usage name="ctypes._endian" finding="absolute" line="556" />
-      <module_usage name="ctypes._endian" finding="absolute" line="557" />
-    </module_usages>
-  </module>
-  <module name="ctypes._endian" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\ctypes\_endian.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="929" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="1" />
-      <module_usage name="ctypes" finding="absolute" line="2" />
     </module_usages>
   </module>
   <module name="dataclasses" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\dataclasses.py">
@@ -1724,7 +1151,7 @@
     </module_usages>
   </module>
   <module name="email.message" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\email\message.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="63" merged_total="10378" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="63" merged_total="10424" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="9" />
@@ -2717,8 +2144,8 @@
     </module_usages>
   </module>
   <module name="enum" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\enum.py">
-    <plugin-influence name="anti-bloat" influence="condition-used" condition="plugin(&quot;pyside6&quot;)" tags_used="plugin" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="191" merged_total="25247" />
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="plugin(&quot;pyside6&quot;)" tags_used="plugin" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="191" merged_total="25290" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="1" />
@@ -2807,7 +2234,7 @@
     </module_usages>
   </module>
   <module name="functools" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\functools.py">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="69" merged_total="13812" />
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="69" merged_total="13805" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="17" />
@@ -2935,16 +2362,6 @@
       <module_usage name="_heapq" finding="absolute" line="595" />
     </module_usages>
   </module>
-  <module name="hmac" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\hmac.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="62" merged_total="1361" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="warnings" finding="absolute" line="6" />
-      <module_usage name="_hashlib" finding="absolute" line="8" />
-      <module_usage name="_operator" finding="absolute" line="12" />
-      <module_usage name="hashlib" finding="absolute" line="17" />
-    </module_usages>
-  </module>
   <module name="html" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\html\__init__.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="43" merged_total="441" />
     <optimization-time pass="2" time="volatile" />
@@ -2967,31 +2384,6 @@
       <module_usage name="_markupbase" finding="absolute" line="12" />
       <module_usage name="html" finding="absolute" line="14" />
       <module_usage name="html.unescape" finding="not-found" line="14" />
-    </module_usages>
-  </module>
-  <module name="http" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\http\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="87" merged_total="536" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="enum" finding="absolute" line="1" />
-    </module_usages>
-  </module>
-  <module name="http.client" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\http\client.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="96" merged_total="14644" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="email.parser" finding="absolute" line="71" />
-      <module_usage name="email.message" finding="absolute" line="72" />
-      <module_usage name="errno" finding="absolute" line="73" />
-      <module_usage name="http" finding="absolute" line="74" />
-      <module_usage name="io" finding="absolute" line="75" />
-      <module_usage name="re" finding="absolute" line="76" />
-      <module_usage name="socket" finding="absolute" line="77" />
-      <module_usage name="sys" finding="absolute" line="78" />
-      <module_usage name="collections.abc" finding="absolute" line="79" />
-      <module_usage name="urllib.parse" finding="absolute" line="80" />
-      <module_usage name="ssl" finding="absolute" line="1443" />
     </module_usages>
   </module>
   <module name="imaplib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\imaplib.py">
@@ -3327,7 +2719,7 @@
     </module_usages>
   </module>
   <module name="inspect" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\inspect.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="210" merged_total="33749" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="210" merged_total="33744" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="144" />
@@ -3458,7 +2850,7 @@
     </module_usages>
   </module>
   <module name="logging" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\logging\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="82" merged_total="18386" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="82" merged_total="18340" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -3533,439 +2925,6 @@
       <module_usage name="ntpath" finding="absolute" line="157" />
     </module_usages>
   </module>
-  <module name="multiprocessing" kind="UncompiledPythonPackage" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="7" merged_total="149" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="sys" finding="absolute" line="15" />
-      <module_usage name="multiprocessing" finding="absolute" line="16" />
-      <module_usage name="multiprocessing.context" finding="relative" line="16" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Monkey patching &quot;multiprocessing&quot; for compiled methods." source_path="${sys.real_prefix}\Lib\multiprocessing\multiprocessing-postLoad.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="113" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="14" />
-    <module_usages>
-      <module_usage name="multiprocessing.forking" finding="not-found" line="2" />
-      <module_usage name="multiprocessing.reduction" finding="absolute" line="4" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing-preLoad" kind="CompiledPythonModule" usage="plugins" reason="Monkey patching &quot;multiprocessing&quot; load environment." source_path="${sys.real_prefix}\Lib\multiprocessing\multiprocessing-preLoad.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="14" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="4" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="1" />
-      <module_usage name="os" finding="absolute" line="1" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.connection" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\connection.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="69" merged_total="11667" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="errno" finding="absolute" line="12" />
-      <module_usage name="io" finding="absolute" line="13" />
-      <module_usage name="os" finding="absolute" line="14" />
-      <module_usage name="sys" finding="absolute" line="15" />
-      <module_usage name="socket" finding="absolute" line="16" />
-      <module_usage name="struct" finding="absolute" line="17" />
-      <module_usage name="time" finding="absolute" line="18" />
-      <module_usage name="tempfile" finding="absolute" line="19" />
-      <module_usage name="itertools" finding="absolute" line="20" />
-      <module_usage name="_multiprocessing" finding="absolute" line="22" />
-      <module_usage name="multiprocessing" finding="absolute" line="24" />
-      <module_usage name="multiprocessing.util" finding="relative" line="24" />
-      <module_usage name="multiprocessing" finding="absolute" line="26" />
-      <module_usage name="multiprocessing.AuthenticationError" finding="not-found" line="26" />
-      <module_usage name="multiprocessing.BufferTooShort" finding="not-found" line="26" />
-      <module_usage name="multiprocessing.context" finding="absolute" line="27" />
-      <module_usage name="_winapi" finding="absolute" line="31" />
-      <module_usage name="_winapi" finding="absolute" line="32" />
-      <module_usage name="io" finding="absolute" line="313" />
-      <module_usage name="io" finding="absolute" line="330" />
-      <module_usage name="io" finding="absolute" line="350" />
-      <module_usage name="io" finding="absolute" line="391" />
-      <module_usage name="hmac" finding="absolute" line="884" />
-      <module_usage name="hmac" finding="absolute" line="912" />
-      <module_usage name="xmlrpc.client" finding="absolute" line="994" />
-      <module_usage name="xmlrpc.client" finding="absolute" line="1000" />
-      <module_usage name="multiprocessing" finding="absolute" line="1152" />
-      <module_usage name="multiprocessing.resource_sharer" finding="relative" line="1152" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.context" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\context.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="82" merged_total="3655" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="sys" finding="absolute" line="2" />
-      <module_usage name="threading" finding="absolute" line="3" />
-      <module_usage name="multiprocessing" finding="absolute" line="5" />
-      <module_usage name="multiprocessing.process" finding="relative" line="5" />
-      <module_usage name="multiprocessing" finding="absolute" line="6" />
-      <module_usage name="multiprocessing.reduction" finding="relative" line="6" />
-      <module_usage name="multiprocessing.managers" finding="absolute" line="55" />
-      <module_usage name="multiprocessing.connection" finding="absolute" line="62" />
-      <module_usage name="multiprocessing.synchronize" finding="absolute" line="67" />
-      <module_usage name="multiprocessing.synchronize" finding="absolute" line="72" />
-      <module_usage name="multiprocessing.synchronize" finding="absolute" line="77" />
-      <module_usage name="multiprocessing.synchronize" finding="absolute" line="82" />
-      <module_usage name="multiprocessing.synchronize" finding="absolute" line="87" />
-      <module_usage name="multiprocessing.synchronize" finding="absolute" line="92" />
-      <module_usage name="multiprocessing.synchronize" finding="absolute" line="97" />
-      <module_usage name="multiprocessing.queues" finding="absolute" line="102" />
-      <module_usage name="multiprocessing.queues" finding="absolute" line="107" />
-      <module_usage name="multiprocessing.queues" finding="absolute" line="112" />
-      <module_usage name="multiprocessing.pool" finding="absolute" line="118" />
-      <module_usage name="multiprocessing.sharedctypes" finding="absolute" line="124" />
-      <module_usage name="multiprocessing.sharedctypes" finding="absolute" line="129" />
-      <module_usage name="multiprocessing.sharedctypes" finding="absolute" line="134" />
-      <module_usage name="multiprocessing.sharedctypes" finding="absolute" line="140" />
-      <module_usage name="multiprocessing.spawn" finding="absolute" line="149" />
-      <module_usage name="multiprocessing.util" finding="absolute" line="156" />
-      <module_usage name="multiprocessing.util" finding="absolute" line="161" />
-      <module_usage name="multiprocessing" finding="absolute" line="170" />
-      <module_usage name="multiprocessing.connection" finding="relative" line="170" />
-      <module_usage name="multiprocessing.spawn" finding="absolute" line="177" />
-      <module_usage name="multiprocessing.forkserver" finding="absolute" line="184" />
-      <module_usage name="multiprocessing.popen_spawn_win32" finding="absolute" line="336" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.dummy" kind="UncompiledPythonPackage" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\dummy\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="21" merged_total="1242" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="threading" finding="absolute" line="20" />
-      <module_usage name="sys" finding="absolute" line="21" />
-      <module_usage name="weakref" finding="absolute" line="22" />
-      <module_usage name="array" finding="absolute" line="23" />
-      <module_usage name="multiprocessing.dummy.connection" finding="absolute" line="25" />
-      <module_usage name="threading" finding="absolute" line="26" />
-      <module_usage name="threading" finding="absolute" line="27" />
-      <module_usage name="queue" finding="absolute" line="28" />
-      <module_usage name="multiprocessing.pool" finding="absolute" line="123" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.dummy.connection" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\dummy\connection.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="15" merged_total="910" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="queue" finding="absolute" line="12" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.forkserver" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\forkserver.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="39" merged_total="4491" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="errno" finding="absolute" line="1" />
-      <module_usage name="os" finding="absolute" line="2" />
-      <module_usage name="selectors" finding="absolute" line="3" />
-      <module_usage name="signal" finding="absolute" line="4" />
-      <module_usage name="socket" finding="absolute" line="5" />
-      <module_usage name="struct" finding="absolute" line="6" />
-      <module_usage name="sys" finding="absolute" line="7" />
-      <module_usage name="threading" finding="absolute" line="8" />
-      <module_usage name="warnings" finding="absolute" line="9" />
-      <module_usage name="multiprocessing" finding="absolute" line="11" />
-      <module_usage name="multiprocessing.connection" finding="relative" line="11" />
-      <module_usage name="multiprocessing" finding="absolute" line="12" />
-      <module_usage name="multiprocessing.process" finding="relative" line="12" />
-      <module_usage name="multiprocessing.context" finding="absolute" line="13" />
-      <module_usage name="multiprocessing" finding="absolute" line="14" />
-      <module_usage name="multiprocessing.resource_tracker" finding="relative" line="14" />
-      <module_usage name="multiprocessing" finding="absolute" line="15" />
-      <module_usage name="multiprocessing.spawn" finding="relative" line="15" />
-      <module_usage name="multiprocessing" finding="absolute" line="16" />
-      <module_usage name="multiprocessing.util" finding="relative" line="16" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.heap" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\heap.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="27" merged_total="3250" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="bisect" finding="absolute" line="10" />
-      <module_usage name="collections" finding="absolute" line="11" />
-      <module_usage name="collections.defaultdict" finding="not-found" line="11" />
-      <module_usage name="mmap" finding="absolute" line="12" />
-      <module_usage name="os" finding="absolute" line="13" />
-      <module_usage name="sys" finding="absolute" line="14" />
-      <module_usage name="tempfile" finding="absolute" line="15" />
-      <module_usage name="threading" finding="absolute" line="16" />
-      <module_usage name="multiprocessing.context" finding="absolute" line="18" />
-      <module_usage name="multiprocessing" finding="absolute" line="19" />
-      <module_usage name="multiprocessing.util" finding="relative" line="19" />
-      <module_usage name="_winapi" finding="absolute" line="29" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.managers" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\managers.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="83" merged_total="16580" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="17" />
-      <module_usage name="threading" finding="absolute" line="18" />
-      <module_usage name="signal" finding="absolute" line="19" />
-      <module_usage name="array" finding="absolute" line="20" />
-      <module_usage name="queue" finding="absolute" line="21" />
-      <module_usage name="time" finding="absolute" line="22" />
-      <module_usage name="types" finding="absolute" line="23" />
-      <module_usage name="os" finding="absolute" line="24" />
-      <module_usage name="os" finding="absolute" line="25" />
-      <module_usage name="traceback" finding="absolute" line="27" />
-      <module_usage name="multiprocessing" finding="absolute" line="29" />
-      <module_usage name="multiprocessing.connection" finding="relative" line="29" />
-      <module_usage name="multiprocessing.context" finding="absolute" line="30" />
-      <module_usage name="multiprocessing" finding="absolute" line="31" />
-      <module_usage name="multiprocessing.pool" finding="relative" line="31" />
-      <module_usage name="multiprocessing" finding="absolute" line="32" />
-      <module_usage name="multiprocessing.process" finding="relative" line="32" />
-      <module_usage name="multiprocessing" finding="absolute" line="33" />
-      <module_usage name="multiprocessing.util" finding="relative" line="33" />
-      <module_usage name="multiprocessing" finding="absolute" line="34" />
-      <module_usage name="multiprocessing.get_context" finding="not-found" line="34" />
-      <module_usage name="multiprocessing" finding="absolute" line="36" />
-      <module_usage name="multiprocessing.shared_memory" finding="relative" line="36" />
-      <module_usage name="traceback" finding="absolute" line="368" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.pool" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\pool.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="130" merged_total="12762" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="16" />
-      <module_usage name="itertools" finding="absolute" line="17" />
-      <module_usage name="os" finding="absolute" line="18" />
-      <module_usage name="queue" finding="absolute" line="19" />
-      <module_usage name="threading" finding="absolute" line="20" />
-      <module_usage name="time" finding="absolute" line="21" />
-      <module_usage name="traceback" finding="absolute" line="22" />
-      <module_usage name="types" finding="absolute" line="23" />
-      <module_usage name="warnings" finding="absolute" line="24" />
-      <module_usage name="multiprocessing" finding="absolute" line="28" />
-      <module_usage name="multiprocessing.util" finding="relative" line="28" />
-      <module_usage name="multiprocessing" finding="absolute" line="29" />
-      <module_usage name="multiprocessing.get_context" finding="not-found" line="29" />
-      <module_usage name="multiprocessing.TimeoutError" finding="not-found" line="29" />
-      <module_usage name="multiprocessing.connection" finding="absolute" line="30" />
-      <module_usage name="multiprocessing.dummy" finding="absolute" line="926" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.popen_spawn_win32" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\popen_spawn_win32.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="33" merged_total="1476" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="msvcrt" finding="absolute" line="2" />
-      <module_usage name="signal" finding="absolute" line="3" />
-      <module_usage name="sys" finding="absolute" line="4" />
-      <module_usage name="_winapi" finding="absolute" line="5" />
-      <module_usage name="multiprocessing.context" finding="absolute" line="7" />
-      <module_usage name="multiprocessing" finding="absolute" line="8" />
-      <module_usage name="multiprocessing.spawn" finding="relative" line="8" />
-      <module_usage name="multiprocessing" finding="absolute" line="9" />
-      <module_usage name="multiprocessing.util" finding="relative" line="9" />
-      <module_usage name="ntpath" finding="absolute" line="24" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.process" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\process.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="56" merged_total="3439" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="17" />
-      <module_usage name="sys" finding="absolute" line="18" />
-      <module_usage name="signal" finding="absolute" line="19" />
-      <module_usage name="itertools" finding="absolute" line="20" />
-      <module_usage name="threading" finding="absolute" line="21" />
-      <module_usage name="_weakrefset" finding="absolute" line="22" />
-      <module_usage name="multiprocessing" finding="absolute" line="291" />
-      <module_usage name="multiprocessing.util" finding="relative" line="291" />
-      <module_usage name="multiprocessing.context" finding="relative" line="291" />
-      <module_usage name="traceback" finding="absolute" line="328" />
-      <module_usage name="multiprocessing" finding="absolute" line="340" />
-      <module_usage name="multiprocessing.util" finding="relative" line="340" />
-      <module_usage name="multiprocessing.context" finding="absolute" line="351" />
-      <module_usage name="multiprocessing.connection" finding="absolute" line="377" />
-      <module_usage name="multiprocessing.connection" finding="absolute" line="388" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.queues" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\queues.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="46" merged_total="4711" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="12" />
-      <module_usage name="os" finding="absolute" line="13" />
-      <module_usage name="threading" finding="absolute" line="14" />
-      <module_usage name="collections" finding="absolute" line="15" />
-      <module_usage name="time" finding="absolute" line="16" />
-      <module_usage name="types" finding="absolute" line="17" />
-      <module_usage name="weakref" finding="absolute" line="18" />
-      <module_usage name="errno" finding="absolute" line="19" />
-      <module_usage name="queue" finding="absolute" line="21" />
-      <module_usage name="_multiprocessing" finding="absolute" line="23" />
-      <module_usage name="multiprocessing" finding="absolute" line="25" />
-      <module_usage name="multiprocessing.connection" finding="relative" line="25" />
-      <module_usage name="multiprocessing" finding="absolute" line="26" />
-      <module_usage name="multiprocessing.context" finding="relative" line="26" />
-      <module_usage name="multiprocessing.util" finding="absolute" line="29" />
-      <module_usage name="multiprocessing.synchronize" finding="absolute" line="40" />
-      <module_usage name="traceback" finding="absolute" line="300" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.reduction" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\reduction.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="56" merged_total="2210" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="abc" finding="absolute" line="10" />
-      <module_usage name="copyreg" finding="absolute" line="11" />
-      <module_usage name="functools" finding="absolute" line="12" />
-      <module_usage name="io" finding="absolute" line="13" />
-      <module_usage name="os" finding="absolute" line="14" />
-      <module_usage name="pickle" finding="absolute" line="15" />
-      <module_usage name="socket" finding="absolute" line="16" />
-      <module_usage name="sys" finding="absolute" line="17" />
-      <module_usage name="multiprocessing" finding="absolute" line="19" />
-      <module_usage name="multiprocessing.context" finding="relative" line="19" />
-      <module_usage name="io" finding="absolute" line="50" />
-      <module_usage name="_winapi" finding="absolute" line="69" />
-      <module_usage name="functools" finding="absolute" line="226" />
-      <module_usage name="functools" finding="absolute" line="227" />
-      <module_usage name="multiprocessing.resource_sharer" finding="absolute" line="235" />
-      <module_usage name="functools" finding="absolute" line="280" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.resource_sharer" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\resource_sharer.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="2360" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="11" />
-      <module_usage name="signal" finding="absolute" line="12" />
-      <module_usage name="socket" finding="absolute" line="13" />
-      <module_usage name="sys" finding="absolute" line="14" />
-      <module_usage name="threading" finding="absolute" line="15" />
-      <module_usage name="multiprocessing" finding="absolute" line="17" />
-      <module_usage name="multiprocessing.process" finding="relative" line="17" />
-      <module_usage name="multiprocessing.context" finding="absolute" line="18" />
-      <module_usage name="multiprocessing" finding="absolute" line="19" />
-      <module_usage name="multiprocessing.util" finding="relative" line="19" />
-      <module_usage name="multiprocessing.connection" finding="absolute" line="84" />
-      <module_usage name="multiprocessing.connection" finding="absolute" line="92" />
-      <module_usage name="multiprocessing.connection" finding="absolute" line="123" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.resource_tracker" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\resource_tracker.py">
-    <plugin-influence name="anti-bloat" influence="condition-used" condition="not module_mode" tags_used="module_mode" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="34" merged_total="3493" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="18" />
-      <module_usage name="signal" finding="absolute" line="19" />
-      <module_usage name="sys" finding="absolute" line="20" />
-      <module_usage name="threading" finding="absolute" line="21" />
-      <module_usage name="warnings" finding="absolute" line="22" />
-      <module_usage name="multiprocessing" finding="absolute" line="24" />
-      <module_usage name="multiprocessing.spawn" finding="relative" line="24" />
-      <module_usage name="multiprocessing" finding="absolute" line="25" />
-      <module_usage name="multiprocessing.util" finding="relative" line="25" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.shared_memory" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\shared_memory.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="107" merged_total="3877" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="functools" finding="absolute" line="11" />
-      <module_usage name="mmap" finding="absolute" line="12" />
-      <module_usage name="os" finding="absolute" line="13" />
-      <module_usage name="errno" finding="absolute" line="14" />
-      <module_usage name="struct" finding="absolute" line="15" />
-      <module_usage name="secrets" finding="absolute" line="16" />
-      <module_usage name="types" finding="absolute" line="17" />
-      <module_usage name="_winapi" finding="absolute" line="20" />
-      <module_usage name="multiprocessing" finding="absolute" line="26" />
-      <module_usage name="multiprocessing.resource_tracker" finding="relative" line="26" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.sharedctypes" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\sharedctypes.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="2855" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="ctypes" finding="absolute" line="10" />
-      <module_usage name="weakref" finding="absolute" line="11" />
-      <module_usage name="multiprocessing" finding="absolute" line="13" />
-      <module_usage name="multiprocessing.heap" finding="relative" line="13" />
-      <module_usage name="multiprocessing" finding="absolute" line="14" />
-      <module_usage name="multiprocessing.get_context" finding="not-found" line="14" />
-      <module_usage name="multiprocessing.context" finding="absolute" line="16" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.spawn" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\spawn.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="72" merged_total="1714" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="11" />
-      <module_usage name="sys" finding="absolute" line="12" />
-      <module_usage name="runpy" finding="absolute" line="13" />
-      <module_usage name="types" finding="absolute" line="14" />
-      <module_usage name="multiprocessing" finding="absolute" line="16" />
-      <module_usage name="multiprocessing.get_start_method" finding="not-found" line="16" />
-      <module_usage name="multiprocessing.set_start_method" finding="not-found" line="16" />
-      <module_usage name="multiprocessing" finding="absolute" line="17" />
-      <module_usage name="multiprocessing.process" finding="relative" line="17" />
-      <module_usage name="multiprocessing.context" finding="absolute" line="18" />
-      <module_usage name="multiprocessing" finding="absolute" line="19" />
-      <module_usage name="multiprocessing.util" finding="relative" line="19" />
-      <module_usage name="ntpath" finding="absolute" line="49" />
-      <module_usage name="msvcrt" finding="absolute" line="104" />
-      <module_usage name="_winapi" finding="absolute" line="105" />
-      <module_usage name="ntpath" finding="absolute" line="199" />
-      <module_usage name="ntpath" finding="absolute" line="201" />
-      <module_usage name="ntpath" finding="absolute" line="283" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.synchronize" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\synchronize.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="53" merged_total="5707" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="threading" finding="absolute" line="14" />
-      <module_usage name="sys" finding="absolute" line="15" />
-      <module_usage name="tempfile" finding="absolute" line="16" />
-      <module_usage name="_multiprocessing" finding="absolute" line="17" />
-      <module_usage name="time" finding="absolute" line="18" />
-      <module_usage name="multiprocessing" finding="absolute" line="20" />
-      <module_usage name="multiprocessing.context" finding="relative" line="20" />
-      <module_usage name="multiprocessing" finding="absolute" line="21" />
-      <module_usage name="multiprocessing.process" finding="relative" line="21" />
-      <module_usage name="multiprocessing" finding="absolute" line="22" />
-      <module_usage name="multiprocessing.util" finding="relative" line="22" />
-      <module_usage name="_multiprocessing" finding="absolute" line="28" />
-      <module_usage name="multiprocessing.resource_tracker" finding="absolute" line="79" />
-      <module_usage name="multiprocessing.resource_tracker" finding="absolute" line="86" />
-      <module_usage name="struct" finding="absolute" line="373" />
-      <module_usage name="multiprocessing.heap" finding="absolute" line="374" />
-    </module_usages>
-  </module>
-  <module name="multiprocessing.util" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\util.py">
-    <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_unittest" tags_used="use_unittest" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="37" merged_total="3666" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="10" />
-      <module_usage name="itertools" finding="absolute" line="11" />
-      <module_usage name="sys" finding="absolute" line="12" />
-      <module_usage name="weakref" finding="absolute" line="13" />
-      <module_usage name="atexit" finding="absolute" line="14" />
-      <module_usage name="threading" finding="absolute" line="15" />
-      <module_usage name="subprocess" finding="absolute" line="17" />
-      <module_usage name="multiprocessing" finding="absolute" line="19" />
-      <module_usage name="multiprocessing.process" finding="relative" line="19" />
-      <module_usage name="logging" finding="absolute" line="65" />
-      <module_usage name="logging" finding="absolute" line="92" />
-      <module_usage name="shutil" finding="absolute" line="148" />
-      <module_usage name="tempfile" finding="absolute" line="148" />
-      <module_usage name="traceback" finding="absolute" line="305" />
-      <module_usage name="_posixsubprocess" finding="not-found" line="451" />
-      <module_usage name="subprocess" finding="absolute" line="452" />
-    </module_usages>
-  </module>
   <module name="netrc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\netrc.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="124" merged_total="2911" />
     <optimization-time pass="2" time="volatile" />
@@ -3976,7 +2935,7 @@
     </module_usages>
   </module>
   <module name="ntpath" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\ntpath.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="139" merged_total="11070" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="139" merged_total="11060" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="20" />
@@ -4075,7 +3034,7 @@
     </module_usages>
   </module>
   <module name="pickle" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\pickle.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="352" merged_total="17292" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="352" merged_total="17297" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="26" />
@@ -4255,465 +3214,6 @@
       <module_usage name="importlib.util" finding="absolute" line="46" />
     </module_usages>
   </module>
-  <module name="pydantic" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\__init__.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="3" merged_total="27" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="9" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="pydantic" finding="absolute" line="2" />
-      <module_usage name="pydantic.dataclasses" finding="relative" line="2" />
-      <module_usage name="pydantic.annotated_types" finding="relative" line="3" />
-      <module_usage name="pydantic.class_validators" finding="relative" line="4" />
-      <module_usage name="pydantic.config" finding="relative" line="5" />
-      <module_usage name="pydantic.decorator" finding="relative" line="6" />
-      <module_usage name="pydantic.env_settings" finding="relative" line="7" />
-      <module_usage name="pydantic.error_wrappers" finding="relative" line="8" />
-      <module_usage name="pydantic.errors" finding="relative" line="9" />
-      <module_usage name="pydantic.fields" finding="relative" line="10" />
-      <module_usage name="pydantic.main" finding="relative" line="11" />
-      <module_usage name="pydantic.networks" finding="relative" line="12" />
-      <module_usage name="pydantic.parse" finding="relative" line="13" />
-      <module_usage name="pydantic.tools" finding="relative" line="14" />
-      <module_usage name="pydantic.types" finding="relative" line="15" />
-      <module_usage name="pydantic.version" finding="relative" line="16" />
-    </module_usages>
-  </module>
-  <module name="pydantic.annotated_types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\annotated_types.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="445" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="87" />
-    <module_usages>
-      <module_usage name="typing" finding="absolute" line="1" />
-      <module_usage name="pydantic.fields" finding="relative" line="3" />
-      <module_usage name="pydantic.main" finding="relative" line="4" />
-    </module_usages>
-  </module>
-  <module name="pydantic.class_validators" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\class_validators.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="40" merged_total="3087" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="460" />
-    <module_usages>
-      <module_usage name="warnings" finding="absolute" line="1" />
-      <module_usage name="collections" finding="absolute" line="2" />
-      <module_usage name="collections.ChainMap" finding="not-found" line="2" />
-      <module_usage name="functools" finding="absolute" line="3" />
-      <module_usage name="itertools" finding="absolute" line="4" />
-      <module_usage name="types" finding="absolute" line="5" />
-      <module_usage name="typing" finding="absolute" line="6" />
-      <module_usage name="pydantic.errors" finding="relative" line="8" />
-      <module_usage name="pydantic.typing" finding="relative" line="9" />
-      <module_usage name="pydantic.utils" finding="relative" line="10" />
-      <module_usage name="inspect" finding="absolute" line="197" />
-      <module_usage name="inspect" finding="absolute" line="239" />
-    </module_usages>
-  </module>
-  <module name="pydantic.color" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\color.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="25" max_branch_merge="82" merged_total="18168" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="80" merged_total="714" />
-    <module_usages>
-      <module_usage name="math" finding="absolute" line="10" />
-      <module_usage name="re" finding="absolute" line="11" />
-      <module_usage name="colorsys" finding="absolute" line="12" />
-      <module_usage name="typing" finding="absolute" line="13" />
-      <module_usage name="pydantic.errors" finding="relative" line="15" />
-      <module_usage name="pydantic.utils" finding="relative" line="16" />
-    </module_usages>
-  </module>
-  <module name="pydantic.config" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\config.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="205" merged_total="1232" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="77" merged_total="177" />
-    <module_usages>
-      <module_usage name="json" finding="absolute" line="1" />
-      <module_usage name="enum" finding="absolute" line="2" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="pydantic.typing" finding="relative" line="5" />
-      <module_usage name="pydantic.utils" finding="relative" line="6" />
-    </module_usages>
-  </module>
-  <module name="pydantic.dataclasses" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\dataclasses.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="82" merged_total="1564" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="69" merged_total="282" />
-    <module_usages>
-      <module_usage name="typing" finding="absolute" line="1" />
-      <module_usage name="pydantic.class_validators" finding="relative" line="3" />
-      <module_usage name="pydantic.error_wrappers" finding="relative" line="4" />
-      <module_usage name="pydantic.errors" finding="relative" line="5" />
-      <module_usage name="pydantic.fields" finding="relative" line="6" />
-      <module_usage name="pydantic.main" finding="relative" line="7" />
-      <module_usage name="pydantic.typing" finding="relative" line="8" />
-      <module_usage name="pydantic.utils" finding="relative" line="9" />
-      <module_usage name="dataclasses" finding="absolute" line="51" />
-      <module_usage name="dataclasses" finding="absolute" line="80" />
-      <module_usage name="dataclasses" finding="absolute" line="119" />
-    </module_usages>
-  </module>
-  <module name="pydantic.datetime_parse" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\datetime_parse.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="47" merged_total="2060" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="44" merged_total="376" />
-    <module_usages>
-      <module_usage name="re" finding="absolute" line="17" />
-      <module_usage name="datetime" finding="absolute" line="18" />
-      <module_usage name="typing" finding="absolute" line="19" />
-      <module_usage name="pydantic" finding="absolute" line="21" />
-      <module_usage name="pydantic.errors" finding="relative" line="21" />
-    </module_usages>
-  </module>
-  <module name="pydantic.decorator" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\decorator.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="88" merged_total="5725" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="83" merged_total="761" />
-    <module_usages>
-      <module_usage name="functools" finding="absolute" line="1" />
-      <module_usage name="typing" finding="absolute" line="2" />
-      <module_usage name="pydantic" finding="absolute" line="4" />
-      <module_usage name="pydantic.validator" finding="not-found" line="4" />
-      <module_usage name="pydantic.config" finding="relative" line="5" />
-      <module_usage name="pydantic.errors" finding="relative" line="6" />
-      <module_usage name="pydantic.main" finding="relative" line="7" />
-      <module_usage name="pydantic.typing" finding="relative" line="8" />
-      <module_usage name="pydantic.utils" finding="relative" line="9" />
-      <module_usage name="inspect" finding="absolute" line="62" />
-    </module_usages>
-  </module>
-  <module name="pydantic.env_settings" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\env_settings.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="75" merged_total="6079" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="69" merged_total="827" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="warnings" finding="absolute" line="2" />
-      <module_usage name="pathlib" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="pydantic.config" finding="relative" line="6" />
-      <module_usage name="pydantic.fields" finding="relative" line="7" />
-      <module_usage name="pydantic.main" finding="relative" line="8" />
-      <module_usage name="pydantic.typing" finding="relative" line="9" />
-      <module_usage name="pydantic.utils" finding="relative" line="10" />
-      <module_usage name="dotenv" finding="not-found" line="298" />
-    </module_usages>
-  </module>
-  <module name="pydantic.error_wrappers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\error_wrappers.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="1685" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="307" />
-    <module_usages>
-      <module_usage name="json" finding="absolute" line="1" />
-      <module_usage name="typing" finding="absolute" line="2" />
-      <module_usage name="pydantic.json" finding="relative" line="4" />
-      <module_usage name="pydantic.utils" finding="relative" line="5" />
-    </module_usages>
-  </module>
-  <module name="pydantic.errors" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\errors.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="29" merged_total="19975" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="3252" />
-    <module_usages>
-      <module_usage name="decimal" finding="absolute" line="1" />
-      <module_usage name="pathlib" finding="absolute" line="2" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="pydantic.typing" finding="relative" line="5" />
-    </module_usages>
-  </module>
-  <module name="pydantic.fields" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\fields.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="445" merged_total="19450" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="308" merged_total="2680" />
-    <distribution-usages>
-      <distribution-usage name="typing_extensions" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="1" />
-      <module_usage name="collections.Counter" finding="not-found" line="1" />
-      <module_usage name="collections.defaultdict" finding="not-found" line="1" />
-      <module_usage name="collections.deque" finding="not-found" line="1" />
-      <module_usage name="collections.abc" finding="absolute" line="2" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="typing_extensions" finding="absolute" line="26" />
-      <module_usage name="pydantic" finding="absolute" line="28" />
-      <module_usage name="pydantic.errors" finding="relative" line="28" />
-      <module_usage name="pydantic.class_validators" finding="relative" line="29" />
-      <module_usage name="pydantic.error_wrappers" finding="relative" line="30" />
-      <module_usage name="pydantic.errors" finding="relative" line="31" />
-      <module_usage name="pydantic.types" finding="relative" line="32" />
-      <module_usage name="pydantic.typing" finding="relative" line="33" />
-      <module_usage name="pydantic.utils" finding="relative" line="47" />
-      <module_usage name="pydantic.validators" finding="relative" line="58" />
-      <module_usage name="pydantic.schema" finding="relative" line="477" />
-      <module_usage name="pydantic.main" finding="relative" line="1127" />
-    </module_usages>
-  </module>
-  <module name="pydantic.json" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\json.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="566" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="96" />
-    <module_usages>
-      <module_usage name="datetime" finding="absolute" line="1" />
-      <module_usage name="re" finding="absolute" line="2" />
-      <module_usage name="sys" finding="absolute" line="3" />
-      <module_usage name="collections" finding="absolute" line="4" />
-      <module_usage name="collections.deque" finding="not-found" line="4" />
-      <module_usage name="decimal" finding="absolute" line="5" />
-      <module_usage name="enum" finding="absolute" line="6" />
-      <module_usage name="ipaddress" finding="absolute" line="7" />
-      <module_usage name="pathlib" finding="absolute" line="8" />
-      <module_usage name="types" finding="absolute" line="9" />
-      <module_usage name="typing" finding="absolute" line="10" />
-      <module_usage name="uuid" finding="absolute" line="11" />
-      <module_usage name="pydantic.color" finding="relative" line="19" />
-      <module_usage name="pydantic.networks" finding="relative" line="20" />
-      <module_usage name="pydantic.types" finding="relative" line="21" />
-      <module_usage name="dataclasses" finding="absolute" line="80" />
-      <module_usage name="pydantic.main" finding="relative" line="82" />
-    </module_usages>
-  </module>
-  <module name="pydantic.main" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\main.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="490" merged_total="22643" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="475" merged_total="2796" />
-    <module_usages>
-      <module_usage name="warnings" finding="absolute" line="1" />
-      <module_usage name="abc" finding="absolute" line="2" />
-      <module_usage name="copy" finding="absolute" line="3" />
-      <module_usage name="enum" finding="absolute" line="4" />
-      <module_usage name="functools" finding="absolute" line="5" />
-      <module_usage name="pathlib" finding="absolute" line="6" />
-      <module_usage name="types" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="8" />
-      <module_usage name="pydantic.class_validators" finding="relative" line="27" />
-      <module_usage name="pydantic.config" finding="relative" line="28" />
-      <module_usage name="pydantic.error_wrappers" finding="relative" line="29" />
-      <module_usage name="pydantic.errors" finding="relative" line="30" />
-      <module_usage name="pydantic.fields" finding="relative" line="31" />
-      <module_usage name="pydantic.json" finding="relative" line="32" />
-      <module_usage name="pydantic.parse" finding="relative" line="33" />
-      <module_usage name="pydantic.schema" finding="relative" line="34" />
-      <module_usage name="pydantic.types" finding="relative" line="35" />
-      <module_usage name="pydantic.typing" finding="relative" line="36" />
-      <module_usage name="pydantic.utils" finding="relative" line="46" />
-      <module_usage name="cython" finding="not-found" line="83" />
-      <module_usage name="pydantic.json" finding="relative" line="655" />
-    </module_usages>
-  </module>
-  <module name="pydantic.mypy" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\mypy.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="109" merged_total="10372" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="108" merged_total="1382" />
-    <module_usages>
-      <module_usage name="configparser" finding="absolute" line="1" />
-      <module_usage name="typing" finding="absolute" line="2" />
-      <module_usage name="mypy.errorcodes" finding="not-found" line="4" />
-      <module_usage name="mypy.nodes" finding="not-found" line="5" />
-      <module_usage name="mypy.options" finding="not-found" line="36" />
-      <module_usage name="mypy.plugin" finding="not-found" line="37" />
-      <module_usage name="mypy.plugins" finding="not-found" line="38" />
-      <module_usage name="mypy.semanal" finding="not-found" line="39" />
-      <module_usage name="mypy.server.trigger" finding="not-found" line="40" />
-      <module_usage name="mypy.types" finding="not-found" line="41" />
-      <module_usage name="mypy.typevars" finding="not-found" line="53" />
-      <module_usage name="mypy.util" finding="not-found" line="54" />
-      <module_usage name="mypy.version" finding="not-found" line="55" />
-      <module_usage name="pydantic.utils" finding="absolute" line="57" />
-      <module_usage name="mypy.types" finding="not-found" line="60" />
-      <module_usage name="mypy.types" finding="not-found" line="63" />
-      <module_usage name="tomli" finding="not-found" line="726" />
-      <module_usage name="toml" finding="not-found" line="731" />
-      <module_usage name="warnings" finding="absolute" line="733" />
-    </module_usages>
-  </module>
-  <module name="pydantic.networks" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\networks.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="208" merged_total="9524" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="199" merged_total="1580" />
-    <module_usages>
-      <module_usage name="re" finding="absolute" line="1" />
-      <module_usage name="ipaddress" finding="absolute" line="2" />
-      <module_usage name="typing" finding="absolute" line="12" />
-      <module_usage name="pydantic" finding="absolute" line="28" />
-      <module_usage name="pydantic.errors" finding="relative" line="28" />
-      <module_usage name="pydantic.utils" finding="relative" line="29" />
-      <module_usage name="pydantic.validators" finding="relative" line="30" />
-      <module_usage name="email_validator" finding="not-found" line="409" />
-    </module_usages>
-  </module>
-  <module name="pydantic.parse" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\parse.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="47" merged_total="462" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="110" />
-    <module_usages>
-      <module_usage name="json" finding="absolute" line="1" />
-      <module_usage name="pickle" finding="absolute" line="2" />
-      <module_usage name="enum" finding="absolute" line="3" />
-      <module_usage name="pathlib" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="pydantic.types" finding="relative" line="7" />
-    </module_usages>
-  </module>
-  <module name="pydantic.schema" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\schema.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="195" merged_total="10273" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="151" merged_total="1652" />
-    <distribution-usages>
-      <distribution-usage name="typing_extensions" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="re" finding="absolute" line="1" />
-      <module_usage name="warnings" finding="absolute" line="2" />
-      <module_usage name="collections" finding="absolute" line="3" />
-      <module_usage name="collections.defaultdict" finding="not-found" line="3" />
-      <module_usage name="datetime" finding="absolute" line="4" />
-      <module_usage name="decimal" finding="absolute" line="5" />
-      <module_usage name="enum" finding="absolute" line="6" />
-      <module_usage name="ipaddress" finding="absolute" line="7" />
-      <module_usage name="pathlib" finding="absolute" line="8" />
-      <module_usage name="typing" finding="absolute" line="9" />
-      <module_usage name="uuid" finding="absolute" line="28" />
-      <module_usage name="typing_extensions" finding="absolute" line="30" />
-      <module_usage name="pydantic.fields" finding="relative" line="32" />
-      <module_usage name="pydantic.json" finding="relative" line="47" />
-      <module_usage name="pydantic.networks" finding="relative" line="48" />
-      <module_usage name="pydantic.types" finding="relative" line="49" />
-      <module_usage name="pydantic.typing" finding="relative" line="68" />
-      <module_usage name="pydantic.utils" finding="relative" line="80" />
-      <module_usage name="inspect" finding="absolute" line="96" />
-      <module_usage name="pydantic.dataclasses" finding="relative" line="414" />
-      <module_usage name="pydantic.main" finding="relative" line="415" />
-      <module_usage name="pydantic.main" finding="relative" line="484" />
-      <module_usage name="inspect" finding="absolute" line="604" />
-      <module_usage name="inspect" finding="absolute" line="697" />
-      <module_usage name="pydantic.main" finding="relative" line="837" />
-    </module_usages>
-  </module>
-  <module name="pydantic.tools" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\tools.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="13" merged_total="201" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="40" />
-    <module_usages>
-      <module_usage name="json" finding="absolute" line="1" />
-      <module_usage name="functools" finding="absolute" line="2" />
-      <module_usage name="pathlib" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="pydantic.parse" finding="relative" line="6" />
-      <module_usage name="pydantic.types" finding="relative" line="7" />
-      <module_usage name="pydantic.typing" finding="relative" line="8" />
-      <module_usage name="pydantic.main" finding="absolute" line="24" />
-    </module_usages>
-  </module>
-  <module name="pydantic.types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\types.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="78" merged_total="17734" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="69" merged_total="2826" />
-    <module_usages>
-      <module_usage name="math" finding="absolute" line="1" />
-      <module_usage name="re" finding="absolute" line="2" />
-      <module_usage name="warnings" finding="absolute" line="3" />
-      <module_usage name="datetime" finding="absolute" line="4" />
-      <module_usage name="decimal" finding="absolute" line="5" />
-      <module_usage name="enum" finding="absolute" line="6" />
-      <module_usage name="pathlib" finding="absolute" line="7" />
-      <module_usage name="types" finding="absolute" line="8" />
-      <module_usage name="typing" finding="absolute" line="9" />
-      <module_usage name="uuid" finding="absolute" line="27" />
-      <module_usage name="weakref" finding="absolute" line="28" />
-      <module_usage name="pydantic" finding="absolute" line="30" />
-      <module_usage name="pydantic.errors" finding="relative" line="30" />
-      <module_usage name="pydantic.datetime_parse" finding="relative" line="31" />
-      <module_usage name="pydantic.utils" finding="relative" line="32" />
-      <module_usage name="pydantic.validators" finding="relative" line="33" />
-    </module_usages>
-  </module>
-  <module name="pydantic.typing" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\typing.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="38" merged_total="2889" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="26" merged_total="364" />
-    <distribution-usages>
-      <distribution-usage name="typing_extensions" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="1" />
-      <module_usage name="os" finding="absolute" line="2" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="typing_extensions" finding="absolute" line="25" />
-      <module_usage name="typing" finding="absolute" line="28" />
-      <module_usage name="typing" finding="absolute" line="30" />
-      <module_usage name="typing" finding="absolute" line="33" />
-      <module_usage name="typing" finding="absolute" line="52" />
-      <module_usage name="collections.abc" finding="absolute" line="91" />
-      <module_usage name="typing" finding="absolute" line="92" />
-      <module_usage name="typing" finding="absolute" line="111" />
-      <module_usage name="typing" finding="absolute" line="159" />
-      <module_usage name="types" finding="absolute" line="197" />
-      <module_usage name="typing" finding="absolute" line="198" />
-      <module_usage name="pydantic.utils" finding="relative" line="403" />
-      <module_usage name="pydantic.utils" finding="relative" line="413" />
-    </module_usages>
-  </module>
-  <module name="pydantic.utils" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\utils.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="81" merged_total="9732" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="77" merged_total="1297" />
-    <distribution-usages>
-      <distribution-usage name="typing_extensions" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="warnings" finding="absolute" line="1" />
-      <module_usage name="weakref" finding="absolute" line="2" />
-      <module_usage name="collections" finding="absolute" line="3" />
-      <module_usage name="collections.OrderedDict" finding="not-found" line="3" />
-      <module_usage name="collections.defaultdict" finding="not-found" line="3" />
-      <module_usage name="collections.deque" finding="not-found" line="3" />
-      <module_usage name="copy" finding="absolute" line="4" />
-      <module_usage name="itertools" finding="absolute" line="5" />
-      <module_usage name="types" finding="absolute" line="6" />
-      <module_usage name="typing" finding="absolute" line="7" />
-      <module_usage name="typing_extensions" finding="absolute" line="27" />
-      <module_usage name="pydantic.errors" finding="relative" line="29" />
-      <module_usage name="pydantic.typing" finding="relative" line="30" />
-      <module_usage name="pydantic.version" finding="relative" line="40" />
-      <module_usage name="importlib" finding="absolute" line="120" />
-      <module_usage name="inspect" finding="absolute" line="226" />
-      <module_usage name="pydantic.config" finding="relative" line="228" />
-      <module_usage name="pydantic.main" finding="relative" line="286" />
-    </module_usages>
-  </module>
-  <module name="pydantic.validators" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\validators.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="95" merged_total="5626" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="90" merged_total="675" />
-    <module_usages>
-      <module_usage name="re" finding="absolute" line="1" />
-      <module_usage name="collections" finding="absolute" line="2" />
-      <module_usage name="collections.OrderedDict" finding="not-found" line="2" />
-      <module_usage name="collections.deque" finding="not-found" line="2" />
-      <module_usage name="collections.abc" finding="absolute" line="3" />
-      <module_usage name="datetime" finding="absolute" line="4" />
-      <module_usage name="decimal" finding="absolute" line="5" />
-      <module_usage name="enum" finding="absolute" line="6" />
-      <module_usage name="ipaddress" finding="absolute" line="7" />
-      <module_usage name="pathlib" finding="absolute" line="8" />
-      <module_usage name="typing" finding="absolute" line="9" />
-      <module_usage name="uuid" finding="absolute" line="27" />
-      <module_usage name="pydantic" finding="absolute" line="29" />
-      <module_usage name="pydantic.errors" finding="relative" line="29" />
-      <module_usage name="pydantic.datetime_parse" finding="relative" line="30" />
-      <module_usage name="pydantic.typing" finding="relative" line="31" />
-      <module_usage name="pydantic.utils" finding="relative" line="43" />
-      <module_usage name="pydantic.annotated_types" finding="relative" line="559" />
-      <module_usage name="pydantic.annotated_types" finding="relative" line="583" />
-      <module_usage name="pydantic.dataclasses" finding="relative" line="659" />
-    </module_usages>
-  </module>
-  <module name="pydantic.version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\version.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="262" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="50" />
-    <module_usages>
-      <module_usage name="platform" finding="absolute" line="7" />
-      <module_usage name="sys" finding="absolute" line="8" />
-      <module_usage name="importlib" finding="absolute" line="9" />
-      <module_usage name="pathlib" finding="absolute" line="10" />
-      <module_usage name="pydantic.main" finding="relative" line="12" />
-    </module_usages>
-  </module>
-  <module name="pyexpat" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\pyexpat.pyd">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
-  <module name="queue" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\queue.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="55" merged_total="3077" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="threading" finding="absolute" line="3" />
-      <module_usage name="types" finding="absolute" line="4" />
-      <module_usage name="collections" finding="absolute" line="5" />
-      <module_usage name="collections.deque" finding="not-found" line="5" />
-      <module_usage name="heapq" finding="absolute" line="6" />
-      <module_usage name="time" finding="absolute" line="7" />
-      <module_usage name="_queue" finding="absolute" line="9" />
-      <module_usage name="_queue" finding="absolute" line="17" />
-    </module_usages>
-  </module>
   <module name="quopri" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\quopri.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="122" merged_total="2821" />
     <optimization-time pass="2" time="volatile" />
@@ -4822,20 +3322,6 @@
       <module_usage name="readline" finding="not-found" line="210" />
     </module_usages>
   </module>
-  <module name="runpy" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\runpy.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="39" merged_total="3551" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="13" />
-      <module_usage name="importlib.machinery" finding="absolute" line="14" />
-      <module_usage name="importlib.util" finding="absolute" line="15" />
-      <module_usage name="io" finding="absolute" line="16" />
-      <module_usage name="os" finding="absolute" line="17" />
-      <module_usage name="warnings" finding="absolute" line="123" />
-      <module_usage name="pkgutil" finding="absolute" line="252" />
-      <module_usage name="pkgutil" finding="absolute" line="280" />
-    </module_usages>
-  </module>
   <module name="sched" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\sched.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="1100" />
     <optimization-time pass="2" time="volatile" />
@@ -4847,15 +3333,6 @@
       <module_usage name="itertools" finding="absolute" line="29" />
       <module_usage name="threading" finding="absolute" line="30" />
       <module_usage name="time" finding="absolute" line="31" />
-    </module_usages>
-  </module>
-  <module name="secrets" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\secrets.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="105" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="base64" finding="absolute" line="15" />
-      <module_usage name="hmac" finding="absolute" line="17" />
-      <module_usage name="random" finding="absolute" line="18" />
     </module_usages>
   </module>
   <module name="select" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\select.pyd">
@@ -4875,6 +3352,36 @@
       <module_usage name="select" finding="absolute" line="12" />
       <module_usage name="sys" finding="absolute" line="13" />
     </module_usages>
+  </module>
+  <module name="shiboken6" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\shiboken6\__init__.py" distribution="shiboken6">
+    <plugin-influence name="dll-files" influence="condition-used" condition="win32" tags_used="win32" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="sys" finding="absolute" line="10" />
+      <module_usage name="os" finding="absolute" line="11" />
+      <module_usage name="zipfile" finding="absolute" line="12" />
+      <module_usage name="base64" finding="absolute" line="13" />
+      <module_usage name="marshal" finding="absolute" line="14" />
+      <module_usage name="io" finding="absolute" line="15" />
+      <module_usage name="contextlib" finding="absolute" line="16" />
+      <module_usage name="textwrap" finding="absolute" line="17" />
+      <module_usage name="traceback" finding="absolute" line="18" />
+      <module_usage name="types" finding="absolute" line="19" />
+      <module_usage name="struct" finding="absolute" line="20" />
+      <module_usage name="re" finding="absolute" line="21" />
+      <module_usage name="tempfile" finding="absolute" line="22" />
+      <module_usage name="keyword" finding="absolute" line="23" />
+      <module_usage name="functools" finding="absolute" line="24" />
+      <module_usage name="typing" finding="absolute" line="25" />
+      <module_usage name="shiboken6.Shiboken" finding="absolute" line="27" />
+    </module_usages>
+  </module>
+  <module name="shiboken6.Shiboken" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\Lib\site-packages\shiboken6\Shiboken.pyd" distribution="shiboken6">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
   </module>
   <module name="shlex" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\shlex.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="309" merged_total="3956" />
@@ -5044,36 +3551,6 @@
       <module_usage name="warnings" finding="absolute" line="1" />
       <module_usage name="re" finding="absolute" line="6" />
       <module_usage name="re._parser" finding="relative" line="6" />
-    </module_usages>
-  </module>
-  <module name="ssl" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\ssl.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="117" merged_total="10876" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="94" />
-      <module_usage name="os" finding="absolute" line="95" />
-      <module_usage name="collections" finding="absolute" line="96" />
-      <module_usage name="collections.namedtuple" finding="not-found" line="96" />
-      <module_usage name="enum" finding="absolute" line="97" />
-      <module_usage name="enum" finding="absolute" line="98" />
-      <module_usage name="_ssl" finding="absolute" line="100" />
-      <module_usage name="_ssl" finding="absolute" line="102" />
-      <module_usage name="_ssl" finding="absolute" line="103" />
-      <module_usage name="_ssl" finding="absolute" line="104" />
-      <module_usage name="_ssl" finding="absolute" line="108" />
-      <module_usage name="_ssl" finding="absolute" line="109" />
-      <module_usage name="_ssl" finding="absolute" line="111" />
-      <module_usage name="_ssl" finding="absolute" line="117" />
-      <module_usage name="_ssl" finding="absolute" line="121" />
-      <module_usage name="_ssl" finding="absolute" line="258" />
-      <module_usage name="socket" finding="absolute" line="260" />
-      <module_usage name="socket" finding="absolute" line="261" />
-      <module_usage name="socket" finding="absolute" line="262" />
-      <module_usage name="base64" finding="absolute" line="263" />
-      <module_usage name="errno" finding="absolute" line="264" />
-      <module_usage name="warnings" finding="absolute" line="265" />
-      <module_usage name="time" finding="absolute" line="1408" />
-      <module_usage name="calendar" finding="absolute" line="1409" />
     </module_usages>
   </module>
   <module name="stat" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\stat.py">
@@ -5407,7 +3884,7 @@
     </module_usages>
   </module>
   <module name="traceback" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\traceback.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="168" merged_total="13225" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="168" merged_total="13326" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="absolute" line="3" />
@@ -5467,38 +3944,6 @@
       <module_usage name="functools" finding="absolute" line="2451" />
     </module_usages>
   </module>
-  <module name="typing_extensions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\typing_extensions.py" distribution="typing_extensions">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="115" merged_total="31101" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="76" merged_total="3981" />
-    <module_usages>
-      <module_usage name="abc" finding="absolute" line="1" />
-      <module_usage name="builtins" finding="absolute" line="2" />
-      <module_usage name="collections" finding="absolute" line="3" />
-      <module_usage name="collections.abc" finding="absolute" line="4" />
-      <module_usage name="contextlib" finding="absolute" line="5" />
-      <module_usage name="enum" finding="absolute" line="6" />
-      <module_usage name="functools" finding="absolute" line="7" />
-      <module_usage name="inspect" finding="absolute" line="8" />
-      <module_usage name="keyword" finding="absolute" line="9" />
-      <module_usage name="operator" finding="absolute" line="10" />
-      <module_usage name="sys" finding="absolute" line="11" />
-      <module_usage name="types" finding="absolute" line="12" />
-      <module_usage name="typing" finding="absolute" line="13" />
-      <module_usage name="warnings" finding="absolute" line="14" />
-      <module_usage name="typing" finding="absolute" line="189" />
-      <module_usage name="functools" finding="absolute" line="354" />
-      <module_usage name="typing" finding="absolute" line="1637" />
-      <module_usage name="typing" finding="absolute" line="1742" />
-      <module_usage name="typing" finding="absolute" line="2792" />
-      <module_usage name="functools" finding="absolute" line="3201" />
-      <module_usage name="types" finding="absolute" line="3202" />
-      <module_usage name="asyncio.coroutines" finding="absolute" line="3246" />
-      <module_usage name="functools" finding="absolute" line="3247" />
-      <module_usage name="inspect" finding="absolute" line="3248" />
-      <module_usage name="_socket" finding="absolute" line="4130" />
-      <module_usage name="functools" finding="absolute" line="4265" />
-    </module_usages>
-  </module>
   <module name="unicodedata" kind="PythonExtensionModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\DLLs\unicodedata.pyd">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -5534,29 +3979,6 @@
       <module_usage name="os" finding="absolute" line="34" />
       <module_usage name="sys" finding="absolute" line="35" />
       <module_usage name="warnings" finding="absolute" line="36" />
-    </module_usages>
-  </module>
-  <module name="uuid" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\uuid.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="125" merged_total="5582" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="47" />
-      <module_usage name="sys" finding="absolute" line="48" />
-      <module_usage name="enum" finding="absolute" line="50" />
-      <module_usage name="io" finding="absolute" line="361" />
-      <module_usage name="os" finding="absolute" line="361" />
-      <module_usage name="shutil" finding="absolute" line="361" />
-      <module_usage name="subprocess" finding="absolute" line="361" />
-      <module_usage name="io" finding="absolute" line="386" />
-      <module_usage name="os" finding="absolute" line="531" />
-      <module_usage name="socket" finding="absolute" line="531" />
-      <module_usage name="_uuid" finding="absolute" line="580" />
-      <module_usage name="random" finding="absolute" line="619" />
-      <module_usage name="time" finding="absolute" line="691" />
-      <module_usage name="random" finding="absolute" line="700" />
-      <module_usage name="hashlib" finding="absolute" line="716" />
-      <module_usage name="hashlib" finding="absolute" line="731" />
-      <module_usage name="argparse" finding="absolute" line="752" />
     </module_usages>
   </module>
   <module name="warnings" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\warnings.py">
@@ -5615,53 +4037,6 @@
       <module_usage name="io" finding="absolute" line="8" />
       <module_usage name="functools" finding="absolute" line="9" />
       <module_usage name="warnings" finding="absolute" line="10" />
-    </module_usages>
-  </module>
-  <module name="xml" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\xml\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-    </module_usages>
-  </module>
-  <module name="xml.parsers" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\xml\parsers\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-    </module_usages>
-  </module>
-  <module name="xml.parsers.expat" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\xml\parsers\expat.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="2" />
-      <module_usage name="pyexpat" finding="absolute" line="4" />
-    </module_usages>
-  </module>
-  <module name="xmlrpc" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\xmlrpc\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-    </module_usages>
-  </module>
-  <module name="xmlrpc.client" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\xmlrpc\client.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="64" merged_total="9794" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="base64" finding="absolute" line="131" />
-      <module_usage name="sys" finding="absolute" line="132" />
-      <module_usage name="time" finding="absolute" line="133" />
-      <module_usage name="datetime" finding="absolute" line="134" />
-      <module_usage name="decimal" finding="absolute" line="135" />
-      <module_usage name="http.client" finding="absolute" line="136" />
-      <module_usage name="urllib.parse" finding="absolute" line="137" />
-      <module_usage name="xml.parsers" finding="absolute" line="138" />
-      <module_usage name="xml.parsers.expat" finding="relative" line="138" />
-      <module_usage name="errno" finding="absolute" line="139" />
-      <module_usage name="io" finding="absolute" line="140" />
-      <module_usage name="gzip" finding="absolute" line="142" />
     </module_usages>
   </module>
   <module name="zipfile" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\zipfile\__init__.py">
@@ -5735,34 +4110,67 @@
     <memory_usage name="before_c_code_generation" value="volatile" />
     <memory_usage name="before_running_scons" value="volatile" />
   </performance>
-  <included_extension name="_asyncio.pyd" dest_path="_asyncio.pyd" source_path="${sys.real_prefix}\DLLs\_asyncio.pyd" package="" ignored="no" reason="used extension module" />
+  <included_extension name="QtCore.pyd" dest_path="PySide6\QtCore.pyd" source_path="${sys.prefix}\Lib\site-packages\PySide6\QtCore.pyd" package="PySide6" ignored="no" reason="used extension module" />
+  <included_extension name="QtGui.pyd" dest_path="PySide6\QtGui.pyd" source_path="${sys.prefix}\Lib\site-packages\PySide6\QtGui.pyd" package="PySide6" ignored="no" reason="used extension module" />
+  <included_extension name="QtNetwork.pyd" dest_path="PySide6\QtNetwork.pyd" source_path="${sys.prefix}\Lib\site-packages\PySide6\QtNetwork.pyd" package="PySide6" ignored="no" reason="used extension module" />
+  <included_extension name="QtWidgets.pyd" dest_path="PySide6\QtWidgets.pyd" source_path="${sys.prefix}\Lib\site-packages\PySide6\QtWidgets.pyd" package="PySide6" ignored="no" reason="used extension module" />
+  <included_extension name="PySide6QtAds.pyd" dest_path="PySide6QtAds\PySide6QtAds.pyd" source_path="${sys.prefix}\Lib\site-packages\PySide6QtAds\PySide6QtAds.pyd" package="PySide6QtAds" ignored="no" reason="used extension module" />
   <included_extension name="_bz2.pyd" dest_path="_bz2.pyd" source_path="${sys.real_prefix}\DLLs\_bz2.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_ctypes.pyd" dest_path="_ctypes.pyd" source_path="${sys.real_prefix}\DLLs\_ctypes.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_decimal.pyd" dest_path="_decimal.pyd" source_path="${sys.real_prefix}\DLLs\_decimal.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_hashlib.pyd" dest_path="_hashlib.pyd" source_path="${sys.real_prefix}\DLLs\_hashlib.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_lzma.pyd" dest_path="_lzma.pyd" source_path="${sys.real_prefix}\DLLs\_lzma.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_multiprocessing.pyd" dest_path="_multiprocessing.pyd" source_path="${sys.real_prefix}\DLLs\_multiprocessing.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_overlapped.pyd" dest_path="_overlapped.pyd" source_path="${sys.real_prefix}\DLLs\_overlapped.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_queue.pyd" dest_path="_queue.pyd" source_path="${sys.real_prefix}\DLLs\_queue.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_socket.pyd" dest_path="_socket.pyd" source_path="${sys.real_prefix}\DLLs\_socket.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_ssl.pyd" dest_path="_ssl.pyd" source_path="${sys.real_prefix}\DLLs\_ssl.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_uuid.pyd" dest_path="_uuid.pyd" source_path="${sys.real_prefix}\DLLs\_uuid.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_wmi.pyd" dest_path="_wmi.pyd" source_path="${sys.real_prefix}\DLLs\_wmi.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="pyexpat.pyd" dest_path="pyexpat.pyd" source_path="${sys.real_prefix}\DLLs\pyexpat.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="select.pyd" dest_path="select.pyd" source_path="${sys.real_prefix}\DLLs\select.pyd" package="" ignored="no" reason="used extension module" />
+  <included_extension name="Shiboken.pyd" dest_path="shiboken6\Shiboken.pyd" source_path="${sys.prefix}\Lib\site-packages\shiboken6\Shiboken.pyd" package="shiboken6" ignored="no" reason="used extension module" />
   <included_extension name="unicodedata.pyd" dest_path="unicodedata.pyd" source_path="${sys.real_prefix}\DLLs\unicodedata.pyd" package="" ignored="no" reason="used extension module" />
-  <included_dll name="python312.dll" dest_path="python312.dll" source_path="${sys.real_prefix}\python312.dll" package="" ignored="no" reason="Used by 'PydanticUsing.exe'" />
-  <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.real_prefix}\vcruntime140.dll" package="" ignored="no" reason="Used by 'PydanticUsing.exe'" />
-  <included_dll name="libffi-8.dll" dest_path="libffi-8.dll" source_path="${sys.real_prefix}\dlls\libffi-8.dll" package="" ignored="no" reason="Used by '_ctypes.pyd'" />
+  <included_dll name="qsvgicon.dll" dest_path="PySide6\qt-plugins\iconengines\qsvgicon.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\iconengines\qsvgicon.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qgif.dll" dest_path="PySide6\qt-plugins\imageformats\qgif.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\imageformats\qgif.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qicns.dll" dest_path="PySide6\qt-plugins\imageformats\qicns.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\imageformats\qicns.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qico.dll" dest_path="PySide6\qt-plugins\imageformats\qico.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\imageformats\qico.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qjpeg.dll" dest_path="PySide6\qt-plugins\imageformats\qjpeg.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\imageformats\qjpeg.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qpdf.dll" dest_path="PySide6\qt-plugins\imageformats\qpdf.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\imageformats\qpdf.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qsvg.dll" dest_path="PySide6\qt-plugins\imageformats\qsvg.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\imageformats\qsvg.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qtga.dll" dest_path="PySide6\qt-plugins\imageformats\qtga.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\imageformats\qtga.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qtiff.dll" dest_path="PySide6\qt-plugins\imageformats\qtiff.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\imageformats\qtiff.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qwbmp.dll" dest_path="PySide6\qt-plugins\imageformats\qwbmp.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\imageformats\qwbmp.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qwebp.dll" dest_path="PySide6\qt-plugins\imageformats\qwebp.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\imageformats\qwebp.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qdirect2d.dll" dest_path="PySide6\qt-plugins\platforms\qdirect2d.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\platforms\qdirect2d.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qminimal.dll" dest_path="PySide6\qt-plugins\platforms\qminimal.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\platforms\qminimal.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qoffscreen.dll" dest_path="PySide6\qt-plugins\platforms\qoffscreen.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\platforms\qoffscreen.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qwindows.dll" dest_path="PySide6\qt-plugins\platforms\qwindows.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\platforms\qwindows.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qmodernwindowsstyle.dll" dest_path="PySide6\qt-plugins\styles\qmodernwindowsstyle.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\styles\qmodernwindowsstyle.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qcertonlybackend.dll" dest_path="PySide6\qt-plugins\tls\qcertonlybackend.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\tls\qcertonlybackend.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qopensslbackend.dll" dest_path="PySide6\qt-plugins\tls\qopensslbackend.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\tls\qopensslbackend.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qschannelbackend.dll" dest_path="PySide6\qt-plugins\tls\qschannelbackend.dll" source_path="${sys.prefix}\Lib\site-packages\PySide6\plugins\tls\qschannelbackend.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="msvcp140.dll" dest_path="shiboken6\msvcp140.dll" source_path="${sys.prefix}\Lib\site-packages\shiboken6\msvcp140.dll" package="shiboken6" ignored="no" reason="Yaml config of 'shiboken6'" />
+  <included_dll name="msvcp140_1.dll" dest_path="shiboken6\msvcp140_1.dll" source_path="${sys.prefix}\Lib\site-packages\shiboken6\msvcp140_1.dll" package="shiboken6" ignored="no" reason="Yaml config of 'shiboken6'" />
+  <included_dll name="msvcp140_2.dll" dest_path="shiboken6\msvcp140_2.dll" source_path="${sys.prefix}\Lib\site-packages\shiboken6\msvcp140_2.dll" package="shiboken6" ignored="no" reason="Yaml config of 'shiboken6'" />
+  <included_dll name="msvcp140_codecvt_ids.dll" dest_path="shiboken6\msvcp140_codecvt_ids.dll" source_path="${sys.prefix}\Lib\site-packages\shiboken6\msvcp140_codecvt_ids.dll" package="shiboken6" ignored="no" reason="Yaml config of 'shiboken6'" />
+  <included_dll name="python312.dll" dest_path="python312.dll" source_path="${sys.real_prefix}\python312.dll" package="" ignored="no" reason="Used by 'PySide6QtAdsUsing.exe'" />
+  <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.real_prefix}\vcruntime140.dll" package="" ignored="no" reason="Used by 'PySide6QtAdsUsing.exe'" />
+  <included_dll name="pyside6.abi3.dll" dest_path="pyside6.abi3.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\pyside6.abi3.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="python3.dll" dest_path="python3.dll" source_path="${sys.real_prefix}\python3.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="qt6core.dll" dest_path="qt6core.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6core.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="msvcp140.dll" dest_path="msvcp140.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\msvcp140.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="vcruntime140_1.dll" dest_path="vcruntime140_1.dll" source_path="${sys.real_prefix}\vcruntime140_1.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="msvcp140_1.dll" dest_path="msvcp140_1.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\msvcp140_1.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="qt6gui.dll" dest_path="qt6gui.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6gui.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtGui.pyd'" />
+  <included_dll name="msvcp140_2.dll" dest_path="msvcp140_2.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\msvcp140_2.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtGui.pyd'" />
+  <included_dll name="qt6network.dll" dest_path="qt6network.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6network.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtNetwork.pyd'" />
+  <included_dll name="qt6widgets.dll" dest_path="qt6widgets.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6widgets.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtWidgets.pyd'" />
   <included_dll name="libcrypto-3.dll" dest_path="libcrypto-3.dll" source_path="${sys.real_prefix}\dlls\libcrypto-3.dll" package="" ignored="no" reason="Used by '_hashlib.pyd'" />
-  <included_dll name="libssl-3.dll" dest_path="libssl-3.dll" source_path="${sys.real_prefix}\dlls\libssl-3.dll" package="" ignored="no" reason="Used by '_ssl.pyd'" />
+  <included_dll name="shiboken6.abi3.dll" dest_path="shiboken6.abi3.dll" source_path="${sys.prefix}\lib\site-packages\shiboken6\shiboken6.abi3.dll" package="shiboken6" ignored="no" reason="Used by 'shiboken6\Shiboken.pyd'" />
+  <included_dll name="qt6svg.dll" dest_path="qt6svg.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6svg.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qt-plugins\iconengines\qsvgicon.dll'" />
+  <included_dll name="qt6pdf.dll" dest_path="qt6pdf.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6pdf.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qt-plugins\imageformats\qpdf.dll'" />
   <command_line>
     <option value="--mode=standalone" />
-    <option value="C:\Users\kayha\repos\Nuitka-Watch\cases\Pydantic\PydanticUsing.py" />
+    <option value="--enable-plugin=pyside6" />
+    <option value="C:\Users\kayha\repos\Nuitka-Watch\cases\PySide6\qtads-example\PySide6QtAdsUsing.py" />
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=80d098ba469818d08e87300a287d1e4b" />
+    <option value="--report-user-provided=pipenv_hash=20c69e8ac0058de29cafb30d1422741f" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -5781,18 +4189,21 @@
     <plugin name="pbr-compat" user_enabled="no" />
     <plugin name="pkg-resources" user_enabled="no" />
     <plugin name="playwright" user_enabled="no" />
+    <plugin name="pyside6" user_enabled="yes" />
     <plugin name="pywebview" user_enabled="no" />
     <plugin name="spacy" user_enabled="no" />
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
-    <distribution name="pydantic" version="1.9.0" installer="pip" />
-    <distribution name="typing_extensions" version="4.13.2" installer="pip" />
+    <distribution name="PySide6" version="6.9.2" installer="pip" />
+    <distribution name="PySide6_Addons" version="6.9.2" installer="pip" />
+    <distribution name="PySide6_Essentials" version="6.9.2" installer="pip" />
+    <distribution name="shiboken6" version="6.9.2" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}\Scripts\python.EXE" python_flavor="CPython Official" python_version="3.12.2" os_name="Windows" os_release="11" arch_name="x86_64" filesystem_encoding="utf-8">
     <search_path>
       <path value="${cwd}" />
-      <path value="~\repos\Nuitka-Watch\cases\Pydantic" />
+      <path value="~\repos\Nuitka-Watch\cases\PySide6\qtads-example" />
       <path value="${sys.real_prefix}\DLLs" />
       <path value="${sys.real_prefix}\Lib" />
       <path value="${sys.real_prefix}" />
@@ -5801,7 +4212,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>80d098ba469818d08e87300a287d1e4b</pipenv_hash>
+    <pipenv_hash>20c69e8ac0058de29cafb30d1422741f</pipenv_hash>
   </user-data>
-  <output run_filename="${cwd}\PydanticUsing.dist\PydanticUsing.exe" />
+  <output run_filename="${cwd}\PySide6QtAdsUsing.dist\PySide6QtAdsUsing.exe" />
 </nuitka-compilation-report>

@@ -1,20 +1,129 @@
 <?xml version='1.0' encoding='utf8'?>
 <nuitka-compilation-report nuitka_version="2.7.13" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+  <module name="PySide6" kind="CompiledPythonPackage" usage="import" reason="Included to allow post load workaround code." source_path="${sys.prefix}\lib\site-packages\PySide6\__init__.py" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <plugin-influence name="options-nanny" influence="condition-used" condition="use_pyside6" tags_used="use_pyside6" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="40" merged_total="1547" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="226" />
+    <distribution-usages>
+      <distribution-usage name="shiboken6" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="sys" finding="absolute" line="2" />
+      <module_usage name="pathlib" finding="absolute" line="3" />
+      <module_usage name="types" finding="absolute" line="4" />
+      <module_usage name="shiboken6" finding="absolute" line="66" />
+      <module_usage name="shiboken6.Shiboken" finding="relative" line="66" />
+      <module_usage name="PySide6" finding="absolute" line="89" />
+      <module_usage name="PySide6.QtNetwork" finding="relative" line="89" />
+    </module_usages>
+  </module>
+  <module name="PySide6-postLoad" kind="CompiledPythonModule" usage="plugins" reason="According to Yaml 'post-import-code' configuration." source_path="${sys.prefix}\lib\site-packages\PySide6\PySide6-postLoad.py">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="356" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="40" />
+    <distribution-usages>
+      <distribution-usage name="PySide6" />
+      <distribution-usage name="PySide6_Addons" />
+      <distribution-usage name="PySide6_Essentials" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="PySide6" finding="absolute" line="25" />
+      <module_usage name="PySide6.QtCore" finding="relative" line="25" />
+    </module_usages>
+  </module>
+  <module name="PySide6-preLoad" kind="CompiledPythonModule" usage="plugins" reason="Adding binary folder to runtime 'PATH' environment variable for proper Qt loading." source_path="${sys.prefix}\lib\site-packages\PySide6\PySide6-preLoad.py">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="6" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="PySide6.QtCore" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtCore.pyd" distribution="PySide6">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="PySide6.QtCore-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Setting Qt library path to distribution folder. We need to avoid loading target&#10;system Qt plugins, which may be from another Qt version." source_path="${sys.prefix}\lib\site-packages\PySide6\PySide6\QtCore-postLoad.py" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="1" merged_total="1" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="PySide6.QtCore" finding="absolute" line="3" />
+      <module_usage name="os" finding="absolute" line="4" />
+      <module_usage name="ntpath" finding="absolute" line="11" />
+      <module_usage name="ntpath" finding="absolute" line="19" />
+    </module_usages>
+  </module>
+  <module name="PySide6.QtGui" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtGui.pyd" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="PySide6.QtNetwork" kind="PythonExtensionModule" usage="import fromlist" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtNetwork.pyd" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="PySide6.QtWidgets" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6\QtWidgets.pyd" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="PySide6.support" kind="CompiledPythonPackage" usage="package" reason="Containing package of 'PySide6.support.deprecated'." source_path="${sys.prefix}\lib\site-packages\PySide6\support\__init__.py" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <distribution-usages>
+      <distribution-usage name="shiboken6" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="__future__" finding="absolute" line="3" />
+      <module_usage name="shiboken6.Shiboken" finding="absolute" line="5" />
+    </module_usages>
+  </module>
+  <module name="PySide6.support.deprecated" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\PySide6\support\deprecated.py" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" />
+    </module_usages>
+  </module>
+  <module name="PySide6QtAds" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\PySide6QtAds\__init__.py">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="13" merged_total="154" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="50" />
+    <distribution-usages>
+      <distribution-usage name="PySide6" />
+      <distribution-usage name="PySide6_Addons" />
+      <distribution-usage name="PySide6_Essentials" />
+      <distribution-usage name="shiboken6" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="platform" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="4" />
+      <module_usage name="PySide6" finding="absolute" line="4" />
+      <module_usage name="shiboken6" finding="absolute" line="4" />
+      <module_usage name="PySide6QtAds.PySide6QtAds" finding="relative" line="7" />
+      <module_usage name="PySide6QtAds.PySide6QtAds" finding="relative" line="10" />
+    </module_usages>
+  </module>
+  <module name="PySide6QtAds.PySide6QtAds" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\PySide6QtAds\PySide6QtAds.pyd">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="8" merged_total="81" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="__main__" kind="PythonMainModule" usage="root_module" reason="Root module" source_path="~\repos\Nuitka-Watch\cases\Jsonschema\JsonschemaUsing.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="111" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="20" />
-    <distribution-usages>
-      <distribution-usage name="jsonschema" />
-    </distribution-usages>
+  <module name="__main__" kind="PythonMainModule" usage="root_module" reason="Root module" source_path="~\repos\Nuitka-Watch\cases\PySide6\qtads-example\PySide6QtAdsUsing.py">
+    <optimization-time pass="1" time="volatile" micro_passes="4" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages>
-      <module_usage name="jsonschema" finding="absolute" line="3" />
-      <module_usage name="jsonschema.ValidationError" finding="not-found" line="3" />
-      <module_usage name="jsonschema.validate" finding="not-found" line="3" />
+      <module_usage name="PySide6QtAds" finding="absolute" line="4" />
+      <module_usage name="PySide6QtAds" finding="absolute" line="8" />
+      <module_usage name="PySide6QtAds.CDockWidget" finding="not-found" line="8" />
       <module_usage name="_collections_abc" finding="absolute" line="1" />
       <module_usage name="abc" finding="absolute" line="1" />
       <module_usage name="ast" finding="absolute" line="1" />
@@ -305,7 +414,7 @@
     <module_usages />
   </module>
   <module name="_collections_abc" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\_collections_abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="64" merged_total="15454" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="64" merged_total="15461" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="9" />
@@ -421,11 +530,6 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
-  <module name="_ssl" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_ssl.pyd">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
   <module name="_strptime" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\_strptime.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="206" merged_total="7711" />
     <optimization-time pass="2" time="volatile" />
@@ -448,11 +552,6 @@
       <module_usage name="contextlib" finding="absolute" line="132" />
       <module_usage name="threading" finding="absolute" line="242" />
     </module_usages>
-  </module>
-  <module name="_uuid" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}\DLLs\_uuid.pyd">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
   </module>
   <module name="_weakrefset" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\_weakrefset.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="46" merged_total="2203" />
@@ -497,163 +596,6 @@
       <module_usage name="collections" finding="absolute" line="386" />
       <module_usage name="collections.deque" finding="not-found" line="386" />
       <module_usage name="warnings" finding="absolute" line="445" />
-    </module_usages>
-  </module>
-  <module name="attr" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\__init__.py" distribution="attrs">
-    <plugin-influence name="options-nanny" influence="condition-used" condition="version(&quot;attrs&quot;) &lt; (23,1)" tags_used="version" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="400" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="78" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="functools" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="8" />
-      <module_usage name="attr" finding="absolute" line="10" />
-      <module_usage name="attr.converters" finding="relative" line="10" />
-      <module_usage name="attr.exceptions" finding="relative" line="10" />
-      <module_usage name="attr.filters" finding="relative" line="10" />
-      <module_usage name="attr.setters" finding="relative" line="10" />
-      <module_usage name="attr.validators" finding="relative" line="10" />
-      <module_usage name="attr._cmp" finding="relative" line="11" />
-      <module_usage name="attr._config" finding="relative" line="12" />
-      <module_usage name="attr._funcs" finding="relative" line="13" />
-      <module_usage name="attr._make" finding="relative" line="14" />
-      <module_usage name="attr._next_gen" finding="relative" line="28" />
-      <module_usage name="attr._version_info" finding="relative" line="29" />
-      <module_usage name="importlib.metadata" finding="absolute" line="92" />
-    </module_usages>
-  </module>
-  <module name="attr._cmp" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\_cmp.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="48" merged_total="454" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="28" merged_total="76" />
-    <module_usages>
-      <module_usage name="functools" finding="absolute" line="4" />
-      <module_usage name="types" finding="absolute" line="5" />
-      <module_usage name="attr._make" finding="relative" line="7" />
-    </module_usages>
-  </module>
-  <module name="attr._compat" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\_compat.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="272" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="40" />
-    <module_usages>
-      <module_usage name="inspect" finding="absolute" line="3" />
-      <module_usage name="platform" finding="absolute" line="4" />
-      <module_usage name="sys" finding="absolute" line="5" />
-      <module_usage name="threading" finding="absolute" line="6" />
-      <module_usage name="collections.abc" finding="absolute" line="8" />
-      <module_usage name="typing" finding="absolute" line="9" />
-    </module_usages>
-  </module>
-  <module name="attr._config" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\_config.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="7" merged_total="18" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" />
-    <module_usages />
-  </module>
-  <module name="attr._funcs" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\_funcs.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="63" merged_total="2160" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="53" merged_total="407" />
-    <module_usages>
-      <module_usage name="copy" finding="absolute" line="4" />
-      <module_usage name="attr._compat" finding="relative" line="6" />
-      <module_usage name="attr._make" finding="relative" line="7" />
-      <module_usage name="attr.exceptions" finding="relative" line="8" />
-      <module_usage name="typing" finding="absolute" line="451" />
-    </module_usages>
-  </module>
-  <module name="attr._make" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\_make.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="201" merged_total="25205" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="172" merged_total="3358" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="3" />
-      <module_usage name="abc" finding="absolute" line="5" />
-      <module_usage name="contextlib" finding="absolute" line="6" />
-      <module_usage name="copy" finding="absolute" line="7" />
-      <module_usage name="enum" finding="absolute" line="8" />
-      <module_usage name="inspect" finding="absolute" line="9" />
-      <module_usage name="itertools" finding="absolute" line="10" />
-      <module_usage name="linecache" finding="absolute" line="11" />
-      <module_usage name="sys" finding="absolute" line="12" />
-      <module_usage name="types" finding="absolute" line="13" />
-      <module_usage name="unicodedata" finding="absolute" line="14" />
-      <module_usage name="collections.abc" finding="absolute" line="16" />
-      <module_usage name="functools" finding="absolute" line="17" />
-      <module_usage name="typing" finding="absolute" line="18" />
-      <module_usage name="attr" finding="absolute" line="22" />
-      <module_usage name="attr._compat" finding="relative" line="22" />
-      <module_usage name="attr._config" finding="relative" line="22" />
-      <module_usage name="attr.setters" finding="relative" line="22" />
-      <module_usage name="attr._compat" finding="relative" line="23" />
-      <module_usage name="attr.exceptions" finding="relative" line="31" />
-      <module_usage name="warnings" finding="absolute" line="1397" />
-    </module_usages>
-  </module>
-  <module name="attr._next_gen" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\_next_gen.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="335" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="52" />
-    <module_usages>
-      <module_usage name="functools" finding="absolute" line="8" />
-      <module_usage name="attr" finding="absolute" line="10" />
-      <module_usage name="attr.setters" finding="relative" line="10" />
-      <module_usage name="attr._funcs" finding="relative" line="11" />
-      <module_usage name="attr._funcs" finding="relative" line="12" />
-      <module_usage name="attr._make" finding="relative" line="13" />
-      <module_usage name="attr.exceptions" finding="relative" line="20" />
-    </module_usages>
-  </module>
-  <module name="attr._version_info" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\_version_info.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="570" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="95" />
-    <module_usages>
-      <module_usage name="functools" finding="absolute" line="4" />
-      <module_usage name="attr._funcs" finding="relative" line="6" />
-      <module_usage name="attr._make" finding="relative" line="7" />
-    </module_usages>
-  </module>
-  <module name="attr.converters" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\converters.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="29" merged_total="400" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="66" />
-    <module_usages>
-      <module_usage name="typing" finding="absolute" line="7" />
-      <module_usage name="attr._compat" finding="relative" line="9" />
-      <module_usage name="attr._make" finding="relative" line="10" />
-    </module_usages>
-  </module>
-  <module name="attr.exceptions" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\exceptions.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="15" merged_total="1716" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="278" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="5" />
-    </module_usages>
-  </module>
-  <module name="attr.filters" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\filters.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="384" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="5" merged_total="62" />
-    <module_usages>
-      <module_usage name="attr._make" finding="relative" line="7" />
-    </module_usages>
-  </module>
-  <module name="attr.setters" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\setters.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="186" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="36" />
-    <module_usages>
-      <module_usage name="attr" finding="absolute" line="7" />
-      <module_usage name="attr._config" finding="relative" line="7" />
-      <module_usage name="attr.exceptions" finding="relative" line="8" />
-      <module_usage name="attr._make" finding="relative" line="66" />
-    </module_usages>
-  </module>
-  <module name="attr.validators" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\attr\validators.py" distribution="attrs">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="37" merged_total="3000" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="461" />
-    <module_usages>
-      <module_usage name="operator" finding="absolute" line="7" />
-      <module_usage name="re" finding="absolute" line="8" />
-      <module_usage name="contextlib" finding="absolute" line="10" />
-      <module_usage name="re" finding="absolute" line="11" />
-      <module_usage name="attr._config" finding="relative" line="13" />
-      <module_usage name="attr._make" finding="relative" line="14" />
-      <module_usage name="attr.converters" finding="relative" line="15" />
-      <module_usage name="attr.exceptions" finding="relative" line="16" />
     </module_usages>
   </module>
   <module name="base64" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\base64.py">
@@ -787,7 +729,7 @@
     </module_usages>
   </module>
   <module name="collections" kind="UncompiledPythonPackage" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\collections\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="124" merged_total="16456" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="124" merged_total="16206" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -876,7 +818,7 @@
     </module_usages>
   </module>
   <module name="copyreg" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\copyreg.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="1505" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="1404" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="40" />
@@ -1132,7 +1074,7 @@
     </module_usages>
   </module>
   <module name="email.message" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\email\message.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="67" merged_total="10062" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="67" merged_total="10016" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="9" />
@@ -2124,8 +2066,8 @@
     </module_usages>
   </module>
   <module name="enum" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\enum.py">
-    <plugin-influence name="anti-bloat" influence="condition-used" condition="plugin(&quot;pyside6&quot;)" tags_used="plugin" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="92" merged_total="14013" />
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="plugin(&quot;pyside6&quot;)" tags_used="plugin" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="92" merged_total="14049" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="1" />
@@ -2214,7 +2156,7 @@
     </module_usages>
   </module>
   <module name="functools" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\functools.py">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="49" merged_total="13559" />
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="49" merged_total="13552" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="17" />
@@ -2246,20 +2188,6 @@
     <module_usages>
       <module_usage name="os" finding="absolute" line="36" />
       <module_usage name="gettext" finding="absolute" line="38" />
-    </module_usages>
-  </module>
-  <module name="getpass" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\getpass.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="1531" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="contextlib" finding="absolute" line="17" />
-      <module_usage name="io" finding="absolute" line="18" />
-      <module_usage name="os" finding="absolute" line="19" />
-      <module_usage name="sys" finding="absolute" line="20" />
-      <module_usage name="warnings" finding="absolute" line="21" />
-      <module_usage name="pwd" finding="not-found" line="168" />
-      <module_usage name="termios" finding="not-found" line="173" />
-      <module_usage name="msvcrt" finding="absolute" line="179" />
     </module_usages>
   </module>
   <module name="gettext" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\gettext.py">
@@ -2393,53 +2321,6 @@
       <module_usage name="_markupbase" finding="absolute" line="12" />
       <module_usage name="html" finding="absolute" line="14" />
       <module_usage name="html.unescape" finding="not-found" line="14" />
-    </module_usages>
-  </module>
-  <module name="http" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\http\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="69" merged_total="396" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="enum" finding="absolute" line="1" />
-    </module_usages>
-  </module>
-  <module name="http.client" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\http\client.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="96" merged_total="14379" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="email.parser" finding="absolute" line="71" />
-      <module_usage name="email.message" finding="absolute" line="72" />
-      <module_usage name="errno" finding="absolute" line="73" />
-      <module_usage name="http" finding="absolute" line="74" />
-      <module_usage name="io" finding="absolute" line="75" />
-      <module_usage name="re" finding="absolute" line="76" />
-      <module_usage name="socket" finding="absolute" line="77" />
-      <module_usage name="sys" finding="absolute" line="78" />
-      <module_usage name="collections.abc" finding="absolute" line="79" />
-      <module_usage name="urllib.parse" finding="absolute" line="80" />
-      <module_usage name="ssl" finding="absolute" line="1395" />
-      <module_usage name="warnings" finding="absolute" line="1415" />
-    </module_usages>
-  </module>
-  <module name="http.cookiejar" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\http\cookiejar.py">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="88" merged_total="26998" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="31" />
-      <module_usage name="copy" finding="absolute" line="32" />
-      <module_usage name="datetime" finding="absolute" line="33" />
-      <module_usage name="re" finding="absolute" line="34" />
-      <module_usage name="time" finding="absolute" line="35" />
-      <module_usage name="urllib.parse" finding="absolute" line="36" />
-      <module_usage name="urllib.request" finding="absolute" line="36" />
-      <module_usage name="threading" finding="absolute" line="37" />
-      <module_usage name="http.client" finding="absolute" line="38" />
-      <module_usage name="calendar" finding="absolute" line="39" />
-      <module_usage name="logging" finding="absolute" line="49" />
-      <module_usage name="io" finding="absolute" line="70" />
-      <module_usage name="warnings" finding="absolute" line="70" />
-      <module_usage name="traceback" finding="absolute" line="70" />
-      <module_usage name="io" finding="absolute" line="71" />
     </module_usages>
   </module>
   <module name="imaplib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\imaplib.py">
@@ -2604,7 +2485,7 @@
     </module_usages>
   </module>
   <module name="importlib.metadata" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\importlib\metadata\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="77" merged_total="11430" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="77" merged_total="11349" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -2843,158 +2724,6 @@
       <module_usage name="_json" finding="absolute" line="5" />
     </module_usages>
   </module>
-  <module name="jsonschema" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jsonschema\__init__.py" distribution="jsonschema">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="151" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="28" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="warnings" finding="absolute" line="10" />
-      <module_usage name="jsonschema._format" finding="absolute" line="12" />
-      <module_usage name="jsonschema._types" finding="absolute" line="21" />
-      <module_usage name="jsonschema.exceptions" finding="absolute" line="22" />
-      <module_usage name="jsonschema.protocols" finding="absolute" line="29" />
-      <module_usage name="jsonschema.validators" finding="absolute" line="30" />
-      <module_usage name="importlib.metadata" finding="absolute" line="53" />
-    </module_usages>
-  </module>
-  <module name="jsonschema._format" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jsonschema\_format.py" distribution="jsonschema">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="59" merged_total="3470" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="59" merged_total="488" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="contextlib" finding="absolute" line="3" />
-      <module_usage name="uuid" finding="absolute" line="4" />
-      <module_usage name="datetime" finding="absolute" line="5" />
-      <module_usage name="ipaddress" finding="absolute" line="6" />
-      <module_usage name="re" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="8" />
-      <module_usage name="jsonschema.exceptions" finding="absolute" line="10" />
-      <module_usage name="fqdn" finding="not-found" line="233" />
-      <module_usage name="idna" finding="not-found" line="251" />
-      <module_usage name="rfc3987" finding="not-found" line="267" />
-      <module_usage name="rfc3986_validator" finding="not-found" line="270" />
-      <module_usage name="rfc3339_validator" finding="not-found" line="332" />
-      <module_usage name="webcolors" finding="not-found" line="379" />
-      <module_usage name="webcolors" finding="not-found" line="380" />
-      <module_usage name="jsonpointer" finding="not-found" line="396" />
-      <module_usage name="uri_template" finding="not-found" line="444" />
-      <module_usage name="isoduration" finding="not-found" line="459" />
-    </module_usages>
-  </module>
-  <module name="jsonschema._legacy_validators" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jsonschema\_legacy_validators.py" distribution="jsonschema">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="29" merged_total="2698" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="524" />
-    <module_usages>
-      <module_usage name="jsonschema" finding="absolute" line="1" />
-      <module_usage name="jsonschema._utils" finding="relative" line="1" />
-      <module_usage name="jsonschema.exceptions" finding="absolute" line="2" />
-    </module_usages>
-  </module>
-  <module name="jsonschema._types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jsonschema\_types.py" distribution="jsonschema">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="22" merged_total="711" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="91" />
-    <distribution-usages>
-      <distribution-usage name="pyrsistent" />
-      <distribution-usage name="attrs" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="numbers" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="pyrsistent" finding="absolute" line="6" />
-      <module_usage name="pyrsistent.pmap" finding="not-found" line="6" />
-      <module_usage name="attr" finding="absolute" line="7" />
-      <module_usage name="jsonschema.exceptions" finding="absolute" line="9" />
-    </module_usages>
-  </module>
-  <module name="jsonschema._utils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jsonschema\_utils.py" distribution="jsonschema">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="67" merged_total="4863" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="57" merged_total="640" />
-    <module_usages>
-      <module_usage name="collections.abc" finding="absolute" line="1" />
-      <module_usage name="urllib.parse" finding="absolute" line="2" />
-      <module_usage name="itertools" finding="absolute" line="3" />
-      <module_usage name="json" finding="absolute" line="4" />
-      <module_usage name="re" finding="absolute" line="5" />
-      <module_usage name="sys" finding="absolute" line="6" />
-      <module_usage name="importlib.resources" finding="absolute" line="10" />
-      <module_usage name="jsonschema" finding="absolute" line="60" />
-    </module_usages>
-  </module>
-  <module name="jsonschema._validators" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jsonschema\_validators.py" distribution="jsonschema">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="50" merged_total="7959" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="44" merged_total="1106" />
-    <module_usages>
-      <module_usage name="fractions" finding="absolute" line="1" />
-      <module_usage name="urllib.parse" finding="absolute" line="2" />
-      <module_usage name="re" finding="absolute" line="3" />
-      <module_usage name="jsonschema._utils" finding="absolute" line="5" />
-      <module_usage name="jsonschema.exceptions" finding="absolute" line="15" />
-    </module_usages>
-  </module>
-  <module name="jsonschema.exceptions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jsonschema\exceptions.py" distribution="jsonschema">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="49" merged_total="4370" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="46" merged_total="582" />
-    <distribution-usages>
-      <distribution-usage name="attrs" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="4" />
-      <module_usage name="collections" finding="absolute" line="6" />
-      <module_usage name="collections.defaultdict" finding="not-found" line="6" />
-      <module_usage name="collections.deque" finding="not-found" line="6" />
-      <module_usage name="pprint" finding="absolute" line="7" />
-      <module_usage name="textwrap" finding="absolute" line="8" />
-      <module_usage name="itertools" finding="absolute" line="9" />
-      <module_usage name="attr" finding="absolute" line="11" />
-      <module_usage name="jsonschema" finding="absolute" line="13" />
-      <module_usage name="jsonschema._utils" finding="relative" line="13" />
-    </module_usages>
-  </module>
-  <module name="jsonschema.protocols" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jsonschema\protocols.py" distribution="jsonschema">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="294" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="55" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="8" />
-      <module_usage name="typing" finding="absolute" line="10" />
-      <module_usage name="sys" finding="absolute" line="11" />
-      <module_usage name="typing" finding="absolute" line="21" />
-      <module_usage name="jsonschema.exceptions" finding="absolute" line="32" />
-      <module_usage name="jsonschema.validators" finding="absolute" line="33" />
-    </module_usages>
-  </module>
-  <module name="jsonschema.validators" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\jsonschema\validators.py" distribution="jsonschema">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="59" merged_total="6134" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="49" merged_total="787" />
-    <distribution-usages>
-      <distribution-usage name="attrs" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="4" />
-      <module_usage name="collections" finding="absolute" line="6" />
-      <module_usage name="collections.deque" finding="not-found" line="6" />
-      <module_usage name="collections.abc" finding="absolute" line="7" />
-      <module_usage name="functools" finding="absolute" line="8" />
-      <module_usage name="urllib.parse" finding="absolute" line="9" />
-      <module_usage name="urllib.request" finding="absolute" line="10" />
-      <module_usage name="warnings" finding="absolute" line="11" />
-      <module_usage name="contextlib" finding="absolute" line="12" />
-      <module_usage name="json" finding="absolute" line="13" />
-      <module_usage name="reprlib" finding="absolute" line="14" />
-      <module_usage name="typing" finding="absolute" line="15" />
-      <module_usage name="warnings" finding="absolute" line="16" />
-      <module_usage name="attr" finding="absolute" line="18" />
-      <module_usage name="jsonschema" finding="absolute" line="20" />
-      <module_usage name="jsonschema._format" finding="relative" line="20" />
-      <module_usage name="jsonschema._legacy_validators" finding="relative" line="20" />
-      <module_usage name="jsonschema._types" finding="relative" line="20" />
-      <module_usage name="jsonschema._utils" finding="relative" line="20" />
-      <module_usage name="jsonschema._validators" finding="relative" line="20" />
-      <module_usage name="jsonschema.exceptions" finding="relative" line="20" />
-      <module_usage name="jsonschema.exceptions" finding="absolute" line="42" />
-      <module_usage name="requests" finding="not-found" line="944" />
-    </module_usages>
-  </module>
   <module name="keyword" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\keyword.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" />
     <optimization-time pass="2" time="volatile" />
@@ -3032,7 +2761,7 @@
     </module_usages>
   </module>
   <module name="logging" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\logging\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="74" merged_total="17362" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="74" merged_total="17489" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -3117,7 +2846,7 @@
     </module_usages>
   </module>
   <module name="ntpath" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\ntpath.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="139" merged_total="10656" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="139" merged_total="10651" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="20" />
@@ -3159,7 +2888,7 @@
     </module_usages>
   </module>
   <module name="operator" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\operator.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="1844" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="1925" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="22" />
@@ -3372,11 +3101,6 @@
       <module_usage name="typing" finding="absolute" line="32" />
     </module_usages>
   </module>
-  <module name="pvectorc" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\pvectorc.cp310-win_amd64.pyd" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
-  </module>
   <module name="py_compile" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\py_compile.py">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="79" merged_total="1759" />
     <optimization-time pass="2" time="volatile" />
@@ -3399,173 +3123,6 @@
       <module_usage name="ast" finding="absolute" line="44" />
       <module_usage name="sys" finding="absolute" line="45" />
       <module_usage name="importlib.util" finding="absolute" line="46" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\__init__.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="8" merged_total="120" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="40" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="pyrsistent._pmap" finding="absolute" line="3" />
-      <module_usage name="pyrsistent._pvector" finding="absolute" line="5" />
-      <module_usage name="pyrsistent._pset" finding="absolute" line="7" />
-      <module_usage name="pyrsistent._pbag" finding="absolute" line="9" />
-      <module_usage name="pyrsistent._plist" finding="absolute" line="11" />
-      <module_usage name="pyrsistent._pdeque" finding="absolute" line="13" />
-      <module_usage name="pyrsistent._checked_types" finding="absolute" line="15" />
-      <module_usage name="pyrsistent._field_common" finding="absolute" line="19" />
-      <module_usage name="pyrsistent._precord" finding="absolute" line="22" />
-      <module_usage name="pyrsistent._pclass" finding="absolute" line="24" />
-      <module_usage name="pyrsistent._immutable" finding="absolute" line="26" />
-      <module_usage name="pyrsistent._helpers" finding="absolute" line="28" />
-      <module_usage name="pyrsistent._transformations" finding="absolute" line="30" />
-      <module_usage name="pyrsistent._toolz" finding="absolute" line="32" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._checked_types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_checked_types.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="28" merged_total="9746" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="1274" />
-    <module_usages>
-      <module_usage name="enum" finding="absolute" line="1" />
-      <module_usage name="abc" finding="absolute" line="3" />
-      <module_usage name="collections.abc" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="pyrsistent._pmap" finding="absolute" line="7" />
-      <module_usage name="pyrsistent._pset" finding="absolute" line="8" />
-      <module_usage name="pyrsistent._pvector" finding="absolute" line="9" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._field_common" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_field_common.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="51" merged_total="3080" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="28" merged_total="461" />
-    <module_usages>
-      <module_usage name="pyrsistent._checked_types" finding="absolute" line="1" />
-      <module_usage name="pyrsistent._checked_types" finding="absolute" line="12" />
-      <module_usage name="pyrsistent._checked_types" finding="absolute" line="13" />
-      <module_usage name="inspect" finding="absolute" line="14" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._helpers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_helpers.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="973" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="172" />
-    <module_usages>
-      <module_usage name="collections" finding="absolute" line="1" />
-      <module_usage name="functools" finding="absolute" line="2" />
-      <module_usage name="pyrsistent._pmap" finding="absolute" line="3" />
-      <module_usage name="pyrsistent._pset" finding="absolute" line="4" />
-      <module_usage name="pyrsistent._pvector" finding="absolute" line="5" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._immutable" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_immutable.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="24" merged_total="427" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="70" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="1" />
-      <module_usage name="collections" finding="absolute" line="90" />
-      <module_usage name="collections.namedtuple" finding="not-found" line="90" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._pbag" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_pbag.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="26" merged_total="2004" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="26" merged_total="258" />
-    <module_usages>
-      <module_usage name="collections.abc" finding="absolute" line="1" />
-      <module_usage name="functools" finding="absolute" line="2" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="pyrsistent._pmap" finding="absolute" line="4" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._pclass" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_pclass.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="50" merged_total="3013" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="443" />
-    <module_usages>
-      <module_usage name="pyrsistent._checked_types" finding="absolute" line="1" />
-      <module_usage name="pyrsistent._field_common" finding="absolute" line="2" />
-      <module_usage name="pyrsistent._transformations" finding="absolute" line="5" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._pdeque" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_pdeque.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="60" merged_total="2676" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="56" merged_total="474" />
-    <module_usages>
-      <module_usage name="collections.abc" finding="absolute" line="1" />
-      <module_usage name="itertools" finding="absolute" line="2" />
-      <module_usage name="numbers" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="pyrsistent._plist" finding="absolute" line="5" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._plist" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_plist.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="2547" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="385" />
-    <module_usages>
-      <module_usage name="collections.abc" finding="absolute" line="1" />
-      <module_usage name="numbers" finding="absolute" line="2" />
-      <module_usage name="functools" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._pmap" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_pmap.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="61" merged_total="5518" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="58" merged_total="682" />
-    <module_usages>
-      <module_usage name="collections.abc" finding="absolute" line="1" />
-      <module_usage name="itertools" finding="absolute" line="2" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="pyrsistent._pvector" finding="absolute" line="5" />
-      <module_usage name="pyrsistent._transformations" finding="absolute" line="6" />
-      <module_usage name="pyrsistent._pset" finding="relative" line="230" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._precord" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_precord.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="37" merged_total="2700" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="414" />
-    <module_usages>
-      <module_usage name="pyrsistent._checked_types" finding="absolute" line="1" />
-      <module_usage name="pyrsistent._field_common" finding="absolute" line="2" />
-      <module_usage name="pyrsistent._pmap" finding="absolute" line="5" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._pset" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_pset.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="77" merged_total="1286" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="76" merged_total="199" />
-    <module_usages>
-      <module_usage name="collections.abc" finding="absolute" line="1" />
-      <module_usage name="sys" finding="absolute" line="2" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="pyrsistent._pmap" finding="absolute" line="4" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._pvector" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_pvector.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="85" merged_total="5729" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="66" merged_total="855" />
-    <module_usages>
-      <module_usage name="abc" finding="absolute" line="1" />
-      <module_usage name="collections.abc" finding="absolute" line="2" />
-      <module_usage name="numbers" finding="absolute" line="3" />
-      <module_usage name="operator" finding="absolute" line="4" />
-      <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="pyrsistent._transformations" finding="absolute" line="7" />
-      <module_usage name="os" finding="absolute" line="697" />
-      <module_usage name="pvectorc" finding="absolute" line="701" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._toolz" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_toolz.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="7" merged_total="52" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="5" merged_total="10" />
-    <module_usages>
-      <module_usage name="operator" finding="absolute" line="41" />
-      <module_usage name="functools" finding="absolute" line="42" />
-    </module_usages>
-  </module>
-  <module name="pyrsistent._transformations" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyrsistent\_transformations.py" distribution="pyrsistent">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="20" merged_total="1302" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="237" />
-    <module_usages>
-      <module_usage name="re" finding="absolute" line="1" />
-      <module_usage name="inspect" finding="absolute" line="3" />
-      <module_usage name="inspect" finding="absolute" line="6" />
-      <module_usage name="pyrsistent._pmap" finding="absolute" line="120" />
     </module_usages>
   </module>
   <module name="quopri" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\quopri.py">
@@ -3663,6 +3220,36 @@
       <module_usage name="select" finding="absolute" line="12" />
       <module_usage name="sys" finding="absolute" line="13" />
     </module_usages>
+  </module>
+  <module name="shiboken6" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\shiboken6\__init__.py" distribution="shiboken6">
+    <plugin-influence name="dll-files" influence="condition-used" condition="win32" tags_used="win32" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="sys" finding="absolute" line="10" />
+      <module_usage name="os" finding="absolute" line="11" />
+      <module_usage name="zipfile" finding="absolute" line="12" />
+      <module_usage name="base64" finding="absolute" line="13" />
+      <module_usage name="marshal" finding="absolute" line="14" />
+      <module_usage name="io" finding="absolute" line="15" />
+      <module_usage name="contextlib" finding="absolute" line="16" />
+      <module_usage name="textwrap" finding="absolute" line="17" />
+      <module_usage name="traceback" finding="absolute" line="18" />
+      <module_usage name="types" finding="absolute" line="19" />
+      <module_usage name="struct" finding="absolute" line="20" />
+      <module_usage name="re" finding="absolute" line="21" />
+      <module_usage name="tempfile" finding="absolute" line="22" />
+      <module_usage name="keyword" finding="absolute" line="23" />
+      <module_usage name="functools" finding="absolute" line="24" />
+      <module_usage name="typing" finding="absolute" line="25" />
+      <module_usage name="shiboken6.Shiboken" finding="absolute" line="27" />
+    </module_usages>
+  </module>
+  <module name="shiboken6.Shiboken" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\shiboken6\Shiboken.pyd" distribution="shiboken6">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
   </module>
   <module name="shlex" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\shlex.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="309" merged_total="3963" />
@@ -3826,35 +3413,6 @@
       <module_usage name="warnings" finding="absolute" line="558" />
       <module_usage name="warnings" finding="absolute" line="585" />
       <module_usage name="warnings" finding="absolute" line="813" />
-    </module_usages>
-  </module>
-  <module name="ssl" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\ssl.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="117" merged_total="14172" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="94" />
-      <module_usage name="os" finding="absolute" line="95" />
-      <module_usage name="collections" finding="absolute" line="96" />
-      <module_usage name="collections.namedtuple" finding="not-found" line="96" />
-      <module_usage name="enum" finding="absolute" line="97" />
-      <module_usage name="_ssl" finding="absolute" line="99" />
-      <module_usage name="_ssl" finding="absolute" line="101" />
-      <module_usage name="_ssl" finding="absolute" line="102" />
-      <module_usage name="_ssl" finding="absolute" line="103" />
-      <module_usage name="_ssl" finding="absolute" line="107" />
-      <module_usage name="_ssl" finding="absolute" line="108" />
-      <module_usage name="_ssl" finding="absolute" line="110" />
-      <module_usage name="_ssl" finding="absolute" line="116" />
-      <module_usage name="_ssl" finding="absolute" line="120" />
-      <module_usage name="_ssl" finding="absolute" line="254" />
-      <module_usage name="socket" finding="absolute" line="256" />
-      <module_usage name="socket" finding="absolute" line="257" />
-      <module_usage name="socket" finding="absolute" line="258" />
-      <module_usage name="base64" finding="absolute" line="259" />
-      <module_usage name="errno" finding="absolute" line="260" />
-      <module_usage name="warnings" finding="absolute" line="261" />
-      <module_usage name="time" finding="absolute" line="1460" />
-      <module_usage name="calendar" finding="absolute" line="1461" />
     </module_usages>
   </module>
   <module name="stat" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\stat.py">
@@ -4133,7 +3691,7 @@
     </module_usages>
   </module>
   <module name="traceback" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\traceback.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="104" merged_total="5146" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="104" merged_total="5247" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="3" />
@@ -4193,15 +3751,6 @@
       <module_usage name="os" finding="absolute" line="1" />
     </module_usages>
   </module>
-  <module name="urllib.error" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\urllib\error.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="26" merged_total="891" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="io" finding="absolute" line="13" />
-      <module_usage name="urllib.response" finding="absolute" line="14" />
-      <module_usage name="io" finding="absolute" line="46" />
-    </module_usages>
-  </module>
   <module name="urllib.parse" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\urllib\parse.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="68" merged_total="14156" />
     <optimization-time pass="2" time="volatile" />
@@ -4216,60 +3765,6 @@
       <module_usage name="unicodedata" finding="absolute" line="423" />
     </module_usages>
   </module>
-  <module name="urllib.request" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\urllib\request.py">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="90" merged_total="45719" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="base64" finding="absolute" line="84" />
-      <module_usage name="bisect" finding="absolute" line="85" />
-      <module_usage name="email" finding="absolute" line="86" />
-      <module_usage name="hashlib" finding="absolute" line="87" />
-      <module_usage name="http.client" finding="absolute" line="88" />
-      <module_usage name="io" finding="absolute" line="89" />
-      <module_usage name="os" finding="absolute" line="90" />
-      <module_usage name="posixpath" finding="absolute" line="91" />
-      <module_usage name="re" finding="absolute" line="92" />
-      <module_usage name="socket" finding="absolute" line="93" />
-      <module_usage name="string" finding="absolute" line="94" />
-      <module_usage name="sys" finding="absolute" line="95" />
-      <module_usage name="time" finding="absolute" line="96" />
-      <module_usage name="tempfile" finding="absolute" line="97" />
-      <module_usage name="contextlib" finding="absolute" line="98" />
-      <module_usage name="warnings" finding="absolute" line="99" />
-      <module_usage name="urllib.error" finding="absolute" line="102" />
-      <module_usage name="urllib.parse" finding="absolute" line="103" />
-      <module_usage name="urllib.response" finding="absolute" line="108" />
-      <module_usage name="ssl" finding="absolute" line="112" />
-      <module_usage name="warnings" finding="absolute" line="192" />
-      <module_usage name="http.cookiejar" finding="absolute" line="1400" />
-      <module_usage name="email.utils" finding="absolute" line="1499" />
-      <module_usage name="mimetypes" finding="absolute" line="1500" />
-      <module_usage name="ftplib" finding="absolute" line="1533" />
-      <module_usage name="mimetypes" finding="absolute" line="1534" />
-      <module_usage name="io" finding="absolute" line="1669" />
-      <module_usage name="nturl2path" finding="absolute" line="1678" />
-      <module_usage name="ntpath" finding="absolute" line="1831" />
-      <module_usage name="email.utils" finding="absolute" line="2009" />
-      <module_usage name="mimetypes" finding="absolute" line="2010" />
-      <module_usage name="mimetypes" finding="absolute" line="2043" />
-      <module_usage name="ftplib" finding="absolute" line="2055" />
-      <module_usage name="io" finding="absolute" line="2134" />
-      <module_usage name="getpass" finding="absolute" line="2340" />
-      <module_usage name="ftplib" finding="absolute" line="2377" />
-      <module_usage name="ftplib" finding="absolute" line="2412" />
-      <module_usage name="ftplib" finding="absolute" line="2421" />
-      <module_usage name="fnmatch" finding="absolute" line="2573" />
-      <module_usage name="winreg" finding="absolute" line="2669" />
-      <module_usage name="winreg" finding="absolute" line="2721" />
-    </module_usages>
-  </module>
-  <module name="urllib.response" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\urllib\response.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="759" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="tempfile" finding="absolute" line="9" />
-    </module_usages>
-  </module>
   <module name="uu" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\uu.py">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="76" merged_total="1606" />
     <optimization-time pass="2" time="volatile" />
@@ -4277,28 +3772,6 @@
       <module_usage name="binascii" finding="absolute" line="33" />
       <module_usage name="os" finding="absolute" line="34" />
       <module_usage name="sys" finding="absolute" line="35" />
-    </module_usages>
-  </module>
-  <module name="uuid" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\uuid.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="125" merged_total="5294" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="47" />
-      <module_usage name="sys" finding="absolute" line="48" />
-      <module_usage name="enum" finding="absolute" line="50" />
-      <module_usage name="io" finding="absolute" line="360" />
-      <module_usage name="os" finding="absolute" line="360" />
-      <module_usage name="shutil" finding="absolute" line="360" />
-      <module_usage name="subprocess" finding="absolute" line="360" />
-      <module_usage name="io" finding="absolute" line="385" />
-      <module_usage name="os" finding="absolute" line="530" />
-      <module_usage name="socket" finding="absolute" line="530" />
-      <module_usage name="_uuid" finding="absolute" line="577" />
-      <module_usage name="random" finding="absolute" line="616" />
-      <module_usage name="time" finding="absolute" line="688" />
-      <module_usage name="random" finding="absolute" line="697" />
-      <module_usage name="hashlib" finding="absolute" line="711" />
-      <module_usage name="hashlib" finding="absolute" line="724" />
     </module_usages>
   </module>
   <module name="warnings" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\warnings.py">
@@ -4412,37 +3885,66 @@
     <memory_usage name="before_c_code_generation" value="volatile" />
     <memory_usage name="before_running_scons" value="volatile" />
   </performance>
-  <data_file name="jsonschema\schemas\draft2019-09.json" source="${sys.prefix}\lib\site-packages\jsonschema\schemas\draft2019-09.json" size="1785" reason="package data directory 'schemas' for 'jsonschema'" tags="config,copy,data-dir-contents" />
-  <data_file name="jsonschema\schemas\draft2020-12.json" source="${sys.prefix}\lib\site-packages\jsonschema\schemas\draft2020-12.json" size="2452" reason="package data directory 'schemas' for 'jsonschema'" tags="config,copy,data-dir-contents" />
-  <data_file name="jsonschema\schemas\draft3.json" source="${sys.prefix}\lib\site-packages\jsonschema\schemas\draft3.json" size="2699" reason="package data directory 'schemas' for 'jsonschema'" tags="config,copy,data-dir-contents" />
-  <data_file name="jsonschema\schemas\draft4.json" source="${sys.prefix}\lib\site-packages\jsonschema\schemas\draft4.json" size="4355" reason="package data directory 'schemas' for 'jsonschema'" tags="config,copy,data-dir-contents" />
-  <data_file name="jsonschema\schemas\draft6.json" source="${sys.prefix}\lib\site-packages\jsonschema\schemas\draft6.json" size="4437" reason="package data directory 'schemas' for 'jsonschema'" tags="config,copy,data-dir-contents" />
-  <data_file name="jsonschema\schemas\draft7.json" source="${sys.prefix}\lib\site-packages\jsonschema\schemas\draft7.json" size="4819" reason="package data directory 'schemas' for 'jsonschema'" tags="config,copy,data-dir-contents" />
-  <data_file name="jsonschema\schemas\vocabularies.json" source="${sys.prefix}\lib\site-packages\jsonschema\schemas\vocabularies.json" size="12845" reason="package data directory 'schemas' for 'jsonschema'" tags="config,copy,data-dir-contents" />
-  <metadata>
-    <included_metadata name="attrs" reason="static analysis" />
-  </metadata>
+  <included_extension name="QtCore.pyd" dest_path="PySide6\QtCore.pyd" source_path="${sys.prefix}\lib\site-packages\PySide6\QtCore.pyd" package="PySide6" ignored="no" reason="used extension module" />
+  <included_extension name="QtGui.pyd" dest_path="PySide6\QtGui.pyd" source_path="${sys.prefix}\lib\site-packages\PySide6\QtGui.pyd" package="PySide6" ignored="no" reason="used extension module" />
+  <included_extension name="QtNetwork.pyd" dest_path="PySide6\QtNetwork.pyd" source_path="${sys.prefix}\lib\site-packages\PySide6\QtNetwork.pyd" package="PySide6" ignored="no" reason="used extension module" />
+  <included_extension name="QtWidgets.pyd" dest_path="PySide6\QtWidgets.pyd" source_path="${sys.prefix}\lib\site-packages\PySide6\QtWidgets.pyd" package="PySide6" ignored="no" reason="used extension module" />
+  <included_extension name="PySide6QtAds.pyd" dest_path="PySide6QtAds\PySide6QtAds.pyd" source_path="${sys.prefix}\lib\site-packages\PySide6QtAds\PySide6QtAds.pyd" package="PySide6QtAds" ignored="no" reason="used extension module" />
   <included_extension name="_bz2.pyd" dest_path="_bz2.pyd" source_path="${sys.real_prefix}\DLLs\_bz2.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_decimal.pyd" dest_path="_decimal.pyd" source_path="${sys.real_prefix}\DLLs\_decimal.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_hashlib.pyd" dest_path="_hashlib.pyd" source_path="${sys.real_prefix}\DLLs\_hashlib.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_lzma.pyd" dest_path="_lzma.pyd" source_path="${sys.real_prefix}\DLLs\_lzma.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="_socket.pyd" dest_path="_socket.pyd" source_path="${sys.real_prefix}\DLLs\_socket.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_ssl.pyd" dest_path="_ssl.pyd" source_path="${sys.real_prefix}\DLLs\_ssl.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_uuid.pyd" dest_path="_uuid.pyd" source_path="${sys.real_prefix}\DLLs\_uuid.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="pvectorc.pyd" dest_path="pvectorc.pyd" source_path="${sys.prefix}\lib\site-packages\pvectorc.cp310-win_amd64.pyd" package="" ignored="no" reason="used extension module" />
   <included_extension name="select.pyd" dest_path="select.pyd" source_path="${sys.real_prefix}\DLLs\select.pyd" package="" ignored="no" reason="used extension module" />
+  <included_extension name="Shiboken.pyd" dest_path="shiboken6\Shiboken.pyd" source_path="${sys.prefix}\lib\site-packages\shiboken6\Shiboken.pyd" package="shiboken6" ignored="no" reason="used extension module" />
   <included_extension name="unicodedata.pyd" dest_path="unicodedata.pyd" source_path="${sys.real_prefix}\DLLs\unicodedata.pyd" package="" ignored="no" reason="used extension module" />
-  <included_dll name="python310.dll" dest_path="python310.dll" source_path="${sys.real_prefix}\python310.dll" package="" ignored="no" reason="Used by 'JsonschemaUsing.exe'" />
-  <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.real_prefix}\vcruntime140.dll" package="" ignored="no" reason="Used by 'JsonschemaUsing.exe'" />
+  <included_dll name="qsvgicon.dll" dest_path="PySide6\qt-plugins\iconengines\qsvgicon.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\iconengines\qsvgicon.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qgif.dll" dest_path="PySide6\qt-plugins\imageformats\qgif.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\imageformats\qgif.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qicns.dll" dest_path="PySide6\qt-plugins\imageformats\qicns.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\imageformats\qicns.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qico.dll" dest_path="PySide6\qt-plugins\imageformats\qico.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\imageformats\qico.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qjpeg.dll" dest_path="PySide6\qt-plugins\imageformats\qjpeg.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\imageformats\qjpeg.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qpdf.dll" dest_path="PySide6\qt-plugins\imageformats\qpdf.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\imageformats\qpdf.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qsvg.dll" dest_path="PySide6\qt-plugins\imageformats\qsvg.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\imageformats\qsvg.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qtga.dll" dest_path="PySide6\qt-plugins\imageformats\qtga.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\imageformats\qtga.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qtiff.dll" dest_path="PySide6\qt-plugins\imageformats\qtiff.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\imageformats\qtiff.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qwbmp.dll" dest_path="PySide6\qt-plugins\imageformats\qwbmp.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\imageformats\qwbmp.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qwebp.dll" dest_path="PySide6\qt-plugins\imageformats\qwebp.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\imageformats\qwebp.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qdirect2d.dll" dest_path="PySide6\qt-plugins\platforms\qdirect2d.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\platforms\qdirect2d.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qminimal.dll" dest_path="PySide6\qt-plugins\platforms\qminimal.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\platforms\qminimal.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qoffscreen.dll" dest_path="PySide6\qt-plugins\platforms\qoffscreen.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\platforms\qoffscreen.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qwindows.dll" dest_path="PySide6\qt-plugins\platforms\qwindows.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\platforms\qwindows.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qmodernwindowsstyle.dll" dest_path="PySide6\qt-plugins\styles\qmodernwindowsstyle.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\styles\qmodernwindowsstyle.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qcertonlybackend.dll" dest_path="PySide6\qt-plugins\tls\qcertonlybackend.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\tls\qcertonlybackend.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qopensslbackend.dll" dest_path="PySide6\qt-plugins\tls\qopensslbackend.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\tls\qopensslbackend.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="qschannelbackend.dll" dest_path="PySide6\qt-plugins\tls\qschannelbackend.dll" source_path="${sys.prefix}\lib\site-packages\PySide6\plugins\tls\qschannelbackend.dll" package="PySide6" ignored="no" reason="qt plugin" />
+  <included_dll name="msvcp140.dll" dest_path="shiboken6\msvcp140.dll" source_path="${sys.prefix}\lib\site-packages\shiboken6\msvcp140.dll" package="shiboken6" ignored="no" reason="Yaml config of 'shiboken6'" />
+  <included_dll name="msvcp140_1.dll" dest_path="shiboken6\msvcp140_1.dll" source_path="${sys.prefix}\lib\site-packages\shiboken6\msvcp140_1.dll" package="shiboken6" ignored="no" reason="Yaml config of 'shiboken6'" />
+  <included_dll name="msvcp140_2.dll" dest_path="shiboken6\msvcp140_2.dll" source_path="${sys.prefix}\lib\site-packages\shiboken6\msvcp140_2.dll" package="shiboken6" ignored="no" reason="Yaml config of 'shiboken6'" />
+  <included_dll name="msvcp140_codecvt_ids.dll" dest_path="shiboken6\msvcp140_codecvt_ids.dll" source_path="${sys.prefix}\lib\site-packages\shiboken6\msvcp140_codecvt_ids.dll" package="shiboken6" ignored="no" reason="Yaml config of 'shiboken6'" />
+  <included_dll name="python310.dll" dest_path="python310.dll" source_path="${sys.real_prefix}\python310.dll" package="" ignored="no" reason="Used by 'PySide6QtAdsUsing.exe'" />
+  <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.real_prefix}\vcruntime140.dll" package="" ignored="no" reason="Used by 'PySide6QtAdsUsing.exe'" />
+  <included_dll name="pyside6.abi3.dll" dest_path="pyside6.abi3.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\pyside6.abi3.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="python3.dll" dest_path="python3.dll" source_path="${sys.real_prefix}\python3.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="qt6core.dll" dest_path="qt6core.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6core.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="msvcp140.dll" dest_path="msvcp140.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\msvcp140.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="vcruntime140_1.dll" dest_path="vcruntime140_1.dll" source_path="${sys.real_prefix}\vcruntime140_1.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="msvcp140_1.dll" dest_path="msvcp140_1.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\msvcp140_1.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtCore.pyd'" />
+  <included_dll name="qt6gui.dll" dest_path="qt6gui.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6gui.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtGui.pyd'" />
+  <included_dll name="msvcp140_2.dll" dest_path="msvcp140_2.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\msvcp140_2.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtGui.pyd'" />
+  <included_dll name="qt6network.dll" dest_path="qt6network.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6network.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtNetwork.pyd'" />
+  <included_dll name="qt6widgets.dll" dest_path="qt6widgets.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6widgets.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\QtWidgets.pyd'" />
   <included_dll name="libcrypto-1_1.dll" dest_path="libcrypto-1_1.dll" source_path="${sys.real_prefix}\dlls\libcrypto-1_1.dll" package="" ignored="no" reason="Used by '_hashlib.pyd'" />
-  <included_dll name="libssl-1_1.dll" dest_path="libssl-1_1.dll" source_path="${sys.real_prefix}\dlls\libssl-1_1.dll" package="" ignored="no" reason="Used by '_ssl.pyd'" />
+  <included_dll name="shiboken6.abi3.dll" dest_path="shiboken6.abi3.dll" source_path="${sys.prefix}\lib\site-packages\shiboken6\shiboken6.abi3.dll" package="shiboken6" ignored="no" reason="Used by 'shiboken6\Shiboken.pyd'" />
+  <included_dll name="qt6svg.dll" dest_path="qt6svg.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6svg.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qt-plugins\iconengines\qsvgicon.dll'" />
+  <included_dll name="qt6pdf.dll" dest_path="qt6pdf.dll" source_path="${sys.prefix}\lib\site-packages\pyside6\qt6pdf.dll" package="PySide6" ignored="no" reason="Used by 'PySide6\qt-plugins\imageformats\qpdf.dll'" />
   <command_line>
     <option value="--mode=standalone" />
-    <option value="C:\Users\kayha\repos\Nuitka-Watch\cases\Jsonschema\JsonschemaUsing.py" />
+    <option value="--enable-plugin=pyside6" />
+    <option value="C:\Users\kayha\repos\Nuitka-Watch\cases\PySide6\qtads-example\PySide6QtAdsUsing.py" />
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=3d717816938c1252adffea1cfd5956e9" />
+    <option value="--report-user-provided=pipenv_hash=82249c9eae10c01a66d8c7569aa41b99" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -4461,19 +3963,21 @@
     <plugin name="pbr-compat" user_enabled="no" />
     <plugin name="pkg-resources" user_enabled="no" />
     <plugin name="playwright" user_enabled="no" />
+    <plugin name="pyside6" user_enabled="yes" />
     <plugin name="pywebview" user_enabled="no" />
     <plugin name="spacy" user_enabled="no" />
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
-    <distribution name="attrs" version="25.3.0" installer="pip" />
-    <distribution name="jsonschema" version="4.6.0" installer="pip" />
-    <distribution name="pyrsistent" version="0.20.0" installer="pip" />
+    <distribution name="PySide6" version="6.9.2" installer="pip" />
+    <distribution name="PySide6_Addons" version="6.9.2" installer="pip" />
+    <distribution name="PySide6_Essentials" version="6.9.2" installer="pip" />
+    <distribution name="shiboken6" version="6.9.2" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}\Scripts\python.EXE" python_flavor="CPython Official" python_version="3.10.11" os_name="Windows" os_release="11" arch_name="x86_64" filesystem_encoding="utf-8">
     <search_path>
       <path value="${cwd}" />
-      <path value="~\repos\Nuitka-Watch\cases\Jsonschema" />
+      <path value="~\repos\Nuitka-Watch\cases\PySide6\qtads-example" />
       <path value="${sys.real_prefix}\DLLs" />
       <path value="${sys.real_prefix}\lib" />
       <path value="${sys.real_prefix}" />
@@ -4483,7 +3987,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>3d717816938c1252adffea1cfd5956e9</pipenv_hash>
+    <pipenv_hash>82249c9eae10c01a66d8c7569aa41b99</pipenv_hash>
   </user-data>
-  <output run_filename="${cwd}\JsonschemaUsing.dist\JsonschemaUsing.exe" />
+  <output run_filename="${cwd}\PySide6QtAdsUsing.dist\PySide6QtAdsUsing.exe" />
 </nuitka-compilation-report>
