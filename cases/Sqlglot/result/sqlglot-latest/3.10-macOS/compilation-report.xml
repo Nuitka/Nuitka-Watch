@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="2.7.11" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="2.7.14" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="8" merged_total="81" />
     <optimization-time pass="2" time="volatile" />
@@ -3396,57 +3396,75 @@
       <module_usage name="sqlglot._version" finding="absolute" line="61" />
     </module_usages>
   </module>
+  <module name="sqlglot._typing" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/_typing.py" distribution="sqlglot">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="3" />
+      <module_usage name="sqlglot" finding="absolute" line="5" />
+    </module_usages>
+  </module>
   <module name="sqlglot._version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/_version.py" distribution="sqlglot">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="1" merged_total="1" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <module_usages />
   </module>
   <module name="sqlglot.dialects" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/__init__.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="128" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="23" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="233" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="44" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="importlib" finding="absolute" line="64" />
+      <module_usage name="threading" finding="absolute" line="65" />
     </module_usages>
   </module>
-  <module name="sqlglot.dialects.athena" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/athena.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="45" merged_total="2175" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="420" />
+  <module name="sqlglot.dialects.athena" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/athena.py" distribution="sqlglot">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="70" merged_total="4028" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="70" merged_total="747" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
       <module_usage name="sqlglot" finding="absolute" line="5" />
       <module_usage name="sqlglot.exp" finding="not-found" line="5" />
-      <module_usage name="sqlglot.dialects.trino" finding="absolute" line="6" />
-      <module_usage name="sqlglot.dialects.hive" finding="absolute" line="7" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="8" />
+      <module_usage name="sqlglot.generator" finding="relative" line="5" />
+      <module_usage name="sqlglot.parser" finding="relative" line="5" />
+      <module_usage name="sqlglot.tokens" finding="relative" line="5" />
+      <module_usage name="sqlglot.dialects" finding="absolute" line="6" />
+      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="6" />
+      <module_usage name="sqlglot.dialects.Hive" finding="not-found" line="6" />
+      <module_usage name="sqlglot.dialects.Trino" finding="not-found" line="6" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="7" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.bigquery" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/bigquery.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="699" merged_total="24945" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="699" merged_total="3425" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="785" merged_total="37331" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="785" merged_total="4955" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="logging" finding="absolute" line="3" />
       <module_usage name="re" finding="absolute" line="4" />
       <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="sqlglot" finding="absolute" line="7" />
-      <module_usage name="sqlglot.exp" finding="not-found" line="7" />
-      <module_usage name="sqlglot.generator" finding="relative" line="7" />
-      <module_usage name="sqlglot.parser" finding="relative" line="7" />
-      <module_usage name="sqlglot.tokens" finding="relative" line="7" />
-      <module_usage name="sqlglot.transforms" finding="relative" line="7" />
-      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="8" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="31" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="32" />
-      <module_usage name="sqlglot.generator" finding="absolute" line="33" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="783" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="1204" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="8" />
+      <module_usage name="sqlglot" finding="absolute" line="10" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="10" />
+      <module_usage name="sqlglot.generator" finding="relative" line="10" />
+      <module_usage name="sqlglot.jsonpath" finding="relative" line="10" />
+      <module_usage name="sqlglot.parser" finding="relative" line="10" />
+      <module_usage name="sqlglot.tokens" finding="relative" line="10" />
+      <module_usage name="sqlglot.transforms" finding="relative" line="10" />
+      <module_usage name="sqlglot._typing" finding="absolute" line="11" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="12" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="37" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="38" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="39" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="1112" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="1627" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.clickhouse" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/clickhouse.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="836" merged_total="23434" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="836" merged_total="3227" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="924" merged_total="26806" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="924" merged_total="3693" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="2" />
@@ -3456,63 +3474,88 @@
       <module_usage name="sqlglot.generator" finding="relative" line="4" />
       <module_usage name="sqlglot.parser" finding="relative" line="4" />
       <module_usage name="sqlglot.tokens" finding="relative" line="4" />
-      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="5" />
-      <module_usage name="sqlglot.generator" finding="absolute" line="25" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="26" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="27" />
-      <module_usage name="sqlglot.generator" finding="absolute" line="28" />
+      <module_usage name="sqlglot._typing" finding="absolute" line="5" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="6" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="27" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="28" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="29" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="30" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.databricks" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/databricks.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="90" merged_total="1726" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="90" merged_total="409" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="114" merged_total="2872" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="114" merged_total="551" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="sqlglot" finding="absolute" line="5" />
-      <module_usage name="sqlglot.exp" finding="not-found" line="5" />
-      <module_usage name="sqlglot.transforms" finding="relative" line="5" />
-      <module_usage name="sqlglot.jsonpath" finding="relative" line="5" />
-      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="6" />
-      <module_usage name="sqlglot.dialects.spark" finding="absolute" line="12" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="13" />
+      <module_usage name="copy" finding="absolute" line="3" />
+      <module_usage name="collections" finding="absolute" line="4" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="4" />
+      <module_usage name="sqlglot" finding="absolute" line="6" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="6" />
+      <module_usage name="sqlglot.transforms" finding="relative" line="6" />
+      <module_usage name="sqlglot.jsonpath" finding="relative" line="6" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="7" />
+      <module_usage name="sqlglot.dialects.spark" finding="absolute" line="14" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="15" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="16" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.dialect" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/dialect.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="636" merged_total="22921" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="633" merged_total="3010" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="774" merged_total="27141" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="771" merged_total="3598" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="importlib" finding="absolute" line="3" />
       <module_usage name="logging" finding="absolute" line="4" />
       <module_usage name="typing" finding="absolute" line="5" />
-      <module_usage name="enum" finding="absolute" line="6" />
-      <module_usage name="functools" finding="absolute" line="7" />
-      <module_usage name="sqlglot" finding="absolute" line="9" />
-      <module_usage name="sqlglot.exp" finding="not-found" line="9" />
-      <module_usage name="sqlglot.dialects" finding="absolute" line="10" />
-      <module_usage name="sqlglot.dialects.DIALECT_MODULE_NAMES" finding="not-found" line="10" />
-      <module_usage name="sqlglot.errors" finding="absolute" line="11" />
-      <module_usage name="sqlglot.generator" finding="absolute" line="12" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="13" />
-      <module_usage name="sqlglot.jsonpath" finding="absolute" line="14" />
-      <module_usage name="sqlglot.parser" finding="absolute" line="15" />
-      <module_usage name="sqlglot.time" finding="absolute" line="16" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="17" />
-      <module_usage name="sqlglot.trie" finding="absolute" line="18" />
-      <module_usage name="difflib" finding="absolute" line="822" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="1275" />
+      <module_usage name="sys" finding="absolute" line="6" />
+      <module_usage name="enum" finding="absolute" line="8" />
+      <module_usage name="functools" finding="absolute" line="9" />
+      <module_usage name="sqlglot" finding="absolute" line="11" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="11" />
+      <module_usage name="sqlglot.dialects" finding="absolute" line="12" />
+      <module_usage name="sqlglot.dialects.DIALECT_MODULE_NAMES" finding="not-found" line="12" />
+      <module_usage name="sqlglot.errors" finding="absolute" line="13" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="14" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="15" />
+      <module_usage name="sqlglot.jsonpath" finding="absolute" line="24" />
+      <module_usage name="sqlglot.parser" finding="absolute" line="25" />
+      <module_usage name="sqlglot.time" finding="absolute" line="26" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="27" />
+      <module_usage name="sqlglot.trie" finding="absolute" line="28" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="1394" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="2029" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.doris" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/doris.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="188" merged_total="2374" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="187" merged_total="440" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="288" merged_total="5593" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="287" merged_total="1056" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="sqlglot" finding="absolute" line="3" />
-      <module_usage name="sqlglot.exp" finding="not-found" line="3" />
-      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="4" />
-      <module_usage name="sqlglot.dialects.mysql" finding="absolute" line="11" />
+      <module_usage name="typing" finding="absolute" line="3" />
+      <module_usage name="sqlglot" finding="absolute" line="5" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="5" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="6" />
+      <module_usage name="sqlglot.dialects.mysql" finding="absolute" line="13" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="14" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="15" />
+    </module_usages>
+  </module>
+  <module name="sqlglot.dialects.dremio" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/dremio.py" distribution="sqlglot">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="118" merged_total="3110" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="118" merged_total="594" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="3" />
+      <module_usage name="sqlglot" finding="absolute" line="4" />
+      <module_usage name="sqlglot.expressions" finding="relative" line="4" />
+      <module_usage name="sqlglot" finding="absolute" line="5" />
+      <module_usage name="sqlglot.parser" finding="relative" line="5" />
+      <module_usage name="sqlglot.generator" finding="relative" line="5" />
+      <module_usage name="sqlglot.tokens" finding="relative" line="5" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="6" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="13" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="14" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.drill" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/drill.py" distribution="sqlglot">
@@ -3533,8 +3576,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.dialects.druid" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/druid.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="35" merged_total="323" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="107" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="52" merged_total="544" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="52" merged_total="135" />
     <module_usages>
       <module_usage name="sqlglot" finding="absolute" line="1" />
       <module_usage name="sqlglot.exp" finding="not-found" line="1" />
@@ -3543,8 +3586,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.dialects.duckdb" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/duckdb.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="734" merged_total="15364" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="734" merged_total="2867" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="813" merged_total="18148" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="813" merged_total="3373" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3554,14 +3597,14 @@
       <module_usage name="sqlglot.parser" finding="relative" line="5" />
       <module_usage name="sqlglot.tokens" finding="relative" line="5" />
       <module_usage name="sqlglot.transforms" finding="relative" line="5" />
-      <module_usage name="sqlglot.expressions" finding="absolute" line="6" />
       <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="7" />
-      <module_usage name="sqlglot.generator" finding="absolute" line="38" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="39" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="40" />
-      <module_usage name="sqlglot.parser" finding="absolute" line="41" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="906" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="940" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="42" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="43" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="44" />
+      <module_usage name="sqlglot.parser" finding="absolute" line="45" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="1035" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="1069" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="1240" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.dune" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/dune.py" distribution="sqlglot">
@@ -3574,29 +3617,64 @@
       <module_usage name="sqlglot.dialects.trino" finding="absolute" line="5" />
     </module_usages>
   </module>
-  <module name="sqlglot.dialects.hive" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/hive.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="665" merged_total="11340" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="665" merged_total="2116" />
+  <module name="sqlglot.dialects.exasol" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/exasol.py" distribution="sqlglot">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="338" merged_total="5679" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="338" merged_total="1071" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="functools" finding="absolute" line="4" />
-      <module_usage name="sqlglot" finding="absolute" line="6" />
-      <module_usage name="sqlglot.exp" finding="not-found" line="6" />
-      <module_usage name="sqlglot.generator" finding="relative" line="6" />
-      <module_usage name="sqlglot.parser" finding="relative" line="6" />
-      <module_usage name="sqlglot.tokens" finding="relative" line="6" />
-      <module_usage name="sqlglot.transforms" finding="relative" line="6" />
-      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="7" />
-      <module_usage name="sqlglot.transforms" finding="absolute" line="37" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="43" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="44" />
-      <module_usage name="sqlglot.generator" finding="absolute" line="45" />
+      <module_usage name="sqlglot" finding="absolute" line="5" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="5" />
+      <module_usage name="sqlglot.generator" finding="relative" line="5" />
+      <module_usage name="sqlglot.parser" finding="relative" line="5" />
+      <module_usage name="sqlglot.tokens" finding="relative" line="5" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="6" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="19" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="20" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="21" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="52" />
+    </module_usages>
+  </module>
+  <module name="sqlglot.dialects.fabric" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/fabric.py" distribution="sqlglot">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="139" merged_total="3269" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="139" merged_total="649" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="sqlglot" finding="absolute" line="4" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="4" />
+      <module_usage name="sqlglot.transforms" finding="relative" line="4" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="5" />
+      <module_usage name="sqlglot.dialects.tsql" finding="absolute" line="6" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="7" />
+    </module_usages>
+  </module>
+  <module name="sqlglot.dialects.hive" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/hive.py" distribution="sqlglot">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="714" merged_total="12270" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="714" merged_total="2292" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="3" />
+      <module_usage name="copy" finding="absolute" line="4" />
+      <module_usage name="functools" finding="absolute" line="5" />
+      <module_usage name="collections" finding="absolute" line="6" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="6" />
+      <module_usage name="sqlglot" finding="absolute" line="8" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="8" />
+      <module_usage name="sqlglot.generator" finding="relative" line="8" />
+      <module_usage name="sqlglot.parser" finding="relative" line="8" />
+      <module_usage name="sqlglot.tokens" finding="relative" line="8" />
+      <module_usage name="sqlglot.transforms" finding="relative" line="8" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="9" />
+      <module_usage name="sqlglot.transforms" finding="absolute" line="39" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="45" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="46" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="47" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="48" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.materialize" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/materialize.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="48" merged_total="1615" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="48" merged_total="295" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="49" merged_total="1620" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="49" merged_total="296" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="sqlglot" finding="absolute" line="3" />
@@ -3608,9 +3686,9 @@
       <module_usage name="typing" finding="absolute" line="13" />
     </module_usages>
   </module>
-  <module name="sqlglot.dialects.mysql" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/mysql.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="619" merged_total="15034" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="617" merged_total="2839" />
+  <module name="sqlglot.dialects.mysql" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/mysql.py" distribution="sqlglot">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="639" merged_total="15239" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="637" merged_total="2861" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3627,8 +3705,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.dialects.oracle" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/oracle.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="264" merged_total="7774" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="264" merged_total="1051" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="293" merged_total="8174" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="293" merged_total="1096" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3639,15 +3717,14 @@
       <module_usage name="sqlglot.tokens" finding="relative" line="5" />
       <module_usage name="sqlglot.transforms" finding="relative" line="5" />
       <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="6" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="16" />
-      <module_usage name="sqlglot.parser" finding="absolute" line="17" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="18" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="28" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="17" />
+      <module_usage name="sqlglot.parser" finding="absolute" line="18" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="19" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.postgres" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/postgres.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="557" merged_total="14080" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="557" merged_total="2238" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="570" merged_total="15176" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="570" merged_total="2412" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3658,17 +3735,18 @@
       <module_usage name="sqlglot.tokens" finding="relative" line="5" />
       <module_usage name="sqlglot.transforms" finding="relative" line="5" />
       <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="6" />
-      <module_usage name="sqlglot.generator" finding="absolute" line="38" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="39" />
-      <module_usage name="sqlglot.parser" finding="absolute" line="40" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="41" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="217" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="658" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="41" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="42" />
+      <module_usage name="sqlglot.parser" finding="absolute" line="43" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="44" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="210" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="685" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="720" />
     </module_usages>
   </module>
-  <module name="sqlglot.dialects.presto" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/presto.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="688" merged_total="15547" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="688" merged_total="2080" />
+  <module name="sqlglot.dialects.presto" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/presto.py" distribution="sqlglot">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="697" merged_total="17778" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="697" merged_total="2390" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3679,15 +3757,17 @@
       <module_usage name="sqlglot.tokens" finding="relative" line="5" />
       <module_usage name="sqlglot.transforms" finding="relative" line="5" />
       <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="6" />
-      <module_usage name="sqlglot.dialects.hive" finding="absolute" line="34" />
-      <module_usage name="sqlglot.dialects.mysql" finding="absolute" line="35" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="36" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="37" />
-      <module_usage name="sqlglot.transforms" finding="absolute" line="38" />
-      <module_usage name="sqlglot.generator" finding="absolute" line="39" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="157" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="534" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="585" />
+      <module_usage name="sqlglot.dialects.hive" finding="absolute" line="35" />
+      <module_usage name="sqlglot.dialects.mysql" finding="absolute" line="36" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="37" />
+      <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="38" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="39" />
+      <module_usage name="sqlglot.transforms" finding="absolute" line="40" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="41" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="168" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="615" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="628" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="680" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.prql" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/prql.py" distribution="sqlglot">
@@ -3706,8 +3786,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.dialects.redshift" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/redshift.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="254" merged_total="4487" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="254" merged_total="840" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="268" merged_total="4704" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="268" merged_total="884" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3722,20 +3802,38 @@
     </module_usages>
   </module>
   <module name="sqlglot.dialects.risingwave" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/risingwave.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="1340" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="260" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="1523" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="294" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="sqlglot.dialects.postgres" finding="absolute" line="2" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="3" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="3" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="4" />
+      <module_usage name="typing" finding="absolute" line="5" />
+      <module_usage name="sqlglot" finding="absolute" line="7" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="7" />
+    </module_usages>
+  </module>
+  <module name="sqlglot.dialects.singlestore" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/singlestore.py" distribution="sqlglot">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="948" merged_total="11831" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="939" merged_total="2093" />
+    <module_usages>
+      <module_usage name="re" finding="absolute" line="1" />
+      <module_usage name="sqlglot" finding="absolute" line="3" />
+      <module_usage name="sqlglot.TokenType" finding="not-found" line="3" />
       <module_usage name="typing" finding="absolute" line="4" />
       <module_usage name="sqlglot" finding="absolute" line="6" />
       <module_usage name="sqlglot.exp" finding="not-found" line="6" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="7" />
+      <module_usage name="sqlglot.dialects.mysql" finding="absolute" line="19" />
+      <module_usage name="sqlglot.expressions" finding="absolute" line="20" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="21" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="22" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.snowflake" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/snowflake.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="603" merged_total="18291" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="603" merged_total="3421" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="706" merged_total="32503" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="706" merged_total="4429" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3747,30 +3845,33 @@
       <module_usage name="sqlglot.tokens" finding="relative" line="5" />
       <module_usage name="sqlglot.transforms" finding="relative" line="5" />
       <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="6" />
-      <module_usage name="sqlglot.generator" finding="absolute" line="30" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="31" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="32" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="1075" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="33" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="34" />
+      <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="35" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="36" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="1398" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="1679" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.spark" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/spark.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="125" merged_total="4231" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="125" merged_total="582" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="203" merged_total="5702" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="203" merged_total="787" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
       <module_usage name="sqlglot" finding="absolute" line="5" />
       <module_usage name="sqlglot.exp" finding="not-found" line="5" />
       <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="6" />
-      <module_usage name="sqlglot.dialects.hive" finding="absolute" line="7" />
-      <module_usage name="sqlglot.dialects.spark2" finding="absolute" line="8" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="9" />
-      <module_usage name="sqlglot.transforms" finding="absolute" line="10" />
+      <module_usage name="sqlglot.dialects.hive" finding="absolute" line="15" />
+      <module_usage name="sqlglot.dialects.spark2" finding="absolute" line="16" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="17" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="18" />
+      <module_usage name="sqlglot.transforms" finding="absolute" line="19" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.spark2" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/spark2.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="299" merged_total="5611" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="299" merged_total="1004" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="328" merged_total="5953" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="328" merged_total="1076" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3782,12 +3883,12 @@
       <module_usage name="sqlglot.helper" finding="absolute" line="16" />
       <module_usage name="sqlglot.tokens" finding="absolute" line="17" />
       <module_usage name="sqlglot.transforms" finding="absolute" line="18" />
-      <module_usage name="sqlglot.generator" finding="absolute" line="329" />
+      <module_usage name="sqlglot.generator" finding="absolute" line="342" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.sqlite" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/sqlite.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="335" merged_total="6153" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="335" merged_total="978" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="339" merged_total="6571" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="339" merged_total="1041" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3803,8 +3904,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.dialects.starrocks" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/starrocks.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="163" merged_total="3037" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="163" merged_total="577" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="187" merged_total="3305" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="187" merged_total="629" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3832,8 +3933,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.dialects.teradata" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/teradata.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="177" merged_total="4746" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="177" merged_total="894" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="178" merged_total="5271" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="178" merged_total="985" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -3849,22 +3950,23 @@
     </module_usages>
   </module>
   <module name="sqlglot.dialects.trino" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/trino.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="71" merged_total="1521" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="71" merged_total="341" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="93" merged_total="1397" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="93" merged_total="308" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="sqlglot" finding="absolute" line="3" />
       <module_usage name="sqlglot.exp" finding="not-found" line="3" />
       <module_usage name="sqlglot.parser" finding="relative" line="3" />
+      <module_usage name="sqlglot.transforms" finding="relative" line="3" />
       <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="4" />
-      <module_usage name="sqlglot.dialects.presto" finding="absolute" line="5" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="6" />
-      <module_usage name="typing" finding="absolute" line="7" />
+      <module_usage name="sqlglot.dialects.presto" finding="absolute" line="10" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="11" />
+      <module_usage name="typing" finding="absolute" line="12" />
     </module_usages>
   </module>
   <module name="sqlglot.dialects.tsql" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/dialects/tsql.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="486" merged_total="15894" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="486" merged_total="3027" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="500" merged_total="16858" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="500" merged_total="3226" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="datetime" finding="absolute" line="3" />
@@ -3882,12 +3984,12 @@
       <module_usage name="sqlglot.parser" finding="absolute" line="25" />
       <module_usage name="sqlglot.time" finding="absolute" line="26" />
       <module_usage name="sqlglot.tokens" finding="absolute" line="27" />
-      <module_usage name="sqlglot.optimizer.qualify_columns" finding="absolute" line="261" />
+      <module_usage name="sqlglot.optimizer.qualify_columns" finding="absolute" line="282" />
     </module_usages>
   </module>
   <module name="sqlglot.diff" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/diff.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="71" merged_total="7816" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="61" merged_total="910" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="71" merged_total="8002" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="61" merged_total="931" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="7" />
       <module_usage name="typing" finding="absolute" line="9" />
@@ -3913,40 +4015,40 @@
     </module_usages>
   </module>
   <module name="sqlglot.expressions" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/expressions.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="478" merged_total="185854" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="478" merged_total="26006" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="494" merged_total="213546" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="494" merged_total="29940" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="13" />
-      <module_usage name="datetime" finding="absolute" line="14" />
-      <module_usage name="math" finding="absolute" line="15" />
-      <module_usage name="numbers" finding="absolute" line="16" />
-      <module_usage name="re" finding="absolute" line="17" />
-      <module_usage name="textwrap" finding="absolute" line="18" />
-      <module_usage name="typing" finding="absolute" line="19" />
-      <module_usage name="collections" finding="absolute" line="20" />
-      <module_usage name="collections.deque" finding="not-found" line="20" />
-      <module_usage name="copy" finding="absolute" line="21" />
-      <module_usage name="decimal" finding="absolute" line="22" />
-      <module_usage name="enum" finding="absolute" line="23" />
-      <module_usage name="functools" finding="absolute" line="24" />
-      <module_usage name="sqlglot.errors" finding="absolute" line="26" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="27" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="36" />
-      <module_usage name="sqlglot.dialects" finding="absolute" line="612" />
-      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="612" />
-      <module_usage name="sqlglot.serde" finding="absolute" line="759" />
-      <module_usage name="sqlglot.serde" finding="absolute" line="768" />
-      <module_usage name="sqlglot" finding="absolute" line="4609" />
-      <module_usage name="sqlglot.parse_one" finding="not-found" line="4609" />
-      <module_usage name="sqlglot" finding="absolute" line="6935" />
-      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="8023" />
-      <module_usage name="sqlglot.optimizer.normalize_identifiers" finding="absolute" line="8364" />
-      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="8518" />
+      <module_usage name="datetime" finding="absolute" line="15" />
+      <module_usage name="math" finding="absolute" line="16" />
+      <module_usage name="numbers" finding="absolute" line="17" />
+      <module_usage name="re" finding="absolute" line="18" />
+      <module_usage name="textwrap" finding="absolute" line="19" />
+      <module_usage name="typing" finding="absolute" line="20" />
+      <module_usage name="collections" finding="absolute" line="21" />
+      <module_usage name="collections.deque" finding="not-found" line="21" />
+      <module_usage name="copy" finding="absolute" line="22" />
+      <module_usage name="decimal" finding="absolute" line="23" />
+      <module_usage name="enum" finding="absolute" line="24" />
+      <module_usage name="functools" finding="absolute" line="25" />
+      <module_usage name="sqlglot.errors" finding="absolute" line="27" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="28" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="38" />
+      <module_usage name="sqlglot.dialects" finding="absolute" line="615" />
+      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="615" />
+      <module_usage name="sqlglot.serde" finding="absolute" line="762" />
+      <module_usage name="sqlglot.serde" finding="absolute" line="771" />
+      <module_usage name="sqlglot" finding="absolute" line="4808" />
+      <module_usage name="sqlglot.parse_one" finding="not-found" line="4808" />
+      <module_usage name="sqlglot" finding="absolute" line="7642" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="8748" />
+      <module_usage name="sqlglot.optimizer.normalize_identifiers" finding="absolute" line="9092" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="9252" />
     </module_usages>
   </module>
   <module name="sqlglot.generator" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/generator.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="1851" merged_total="69948" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="1848" merged_total="11091" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="2006" merged_total="76867" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2002" merged_total="12198" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="logging" finding="absolute" line="3" />
@@ -3962,22 +4064,25 @@
       <module_usage name="sqlglot.jsonpath" finding="absolute" line="12" />
       <module_usage name="sqlglot.time" finding="absolute" line="13" />
       <module_usage name="sqlglot.tokens" finding="absolute" line="14" />
-      <module_usage name="sqlglot" finding="absolute" line="689" />
-      <module_usage name="sqlglot.dialects" finding="absolute" line="690" />
-      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="690" />
-      <module_usage name="sqlglot.transforms" finding="absolute" line="761" />
-      <module_usage name="sqlglot.transforms" finding="absolute" line="773" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="3935" />
-      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="4014" />
-      <module_usage name="sqlglot.dialects" finding="absolute" line="4027" />
-      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="4027" />
-      <module_usage name="sqlglot.dialects.tsql" finding="absolute" line="4095" />
-      <module_usage name="sqlglot.optimizer.simplify" finding="absolute" line="4140" />
+      <module_usage name="sqlglot" finding="absolute" line="743" />
+      <module_usage name="sqlglot.dialects" finding="absolute" line="744" />
+      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="744" />
+      <module_usage name="sqlglot.transforms" finding="absolute" line="815" />
+      <module_usage name="sqlglot.transforms" finding="absolute" line="827" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="2980" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="3016" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="4259" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="4338" />
+      <module_usage name="sqlglot.dialects" finding="absolute" line="4351" />
+      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="4351" />
+      <module_usage name="sqlglot.dialects.tsql" finding="absolute" line="4419" />
+      <module_usage name="sqlglot.optimizer.simplify" finding="absolute" line="4464" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="5233" />
     </module_usages>
   </module>
   <module name="sqlglot.helper" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/helper.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="44" merged_total="4210" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="40" merged_total="550" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="44" merged_total="4415" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="40" merged_total="578" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="datetime" finding="absolute" line="3" />
@@ -3989,29 +4094,30 @@
       <module_usage name="collections.abc" finding="absolute" line="9" />
       <module_usage name="contextlib" finding="absolute" line="10" />
       <module_usage name="copy" finding="absolute" line="11" />
-      <module_usage name="enum" finding="absolute" line="12" />
-      <module_usage name="itertools" finding="absolute" line="13" />
-      <module_usage name="sqlglot" finding="absolute" line="171" />
-      <module_usage name="sqlglot.exp" finding="not-found" line="171" />
-      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="172" />
-      <module_usage name="sqlglot.optimizer.simplify" finding="absolute" line="173" />
-      <module_usage name="gzip" finding="absolute" line="266" />
-      <module_usage name="csv" finding="absolute" line="294" />
-      <module_usage name="sqlglot" finding="absolute" line="399" />
-      <module_usage name="sqlglot.Expression" finding="not-found" line="399" />
+      <module_usage name="difflib" finding="absolute" line="12" />
+      <module_usage name="enum" finding="absolute" line="13" />
+      <module_usage name="itertools" finding="absolute" line="14" />
+      <module_usage name="sqlglot" finding="absolute" line="189" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="189" />
+      <module_usage name="sqlglot.optimizer.annotate_types" finding="absolute" line="190" />
+      <module_usage name="sqlglot.optimizer.simplify" finding="absolute" line="191" />
+      <module_usage name="gzip" finding="absolute" line="299" />
+      <module_usage name="csv" finding="absolute" line="327" />
+      <module_usage name="sqlglot" finding="absolute" line="432" />
+      <module_usage name="sqlglot.Expression" finding="not-found" line="432" />
     </module_usages>
   </module>
   <module name="sqlglot.jsonpath" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/jsonpath.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="136" merged_total="2730" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="120" merged_total="505" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="137" merged_total="2794" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="121" merged_total="515" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
       <module_usage name="sqlglot.expressions" finding="absolute" line="5" />
       <module_usage name="sqlglot.errors" finding="absolute" line="6" />
       <module_usage name="sqlglot.tokens" finding="absolute" line="7" />
-      <module_usage name="sqlglot.dialects" finding="absolute" line="42" />
-      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="42" />
+      <module_usage name="sqlglot.dialects" finding="absolute" line="46" />
+      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="46" />
     </module_usages>
   </module>
   <module name="sqlglot.optimizer" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/__init__.py" distribution="sqlglot">
@@ -4024,8 +4130,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.annotate_types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/annotate_types.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="84" merged_total="9717" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="84" merged_total="1329" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="84" merged_total="11230" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="84" merged_total="1541" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="functools" finding="absolute" line="3" />
@@ -4039,8 +4145,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.canonicalize" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/canonicalize.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="63" merged_total="2200" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="63" merged_total="379" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="63" merged_total="2219" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="63" merged_total="382" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="itertools" finding="absolute" line="3" />
@@ -4061,8 +4167,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.eliminate_joins" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/eliminate_joins.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="45" merged_total="2749" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="37" merged_total="378" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="45" merged_total="2756" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="37" merged_total="379" />
     <module_usages>
       <module_usage name="sqlglot" finding="absolute" line="1" />
       <module_usage name="sqlglot.expressions" finding="relative" line="1" />
@@ -4084,20 +4190,22 @@
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.isolate_table_selects" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/isolate_table_selects.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="41" merged_total="506" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="38" merged_total="71" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="44" merged_total="527" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="41" merged_total="74" />
     <module_usages>
-      <module_usage name="sqlglot" finding="absolute" line="1" />
-      <module_usage name="sqlglot.alias" finding="not-found" line="1" />
-      <module_usage name="sqlglot.exp" finding="not-found" line="1" />
-      <module_usage name="sqlglot.errors" finding="absolute" line="2" />
-      <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="3" />
-      <module_usage name="sqlglot.schema" finding="absolute" line="4" />
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="3" />
+      <module_usage name="sqlglot" finding="absolute" line="5" />
+      <module_usage name="sqlglot.alias" finding="not-found" line="5" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="5" />
+      <module_usage name="sqlglot.errors" finding="absolute" line="6" />
+      <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="7" />
+      <module_usage name="sqlglot.schema" finding="absolute" line="8" />
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.merge_subqueries" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/merge_subqueries.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="88" merged_total="6016" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="64" merged_total="837" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="97" merged_total="6245" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="71" merged_total="869" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -4135,8 +4243,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.optimize_joins" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/optimize_joins.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="35" merged_total="2215" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="242" />
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="38" merged_total="2252" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="246" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -4174,28 +4282,36 @@
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.pushdown_predicates" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/pushdown_predicates.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="70" merged_total="3485" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="49" merged_total="483" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="70" merged_total="3606" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="49" merged_total="499" />
     <module_usages>
       <module_usage name="sqlglot" finding="absolute" line="1" />
       <module_usage name="sqlglot.exp" finding="not-found" line="1" />
       <module_usage name="sqlglot.optimizer.normalize" finding="absolute" line="2" />
       <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="3" />
       <module_usage name="sqlglot.optimizer.simplify" finding="absolute" line="4" />
+      <module_usage name="sqlglot" finding="absolute" line="5" />
+      <module_usage name="sqlglot.Dialect" finding="not-found" line="5" />
+      <module_usage name="sqlglot.dialects.athena" finding="absolute" line="24" />
+      <module_usage name="sqlglot.dialects.presto" finding="absolute" line="25" />
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.pushdown_projections" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/pushdown_projections.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="77" merged_total="2020" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="65" merged_total="322" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="99" merged_total="2210" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="82" merged_total="352" />
     <module_usages>
-      <module_usage name="collections" finding="absolute" line="1" />
-      <module_usage name="collections.defaultdict" finding="not-found" line="1" />
-      <module_usage name="sqlglot" finding="absolute" line="3" />
-      <module_usage name="sqlglot.alias" finding="not-found" line="3" />
-      <module_usage name="sqlglot.exp" finding="not-found" line="3" />
-      <module_usage name="sqlglot.optimizer.qualify_columns" finding="absolute" line="4" />
-      <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="5" />
-      <module_usage name="sqlglot.schema" finding="absolute" line="6" />
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="typing" finding="absolute" line="3" />
+      <module_usage name="collections" finding="absolute" line="4" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="4" />
+      <module_usage name="sqlglot" finding="absolute" line="6" />
+      <module_usage name="sqlglot.alias" finding="not-found" line="6" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="6" />
+      <module_usage name="sqlglot.optimizer.qualify_columns" finding="absolute" line="7" />
+      <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="8" />
+      <module_usage name="sqlglot.schema" finding="absolute" line="9" />
+      <module_usage name="sqlglot.errors" finding="absolute" line="10" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="11" />
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.qualify" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/qualify.py" distribution="sqlglot">
@@ -4215,8 +4331,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.qualify_columns" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/qualify_columns.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="69" merged_total="21014" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="64" merged_total="2288" />
+    <optimization-time pass="1" time="volatile" micro_passes="11" max_branch_merge="97" merged_total="29826" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="88" merged_total="2666" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="itertools" finding="absolute" line="3" />
@@ -4234,8 +4350,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.qualify_tables" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/qualify_tables.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="102" merged_total="3064" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="96" merged_total="424" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="109" merged_total="3254" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="103" merged_total="449" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="itertools" finding="absolute" line="3" />
@@ -4247,11 +4363,12 @@
       <module_usage name="sqlglot.helper" finding="absolute" line="8" />
       <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="9" />
       <module_usage name="sqlglot.schema" finding="absolute" line="10" />
+      <module_usage name="sqlglot.dialects.dialect" finding="absolute" line="11" />
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.scope" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/scope.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="124" merged_total="9750" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="95" merged_total="1274" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="125" merged_total="10333" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="96" merged_total="1352" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="itertools" finding="absolute" line="3" />
@@ -4267,8 +4384,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.simplify" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/simplify.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="210" merged_total="21566" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="184" merged_total="2791" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="210" merged_total="21719" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="184" merged_total="2813" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="datetime" finding="absolute" line="3" />
@@ -4286,12 +4403,12 @@
       <module_usage name="sqlglot.exp" finding="not-found" line="12" />
       <module_usage name="sqlglot.helper" finding="absolute" line="13" />
       <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="14" />
-      <module_usage name="dateutil.relativedelta" finding="not-found" line="1247" />
+      <module_usage name="dateutil.relativedelta" finding="not-found" line="1255" />
     </module_usages>
   </module>
   <module name="sqlglot.optimizer.unnest_subqueries" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/optimizer/unnest_subqueries.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="221" merged_total="3818" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="183" merged_total="711" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="221" merged_total="3858" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="183" merged_total="719" />
     <module_usages>
       <module_usage name="sqlglot" finding="absolute" line="1" />
       <module_usage name="sqlglot.exp" finding="not-found" line="1" />
@@ -4300,28 +4417,30 @@
     </module_usages>
   </module>
   <module name="sqlglot.parser" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/parser.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="2507" merged_total="124232" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2491" merged_total="16679" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="2644" merged_total="133693" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2626" merged_total="17973" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="logging" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="collections" finding="absolute" line="5" />
-      <module_usage name="collections.defaultdict" finding="not-found" line="5" />
-      <module_usage name="sqlglot" finding="absolute" line="7" />
-      <module_usage name="sqlglot.exp" finding="not-found" line="7" />
-      <module_usage name="sqlglot.errors" finding="absolute" line="8" />
-      <module_usage name="sqlglot.helper" finding="absolute" line="9" />
-      <module_usage name="sqlglot.time" finding="absolute" line="10" />
-      <module_usage name="sqlglot.tokens" finding="absolute" line="11" />
-      <module_usage name="sqlglot.trie" finding="absolute" line="12" />
-      <module_usage name="sqlglot.dialects" finding="absolute" line="1457" />
-      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="1457" />
-      <module_usage name="sqlglot.optimizer.normalize_identifiers" finding="absolute" line="3276" />
+      <module_usage name="itertools" finding="absolute" line="3" />
+      <module_usage name="logging" finding="absolute" line="4" />
+      <module_usage name="re" finding="absolute" line="5" />
+      <module_usage name="typing" finding="absolute" line="6" />
+      <module_usage name="collections" finding="absolute" line="7" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="7" />
+      <module_usage name="sqlglot" finding="absolute" line="9" />
+      <module_usage name="sqlglot.exp" finding="not-found" line="9" />
+      <module_usage name="sqlglot.errors" finding="absolute" line="10" />
+      <module_usage name="sqlglot.helper" finding="absolute" line="11" />
+      <module_usage name="sqlglot.time" finding="absolute" line="12" />
+      <module_usage name="sqlglot.tokens" finding="absolute" line="13" />
+      <module_usage name="sqlglot.trie" finding="absolute" line="14" />
+      <module_usage name="sqlglot.dialects" finding="absolute" line="1583" />
+      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="1583" />
+      <module_usage name="sqlglot.optimizer.normalize_identifiers" finding="absolute" line="3502" />
     </module_usages>
   </module>
   <module name="sqlglot.schema" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/schema.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="57" merged_total="6061" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="57" merged_total="5980" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="43" merged_total="805" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
@@ -4355,8 +4474,8 @@
     </module_usages>
   </module>
   <module name="sqlglot.tokens" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/tokens.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="1529" merged_total="41532" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="1529" merged_total="5867" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="1609" merged_total="42583" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="1609" merged_total="6018" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="os" finding="absolute" line="3" />
@@ -4366,13 +4485,13 @@
       <module_usage name="sqlglot.helper" finding="absolute" line="8" />
       <module_usage name="sqlglot.trie" finding="absolute" line="9" />
       <module_usage name="sqlglotrs" finding="not-found" line="16" />
-      <module_usage name="sqlglot.dialects" finding="absolute" line="1004" />
-      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="1004" />
+      <module_usage name="sqlglot.dialects" finding="absolute" line="1035" />
+      <module_usage name="sqlglot.dialects.Dialect" finding="not-found" line="1035" />
     </module_usages>
   </module>
-  <module name="sqlglot.transforms" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/transforms.py" distribution="sqlglot">
-    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="235" merged_total="18829" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="208" merged_total="2049" />
+  <module name="sqlglot.transforms" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/transforms.py" distribution="sqlglot">
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="235" merged_total="20441" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="208" merged_total="2226" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
       <module_usage name="typing" finding="absolute" line="3" />
@@ -4381,9 +4500,13 @@
       <module_usage name="sqlglot.errors" finding="absolute" line="6" />
       <module_usage name="sqlglot.helper" finding="absolute" line="7" />
       <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="302" />
-      <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="418" />
-      <module_usage name="sqlglot.optimizer.canonicalize" finding="absolute" line="720" />
-      <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="858" />
+      <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="433" />
+      <module_usage name="sqlglot.optimizer.canonicalize" finding="absolute" line="735" />
+      <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="899" />
+      <module_usage name="sqlglot.optimizer.normalize" finding="absolute" line="900" />
+      <module_usage name="collections" finding="absolute" line="901" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="901" />
+      <module_usage name="sqlglot.optimizer.scope" finding="absolute" line="1009" />
     </module_usages>
   </module>
   <module name="sqlglot.trie" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/sqlglot/trie.py" distribution="sqlglot">
@@ -4913,7 +5036,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=fafb21e43a75273afcb832af58878461" />
+    <option value="--report-user-provided=pipenv_hash=9de00891833e30355f0b3589c07fcf7f" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -4937,7 +5060,7 @@
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
-    <distribution name="sqlglot" version="26.6.0" installer="pip" />
+    <distribution name="sqlglot" version="27.12.0" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}/bin/python" python_flavor="CPython Official" python_version="3.10.6" os_name="Darwin" os_release="15.5" arch_name="arm64" filesystem_encoding="utf-8">
     <search_path>
@@ -4950,7 +5073,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>fafb21e43a75273afcb832af58878461</pipenv_hash>
+    <pipenv_hash>9de00891833e30355f0b3589c07fcf7f</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}/SqlglotUsing.dist/SqlglotUsing.bin" />
 </nuitka-compilation-report>
