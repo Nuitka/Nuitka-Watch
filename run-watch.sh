@@ -16,6 +16,9 @@ then
     python3.12() {
         '/c/Python312_64/python.exe' $@
     }
+    python3.13() {
+        '/c/Python313_64/python.exe' $@
+    }
 fi
 
 # This enables my private development slightly better.
@@ -40,7 +43,7 @@ elif [ "$OS" = "Linux" ]
 then
     declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12")
 else
-    declare -a PYTHON_VERSIONS=("3.10" "3.12")
+    declare -a PYTHON_VERSIONS=("3.10" "3.12" "3.13")
 fi
 
 echo "Doing Python versions $PYTHON_VERSIONS"
