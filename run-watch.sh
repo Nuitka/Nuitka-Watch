@@ -41,7 +41,7 @@ then
     declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12")
 elif [ "$OS" = "Linux" ]
 then
-    declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12")
+    declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12" "3.13")
 else
     declare -a PYTHON_VERSIONS=("3.10" "3.12" "3.13")
 fi
