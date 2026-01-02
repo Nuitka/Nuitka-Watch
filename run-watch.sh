@@ -19,6 +19,9 @@ then
     python3.13() {
         '/c/Python313_64/python.exe' $@
     }
+    python3.14() {
+        '/c/Python314_64/python.exe' $@
+    }
 fi
 
 # This enables my private development slightly better.
@@ -50,5 +53,7 @@ echo "Doing Python versions $PYTHON_VERSIONS"
 
 for PYTHON_VERSION in "${PYTHON_VERSIONS[@]}"
 do
+    set -x
     python${PYTHON_VERSION} $NUITKA_WATCH/bin/nuitka-watch --python-version=${PYTHON_VERSION} --nuitka-binary=../Nuitka-develop/bin/nuitka $@
+    set +x
 done
