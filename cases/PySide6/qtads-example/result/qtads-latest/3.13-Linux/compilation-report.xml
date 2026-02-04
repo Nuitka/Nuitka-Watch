@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.0rc7" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.0rc10" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment />
   <module name="PySide6" kind="CompiledPythonPackage" usage="import" reason="Included to allow post load workaround code." source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/__init__.py" distribution="PySide6,PySide6_Addons,PySide6_Essentials">
     <plugin-influence name="options-nanny" influence="condition-used" condition="use_pyside6" tags_used="use_pyside6" result="true" />
@@ -32,6 +32,11 @@
       <module_usage name="PySide6" finding="absolute" line="25" />
       <module_usage name="PySide6.QtCore" finding="relative" line="25" />
     </module_usages>
+  </module>
+  <module name="PySide6.Qt3DCore" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt3DCore.abi3.so" distribution="PySide6_Addons">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
   </module>
   <module name="PySide6.QtCore" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/QtCore.abi3.so" distribution="PySide6">
     <optimization-time pass="1" time="volatile" />
@@ -263,8 +268,6 @@
       <module_usage name="functools" finding="absolute" line="1" />
       <module_usage name="genericpath" finding="absolute" line="1" />
       <module_usage name="importlib" finding="absolute" line="1" />
-      <module_usage name="importlib._bootstrap" finding="absolute" line="1" />
-      <module_usage name="importlib._bootstrap_external" finding="absolute" line="1" />
       <module_usage name="importlib.machinery" finding="absolute" line="1" />
       <module_usage name="inspect" finding="absolute" line="1" />
       <module_usage name="io" finding="absolute" line="1" />
@@ -468,7 +471,7 @@
     </module_usages>
   </module>
   <module name="_android_support" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_android_support.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="12" merged_total="1071" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="731" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="io" finding="absolute" line="1" />
@@ -518,7 +521,7 @@
     <module_usages />
   </module>
   <module name="_collections_abc" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/_collections_abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="24" merged_total="8714" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="7321" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="35" />
@@ -612,7 +615,7 @@
     <module_usages />
   </module>
   <module name="_osx_support" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_osx_support.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="2297" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="2326" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" />
@@ -635,14 +638,14 @@
     <module_usages />
   </module>
   <module name="_py_abc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_py_abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="15" merged_total="896" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="752" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_weakrefset" finding="absolute" line="1" />
     </module_usages>
   </module>
   <module name="_pydatetime" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_pydatetime.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="55" merged_total="11717" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="55" merged_total="11737" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="time" finding="absolute" line="11" />
@@ -709,11 +712,12 @@
     </module_usages>
   </module>
   <module name="_pyrepl._minimal_curses" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_pyrepl/_minimal_curses.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="298" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="294" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="ctypes" finding="absolute" line="12" />
       <module_usage name="ctypes.util" finding="absolute" line="13" />
+      <module_usage name="ctypes.util" finding="absolute" line="24" />
     </module_usages>
   </module>
   <module name="_pyrepl._threading_handler" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_pyrepl/_threading_handler.py">
@@ -727,7 +731,7 @@
     </module_usages>
   </module>
   <module name="_pyrepl.commands" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_pyrepl/commands.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="5772" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="5778" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="22" />
@@ -740,7 +744,7 @@
     </module_usages>
   </module>
   <module name="_pyrepl.completing_reader" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_pyrepl/completing_reader.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="24" merged_total="1793" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="1498" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="21" />
@@ -772,7 +776,7 @@
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="31" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
-      <module_usage name="_curses" finding="not-found" line="23" />
+      <module_usage name="_curses" finding="absolute" line="23" />
       <module_usage name="curses" finding="absolute" line="26" />
       <module_usage name="_pyrepl" finding="absolute" line="28" />
       <module_usage name="_pyrepl._minimal_curses" finding="relative" line="28" />
@@ -786,7 +790,7 @@
     </module_usages>
   </module>
   <module name="_pyrepl.historical_reader" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_pyrepl/historical_reader.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="28" merged_total="4564" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="3811" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="20" />
@@ -848,7 +852,7 @@
     </module_usages>
   </module>
   <module name="_pyrepl.reader" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_pyrepl/reader.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="69" merged_total="3900" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="69" merged_total="3271" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="22" />
@@ -868,7 +872,7 @@
     </module_usages>
   </module>
   <module name="_pyrepl.readline" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_pyrepl/readline.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="37" merged_total="2864" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="37" merged_total="2873" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="29" />
@@ -1017,7 +1021,7 @@
     <module_usages />
   </module>
   <module name="_strptime" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/_strptime.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="52" merged_total="5369" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="52" merged_total="3368" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="13" />
@@ -1062,7 +1066,7 @@
     </module_usages>
   </module>
   <module name="_weakrefset" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/_weakrefset.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="42" merged_total="1334" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="42" merged_total="1139" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_weakref" finding="absolute" line="5" />
@@ -1070,7 +1074,7 @@
     </module_usages>
   </module>
   <module name="abc" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="14" merged_total="1345" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="1129" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_abc" finding="absolute" line="85" />
@@ -1078,7 +1082,7 @@
     </module_usages>
   </module>
   <module name="argparse" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/argparse.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="56" merged_total="17514" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="56" merged_total="17547" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="88" />
@@ -1100,7 +1104,7 @@
     <module_usages />
   </module>
   <module name="ast" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/ast.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="119" merged_total="13303" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="119" merged_total="13304" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="27" />
@@ -1155,7 +1159,7 @@
     </module_usages>
   </module>
   <module name="calendar" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/calendar.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="23" merged_total="8709" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="5511" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="8" />
@@ -1167,15 +1171,15 @@
     </module_usages>
   </module>
   <module name="cmd" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/cmd.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="2092" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="1767" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="inspect" finding="absolute" line="45" />
       <module_usage name="string" finding="absolute" line="45" />
       <module_usage name="sys" finding="absolute" line="45" />
-      <module_usage name="readline" finding="not-found" line="108" />
-      <module_usage name="readline" finding="not-found" line="152" />
-      <module_usage name="readline" finding="not-found" line="265" />
+      <module_usage name="readline" finding="absolute" line="108" />
+      <module_usage name="readline" finding="absolute" line="152" />
+      <module_usage name="readline" finding="absolute" line="265" />
     </module_usages>
   </module>
   <module name="code" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/code.py">
@@ -1186,7 +1190,7 @@
       <module_usage name="sys" finding="absolute" line="9" />
       <module_usage name="traceback" finding="absolute" line="10" />
       <module_usage name="codeop" finding="absolute" line="11" />
-      <module_usage name="readline" finding="not-found" line="369" />
+      <module_usage name="readline" finding="absolute" line="369" />
     </module_usages>
   </module>
   <module name="codecs" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/codecs.py">
@@ -1207,7 +1211,7 @@
     </module_usages>
   </module>
   <module name="collections" kind="UncompiledPythonPackage" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/collections/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="75" merged_total="9311" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="75" merged_total="7890" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -1237,7 +1241,7 @@
     <module_usages />
   </module>
   <module name="configparser" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/configparser.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="59" merged_total="8529" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="59" merged_total="7156" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="not-found" line="148" />
@@ -1289,7 +1293,7 @@
     </module_usages>
   </module>
   <module name="copyreg" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/copyreg.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="615" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="627" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="34" />
@@ -1297,7 +1301,7 @@
     </module_usages>
   </module>
   <module name="csv" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/csv.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="35" merged_total="4377" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="3337" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="66" />
@@ -1308,7 +1312,7 @@
     </module_usages>
   </module>
   <module name="dataclasses" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/dataclasses.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="62" merged_total="5677" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="62" merged_total="5679" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="1" />
@@ -1345,7 +1349,7 @@
     </module_usages>
   </module>
   <module name="difflib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/difflib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="40" merged_total="9147" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="40" merged_total="9149" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="heapq" finding="absolute" line="33" />
@@ -1357,7 +1361,7 @@
     </module_usages>
   </module>
   <module name="dis" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/dis.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="40" merged_total="6989" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="40" merged_total="5845" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="3" />
@@ -1415,7 +1419,7 @@
     </module_usages>
   </module>
   <module name="email._parseaddr" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/email/_parseaddr.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="67" merged_total="2673" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="67" merged_total="2681" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="time" finding="absolute" line="16" />
@@ -1423,7 +1427,7 @@
     </module_usages>
   </module>
   <module name="email._policybase" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/email/_policybase.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="22" merged_total="1478" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="1243" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="6" />
@@ -1494,7 +1498,7 @@
     </module_usages>
   </module>
   <module name="email.generator" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/email/generator.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="26" merged_total="1526" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="26" merged_total="1523" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="9" />
@@ -1508,7 +1512,7 @@
     </module_usages>
   </module>
   <module name="email.header" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/email/header.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="22" merged_total="3388" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="2849" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="13" />
@@ -1521,7 +1525,7 @@
     </module_usages>
   </module>
   <module name="email.headerregistry" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/email/headerregistry.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="14" merged_total="3904" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="3283" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="6" />
@@ -1586,7 +1590,7 @@
     </module_usages>
   </module>
   <module name="email.quoprimime" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/email/quoprimime.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="18" merged_total="1008" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="844" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="42" />
@@ -1595,7 +1599,7 @@
   </module>
   <module name="email.utils" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/email/utils.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_socket&quot;)" tags_used="has_builtin_module" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="18" merged_total="2276" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="1905" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="25" />
@@ -2357,7 +2361,7 @@
     </module_usages>
   </module>
   <module name="encodings.punycode" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/encodings/punycode.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="15" merged_total="2157" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="1807" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="codecs" finding="absolute" line="6" />
@@ -2518,7 +2522,7 @@
   </module>
   <module name="enum" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/enum.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="plugin(&quot;pyside6&quot;)" tags_used="plugin" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="58" merged_total="13221" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="58" merged_total="13241" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="1" />
@@ -2610,7 +2614,7 @@
     </module_usages>
   </module>
   <module name="functools" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/functools.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="20" merged_total="8080" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="20" merged_total="6149" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="17" />
@@ -2649,7 +2653,7 @@
     </module_usages>
   </module>
   <module name="gettext" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/gettext.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="3891" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="3268" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="operator" finding="absolute" line="49" />
@@ -2667,7 +2671,7 @@
     </module_usages>
   </module>
   <module name="glob" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/glob.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="23" merged_total="3364" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="2812" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="contextlib" finding="absolute" line="3" />
@@ -2693,7 +2697,7 @@
     </module_usages>
   </module>
   <module name="graphlib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/graphlib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="16" merged_total="1220" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="1020" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="1" />
@@ -2816,14 +2820,14 @@
       <module_usage name="abc" finding="absolute" line="3" />
     </module_usages>
   </module>
-  <module name="importlib._bootstrap" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/importlib/_bootstrap.py">
+  <module name="importlib._bootstrap" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/importlib/_bootstrap.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="5631" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_frozen_importlib_external" finding="absolute" line="1549" />
     </module_usages>
   </module>
-  <module name="importlib._bootstrap_external" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/importlib/_bootstrap_external.py">
+  <module name="importlib._bootstrap_external" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/importlib/_bootstrap_external.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="6981" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -2876,7 +2880,7 @@
     </module_usages>
   </module>
   <module name="importlib.metadata" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/importlib/metadata/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="5497" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="4647" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -3052,7 +3056,7 @@
     </module_usages>
   </module>
   <module name="importlib.resources.readers" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/importlib/resources/readers.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="18" merged_total="1753" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="1475" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="1" />
@@ -3108,7 +3112,7 @@
     </module_usages>
   </module>
   <module name="inspect" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/inspect.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="59" merged_total="16597" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="59" merged_total="13919" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="144" />
@@ -3183,7 +3187,7 @@
   </module>
   <module name="json.encoder" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/json/encoder.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_json&quot;)" tags_used="has_builtin_module" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="1457" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="1493" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="3" />
@@ -3239,7 +3243,7 @@
     </module_usages>
   </module>
   <module name="logging" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/logging/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="10190" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="8560" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -3283,7 +3287,7 @@
     <module_usages />
   </module>
   <module name="mimetypes" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/mimetypes.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="16" merged_total="2114" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="1771" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="26" />
@@ -3297,7 +3301,7 @@
     </module_usages>
   </module>
   <module name="modulefinder" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/modulefinder.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="32" merged_total="4139" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="3459" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="dis" finding="absolute" line="3" />
@@ -3313,7 +3317,7 @@
     </module_usages>
   </module>
   <module name="netrc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/netrc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="37" merged_total="1509" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="37" merged_total="1264" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="5" />
@@ -3323,7 +3327,7 @@
     </module_usages>
   </module>
   <module name="ntpath" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/ntpath.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="56" merged_total="5521" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="56" merged_total="5531" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="20" />
@@ -3476,7 +3480,7 @@
     </module_usages>
   </module>
   <module name="pickletools" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/pickletools.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="42" merged_total="2902" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="42" merged_total="2908" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="codecs" finding="absolute" line="13" />
@@ -3491,7 +3495,7 @@
     </module_usages>
   </module>
   <module name="pkgutil" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/pkgutil.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="25" merged_total="2311" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="1929" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="3" />
@@ -3573,7 +3577,7 @@
     </module_usages>
   </module>
   <module name="pprint" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/pprint.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="35" merged_total="4351" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="35" merged_total="4390" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="37" />
@@ -3585,7 +3589,7 @@
     </module_usages>
   </module>
   <module name="pstats" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/pstats.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="32" merged_total="5934" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="32" merged_total="5944" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="23" />
@@ -3679,7 +3683,7 @@
     <module_usages />
   </module>
   <module name="re._compiler" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/re/_compiler.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="133" merged_total="5107" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="133" merged_total="5123" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_sre" finding="absolute" line="13" />
@@ -3698,7 +3702,7 @@
     </module_usages>
   </module>
   <module name="re._parser" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/re/_parser.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="230" merged_total="6492" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="230" merged_total="5411" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re._constants" finding="absolute" line="15" />
@@ -3721,7 +3725,7 @@
     </module_usages>
   </module>
   <module name="rlcompleter" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/rlcompleter.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="16" merged_total="1048" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="18" merged_total="1100" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="atexit" finding="absolute" line="32" />
@@ -3731,7 +3735,7 @@
       <module_usage name="re" finding="absolute" line="36" />
       <module_usage name="__main__" finding="not-found" line="37" />
       <module_usage name="warnings" finding="absolute" line="38" />
-      <module_usage name="readline" finding="not-found" line="212" />
+      <module_usage name="readline" finding="absolute" line="212" />
     </module_usages>
   </module>
   <module name="sched" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/sched.py">
@@ -3811,7 +3815,7 @@
     </module_usages>
   </module>
   <module name="shutil" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/shutil.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="9551" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="7984" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="7" />
@@ -3945,14 +3949,14 @@
     </module_usages>
   </module>
   <module name="stat" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/stat.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="6" merged_total="320" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="7" merged_total="253" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_stat" finding="absolute" line="205" />
     </module_usages>
   </module>
   <module name="statistics" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/statistics.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="7406" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="6238" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="math" finding="absolute" line="132" />
@@ -4001,7 +4005,7 @@
     </module_usages>
   </module>
   <module name="subprocess" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/subprocess.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="54" merged_total="11949" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="54" merged_total="11952" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="43" />
@@ -4139,7 +4143,7 @@
     </module_usages>
   </module>
   <module name="textwrap" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/textwrap.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="39" merged_total="1240" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="1262" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="8" />
@@ -4177,7 +4181,7 @@
     </module_usages>
   </module>
   <module name="timeit" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/timeit.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="32" merged_total="1512" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="1265" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="gc" finding="absolute" line="52" />
@@ -4197,7 +4201,7 @@
     <module_usages />
   </module>
   <module name="tokenize" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/tokenize.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="37" merged_total="3657" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="37" merged_total="2298" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="codecs" finding="absolute" line="28" />
@@ -4280,7 +4284,7 @@
     </module_usages>
   </module>
   <module name="traceback" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/traceback.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="59" merged_total="9016" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="59" merged_total="7572" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="not-found" line="3" />
@@ -4299,7 +4303,7 @@
     </module_usages>
   </module>
   <module name="tracemalloc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/tracemalloc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="19" merged_total="3963" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="3377" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="not-found" line="1" />
@@ -4323,7 +4327,7 @@
     </module_usages>
   </module>
   <module name="typing" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/typing.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="28" merged_total="18290" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="15360" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="21" />
@@ -4363,7 +4367,7 @@
     </module_usages>
   </module>
   <module name="urllib.parse" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/urllib/parse.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="29" merged_total="8235" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="6901" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="34" />
@@ -4398,7 +4402,7 @@
     </module_usages>
   </module>
   <module name="weakref" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/weakref.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="32" merged_total="3668" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="32" merged_total="3677" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_weakref" finding="absolute" line="12" />
@@ -4507,46 +4511,10 @@
     <memory_usage name="before_c_code_generation" value="volatile" />
     <memory_usage name="before_running_scons" value="volatile" />
   </performance>
+  <included_extension name="Qt3DCore.so" dest_path="PySide6/Qt3DCore.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt3DCore.abi3.so" package="PySide6" ignored="no" reason="used extension module" />
   <included_extension name="QtCore.so" dest_path="PySide6/QtCore.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/QtCore.abi3.so" package="PySide6" ignored="no" reason="used extension module" />
   <included_extension name="QtGui.so" dest_path="PySide6/QtGui.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/QtGui.abi3.so" package="PySide6" ignored="no" reason="used extension module" />
   <included_extension name="QtWidgets.so" dest_path="PySide6/QtWidgets.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/QtWidgets.abi3.so" package="PySide6" ignored="no" reason="used extension module" />
-  <included_extension name="PySide6QtAds.so" dest_path="PySide6QtAds/PySide6QtAds.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6QtAds/PySide6QtAds.so" package="PySide6QtAds" ignored="no" reason="used extension module" />
-  <included_extension name="_blake2.so" dest_path="_blake2.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_blake2.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_bz2.so" dest_path="_bz2.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_bz2.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_codecs_cn.so" dest_path="_codecs_cn.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_cn.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
-  <included_extension name="_codecs_hk.so" dest_path="_codecs_hk.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_hk.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
-  <included_extension name="_codecs_iso2022.so" dest_path="_codecs_iso2022.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_iso2022.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
-  <included_extension name="_codecs_jp.so" dest_path="_codecs_jp.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_jp.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
-  <included_extension name="_codecs_kr.so" dest_path="_codecs_kr.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_kr.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
-  <included_extension name="_codecs_tw.so" dest_path="_codecs_tw.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_tw.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
-  <included_extension name="_contextvars.so" dest_path="_contextvars.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_contextvars.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_csv.so" dest_path="_csv.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_csv.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_datetime.so" dest_path="_datetime.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_datetime.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_decimal.so" dest_path="_decimal.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_decimal.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_hashlib.so" dest_path="_hashlib.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_hashlib.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_heapq.so" dest_path="_heapq.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_heapq.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_lzma.so" dest_path="_lzma.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_lzma.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_md5.so" dest_path="_md5.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_md5.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_multibytecodec.so" dest_path="_multibytecodec.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_multibytecodec.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
-  <included_extension name="_opcode.so" dest_path="_opcode.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_opcode.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_pickle.so" dest_path="_pickle.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_pickle.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_posixsubprocess.so" dest_path="_posixsubprocess.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_posixsubprocess.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_random.so" dest_path="_random.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_random.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_sha1.so" dest_path="_sha1.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_sha1.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_sha2.so" dest_path="_sha2.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_sha2.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_sha3.so" dest_path="_sha3.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_sha3.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_socket.so" dest_path="_socket.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_socket.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_statistics.so" dest_path="_statistics.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_statistics.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_struct.so" dest_path="_struct.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_struct.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="array.so" dest_path="array.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/array.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="binascii.so" dest_path="binascii.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/binascii.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
-  <included_extension name="fcntl.so" dest_path="fcntl.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/fcntl.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="grp.so" dest_path="grp.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/grp.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="math.so" dest_path="math.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/math.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="select.so" dest_path="select.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/select.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="Shiboken.so" dest_path="shiboken6/Shiboken.so" source_path="${sys.prefix}/lib/python3.13/site-packages/shiboken6/Shiboken.abi3.so" package="shiboken6" ignored="no" reason="used extension module" />
-  <included_extension name="unicodedata.so" dest_path="unicodedata.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/unicodedata.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
-  <included_extension name="zlib.so" dest_path="zlib.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/zlib.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
   <included_dll name="libqeglfs-emu-integration.so" dest_path="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-emu-integration.so" package="PySide6" ignored="no" reason="qt plugin" />
   <included_dll name="libqeglfs-kms-egldevice-integration.so" dest_path="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so" package="PySide6" ignored="no" reason="qt plugin" />
   <included_dll name="libqeglfs-kms-integration.so" dest_path="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-kms-integration.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-kms-integration.so" package="PySide6" ignored="no" reason="qt plugin" />
@@ -4591,204 +4559,71 @@
   <included_dll name="libxdg-shell.so" dest_path="PySide6/qt-plugins/wayland-shell-integration/libxdg-shell.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/plugins/wayland-shell-integration/libxdg-shell.so" package="PySide6" ignored="no" reason="qt plugin" />
   <included_dll name="libqxcb-egl-integration.so" dest_path="PySide6/qt-plugins/xcbglintegrations/libqxcb-egl-integration.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/plugins/xcbglintegrations/libqxcb-egl-integration.so" package="PySide6" ignored="no" reason="qt plugin" />
   <included_dll name="libqxcb-glx-integration.so" dest_path="PySide6/qt-plugins/xcbglintegrations/libqxcb-glx-integration.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/plugins/xcbglintegrations/libqxcb-glx-integration.so" package="PySide6" ignored="no" reason="qt plugin" />
-  <included_dll name="libQt6Widgets.so.6" dest_path="libQt6Widgets.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Widgets.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtWidgets.so'" />
-  <included_dll name="libpyside6qml.abi3.so.6.9" dest_path="libpyside6qml.abi3.so.6.9" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/libpyside6qml.abi3.so.6.9" package="PySide6QtAds" ignored="no" reason="Used by 'PySide6QtAds/PySide6QtAds.so'" />
-  <included_dll name="libxkbcommon-de59cad2.so.0.0.0" dest_path="libxkbcommon-de59cad2.so.0.0.0" source_path="${sys.prefix}/lib/python3.13/site-packages/pyside6_qtads.libs/libxkbcommon-de59cad2.so.0.0.0" package="PySide6QtAds" ignored="no" reason="Used by 'PySide6QtAds/PySide6QtAds.so'" />
+  <included_extension name="PySide6QtAds.so" dest_path="PySide6QtAds/PySide6QtAds.so" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6QtAds/PySide6QtAds.so" package="PySide6QtAds" ignored="no" reason="used extension module" />
+  <included_extension name="_blake2.so" dest_path="_blake2.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_blake2.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_bz2.so" dest_path="_bz2.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_bz2.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_codecs_cn.so" dest_path="_codecs_cn.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_cn.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
+  <included_extension name="_codecs_hk.so" dest_path="_codecs_hk.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_hk.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
+  <included_extension name="_codecs_iso2022.so" dest_path="_codecs_iso2022.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_iso2022.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
+  <included_extension name="_codecs_jp.so" dest_path="_codecs_jp.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_jp.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
+  <included_extension name="_codecs_kr.so" dest_path="_codecs_kr.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_kr.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
+  <included_extension name="_codecs_tw.so" dest_path="_codecs_tw.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_codecs_tw.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
+  <included_extension name="_contextvars.so" dest_path="_contextvars.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_contextvars.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_csv.so" dest_path="_csv.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_csv.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_datetime.so" dest_path="_datetime.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_datetime.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_decimal.so" dest_path="_decimal.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_decimal.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_hashlib.so" dest_path="_hashlib.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_hashlib.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_heapq.so" dest_path="_heapq.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_heapq.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_lzma.so" dest_path="_lzma.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_lzma.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_md5.so" dest_path="_md5.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_md5.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_multibytecodec.so" dest_path="_multibytecodec.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_multibytecodec.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
+  <included_extension name="_opcode.so" dest_path="_opcode.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_opcode.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_pickle.so" dest_path="_pickle.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_pickle.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_posixsubprocess.so" dest_path="_posixsubprocess.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_posixsubprocess.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_random.so" dest_path="_random.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_random.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_sha1.so" dest_path="_sha1.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_sha1.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_sha2.so" dest_path="_sha2.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_sha2.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_sha3.so" dest_path="_sha3.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_sha3.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_socket.so" dest_path="_socket.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_socket.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_statistics.so" dest_path="_statistics.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_statistics.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_struct.so" dest_path="_struct.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/_struct.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="array.so" dest_path="array.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/array.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="binascii.so" dest_path="binascii.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/binascii.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
+  <included_extension name="fcntl.so" dest_path="fcntl.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/fcntl.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="grp.so" dest_path="grp.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/grp.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_dll name="libQt63DCore.so.6" dest_path="libQt63DCore.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt63DCore.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libQt6Concurrent.so.6" dest_path="libQt6Concurrent.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Concurrent.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libQt6Core.so.6" dest_path="libQt6Core.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Core.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so'" />
+  <included_dll name="libQt6DBus.so.6" dest_path="libQt6DBus.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6DBus.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so'" />
+  <included_dll name="libQt6EglFSDeviceIntegration.so.6" dest_path="libQt6EglFSDeviceIntegration.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6EglFSDeviceIntegration.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so'" />
+  <included_dll name="libQt6EglFsKmsSupport.so.6" dest_path="libQt6EglFsKmsSupport.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6EglFsKmsSupport.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so'" />
+  <included_dll name="libQt6Gui.so.6" dest_path="libQt6Gui.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Gui.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so'" />
+  <included_dll name="libQt6Network.so.6" dest_path="libQt6Network.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Network.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/imageformats/libqpdf.so'" />
+  <included_dll name="libQt6OpenGL.so.6" dest_path="libQt6OpenGL.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6OpenGL.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so'" />
+  <included_dll name="libQt6Pdf.so.6" dest_path="libQt6Pdf.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Pdf.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/imageformats/libqpdf.so'" />
+  <included_dll name="libQt6PrintSupport.so.6" dest_path="libQt6PrintSupport.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6PrintSupport.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/printsupport/libcupsprintersupport.so'" />
   <included_dll name="libQt6Qml.so.6" dest_path="libQt6Qml.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Qml.so.6" package="PySide6QtAds" ignored="no" reason="Used by 'PySide6QtAds/PySide6QtAds.so'" />
+  <included_dll name="libQt6Svg.so.6" dest_path="libQt6Svg.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Svg.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/iconengines/libqsvgicon.so'" />
+  <included_dll name="libQt6WaylandClient.so.6" dest_path="libQt6WaylandClient.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6WaylandClient.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/platforms/libqwayland-egl.so'" />
+  <included_dll name="libQt6WaylandEglClientHwIntegration.so.6" dest_path="libQt6WaylandEglClientHwIntegration.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6WaylandEglClientHwIntegration.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/platforms/libqwayland-egl.so'" />
+  <included_dll name="libQt6Widgets.so.6" dest_path="libQt6Widgets.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Widgets.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/printsupport/libcupsprintersupport.so'" />
+  <included_dll name="libQt6WlShellIntegration.so.6" dest_path="libQt6WlShellIntegration.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6WlShellIntegration.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/wayland-shell-integration/libwl-shell-plugin.so'" />
+  <included_dll name="libQt6XcbQpa.so.6" dest_path="libQt6XcbQpa.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6XcbQpa.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/platforms/libqxcb.so'" />
   <included_dll name="libbz2.so.1.0" dest_path="libbz2.so.1.0" source_path="/lib/x86_64-linux-gnu/libbz2.so.1.0" package="" ignored="no" reason="Used by '_bz2.so'" />
   <included_dll name="libcrypto.so.3" dest_path="libcrypto.so.3" source_path="/lib/x86_64-linux-gnu/libcrypto.so.3" package="" ignored="no" reason="Used by '_hashlib.so'" />
+  <included_dll name="libicudata.so.73" dest_path="libicudata.so.73" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libicudata.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so'" />
+  <included_dll name="libicui18n.so.73" dest_path="libicui18n.so.73" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libicui18n.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so'" />
+  <included_dll name="libicuuc.so.73" dest_path="libicuuc.so.73" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libicuuc.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so'" />
   <included_dll name="liblzma.so.5" dest_path="liblzma.so.5" source_path="/lib/x86_64-linux-gnu/liblzma.so.5" package="" ignored="no" reason="Used by '_lzma.so'" />
-  <included_dll name="libQt6EglFSDeviceIntegration.so.6" dest_path="libQt6EglFSDeviceIntegration.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6EglFSDeviceIntegration.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so'" />
-  <included_dll name="libQt6OpenGL.so.6" dest_path="libQt6OpenGL.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6OpenGL.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so'" />
-  <included_dll name="libQt6EglFsKmsSupport.so.6" dest_path="libQt6EglFsKmsSupport.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6EglFsKmsSupport.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so'" />
-  <included_dll name="libQt6Svg.so.6" dest_path="libQt6Svg.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Svg.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/iconengines/libqsvgicon.so'" />
-  <included_dll name="libQt6Pdf.so.6" dest_path="libQt6Pdf.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Pdf.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/imageformats/libqpdf.so'" />
-  <included_dll name="libQt6WaylandEglClientHwIntegration.so.6" dest_path="libQt6WaylandEglClientHwIntegration.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6WaylandEglClientHwIntegration.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/platforms/libqwayland-egl.so'" />
-  <included_dll name="libQt6WaylandClient.so.6" dest_path="libQt6WaylandClient.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6WaylandClient.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/platforms/libqwayland-egl.so'" />
-  <included_dll name="libQt6XcbQpa.so.6" dest_path="libQt6XcbQpa.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6XcbQpa.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/platforms/libqxcb.so'" />
-  <included_dll name="libQt6PrintSupport.so.6" dest_path="libQt6PrintSupport.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6PrintSupport.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/printsupport/libcupsprintersupport.so'" />
-  <included_dll name="libQt6WlShellIntegration.so.6" dest_path="libQt6WlShellIntegration.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6WlShellIntegration.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qt-plugins/wayland-shell-integration/libwl-shell-plugin.so'" />
-  <included_dll name="libpyside6.abi3.so.6.9" dest_path="libpyside6.abi3.so.6.9" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/libpyside6.abi3.so.6.9" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libshiboken6.abi3.so.6.9" dest_path="libshiboken6.abi3.so.6.9" source_path="${sys.prefix}/lib/python3.13/site-packages/shiboken6/libshiboken6.abi3.so.6.9" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libQt6Core.so.6" dest_path="libQt6Core.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Core.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libicui18n.so.73" dest_path="libicui18n.so.73" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libicui18n.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libicuuc.so.73" dest_path="libicuuc.so.73" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libicuuc.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libicudata.so.73" dest_path="libicudata.so.73" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libicudata.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libQt6Gui.so.6" dest_path="libQt6Gui.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Gui.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtGui.so'" />
-  <included_dll name="libQt6DBus.so.6" dest_path="libQt6DBus.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6DBus.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtGui.so'" />
-  <included_dll name="libQt6Network.so.6" dest_path="libQt6Network.so.6" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/Qt/lib/libQt6Network.so.6" package="PySide6QtAds" ignored="no" reason="Used by 'PySide6QtAds/PySide6QtAds.so'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgthread-2.0.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libEGL.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libfontconfig.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libxkbcommon.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgthread-2.0.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libdbus-1.so.3" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libxkbcommon.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libEGL.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libfontconfig.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgthread-2.0.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libdbus-1.so.3" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libxkbcommon.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libEGL.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libfontconfig.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgthread-2.0.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgssapi_krb5.so.2" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libdbus-1.so.3" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
-  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="shiboken6/Shiboken.so" reason="no outside dependencies allowed for 'shiboken6.Shiboken'" />
+  <included_dll name="libpyside6.abi3.so.6.9" dest_path="libpyside6.abi3.so.6.9" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/libpyside6.abi3.so.6.9" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libpyside6qml.abi3.so.6.9" dest_path="libpyside6qml.abi3.so.6.9" source_path="${sys.prefix}/lib/python3.13/site-packages/PySide6/libpyside6qml.abi3.so.6.9" package="PySide6QtAds" ignored="no" reason="Used by 'PySide6QtAds/PySide6QtAds.so'" />
+  <included_dll name="libshiboken6.abi3.so.6.9" dest_path="libshiboken6.abi3.so.6.9" source_path="${sys.prefix}/lib/python3.13/site-packages/shiboken6/libshiboken6.abi3.so.6.9" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libxkbcommon-de59cad2.so.0.0.0" dest_path="libxkbcommon-de59cad2.so.0.0.0" source_path="${sys.prefix}/lib/python3.13/site-packages/pyside6_qtads.libs/libxkbcommon-de59cad2.so.0.0.0" package="PySide6QtAds" ignored="no" reason="Used by 'PySide6QtAds/PySide6QtAds.so'" />
+  <included_extension name="math.so" dest_path="math.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/math.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="select.so" dest_path="select.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/select.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="Shiboken.so" dest_path="shiboken6/Shiboken.so" source_path="${sys.prefix}/lib/python3.13/site-packages/shiboken6/Shiboken.abi3.so" package="shiboken6" ignored="no" reason="used extension module" />
+  <included_extension name="unicodedata.so" dest_path="unicodedata.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/unicodedata.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="zlib.so" dest_path="zlib.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/zlib.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libEGL.so.1" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libxkbcommon.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
@@ -4819,20 +4654,17 @@
   <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
@@ -4840,6 +4672,9 @@
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-emu-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libEGL.so.1" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libxkbcommon.so.0" used_by="PySide6/qt-plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
@@ -5290,6 +5125,13 @@
   <excluded_dll name="/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
@@ -5303,13 +5145,6 @@
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/qt-plugins/imageformats/libqpdf.so" reason="no outside dependencies allowed for 'PySide6'" />
@@ -7250,6 +7085,240 @@
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/qt-plugins/xcbglintegrations/libqxcb-glx-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/qt-plugins/xcbglintegrations/libqxcb-glx-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/qt-plugins/xcbglintegrations/libqxcb-glx-integration.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxkbcommon.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libEGL.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfontconfig.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgthread-2.0.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgssapi_krb5.so.2" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libdbus-1.so.3" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgthread-2.0.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libEGL.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfontconfig.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxkbcommon.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgthread-2.0.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libdbus-1.so.3" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxkbcommon.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libEGL.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfontconfig.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgthread-2.0.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libdbus-1.so.3" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxkbcommon.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libEGL.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfontconfig.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgthread-2.0.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgssapi_krb5.so.2" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libdbus-1.so.3" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6QtAds/PySide6QtAds.so" reason="no outside dependencies allowed for 'PySide6QtAds.PySide6QtAds'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="shiboken6/Shiboken.so" reason="no outside dependencies allowed for 'shiboken6.Shiboken'" />
   <command_line>
     <option value="--mode=standalone" />
     <option value="--enable-plugin=pyside6" />
