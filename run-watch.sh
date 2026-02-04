@@ -54,6 +54,7 @@ echo "Doing Python versions $PYTHON_VERSIONS"
 for PYTHON_VERSION in "${PYTHON_VERSIONS[@]}"
 do
     set -x
+    python${PYTHON_VERSION} $NUITKA_WATCH/bin/nuitka --clean-cache=all
     python${PYTHON_VERSION} $NUITKA_WATCH/bin/nuitka-watch --python-version=${PYTHON_VERSION} --nuitka-binary=../Nuitka-develop/bin/nuitka $@
     set +x
 done
