@@ -715,6 +715,17 @@
       <module_usage name="types" finding="absolute" line="6" />
     </module_usages>
   </module>
+  <module name="_yaml" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/_yaml/__init__.py" distribution="PyYAML">
+    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="1" merged_total="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="1" merged_total="1" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="yaml" finding="absolute" line="6" />
+      <module_usage name="yaml._yaml" finding="absolute" line="16" />
+      <module_usage name="warnings" finding="absolute" line="17" />
+    </module_usages>
+  </module>
   <module name="abc" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/abc.py">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="12" merged_total="1285" />
     <optimization-time pass="2" time="volatile" />
@@ -2994,9 +3005,9 @@
     <module_usages>
       <module_usage name="string" finding="absolute" line="45" />
       <module_usage name="sys" finding="absolute" line="45" />
-      <module_usage name="readline" finding="not-found" line="108" />
-      <module_usage name="readline" finding="not-found" line="144" />
-      <module_usage name="readline" finding="not-found" line="258" />
+      <module_usage name="readline" finding="absolute" line="108" />
+      <module_usage name="readline" finding="absolute" line="144" />
+      <module_usage name="readline" finding="absolute" line="258" />
     </module_usages>
   </module>
   <module name="code" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/code.py">
@@ -3006,7 +3017,7 @@
       <module_usage name="sys" finding="absolute" line="8" />
       <module_usage name="traceback" finding="absolute" line="9" />
       <module_usage name="codeop" finding="absolute" line="10" />
-      <module_usage name="readline" finding="not-found" line="300" />
+      <module_usage name="readline" finding="absolute" line="300" />
     </module_usages>
   </module>
   <module name="codecs" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/codecs.py">
@@ -6385,7 +6396,7 @@
       <module_usage name="dill._dill" finding="relative" line="32" />
       <module_usage name="dill.detect" finding="relative" line="54" />
       <module_usage name="dill.detect" finding="relative" line="55" />
-      <module_usage name="readline" finding="not-found" line="143" />
+      <module_usage name="readline" finding="absolute" line="143" />
       <module_usage name="sys" finding="absolute" line="146" />
       <module_usage name="types" finding="absolute" line="468" />
       <module_usage name="dill" finding="absolute" line="571" />
@@ -23070,6 +23081,11 @@
       <module_usage name="warnings" finding="absolute" line="1041" />
     </module_usages>
   </module>
+  <module name="readline" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}/lib/python3.12/lib-dynload/readline.cpython-312-x86_64-linux-gnu.so">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="reprlib" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/reprlib.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="726" />
     <optimization-time pass="2" time="volatile" />
@@ -23408,7 +23424,7 @@
       <module_usage name="keyword" finding="absolute" line="35" />
       <module_usage name="re" finding="absolute" line="36" />
       <module_usage name="__main__" finding="not-found" line="37" />
-      <module_usage name="readline" finding="not-found" line="210" />
+      <module_usage name="readline" finding="absolute" line="210" />
     </module_usages>
   </module>
   <module name="runpy" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/runpy.py">
@@ -26702,6 +26718,7 @@
   <included_extension name="_s3fs.so" dest_path="pyarrow/_s3fs.so" source_path="${sys.prefix}/lib/python3.12/site-packages/pyarrow/_s3fs.cpython-312-x86_64-linux-gnu.so" package="pyarrow" ignored="no" reason="used extension module" />
   <included_extension name="lib.so" dest_path="pyarrow/lib.so" source_path="${sys.prefix}/lib/python3.12/site-packages/pyarrow/lib.cpython-312-x86_64-linux-gnu.so" package="pyarrow" ignored="no" reason="used extension module" />
   <included_extension name="pyexpat.so" dest_path="pyexpat.so" source_path="${sys.real_prefix}/lib/python3.12/lib-dynload/pyexpat.cpython-312-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
+  <included_extension name="readline.so" dest_path="readline.so" source_path="${sys.real_prefix}/lib/python3.12/lib-dynload/readline.cpython-312-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
   <included_extension name="resource.so" dest_path="resource.so" source_path="${sys.real_prefix}/lib/python3.12/lib-dynload/resource.cpython-312-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
   <included_extension name="select.so" dest_path="select.so" source_path="${sys.real_prefix}/lib/python3.12/lib-dynload/select.cpython-312-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
   <included_extension name="termios.so" dest_path="termios.so" source_path="${sys.real_prefix}/lib/python3.12/lib-dynload/termios.cpython-312-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" />
@@ -26726,6 +26743,9 @@
   <included_dll name="libparquet.so.2100" dest_path="libparquet.so.2100" source_path="${sys.prefix}/lib/python3.12/site-packages/pyarrow/libparquet.so.2100" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" />
   <included_dll name="libarrow_compute.so.2100" dest_path="libarrow_compute.so.2100" source_path="${sys.prefix}/lib/python3.12/site-packages/pyarrow/libarrow_compute.so.2100" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" />
   <included_dll name="libarrow.so.2100" dest_path="libarrow.so.2100" source_path="${sys.prefix}/lib/python3.12/site-packages/pyarrow/libarrow.so.2100" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" />
+  <included_dll name="libreadline.so.8" dest_path="libreadline.so.8" source_path="/lib/x86_64-linux-gnu/libreadline.so.8" package="" ignored="no" reason="Used by 'readline.so'" />
+  <included_dll name="libtinfo.so.6" dest_path="libtinfo.so.6" source_path="/lib/x86_64-linux-gnu/libtinfo.so.6" package="" ignored="no" reason="Used by 'readline.so'" />
+  <included_dll name="libtinfo.so.6" dest_path="libtinfo.so.6" source_path="/usr/lib/x86_64-linux-gnu/libtinfo.so.6" package="" ignored="yes" reason="Used by 'readline.so'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="frozenlist/_frozenlist.so" reason="no outside dependencies allowed for 'frozenlist._frozenlist'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="hf_xet/hf_xet.so" reason="no outside dependencies allowed for 'hf_xet.hf_xet'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="numpy/_core/_multiarray_tests.so" reason="no outside dependencies allowed for 'numpy._core._multiarray_tests'" />

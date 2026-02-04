@@ -32,6 +32,11 @@
       <module_usage name="PySide6.QtCore" finding="relative" line="25" />
     </module_usages>
   </module>
+  <module name="PySide6.Qt3DCore" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt3DCore.abi3.so" distribution="PySide6_Addons">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="PySide6.QtCore" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/QtCore.abi3.so" distribution="PySide6">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -5484,6 +5489,7 @@
   <data_file name="PySide6/qml/QtWebEngine/ControlsDelegates/qmldir" source="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/qml/QtWebEngine/ControlsDelegates/qmldir" size="1257" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWebSockets/plugins.qmltypes" source="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/qml/QtWebSockets/plugins.qmltypes" size="3496" reason="Qt QML datafile" tags="qml,copy" />
   <data_file name="PySide6/qml/QtWebSockets/qmldir" source="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/qml/QtWebSockets/qmldir" size="190" reason="Qt QML datafile" tags="qml,copy" />
+  <included_extension name="Qt3DCore.so" dest_path="PySide6/Qt3DCore.so" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt3DCore.abi3.so" package="PySide6" ignored="no" reason="used extension module" />
   <included_extension name="QtCore.so" dest_path="PySide6/QtCore.so" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/QtCore.abi3.so" package="PySide6" ignored="no" reason="used extension module" />
   <included_extension name="QtGui.so" dest_path="PySide6/QtGui.so" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/QtGui.abi3.so" package="PySide6" ignored="no" reason="used extension module" />
   <included_extension name="QtNetwork.so" dest_path="PySide6/QtNetwork.so" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/QtNetwork.abi3.so" package="PySide6" ignored="no" reason="used extension module" />
@@ -5646,15 +5652,17 @@
   <included_dll name="libcrypto.so.3" dest_path="libcrypto.so.3" source_path="/lib/x86_64-linux-gnu/libcrypto.so.3" package="PySide6.QtNetwork" ignored="no" reason="needed by 'PySide6.QtNetwork'" />
   <included_dll name="libssl.so.3" dest_path="libssl.so.3" source_path="/lib/x86_64-linux-gnu/libssl.so.3" package="PySide6.QtNetwork" ignored="no" reason="needed by 'PySide6.QtNetwork'" />
   <included_dll name="libexpat.so.1" dest_path="libexpat.so.1" source_path="/lib/x86_64-linux-gnu/libexpat.so.1" package="" ignored="no" reason="Used by 'PySideQmlPolarchartTest.bin'" />
-  <included_dll name="libpyside6.abi3.so.6.7" dest_path="libpyside6.abi3.so.6.7" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/libpyside6.abi3.so.6.7" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libshiboken6.abi3.so.6.7" dest_path="libshiboken6.abi3.so.6.7" source_path="${sys.prefix}/lib/python3.11/site-packages/shiboken6/libshiboken6.abi3.so.6.7" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libQt6Core.so.6" dest_path="libQt6Core.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6Core.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libicui18n.so.73" dest_path="libicui18n.so.73" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libicui18n.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libicuuc.so.73" dest_path="libicuuc.so.73" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libicuuc.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libicudata.so.73" dest_path="libicudata.so.73" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libicudata.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/QtCore.so'" />
-  <included_dll name="libQt6Gui.so.6" dest_path="libQt6Gui.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6Gui.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtGui.so'" />
-  <included_dll name="libQt6DBus.so.6" dest_path="libQt6DBus.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6DBus.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtGui.so'" />
-  <included_dll name="libQt6Network.so.6" dest_path="libQt6Network.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6Network.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtNetwork.so'" />
+  <included_dll name="libpyside6.abi3.so.6.7" dest_path="libpyside6.abi3.so.6.7" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/libpyside6.abi3.so.6.7" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libshiboken6.abi3.so.6.7" dest_path="libshiboken6.abi3.so.6.7" source_path="${sys.prefix}/lib/python3.11/site-packages/shiboken6/libshiboken6.abi3.so.6.7" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libQt63DCore.so.6" dest_path="libQt63DCore.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt63DCore.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libQt6Concurrent.so.6" dest_path="libQt6Concurrent.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6Concurrent.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libQt6Gui.so.6" dest_path="libQt6Gui.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6Gui.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libQt6Network.so.6" dest_path="libQt6Network.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6Network.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libQt6Core.so.6" dest_path="libQt6Core.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6Core.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libQt6DBus.so.6" dest_path="libQt6DBus.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6DBus.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libicui18n.so.73" dest_path="libicui18n.so.73" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libicui18n.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libicuuc.so.73" dest_path="libicuuc.so.73" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libicuuc.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
+  <included_dll name="libicudata.so.73" dest_path="libicudata.so.73" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libicudata.so.73" package="PySide6" ignored="no" reason="Used by 'PySide6/Qt3DCore.so'" />
   <included_dll name="libQt6OpenGL.so.6" dest_path="libQt6OpenGL.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6OpenGL.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtOpenGL.so'" />
   <included_dll name="libpyside6qml.abi3.so.6.7" dest_path="libpyside6qml.abi3.so.6.7" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/libpyside6qml.abi3.so.6.7" package="PySide6" ignored="no" reason="Used by 'PySide6/QtQml.so'" />
   <included_dll name="libQt6Qml.so.6" dest_path="libQt6Qml.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6Qml.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/QtQml.so'" />
@@ -5684,8 +5692,6 @@
   <included_dll name="libQt63DAnimation.so.6" dest_path="libQt63DAnimation.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt63DAnimation.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so'" />
   <included_dll name="libQt63DQuick.so.6" dest_path="libQt63DQuick.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt63DQuick.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so'" />
   <included_dll name="libQt63DRender.so.6" dest_path="libQt63DRender.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt63DRender.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so'" />
-  <included_dll name="libQt63DCore.so.6" dest_path="libQt63DCore.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt63DCore.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so'" />
-  <included_dll name="libQt6Concurrent.so.6" dest_path="libQt6Concurrent.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6Concurrent.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so'" />
   <included_dll name="libQt63DQuickExtras.so.6" dest_path="libQt63DQuickExtras.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt63DQuickExtras.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/Qt3D/Extras/libquick3dextrasplugin.so'" />
   <included_dll name="libQt63DExtras.so.6" dest_path="libQt63DExtras.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt63DExtras.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/Qt3D/Extras/libquick3dextrasplugin.so'" />
   <included_dll name="libQt63DLogic.so.6" dest_path="libQt63DLogic.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt63DLogic.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/Qt3D/Extras/libquick3dextrasplugin.so'" />
@@ -5765,6 +5771,68 @@
   <included_dll name="libQt6WebEngineCore.so.6" dest_path="libQt6WebEngineCore.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6WebEngineCore.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtWebEngine/libqtwebenginequickplugin.so'" />
   <included_dll name="libQt6WebEngineQuickDelegatesQml.so.6" dest_path="libQt6WebEngineQuickDelegatesQml.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6WebEngineQuickDelegatesQml.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtWebEngine/ControlsDelegates/libqtwebenginequickdelegatesplugin.so'" />
   <included_dll name="libQt6WebSockets.so.6" dest_path="libQt6WebSockets.so.6" source_path="${sys.prefix}/lib/python3.11/site-packages/PySide6/Qt/lib/libQt6WebSockets.so.6" package="PySide6" ignored="no" reason="Used by 'PySide6/qml/QtWebSockets/libqmlwebsocketsplugin.so'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGL.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxkbcommon.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libEGL.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfontconfig.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgthread-2.0.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgssapi_krb5.so.2" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libdbus-1.so.3" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/liblzma.so.5" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/Qt3DCore.so" reason="no outside dependencies allowed for 'PySide6.Qt3DCore'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgthread-2.0.so.0" used_by="PySide6/QtCore.so" reason="no outside dependencies allowed for 'PySide6.QtCore'" />
@@ -5801,17 +5869,20 @@
   <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libxcb.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libXau.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
@@ -5819,9 +5890,6 @@
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libzstd.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/QtGui.so" reason="no outside dependencies allowed for 'PySide6.QtGui'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="PySide6/QtNetwork.so" reason="no outside dependencies allowed for 'PySide6.QtNetwork'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgssapi_krb5.so.2" used_by="PySide6/QtNetwork.so" reason="no outside dependencies allowed for 'PySide6.QtNetwork'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/QtNetwork.so" reason="no outside dependencies allowed for 'PySide6.QtNetwork'" />
@@ -8762,8 +8830,6 @@
   <excluded_dll name="/lib/x86_64-linux-gnu/liblz4.so.1" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libGLdispatch.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libGLX.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libX11.so.6" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
@@ -8772,16 +8838,18 @@
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libXdmcp.so.6" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libbsd.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libmd.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
-  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libfreetype.so.6" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libexpat.so.1" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libpng16.so.16" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libbrotlidec.so.1" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libbrotlicommon.so.1" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libpcre2-8.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libglib-2.0.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libkrb5.so.3" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libk5crypto.so.3" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libcom_err.so.2" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libkrb5support.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
+  <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libkeyutils.so.1" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libsystemd.so.0" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libcap.so.2" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />
   <excluded_dll name="${sys.real_prefix}/lib/x86_64-linux-gnu/libgcrypt.so.20" used_by="PySide6/qml/Qt3D/Animation/libquick3danimationplugin.so" reason="no outside dependencies allowed for 'PySide6'" />

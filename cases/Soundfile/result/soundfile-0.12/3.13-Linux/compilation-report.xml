@@ -680,7 +680,7 @@
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="31" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
-      <module_usage name="_curses" finding="not-found" line="23" />
+      <module_usage name="_curses" finding="absolute" line="23" />
       <module_usage name="curses" finding="absolute" line="26" />
       <module_usage name="_pyrepl" finding="absolute" line="28" />
       <module_usage name="_pyrepl._minimal_curses" finding="relative" line="28" />
@@ -1098,6 +1098,215 @@
       <module_usage name="warnings" finding="absolute" line="48" />
     </module_usages>
   </module>
+  <module name="cffi" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/__init__.py" distribution="cffi">
+    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="4" merged_total="8" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="4" merged_total="4" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="cffi.api" finding="relative" line="4" />
+      <module_usage name="cffi.error" finding="relative" line="5" />
+      <module_usage name="cffi.error" finding="relative" line="6" />
+    </module_usages>
+  </module>
+  <module name="cffi._imp_emulation" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/_imp_emulation.py" distribution="cffi">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="13" merged_total="968" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="138" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="imp" finding="not-found" line="4" />
+      <module_usage name="_imp" finding="absolute" line="11" />
+      <module_usage name="importlib._bootstrap" finding="absolute" line="14" />
+      <module_usage name="importlib" finding="absolute" line="16" />
+      <module_usage name="os" finding="absolute" line="17" />
+      <module_usage name="sys" finding="absolute" line="18" />
+      <module_usage name="tokenize" finding="absolute" line="19" />
+    </module_usages>
+  </module>
+  <module name="cffi.api" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/api.py" distribution="cffi">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_cffi_recompiler" tags_used="use_cffi_recompiler" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="55" merged_total="4625" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="55" merged_total="891" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="1" />
+      <module_usage name="types" finding="absolute" line="1" />
+      <module_usage name="cffi.lock" finding="relative" line="2" />
+      <module_usage name="cffi.error" finding="relative" line="3" />
+      <module_usage name="cffi" finding="absolute" line="4" />
+      <module_usage name="cffi.model" finding="relative" line="4" />
+      <module_usage name="collections" finding="absolute" line="10" />
+      <module_usage name="collections.Callable" finding="not-found" line="10" />
+      <module_usage name="_cffi_backend" finding="absolute" line="48" />
+      <module_usage name="cffi" finding="absolute" line="49" />
+      <module_usage name="cffi.__version__" finding="not-found" line="49" />
+      <module_usage name="cffi" finding="absolute" line="65" />
+      <module_usage name="cffi.cparser" finding="relative" line="65" />
+      <module_usage name="cffi.verifier" finding="relative" line="454" />
+      <module_usage name="sysconfig" finding="absolute" line="623" />
+      <module_usage name="os" finding="absolute" line="638" />
+      <module_usage name="cffi" finding="absolute" line="652" />
+      <module_usage name="cffi.pkgconfig" finding="relative" line="652" />
+      <module_usage name="re" finding="absolute" line="762" />
+      <module_usage name="os" finding="absolute" line="807" />
+      <module_usage name="ctypes.util" finding="absolute" line="819" />
+      <module_usage name="sys" finding="absolute" line="957" />
+    </module_usages>
+  </module>
+  <module name="cffi.commontypes" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/commontypes.py" distribution="cffi">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="197" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="49" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="1" />
+      <module_usage name="cffi" finding="absolute" line="2" />
+      <module_usage name="cffi.model" finding="relative" line="2" />
+      <module_usage name="cffi.error" finding="relative" line="3" />
+      <module_usage name="_cffi_backend" finding="absolute" line="10" />
+    </module_usages>
+  </module>
+  <module name="cffi.cparser" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/cparser.py" distribution="cffi">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="51" merged_total="5942" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="51" merged_total="1004" />
+    <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="pycparser" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="cffi" finding="absolute" line="1" />
+      <module_usage name="cffi.model" finding="relative" line="1" />
+      <module_usage name="cffi.commontypes" finding="relative" line="2" />
+      <module_usage name="cffi.error" finding="relative" line="3" />
+      <module_usage name="cffi" finding="absolute" line="5" />
+      <module_usage name="cffi._pycparser" finding="not-found" line="5" />
+      <module_usage name="pycparser" finding="absolute" line="7" />
+      <module_usage name="weakref" finding="absolute" line="8" />
+      <module_usage name="re" finding="absolute" line="8" />
+      <module_usage name="sys" finding="absolute" line="8" />
+      <module_usage name="_thread" finding="absolute" line="14" />
+      <module_usage name="pycparser.yacctab" finding="absolute" line="23" />
+      <module_usage name="pycparser.lextab" finding="absolute" line="24" />
+      <module_usage name="warnings" finding="absolute" line="153" />
+      <module_usage name="warnings" finding="absolute" line="162" />
+      <module_usage name="warnings" finding="absolute" line="435" />
+    </module_usages>
+  </module>
+  <module name="cffi.error" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/error.py" distribution="cffi">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="706" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="138" />
+    <code-generation-time time="volatile" />
+    <module_usages />
+  </module>
+  <module name="cffi.ffiplatform" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/ffiplatform.py" distribution="cffi">
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_cffi_recompiler" tags_used="use_cffi_recompiler" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="446" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="112" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="cffi.error" finding="relative" line="2" />
+      <module_usage name="posixpath" finding="absolute" line="59" />
+      <module_usage name="posixpath" finding="absolute" line="65" />
+      <module_usage name="posixpath" finding="absolute" line="71" />
+      <module_usage name="posixpath" finding="absolute" line="78" />
+      <module_usage name="cStringIO" finding="not-found" line="86" />
+      <module_usage name="io" finding="absolute" line="89" />
+    </module_usages>
+  </module>
+  <module name="cffi.lock" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/lock.py" distribution="cffi">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="17" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="5" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="1" />
+      <module_usage name="_thread" finding="absolute" line="10" />
+      <module_usage name="_dummy_thread" finding="not-found" line="12" />
+    </module_usages>
+  </module>
+  <module name="cffi.model" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/model.py" distribution="cffi">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="4816" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="24" merged_total="927" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="types" finding="absolute" line="1" />
+      <module_usage name="weakref" finding="absolute" line="2" />
+      <module_usage name="cffi.lock" finding="relative" line="4" />
+      <module_usage name="cffi.error" finding="relative" line="5" />
+      <module_usage name="warnings" finding="absolute" line="528" />
+    </module_usages>
+  </module>
+  <module name="cffi.pkgconfig" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/pkgconfig.py" distribution="cffi">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="576" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="140" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="2" />
+      <module_usage name="os" finding="absolute" line="2" />
+      <module_usage name="subprocess" finding="absolute" line="2" />
+      <module_usage name="cffi.error" finding="relative" line="4" />
+    </module_usages>
+  </module>
+  <module name="cffi.vengine_cpy" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/vengine_cpy.py" distribution="cffi">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="79" merged_total="4216" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="79" merged_total="826" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="4" />
+      <module_usage name="cffi" finding="absolute" line="5" />
+      <module_usage name="cffi.model" finding="relative" line="5" />
+      <module_usage name="cffi.error" finding="relative" line="6" />
+      <module_usage name="cffi" finding="absolute" line="7" />
+      <module_usage name="cffi._imp_emulation" finding="relative" line="7" />
+      <module_usage name="warnings" finding="absolute" line="194" />
+    </module_usages>
+  </module>
+  <module name="cffi.vengine_gen" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/vengine_gen.py" distribution="cffi">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="56" merged_total="4588" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="56" merged_total="755" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="4" />
+      <module_usage name="os" finding="absolute" line="4" />
+      <module_usage name="types" finding="absolute" line="5" />
+      <module_usage name="cffi" finding="absolute" line="7" />
+      <module_usage name="cffi.model" finding="relative" line="7" />
+      <module_usage name="cffi.error" finding="relative" line="8" />
+      <module_usage name="posixpath" finding="absolute" line="33" />
+      <module_usage name="posixpath" finding="absolute" line="69" />
+    </module_usages>
+  </module>
+  <module name="cffi.verifier" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/cffi/verifier.py" distribution="cffi">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="20" merged_total="1674" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="323" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="4" />
+      <module_usage name="os" finding="absolute" line="4" />
+      <module_usage name="binascii" finding="absolute" line="4" />
+      <module_usage name="shutil" finding="absolute" line="4" />
+      <module_usage name="io" finding="absolute" line="4" />
+      <module_usage name="cffi" finding="absolute" line="5" />
+      <module_usage name="cffi.__version_verifier_modules__" finding="not-found" line="5" />
+      <module_usage name="cffi" finding="absolute" line="6" />
+      <module_usage name="cffi.ffiplatform" finding="relative" line="6" />
+      <module_usage name="cffi.error" finding="relative" line="7" />
+      <module_usage name="importlib.machinery" finding="absolute" line="10" />
+      <module_usage name="io" finding="absolute" line="21" />
+      <module_usage name="posixpath" finding="absolute" line="67" />
+      <module_usage name="posixpath" finding="absolute" line="68" />
+      <module_usage name="posixpath" finding="absolute" line="141" />
+      <module_usage name="_cffi_backend" finding="absolute" line="230" />
+      <module_usage name="cffi" finding="absolute" line="236" />
+      <module_usage name="cffi.vengine_gen" finding="relative" line="236" />
+      <module_usage name="cffi" finding="absolute" line="239" />
+      <module_usage name="cffi.vengine_cpy" finding="relative" line="239" />
+      <module_usage name="posixpath" finding="absolute" line="253" />
+      <module_usage name="posixpath" finding="absolute" line="277" />
+      <module_usage name="posixpath" finding="absolute" line="280" />
+      <module_usage name="posixpath" finding="absolute" line="284" />
+    </module_usages>
+  </module>
   <module name="cmd" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/cmd.py">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="2092" />
     <optimization-time pass="2" time="volatile" />
@@ -1105,9 +1314,9 @@
       <module_usage name="inspect" finding="absolute" line="45" />
       <module_usage name="string" finding="absolute" line="45" />
       <module_usage name="sys" finding="absolute" line="45" />
-      <module_usage name="readline" finding="not-found" line="108" />
-      <module_usage name="readline" finding="not-found" line="152" />
-      <module_usage name="readline" finding="not-found" line="265" />
+      <module_usage name="readline" finding="absolute" line="108" />
+      <module_usage name="readline" finding="absolute" line="152" />
+      <module_usage name="readline" finding="absolute" line="265" />
     </module_usages>
   </module>
   <module name="code" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/code.py">
@@ -1118,7 +1327,7 @@
       <module_usage name="sys" finding="absolute" line="9" />
       <module_usage name="traceback" finding="absolute" line="10" />
       <module_usage name="codeop" finding="absolute" line="11" />
-      <module_usage name="readline" finding="not-found" line="369" />
+      <module_usage name="readline" finding="absolute" line="369" />
     </module_usages>
   </module>
   <module name="codecs" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/codecs.py">
@@ -6333,6 +6542,114 @@
       <module_usage name="importlib.util" finding="absolute" line="46" />
     </module_usages>
   </module>
+  <module name="pycparser" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pycparser/__init__.py" distribution="pycparser">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="7" merged_total="120" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="io" finding="absolute" line="13" />
+      <module_usage name="subprocess" finding="absolute" line="14" />
+      <module_usage name="pycparser.c_parser" finding="relative" line="15" />
+    </module_usages>
+  </module>
+  <module name="pycparser.ast_transforms" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pycparser/ast_transforms.py" distribution="pycparser">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="262" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="pycparser" finding="absolute" line="10" />
+      <module_usage name="pycparser.c_ast" finding="relative" line="10" />
+    </module_usages>
+  </module>
+  <module name="pycparser.c_ast" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pycparser/c_ast.py" distribution="pycparser">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="10822" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="sys" finding="absolute" line="19" />
+    </module_usages>
+  </module>
+  <module name="pycparser.c_lexer" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pycparser/c_lexer.py" distribution="pycparser">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="151" merged_total="1238" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="re" finding="absolute" line="9" />
+      <module_usage name="pycparser.ply" finding="relative" line="11" />
+      <module_usage name="pycparser.ply.lex" finding="relative" line="11" />
+      <module_usage name="pycparser.ply.lex" finding="relative" line="12" />
+    </module_usages>
+  </module>
+  <module name="pycparser.c_parser" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pycparser/c_parser.py" distribution="pycparser">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="181" merged_total="5073" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="pycparser.ply" finding="relative" line="9" />
+      <module_usage name="pycparser.ply.yacc" finding="relative" line="9" />
+      <module_usage name="pycparser" finding="absolute" line="11" />
+      <module_usage name="pycparser.c_ast" finding="relative" line="11" />
+      <module_usage name="pycparser.c_lexer" finding="relative" line="12" />
+      <module_usage name="pycparser.plyparser" finding="relative" line="13" />
+      <module_usage name="pycparser.ast_transforms" finding="relative" line="14" />
+    </module_usages>
+  </module>
+  <module name="pycparser.lextab" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pycparser/lextab.py" distribution="pycparser">
+    <optimization-time pass="1" time="volatile" micro_passes="4" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="pycparser.ply" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pycparser/ply/__init__.py" distribution="pycparser">
+    <optimization-time pass="1" time="volatile" micro_passes="2" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="pycparser.ply.lex" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pycparser/ply/lex.py" distribution="pycparser">
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="55" merged_total="9886" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="re" finding="absolute" line="37" />
+      <module_usage name="sys" finding="absolute" line="38" />
+      <module_usage name="types" finding="absolute" line="39" />
+      <module_usage name="copy" finding="absolute" line="40" />
+      <module_usage name="os" finding="absolute" line="41" />
+      <module_usage name="inspect" finding="absolute" line="42" />
+      <module_usage name="posixpath" finding="absolute" line="178" />
+    </module_usages>
+  </module>
+  <module name="pycparser.ply.yacc" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pycparser/ply/yacc.py" distribution="pycparser">
+    <optimization-time pass="1" time="volatile" micro_passes="10" max_branch_merge="99" merged_total="32361" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="re" finding="absolute" line="62" />
+      <module_usage name="types" finding="absolute" line="63" />
+      <module_usage name="sys" finding="absolute" line="64" />
+      <module_usage name="posixpath" finding="absolute" line="65" />
+      <module_usage name="inspect" finding="absolute" line="66" />
+      <module_usage name="base64" finding="absolute" line="67" />
+      <module_usage name="warnings" finding="absolute" line="68" />
+      <module_usage name="pycparser.ply" finding="absolute" line="365" />
+      <module_usage name="pycparser.ply.lex" finding="relative" line="365" />
+      <module_usage name="pycparser.ply" finding="absolute" line="709" />
+      <module_usage name="pycparser.ply.lex" finding="relative" line="709" />
+      <module_usage name="pycparser.ply" finding="absolute" line="1015" />
+      <module_usage name="pycparser.ply.lex" finding="relative" line="1015" />
+      <module_usage name="cPickle" finding="not-found" line="2000" />
+      <module_usage name="pickle" finding="absolute" line="2002" />
+      <module_usage name="cPickle" finding="not-found" line="2850" />
+      <module_usage name="pickle" finding="absolute" line="2852" />
+    </module_usages>
+  </module>
+  <module name="pycparser.plyparser" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pycparser/plyparser.py" distribution="pycparser">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="737" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="warnings" finding="absolute" line="11" />
+    </module_usages>
+  </module>
+  <module name="pycparser.yacctab" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pycparser/yacctab.py" distribution="pycparser">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="5" merged_total="276" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="quopri" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/quopri.py">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="1257" />
     <optimization-time pass="2" time="volatile" />
@@ -6441,7 +6758,7 @@
       <module_usage name="re" finding="absolute" line="36" />
       <module_usage name="__main__" finding="not-found" line="37" />
       <module_usage name="warnings" finding="absolute" line="38" />
-      <module_usage name="readline" finding="not-found" line="212" />
+      <module_usage name="readline" finding="absolute" line="212" />
     </module_usages>
   </module>
   <module name="sched" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/sched.py">
@@ -7413,6 +7730,7 @@
   <distributions>
     <distribution name="cffi" version="2.0.0" installer="pip" />
     <distribution name="numpy" version="2.3.3" installer="pip" />
+    <distribution name="pycparser" version="2.23" installer="pip" />
     <distribution name="soundfile" version="0.12.1" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}/bin/python" python_flavor="Unknown" python_version="3.13.1" os_name="Linux" os_release="Debian-12" arch_name="x86_64" filesystem_encoding="utf-8" gil="yes">
