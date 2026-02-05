@@ -22,6 +22,9 @@ def walkPackage(package_name, package):
     print("Walk", package)
 
     for item in pkgutil.iter_modules(package.__path__):
+        full_name = "%s.%s" % (package_name, item.name)
+
+        # Ignore test packages.
         if item.name == "tests":
             continue
         if item.name == "conftest":
@@ -30,6 +33,9 @@ def walkPackage(package_name, package):
             continue
         if item.name == "_build_utils":
             continue
+        if full_name == "sklearn.externals.array_api_extra._lib._backends":
+            continue
+
 
         # Not requiring cupy, because it has system requirements, potentially
         # hard to meet, spell-checker: ignore cupy
@@ -44,7 +50,6 @@ def walkPackage(package_name, package):
         if item.name == "torch":
             continue
 
-        full_name = "%s.%s" % (package_name, item.name)
         print("Containing", item, full_name)
 
         importlib.import_module(full_name)

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.0rc10" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.0rc11" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment />
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="58" />
@@ -5056,19 +5056,214 @@
     </module_usages>
   </module>
   <module name="pathspec" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\__init__.py" distribution="pathspec">
-    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="5" merged_total="22" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="5" merged_total="11" />
+    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="4" merged_total="20" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="4" merged_total="10" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="pathspec.gitignore" finding="relative" line="32" />
-      <module_usage name="pathspec.pathspec" finding="relative" line="34" />
-      <module_usage name="pathspec.pattern" finding="relative" line="36" />
-      <module_usage name="pathspec.util" finding="relative" line="39" />
-      <module_usage name="pathspec._meta" finding="relative" line="45" />
-      <module_usage name="pathspec" finding="absolute" line="54" />
-      <module_usage name="pathspec.patterns" finding="relative" line="54" />
-      <module_usage name="pathspec.patterns.gitwildmatch" finding="relative" line="58" />
+      <module_usage name="pathspec.gitignore" finding="relative" line="30" />
+      <module_usage name="pathspec.pathspec" finding="relative" line="32" />
+      <module_usage name="pathspec.pattern" finding="relative" line="34" />
+      <module_usage name="pathspec.util" finding="relative" line="37" />
+      <module_usage name="pathspec._meta" finding="relative" line="43" />
+      <module_usage name="pathspec._version" finding="relative" line="48" />
+      <module_usage name="pathspec" finding="absolute" line="52" />
+      <module_usage name="pathspec.patterns" finding="relative" line="52" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\__init__.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="2" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends._utils" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\_utils.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="5" merged_total="101" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="5" merged_total="26" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="collections.abc" finding="absolute" line="8" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="pathspec.pattern" finding="absolute" line="13" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.agg" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\agg.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="9" merged_total="98" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="36" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="collections.abc" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="11" />
+      <module_usage name="pathspec.backend" finding="absolute" line="14" />
+      <module_usage name="pathspec.pattern" finding="absolute" line="17" />
+      <module_usage name="pathspec._backends.hyperscan.base" finding="relative" line="21" />
+      <module_usage name="pathspec._backends.hyperscan.gitignore" finding="relative" line="23" />
+      <module_usage name="pathspec._backends.hyperscan.pathspec" finding="relative" line="25" />
+      <module_usage name="pathspec._backends.re2.base" finding="relative" line="27" />
+      <module_usage name="pathspec._backends.re2.gitignore" finding="relative" line="29" />
+      <module_usage name="pathspec._backends.re2.pathspec" finding="relative" line="31" />
+      <module_usage name="pathspec._backends.simple.gitignore" finding="relative" line="33" />
+      <module_usage name="pathspec._backends.simple.pathspec" finding="relative" line="35" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.hyperscan" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\hyperscan\__init__.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="2" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.hyperscan._base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\hyperscan\_base.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="305" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="60" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="8" />
+      <module_usage name="dataclasses" finding="absolute" line="10" />
+      <module_usage name="typing" finding="absolute" line="12" />
+      <module_usage name="hyperscan" finding="not-found" line="16" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.hyperscan.base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\hyperscan\base.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="16" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="5" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="8" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="hyperscan" finding="not-found" line="14" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.hyperscan.gitignore" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\hyperscan\gitignore.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="752" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="150" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="7" />
+      <module_usage name="collections.abc" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="11" />
+      <module_usage name="hyperscan" finding="not-found" line="18" />
+      <module_usage name="pathspec.pattern" finding="absolute" line="22" />
+      <module_usage name="pathspec.patterns.gitignore.spec" finding="absolute" line="24" />
+      <module_usage name="pathspec._typing" finding="absolute" line="29" />
+      <module_usage name="pathspec._backends.hyperscan._base" finding="relative" line="32" />
+      <module_usage name="pathspec._backends.hyperscan.pathspec" finding="relative" line="36" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.hyperscan.pathspec" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\hyperscan\pathspec.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="469" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="117" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="7" />
+      <module_usage name="collections.abc" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="11" />
+      <module_usage name="hyperscan" finding="not-found" line="17" />
+      <module_usage name="pathspec.backend" finding="absolute" line="21" />
+      <module_usage name="pathspec.pattern" finding="absolute" line="23" />
+      <module_usage name="pathspec._typing" finding="absolute" line="25" />
+      <module_usage name="pathspec._backends._utils" finding="relative" line="28" />
+      <module_usage name="pathspec._backends.hyperscan.base" finding="relative" line="31" />
+      <module_usage name="pathspec._backends.hyperscan._base" finding="relative" line="33" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.re2" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\re2\__init__.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="2" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.re2._base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\re2\_base.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="351" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="69" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="8" />
+      <module_usage name="dataclasses" finding="absolute" line="10" />
+      <module_usage name="typing" finding="absolute" line="12" />
+      <module_usage name="re2" finding="not-found" line="17" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.re2.base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\re2\base.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="2" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="7" />
+      <module_usage name="typing" finding="absolute" line="9" />
+      <module_usage name="pathspec._backends.re2._base" finding="relative" line="12" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.re2.gitignore" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\re2\gitignore.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="601" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="121" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="7" />
+      <module_usage name="typing" finding="absolute" line="9" />
+      <module_usage name="re2" finding="not-found" line="15" />
+      <module_usage name="pathspec.pattern" finding="absolute" line="19" />
+      <module_usage name="pathspec.patterns.gitignore.spec" finding="absolute" line="21" />
+      <module_usage name="pathspec._typing" finding="absolute" line="26" />
+      <module_usage name="pathspec._backends.re2._base" finding="relative" line="29" />
+      <module_usage name="pathspec._backends.re2.pathspec" finding="relative" line="32" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.re2.pathspec" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\re2\pathspec.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="13" merged_total="352" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="87" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="7" />
+      <module_usage name="collections.abc" finding="absolute" line="9" />
+      <module_usage name="typing" finding="absolute" line="11" />
+      <module_usage name="re2" finding="not-found" line="16" />
+      <module_usage name="pathspec.backend" finding="absolute" line="20" />
+      <module_usage name="pathspec.pattern" finding="absolute" line="22" />
+      <module_usage name="pathspec._typing" finding="absolute" line="24" />
+      <module_usage name="pathspec._backends._utils" finding="relative" line="27" />
+      <module_usage name="pathspec._backends.re2.base" finding="relative" line="30" />
+      <module_usage name="pathspec._backends.re2._base" finding="relative" line="32" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.simple" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\simple\__init__.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="2" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.simple.gitignore" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\simple\gitignore.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="292" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="71" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="collections.abc" finding="absolute" line="8" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="pathspec.pattern" finding="absolute" line="13" />
+      <module_usage name="pathspec.patterns.gitignore.spec" finding="absolute" line="15" />
+      <module_usage name="pathspec._typing" finding="absolute" line="17" />
+      <module_usage name="pathspec._backends.simple.pathspec" finding="relative" line="20" />
+    </module_usages>
+  </module>
+  <module name="pathspec._backends.simple.pathspec" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_backends\simple\pathspec.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="10" merged_total="101" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="29" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="collections.abc" finding="absolute" line="8" />
+      <module_usage name="typing" finding="absolute" line="10" />
+      <module_usage name="pathspec.backend" finding="absolute" line="13" />
+      <module_usage name="pathspec.pattern" finding="absolute" line="15" />
+      <module_usage name="pathspec._typing" finding="absolute" line="17" />
+      <module_usage name="pathspec.util" finding="absolute" line="19" />
+      <module_usage name="pathspec._backends._utils" finding="relative" line="22" />
     </module_usages>
   </module>
   <module name="pathspec._meta" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_meta.py" distribution="pathspec">
@@ -5077,41 +5272,87 @@
     <code-generation-time time="volatile" />
     <module_usages />
   </module>
-  <module name="pathspec.gitignore" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\gitignore.py" distribution="pathspec">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="395" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="99" />
+  <module name="pathspec._typing" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_typing.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="4" merged_total="142" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="4" merged_total="43" />
+    <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="typing_extensions" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="functools" finding="absolute" line="10" />
+      <module_usage name="warnings" finding="absolute" line="11" />
+      <module_usage name="typing" finding="absolute" line="12" />
+      <module_usage name="typing" finding="absolute" line="18" />
+      <module_usage name="typing" finding="absolute" line="22" />
+      <module_usage name="typing" finding="absolute" line="24" />
+      <module_usage name="warnings" finding="absolute" line="29" />
+      <module_usage name="typing_extensions" finding="absolute" line="32" />
+      <module_usage name="typing" finding="absolute" line="49" />
+      <module_usage name="typing_extensions" finding="absolute" line="52" />
+    </module_usages>
+  </module>
+  <module name="pathspec._version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\_version.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="2" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <code-generation-time time="volatile" />
+    <module_usages />
+  </module>
+  <module name="pathspec.backend" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\backend.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="152" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="29" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="typing" finding="absolute" line="6" />
-      <module_usage name="pathspec.pathspec" finding="relative" line="18" />
-      <module_usage name="pathspec.pattern" finding="relative" line="20" />
-      <module_usage name="pathspec.patterns.gitwildmatch" finding="relative" line="22" />
-      <module_usage name="pathspec.util" finding="relative" line="25" />
+      <module_usage name="typing" finding="absolute" line="8" />
+    </module_usages>
+  </module>
+  <module name="pathspec.gitignore" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\gitignore.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="13" merged_total="325" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="79" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="8" />
+      <module_usage name="collections.abc" finding="absolute" line="10" />
+      <module_usage name="typing" finding="absolute" line="13" />
+      <module_usage name="pathspec.backend" finding="absolute" line="21" />
+      <module_usage name="pathspec._backends.agg" finding="absolute" line="24" />
+      <module_usage name="pathspec.pathspec" finding="absolute" line="26" />
+      <module_usage name="pathspec.pattern" finding="absolute" line="28" />
+      <module_usage name="pathspec.patterns.gitignore.basic" finding="absolute" line="30" />
+      <module_usage name="pathspec.patterns.gitignore.spec" finding="absolute" line="32" />
+      <module_usage name="pathspec._typing" finding="absolute" line="34" />
+      <module_usage name="pathspec.util" finding="absolute" line="37" />
     </module_usages>
   </module>
   <module name="pathspec.pathspec" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\pathspec.py" distribution="pathspec">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="1082" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="210" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="21" merged_total="1116" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="215" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="collections.abc" finding="absolute" line="5" />
-      <module_usage name="itertools" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="9" />
-      <module_usage name="pathspec" finding="absolute" line="20" />
-      <module_usage name="pathspec.util" finding="relative" line="20" />
-      <module_usage name="pathspec.pattern" finding="relative" line="21" />
-      <module_usage name="pathspec.util" finding="relative" line="23" />
+      <module_usage name="__future__" finding="absolute" line="5" />
+      <module_usage name="collections.abc" finding="absolute" line="7" />
+      <module_usage name="itertools" finding="absolute" line="12" />
+      <module_usage name="typing" finding="absolute" line="14" />
+      <module_usage name="pathspec" finding="absolute" line="27" />
+      <module_usage name="pathspec.util" finding="relative" line="27" />
+      <module_usage name="pathspec.backend" finding="absolute" line="28" />
+      <module_usage name="pathspec._backends.agg" finding="absolute" line="31" />
+      <module_usage name="pathspec.pattern" finding="absolute" line="33" />
+      <module_usage name="pathspec._typing" finding="absolute" line="35" />
+      <module_usage name="pathspec.util" finding="absolute" line="38" />
     </module_usages>
   </module>
   <module name="pathspec.pattern" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\pattern.py" distribution="pathspec">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="715" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="140" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="738" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="145" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="dataclasses" finding="absolute" line="5" />
+      <module_usage name="__future__" finding="absolute" line="4" />
       <module_usage name="re" finding="absolute" line="6" />
-      <module_usage name="warnings" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="8" />
+      <module_usage name="collections.abc" finding="absolute" line="7" />
+      <module_usage name="dataclasses" finding="absolute" line="10" />
+      <module_usage name="typing" finding="absolute" line="12" />
+      <module_usage name="pathspec._typing" finding="relative" line="18" />
     </module_usages>
   </module>
   <module name="pathspec.patterns" kind="CompiledPythonPackage" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\patterns\__init__.py" distribution="pathspec">
@@ -5120,27 +5361,70 @@
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="pathspec.patterns" finding="absolute" line="7" />
-      <module_usage name="pathspec.patterns.gitwildmatch" finding="relative" line="7" />
-      <module_usage name="pathspec.patterns.gitwildmatch" finding="relative" line="11" />
+      <module_usage name="pathspec.patterns.gitignore" finding="relative" line="6" />
+      <module_usage name="pathspec.patterns.gitignore.basic" finding="relative" line="6" />
+      <module_usage name="pathspec.patterns.gitignore" finding="relative" line="7" />
+      <module_usage name="pathspec.patterns.gitignore.spec" finding="relative" line="7" />
+      <module_usage name="pathspec.patterns.gitwildmatch" finding="relative" line="12" />
+    </module_usages>
+  </module>
+  <module name="pathspec.patterns.gitignore" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\patterns\gitignore\__init__.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="2" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" />
+      <module_usage name="pathspec.patterns.gitignore.base" finding="relative" line="11" />
+    </module_usages>
+  </module>
+  <module name="pathspec.patterns.gitignore.base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\patterns\gitignore\base.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="629" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="124" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="re" finding="absolute" line="5" />
+      <module_usage name="pathspec.pattern" finding="absolute" line="7" />
+      <module_usage name="pathspec._typing" finding="absolute" line="9" />
+    </module_usages>
+  </module>
+  <module name="pathspec.patterns.gitignore.basic" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\patterns\gitignore\basic.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="24" merged_total="607" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="151" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="typing" finding="absolute" line="9" />
+      <module_usage name="pathspec" finding="absolute" line="12" />
+      <module_usage name="pathspec.util" finding="relative" line="12" />
+      <module_usage name="pathspec._typing" finding="absolute" line="13" />
+      <module_usage name="pathspec.patterns.gitignore.base" finding="relative" line="18" />
+    </module_usages>
+  </module>
+  <module name="pathspec.patterns.gitignore.spec" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\patterns\gitignore\spec.py" distribution="pathspec">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="23" merged_total="629" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="157" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="typing" finding="absolute" line="11" />
+      <module_usage name="pathspec._typing" finding="absolute" line="14" />
+      <module_usage name="pathspec.patterns.gitignore.base" finding="relative" line="19" />
     </module_usages>
   </module>
   <module name="pathspec.patterns.gitwildmatch" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\patterns\gitwildmatch.py" distribution="pathspec">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="1279" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="250" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="138" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="32" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="re" finding="absolute" line="6" />
-      <module_usage name="warnings" finding="absolute" line="7" />
-      <module_usage name="typing" finding="absolute" line="8" />
-      <module_usage name="pathspec" finding="relative" line="13" />
-      <module_usage name="pathspec.util" finding="relative" line="13" />
-      <module_usage name="pathspec.pattern" finding="relative" line="14" />
+      <module_usage name="pathspec" finding="absolute" line="6" />
+      <module_usage name="pathspec.util" finding="relative" line="6" />
+      <module_usage name="pathspec._typing" finding="absolute" line="7" />
+      <module_usage name="pathspec.patterns.gitignore.spec" finding="relative" line="11" />
+      <module_usage name="pathspec.patterns.gitignore" finding="relative" line="16" />
+      <module_usage name="pathspec.patterns.gitignore.GitIgnorePatternError" finding="not-found" line="16" />
     </module_usages>
   </module>
   <module name="pathspec.util" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pathspec\util.py" distribution="pathspec">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="2262" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="438" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="2511" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="491" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="5" />
@@ -5148,13 +5432,11 @@
       <module_usage name="pathlib" finding="absolute" line="7" />
       <module_usage name="posixpath" finding="absolute" line="8" />
       <module_usage name="stat" finding="absolute" line="9" />
-      <module_usage name="sys" finding="absolute" line="10" />
-      <module_usage name="warnings" finding="absolute" line="11" />
-      <module_usage name="collections.abc" finding="absolute" line="12" />
+      <module_usage name="collections.abc" finding="absolute" line="10" />
       <module_usage name="dataclasses" finding="absolute" line="15" />
-      <module_usage name="os" finding="absolute" line="17" />
-      <module_usage name="typing" finding="absolute" line="19" />
-      <module_usage name="pathspec.pattern" finding="relative" line="36" />
+      <module_usage name="typing" finding="absolute" line="17" />
+      <module_usage name="pathspec.pattern" finding="relative" line="25" />
+      <module_usage name="pathspec._typing" finding="relative" line="27" />
     </module_usages>
   </module>
   <module name="pickle" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\pickle.py">
@@ -5351,8 +5633,8 @@
     <module_usages />
   </module>
   <module name="platformdirs.windows" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\platformdirs\windows.py" distribution="platformdirs">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="22" merged_total="721" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="180" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="22" merged_total="738" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="185" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" />
@@ -5368,11 +5650,11 @@
       <module_usage name="ntpath" finding="absolute" line="173" />
       <module_usage name="ntpath" finding="absolute" line="176" />
       <module_usage name="ntpath" finding="absolute" line="179" />
-      <module_usage name="winreg" finding="absolute" line="206" />
-      <module_usage name="ctypes" finding="absolute" line="219" />
-      <module_usage name="ntpath" finding="absolute" line="247" />
-      <module_usage name="ctypes" finding="absolute" line="254" />
-      <module_usage name="winreg" finding="absolute" line="261" />
+      <module_usage name="winreg" finding="absolute" line="209" />
+      <module_usage name="ctypes" finding="absolute" line="225" />
+      <module_usage name="ntpath" finding="absolute" line="253" />
+      <module_usage name="ctypes" finding="absolute" line="260" />
+      <module_usage name="winreg" finding="absolute" line="267" />
     </module_usages>
   </module>
   <module name="pluggy" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pluggy\__init__.py" distribution="pluggy">
@@ -5692,8 +5974,8 @@
     <module_usages />
   </module>
   <module name="regex._regex_core" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\regex\_regex_core.py" distribution="regex">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="60" merged_total="27091" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="48" merged_total="5231" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="61" merged_total="27111" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="48" merged_total="5234" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="enum" finding="absolute" line="16" />
@@ -6091,8 +6373,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.core.config.removed" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\config\removed.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="16" merged_total="271" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="60" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="16" merged_total="279" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="61" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="logging" finding="absolute" line="3" />
@@ -6119,8 +6401,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.core.config.validate" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\config\validate.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="15" merged_total="266" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="35" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="15" merged_total="322" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="43" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="sqlfluff.core.config.removed" finding="absolute" line="3" />
@@ -6170,8 +6452,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.core.errors" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\errors.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="1824" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="333" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="1866" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="341" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="typing" finding="absolute" line="14" />
@@ -6348,8 +6630,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.core.linter.linter" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\linter\linter.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="32" merged_total="5406" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="910" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="32" merged_total="5496" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="924" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="regex" />
@@ -6388,7 +6670,8 @@
       <module_usage name="sqlfluff.core.rules.fix" finding="absolute" line="42" />
       <module_usage name="sqlfluff.core.rules.noqa" finding="absolute" line="43" />
       <module_usage name="ntpath" finding="absolute" line="151" />
-      <module_usage name="sqlfluff.core.linter.runner" finding="absolute" line="1090" />
+      <module_usage name="sqlfluff.core.parser.rust_parser" finding="absolute" line="257" />
+      <module_usage name="sqlfluff.core.linter.runner" finding="absolute" line="1124" />
     </module_usages>
   </module>
   <module name="sqlfluff.core.linter.linting_result" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\linter\linting_result.py" distribution="sqlfluff">
@@ -6452,8 +6735,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.core.parser" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\parser\__init__.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="24" merged_total="86" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="24" merged_total="43" />
+    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="24" merged_total="90" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="24" merged_total="45" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -6471,36 +6754,36 @@
       <module_usage name="sqlfluff.core.parser.grammar.Ref" finding="not-found" line="3" />
       <module_usage name="sqlfluff.core.parser.grammar.Sequence" finding="not-found" line="3" />
       <module_usage name="sqlfluff.core.parser.lexer" finding="absolute" line="17" />
-      <module_usage name="sqlfluff.core.parser.markers" finding="absolute" line="18" />
-      <module_usage name="sqlfluff.core.parser.matchable" finding="absolute" line="19" />
-      <module_usage name="sqlfluff.core.parser.parser" finding="absolute" line="20" />
-      <module_usage name="sqlfluff.core.parser.parsers" finding="absolute" line="21" />
-      <module_usage name="sqlfluff.core.parser.segments" finding="absolute" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.BaseFileSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.BaseSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.BinaryOperatorSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.BracketedSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.CodeSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.CommentSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.ComparisonOperatorSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.CompositeBinaryOperatorSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.CompositeComparisonOperatorSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.Dedent" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.IdentifierSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.ImplicitIndent" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.Indent" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.KeywordSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.LiteralKeywordSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.LiteralSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.NewlineSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.RawSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.SegmentGenerator" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.SourceFix" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.SymbolSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.UnlexableSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.WhitespaceSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.segments.WordSegment" finding="not-found" line="27" />
-      <module_usage name="sqlfluff.core.parser.types" finding="absolute" line="53" />
+      <module_usage name="sqlfluff.core.parser.markers" finding="absolute" line="24" />
+      <module_usage name="sqlfluff.core.parser.matchable" finding="absolute" line="25" />
+      <module_usage name="sqlfluff.core.parser.parser" finding="absolute" line="26" />
+      <module_usage name="sqlfluff.core.parser.parsers" finding="absolute" line="27" />
+      <module_usage name="sqlfluff.core.parser.segments" finding="absolute" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.BaseFileSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.BaseSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.BinaryOperatorSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.BracketedSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.CodeSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.CommentSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.ComparisonOperatorSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.CompositeBinaryOperatorSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.CompositeComparisonOperatorSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.Dedent" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.IdentifierSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.ImplicitIndent" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.Indent" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.KeywordSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.LiteralKeywordSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.LiteralSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.NewlineSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.RawSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.SegmentGenerator" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.SourceFix" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.SymbolSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.UnlexableSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.WhitespaceSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.segments.WordSegment" finding="not-found" line="33" />
+      <module_usage name="sqlfluff.core.parser.types" finding="absolute" line="59" />
     </module_usages>
   </module>
   <module name="sqlfluff.core.parser.context" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\parser\context.py" distribution="sqlfluff">
@@ -6660,8 +6943,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.core.parser.lexer" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\parser\lexer.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="2471" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="489" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="2993" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="596" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="regex" />
@@ -6681,25 +6964,29 @@
       <module_usage name="sqlfluff.core.parser.segments.BaseSegment" finding="not-found" line="14" />
       <module_usage name="sqlfluff.core.parser.segments.Dedent" finding="not-found" line="14" />
       <module_usage name="sqlfluff.core.parser.segments.EndOfFile" finding="not-found" line="14" />
+      <module_usage name="sqlfluff.core.parser.segments.ImplicitIndent" finding="not-found" line="14" />
       <module_usage name="sqlfluff.core.parser.segments.Indent" finding="not-found" line="14" />
+      <module_usage name="sqlfluff.core.parser.segments.LiteralKeywordSegment" finding="not-found" line="14" />
       <module_usage name="sqlfluff.core.parser.segments.MetaSegment" finding="not-found" line="14" />
       <module_usage name="sqlfluff.core.parser.segments.RawSegment" finding="not-found" line="14" />
       <module_usage name="sqlfluff.core.parser.segments.TemplateLoop" finding="not-found" line="14" />
       <module_usage name="sqlfluff.core.parser.segments.TemplateSegment" finding="not-found" line="14" />
       <module_usage name="sqlfluff.core.parser.segments.UnlexableSegment" finding="not-found" line="14" />
-      <module_usage name="sqlfluff.core.templaters" finding="absolute" line="25" />
-      <module_usage name="sqlfluff.core.templaters.TemplatedFile" finding="not-found" line="25" />
-      <module_usage name="sqlfluff.core.templaters.base" finding="absolute" line="26" />
+      <module_usage name="sqlfluff.core.templaters" finding="absolute" line="27" />
+      <module_usage name="sqlfluff.core.templaters.TemplatedFile" finding="not-found" line="27" />
+      <module_usage name="sqlfluff.core.templaters.base" finding="absolute" line="28" />
+      <module_usage name="sqlfluffrs" finding="not-found" line="898" />
     </module_usages>
   </module>
   <module name="sqlfluff.core.parser.markers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\parser\markers.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="32" merged_total="644" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="130" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="33" merged_total="655" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="132" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="dataclasses" finding="absolute" line="6" />
-      <module_usage name="typing" finding="absolute" line="7" />
-      <module_usage name="sqlfluff.core.helpers.slice" finding="absolute" line="9" />
+      <module_usage name="collections.abc" finding="absolute" line="6" />
+      <module_usage name="dataclasses" finding="absolute" line="7" />
+      <module_usage name="typing" finding="absolute" line="8" />
+      <module_usage name="sqlfluff.core.helpers.slice" finding="absolute" line="10" />
     </module_usages>
   </module>
   <module name="sqlfluff.core.parser.match_algorithms" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\parser\match_algorithms.py" distribution="sqlfluff">
@@ -6782,6 +7069,29 @@
       <module_usage name="sqlfluff.core.parser.types" finding="absolute" line="17" />
     </module_usages>
   </module>
+  <module name="sqlfluff.core.parser.rust_parser" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\parser\rust_parser.py" distribution="sqlfluff">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="1102" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="220" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="functools" finding="absolute" line="13" />
+      <module_usage name="logging" finding="absolute" line="14" />
+      <module_usage name="typing" finding="absolute" line="15" />
+      <module_usage name="sqlfluff.core.config" finding="absolute" line="17" />
+      <module_usage name="sqlfluff.core.config.FluffConfig" finding="not-found" line="17" />
+      <module_usage name="sqlfluff.core.errors" finding="absolute" line="18" />
+      <module_usage name="sqlfluff.core.parser.match_result" finding="absolute" line="19" />
+      <module_usage name="sqlfluff.core.parser.segments" finding="absolute" line="20" />
+      <module_usage name="sqlfluff.core.parser.segments.BaseFileSegment" finding="not-found" line="20" />
+      <module_usage name="sqlfluff.core.parser.segments.BaseSegment" finding="not-found" line="20" />
+      <module_usage name="sqlfluff.core.parser.segments.Dedent" finding="not-found" line="20" />
+      <module_usage name="sqlfluff.core.parser.segments.ImplicitIndent" finding="not-found" line="20" />
+      <module_usage name="sqlfluff.core.parser.segments.Indent" finding="not-found" line="20" />
+      <module_usage name="sqlfluff.core.parser.segments.TemplateSegment" finding="not-found" line="20" />
+      <module_usage name="sqlfluff.core.parser.segments.UnparsableSegment" finding="not-found" line="20" />
+      <module_usage name="sqlfluffrs" finding="not-found" line="38" />
+    </module_usages>
+  </module>
   <module name="sqlfluff.core.parser.segments" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\parser\segments\__init__.py" distribution="sqlfluff">
     <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="13" merged_total="50" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="25" />
@@ -6799,8 +7109,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.core.parser.segments.base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\parser\segments\base.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="81" merged_total="6053" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="80" merged_total="979" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="81" merged_total="6071" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="80" merged_total="982" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="12" />
@@ -6822,8 +7132,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.core.parser.segments.bracketed" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\parser\segments\bracketed.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="282" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="68" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="299" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="71" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="absolute" line="3" />
@@ -6875,8 +7185,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.core.parser.segments.meta" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\parser\segments\meta.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="895" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="214" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="955" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="231" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="absolute" line="3" />
@@ -6891,8 +7201,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.core.parser.segments.raw" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\parser\segments\raw.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="34" merged_total="702" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="33" merged_total="154" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="35" merged_total="732" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="34" merged_total="162" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="regex" />
@@ -6999,8 +7309,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.core.rules.base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\core\rules\base.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="27" merged_total="5376" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="896" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="27" merged_total="5382" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="897" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="regex" />
@@ -7423,7 +7733,7 @@
     <module_usages />
   </module>
   <module name="sqlfluff.dialects.dialect_bigquery" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\dialects\dialect_bigquery.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="29" merged_total="17174" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="29" merged_total="17184" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="absolute" line="9" />
@@ -7470,7 +7780,7 @@
     <module_usages />
   </module>
   <module name="sqlfluff.dialects.dialect_clickhouse" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\dialects\dialect_clickhouse.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="26" merged_total="6362" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="26" merged_total="6467" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sqlfluff.core.dialects" finding="absolute" line="6" />
@@ -7513,7 +7823,7 @@
     <module_usages />
   </module>
   <module name="sqlfluff.dialects.dialect_databricks" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\dialects\dialect_databricks.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="22" merged_total="2417" />
+    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="22" merged_total="2723" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sqlfluff.core.dialects" finding="absolute" line="8" />
@@ -7622,7 +7932,7 @@
     <module_usages />
   </module>
   <module name="sqlfluff.dialects.dialect_duckdb" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\dialects\dialect_duckdb.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="23" merged_total="2547" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="24" merged_total="2717" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sqlfluff.core.dialects" finding="absolute" line="6" />
@@ -7643,6 +7953,7 @@
       <module_usage name="sqlfluff.core.parser.Nothing" finding="not-found" line="7" />
       <module_usage name="sqlfluff.core.parser.OneOf" finding="not-found" line="7" />
       <module_usage name="sqlfluff.core.parser.OptionallyBracketed" finding="not-found" line="7" />
+      <module_usage name="sqlfluff.core.parser.ParseMode" finding="not-found" line="7" />
       <module_usage name="sqlfluff.core.parser.Ref" finding="not-found" line="7" />
       <module_usage name="sqlfluff.core.parser.RegexLexer" finding="not-found" line="7" />
       <module_usage name="sqlfluff.core.parser.RegexParser" finding="not-found" line="7" />
@@ -7651,10 +7962,10 @@
       <module_usage name="sqlfluff.core.parser.StringParser" finding="not-found" line="7" />
       <module_usage name="sqlfluff.core.parser.SymbolSegment" finding="not-found" line="7" />
       <module_usage name="sqlfluff.core.parser.TypedParser" finding="not-found" line="7" />
-      <module_usage name="sqlfluff.dialects" finding="absolute" line="32" />
-      <module_usage name="sqlfluff.dialects.dialect_ansi" finding="relative" line="32" />
       <module_usage name="sqlfluff.dialects" finding="absolute" line="33" />
-      <module_usage name="sqlfluff.dialects.dialect_postgres" finding="relative" line="33" />
+      <module_usage name="sqlfluff.dialects.dialect_ansi" finding="relative" line="33" />
+      <module_usage name="sqlfluff.dialects" finding="absolute" line="34" />
+      <module_usage name="sqlfluff.dialects.dialect_postgres" finding="relative" line="34" />
     </module_usages>
   </module>
   <module name="sqlfluff.dialects.dialect_exasol" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\dialects\dialect_exasol.py" distribution="sqlfluff">
@@ -7805,7 +8116,7 @@
     <module_usages />
   </module>
   <module name="sqlfluff.dialects.dialect_impala" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\dialects\dialect_impala.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="8" merged_total="275" />
+    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="8" merged_total="377" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sqlfluff.core.dialects" finding="absolute" line="3" />
@@ -7931,7 +8242,7 @@
     <module_usages />
   </module>
   <module name="sqlfluff.dialects.dialect_oracle" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\dialects\dialect_oracle.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="31" merged_total="7002" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="31" merged_total="7555" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="typing" finding="absolute" line="6" />
@@ -7974,7 +8285,7 @@
     </module_usages>
   </module>
   <module name="sqlfluff.dialects.dialect_postgres" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\dialects\dialect_postgres.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="33" merged_total="18697" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="33" merged_total="18798" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sqlfluff.core.dialects" finding="absolute" line="3" />
@@ -8112,7 +8423,7 @@
     <module_usages />
   </module>
   <module name="sqlfluff.dialects.dialect_soql" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\dialects\dialect_soql.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="8" merged_total="116" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="8" merged_total="174" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sqlfluff.core.dialects" finding="absolute" line="6" />
@@ -8131,7 +8442,7 @@
     </module_usages>
   </module>
   <module name="sqlfluff.dialects.dialect_sparksql" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\dialects\dialect_sparksql.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="31" merged_total="7356" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="31" merged_total="7280" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sqlfluff.core.dialects" finding="absolute" line="14" />
@@ -8322,7 +8633,7 @@
     <module_usages />
   </module>
   <module name="sqlfluff.dialects.dialect_tsql" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\dialects\dialect_tsql.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="33" merged_total="23996" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="33" merged_total="24125" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sqlfluff.core.dialects" finding="absolute" line="6" />
@@ -8478,8 +8789,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.rules.aliasing.AL03" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\aliasing\AL03.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="15" merged_total="210" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="69" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="15" merged_total="213" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="70" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="typing" finding="absolute" line="3" />
@@ -8967,8 +9278,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.rules.convention.CV05" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\convention\CV05.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="348" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="86" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="11" merged_total="190" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="62" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="typing" finding="absolute" line="3" />
@@ -8988,8 +9299,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.rules.convention.CV06" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\convention\CV06.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="24" merged_total="1239" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="24" merged_total="313" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="24" merged_total="2273" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="24" merged_total="381" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="absolute" line="3" />
@@ -9057,8 +9368,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.rules.convention.CV10" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\convention\CV10.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="31" merged_total="522" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="130" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="31" merged_total="530" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="132" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="regex" />
@@ -9068,16 +9379,16 @@
       <module_usage name="regex" finding="absolute" line="5" />
       <module_usage name="sqlfluff.core.parser" finding="absolute" line="7" />
       <module_usage name="sqlfluff.core.parser.LiteralSegment" finding="not-found" line="7" />
-      <module_usage name="sqlfluff.core.parser.markers" finding="absolute" line="8" />
-      <module_usage name="sqlfluff.core.rules" finding="absolute" line="9" />
-      <module_usage name="sqlfluff.core.rules.BaseRule" finding="not-found" line="9" />
-      <module_usage name="sqlfluff.core.rules.LintFix" finding="not-found" line="9" />
-      <module_usage name="sqlfluff.core.rules.LintResult" finding="not-found" line="9" />
-      <module_usage name="sqlfluff.core.rules.RuleContext" finding="not-found" line="9" />
-      <module_usage name="sqlfluff.core.rules.crawlers" finding="absolute" line="10" />
-      <module_usage name="sqlfluff.utils.functional" finding="absolute" line="11" />
-      <module_usage name="sqlfluff.utils.functional.FunctionalContext" finding="not-found" line="11" />
-      <module_usage name="sqlfluff.utils.functional.rsp" finding="not-found" line="11" />
+      <module_usage name="sqlfluff.core.parser.PositionMarker" finding="not-found" line="7" />
+      <module_usage name="sqlfluff.core.rules" finding="absolute" line="8" />
+      <module_usage name="sqlfluff.core.rules.BaseRule" finding="not-found" line="8" />
+      <module_usage name="sqlfluff.core.rules.LintFix" finding="not-found" line="8" />
+      <module_usage name="sqlfluff.core.rules.LintResult" finding="not-found" line="8" />
+      <module_usage name="sqlfluff.core.rules.RuleContext" finding="not-found" line="8" />
+      <module_usage name="sqlfluff.core.rules.crawlers" finding="absolute" line="9" />
+      <module_usage name="sqlfluff.utils.functional" finding="absolute" line="10" />
+      <module_usage name="sqlfluff.utils.functional.FunctionalContext" finding="not-found" line="10" />
+      <module_usage name="sqlfluff.utils.functional.rsp" finding="not-found" line="10" />
     </module_usages>
   </module>
   <module name="sqlfluff.rules.convention.CV11" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\convention\CV11.py" distribution="sqlfluff">
@@ -9106,8 +9417,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.rules.convention.CV12" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\convention\CV12.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="1612" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="321" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="1690" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="337" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="3" />
@@ -9169,21 +9480,21 @@
       <module_usage name="sqlfluff.core.rules" finding="absolute" line="4" />
       <module_usage name="sqlfluff.core.rules.BaseRule" finding="not-found" line="4" />
       <module_usage name="sqlfluff.core.rules.ConfigInfo" finding="not-found" line="4" />
-      <module_usage name="sqlfluff.rules.layout.LT01" finding="absolute" line="53" />
-      <module_usage name="sqlfluff.rules.layout.LT02" finding="absolute" line="54" />
-      <module_usage name="sqlfluff.rules.layout.LT03" finding="absolute" line="55" />
-      <module_usage name="sqlfluff.rules.layout.LT04" finding="absolute" line="56" />
-      <module_usage name="sqlfluff.rules.layout.LT05" finding="absolute" line="57" />
-      <module_usage name="sqlfluff.rules.layout.LT06" finding="absolute" line="58" />
-      <module_usage name="sqlfluff.rules.layout.LT07" finding="absolute" line="59" />
-      <module_usage name="sqlfluff.rules.layout.LT08" finding="absolute" line="60" />
-      <module_usage name="sqlfluff.rules.layout.LT09" finding="absolute" line="61" />
-      <module_usage name="sqlfluff.rules.layout.LT10" finding="absolute" line="62" />
-      <module_usage name="sqlfluff.rules.layout.LT11" finding="absolute" line="63" />
-      <module_usage name="sqlfluff.rules.layout.LT12" finding="absolute" line="64" />
-      <module_usage name="sqlfluff.rules.layout.LT13" finding="absolute" line="65" />
-      <module_usage name="sqlfluff.rules.layout.LT14" finding="absolute" line="66" />
-      <module_usage name="sqlfluff.rules.layout.LT15" finding="absolute" line="67" />
+      <module_usage name="sqlfluff.rules.layout.LT01" finding="absolute" line="60" />
+      <module_usage name="sqlfluff.rules.layout.LT02" finding="absolute" line="61" />
+      <module_usage name="sqlfluff.rules.layout.LT03" finding="absolute" line="62" />
+      <module_usage name="sqlfluff.rules.layout.LT04" finding="absolute" line="63" />
+      <module_usage name="sqlfluff.rules.layout.LT05" finding="absolute" line="64" />
+      <module_usage name="sqlfluff.rules.layout.LT06" finding="absolute" line="65" />
+      <module_usage name="sqlfluff.rules.layout.LT07" finding="absolute" line="66" />
+      <module_usage name="sqlfluff.rules.layout.LT08" finding="absolute" line="67" />
+      <module_usage name="sqlfluff.rules.layout.LT09" finding="absolute" line="68" />
+      <module_usage name="sqlfluff.rules.layout.LT10" finding="absolute" line="69" />
+      <module_usage name="sqlfluff.rules.layout.LT11" finding="absolute" line="70" />
+      <module_usage name="sqlfluff.rules.layout.LT12" finding="absolute" line="71" />
+      <module_usage name="sqlfluff.rules.layout.LT13" finding="absolute" line="72" />
+      <module_usage name="sqlfluff.rules.layout.LT14" finding="absolute" line="73" />
+      <module_usage name="sqlfluff.rules.layout.LT15" finding="absolute" line="74" />
     </module_usages>
   </module>
   <module name="sqlfluff.rules.layout.LT01" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\layout\LT01.py" distribution="sqlfluff">
@@ -9430,8 +9741,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.rules.layout.LT15" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\layout\LT15.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="263" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="66" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="331" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="84" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="typing" finding="absolute" line="3" />
@@ -9860,8 +10171,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.rules.tsql" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\tsql\__init__.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="1" merged_total="6" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="1" merged_total="2" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="3" merged_total="12" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="4" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -9870,6 +10181,8 @@
       <module_usage name="sqlfluff.core.rules" finding="absolute" line="10" />
       <module_usage name="sqlfluff.core.rules.BaseRule" finding="not-found" line="10" />
       <module_usage name="sqlfluff.rules.tsql.TQ01" finding="absolute" line="20" />
+      <module_usage name="sqlfluff.rules.tsql.TQ02" finding="absolute" line="21" />
+      <module_usage name="sqlfluff.rules.tsql.TQ03" finding="absolute" line="22" />
     </module_usages>
   </module>
   <module name="sqlfluff.rules.tsql.TQ01" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\tsql\TQ01.py" distribution="sqlfluff">
@@ -9880,6 +10193,38 @@
       <module_usage name="typing" finding="absolute" line="3" />
       <module_usage name="sqlfluff.core.rules" finding="absolute" line="5" />
       <module_usage name="sqlfluff.core.rules.BaseRule" finding="not-found" line="5" />
+      <module_usage name="sqlfluff.core.rules.LintResult" finding="not-found" line="5" />
+      <module_usage name="sqlfluff.core.rules.RuleContext" finding="not-found" line="5" />
+      <module_usage name="sqlfluff.core.rules.crawlers" finding="absolute" line="6" />
+    </module_usages>
+  </module>
+  <module name="sqlfluff.rules.tsql.TQ02" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\tsql\TQ02.py" distribution="sqlfluff">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="19" merged_total="504" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="123" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="typing" finding="absolute" line="3" />
+      <module_usage name="sqlfluff.core.parser" finding="absolute" line="5" />
+      <module_usage name="sqlfluff.core.parser.BaseSegment" finding="not-found" line="5" />
+      <module_usage name="sqlfluff.core.parser.KeywordSegment" finding="not-found" line="5" />
+      <module_usage name="sqlfluff.core.parser.NewlineSegment" finding="not-found" line="5" />
+      <module_usage name="sqlfluff.core.rules" finding="absolute" line="6" />
+      <module_usage name="sqlfluff.core.rules.BaseRule" finding="not-found" line="6" />
+      <module_usage name="sqlfluff.core.rules.LintFix" finding="not-found" line="6" />
+      <module_usage name="sqlfluff.core.rules.LintResult" finding="not-found" line="6" />
+      <module_usage name="sqlfluff.core.rules.RuleContext" finding="not-found" line="6" />
+      <module_usage name="sqlfluff.core.rules.crawlers" finding="absolute" line="7" />
+    </module_usages>
+  </module>
+  <module name="sqlfluff.rules.tsql.TQ03" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\rules\tsql\TQ03.py" distribution="sqlfluff">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="293" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="73" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="typing" finding="absolute" line="3" />
+      <module_usage name="sqlfluff.core.rules" finding="absolute" line="5" />
+      <module_usage name="sqlfluff.core.rules.BaseRule" finding="not-found" line="5" />
+      <module_usage name="sqlfluff.core.rules.LintFix" finding="not-found" line="5" />
       <module_usage name="sqlfluff.core.rules.LintResult" finding="not-found" line="5" />
       <module_usage name="sqlfluff.core.rules.RuleContext" finding="not-found" line="5" />
       <module_usage name="sqlfluff.core.rules.crawlers" finding="absolute" line="6" />
@@ -10112,8 +10457,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.utils.reflow.rebreak" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\utils\reflow\rebreak.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="66" merged_total="2720" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="62" merged_total="543" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="48" merged_total="2778" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="47" merged_total="555" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="logging" finding="absolute" line="3" />
@@ -10130,8 +10475,8 @@
     </module_usages>
   </module>
   <module name="sqlfluff.utils.reflow.reindent" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\sqlfluff\utils\reflow\reindent.py" distribution="sqlfluff">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="7535" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="37" merged_total="1516" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="7830" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="37" merged_total="1577" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="logging" finding="absolute" line="3" />
@@ -10549,20 +10894,20 @@
     </module_usages>
   </module>
   <module name="tomli._parser" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\tomli\_parser.py" distribution="tomli">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="3721" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="745" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="3749" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="751" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
       <module_usage name="sys" finding="absolute" line="7" />
       <module_usage name="types" finding="absolute" line="8" />
       <module_usage name="tomli._re" finding="relative" line="10" />
-      <module_usage name="warnings" finding="absolute" line="99" />
+      <module_usage name="warnings" finding="absolute" line="100" />
     </module_usages>
   </module>
   <module name="tomli._re" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\tomli\_re.py" distribution="tomli">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="12" merged_total="227" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="80" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="14" merged_total="242" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="85" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" />
@@ -10588,12 +10933,6 @@
       <module_usage name="tqdm.version" finding="relative" line="9" />
     </module_usages>
   </module>
-  <module name="tqdm._dist_ver" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\tqdm\_dist_ver.py" distribution="tqdm">
-    <optimization-time pass="1" time="volatile" micro_passes="2" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" />
-    <code-generation-time time="volatile" />
-    <module_usages />
-  </module>
   <module name="tqdm._monitor" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\tqdm\_monitor.py" distribution="tqdm">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="451" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="107" />
@@ -10616,8 +10955,8 @@
     </module_usages>
   </module>
   <module name="tqdm.cli" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\tqdm\cli.py" distribution="tqdm">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="66" merged_total="2020" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="55" merged_total="392" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="66" merged_total="1873" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="55" merged_total="362" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="logging" finding="absolute" line="4" />
@@ -10648,8 +10987,8 @@
     </module_usages>
   </module>
   <module name="tqdm.std" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\tqdm\std.py" distribution="tqdm">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="70" merged_total="6833" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="68" merged_total="1339" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="70" merged_total="6600" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="68" merged_total="1291" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="10" />
@@ -10687,8 +11026,8 @@
     </module_usages>
   </module>
   <module name="tqdm.utils" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\tqdm\utils.py" distribution="tqdm">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="2539" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="477" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="1850" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="419" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="colorama" />
@@ -10714,12 +11053,11 @@
     </module_usages>
   </module>
   <module name="tqdm.version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\tqdm\version.py" distribution="tqdm">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="4" merged_total="44" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="13" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="5" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="tqdm._dist_ver" finding="relative" line="3" />
-      <module_usage name="setuptools_scm" finding="not-found" line="6" />
+      <module_usage name="importlib.metadata" finding="absolute" line="3" />
     </module_usages>
   </module>
   <module name="trace" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\trace.py">
@@ -10794,6 +11132,39 @@
       <module_usage name="sys" finding="absolute" line="29" />
       <module_usage name="types" finding="absolute" line="30" />
       <module_usage name="types" finding="absolute" line="31" />
+    </module_usages>
+  </module>
+  <module name="typing_extensions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\typing_extensions.py" distribution="typing_extensions">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="40" merged_total="18255" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="34" merged_total="2913" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="abc" finding="absolute" line="1" />
+      <module_usage name="builtins" finding="absolute" line="2" />
+      <module_usage name="collections" finding="absolute" line="3" />
+      <module_usage name="collections.abc" finding="absolute" line="4" />
+      <module_usage name="contextlib" finding="absolute" line="5" />
+      <module_usage name="enum" finding="absolute" line="6" />
+      <module_usage name="functools" finding="absolute" line="7" />
+      <module_usage name="inspect" finding="absolute" line="8" />
+      <module_usage name="io" finding="absolute" line="9" />
+      <module_usage name="keyword" finding="absolute" line="10" />
+      <module_usage name="operator" finding="absolute" line="11" />
+      <module_usage name="sys" finding="absolute" line="12" />
+      <module_usage name="types" finding="absolute" line="13" />
+      <module_usage name="typing" finding="absolute" line="14" />
+      <module_usage name="warnings" finding="absolute" line="15" />
+      <module_usage name="functools" finding="absolute" line="441" />
+      <module_usage name="typing" finding="absolute" line="1672" />
+      <module_usage name="typing" finding="absolute" line="1777" />
+      <module_usage name="typing" finding="absolute" line="2541" />
+      <module_usage name="functools" finding="absolute" line="2952" />
+      <module_usage name="types" finding="absolute" line="2953" />
+      <module_usage name="asyncio.coroutines" finding="absolute" line="2997" />
+      <module_usage name="functools" finding="absolute" line="2998" />
+      <module_usage name="inspect" finding="absolute" line="2999" />
+      <module_usage name="_socket" finding="absolute" line="3883" />
+      <module_usage name="functools" finding="absolute" line="4015" />
     </module_usages>
   </module>
   <module name="unicodedata" kind="PythonExtensionModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\DLLs\unicodedata.pyd">
@@ -11011,7 +11382,7 @@
     <memory_usage name="before_c_code_generation" value="volatile" />
     <memory_usage name="before_running_scons" value="volatile" />
   </performance>
-  <data_file name="sqlfluff\core\default_config.cfg" source="${sys.prefix}\lib\site-packages\sqlfluff\core\default_config.cfg" size="13729" reason="package data for 'sqlfluff.core'" tags="config,copy" />
+  <data_file name="sqlfluff\core\default_config.cfg" source="${sys.prefix}\lib\site-packages\sqlfluff\core\default_config.cfg" size="14122" reason="package data for 'sqlfluff.core'" tags="config,copy" />
   <metadata>
     <included_metadata name="sqlfluff" reason="According to Yaml configuration 'include-metadata' for 'sqlfluff'" />
   </metadata>
@@ -11043,7 +11414,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=6024aa796b8df64b991d31a63e6f9478" />
+    <option value="--report-user-provided=pipenv_hash=bb6bf6ec634f36533ef9a6f9a6cfeda8" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -11071,14 +11442,15 @@
     <distribution name="MarkupSafe" version="3.0.3" installer="pip" />
     <distribution name="chardet" version="5.2.0" installer="pip" />
     <distribution name="colorama" version="0.4.6" installer="pip" />
-    <distribution name="pathspec" version="0.12.1" installer="pip" />
-    <distribution name="platformdirs" version="4.5.0" installer="pip" />
+    <distribution name="pathspec" version="1.0.4" installer="pip" />
+    <distribution name="platformdirs" version="4.5.1" installer="pip" />
     <distribution name="pluggy" version="1.6.0" installer="pip" />
-    <distribution name="regex" version="2025.11.3" installer="pip" />
-    <distribution name="sqlfluff" version="3.5.0" installer="pip" />
+    <distribution name="regex" version="2026.1.15" installer="pip" />
+    <distribution name="sqlfluff" version="4.0.0" installer="pip" />
     <distribution name="tblib" version="3.2.2" installer="pip" />
-    <distribution name="tomli" version="2.3.0" installer="pip" />
-    <distribution name="tqdm" version="4.67.1" installer="pip" />
+    <distribution name="tomli" version="2.4.0" installer="pip" />
+    <distribution name="tqdm" version="4.67.3" installer="pip" />
+    <distribution name="typing_extensions" version="4.15.0" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}\Scripts\python.EXE" python_flavor="CPython Official" python_version="3.10.11" os_name="Windows" os_release="11" arch_name="x86_64" filesystem_encoding="utf-8">
     <search_path>
@@ -11093,7 +11465,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>6024aa796b8df64b991d31a63e6f9478</pipenv_hash>
+    <pipenv_hash>bb6bf6ec634f36533ef9a6f9a6cfeda8</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}\SqlfluffUsing.dist\SqlfluffUsing.exe" />
 </nuitka-compilation-report>
