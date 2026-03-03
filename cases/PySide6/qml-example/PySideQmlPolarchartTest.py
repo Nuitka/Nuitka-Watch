@@ -19,6 +19,7 @@
 #    nuitka-project: --macos-app-icon={MAIN_DIRECTORY}/qmlpolarchart/Example-Icon.png
 #    nuitka-project: --mode=app
 #    nuitka-project: --macos-sign-identity="Nuitka Test Company"
+#    nuitka-project: --macos-sign-keyring-password=""
 
 import os
 import sys
