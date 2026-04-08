@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.0.7" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.0.8" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment />
   <module name="__future__" kind="UncompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="8" merged_total="60" />
@@ -324,8 +324,8 @@
     </module_usages>
   </module>
   <module name="__parents_main__" kind="CompiledPythonModule" usage="plugins" reason="Auto enable multiprocessing freeze support" source_path="~\repos\Nuitka-Watch\cases\Pydantic\PydanticUsing.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="9" merged_total="225" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="55" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="9" merged_total="226" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="56" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic" />
@@ -336,7 +336,7 @@
       <module_usage name="pydantic.BaseModel" finding="not-found" line="5" />
       <module_usage name="sys" finding="absolute" line="19" />
       <module_usage name="builtins" finding="absolute" line="20" />
-      <module_usage name="multiprocessing.spawn" finding="absolute" line="23" />
+      <module_usage name="multiprocessing.spawn" finding="absolute" line="21" />
     </module_usages>
   </module>
   <module name="__parents_main__-preLoad" kind="CompiledPythonModule" usage="plugins" reason="Scrubbing multiprocessing fork arguments from sys.argv." source_path="~\repos\Nuitka-Watch\cases\Pydantic\__parents_main__-preLoad.py">
@@ -1729,7 +1729,7 @@
     </module_usages>
   </module>
   <module name="dataclasses" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\dataclasses.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="62" merged_total="5676" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="62" merged_total="5680" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="1" />
@@ -1766,7 +1766,7 @@
     </module_usages>
   </module>
   <module name="difflib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\difflib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="40" merged_total="9144" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="40" merged_total="9149" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="heapq" finding="absolute" line="33" />
@@ -3621,7 +3621,7 @@
   </module>
   <module name="json.encoder" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\json\encoder.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_json&quot;)" tags_used="has_builtin_module" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="1493" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="1496" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="3" />
@@ -3756,12 +3756,16 @@
     </module_usages>
   </module>
   <module name="multiprocessing-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Monkey patching &quot;multiprocessing&quot; for compiled methods." source_path="${sys.real_prefix}\Lib\multiprocessing\multiprocessing-postLoad.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="5" merged_total="62" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="12" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="5" merged_total="89" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="18" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="multiprocessing.forking" finding="not-found" line="2" />
       <module_usage name="multiprocessing.reduction" finding="absolute" line="4" />
+      <module_usage name="os" finding="absolute" line="6" />
+      <module_usage name="sys" finding="absolute" line="7" />
+      <module_usage name="multiprocessing.spawn" finding="absolute" line="24" />
+      <module_usage name="__parents_main__" finding="not-found" line="32" />
     </module_usages>
   </module>
   <module name="multiprocessing-preLoad" kind="CompiledPythonModule" usage="plugins" reason="Monkey patching &quot;multiprocessing&quot; load environment." source_path="${sys.real_prefix}\Lib\multiprocessing\multiprocessing-preLoad.py">
@@ -4615,8 +4619,8 @@
     </module_usages>
   </module>
   <module name="pydantic.env_settings" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\env_settings.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="2154" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="416" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="2159" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="417" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -4895,8 +4899,8 @@
     </module_usages>
   </module>
   <module name="pydantic.utils" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pydantic\utils.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="3869" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="737" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="3875" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="739" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
