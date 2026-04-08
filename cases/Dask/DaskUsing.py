@@ -2,16 +2,23 @@
 # nuitka-project: --noinclude-dask-mode=allow
 # nuitka-project: --noinclude-numba-mode=allow
 
+import random
+
+import dask
 import dask.array as da
+import dask_ml.cluster
+import dask_ml.datasets
 import numpy as np
 import pandas as pd
 import xarray as xr
 from sklearn.datasets import make_classification
-from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
-import pandas as pd
-import dask_ml.datasets
-import dask_ml.cluster
+from sklearn.svm import SVC
+
+random.seed(0)
+
+da.random.seed(0)
+np.random.seed(0)
 
 x = da.random.random((10000, 10000), chunks=(1000, 1000))
 print(x)
@@ -31,9 +38,8 @@ times = pd.date_range("2000-01-01", periods=4)
 foo = xr.DataArray(data, coords=[times, locs], dims=["time", "space"])
 print(foo)
 
-import dask
 
-df = dask.datasets.timeseries()
+df = dask.datasets.timeseries(seed=0)
 print(df.head())
 
 
@@ -53,11 +59,16 @@ print(df3)
 
 
 computed_df = df3.compute()
+if isinstance(computed_df, pd.Series) or isinstance(computed_df, pd.DataFrame):
+    computed_df = computed_df.sort_index()
 print(computed_df)
 
 
 df4 = df.groupby("name").aggregate({"x": "sum", "y": "max"})
-print(df4.compute())
+res = df4.compute()
+if isinstance(res, pd.Series) or isinstance(res, pd.DataFrame):
+    res = res.sort_index()
+print(res)
 
 
 df4 = df4.repartition(npartitions=1)
@@ -92,17 +103,23 @@ grid_search = GridSearchCV(
 
 print(grid_search.fit(X, y))
 
-print(pd.DataFrame(grid_search.cv_results_).head())
+cv_results = pd.DataFrame(grid_search.cv_results_)
+drop_cols = [
+    c
+    for c in ["mean_fit_time", "std_fit_time", "mean_score_time", "std_score_time"]
+    if c in cv_results.columns
+]
+print(cv_results.drop(columns=drop_cols).head())
 
 print(grid_search.predict(X)[:5])
 
 
-
-X, y = dask_ml.datasets.make_blobs(n_samples=100,
-                                   chunks=1000,
-                                   random_state=0,
-                                   centers=3)
+X, y = dask_ml.datasets.make_blobs(
+    n_samples=100, chunks=1000, random_state=0, centers=3
+)
 X = X.persist()
 
-km = dask_ml.cluster.KMeans(n_clusters=3, init_max_iter=2, oversampling_factor=10)
+km = dask_ml.cluster.KMeans(
+    n_clusters=3, init_max_iter=2, oversampling_factor=10, random_state=0
+)
 print(km.fit(X))
