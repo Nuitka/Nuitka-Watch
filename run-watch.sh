@@ -7,21 +7,65 @@ OS=`uname`
 echo "Running on $OS..."
 if [[ $OS = MINGW* ]]
 then
-    python3.10() {
-        '/c/Python310_64/python.exe' $@
-    }
-    python3.11() {
-        '/c/Python311_64/python.exe' $@
-    }
-    python3.12() {
-        '/c/Python312_64/python.exe' $@
-    }
-    python3.13() {
-        '/c/Python313_64/python.exe' $@
-    }
-    python3.14() {
-        '/c/Python314_64/python.exe' $@
-    }
+    if ! command -v python3.10 &> /dev/null; then
+        if [ -f "/c/Python310_64/python.exe" ]; then
+            python3.10() {
+                '/c/Python310_64/python.exe' "$@"
+            }
+        elif [ -f "$LOCALAPPDATA/Programs/Python/Python310/python.exe" ]; then
+            python3.10() {
+                "$LOCALAPPDATA/Programs/Python/Python310/python.exe" "$@"
+            }
+        fi
+    fi
+
+    if ! command -v python3.11 &> /dev/null; then
+        if [ -f "/c/Python311_64/python.exe" ]; then
+            python3.11() {
+                '/c/Python311_64/python.exe' "$@"
+            }
+        elif [ -f "$LOCALAPPDATA/Programs/Python/Python311/python.exe" ]; then
+            python3.11() {
+                "$LOCALAPPDATA/Programs/Python/Python311/python.exe" "$@"
+            }
+        fi
+    fi
+
+    if ! command -v python3.12 &> /dev/null; then
+        if [ -f "/c/Python312_64/python.exe" ]; then
+            python3.12() {
+                '/c/Python312_64/python.exe' "$@"
+            }
+        elif [ -f "$LOCALAPPDATA/Programs/Python/Python312/python.exe" ]; then
+            python3.12() {
+                "$LOCALAPPDATA/Programs/Python/Python312/python.exe" "$@"
+            }
+        fi
+    fi
+
+    if ! command -v python3.13 &> /dev/null; then
+        if [ -f "/c/Python313_64/python.exe" ]; then
+            python3.13() {
+                '/c/Python313_64/python.exe' "$@"
+            }
+        elif [ -f "$LOCALAPPDATA/Programs/Python/Python313/python.exe" ]; then
+            python3.13() {
+                "$LOCALAPPDATA/Programs/Python/Python313/python.exe" "$@"
+            }
+        fi
+    fi
+
+    if ! command -v python3.14 &> /dev/null; then
+        if [ -f "/c/Python314_64/python.exe" ]; then
+            python3.14() {
+                '/c/Python314_64/python.exe' "$@"
+            }
+        elif [ -f "$LOCALAPPDATA/Programs/Python/Python314/python.exe" ]; then
+            python3.14() {
+                "$LOCALAPPDATA/Programs/Python/Python314/python.exe" "$@"
+            }
+        fi
+    fi
 fi
 
 # This enables my private development slightly better.
