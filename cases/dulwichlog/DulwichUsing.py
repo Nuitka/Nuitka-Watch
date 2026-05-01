@@ -1,8 +1,22 @@
 # nuitka-project: --standalone
-# nuitka-project: --include-data-dir={MAIN_DIRECTORY}/data=data
 import os
 
 import dulwich.repo
+
+
+def find_checkout_root(start_dir):
+    candidate = os.path.abspath(start_dir)
+
+    while True:
+        if os.path.isdir(os.path.join(candidate, ".git")):
+            return candidate
+
+        parent = os.path.dirname(candidate)
+
+        if parent == candidate:
+            raise RuntimeError("Could not find a Git checkout root.")
+
+        candidate = parent
 
 
 def iter_last_commits(repo):
@@ -12,7 +26,7 @@ def iter_last_commits(repo):
 
 
 if __name__ == "__main__":
-    repo_path = os.path.join(os.path.dirname(__file__), "data", "asyncio.git")
+    repo_path = find_checkout_root(os.getcwd())
 
     repo = dulwich.repo.Repo(repo_path)
     iter_last_commits(repo)
