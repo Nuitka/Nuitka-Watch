@@ -1,7 +1,6 @@
 # nuitka-project: --standalone
 from chameleon import PageTemplate
 
-
 BIGTABLE_ZPT = """\
 <table xmlns="http://www.w3.org/1999/xhtml"
 xmlns:tal="http://xml.zope.org/namespaces/tal">

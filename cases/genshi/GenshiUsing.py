@@ -1,7 +1,6 @@
 # nuitka-project: --standalone
 from genshi.template import MarkupTemplate, NewTextTemplate
 
-
 BIGTABLE_XML = """\
 <table xmlns:py="http://genshi.edgewall.org/">
 <tr py:for="row in table">

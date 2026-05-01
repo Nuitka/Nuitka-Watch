@@ -1,15 +1,14 @@
 # nuitka-project: --standalone
 
-import sys
 import socket
+import sys
 
+from tornado.gen import coroutine
 from tornado.httpclient import AsyncHTTPClient
 from tornado.httpserver import HTTPServer
-from tornado.gen import coroutine
 from tornado.ioloop import IOLoop
 from tornado.netutil import bind_sockets
-from tornado.web import RequestHandler, Application
-
+from tornado.web import Application, RequestHandler
 
 HOST = "127.0.0.1"
 FAMILY = socket.AF_INET

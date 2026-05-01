@@ -1,8 +1,14 @@
 # nuitka-project: --standalone
-from sqlalchemy import Column, ForeignKey, Integer, String, Table, MetaData
+from sqlalchemy import (
+    Column,
+    ForeignKey,
+    Integer,
+    MetaData,
+    String,
+    Table,
+    create_engine,
+)
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
-
 
 if __name__ == "__main__":
     metadata = MetaData()

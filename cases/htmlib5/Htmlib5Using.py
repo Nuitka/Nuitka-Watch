@@ -3,11 +3,10 @@
 
 import io
 import pathlib
+
 import html5lib
 
-
 __author__ = "collinwinter@google.com (Collin Winter)"
-
 
 
 if __name__ == "__main__":

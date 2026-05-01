@@ -1,8 +1,7 @@
 # nuitka-project: --standalone
 
-from mako.template import Template
 from mako.lookup import TemplateLookup
-
+from mako.template import Template
 
 __author__ = "virhilo@gmail.com (Lukasz Fidosz)"
 

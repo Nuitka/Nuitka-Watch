@@ -1,5 +1,5 @@
 # nuitka-project: --standalone
-from sympy import expand, symbols, integrate, tan, summation
+from sympy import expand, integrate, summation, symbols, tan
 from sympy.core.cache import clear_cache
 
 if __name__ == "__main__":
