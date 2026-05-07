@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.0.8" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
-  <scons_environment />
+<nuitka-compilation-report nuitka_version="4.1rc11" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+  <scons_environment c_compiler="MSVC" the_cc_name="cl" the_compiler="cl" />
   <module name="PIL" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\__init__.py" distribution="pillow">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="138" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="27" />
@@ -12,8 +12,25 @@
       <module_usage name="PIL._version" finding="relative" line="18" />
     </module_usages>
   </module>
+  <module name="PIL.AvifImagePlugin" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\AvifImagePlugin.py" distribution="pillow">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="58" merged_total="1302" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="52" merged_total="256" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="1" />
+      <module_usage name="os" finding="absolute" line="3" />
+      <module_usage name="io" finding="absolute" line="4" />
+      <module_usage name="typing" finding="absolute" line="5" />
+      <module_usage name="PIL" finding="absolute" line="7" />
+      <module_usage name="PIL.ExifTags" finding="relative" line="7" />
+      <module_usage name="PIL.Image" finding="relative" line="7" />
+      <module_usage name="PIL.ImageFile" finding="relative" line="7" />
+      <module_usage name="PIL" finding="absolute" line="10" />
+      <module_usage name="PIL._avif" finding="relative" line="10" />
+    </module_usages>
+  </module>
   <module name="PIL.BlpImagePlugin" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\BlpImagePlugin.py" distribution="pillow">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="47" merged_total="4411" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="47" merged_total="5286" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="47" merged_total="875" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -108,7 +125,7 @@
     </module_usages>
   </module>
   <module name="PIL.EpsImagePlugin" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\EpsImagePlugin.py" distribution="pillow">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="39" merged_total="1362" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="39" merged_total="1692" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="33" merged_total="330" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -134,6 +151,19 @@
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="16" />
       <module_usage name="enum" finding="absolute" line="18" />
+    </module_usages>
+  </module>
+  <module name="PIL.FitsImagePlugin" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\FitsImagePlugin.py" distribution="pillow">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="787" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="153" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="11" />
+      <module_usage name="gzip" finding="absolute" line="13" />
+      <module_usage name="math" finding="absolute" line="14" />
+      <module_usage name="PIL" finding="absolute" line="16" />
+      <module_usage name="PIL.Image" finding="relative" line="16" />
+      <module_usage name="PIL.ImageFile" finding="relative" line="16" />
     </module_usages>
   </module>
   <module name="PIL.FliImagePlugin" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\FliImagePlugin.py" distribution="pillow">
@@ -268,7 +298,7 @@
     </module_usages>
   </module>
   <module name="PIL.IcnsImagePlugin" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\IcnsImagePlugin.py" distribution="pillow">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="1925" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="1926" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="357" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -331,6 +361,7 @@
   <module name="PIL.Image" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\Image.py" distribution="pillow">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not plugin(&quot;pyqt5&quot;) and not plugin(&quot;pyqt6&quot;) and not plugin(&quot;pyside2&quot;) and not plugin(&quot;pyside6&quot;) and not plugin(&quot;no-qt&quot;)" tags_used="plugin" result="true" />
     <plugin-influence name="anti-bloat" influence="condition-used" condition="plugin(&quot;no-qt&quot;)" tags_used="plugin" result="false" />
+    <plugin-influence name="implicit-imports" influence="variable-used" variable="pil_image_plugins" tags_used="get_variable" value="('PIL.AvifImagePlugin', 'PIL.BlpImagePlugin', 'PIL.BmpImagePlugin', 'PIL.BufrStubImagePlugin', 'PIL.CurImagePlugin', 'PIL.DcxImagePlugin', 'PIL.DdsImagePlugin', 'PIL.EpsImagePlugin', 'PIL.FitsImagePlugin', 'PIL.FliImagePlugin', 'PIL.FpxImagePlugin', 'PIL.FtexImagePlugin', 'PIL.GbrImagePlugin', 'PIL.GifImagePlugin', 'PIL.GribStubImagePlugin', 'PIL.Hdf5StubImagePlugin', 'PIL.IcnsImagePlugin', 'PIL.IcoImagePlugin', 'PIL.ImImagePlugin', 'PIL.ImtImagePlugin', 'PIL.IptcImagePlugin', 'PIL.JpegImagePlugin', 'PIL.Jpeg2KImagePlugin', 'PIL.McIdasImagePlugin', 'PIL.MicImagePlugin', 'PIL.MpegImagePlugin', 'PIL.MpoImagePlugin', 'PIL.MspImagePlugin', 'PIL.PalmImagePlugin', 'PIL.PcdImagePlugin', 'PIL.PcxImagePlugin', 'PIL.PdfImagePlugin', 'PIL.PixarImagePlugin', 'PIL.PngImagePlugin', 'PIL.PpmImagePlugin', 'PIL.PsdImagePlugin', 'PIL.QoiImagePlugin', 'PIL.SgiImagePlugin', 'PIL.SpiderImagePlugin', 'PIL.SunImagePlugin', 'PIL.TgaImagePlugin', 'PIL.TiffImagePlugin', 'PIL.WebPImagePlugin', 'PIL.WmfImagePlugin', 'PIL.XbmImagePlugin', 'PIL.XpmImagePlugin', 'PIL.XVThumbImagePlugin')" />
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="93" merged_total="13202" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="74" merged_total="2525" />
     <code-generation-time time="volatile" />
@@ -547,7 +578,7 @@
     </module_usages>
   </module>
   <module name="PIL.ImageFilter" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\ImageFilter.py" distribution="pillow">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="4347" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="28" merged_total="5199" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="852" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -562,8 +593,8 @@
     </module_usages>
   </module>
   <module name="PIL.ImageFont" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\ImageFont.py" distribution="pillow">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="23" merged_total="1962" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="433" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="23" merged_total="2851" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="437" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="28" />
@@ -592,7 +623,7 @@
     </module_usages>
   </module>
   <module name="PIL.ImageMath" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\ImageMath.py" distribution="pillow">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="39" merged_total="853" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="39" merged_total="1010" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="157" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -756,7 +787,7 @@
     </module_usages>
   </module>
   <module name="PIL.Jpeg2KImagePlugin" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\Jpeg2KImagePlugin.py" distribution="pillow">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="40" merged_total="1658" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="40" merged_total="2058" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="38" merged_total="400" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -848,7 +879,7 @@
     </module_usages>
   </module>
   <module name="PIL.MpoImagePlugin" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\MpoImagePlugin.py" distribution="pillow">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="795" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="788" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="151" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -1055,6 +1086,22 @@
       <module_usage name="io" finding="absolute" line="156" />
     </module_usages>
   </module>
+  <module name="PIL.QoiImagePlugin" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\QoiImagePlugin.py" distribution="pillow">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="1653" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="41" merged_total="325" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="8" />
+      <module_usage name="os" finding="absolute" line="10" />
+      <module_usage name="typing" finding="absolute" line="11" />
+      <module_usage name="PIL" finding="absolute" line="13" />
+      <module_usage name="PIL.Image" finding="relative" line="13" />
+      <module_usage name="PIL.ImageFile" finding="relative" line="13" />
+      <module_usage name="PIL._binary" finding="relative" line="14" />
+      <module_usage name="PIL._binary" finding="relative" line="15" />
+      <module_usage name="PIL._binary" finding="relative" line="16" />
+    </module_usages>
+  </module>
   <module name="PIL.SgiImagePlugin" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\SgiImagePlugin.py" distribution="pillow">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="810" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="159" />
@@ -1074,7 +1121,7 @@
   </module>
   <module name="PIL.SpiderImagePlugin" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\SpiderImagePlugin.py" distribution="pillow">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_tkinter" tags_used="use_tkinter" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="1036" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="1269" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="233" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -1233,6 +1280,11 @@
       <module_usage name="PIL.ImagePalette" finding="relative" line="20" />
       <module_usage name="PIL._binary" finding="relative" line="21" />
     </module_usages>
+  </module>
+  <module name="PIL._avif" kind="PythonExtensionModule" usage="import fromlist" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\Lib\site-packages\PIL\_avif.cp313-win_amd64.pyd" distribution="pillow">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
   </module>
   <module name="PIL._binary" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\PIL\_binary.py" distribution="pillow">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="88" />
@@ -1666,7 +1718,7 @@
       <module_usage name="zipfile._path.glob" finding="absolute" line="1" />
     </module_usages>
   </module>
-  <module name="__parents_main__" kind="CompiledPythonModule" usage="plugins" reason="Auto enable multiprocessing freeze support" source_path="~\repos\Nuitka-Watch\cases\Kivy\kivymd-example\KivyMDTest.py">
+  <module name="__parents_main__" kind="CompiledPythonModule" usage="plugins" reason="Auto enable multiprocessing/anyio freeze support" source_path="~\repos\Nuitka-Watch\cases\Kivy\kivymd-example\KivyMDTest.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="231" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="56" />
     <code-generation-time time="volatile" />
@@ -1775,7 +1827,7 @@
     <module_usages />
   </module>
   <module name="_compression" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\_compression.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="724" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="896" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="io" finding="absolute" line="3" />
@@ -1959,7 +2011,7 @@
     </module_usages>
   </module>
   <module name="_pyrepl.console" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\_pyrepl\console.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="28" merged_total="679" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="832" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="20" />
@@ -2036,7 +2088,7 @@
     </module_usages>
   </module>
   <module name="_pyrepl.pager" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\_pyrepl\pager.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="16" merged_total="625" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="769" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" />
@@ -2098,7 +2150,7 @@
     </module_usages>
   </module>
   <module name="_pyrepl.simple_interact" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\_pyrepl\simple_interact.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="413" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="517" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="26" />
@@ -2270,7 +2322,7 @@
     <module_usages />
   </module>
   <module name="abc" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="1129" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="1124" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_abc" finding="absolute" line="85" />
@@ -2403,7 +2455,7 @@
     </module_usages>
   </module>
   <module name="asyncio.base_subprocess" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\base_subprocess.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="32" merged_total="1188" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="29" merged_total="1175" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="1" />
@@ -2451,7 +2503,7 @@
     </module_usages>
   </module>
   <module name="asyncio.events" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\events.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="60" merged_total="1509" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="60" merged_total="1512" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="contextvars" finding="absolute" line="18" />
@@ -2706,7 +2758,7 @@
     </module_usages>
   </module>
   <module name="asyncio.subprocess" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\asyncio\subprocess.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="824" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="849" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="subprocess" finding="absolute" line="3" />
@@ -3009,7 +3061,7 @@
     </module_usages>
   </module>
   <module name="concurrent.futures._base" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\concurrent\futures\_base.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="4691" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="4690" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="6" />
@@ -3114,7 +3166,7 @@
     </module_usages>
   </module>
   <module name="csv" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\csv.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="3344" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="3409" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="66" />
@@ -3163,7 +3215,7 @@
     </module_usages>
   </module>
   <module name="ctypes._endian" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\ctypes\_endian.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="604" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="603" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="1" />
@@ -3261,7 +3313,7 @@
     </module_usages>
   </module>
   <module name="dis" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\dis.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="40" merged_total="4701" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="40" merged_total="5845" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="3" />
@@ -3301,7 +3353,6 @@
       <module_usage name="warnings" finding="absolute" line="64" />
       <module_usage name="optparse" finding="absolute" line="65" />
       <module_usage name="pathlib" finding="absolute" line="66" />
-      <module_usage name="pathlib.Path" finding="not-found" line="66" />
       <module_usage name="docutils" finding="absolute" line="68" />
       <module_usage name="docutils" finding="absolute" line="69" />
       <module_usage name="docutils.io" finding="relative" line="69" />
@@ -3540,8 +3591,6 @@
       <module_usage name="unicodedata" finding="absolute" line="18" />
       <module_usage name="warnings" finding="absolute" line="19" />
       <module_usage name="pathlib" finding="absolute" line="20" />
-      <module_usage name="pathlib.PurePath" finding="not-found" line="20" />
-      <module_usage name="pathlib.Path" finding="not-found" line="20" />
       <module_usage name="docutils" finding="absolute" line="22" />
       <module_usage name="docutils.ApplicationError" finding="not-found" line="22" />
       <module_usage name="docutils.DataError" finding="not-found" line="22" />
@@ -3554,7 +3603,7 @@
     </module_usages>
   </module>
   <module name="docutils.utils._roman_numerals" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\docutils\utils\_roman_numerals.py" distribution="docutils">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="42" merged_total="1172" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="42" merged_total="1388" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="11" />
@@ -3655,7 +3704,7 @@
     </module_usages>
   </module>
   <module name="email._policybase" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\email\_policybase.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="22" merged_total="1005" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="22" merged_total="1004" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="6" />
@@ -3687,7 +3736,7 @@
     </module_usages>
   </module>
   <module name="email.contentmanager" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\email\contentmanager.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="1246" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="1243" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="1" />
@@ -3827,7 +3876,7 @@
   </module>
   <module name="email.utils" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\email\utils.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_socket&quot;)" tags_used="has_builtin_module" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="1536" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="1533" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="25" />
@@ -4978,15 +5027,15 @@
     </module_usages>
   </module>
   <module name="filetype.utils" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\filetype\utils.py" distribution="filetype">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="19" merged_total="193" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="50" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="19" merged_total="176" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="46" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="pathlib" finding="absolute" line="5" />
     </module_usages>
   </module>
   <module name="fnmatch" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\fnmatch.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="47" merged_total="736" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="47" merged_total="923" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="12" />
@@ -5066,7 +5115,7 @@
     </module_usages>
   </module>
   <module name="getpass" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\getpass.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="760" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="947" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="contextlib" finding="absolute" line="17" />
@@ -5080,7 +5129,7 @@
     </module_usages>
   </module>
   <module name="gettext" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\gettext.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="3268" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="3272" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="operator" finding="absolute" line="49" />
@@ -5098,7 +5147,7 @@
     </module_usages>
   </module>
   <module name="glob" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\glob.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="23" merged_total="2246" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="2783" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="contextlib" finding="absolute" line="3" />
@@ -5295,16 +5344,16 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="importlib" finding="absolute" line="2" />
-      <module_usage name="_bootstrap" finding="relative" line="2" />
+      <module_usage name="importlib._bootstrap" finding="relative" line="2" />
       <module_usage name="abc" finding="absolute" line="3" />
     </module_usages>
   </module>
   <module name="importlib.abc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\importlib\abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="13" merged_total="911" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="1132" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="importlib" finding="absolute" line="2" />
-      <module_usage name="_bootstrap_external" finding="relative" line="2" />
+      <module_usage name="importlib._bootstrap_external" finding="relative" line="2" />
       <module_usage name="importlib" finding="absolute" line="3" />
       <module_usage name="importlib.machinery" finding="relative" line="3" />
       <module_usage name="_frozen_importlib" finding="absolute" line="5" />
@@ -5334,7 +5383,7 @@
     </module_usages>
   </module>
   <module name="importlib.metadata" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\importlib\metadata\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="4455" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="4458" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -5665,8 +5714,8 @@
     <module_usages />
   </module>
   <module name="kivy" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\kivy\__init__.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="28" merged_total="1347" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="332" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="1683" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="333" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="kivy_deps.angle" />
@@ -6098,7 +6147,7 @@
     <module_usages />
   </module>
   <module name="kivy.core.text.markup" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\kivy\core\text\markup.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="153" merged_total="5448" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="153" merged_total="6566" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="151" merged_total="1118" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -6242,7 +6291,7 @@
     <module_usages />
   </module>
   <module name="kivy.core.window.window_sdl2" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\kivy\core\window\window_sdl2.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="90" merged_total="3218" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="90" merged_total="3978" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="90" merged_total="760" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -6950,7 +6999,7 @@
     <module_usages />
   </module>
   <module name="kivy.lib.mtdev" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\kivy\lib\mtdev.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="716" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="882" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="166" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -7503,7 +7552,7 @@
     </module_usages>
   </module>
   <module name="kivy.uix.label" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\kivy\uix\label.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="59" merged_total="995" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="59" merged_total="1239" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="59" merged_total="244" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -7570,7 +7619,7 @@
     </module_usages>
   </module>
   <module name="kivy.uix.recycleboxlayout" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\kivy\uix\recycleboxlayout.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="27" merged_total="1631" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="2042" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="411" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -7905,7 +7954,7 @@
     </module_usages>
   </module>
   <module name="kivy.uix.textinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\kivy\uix\textinput.py" distribution="Kivy">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="198" merged_total="13653" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="198" merged_total="16332" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="197" merged_total="2679" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -8144,7 +8193,7 @@
     <module_usages />
   </module>
   <module name="kivymd.app" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\kivymd\app.py" distribution="kivymd">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="389" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="470" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="81" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -8381,7 +8430,6 @@
       <module_usage name="os" finding="absolute" line="1" />
       <module_usage name="os" finding="absolute" line="51" />
       <module_usage name="pathlib" finding="absolute" line="52" />
-      <module_usage name="pathlib.Path" finding="not-found" line="52" />
       <module_usage name="kivymd" finding="absolute" line="54" />
       <module_usage name="ntpath" finding="absolute" line="66" />
     </module_usages>
@@ -9206,7 +9254,7 @@
     </module_usages>
   </module>
   <module name="kivymd.uix.filemanager.filemanager" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\kivymd\uix\filemanager\filemanager.py" distribution="kivymd">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="46" merged_total="1839" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="46" merged_total="2291" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="46" merged_total="452" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -10814,11 +10862,11 @@
       <module_usage name="os" finding="absolute" line="6" />
       <module_usage name="sys" finding="absolute" line="7" />
       <module_usage name="multiprocessing.spawn" finding="absolute" line="24" />
-      <module_usage name="__parents_main__" finding="not-found" line="32" />
+      <module_usage name="__parents_main__" finding="fake" line="32" />
     </module_usages>
   </module>
   <module name="multiprocessing-preLoad" kind="CompiledPythonModule" usage="plugins" reason="Monkey patching &quot;multiprocessing&quot; load environment." source_path="${sys.real_prefix}\Lib\multiprocessing\multiprocessing-preLoad.py">
-    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="2" merged_total="6" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="8" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="2" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -10921,8 +10969,8 @@
       <module_usage name="queue" finding="absolute" line="12" />
     </module_usages>
   </module>
-  <module name="multiprocessing.forkserver" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\forkserver.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="2243" />
+  <module name="multiprocessing.forkserver" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\forkserver.py">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="2263" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="atexit" finding="absolute" line="1" />
@@ -10967,7 +11015,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.managers" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\managers.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="8142" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="8141" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="17" />
@@ -11080,7 +11128,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.reduction" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\reduction.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="838" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="831" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="10" />
@@ -11122,7 +11170,7 @@
   </module>
   <module name="multiprocessing.resource_tracker" kind="UncompiledPythonModule" usage="import" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\resource_tracker.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not module_mode" tags_used="module_mode" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="1581" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="1593" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="18" />
@@ -11137,7 +11185,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.shared_memory" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\shared_memory.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="34" merged_total="1433" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="1762" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="11" />
@@ -11212,8 +11260,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.util" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\util.py">
-    <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_unittest" tags_used="use_unittest" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="1852" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="1886" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="10" />
@@ -11232,6 +11279,12 @@
       <module_usage name="traceback" finding="absolute" line="294" />
       <module_usage name="_posixsubprocess" finding="not-found" line="440" />
       <module_usage name="subprocess" finding="absolute" line="441" />
+      <module_usage name="test" finding="excluded" line="465" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'multiprocessing.util' for 'test'" />
+      <module_usage name="test.support" finding="relative" line="465" />
+      <module_usage name="multiprocessing" finding="absolute" line="471" />
+      <module_usage name="multiprocessing.forkserver" finding="relative" line="471" />
+      <module_usage name="multiprocessing" finding="absolute" line="475" />
+      <module_usage name="multiprocessing.resource_tracker" finding="relative" line="475" />
     </module_usages>
   </module>
   <module name="netrc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\netrc.py">
@@ -11278,7 +11331,7 @@
     </module_usages>
   </module>
   <module name="numbers" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\numbers.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="27" merged_total="714" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="27" merged_total="711" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="33" />
@@ -11355,7 +11408,7 @@
     </module_usages>
   </module>
   <module name="pathlib._local" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\pathlib\_local.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="48" merged_total="3553" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="48" merged_total="4379" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="io" finding="absolute" line="1" />
@@ -11485,7 +11538,7 @@
     </module_usages>
   </module>
   <module name="posixpath" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\posixpath.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="2739" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="2744" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="25" />
@@ -12051,7 +12104,7 @@
     </module_usages>
   </module>
   <module name="pygments.lexers.bibtex" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pygments\lexers\bibtex.py" distribution="Pygments">
-    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="19" merged_total="189" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="19" merged_total="282" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="93" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -13764,7 +13817,7 @@
     </module_usages>
   </module>
   <module name="pygments.lexers.sql" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\pygments\lexers\sql.py" distribution="Pygments">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="18" merged_total="3833" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="18" merged_total="3832" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="631" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -14817,7 +14870,7 @@
     <module_usages />
   </module>
   <module name="re._compiler" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\re\_compiler.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="133" merged_total="5111" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="133" merged_total="6163" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_sre" finding="absolute" line="13" />
@@ -14914,7 +14967,7 @@
     <module_usages />
   </module>
   <module name="selectors" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\selectors.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="2614" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="2609" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="8" />
@@ -14941,7 +14994,7 @@
     </module_usages>
   </module>
   <module name="shutil" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\shutil.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="8298" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="8302" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="7" />
@@ -15020,7 +15073,7 @@
     </module_usages>
   </module>
   <module name="site" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\site.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="17" merged_total="3008" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="17" merged_total="3033" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="72" />
@@ -15052,7 +15105,7 @@
     </module_usages>
   </module>
   <module name="socket" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\socket.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="32" merged_total="2587" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="29" merged_total="2576" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_socket" finding="absolute" line="52" />
@@ -15068,7 +15121,7 @@
     </module_usages>
   </module>
   <module name="socketserver" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\socketserver.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="3889" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="3888" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="socket" finding="absolute" line="126" />
@@ -15196,7 +15249,7 @@
     </module_usages>
   </module>
   <module name="subprocess" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\subprocess.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="54" merged_total="11917" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="54" merged_total="11928" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="43" />
@@ -15264,7 +15317,7 @@
     </module_usages>
   </module>
   <module name="tarfile" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\tarfile.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="59" merged_total="18147" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="59" merged_total="18153" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="40" />
@@ -15306,7 +15359,7 @@
     </module_usages>
   </module>
   <module name="tempfile" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\tempfile.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="42" merged_total="2636" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="2635" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="39" />
@@ -15524,7 +15577,7 @@
     </module_usages>
   </module>
   <module name="typing" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\typing.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="15389" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="15388" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="21" />
@@ -15662,7 +15715,7 @@
     </module_usages>
   </module>
   <module name="weakref" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\weakref.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="32" merged_total="3667" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="4543" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_weakref" finding="absolute" line="12" />
@@ -15709,7 +15762,7 @@
     <module_usages />
   </module>
   <module name="win32timezone" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\win32\lib\win32timezone.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="43" merged_total="2983" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="43" merged_total="2980" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="43" merged_total="692" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -15784,7 +15837,7 @@
     </module_usages>
   </module>
   <module name="xml.dom.minidom" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\xml\dom\minidom.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="58" merged_total="8085" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="58" merged_total="9957" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="io" finding="absolute" line="18" />
@@ -15949,7 +16002,7 @@
     </module_usages>
   </module>
   <module name="zipfile" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\zipfile\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="42" merged_total="9248" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="42" merged_total="9252" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -15995,7 +16048,7 @@
     </module_usages>
   </module>
   <module name="zipfile._path" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\zipfile\_path\__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="34" merged_total="1268" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="1537" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -16123,88 +16176,96 @@
   <data_file name="kivymd\uix\textfield\textfield.kv" source="${sys.prefix}\Lib\site-packages\kivymd\uix\textfield\textfield.kv" size="11995" reason="package data directory 'uix' for 'kivymd'" tags="config,copy,data-dir-contents" />
   <data_file name="kivymd\uix\toolbar\toolbar.kv" source="${sys.prefix}\Lib\site-packages\kivymd\uix\toolbar\toolbar.kv" size="3569" reason="package data directory 'uix' for 'kivymd'" tags="config,copy,data-dir-contents" />
   <data_file name="kivymd\uix\tooltip\tooltip.kv" source="${sys.prefix}\Lib\site-packages\kivymd\uix\tooltip\tooltip.kv" size="1171" reason="package data directory 'uix' for 'kivymd'" tags="config,copy,data-dir-contents" />
-  <included_extension name="_imaging.pyd" dest_path="PIL\_imaging.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_imaging.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" />
-  <included_extension name="_imagingcms.pyd" dest_path="PIL\_imagingcms.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_imagingcms.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" />
-  <included_extension name="_imagingft.pyd" dest_path="PIL\_imagingft.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_imagingft.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" />
-  <included_extension name="_imagingmath.pyd" dest_path="PIL\_imagingmath.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_imagingmath.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" />
-  <included_extension name="_imagingtk.pyd" dest_path="PIL\_imagingtk.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_imagingtk.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" />
-  <included_extension name="_webp.pyd" dest_path="PIL\_webp.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_webp.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" />
-  <included_dll name="SDL2.dll" dest_path="SDL2.dll" source_path="${sys.prefix}\share\sdl2\bin\SDL2.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="SDL2_image.dll" dest_path="SDL2_image.dll" source_path="${sys.prefix}\share\sdl2\bin\SDL2_image.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="SDL2_mixer.dll" dest_path="SDL2_mixer.dll" source_path="${sys.prefix}\share\sdl2\bin\SDL2_mixer.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="SDL2_ttf.dll" dest_path="SDL2_ttf.dll" source_path="${sys.prefix}\share\sdl2\bin\SDL2_ttf.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_extension name="_asyncio.pyd" dest_path="_asyncio.pyd" source_path="${sys.real_prefix}\DLLs\_asyncio.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_bz2.pyd" dest_path="_bz2.pyd" source_path="${sys.real_prefix}\DLLs\_bz2.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_ctypes.pyd" dest_path="_ctypes.pyd" source_path="${sys.real_prefix}\DLLs\_ctypes.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_decimal.pyd" dest_path="_decimal.pyd" source_path="${sys.real_prefix}\DLLs\_decimal.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_hashlib.pyd" dest_path="_hashlib.pyd" source_path="${sys.real_prefix}\DLLs\_hashlib.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_lzma.pyd" dest_path="_lzma.pyd" source_path="${sys.real_prefix}\DLLs\_lzma.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_multiprocessing.pyd" dest_path="_multiprocessing.pyd" source_path="${sys.real_prefix}\DLLs\_multiprocessing.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_overlapped.pyd" dest_path="_overlapped.pyd" source_path="${sys.real_prefix}\DLLs\_overlapped.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_queue.pyd" dest_path="_queue.pyd" source_path="${sys.real_prefix}\DLLs\_queue.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_socket.pyd" dest_path="_socket.pyd" source_path="${sys.real_prefix}\DLLs\_socket.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_ssl.pyd" dest_path="_ssl.pyd" source_path="${sys.real_prefix}\DLLs\_ssl.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="_wmi.pyd" dest_path="_wmi.pyd" source_path="${sys.real_prefix}\DLLs\_wmi.pyd" package="" ignored="no" reason="used extension module" />
-  <included_dll name="glew32.dll" dest_path="glew32.dll" source_path="${sys.prefix}\share\glew\bin\glew32.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_extension name="_clock.pyd" dest_path="kivy\_clock.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\_clock.cp313-win_amd64.pyd" package="kivy" ignored="no" reason="used extension module" />
-  <included_extension name="_event.pyd" dest_path="kivy\_event.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\_event.cp313-win_amd64.pyd" package="kivy" ignored="no" reason="used extension module" />
-  <included_extension name="_metrics.pyd" dest_path="kivy\_metrics.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\_metrics.cp313-win_amd64.pyd" package="kivy" ignored="no" reason="used extension module" />
-  <included_extension name="_img_sdl2.pyd" dest_path="kivy\core\image\_img_sdl2.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\core\image\_img_sdl2.cp313-win_amd64.pyd" package="kivy.core.image" ignored="no" reason="used extension module" />
-  <included_extension name="_text_sdl2.pyd" dest_path="kivy\core\text\_text_sdl2.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\core\text\_text_sdl2.cp313-win_amd64.pyd" package="kivy.core.text" ignored="no" reason="used extension module" />
-  <included_extension name="text_layout.pyd" dest_path="kivy\core\text\text_layout.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\core\text\text_layout.cp313-win_amd64.pyd" package="kivy.core.text" ignored="no" reason="used extension module" />
-  <included_extension name="_window_sdl2.pyd" dest_path="kivy\core\window\_window_sdl2.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\core\window\_window_sdl2.cp313-win_amd64.pyd" package="kivy.core.window" ignored="no" reason="used extension module" />
-  <included_extension name="window_info.pyd" dest_path="kivy\core\window\window_info.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\core\window\window_info.cp313-win_amd64.pyd" package="kivy.core.window" ignored="no" reason="used extension module" />
-  <included_extension name="boxshadow.pyd" dest_path="kivy\graphics\boxshadow.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\boxshadow.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="buffer.pyd" dest_path="kivy\graphics\buffer.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\buffer.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="cgl.pyd" dest_path="kivy\graphics\cgl.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\cgl.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="cgl_gl.pyd" dest_path="kivy\graphics\cgl_backend\cgl_gl.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\cgl_backend\cgl_gl.cp313-win_amd64.pyd" package="kivy.graphics.cgl_backend" ignored="no" reason="used extension module" />
-  <included_extension name="cgl_glew.pyd" dest_path="kivy\graphics\cgl_backend\cgl_glew.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\cgl_backend\cgl_glew.cp313-win_amd64.pyd" package="kivy.graphics.cgl_backend" ignored="no" reason="used extension module" />
-  <included_extension name="cgl_sdl2.pyd" dest_path="kivy\graphics\cgl_backend\cgl_sdl2.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\cgl_backend\cgl_sdl2.cp313-win_amd64.pyd" package="kivy.graphics.cgl_backend" ignored="no" reason="used extension module" />
-  <included_extension name="compiler.pyd" dest_path="kivy\graphics\compiler.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\compiler.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="context.pyd" dest_path="kivy\graphics\context.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\context.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="context_instructions.pyd" dest_path="kivy\graphics\context_instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\context_instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="fbo.pyd" dest_path="kivy\graphics\fbo.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\fbo.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="gl_instructions.pyd" dest_path="kivy\graphics\gl_instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\gl_instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="instructions.pyd" dest_path="kivy\graphics\instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="opengl.pyd" dest_path="kivy\graphics\opengl.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\opengl.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="opengl_utils.pyd" dest_path="kivy\graphics\opengl_utils.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\opengl_utils.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="scissor_instructions.pyd" dest_path="kivy\graphics\scissor_instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\scissor_instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="shader.pyd" dest_path="kivy\graphics\shader.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\shader.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="stencil_instructions.pyd" dest_path="kivy\graphics\stencil_instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\stencil_instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="texture.pyd" dest_path="kivy\graphics\texture.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\texture.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="transformation.pyd" dest_path="kivy\graphics\transformation.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\transformation.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="vbo.pyd" dest_path="kivy\graphics\vbo.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\vbo.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="vertex.pyd" dest_path="kivy\graphics\vertex.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\vertex.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="vertex_instructions.pyd" dest_path="kivy\graphics\vertex_instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\vertex_instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" />
-  <included_extension name="_gstplayer.pyd" dest_path="kivy\lib\gstplayer\_gstplayer.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\lib\gstplayer\_gstplayer.cp313-win_amd64.pyd" package="kivy.lib.gstplayer" ignored="no" reason="used extension module" />
-  <included_extension name="properties.pyd" dest_path="kivy\properties.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\properties.cp313-win_amd64.pyd" package="kivy" ignored="no" reason="used extension module" />
-  <included_extension name="weakproxy.pyd" dest_path="kivy\weakproxy.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\weakproxy.cp313-win_amd64.pyd" package="kivy" ignored="no" reason="used extension module" />
-  <included_dll name="libavif-16.dll" dest_path="libavif-16.dll" source_path="${sys.prefix}\share\sdl2\bin\libavif-16.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="libcrypto-3.dll" dest_path="libcrypto-3.dll" source_path="${sys.prefix}\scripts\libcrypto-3.dll" package="" ignored="no" reason="Used by '_hashlib.pyd'" />
-  <included_dll name="libffi-8.dll" dest_path="libffi-8.dll" source_path="${sys.prefix}\scripts\libffi-8.dll" package="" ignored="no" reason="Used by '_ctypes.pyd'" />
-  <included_dll name="libgme.dll" dest_path="libgme.dll" source_path="${sys.prefix}\share\sdl2\bin\libgme.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="libogg-0.dll" dest_path="libogg-0.dll" source_path="${sys.prefix}\share\sdl2\bin\libogg-0.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="libopus-0.dll" dest_path="libopus-0.dll" source_path="${sys.prefix}\share\sdl2\bin\libopus-0.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="libopusfile-0.dll" dest_path="libopusfile-0.dll" source_path="${sys.prefix}\share\sdl2\bin\libopusfile-0.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="libssl-3.dll" dest_path="libssl-3.dll" source_path="${sys.prefix}\scripts\libssl-3.dll" package="" ignored="no" reason="Used by '_ssl.pyd'" />
-  <included_dll name="libtiff-5.dll" dest_path="libtiff-5.dll" source_path="${sys.prefix}\share\sdl2\bin\libtiff-5.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="libwavpack-1.dll" dest_path="libwavpack-1.dll" source_path="${sys.prefix}\share\sdl2\bin\libwavpack-1.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="libwebp-7.dll" dest_path="libwebp-7.dll" source_path="${sys.prefix}\share\sdl2\bin\libwebp-7.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="libwebpdemux-2.dll" dest_path="libwebpdemux-2.dll" source_path="${sys.prefix}\share\sdl2\bin\libwebpdemux-2.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_dll name="libxmp.dll" dest_path="libxmp.dll" source_path="${sys.prefix}\share\sdl2\bin\libxmp.dll" package="kivy" ignored="no" reason="needed by 'kivy'" />
-  <included_extension name="pyexpat.pyd" dest_path="pyexpat.pyd" source_path="${sys.real_prefix}\DLLs\pyexpat.pyd" package="" ignored="no" reason="used extension module" />
-  <included_dll name="python313.dll" dest_path="python313.dll" source_path="${sys.prefix}\scripts\python313.dll" package="PIL" ignored="no" reason="Used by 'PIL\_imaging.pyd'" />
-  <included_dll name="pythoncom313.dll" dest_path="pythoncom313.dll" source_path="${sys.prefix}\Lib\site-packages\pywin32_system32\pythoncom313.dll" package="" ignored="no" reason="needed by 'win32api'" />
-  <included_dll name="pywintypes313.dll" dest_path="pywintypes313.dll" source_path="${sys.prefix}\Lib\site-packages\pywin32_system32\pywintypes313.dll" package="" ignored="no" reason="needed by 'win32api'" />
-  <included_extension name="select.pyd" dest_path="select.pyd" source_path="${sys.real_prefix}\DLLs\select.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="unicodedata.pyd" dest_path="unicodedata.pyd" source_path="${sys.real_prefix}\DLLs\unicodedata.pyd" package="" ignored="no" reason="used extension module" />
-  <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.prefix}\scripts\vcruntime140.dll" package="PIL" ignored="no" reason="Used by 'PIL\_imaging.pyd'" />
-  <included_dll name="vcruntime140_1.dll" dest_path="vcruntime140_1.dll" source_path="${sys.prefix}\scripts\vcruntime140_1.dll" package="" ignored="no" reason="Used by '_wmi.pyd'" />
-  <included_extension name="win32api.pyd" dest_path="win32api.pyd" source_path="${sys.prefix}\Lib\site-packages\win32\win32api.pyd" package="" ignored="no" reason="used extension module" />
-  <included_extension name="win32file.pyd" dest_path="win32file.pyd" source_path="${sys.prefix}\Lib\site-packages\win32\win32file.pyd" package="" ignored="no" reason="used extension module" />
+  <included_extension name="_avif.pyd" dest_path="PIL\_avif.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_avif.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_imaging.pyd" dest_path="PIL\_imaging.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_imaging.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_imagingcms.pyd" dest_path="PIL\_imagingcms.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_imagingcms.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_imagingft.pyd" dest_path="PIL\_imagingft.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_imagingft.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_imagingmath.pyd" dest_path="PIL\_imagingmath.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_imagingmath.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_imagingtk.pyd" dest_path="PIL\_imagingtk.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_imagingtk.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_webp.pyd" dest_path="PIL\_webp.pyd" source_path="${sys.prefix}\Lib\site-packages\PIL\_webp.cp313-win_amd64.pyd" package="PIL" ignored="no" reason="used extension module" tags="copy" />
+  <included_dll name="SDL2.dll" dest_path="SDL2.dll" source_path="${sys.prefix}\share\sdl2\bin\SDL2.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="SDL2_image.dll" dest_path="SDL2_image.dll" source_path="${sys.prefix}\share\sdl2\bin\SDL2_image.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="SDL2_mixer.dll" dest_path="SDL2_mixer.dll" source_path="${sys.prefix}\share\sdl2\bin\SDL2_mixer.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="SDL2_ttf.dll" dest_path="SDL2_ttf.dll" source_path="${sys.prefix}\share\sdl2\bin\SDL2_ttf.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_extension name="_asyncio.pyd" dest_path="_asyncio.pyd" source_path="${sys.real_prefix}\DLLs\_asyncio.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_bz2.pyd" dest_path="_bz2.pyd" source_path="${sys.real_prefix}\DLLs\_bz2.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_ctypes.pyd" dest_path="_ctypes.pyd" source_path="${sys.real_prefix}\DLLs\_ctypes.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_decimal.pyd" dest_path="_decimal.pyd" source_path="${sys.real_prefix}\DLLs\_decimal.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_hashlib.pyd" dest_path="_hashlib.pyd" source_path="${sys.real_prefix}\DLLs\_hashlib.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_lzma.pyd" dest_path="_lzma.pyd" source_path="${sys.real_prefix}\DLLs\_lzma.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_multiprocessing.pyd" dest_path="_multiprocessing.pyd" source_path="${sys.real_prefix}\DLLs\_multiprocessing.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_overlapped.pyd" dest_path="_overlapped.pyd" source_path="${sys.real_prefix}\DLLs\_overlapped.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_queue.pyd" dest_path="_queue.pyd" source_path="${sys.real_prefix}\DLLs\_queue.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_socket.pyd" dest_path="_socket.pyd" source_path="${sys.real_prefix}\DLLs\_socket.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_ssl.pyd" dest_path="_ssl.pyd" source_path="${sys.real_prefix}\DLLs\_ssl.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_wmi.pyd" dest_path="_wmi.pyd" source_path="${sys.real_prefix}\DLLs\_wmi.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_dll name="glew32.dll" dest_path="glew32.dll" source_path="${sys.prefix}\share\glew\bin\glew32.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_extension name="_clock.pyd" dest_path="kivy\_clock.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\_clock.cp313-win_amd64.pyd" package="kivy" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_event.pyd" dest_path="kivy\_event.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\_event.cp313-win_amd64.pyd" package="kivy" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_metrics.pyd" dest_path="kivy\_metrics.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\_metrics.cp313-win_amd64.pyd" package="kivy" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_img_sdl2.pyd" dest_path="kivy\core\image\_img_sdl2.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\core\image\_img_sdl2.cp313-win_amd64.pyd" package="kivy.core.image" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_text_sdl2.pyd" dest_path="kivy\core\text\_text_sdl2.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\core\text\_text_sdl2.cp313-win_amd64.pyd" package="kivy.core.text" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="text_layout.pyd" dest_path="kivy\core\text\text_layout.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\core\text\text_layout.cp313-win_amd64.pyd" package="kivy.core.text" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_window_sdl2.pyd" dest_path="kivy\core\window\_window_sdl2.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\core\window\_window_sdl2.cp313-win_amd64.pyd" package="kivy.core.window" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="window_info.pyd" dest_path="kivy\core\window\window_info.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\core\window\window_info.cp313-win_amd64.pyd" package="kivy.core.window" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="boxshadow.pyd" dest_path="kivy\graphics\boxshadow.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\boxshadow.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="buffer.pyd" dest_path="kivy\graphics\buffer.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\buffer.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="cgl.pyd" dest_path="kivy\graphics\cgl.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\cgl.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="cgl_gl.pyd" dest_path="kivy\graphics\cgl_backend\cgl_gl.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\cgl_backend\cgl_gl.cp313-win_amd64.pyd" package="kivy.graphics.cgl_backend" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="cgl_glew.pyd" dest_path="kivy\graphics\cgl_backend\cgl_glew.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\cgl_backend\cgl_glew.cp313-win_amd64.pyd" package="kivy.graphics.cgl_backend" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="cgl_sdl2.pyd" dest_path="kivy\graphics\cgl_backend\cgl_sdl2.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\cgl_backend\cgl_sdl2.cp313-win_amd64.pyd" package="kivy.graphics.cgl_backend" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="compiler.pyd" dest_path="kivy\graphics\compiler.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\compiler.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="context.pyd" dest_path="kivy\graphics\context.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\context.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="context_instructions.pyd" dest_path="kivy\graphics\context_instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\context_instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="fbo.pyd" dest_path="kivy\graphics\fbo.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\fbo.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="gl_instructions.pyd" dest_path="kivy\graphics\gl_instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\gl_instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="instructions.pyd" dest_path="kivy\graphics\instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="opengl.pyd" dest_path="kivy\graphics\opengl.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\opengl.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="opengl_utils.pyd" dest_path="kivy\graphics\opengl_utils.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\opengl_utils.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="scissor_instructions.pyd" dest_path="kivy\graphics\scissor_instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\scissor_instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="shader.pyd" dest_path="kivy\graphics\shader.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\shader.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="stencil_instructions.pyd" dest_path="kivy\graphics\stencil_instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\stencil_instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="texture.pyd" dest_path="kivy\graphics\texture.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\texture.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="transformation.pyd" dest_path="kivy\graphics\transformation.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\transformation.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="vbo.pyd" dest_path="kivy\graphics\vbo.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\vbo.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="vertex.pyd" dest_path="kivy\graphics\vertex.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\vertex.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="vertex_instructions.pyd" dest_path="kivy\graphics\vertex_instructions.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\graphics\vertex_instructions.cp313-win_amd64.pyd" package="kivy.graphics" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_gstplayer.pyd" dest_path="kivy\lib\gstplayer\_gstplayer.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\lib\gstplayer\_gstplayer.cp313-win_amd64.pyd" package="kivy.lib.gstplayer" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="properties.pyd" dest_path="kivy\properties.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\properties.cp313-win_amd64.pyd" package="kivy" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="weakproxy.pyd" dest_path="kivy\weakproxy.pyd" source_path="${sys.prefix}\Lib\site-packages\kivy\weakproxy.cp313-win_amd64.pyd" package="kivy" ignored="no" reason="used extension module" tags="copy" />
+  <included_dll name="libavif-16.dll" dest_path="libavif-16.dll" source_path="${sys.prefix}\share\sdl2\bin\libavif-16.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="libcrypto-3.dll" dest_path="libcrypto-3.dll" source_path="${sys.prefix}\scripts\libcrypto-3.dll" package="" ignored="no" reason="Used by '_hashlib.pyd'" tags="copy" />
+  <included_dll name="libffi-8.dll" dest_path="libffi-8.dll" source_path="${sys.prefix}\scripts\libffi-8.dll" package="" ignored="no" reason="Used by '_ctypes.pyd'" tags="copy" />
+  <included_dll name="libgme.dll" dest_path="libgme.dll" source_path="${sys.prefix}\share\sdl2\bin\libgme.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="libogg-0.dll" dest_path="libogg-0.dll" source_path="${sys.prefix}\share\sdl2\bin\libogg-0.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="libopus-0.dll" dest_path="libopus-0.dll" source_path="${sys.prefix}\share\sdl2\bin\libopus-0.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="libopusfile-0.dll" dest_path="libopusfile-0.dll" source_path="${sys.prefix}\share\sdl2\bin\libopusfile-0.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="libssl-3.dll" dest_path="libssl-3.dll" source_path="${sys.prefix}\scripts\libssl-3.dll" package="" ignored="no" reason="Used by '_ssl.pyd'" tags="copy" />
+  <included_dll name="libtiff-5.dll" dest_path="libtiff-5.dll" source_path="${sys.prefix}\share\sdl2\bin\libtiff-5.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="libwavpack-1.dll" dest_path="libwavpack-1.dll" source_path="${sys.prefix}\share\sdl2\bin\libwavpack-1.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="libwebp-7.dll" dest_path="libwebp-7.dll" source_path="${sys.prefix}\share\sdl2\bin\libwebp-7.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="libwebpdemux-2.dll" dest_path="libwebpdemux-2.dll" source_path="${sys.prefix}\share\sdl2\bin\libwebpdemux-2.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_dll name="libxmp.dll" dest_path="libxmp.dll" source_path="${sys.prefix}\share\sdl2\bin\libxmp.dll" package="kivy" ignored="no" reason="needed by 'kivy'" tags="copy" />
+  <included_extension name="pyexpat.pyd" dest_path="pyexpat.pyd" source_path="${sys.real_prefix}\DLLs\pyexpat.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_dll name="python313.dll" dest_path="python313.dll" source_path="${sys.prefix}\scripts\python313.dll" package="PIL" ignored="no" reason="Used by 'PIL\_avif.pyd'" tags="copy" />
+  <included_dll name="pythoncom313.dll" dest_path="pythoncom313.dll" source_path="${sys.prefix}\Lib\site-packages\pywin32_system32\pythoncom313.dll" package="" ignored="no" reason="needed by 'win32api'" tags="copy" />
+  <included_dll name="pywintypes313.dll" dest_path="pywintypes313.dll" source_path="${sys.prefix}\Lib\site-packages\pywin32_system32\pywintypes313.dll" package="" ignored="no" reason="needed by 'win32api'" tags="copy" />
+  <included_extension name="select.pyd" dest_path="select.pyd" source_path="${sys.real_prefix}\DLLs\select.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="unicodedata.pyd" dest_path="unicodedata.pyd" source_path="${sys.real_prefix}\DLLs\unicodedata.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.prefix}\scripts\vcruntime140.dll" package="PIL" ignored="no" reason="Used by 'PIL\_avif.pyd'" tags="copy" />
+  <included_dll name="vcruntime140_1.dll" dest_path="vcruntime140_1.dll" source_path="${sys.prefix}\scripts\vcruntime140_1.dll" package="" ignored="no" reason="Used by '_wmi.pyd'" tags="copy" />
+  <included_extension name="win32api.pyd" dest_path="win32api.pyd" source_path="${sys.prefix}\Lib\site-packages\win32\win32api.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="win32file.pyd" dest_path="win32file.pyd" source_path="${sys.prefix}\Lib\site-packages\win32\win32file.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
+  <performance-totals>
+    <optimization-time pass="1" time="volatile" module_count="1234" />
+    <optimization-time pass="2" time="volatile" module_count="1234" />
+    <optimization-time pass="all" time="volatile" module_count="1234" />
+    <code-generation-time time="volatile" module_count="718" />
+  </performance-totals>
+  <python_binary filename="KivyMDTest.exe" backend_resource_mode="coff_obj" reproducible="no" size="volatile" />
   <command_line>
     <option value="--mode=standalone" />
-    <option value="C:\Users\kayha\repos\Nuitka-Watch\cases\Kivy\kivymd-example\KivyMDTest.py" />
+    <option value="..\..\..\KivyMDTest.py" />
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
@@ -16215,7 +16276,6 @@
     <plugin name="data-files" user_enabled="no" />
     <plugin name="delvewheel" user_enabled="no" />
     <plugin name="dll-files" user_enabled="no" />
-    <plugin name="eventlet" user_enabled="no" />
     <plugin name="gevent" user_enabled="no" />
     <plugin name="gi" user_enabled="no" />
     <plugin name="glfw" user_enabled="no" />
@@ -16229,6 +16289,7 @@
     <plugin name="playwright" user_enabled="no" />
     <plugin name="pywebview" user_enabled="no" />
     <plugin name="spacy" user_enabled="no" />
+    <plugin name="torch-jit" user_enabled="no" />
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
