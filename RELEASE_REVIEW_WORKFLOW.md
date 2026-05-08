@@ -7,7 +7,9 @@ Nuitka release against the upstream changelog.
 
 Summarize local result changes by kind, decide which changes are expected
 from the Nuitka release notes, and call out anything that looks like
-fixture drift, dependency bloat, or a possible regression.
+fixture drift, dependency bloat, or a possible regression. For bundle
+growth findings, identify the exact trigger module and import chain, not
+just the final DLLs.
 
 ## Inputs
 
@@ -93,7 +95,11 @@ fixture drift, dependency bloat, or a possible regression.
 
    - which added module or DLL is new
    - which package namespace it comes from
+   - which concrete module first crosses into the unexpected namespace
+   - the import chain from the case-relevant package to that module
    - which `reason=` or `module_usage` path explains why it was pulled
+   - whether a plugin or control-tag condition explains why the path was
+     active
    - whether the Nuitka changelog explicitly justifies the growth
 
    Example regression pattern:
@@ -101,8 +107,33 @@ fixture drift, dependency bloat, or a possible regression.
    - a Kivy case starts bundling Pillow's `PIL._tkinter_finder`,
      `_tkinter.so`, and X11/Tk libraries even though the case does not
      exercise Tk directly
+   - the concrete chain is
+     `PIL.SpiderImagePlugin -> PIL.ImageTk -> tkinter -> _tkinter`
 
-6. Match observed changes to the Nuitka changelog.
+6. If a suspected bloat regression has a candidate fix, validate it with
+   one real watch case.
+
+   Prefer one representative Python version rather than refreshing every
+   platform immediately.
+
+   Validation flow:
+
+   - preserve the current watched result first, at least
+     `compilation-report.xml`, and optionally a dist-file listing
+   - if helpful, do a quick direct compile first to confirm the root
+     cause, but treat the real watch case as the source of truth
+   - run the actual `nuitka-watch` case against the candidate compiler
+     checkout, e.g. `../Py2C`, using `--no-pipenv-update` unless package
+     churn is part of the question
+   - compare the regenerated watch report and dist payload against the
+     preserved copy
+   - if the fix is gated on a plugin or control tag, verify both paths
+     when practical: default mode should drop the bloat, and the enabled
+     mode should still keep the feature working
+   - restore the preserved result afterward unless the refreshed result
+     is intentionally meant to stay in the checkout
+
+7. Match observed changes to the Nuitka changelog.
 
    Useful categories:
 
@@ -113,7 +144,7 @@ fixture drift, dependency bloat, or a possible regression.
    - standalone dependency expansion that needs justification
    - runtime-output drift from updated third-party packages
 
-7. Review untracked result trees for new cases.
+8. Review untracked result trees for new cases.
 
    Verify:
 
@@ -122,7 +153,7 @@ fixture drift, dependency bloat, or a possible regression.
    - `compiled-stderr.txt` is empty unless failure is expected
    - `compiled-stdout.txt` looks plausible for the case
 
-8. Write the review summary by kind.
+9. Write the review summary by kind.
 
    The summary should separate:
 
@@ -146,10 +177,19 @@ fixture drift, dependency bloat, or a possible regression.
 - The highest-signal regression class in result refreshes is unexpected
   bundle growth: new DLLs, extensions, or package namespaces that do not
   match the case's direct imports.
-- When bundle growth appears, prefer tracing the exact `reason=` and
-  package namespace over relying on line-count size alone.
+- When bundle growth appears, prefer tracing the exact `reason=`,
+  trigger module, and package namespace over relying on line-count size
+  alone.
+- An excluded `module_usage` entry can be evidence that an anti-bloat
+  rule worked; only treat it as remaining bloat if the module itself or
+  its runtime payload is still present.
+- If a suspicious library remains after a fix, verify which module uses
+  it before treating it as unresolved. A leftover X11 library can come
+  from another extension module and not from the original Tk path.
 - Treat package-driven transitive pull-ins separately from benign root
   metadata churn.
+- For fix validation, prefer a real watch-case rebuild over an ad-hoc
+  compile before concluding that the checked-in result is improved.
 
 ## Expected Output
 
@@ -159,6 +199,7 @@ Produce a concise review that answers:
 - Which changes align with the Nuitka changelog?
 - Which changes are harmless auto-generated refresh noise?
 - Which changes indicate new dependency bloat or transitive pull-ins?
+- What is the exact trigger module/import chain for each bloat finding?
 - Which changes need follow-up, if any?
 
 ## Optional Follow-Up
