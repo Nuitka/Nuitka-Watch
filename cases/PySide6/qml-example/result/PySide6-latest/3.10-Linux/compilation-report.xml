@@ -487,6 +487,11 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
+  <module name="_csv" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_csv.cpython-310-x86_64-linux-gnu.so">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="_datetime" kind="PythonExtensionModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_datetime.cpython-310-x86_64-linux-gnu.so">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
@@ -964,6 +969,16 @@
       <module_usage name="random" finding="absolute" line="15" />
       <module_usage name="collections" finding="absolute" line="16" />
       <module_usage name="collections.namedtuple" finding="not-found" line="16" />
+    </module_usages>
+  </module>
+  <module name="csv" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/csv.py">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="3186" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="re" finding="absolute" line="6" />
+      <module_usage name="_csv" finding="absolute" line="7" />
+      <module_usage name="_csv" finding="absolute" line="12" />
+      <module_usage name="io" finding="absolute" line="14" />
     </module_usages>
   </module>
   <module name="dataclasses" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/dataclasses.py">
@@ -6114,6 +6129,7 @@
   <included_extension name="_codecs_kr.so" dest_path="_codecs_kr.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_codecs_kr.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" tags="copy" />
   <included_extension name="_codecs_tw.so" dest_path="_codecs_tw.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_codecs_tw.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" tags="copy" />
   <included_extension name="_contextvars.so" dest_path="_contextvars.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_csv.so" dest_path="_csv.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_csv.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_datetime.so" dest_path="_datetime.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_datetime.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_decimal.so" dest_path="_decimal.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_decimal.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_hashlib.so" dest_path="_hashlib.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_hashlib.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
@@ -14181,9 +14197,9 @@
   <excluded_dll name="/usr/lib/x86_64-linux-gnu/libgpg-error.so.0" used_by="PySide6/QtWidgets.so" reason="no outside dependencies allowed for 'PySide6.QtWidgets'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="shiboken6/Shiboken.so" reason="no outside dependencies allowed for 'shiboken6.Shiboken'" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="327" />
-    <optimization-time pass="2" time="volatile" module_count="327" />
-    <optimization-time pass="all" time="volatile" module_count="327" />
+    <optimization-time pass="1" time="volatile" module_count="329" />
+    <optimization-time pass="2" time="volatile" module_count="329" />
+    <optimization-time pass="all" time="volatile" module_count="329" />
     <code-generation-time time="volatile" module_count="7" />
   </performance-totals>
   <python_binary filename="PySideQmlPolarchartTest.bin" backend_resource_mode="incbin" reproducible="yes" size="volatile" />
