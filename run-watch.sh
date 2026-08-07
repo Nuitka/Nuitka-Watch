@@ -85,12 +85,12 @@ fi
 
 if [ "$OS" = "Darwin" ]
 then
-    declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12")
+    declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12" "3.14")
 elif [ "$OS" = "Linux" ]
 then
-    declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12" "3.13")
+    declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12" "3.13" "3.14")
 else
-    declare -a PYTHON_VERSIONS=("3.10" "3.12" "3.13")
+    declare -a PYTHON_VERSIONS=("3.10" "3.12" "3.13" "3.14")
 fi
 
 echo "Doing Python versions $PYTHON_VERSIONS"
