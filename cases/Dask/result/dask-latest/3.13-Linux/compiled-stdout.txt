@@ -6,7 +6,7 @@ array([[0.5488135 , 0.71518937, 0.60276338],
        [0.43758721, 0.891773  , 0.96366276],
        [0.38344152, 0.79172504, 0.52889492]])
 Coordinates:
-  * time     (time) datetime64[ns] 32B 2000-01-01 2000-01-02 ... 2000-01-04
+  * time     (time) datetime64[us] 32B 2000-01-01 2000-01-02 ... 2000-01-04
   * space    (space) <U2 24B 'IA' 'IL' 'IN'
                         name    id         x         y
 timestamp                                             
@@ -15,10 +15,10 @@ timestamp
 2000-01-01 00:00:02   Yvonne   962  0.576349 -0.480453
 2000-01-01 00:00:03  Charlie   939 -0.239794  0.315803
 2000-01-01 00:00:04   Ursula  1013 -0.977031 -0.729349
-name    string[pyarrow]
-id                int64
-x               float64
-y               float64
+name     string
+id        int64
+x       float64
+y       float64
 dtype: object
                        name    id     x     y
 timestamp                                    
@@ -30,7 +30,7 @@ npartitions=1
     float64
         ...
 Dask Name: getitem, 8 expressions
-Expr=(((Filter(frame=ArrowStringConversion(frame=Timeseries(1e9a071)), predicate=ArrowStringConversion(frame=Timeseries(1e9a071))['y'] > 0))[['name', 'x']]).std(ddof=1, numeric_only=False, split_out=None, observed=False))['x']
+Expr=(((Filter(frame=ArrowStringConversion(frame=Timeseries(1e9a071)), predicate=ArrowStringConversion(frame=Timeseries(1e9a071))['y'] > 0))[['name', 'x']]).std(ddof=1, numeric_only=False, split_out=None, observed=True))['x']
 name
 Alice      0.58
 Bob        0.58
