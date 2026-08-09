@@ -1,4 +1,5 @@
 # nuitka-project: --standalone
+# nuitka-project: --experimental=deferred-annotations
 import os
 
 import dulwich.repo
