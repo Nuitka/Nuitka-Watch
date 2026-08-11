@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.2rc3" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.2rc4" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment c_compiler="MSVC" the_cc_name="cl" the_compiler="cl" />
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="58" />
@@ -903,7 +903,7 @@
     </module_usages>
   </module>
   <module name="anyio._core._fileio" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\anyio\_core\_fileio.py" distribution="anyio">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="86" merged_total="2010" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="86" merged_total="2013" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="26" merged_total="348" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -2296,7 +2296,7 @@
     </module_usages>
   </module>
   <module name="click.core" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\click\core.py" distribution="click">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="36" merged_total="10851" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="36" merged_total="10848" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="2110" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -9956,7 +9956,7 @@
       <module_usage name="httpx._transports" finding="relative" line="10" />
       <module_usage name="httpx._types" finding="relative" line="11" />
       <module_usage name="httpx._urls" finding="relative" line="12" />
-      <module_usage name="httpx._main" finding="relative" line="15" />
+      <module_usage name="httpx._main" finding="excluded" line="15" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'httpx' for 'httpx._main'" />
       <module_usage name="sys" finding="absolute" line="19" />
     </module_usages>
   </module>
@@ -10094,34 +10094,6 @@
       <module_usage name="__future__" finding="absolute" line="34" />
       <module_usage name="contextlib" finding="absolute" line="36" />
       <module_usage name="typing" finding="absolute" line="37" />
-    </module_usages>
-  </module>
-  <module name="httpx._main" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\httpx\_main.py" distribution="httpx">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="1681" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="338" />
-    <code-generation-time time="volatile" />
-    <distribution-usages>
-      <distribution-usage name="click" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="functools" finding="absolute" line="3" />
-      <module_usage name="json" finding="absolute" line="4" />
-      <module_usage name="sys" finding="absolute" line="5" />
-      <module_usage name="typing" finding="absolute" line="6" />
-      <module_usage name="click" finding="absolute" line="8" />
-      <module_usage name="pygments.lexers" finding="not-found" line="9" />
-      <module_usage name="pygments.util" finding="not-found" line="10" />
-      <module_usage name="rich.console" finding="not-found" line="11" />
-      <module_usage name="rich.markup" finding="not-found" line="12" />
-      <module_usage name="rich.progress" finding="not-found" line="13" />
-      <module_usage name="rich.syntax" finding="not-found" line="14" />
-      <module_usage name="rich.table" finding="not-found" line="15" />
-      <module_usage name="httpx._client" finding="relative" line="17" />
-      <module_usage name="httpx._exceptions" finding="relative" line="18" />
-      <module_usage name="httpx._models" finding="relative" line="19" />
-      <module_usage name="httpx._status_codes" finding="relative" line="20" />
-      <module_usage name="functools" finding="absolute" line="492" />
     </module_usages>
   </module>
   <module name="httpx._models" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\httpx\_models.py" distribution="httpx">
@@ -11075,7 +11047,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.context" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\context.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="1821" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="41" merged_total="1818" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -11379,7 +11351,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.spawn" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\spawn.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="623" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="570" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="11" />
@@ -11425,7 +11397,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.util" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}\Lib\multiprocessing\util.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="1791" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="1788" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="10" />
@@ -17455,10 +17427,10 @@
   <included_extension name="speedups.pyd" dest_path="websockets\speedups.pyd" source_path="${sys.prefix}\Lib\site-packages\websockets\speedups.cp312-win_amd64.pyd" package="websockets" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_yaml.pyd" dest_path="yaml\_yaml.pyd" source_path="${sys.prefix}\Lib\site-packages\yaml\_yaml.cp312-win_amd64.pyd" package="yaml" ignored="no" reason="used extension module" tags="copy" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="1134" />
-    <optimization-time pass="2" time="volatile" module_count="1134" />
-    <optimization-time pass="all" time="volatile" module_count="1134" />
-    <code-generation-time time="volatile" module_count="704" />
+    <optimization-time pass="1" time="volatile" module_count="1133" />
+    <optimization-time pass="2" time="volatile" module_count="1133" />
+    <optimization-time pass="all" time="volatile" module_count="1133" />
+    <code-generation-time time="volatile" module_count="703" />
   </performance-totals>
   <python_binary filename="FletTest.exe" backend_resource_mode="coff_obj" reproducible="no" size="volatile" />
   <command_line>
