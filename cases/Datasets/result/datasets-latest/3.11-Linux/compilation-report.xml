@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.2rc3" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.2rc5" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment c_compiler="gcc" the_cc_name="gcc" the_compiler="gcc" />
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="58" />
@@ -19,8 +19,8 @@
       <distribution-usage name="datasets" />
     </distribution-usages>
     <module_usages>
-      <module_usage name="datasets" finding="absolute" line="3" />
-      <module_usage name="datasets.Dataset" finding="not-found" line="3" />
+      <module_usage name="datasets" finding="absolute" line="4" />
+      <module_usage name="datasets.Dataset" finding="not-found" line="4" />
       <module_usage name="_codecs_cn" finding="absolute" line="1" />
       <module_usage name="_codecs_hk" finding="absolute" line="1" />
       <module_usage name="_codecs_iso2022" finding="absolute" line="1" />
@@ -319,11 +319,11 @@
       <distribution-usage name="datasets" />
     </distribution-usages>
     <module_usages>
-      <module_usage name="datasets" finding="absolute" line="3" />
-      <module_usage name="datasets.Dataset" finding="not-found" line="3" />
-      <module_usage name="sys" finding="absolute" line="7" />
-      <module_usage name="builtins" finding="absolute" line="8" />
-      <module_usage name="multiprocessing.spawn" finding="absolute" line="9" />
+      <module_usage name="datasets" finding="absolute" line="4" />
+      <module_usage name="datasets.Dataset" finding="not-found" line="4" />
+      <module_usage name="sys" finding="absolute" line="8" />
+      <module_usage name="builtins" finding="absolute" line="9" />
+      <module_usage name="multiprocessing.spawn" finding="absolute" line="10" />
     </module_usages>
   </module>
   <module name="__parents_main__-preLoad" kind="CompiledPythonModule" usage="plugins" reason="Scrubbing multiprocessing fork arguments from sys.argv." source_path="~/repos/Nuitka-Watch/cases/Datasets/__parents_main__-preLoad.py">
@@ -405,7 +405,7 @@
     <module_usages />
   </module>
   <module name="_collections_abc" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.11/_collections_abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="6699" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="6692" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="9" />
@@ -1229,7 +1229,7 @@
     </module_usages>
   </module>
   <module name="aiohttp.resolver" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/aiohttp/resolver.py" distribution="aiohttp">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="13" merged_total="698" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="673" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="161" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -1757,7 +1757,7 @@
     </module_usages>
   </module>
   <module name="ast" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.11/ast.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="112" merged_total="10251" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="112" merged_total="10065" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="27" />
@@ -2919,7 +2919,7 @@
     </module_usages>
   </module>
   <module name="copyreg" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.11/copyreg.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="635" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="700" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="40" />
@@ -3014,6 +3014,7 @@
     </module_usages>
   </module>
   <module name="datasets" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/datasets/__init__.py" distribution="datasets">
+    <plugin-influence name="options-nanny" influence="condition-used" condition="version(&quot;datasets&quot;) &gt;= (2, 7, 1) and not plugin(&quot;dill-compat&quot;)" tags_used="version,plugin" result="false" />
     <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="9" merged_total="82" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="41" />
     <code-generation-time time="volatile" />
@@ -5998,7 +5999,7 @@
       <module_usage name="re" finding="absolute" line="1374" />
     </module_usages>
   </module>
-  <module name="dill" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/__init__.py" distribution="dill">
+  <module name="dill" kind="CompiledPythonPackage" usage="import" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/__init__.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="22" merged_total="468" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="118" />
     <code-generation-time time="volatile" />
@@ -6027,13 +6028,27 @@
       <module_usage name="dill._dill" finding="relative" line="101" />
     </module_usages>
   </module>
-  <module name="dill.__info__" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/__info__.py" distribution="dill">
+  <module name="dill-postLoad" kind="CompiledPythonModule" usage="plugins" reason="Extending &quot;dill&quot; for compiled types to be pickle-able as well." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/dill-postLoad.py">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="51" merged_total="519" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="41" merged_total="117" />
+    <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="dill" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="dill._dill" finding="absolute" line="11" />
+      <module_usage name="types" finding="absolute" line="15" />
+      <module_usage name="builtins" finding="absolute" line="24" />
+      <module_usage name="dill.detect" finding="absolute" line="82" />
+    </module_usages>
+  </module>
+  <module name="dill.__info__" kind="CompiledPythonModule" usage="import" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/__info__.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="2" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <code-generation-time time="volatile" />
     <module_usages />
   </module>
-  <module name="dill._dill" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/_dill.py" distribution="dill">
+  <module name="dill._dill" kind="CompiledPythonModule" usage="import" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/_dill.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="63" merged_total="9328" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="57" merged_total="1796" />
     <code-generation-time time="volatile" />
@@ -6112,7 +6127,7 @@
       <module_usage name="subprocess" finding="absolute" line="2159" />
     </module_usages>
   </module>
-  <module name="dill._objects" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/_objects.py" distribution="dill">
+  <module name="dill._objects" kind="CompiledPythonModule" usage="import fromlist" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/_objects.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="10" merged_total="1373" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="217" />
     <code-generation-time time="volatile" />
@@ -6179,7 +6194,7 @@
       <module_usage name="dill._dill" finding="absolute" line="513" />
     </module_usages>
   </module>
-  <module name="dill._shims" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/_shims.py" distribution="dill">
+  <module name="dill._shims" kind="CompiledPythonModule" usage="import fromlist" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/_shims.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="495" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="94" />
     <code-generation-time time="volatile" />
@@ -6188,7 +6203,7 @@
       <module_usage name="sys" finding="absolute" line="53" />
     </module_usages>
   </module>
-  <module name="dill.detect" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/detect.py" distribution="dill">
+  <module name="dill.detect" kind="CompiledPythonModule" usage="import fromlist" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/detect.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="20" merged_total="2625" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="436" />
     <code-generation-time time="volatile" />
@@ -6215,7 +6230,7 @@
       <module_usage name="sys" finding="absolute" line="276" />
     </module_usages>
   </module>
-  <module name="dill.logger" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/logger.py" distribution="dill">
+  <module name="dill.logger" kind="CompiledPythonModule" usage="import fromlist" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/logger.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="743" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="173" />
     <code-generation-time time="volatile" />
@@ -6231,7 +6246,7 @@
       <module_usage name="dill" finding="absolute" line="55" />
     </module_usages>
   </module>
-  <module name="dill.objtypes" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/objtypes.py" distribution="dill">
+  <module name="dill.objtypes" kind="CompiledPythonModule" usage="import fromlist" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/objtypes.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="4" merged_total="62" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="13" />
     <code-generation-time time="volatile" />
@@ -6240,7 +6255,7 @@
       <module_usage name="dill.objects" finding="not-found" line="16" />
     </module_usages>
   </module>
-  <module name="dill.pointers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/pointers.py" distribution="dill">
+  <module name="dill.pointers" kind="CompiledPythonModule" usage="import" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/pointers.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="386" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="74" />
     <code-generation-time time="volatile" />
@@ -6251,7 +6266,7 @@
       <module_usage name="dill._dill" finding="relative" line="15" />
     </module_usages>
   </module>
-  <module name="dill.session" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/session.py" distribution="dill">
+  <module name="dill.session" kind="CompiledPythonModule" usage="import" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/session.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="21" merged_total="2303" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="458" />
     <code-generation-time time="volatile" />
@@ -6276,7 +6291,7 @@
       <module_usage name="pickletools" finding="absolute" line="308" />
     </module_usages>
   </module>
-  <module name="dill.settings" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/settings.py" distribution="dill">
+  <module name="dill.settings" kind="CompiledPythonModule" usage="import" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/settings.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="2" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <code-generation-time time="volatile" />
@@ -6284,7 +6299,7 @@
       <module_usage name="pickle" finding="absolute" line="12" />
     </module_usages>
   </module>
-  <module name="dill.source" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/source.py" distribution="dill">
+  <module name="dill.source" kind="CompiledPythonModule" usage="import fromlist" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/source.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="73" merged_total="7225" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="71" merged_total="1207" />
     <code-generation-time time="volatile" />
@@ -6308,7 +6323,7 @@
       <module_usage name="dill.detect" finding="relative" line="988" />
     </module_usages>
   </module>
-  <module name="dill.temp" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/dill/temp.py" distribution="dill">
+  <module name="dill.temp" kind="CompiledPythonModule" usage="import fromlist" reason="Needed to handle dill" source_path="${sys.prefix}/lib/python3.11/site-packages/dill/temp.py" distribution="dill">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="576" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="126" />
     <code-generation-time time="volatile" />
@@ -8076,7 +8091,7 @@
     </module_usages>
   </module>
   <module name="functools" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.11/functools.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="20" merged_total="6020" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="20" merged_total="5963" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="17" />
@@ -8171,7 +8186,7 @@
     </module_usages>
   </module>
   <module name="gzip" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/gzip.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="2370" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="2317" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="struct" finding="absolute" line="8" />
@@ -8587,7 +8602,7 @@
     </module_usages>
   </module>
   <module name="huggingface_hub.hf_api" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/huggingface_hub/hf_api.py" distribution="huggingface-hub">
-    <optimization-time pass="1" time="volatile" micro_passes="16" max_branch_merge="116" merged_total="50840" />
+    <optimization-time pass="1" time="volatile" micro_passes="16" max_branch_merge="116" merged_total="50810" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="81" merged_total="3154" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -9754,7 +9769,7 @@
     </module_usages>
   </module>
   <module name="importlib.metadata" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/importlib/metadata/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="4821" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="4874" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -9971,7 +9986,7 @@
     </module_usages>
   </module>
   <module name="inspect" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.11/inspect.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="54" merged_total="13296" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="54" merged_total="13290" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="136" />
@@ -12770,7 +12785,7 @@
     </module_usages>
   </module>
   <module name="numpy.f2py.crackfortran" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/numpy/f2py/crackfortran.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="167" merged_total="25586" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="167" merged_total="25561" />
     <optimization-time pass="2" time="volatile" />
     <distribution-usages>
       <distribution-usage name="charset-normalizer" />
@@ -14011,7 +14026,7 @@
     </module_usages>
   </module>
   <module name="operator" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.11/operator.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="1046" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="1164" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="22" />
@@ -17773,7 +17788,7 @@
     </module_usages>
   </module>
   <module name="pandas.core.indexes.base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/pandas/core/indexes/base.py" distribution="pandas">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="257" merged_total="14185" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="257" merged_total="14180" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="257" merged_total="3489" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -21951,7 +21966,7 @@
     </module_usages>
   </module>
   <module name="posixpath" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.11/posixpath.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="27" merged_total="2938" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="27" merged_total="2944" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="25" />
@@ -23678,7 +23693,7 @@
     </module_usages>
   </module>
   <module name="tqdm.contrib.concurrent" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/tqdm/contrib/concurrent.py" distribution="tqdm">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="11" merged_total="216" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="11" merged_total="213" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="67" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -23816,7 +23831,7 @@
     </module_usages>
   </module>
   <module name="traceback" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/traceback.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="3744" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="3747" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="absolute" line="3" />
@@ -23850,7 +23865,7 @@
     </module_usages>
   </module>
   <module name="types" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.11/types.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="908" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="852" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="4" />
@@ -24883,7 +24898,7 @@
     </module_usages>
   </module>
   <module name="xml.etree.ElementTree" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.11/xml/etree/ElementTree.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="33" merged_total="8293" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="33" merged_total="8298" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="95" />
@@ -26106,14 +26121,15 @@
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pyarrow/_s3fs.so" reason="no outside dependencies allowed for 'pyarrow._s3fs'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pyarrow/lib.so" reason="no outside dependencies allowed for 'pyarrow.lib'" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="1445" />
-    <optimization-time pass="2" time="volatile" module_count="1445" />
-    <optimization-time pass="all" time="volatile" module_count="1445" />
-    <code-generation-time time="volatile" module_count="864" />
+    <optimization-time pass="1" time="volatile" module_count="1446" />
+    <optimization-time pass="2" time="volatile" module_count="1446" />
+    <optimization-time pass="all" time="volatile" module_count="1446" />
+    <code-generation-time time="volatile" module_count="865" />
   </performance-totals>
   <python_binary filename="DatasetsUsing.bin" backend_resource_mode="incbin" reproducible="yes" size="volatile" />
   <command_line>
     <option value="--mode=standalone" />
+    <option value="--enable-plugin=dill-compat" />
     <option value="../../../DatasetsUsing.py" />
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
@@ -26124,6 +26140,7 @@
     <plugin name="anti-bloat" user_enabled="no" />
     <plugin name="data-files" user_enabled="no" />
     <plugin name="delvewheel" user_enabled="no" />
+    <plugin name="dill-compat" user_enabled="yes" />
     <plugin name="dll-files" user_enabled="no" />
     <plugin name="gevent" user_enabled="no" />
     <plugin name="gi" user_enabled="no" />

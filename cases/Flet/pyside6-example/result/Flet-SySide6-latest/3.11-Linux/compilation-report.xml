@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.2rc3" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.2rc5" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment c_compiler="gcc" the_cc_name="gcc" the_compiler="gcc" />
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="58" />
@@ -2523,7 +2523,7 @@
     </module_usages>
   </module>
   <module name="click.core" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/click/core.py" distribution="click">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="37" merged_total="10150" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="37" merged_total="10147" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="33" merged_total="1960" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -4921,7 +4921,7 @@
   </module>
   <module name="email.utils" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.11/email/utils.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_socket&quot;)" tags_used="has_builtin_module" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="1619" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="1622" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="25" />
@@ -10112,7 +10112,7 @@
     </module_usages>
   </module>
   <module name="gzip" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/gzip.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="2370" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="2317" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="struct" finding="absolute" line="8" />
@@ -10990,7 +10990,7 @@
       <module_usage name="httpx._transports.wsgi" finding="relative" line="43" />
       <module_usage name="httpx._types" finding="relative" line="44" />
       <module_usage name="httpx._urls" finding="relative" line="45" />
-      <module_usage name="httpx._main" finding="relative" line="48" />
+      <module_usage name="httpx._main" finding="excluded" line="48" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'httpx' for 'httpx._main'" />
       <module_usage name="sys" finding="absolute" line="52" />
     </module_usages>
   </module>
@@ -11139,38 +11139,6 @@
       <module_usage name="__future__" finding="absolute" line="33" />
       <module_usage name="contextlib" finding="absolute" line="35" />
       <module_usage name="typing" finding="absolute" line="36" />
-    </module_usages>
-  </module>
-  <module name="httpx._main" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/httpx/_main.py" distribution="httpx">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="1681" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="338" />
-    <code-generation-time time="volatile" />
-    <distribution-usages>
-      <distribution-usage name="click" />
-      <distribution-usage name="httpcore" />
-      <distribution-usage name="Pygments" />
-      <distribution-usage name="rich" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="functools" finding="absolute" line="3" />
-      <module_usage name="json" finding="absolute" line="4" />
-      <module_usage name="sys" finding="absolute" line="5" />
-      <module_usage name="typing" finding="absolute" line="6" />
-      <module_usage name="click" finding="absolute" line="8" />
-      <module_usage name="httpcore" finding="absolute" line="9" />
-      <module_usage name="pygments.lexers" finding="absolute" line="10" />
-      <module_usage name="pygments.util" finding="absolute" line="11" />
-      <module_usage name="rich.console" finding="absolute" line="12" />
-      <module_usage name="rich.markup" finding="absolute" line="13" />
-      <module_usage name="rich.progress" finding="absolute" line="14" />
-      <module_usage name="rich.syntax" finding="absolute" line="15" />
-      <module_usage name="rich.table" finding="absolute" line="16" />
-      <module_usage name="httpx._client" finding="relative" line="18" />
-      <module_usage name="httpx._exceptions" finding="relative" line="19" />
-      <module_usage name="httpx._models" finding="relative" line="20" />
-      <module_usage name="httpx._status_codes" finding="relative" line="21" />
-      <module_usage name="functools" finding="absolute" line="495" />
     </module_usages>
   </module>
   <module name="httpx._models" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/httpx/_models.py" distribution="httpx">
@@ -17868,7 +17836,7 @@
     </module_usages>
   </module>
   <module name="random" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.11/random.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="39" merged_total="2976" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="39" merged_total="2979" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="warnings" finding="absolute" line="48" />
@@ -18363,13 +18331,6 @@
       <module_usage name="rich.text" finding="relative" line="5" />
     </module_usages>
   </module>
-  <module name="rich.filesize" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/rich/filesize.py" distribution="rich">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="182" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="typing" finding="absolute" line="16" />
-    </module_usages>
-  </module>
   <module name="rich.highlighter" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/rich/highlighter.py" distribution="rich">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="1099" />
     <optimization-time pass="2" time="volatile" />
@@ -18554,59 +18515,6 @@
       <module_usage name="rich.console" finding="relative" line="120" />
       <module_usage name="rich" finding="absolute" line="188" />
       <module_usage name="rich.get_console" finding="not-found" line="188" />
-    </module_usages>
-  </module>
-  <module name="rich.progress" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/rich/progress.py" distribution="rich">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="33" merged_total="6649" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="io" finding="absolute" line="1" />
-      <module_usage name="sys" finding="absolute" line="2" />
-      <module_usage name="typing" finding="absolute" line="3" />
-      <module_usage name="warnings" finding="absolute" line="4" />
-      <module_usage name="abc" finding="absolute" line="5" />
-      <module_usage name="collections" finding="absolute" line="6" />
-      <module_usage name="collections.deque" finding="not-found" line="6" />
-      <module_usage name="dataclasses" finding="absolute" line="7" />
-      <module_usage name="datetime" finding="absolute" line="8" />
-      <module_usage name="io" finding="absolute" line="9" />
-      <module_usage name="math" finding="absolute" line="10" />
-      <module_usage name="mmap" finding="absolute" line="11" />
-      <module_usage name="operator" finding="absolute" line="12" />
-      <module_usage name="os" finding="absolute" line="13" />
-      <module_usage name="threading" finding="absolute" line="14" />
-      <module_usage name="types" finding="absolute" line="15" />
-      <module_usage name="typing" finding="absolute" line="16" />
-      <module_usage name="typing" finding="absolute" line="38" />
-      <module_usage name="rich" finding="absolute" line="42" />
-      <module_usage name="rich.filesize" finding="relative" line="42" />
-      <module_usage name="rich.get_console" finding="not-found" line="42" />
-      <module_usage name="rich.console" finding="relative" line="43" />
-      <module_usage name="rich.highlighter" finding="relative" line="44" />
-      <module_usage name="rich.jupyter" finding="relative" line="45" />
-      <module_usage name="rich.live" finding="relative" line="46" />
-      <module_usage name="rich.progress_bar" finding="relative" line="47" />
-      <module_usage name="rich.spinner" finding="relative" line="48" />
-      <module_usage name="rich.style" finding="relative" line="49" />
-      <module_usage name="rich.table" finding="relative" line="50" />
-      <module_usage name="rich.text" finding="relative" line="51" />
-    </module_usages>
-  </module>
-  <module name="rich.progress_bar" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/rich/progress_bar.py" distribution="rich">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="31" merged_total="652" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="math" finding="absolute" line="1" />
-      <module_usage name="functools" finding="absolute" line="2" />
-      <module_usage name="time" finding="absolute" line="3" />
-      <module_usage name="typing" finding="absolute" line="4" />
-      <module_usage name="rich.color" finding="relative" line="6" />
-      <module_usage name="rich.color_triplet" finding="relative" line="7" />
-      <module_usage name="rich.console" finding="relative" line="8" />
-      <module_usage name="rich.jupyter" finding="relative" line="9" />
-      <module_usage name="rich.measure" finding="relative" line="10" />
-      <module_usage name="rich.segment" finding="relative" line="11" />
-      <module_usage name="rich.style" finding="relative" line="12" />
     </module_usages>
   </module>
   <module name="rich.protocol" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/rich/protocol.py" distribution="rich">
@@ -19685,7 +19593,7 @@
   </module>
   <module name="sysconfig" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/sysconfig.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not win32" tags_used="win32" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="3498" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="3551" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" />
@@ -20712,7 +20620,7 @@
     </module_usages>
   </module>
   <module name="uvloop" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/uvloop/__init__.py" distribution="uvloop">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="495" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="492" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="93" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -21676,10 +21584,10 @@
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="ujson.so" reason="no outside dependencies allowed for 'ujson'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="watchfiles/_rust_notify.so" reason="no outside dependencies allowed for 'watchfiles._rust_notify'" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="1603" />
-    <optimization-time pass="2" time="volatile" module_count="1603" />
-    <optimization-time pass="all" time="volatile" module_count="1603" />
-    <code-generation-time time="volatile" module_count="968" />
+    <optimization-time pass="1" time="volatile" module_count="1599" />
+    <optimization-time pass="2" time="volatile" module_count="1599" />
+    <optimization-time pass="all" time="volatile" module_count="1599" />
+    <code-generation-time time="volatile" module_count="967" />
   </performance-totals>
   <python_binary filename="FletTest.bin" backend_resource_mode="incbin" reproducible="yes" size="volatile" />
   <command_line>
