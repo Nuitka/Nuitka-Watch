@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.2rc3" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.2rc7" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment c_compiler="Clang" the_cc_name="clang" the_compiler="clang" />
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="58" />
@@ -7806,7 +7806,7 @@
       <module_usage name="httpx._transports" finding="relative" line="10" />
       <module_usage name="httpx._types" finding="relative" line="11" />
       <module_usage name="httpx._urls" finding="relative" line="12" />
-      <module_usage name="httpx._main" finding="relative" line="15" />
+      <module_usage name="httpx._main" finding="excluded" line="15" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'httpx' for 'httpx._main'" />
       <module_usage name="sys" finding="absolute" line="19" />
     </module_usages>
   </module>
@@ -7944,31 +7944,6 @@
       <module_usage name="__future__" finding="absolute" line="34" />
       <module_usage name="contextlib" finding="absolute" line="36" />
       <module_usage name="typing" finding="absolute" line="37" />
-    </module_usages>
-  </module>
-  <module name="httpx._main" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/httpx/_main.py" distribution="httpx">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="1681" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="338" />
-    <code-generation-time time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="1" />
-      <module_usage name="functools" finding="absolute" line="3" />
-      <module_usage name="json" finding="absolute" line="4" />
-      <module_usage name="sys" finding="absolute" line="5" />
-      <module_usage name="typing" finding="absolute" line="6" />
-      <module_usage name="click" finding="not-found" line="8" />
-      <module_usage name="pygments.lexers" finding="not-found" line="9" />
-      <module_usage name="pygments.util" finding="not-found" line="10" />
-      <module_usage name="rich.console" finding="not-found" line="11" />
-      <module_usage name="rich.markup" finding="not-found" line="12" />
-      <module_usage name="rich.progress" finding="not-found" line="13" />
-      <module_usage name="rich.syntax" finding="not-found" line="14" />
-      <module_usage name="rich.table" finding="not-found" line="15" />
-      <module_usage name="httpx._client" finding="relative" line="17" />
-      <module_usage name="httpx._exceptions" finding="relative" line="18" />
-      <module_usage name="httpx._models" finding="relative" line="19" />
-      <module_usage name="httpx._status_codes" finding="relative" line="20" />
-      <module_usage name="functools" finding="absolute" line="492" />
     </module_usages>
   </module>
   <module name="httpx._models" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/httpx/_models.py" distribution="httpx">
@@ -9186,7 +9161,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.spawn" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}/lib/python3.11/multiprocessing/spawn.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="589" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="536" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="11" />
@@ -9231,7 +9206,7 @@
     </module_usages>
   </module>
   <module name="multiprocessing.util" kind="UncompiledPythonModule" usage="import fromlist" reason="Multiprocessing plugin needs this to monkey patch it." source_path="${sys.real_prefix}/lib/python3.11/multiprocessing/util.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="1786" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="1783" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="10" />
@@ -11515,10 +11490,10 @@
   <included_extension name="unicodedata.so" dest_path="unicodedata.so" source_path="${sys.real_prefix}/lib/python3.11/lib-dynload/unicodedata.cpython-311-darwin.so" package="" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="zlib.so" dest_path="zlib.so" source_path="${sys.real_prefix}/lib/python3.11/lib-dynload/zlib.cpython-311-darwin.so" package="" ignored="no" reason="required extension module for CPython library startup" tags="copy" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="822" />
-    <optimization-time pass="2" time="volatile" module_count="822" />
-    <optimization-time pass="all" time="volatile" module_count="822" />
-    <code-generation-time time="volatile" module_count="380" />
+    <optimization-time pass="1" time="volatile" module_count="821" />
+    <optimization-time pass="2" time="volatile" module_count="821" />
+    <optimization-time pass="all" time="volatile" module_count="821" />
+    <code-generation-time time="volatile" module_count="379" />
   </performance-totals>
   <python_binary filename="FletTest.bin" backend_resource_mode="c23_embed" reproducible="yes" size="volatile" />
   <command_line>
@@ -11565,7 +11540,7 @@
     <distribution name="sniffio" version="1.3.1" installer="pip" />
     <distribution name="typing_extensions" version="4.15.0" installer="pip" />
   </distributions>
-  <python python_exe="${sys.prefix}/bin/python" python_flavor="CPython Official" python_version="3.11.6" os_name="Darwin" os_release="26.3" arch_name="arm64" filesystem_encoding="utf-8">
+  <python python_exe="${sys.prefix}/bin/python" python_flavor="CPython Official" python_version="3.11.6" os_name="Darwin" os_release="26.6.1" arch_name="arm64" filesystem_encoding="utf-8">
     <search_path>
       <path value="${cwd}" />
       <path value="~/repos/Nuitka-Watch/cases/Flet/pyside6-example" />
