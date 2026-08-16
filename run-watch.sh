@@ -93,12 +93,27 @@ else
     declare -a PYTHON_VERSIONS=("3.10" "3.12" "3.13" "3.14")
 fi
 
+# Allow limiting to a single Python version via --python-version=X argument.
+FILTERED_ARGS=()
+SELECTED_PYTHON_VERSION=""
+for arg in "$@"; do
+    if [[ "$arg" == --python-version=* ]]; then
+        SELECTED_PYTHON_VERSION="${arg#--python-version=}"
+    else
+        FILTERED_ARGS+=("$arg")
+    fi
+done
+
+if [ -n "$SELECTED_PYTHON_VERSION" ]; then
+    PYTHON_VERSIONS=("$SELECTED_PYTHON_VERSION")
+fi
+
 echo "Doing Python versions $PYTHON_VERSIONS"
 
 for PYTHON_VERSION in "${PYTHON_VERSIONS[@]}"
 do
     set -x
     # python${PYTHON_VERSION} $NUITKA_WATCH/bin/nuitka --clean-cache=all
-    python${PYTHON_VERSION} $NUITKA_WATCH/bin/nuitka-watch --python-version=${PYTHON_VERSION} --nuitka-binary=../Nuitka-develop/bin/nuitka $@
+    python${PYTHON_VERSION} $NUITKA_WATCH/bin/nuitka-watch --python-version=${PYTHON_VERSION} --nuitka-binary=../Nuitka-develop/bin/nuitka "${FILTERED_ARGS[@]}"
     set +x
 done
