@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.2rc6" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.2rc7" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment c_compiler="gcc" the_cc_name="gcc" the_compiler="gcc" />
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="8" merged_total="60" />
@@ -4934,15 +4934,22 @@
     </module_usages>
   </module>
   <module name="webencodings" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/webencodings/__init__.py" distribution="webencodings">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="1117" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="214" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="696" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="157" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="__future__" finding="absolute" line="15" />
-      <module_usage name="codecs" finding="absolute" line="17" />
-      <module_usage name="webencodings.labels" finding="relative" line="19" />
-      <module_usage name="webencodings.x_user_defined" finding="relative" line="81" />
+      <module_usage name="codecs" finding="absolute" line="14" />
+      <module_usage name="webencodings.custom" finding="relative" line="16" />
+      <module_usage name="webencodings.labels" finding="relative" line="17" />
+    </module_usages>
+  </module>
+  <module name="webencodings.custom" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/webencodings/custom.py" distribution="webencodings">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="1232" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="298" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="codecs" finding="absolute" line="13" />
     </module_usages>
   </module>
   <module name="webencodings.labels" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/webencodings/labels.py" distribution="webencodings">
@@ -4950,15 +4957,6 @@
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <code-generation-time time="volatile" />
     <module_usages />
-  </module>
-  <module name="webencodings.x_user_defined" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/webencodings/x_user_defined.py" distribution="webencodings">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="8" merged_total="403" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="124" />
-    <code-generation-time time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="14" />
-      <module_usage name="codecs" finding="absolute" line="16" />
-    </module_usages>
   </module>
   <module name="xml" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/xml/__init__.py">
     <optimization-time pass="1" time="volatile" micro_passes="2" />
@@ -5339,7 +5337,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=d36ca94b50611588304fb7be9588efa4" />
+    <option value="--report-user-provided=pipenv_hash=fb36167703589e3f83b48479c668f86c" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -5365,7 +5363,7 @@
   <distributions>
     <distribution name="html5lib" version="1.1" installer="pip" />
     <distribution name="six" version="1.17.0" installer="pip" />
-    <distribution name="webencodings" version="0.5.1" installer="pip" />
+    <distribution name="webencodings" version="0.6.1" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}/bin/python" python_flavor="Unknown" python_version="3.13.1" os_name="Linux" os_release="Debian-12" arch_name="x86_64" filesystem_encoding="utf-8" gil="yes">
     <search_path>
@@ -5377,7 +5375,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>d36ca94b50611588304fb7be9588efa4</pipenv_hash>
+    <pipenv_hash>fb36167703589e3f83b48479c668f86c</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}/Html5libUsing.dist/Html5libUsing.bin" />
 </nuitka-compilation-report>
