@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENTS.md", "RELEASE_REVIEW_WORKFLOW.md"],
+  "permission": {
+    "edit": "ask",
+    "bash": {
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "git show*": "allow",
+      "git ls-files*": "allow",
+      "git blame*": "allow",
+      "git rm*": "ask",
+      "git add*": "ask",
+      "git commit*": "deny",
+      "git push*": "deny",
+      "git reset*": "deny",
+      "git checkout*": "ask",
+      "git stash*": "ask",
+      "./nuitka-release.sh*": "allow",
+      "./pypi-update.sh*": "allow",
+      "./run-watch.sh*": "allow",
+      "./auto-stage.sh*": "allow",
+      "pipenv *": "allow",
+      "*": "ask"
+    }
+  }
+}
