@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.2rc6" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.2rc7" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment c_compiler="MSVC" the_cc_name="cl" the_compiler="cl" />
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="58" />
@@ -707,6 +707,13 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="1" />
+      <module_usage name="ctypes" finding="absolute" line="2" />
+    </module_usages>
+  </module>
+  <module name="ctypes.wintypes" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\lib\ctypes\wintypes.py">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="10" merged_total="819" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
       <module_usage name="ctypes" finding="absolute" line="2" />
     </module_usages>
   </module>
@@ -2666,8 +2673,8 @@
     <module_usages />
   </module>
   <module name="pypylon.genicam" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pypylon\genicam.py" distribution="pypylon">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="57" merged_total="15208" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="57" merged_total="2344" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="57" merged_total="15215" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="57" merged_total="2343" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="pypylon" finding="absolute" line="37" />
@@ -2678,8 +2685,8 @@
     </module_usages>
   </module>
   <module name="pypylon.pylon" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pypylon\pylon.py" distribution="pypylon">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="107" merged_total="16531" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="107" merged_total="2393" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="107" merged_total="23449" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="107" merged_total="3464" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="pypylon" finding="absolute" line="37" />
@@ -2692,12 +2699,20 @@
       <module_usage name="warnings" finding="absolute" line="162" />
       <module_usage name="warnings" finding="absolute" line="168" />
       <module_usage name="pypylon.genicam" finding="absolute" line="190" />
-      <module_usage name="contextlib" finding="absolute" line="2128" />
-      <module_usage name="sys" finding="absolute" line="2129" />
-      <module_usage name="sys" finding="absolute" line="7302" />
-      <module_usage name="contextlib" finding="absolute" line="5957" />
-      <module_usage name="ctypes" finding="absolute" line="7079" />
-      <module_usage name="contextlib" finding="absolute" line="7301" />
+      <module_usage name="pypylon" finding="absolute" line="333" />
+      <module_usage name="pypylon.genicam" finding="relative" line="333" />
+      <module_usage name="contextlib" finding="absolute" line="749" />
+      <module_usage name="sys" finding="absolute" line="750" />
+      <module_usage name="pypylon.pylon" finding="absolute" line="2469" />
+      <module_usage name="pypylon.genicam" finding="absolute" line="8481" />
+      <module_usage name="pypylon" finding="absolute" line="10065" />
+      <module_usage name="pypylon.pylon" finding="relative" line="10065" />
+      <module_usage name="ctypes" finding="absolute" line="10418" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="10419" />
+      <module_usage name="os" finding="absolute" line="10463" />
+      <module_usage name="cv2" finding="not-found" line="10545" />
+      <module_usage name="warnings" finding="absolute" line="10551" />
+      <module_usage name="warnings" finding="absolute" line="10561" />
     </module_usages>
   </module>
   <module name="quopri" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\lib\quopri.py">
@@ -3321,10 +3336,10 @@
     <memory_usage name="before_c_code_generation" value="volatile" />
     <memory_usage name="before_running_scons" value="volatile" />
   </performance>
-  <data_file name="pypylon\PylonDataProcessing_v4.sig" source="${sys.prefix}\lib\site-packages\pypylon\PylonDataProcessing_v4.sig" size="3254" reason="package data for 'pypylon'" tags="config,copy" />
-  <data_file name="pypylon\DataProcessingPluginsB\PylonVToolPackageCommunication3.info" source="${sys.prefix}\lib\site-packages\pypylon\DataProcessingPluginsB\PylonVToolPackageCommunication3.info" size="7175" reason="package data for 'pypylon'" tags="config,copy" />
-  <data_file name="pypylon\DataProcessingPluginsB\PylonVToolsPackageUtils5.info" source="${sys.prefix}\lib\site-packages\pypylon\DataProcessingPluginsB\PylonVToolsPackageUtils5.info" size="54872" reason="package data for 'pypylon'" tags="config,copy" />
-  <data_file name="pypylon\pylonDataProcessingPlugins\PylonVToolPackageA7_asl.lic" source="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageA7_asl.lic" size="623" reason="package data for 'pypylon'" tags="config,copy" />
+  <data_file name="pypylon\PylonDataProcessing_v5.sig" source="${sys.prefix}\lib\site-packages\pypylon\PylonDataProcessing_v5.sig" size="3254" reason="package data for 'pypylon'" tags="config,copy" />
+  <data_file name="pypylon\DataProcessingPluginsB\PylonVToolPackageCommunication3.info" source="${sys.prefix}\lib\site-packages\pypylon\DataProcessingPluginsB\PylonVToolPackageCommunication3.info" size="7306" reason="package data for 'pypylon'" tags="config,copy" />
+  <data_file name="pypylon\DataProcessingPluginsB\PylonVToolsPackageUtils5.info" source="${sys.prefix}\lib\site-packages\pypylon\DataProcessingPluginsB\PylonVToolsPackageUtils5.info" size="70300" reason="package data for 'pypylon'" tags="config,copy" />
+  <data_file name="pypylon\pylonDataProcessingPlugins\PylonVToolPackageA8_asl.lic" source="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageA8_asl.lic" size="623" reason="package data for 'pypylon'" tags="config,copy" />
   <data_file name="pypylon\pylonDataProcessingPlugins\PylonVToolPackageA\CalibrationPlate_1200mm.pcal" source="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageA\CalibrationPlate_1200mm.pcal" size="35003" reason="package data for 'pypylon'" tags="config,copy" />
   <data_file name="pypylon\pylonDataProcessingPlugins\PylonVToolPackageA\CalibrationPlate_120mm.pcal" source="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageA\CalibrationPlate_120mm.pcal" size="36832" reason="package data for 'pypylon'" tags="config,copy" />
   <data_file name="pypylon\pylonDataProcessingPlugins\PylonVToolPackageA\CalibrationPlate_1600mm.pcal" source="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageA\CalibrationPlate_1600mm.pcal" size="34981" reason="package data for 'pypylon'" tags="config,copy" />
@@ -3401,7 +3416,7 @@
   <data_file name="pypylon\pylonDataProcessingPlugins\PylonVToolPackageA\ocr\SEMI_Rej.omc" source="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageA\ocr\SEMI_Rej.omc" size="237467" reason="package data for 'pypylon'" tags="config,copy" />
   <data_file name="pypylon\pylonDataProcessingPlugins\PylonVToolPackageA\ocr\find_text_support.hotc" source="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageA\ocr\find_text_support.hotc" size="1870078" reason="package data for 'pypylon'" tags="config,copy" />
   <included_extension name="_ctypes.pyd" dest_path="_ctypes.pyd" source_path="${sys.real_prefix}\DLLs\_ctypes.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
-  <included_dll name="concrt140.dll" dest_path="concrt140.dll" source_path="c:\program files\microsoft visual studio\18\community\VC\Redist\MSVC\14.50.35710\x64\microsoft.vc145.crt\concrt140.dll" package="pypylon" ignored="no" reason="Used by 'pypylon\pylonDataProcessingPlugins\PylonVToolPackageB7.dll'" tags="copy" />
+  <included_dll name="concrt140.dll" dest_path="concrt140.dll" source_path="c:\program files\microsoft visual studio\18\community\VC\Redist\MSVC\14.50.35710\x64\microsoft.vc145.crt\concrt140.dll" package="pypylon" ignored="no" reason="Used by 'pypylon\pylonDataProcessingPlugins\PylonVToolPackageB8.dll'" tags="copy" />
   <included_dll name="libffi-7.dll" dest_path="libffi-7.dll" source_path="${sys.real_prefix}\dlls\libffi-7.dll" package="" ignored="no" reason="Used by '_ctypes.pyd'" tags="copy" />
   <included_dll name="msvcp140.dll" dest_path="msvcp140.dll" source_path="c:\program files\microsoft visual studio\18\community\VC\Redist\MSVC\14.50.35710\x64\microsoft.vc145.crt\msvcp140.dll" package="pypylon" ignored="no" reason="Used by 'pypylon\GCBase_MD_VC142_v3_5_Basler_pylon_v1.dll'" tags="copy" />
   <included_dll name="PylonVToolPackageCommunication3.dll" dest_path="pypylon\DataProcessingPluginsB\PylonVToolPackageCommunication3.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\DataProcessingPluginsB\PylonVToolPackageCommunication3.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
@@ -3411,27 +3426,27 @@
   <included_dll name="Log_MD_VC142_v3_5_Basler_pylon_v1.dll" dest_path="pypylon\Log_MD_VC142_v3_5_Basler_pylon_v1.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\Log_MD_VC142_v3_5_Basler_pylon_v1.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
   <included_dll name="MathParser_MD_VC142_v3_5_Basler_pylon_v1.dll" dest_path="pypylon\MathParser_MD_VC142_v3_5_Basler_pylon_v1.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\MathParser_MD_VC142_v3_5_Basler_pylon_v1.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
   <included_dll name="NodeMapData_MD_VC142_v3_5_Basler_pylon_v1.dll" dest_path="pypylon\NodeMapData_MD_VC142_v3_5_Basler_pylon_v1.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\NodeMapData_MD_VC142_v3_5_Basler_pylon_v1.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonBase_v11.dll" dest_path="pypylon\PylonBase_v11.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonBase_v11.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonCamEmu_v11_TL.dll" dest_path="pypylon\PylonCamEmu_v11_TL.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonCamEmu_v11_TL.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonDataProcessingCore_v6.dll" dest_path="pypylon\PylonDataProcessingCore_v6.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonDataProcessingCore_v6.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonDataProcessing_v4.dll" dest_path="pypylon\PylonDataProcessing_v4.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonDataProcessing_v4.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonGUI_v11.dll" dest_path="pypylon\PylonGUI_v11.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonGUI_v11.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonGigE_v11_TL.dll" dest_path="pypylon\PylonGigE_v11_TL.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonGigE_v11_TL.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonGtc_v11_TL.dll" dest_path="pypylon\PylonGtc_v11_TL.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonGtc_v11_TL.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonUsb_v11_TL.dll" dest_path="pypylon\PylonUsb_v11_TL.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonUsb_v11_TL.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonUtilityPcl_v11.dll" dest_path="pypylon\PylonUtilityPcl_v11.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonUtilityPcl_v11.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonUtility_v11.dll" dest_path="pypylon\PylonUtility_v11.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonUtility_v11.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonBase_v12.dll" dest_path="pypylon\PylonBase_v12.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonBase_v12.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonCamEmu_v12_TL.dll" dest_path="pypylon\PylonCamEmu_v12_TL.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonCamEmu_v12_TL.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonDataProcessingCore_v7.dll" dest_path="pypylon\PylonDataProcessingCore_v7.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonDataProcessingCore_v7.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonDataProcessing_v5.dll" dest_path="pypylon\PylonDataProcessing_v5.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonDataProcessing_v5.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonGUI_v12.dll" dest_path="pypylon\PylonGUI_v12.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonGUI_v12.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonGigE_v12_TL.dll" dest_path="pypylon\PylonGigE_v12_TL.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonGigE_v12_TL.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonGtc_v12_TL.dll" dest_path="pypylon\PylonGtc_v12_TL.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonGtc_v12_TL.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonUsb_v12_TL.dll" dest_path="pypylon\PylonUsb_v12_TL.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonUsb_v12_TL.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonUtilityPcl_v12.dll" dest_path="pypylon\PylonUtilityPcl_v12.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonUtilityPcl_v12.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonUtility_v12.dll" dest_path="pypylon\PylonUtility_v12.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\PylonUtility_v12.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
   <included_dll name="XmlParser_MD_VC142_v3_5_Basler_pylon_v1.dll" dest_path="pypylon\XmlParser_MD_VC142_v3_5_Basler_pylon_v1.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\XmlParser_MD_VC142_v3_5_Basler_pylon_v1.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
   <included_extension name="_genicam.pyd" dest_path="pypylon\_genicam.pyd" source_path="${sys.prefix}\lib\site-packages\pypylon\_genicam.pyd" package="pypylon" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_pylon.pyd" dest_path="pypylon\_pylon.pyd" source_path="${sys.prefix}\lib\site-packages\pypylon\_pylon.pyd" package="pypylon" ignored="no" reason="used extension module" tags="copy" />
-  <included_dll name="gxapi_v15.dll" dest_path="pypylon\gxapi_v15.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\gxapi_v15.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="gxapi_v16.dll" dest_path="pypylon\gxapi_v16.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\gxapi_v16.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
   <included_dll name="log4cpp_MD_VC142_v3_5_Basler_pylon_v1.dll" dest_path="pypylon\log4cpp_MD_VC142_v3_5_Basler_pylon_v1.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\log4cpp_MD_VC142_v3_5_Basler_pylon_v1.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonAIvToolPackage6.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonAIvToolPackage6.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonAIvToolPackage6.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonDataProcessingDemoVTools4.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonDataProcessingDemoVTools4.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonDataProcessingDemoVTools4.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonVToolAdapter5.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonVToolAdapter5.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolAdapter5.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonVToolPackageA7.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonVToolPackageA7.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageA7.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonVToolPackageB7.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonVToolPackageB7.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageB7.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
-  <included_dll name="PylonVToolPackageBase7.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonVToolPackageBase7.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageBase7.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonAIvToolPackage7.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonAIvToolPackage7.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonAIvToolPackage7.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonDataProcessingDemoVTools5.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonDataProcessingDemoVTools5.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonDataProcessingDemoVTools5.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonVToolAdapter6.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonVToolAdapter6.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolAdapter6.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonVToolPackageA8.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonVToolPackageA8.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageA8.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonVToolPackageB8.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonVToolPackageB8.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageB8.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
+  <included_dll name="PylonVToolPackageBase8.dll" dest_path="pypylon\pylonDataProcessingPlugins\PylonVToolPackageBase8.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\pylonDataProcessingPlugins\PylonVToolPackageBase8.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
   <included_dll name="uxapi_v15.dll" dest_path="pypylon\uxapi_v15.dll" source_path="${sys.prefix}\lib\site-packages\pypylon\uxapi_v15.dll" package="pypylon" ignored="no" reason="Yaml config of 'pypylon'" tags="copy" />
   <included_dll name="python3.dll" dest_path="python3.dll" source_path="${sys.real_prefix}\python3.dll" package="pypylon" ignored="no" reason="Used by 'pypylon\_genicam.pyd'" tags="copy" />
   <included_dll name="python310.dll" dest_path="python310.dll" source_path="${sys.real_prefix}\python310.dll" package="" ignored="no" reason="Used by '_ctypes.pyd'" tags="copy" />
@@ -3440,9 +3455,9 @@
   <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.real_prefix}\vcruntime140.dll" package="" ignored="no" reason="Used by '_ctypes.pyd'" tags="copy" />
   <included_dll name="vcruntime140_1.dll" dest_path="vcruntime140_1.dll" source_path="${sys.real_prefix}\vcruntime140_1.dll" package="pypylon" ignored="no" reason="Used by 'pypylon\GCBase_MD_VC142_v3_5_Basler_pylon_v1.dll'" tags="copy" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="276" />
-    <optimization-time pass="2" time="volatile" module_count="276" />
-    <optimization-time pass="all" time="volatile" module_count="276" />
+    <optimization-time pass="1" time="volatile" module_count="277" />
+    <optimization-time pass="2" time="volatile" module_count="277" />
+    <optimization-time pass="all" time="volatile" module_count="277" />
     <code-generation-time time="volatile" module_count="4" />
   </performance-totals>
   <python_binary filename="PypylonUsing.exe" backend_resource_mode="coff_obj" reproducible="no" size="volatile" />
@@ -3452,7 +3467,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=9df3d6c5d7afeff3ebebbe2efb3b1868" />
+    <option value="--report-user-provided=pipenv_hash=056e2fbdca2682145a93a1c51cda1f80" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -3476,7 +3491,7 @@
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
-    <distribution name="pypylon" version="26.4.1" installer="pip" />
+    <distribution name="pypylon" version="26.7" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}\Scripts\python.EXE" python_flavor="CPython Official" python_version="3.10.11" os_name="Windows" os_release="11" arch_name="x86_64" filesystem_encoding="utf-8">
     <search_path>
@@ -3490,7 +3505,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>9df3d6c5d7afeff3ebebbe2efb3b1868</pipenv_hash>
+    <pipenv_hash>056e2fbdca2682145a93a1c51cda1f80</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}\PypylonUsing.dist\PypylonUsing.exe" />
 </nuitka-compilation-report>

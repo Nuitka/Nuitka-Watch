@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.2rc6" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.2rc7" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment c_compiler="MSVC" the_cc_name="cl" the_compiler="cl" />
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\lib\__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="58" />
@@ -15592,9 +15592,9 @@
   </module>
   <module name="pyarrow" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyarrow\__init__.py" distribution="pyarrow">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_setuptools" tags_used="use_setuptools" result="true" />
-    <plugin-influence name="delvewheel" influence="detection" detection="delvewheel_version" value="'1.11.2'" />
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="203" merged_total="1795" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="203" merged_total="437" />
+    <plugin-influence name="delvewheel" influence="detection" detection="delvewheel_version" value="'1.13.0'" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="203" merged_total="1824" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="203" merged_total="444" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
@@ -15609,29 +15609,38 @@
       <module_usage name="setuptools_scm.git" finding="not-found" line="62" />
       <module_usage name="pyarrow.lib" finding="absolute" line="71" />
       <module_usage name="pyarrow.fs" finding="absolute" line="111" />
-      <module_usage name="pyarrow.lib" finding="absolute" line="165" />
-      <module_usage name="pyarrow.lib" finding="absolute" line="249" />
-      <module_usage name="pyarrow.lib" finding="absolute" line="252" />
-      <module_usage name="pyarrow.lib" finding="absolute" line="255" />
-      <module_usage name="pyarrow.lib" finding="absolute" line="264" />
-      <module_usage name="pyarrow.lib" finding="absolute" line="275" />
-      <module_usage name="pyarrow.lib" finding="absolute" line="280" />
-      <module_usage name="pyarrow.ipc" finding="absolute" line="292" />
+      <module_usage name="pyarrow.lib" finding="absolute" line="166" />
+      <module_usage name="pyarrow.lib" finding="absolute" line="250" />
+      <module_usage name="pyarrow.lib" finding="absolute" line="253" />
+      <module_usage name="pyarrow.lib" finding="absolute" line="256" />
+      <module_usage name="pyarrow.lib" finding="absolute" line="265" />
+      <module_usage name="pyarrow.lib" finding="absolute" line="276" />
+      <module_usage name="pyarrow.lib" finding="absolute" line="281" />
       <module_usage name="pyarrow.ipc" finding="absolute" line="293" />
-      <module_usage name="pyarrow.types" finding="absolute" line="295" />
-      <module_usage name="pyarrow.util" finding="absolute" line="301" />
-      <module_usage name="pyarrow.ipc" finding="absolute" line="305" />
-      <module_usage name="ntpath" finding="absolute" line="319" />
-      <module_usage name="subprocess" finding="absolute" line="327" />
-      <module_usage name="subprocess" finding="absolute" line="336" />
-      <module_usage name="glob" finding="absolute" line="369" />
-      <module_usage name="ntpath" finding="absolute" line="430" />
-      <module_usage name="ntpath" finding="absolute" line="432" />
-      <module_usage name="ntpath" finding="absolute" line="438" />
-      <module_usage name="ntpath" finding="absolute" line="445" />
+      <module_usage name="pyarrow.ipc" finding="absolute" line="294" />
+      <module_usage name="pyarrow.types" finding="absolute" line="296" />
+      <module_usage name="pyarrow.util" finding="absolute" line="302" />
+      <module_usage name="pyarrow.ipc" finding="absolute" line="306" />
+      <module_usage name="pyarrow" finding="absolute" line="323" />
+      <module_usage name="pyarrow.lib" finding="relative" line="323" />
+      <module_usage name="ntpath" finding="absolute" line="324" />
+      <module_usage name="subprocess" finding="absolute" line="332" />
+      <module_usage name="subprocess" finding="absolute" line="341" />
+      <module_usage name="glob" finding="absolute" line="374" />
+      <module_usage name="pyarrow" finding="absolute" line="410" />
+      <module_usage name="pyarrow.lib" finding="relative" line="410" />
+      <module_usage name="ntpath" finding="absolute" line="439" />
+      <module_usage name="ntpath" finding="absolute" line="441" />
+      <module_usage name="ntpath" finding="absolute" line="447" />
+      <module_usage name="ntpath" finding="absolute" line="454" />
     </module_usages>
   </module>
   <module name="pyarrow._acero" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\pyarrow\_acero.cp310-win_amd64.pyd" distribution="pyarrow">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="pyarrow._azurefs" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\pyarrow\_azurefs.cp310-win_amd64.pyd" distribution="pyarrow">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -15688,10 +15697,12 @@
     <module_usages />
   </module>
   <module name="pyarrow._generated_version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyarrow\_generated_version.py" distribution="pyarrow">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="1" merged_total="1" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <code-generation-time time="volatile" />
-    <module_usages />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" />
+    </module_usages>
   </module>
   <module name="pyarrow._hdfs" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}\lib\site-packages\pyarrow\_hdfs.cp310-win_amd64.pyd" distribution="pyarrow">
     <optimization-time pass="1" time="volatile" />
@@ -15714,8 +15725,8 @@
     <module_usages />
   </module>
   <module name="pyarrow.compute" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyarrow\compute.py" distribution="pyarrow">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="80" merged_total="1460" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="80" merged_total="356" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="80" merged_total="1578" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="80" merged_total="386" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="pyarrow._compute" finding="absolute" line="18" />
@@ -15753,18 +15764,19 @@
     </module_usages>
   </module>
   <module name="pyarrow.feather" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyarrow\feather.py" distribution="pyarrow">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="516" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="118" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="508" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="114" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="absolute" line="19" />
       <module_usage name="os" finding="absolute" line="20" />
-      <module_usage name="pyarrow.pandas_compat" finding="absolute" line="22" />
-      <module_usage name="pyarrow.lib" finding="absolute" line="23" />
-      <module_usage name="pyarrow.lib" finding="absolute" line="25" />
-      <module_usage name="pyarrow" finding="absolute" line="26" />
-      <module_usage name="pyarrow._feather" finding="relative" line="26" />
-      <module_usage name="pyarrow._feather" finding="absolute" line="27" />
+      <module_usage name="warnings" finding="absolute" line="21" />
+      <module_usage name="pyarrow.pandas_compat" finding="absolute" line="23" />
+      <module_usage name="pyarrow.lib" finding="absolute" line="24" />
+      <module_usage name="pyarrow.lib" finding="absolute" line="26" />
+      <module_usage name="pyarrow" finding="absolute" line="27" />
+      <module_usage name="pyarrow._feather" finding="relative" line="27" />
+      <module_usage name="pyarrow._feather" finding="absolute" line="28" />
     </module_usages>
   </module>
   <module name="pyarrow.fs" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyarrow\fs.py" distribution="pyarrow">
@@ -15774,7 +15786,7 @@
     <module_usages>
       <module_usage name="pyarrow.util" finding="absolute" line="22" />
       <module_usage name="pyarrow._fs" finding="absolute" line="24" />
-      <module_usage name="pyarrow._azurefs" finding="not-found" line="43" />
+      <module_usage name="pyarrow._azurefs" finding="absolute" line="43" />
       <module_usage name="pyarrow._hdfs" finding="absolute" line="48" />
       <module_usage name="pyarrow._gcsfs" finding="absolute" line="53" />
       <module_usage name="pyarrow._s3fs" finding="absolute" line="58" />
@@ -15807,8 +15819,8 @@
     <module_usages />
   </module>
   <module name="pyarrow.pandas_compat" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyarrow\pandas_compat.py" distribution="pyarrow">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="34" merged_total="4351" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="1076" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="34" merged_total="4367" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="1081" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="numpy" />
@@ -15830,12 +15842,12 @@
       <module_usage name="numpy" finding="absolute" line="34" />
       <module_usage name="pyarrow" finding="absolute" line="37" />
       <module_usage name="pyarrow.lib" finding="absolute" line="38" />
-      <module_usage name="pandas.core.internals" finding="absolute" line="746" />
-      <module_usage name="pandas.api.internals" finding="not-found" line="825" />
-      <module_usage name="pandas.core.internals" finding="absolute" line="837" />
-      <module_usage name="pandas.core.internals.BlockManager" finding="not-found" line="837" />
-      <module_usage name="pandas" finding="absolute" line="838" />
-      <module_usage name="pandas.DataFrame" finding="not-found" line="838" />
+      <module_usage name="pandas.core.internals" finding="absolute" line="751" />
+      <module_usage name="pandas.api.internals" finding="not-found" line="830" />
+      <module_usage name="pandas.core.internals" finding="absolute" line="842" />
+      <module_usage name="pandas.core.internals.BlockManager" finding="not-found" line="842" />
+      <module_usage name="pandas" finding="absolute" line="843" />
+      <module_usage name="pandas.DataFrame" finding="not-found" line="843" />
     </module_usages>
   </module>
   <module name="pyarrow.parquet" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyarrow\parquet\__init__.py" distribution="pyarrow">
@@ -15848,8 +15860,8 @@
     </module_usages>
   </module>
   <module name="pyarrow.parquet.core" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyarrow\parquet\core.py" distribution="pyarrow">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="3586" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="26" merged_total="686" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="3602" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="689" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="19" />
@@ -15867,9 +15879,9 @@
       <module_usage name="pyarrow.fs" finding="absolute" line="47" />
       <module_usage name="pyarrow.util" finding="absolute" line="49" />
       <module_usage name="pyarrow.dataset" finding="absolute" line="157" />
-      <module_usage name="pyarrow.dataset" finding="absolute" line="1360" />
-      <module_usage name="ntpath" finding="absolute" line="1574" />
-      <module_usage name="pyarrow.dataset" finding="absolute" line="2217" />
+      <module_usage name="pyarrow.dataset" finding="absolute" line="1396" />
+      <module_usage name="ntpath" finding="absolute" line="1612" />
+      <module_usage name="pyarrow.dataset" finding="absolute" line="2257" />
     </module_usages>
   </module>
   <module name="pyarrow.types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyarrow\types.py" distribution="pyarrow">
@@ -15884,8 +15896,8 @@
     </module_usages>
   </module>
   <module name="pyarrow.util" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyarrow\util.py" distribution="pyarrow">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="1233" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="242" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="1259" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="246" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="20" />
@@ -15901,11 +15913,12 @@
       <module_usage name="ntpath" finding="absolute" line="147" />
       <module_usage name="uuid" finding="absolute" line="206" />
       <module_usage name="urllib.request" finding="absolute" line="234" />
-      <module_usage name="requests" finding="not-found" line="241" />
-      <module_usage name="tarfile" finding="absolute" line="255" />
-      <module_usage name="ntpath" finding="absolute" line="258" />
-      <module_usage name="ntpath" finding="absolute" line="259" />
-      <module_usage name="ntpath" finding="absolute" line="261" />
+      <module_usage name="requests" finding="not-found" line="242" />
+      <module_usage name="tarfile" finding="absolute" line="270" />
+      <module_usage name="ntpath" finding="absolute" line="273" />
+      <module_usage name="ntpath" finding="absolute" line="274" />
+      <module_usage name="ntpath" finding="absolute" line="276" />
+      <module_usage name="requests" finding="not-found" line="282" />
     </module_usages>
   </module>
   <module name="pyarrow.vendored" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pyarrow\vendored\__init__.py" distribution="pyarrow">
@@ -16006,8 +16019,8 @@
     <module_usages />
   </module>
   <module name="pytz" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pytz\__init__.py" distribution="pytz">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="1208" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="274" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="1216" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="276" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="setuptools" />
@@ -16024,7 +16037,9 @@
       <module_usage name="pytz.lazy" finding="absolute" line="19" />
       <module_usage name="pytz.tzinfo" finding="absolute" line="20" />
       <module_usage name="pytz.tzfile" finding="absolute" line="21" />
-      <module_usage name="pkg_resources" finding="absolute" line="102" />
+      <module_usage name="importlib.resources" finding="absolute" line="100" />
+      <module_usage name="pytz" finding="absolute" line="106" />
+      <module_usage name="pkg_resources" finding="absolute" line="112" />
     </module_usages>
   </module>
   <module name="pytz.exceptions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pytz\exceptions.py" distribution="pytz">
@@ -16046,8 +16061,8 @@
     </module_usages>
   </module>
   <module name="pytz.tzfile" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pytz\tzfile.py" distribution="pytz">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="611" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="120" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="642" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="126" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="datetime" finding="absolute" line="5" />
@@ -16057,8 +16072,8 @@
     </module_usages>
   </module>
   <module name="pytz.tzinfo" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\lib\site-packages\pytz\tzinfo.py" distribution="pytz">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="21" merged_total="1244" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="301" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="21" merged_total="1257" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="304" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="datetime" finding="absolute" line="3" />
@@ -17313,12 +17328,12 @@
   <data_file name="pytz\zoneinfo\W-SU" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\W-SU" size="1535" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\WET" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\WET" size="3527" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Zulu" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Zulu" size="114" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\iso3166.tab" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\iso3166.tab" size="4791" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\leapseconds" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\leapseconds" size="3257" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\tzdata.zi" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\tzdata.zi" size="107471" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\zone.tab" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\zone.tab" size="18822" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\zone1970.tab" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\zone1970.tab" size="17597" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\zonenow.tab" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\zonenow.tab" size="8084" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\iso3166.tab" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\iso3166.tab" size="4841" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\leapseconds" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\leapseconds" size="3694" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\tzdata.zi" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\tzdata.zi" size="104433" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\zone.tab" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\zone.tab" size="18813" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\zone1970.tab" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\zone1970.tab" size="17596" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\zonenow.tab" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\zonenow.tab" size="8248" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Abidjan" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Abidjan" size="148" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Accra" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Accra" size="148" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Addis_Ababa" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Addis_Ababa" size="265" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17333,14 +17348,14 @@
   <data_file name="pytz\zoneinfo\Africa\Brazzaville" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Brazzaville" size="235" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Bujumbura" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Bujumbura" size="149" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Cairo" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Cairo" size="2399" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\Africa\Casablanca" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Casablanca" size="2429" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\Africa\Casablanca" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Casablanca" size="1200" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Ceuta" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Ceuta" size="2052" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Conakry" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Conakry" size="148" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Dakar" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Dakar" size="148" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Dar_es_Salaam" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Dar_es_Salaam" size="265" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Djibouti" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Djibouti" size="265" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Douala" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Douala" size="235" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\Africa\El_Aaiun" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\El_Aaiun" size="2295" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\Africa\El_Aaiun" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\El_Aaiun" size="1066" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Freetown" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Freetown" size="148" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Gaborone" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Gaborone" size="149" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Africa\Harare" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Africa\Harare" size="149" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17415,10 +17430,10 @@
   <data_file name="pytz\zoneinfo\America\Denver" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Denver" size="2460" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Detroit" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Detroit" size="2230" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Dominica" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Dominica" size="246" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\America\Edmonton" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Edmonton" size="2332" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\America\Edmonton" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Edmonton" size="2030" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Eirunepe" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Eirunepe" size="642" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\El_Salvador" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\El_Salvador" size="224" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\America\Ensenada" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Ensenada" size="2458" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\America\Ensenada" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Ensenada" size="2906" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Fort_Nelson" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Fort_Nelson" size="2240" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Fort_Wayne" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Fort_Wayne" size="1682" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Fortaleza" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Fortaleza" size="702" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17489,7 +17504,7 @@
   <data_file name="pytz\zoneinfo\America\Resolute" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Resolute" size="2066" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Rio_Branco" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Rio_Branco" size="614" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Rosario" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Rosario" size="1062" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\America\Santa_Isabel" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Santa_Isabel" size="2458" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\America\Santa_Isabel" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Santa_Isabel" size="2906" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Santarem" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Santarem" size="588" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Santiago" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Santiago" size="2515" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Santo_Domingo" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Santo_Domingo" size="458" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17507,15 +17522,15 @@
   <data_file name="pytz\zoneinfo\America\Tegucigalpa" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Tegucigalpa" size="252" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Thule" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Thule" size="1502" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Thunder_Bay" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Thunder_Bay" size="3494" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\America\Tijuana" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Tijuana" size="2458" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\America\Tijuana" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Tijuana" size="2906" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Toronto" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Toronto" size="3494" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Tortola" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Tortola" size="246" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\America\Vancouver" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Vancouver" size="2892" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\America\Vancouver" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Vancouver" size="2590" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Virgin" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Virgin" size="246" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Whitehorse" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Whitehorse" size="1614" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Winnipeg" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Winnipeg" size="2868" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Yakutat" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Yakutat" size="2305" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\America\Yellowknife" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Yellowknife" size="2332" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\America\Yellowknife" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Yellowknife" size="2030" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Argentina\Buenos_Aires" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Argentina\Buenos_Aires" size="1062" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Argentina\Catamarca" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Argentina\Catamarca" size="1062" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\America\Argentina\ComodRivadavia" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\America\Argentina\ComodRivadavia" size="1062" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17588,7 +17603,7 @@
   <data_file name="pytz\zoneinfo\Asia\Gaza" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Gaza" size="3844" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Harbin" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Harbin" size="561" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Hebron" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Hebron" size="3872" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\Asia\Ho_Chi_Minh" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Ho_Chi_Minh" size="337" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\Asia\Ho_Chi_Minh" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Ho_Chi_Minh" size="329" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Hong_Kong" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Hong_Kong" size="1233" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Hovd" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Hovd" size="877" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Irkutsk" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Irkutsk" size="1229" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17627,7 +17642,7 @@
   <data_file name="pytz\zoneinfo\Asia\Qyzylorda" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Qyzylorda" size="1011" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Rangoon" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Rangoon" size="254" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Riyadh" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Riyadh" size="151" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\Asia\Saigon" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Saigon" size="337" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\Asia\Saigon" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Saigon" size="329" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Sakhalin" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Sakhalin" size="1188" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Samarkand" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Samarkand" size="563" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Seoul" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Seoul" size="617" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17636,7 +17651,7 @@
   <data_file name="pytz\zoneinfo\Asia\Srednekolymsk" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Srednekolymsk" size="1194" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Taipei" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Taipei" size="761" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Tashkent" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Tashkent" size="577" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\Asia\Tbilisi" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Tbilisi" size="1021" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\Asia\Tbilisi" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Tbilisi" size="1007" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Tehran" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Tehran" size="1248" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Tel_Aviv" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Tel_Aviv" size="2388" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Asia\Thimbu" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Asia\Thimbu" size="189" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17696,9 +17711,9 @@
   <data_file name="pytz\zoneinfo\Canada\Atlantic" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Canada\Atlantic" size="3424" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Canada\Central" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Canada\Central" size="2868" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Canada\Eastern" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Canada\Eastern" size="3494" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\Canada\Mountain" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Canada\Mountain" size="2332" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\Canada\Mountain" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Canada\Mountain" size="2030" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Canada\Newfoundland" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Canada\Newfoundland" size="3655" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\Canada\Pacific" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Canada\Pacific" size="2892" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\Canada\Pacific" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Canada\Pacific" size="2590" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Canada\Saskatchewan" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Canada\Saskatchewan" size="980" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Canada\Yukon" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Canada\Yukon" size="1614" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Chile\Continental" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Chile\Continental" size="2515" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17750,7 +17765,7 @@
   <data_file name="pytz\zoneinfo\Europe\Bucharest" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Bucharest" size="2184" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Europe\Budapest" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Budapest" size="2368" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Europe\Busingen" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Busingen" size="1909" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\Europe\Chisinau" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Chisinau" size="2390" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\Europe\Chisinau" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Chisinau" size="2424" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Europe\Copenhagen" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Copenhagen" size="2298" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Europe\Dublin" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Dublin" size="3492" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Europe\Gibraltar" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Gibraltar" size="3068" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17790,7 +17805,7 @@
   <data_file name="pytz\zoneinfo\Europe\Stockholm" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Stockholm" size="2298" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Europe\Tallinn" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Tallinn" size="2148" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Europe\Tirane" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Tirane" size="2084" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\Europe\Tiraspol" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Tiraspol" size="2390" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\Europe\Tiraspol" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Tiraspol" size="2424" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Europe\Ulyanovsk" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Ulyanovsk" size="1253" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Europe\Uzhgorod" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Uzhgorod" size="2120" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Europe\Vaduz" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Europe\Vaduz" size="1909" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17813,7 +17828,7 @@
   <data_file name="pytz\zoneinfo\Indian\Mauritius" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Indian\Mauritius" size="227" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Indian\Mayotte" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Indian\Mayotte" size="265" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Indian\Reunion" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Indian\Reunion" size="151" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz\zoneinfo\Mexico\BajaNorte" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Mexico\BajaNorte" size="2458" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz\zoneinfo\Mexico\BajaNorte" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Mexico\BajaNorte" size="2906" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Mexico\BajaSur" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Mexico\BajaSur" size="1060" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Mexico\General" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Mexico\General" size="1222" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz\zoneinfo\Pacific\Apia" source="${sys.prefix}\lib\site-packages\pytz\zoneinfo\Pacific\Apia" size="598" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17955,8 +17970,10 @@
   <included_extension name="indexers.pyd" dest_path="pandas\_libs\window\indexers.pyd" source_path="${sys.prefix}\lib\site-packages\pandas\_libs\window\indexers.cp310-win_amd64.pyd" package="pandas._libs.window" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="writers.pyd" dest_path="pandas\_libs\writers.pyd" source_path="${sys.prefix}\lib\site-packages\pandas\_libs\writers.cp310-win_amd64.pyd" package="pandas._libs" ignored="no" reason="used extension module" tags="copy" />
   <included_dll name="parquet.dll" dest_path="parquet.dll" source_path="${sys.prefix}\lib\site-packages\pyarrow\parquet.dll" package="pyarrow" ignored="no" reason="Used by 'pyarrow\_dataset.pyd'" tags="copy" />
-  <included_dll name="msvcp140-173e0efa998dc33612e518408bfd190c.dll" dest_path="pyarrow.libs\msvcp140-173e0efa998dc33612e518408bfd190c.dll" source_path="${sys.prefix}\lib\site-packages\pyarrow.libs\msvcp140-173e0efa998dc33612e518408bfd190c.dll" package="pyarrow" ignored="no" reason="needed by 'pyarrow'" tags="copy" />
+  <included_dll name="msvcp140-d448dcabdad98c14abc6ff2741df95cd.dll" dest_path="pyarrow.libs\msvcp140-d448dcabdad98c14abc6ff2741df95cd.dll" source_path="${sys.prefix}\lib\site-packages\pyarrow.libs\msvcp140-d448dcabdad98c14abc6ff2741df95cd.dll" package="pyarrow" ignored="no" reason="needed by 'pyarrow'" tags="copy" />
+  <included_dll name="msvcp140_atomic_wait-4bec1bd7c3f445519c6c93c879884a89.dll" dest_path="pyarrow.libs\msvcp140_atomic_wait-4bec1bd7c3f445519c6c93c879884a89.dll" source_path="${sys.prefix}\lib\site-packages\pyarrow.libs\msvcp140_atomic_wait-4bec1bd7c3f445519c6c93c879884a89.dll" package="pyarrow" ignored="no" reason="needed by 'pyarrow'" tags="copy" />
   <included_extension name="_acero.pyd" dest_path="pyarrow\_acero.pyd" source_path="${sys.prefix}\lib\site-packages\pyarrow\_acero.cp310-win_amd64.pyd" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_azurefs.pyd" dest_path="pyarrow\_azurefs.pyd" source_path="${sys.prefix}\lib\site-packages\pyarrow\_azurefs.cp310-win_amd64.pyd" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_compute.pyd" dest_path="pyarrow\_compute.pyd" source_path="${sys.prefix}\lib\site-packages\pyarrow\_compute.cp310-win_amd64.pyd" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_csv.pyd" dest_path="pyarrow\_csv.pyd" source_path="${sys.prefix}\lib\site-packages\pyarrow\_csv.cp310-win_amd64.pyd" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_dataset.pyd" dest_path="pyarrow\_dataset.pyd" source_path="${sys.prefix}\lib\site-packages\pyarrow\_dataset.cp310-win_amd64.pyd" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
@@ -17979,9 +17996,9 @@
   <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.real_prefix}\vcruntime140.dll" package="" ignored="no" reason="Used by '_asyncio.pyd'" tags="copy" />
   <included_dll name="vcruntime140_1.dll" dest_path="vcruntime140_1.dll" source_path="${sys.real_prefix}\vcruntime140_1.dll" package="numpy" ignored="no" reason="Used by 'numpy.libs\msvcp140-263139962577ecda4cd9469ca360a746.dll'" tags="copy" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="987" />
-    <optimization-time pass="2" time="volatile" module_count="987" />
-    <optimization-time pass="all" time="volatile" module_count="987" />
+    <optimization-time pass="1" time="volatile" module_count="988" />
+    <optimization-time pass="2" time="volatile" module_count="988" />
+    <optimization-time pass="all" time="volatile" module_count="988" />
     <code-generation-time time="volatile" module_count="465" />
   </performance-totals>
   <python_binary filename="PandasPyrarrowUsing.exe" backend_resource_mode="coff_obj" reproducible="no" size="volatile" />
@@ -17993,7 +18010,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=e7d3b22d784b599a4ba8add9b71ff987" />
+    <option value="--report-user-provided=pipenv_hash=a53d6f5002c820c3aeaeb868bbff4875" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -18028,9 +18045,9 @@
     <distribution name="packaging" version="24.1" installer="pip" />
     <distribution name="pandas" version="2.3.3" installer="pip" />
     <distribution name="platformdirs" version="4.2.2" installer="pip" />
-    <distribution name="pyarrow" version="23.0.0" installer="pip" />
+    <distribution name="pyarrow" version="25.0.1" installer="pip" />
     <distribution name="python-dateutil" version="2.9.0.post0" installer="pip" />
-    <distribution name="pytz" version="2025.2" installer="pip" />
+    <distribution name="pytz" version="2026.3.post1" installer="pip" />
     <distribution name="setuptools" version="74.1.3" installer="pip" />
     <distribution name="six" version="1.17.0" installer="pip" />
   </distributions>
@@ -18047,7 +18064,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>e7d3b22d784b599a4ba8add9b71ff987</pipenv_hash>
+    <pipenv_hash>a53d6f5002c820c3aeaeb868bbff4875</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}\PandasPyrarrowUsing.dist\PandasPyrarrowUsing.exe" />
 </nuitka-compilation-report>
