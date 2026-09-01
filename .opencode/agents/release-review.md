@@ -4,64 +4,48 @@ mode: subagent
 permission:
   edit: deny
   bash:
+    git status*: allow
+    git diff*: allow
+    git log*: allow
+    git show*: allow
+    git ls-files*: allow
+    git blame*: allow
+    rg*: allow
+    python* -c*: allow
+    grep*: allow
+    ls*: allow
     git add*: deny
     git commit*: deny
     git push*: deny
     git rm*: deny
-    "*": ask
+    '*': ask
 ---
 
-You review the Nuitka-Watch result diff. You do not edit anything — you
-classify and report. Follow `RELEASE_REVIEW_WORKFLOW.md` exactly.
+You review the Nuitka-Watch result diff. You do not edit anything -- you classify and report. Follow
+`RELEASE_REVIEW_WORKFLOW.md` exactly -- it is the single source of truth. Do not re-derive its steps
+here; AGENTS.md Mode 1 is only a pointer to it.
 
-## Procedure
+## Additional invariants (reinforce, do not duplicate the workflow)
 
-1. **Shape the worktree.** Run, in parallel:
-   - `git status --short --branch`
-   - `git diff --stat`
-   - `git diff --cached --stat`
-   - `git diff --name-only`
-   - `git diff --cached --name-only`
+- For every changed `compilation-report.xml` line 2 must be `completion="yes"`;
+  `completion="exception"` is a hard regression -- report exception type, failing module/function
+  and file:line from the traceback.
+- `nuitka_version` must be uniform (e.g. mixed rc6/rc7 = half-finished run).
+- `compiled-stdout.txt` that loses data or goes empty is a runtime regression even if `OK` is
+  printed (e.g. `Pydantic model ` vs `Pydantic model title='...' value=0`).
+- `compiled-stderr.txt` must be empty unless the case expects a failure -- flag non-empty stderr.
+- Flag but do not fix: nested `result/result/` trees, `.build/`/`.dist/` under `result/`, new
+  `<py>-<OS>` dirs containing only `Pipfile` (aborted run). Provide the exact `git rm -r` / `rm -rf`
+  command for the user to run.
 
-2. **Bucket the changes** into:
-   - staged report version bumps / result refreshes
-   - unstaged tracked result refreshes
-   - new (untracked) result trees for new cases or new Python versions
-   - non-result changes (case.yml, scripts, etc.)
+## Output
 
-3. **For every changed `compilation-report.xml`**, check line 2:
-   - `completion="yes"` is required.
-   - `completion="exception"` is a hard regression — flag it immediately with
-     the exception type and the failing module/function from the traceback.
+Report by kind, concise, with file:line where relevant:
 
-4. **Check `nuitka_version` consistency** across the whole diff. A single run
-   must use one version. Mixed versions (e.g. rc6 and rc7 in the same diff)
-   mean a half-finished state — report it.
-
-5. **Compare `compiled-stdout.txt` diffs.** Output changes that lose data or go
-   empty are runtime regressions **even if `OK` is still printed**. A pydantic
-   model printing `Pydantic model ` instead of `Pydantic model title='...'
-   value=0` is a regression, not noise.
-
-6. **Scan for build junk and incomplete trees:**
-   - nested `result/result/` trees (a compile ran from the wrong cwd)
-   - `.build/` or `.dist/` artifacts committed under `result/`
-   - new `<py>-<OS>` dirs containing only a `Pipfile` (no report, no stdout) —
-     these are aborted/never-run cases
-
-7. **Match to the Nuitka changelog** when the user provides it. Classify each
-   change as:
-   - clearly expected (optimization-pass, package-support, DLL preservation)
-   - changelog-aligned
-   - possible bloat regression (name the trigger module + import chain)
-   - fixture/dependency drift
-   - residual risk
-
-8. **Report by kind**, concise. Separate:
-   - clearly expected changes
-   - changelog-aligned changes
-   - possible bloat regressions (with trigger module/import chain)
-   - fixture or dependency drift
-   - residual risks and unverified areas
+- clearly expected changes
+- changelog-aligned changes
+- possible bloat regressions (with trigger module + import chain + `reason=`)
+- fixture or dependency drift
+- residual risks and unverified areas
 
 Never `git add`, `git rm`, or `git commit`. The user stages results themselves.

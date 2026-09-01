@@ -1,6 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": ["AGENTS.md", "RELEASE_REVIEW_WORKFLOW.md"],
+  "plugin": ["@opencode-ai/plugin"],
   "permission": {
     "edit": "ask",
     "bash": {
@@ -10,6 +11,10 @@
       "git show*": "allow",
       "git ls-files*": "allow",
       "git blame*": "allow",
+      "rg*": "allow",
+      "grep*": "allow",
+      "ls*": "allow",
+      "cat*": "allow",
       "git rm*": "ask",
       "git add*": "ask",
       "git commit*": "deny",
@@ -22,6 +27,8 @@
       "./run-watch.sh*": "allow",
       "./auto-stage.sh*": "allow",
       "pipenv *": "allow",
+      "pipenv --venv*": "allow",
+      "python*": "allow",
       "*": "ask"
     }
   }
