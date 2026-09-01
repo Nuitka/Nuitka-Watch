@@ -75,6 +75,28 @@ just the final DLLs.
    rg -n "<module name=|<included_extension|<included_dll|reason=" <path-to-report.xml>
    ```
 
+4b. Check for version- or OS-specific command-line options.
+
+   Some command-line options are only injected for certain Python versions
+   or OSes by the watch tool. Their presence or absence across reports in
+   the same diff is **expected** — it does not indicate a mixed run. But
+   it should be documented so that the reviewer does not mistake them for
+   version inconsistency.
+
+   Known version/OS-specific options:
+
+   | Option                                     | Applies to     | Reason                                                                                                                                          |
+   |--------------------------------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+   | `--devel-no-bytecode-to-compiled-fallback` | Python >= 3.14 | Disables the bytecode-to-compiled fallback for `__annotate__` functions; injected automatically by the watch tool for `python_version >= 0x3E0` |
+
+   When reviewing, note any new entries that should be added to this table.
+
+   Typical command:
+
+   ```powershell
+   git diff --unified=0 -- <path-to-report.xml> | Select-String "option value"
+   ```
+
 5. Do a bloat and transitive-dependency pass for changed standalone
    payloads.
 
