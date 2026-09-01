@@ -4688,15 +4688,22 @@
     </module_usages>
   </module>
   <module name="webencodings" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/webencodings/__init__.py" distribution="webencodings">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="1087" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="208" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="690" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="157" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" />
-      <module_usage name="__future__" finding="absolute" line="15" />
-      <module_usage name="codecs" finding="absolute" line="17" />
-      <module_usage name="webencodings.labels" finding="relative" line="19" />
-      <module_usage name="webencodings.x_user_defined" finding="relative" line="81" />
+      <module_usage name="codecs" finding="absolute" line="14" />
+      <module_usage name="webencodings.custom" finding="relative" line="16" />
+      <module_usage name="webencodings.labels" finding="relative" line="17" />
+    </module_usages>
+  </module>
+  <module name="webencodings.custom" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/webencodings/custom.py" distribution="webencodings">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="1147" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="276" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="codecs" finding="absolute" line="13" />
     </module_usages>
   </module>
   <module name="webencodings.labels" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/webencodings/labels.py" distribution="webencodings">
@@ -4704,15 +4711,6 @@
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <code-generation-time time="volatile" />
     <module_usages />
-  </module>
-  <module name="webencodings.x_user_defined" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.11/site-packages/webencodings/x_user_defined.py" distribution="webencodings">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="8" merged_total="373" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="114" />
-    <code-generation-time time="volatile" />
-    <module_usages>
-      <module_usage name="__future__" finding="absolute" line="14" />
-      <module_usage name="codecs" finding="absolute" line="16" />
-    </module_usages>
   </module>
   <module name="xdrlib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.11/xdrlib.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="1170" />
@@ -5081,7 +5079,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=4b0707ec316d713e4a5d68d70f72b00a" />
+    <option value="--report-user-provided=pipenv_hash=295f41a97128e363b7344d12243e9559" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -5107,7 +5105,7 @@
   <distributions>
     <distribution name="html5lib" version="1.1" installer="pip" />
     <distribution name="six" version="1.17.0" installer="pip" />
-    <distribution name="webencodings" version="0.5.1" installer="pip" />
+    <distribution name="webencodings" version="0.6.1" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}/bin/python" python_flavor="CPython Official" python_version="3.11.6" os_name="Darwin" os_release="26.6.1" arch_name="arm64" filesystem_encoding="utf-8">
     <search_path>
@@ -5119,7 +5117,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>4b0707ec316d713e4a5d68d70f72b00a</pipenv_hash>
+    <pipenv_hash>295f41a97128e363b7344d12243e9559</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}/Html5libUsing.dist/Html5libUsing.bin" />
 </nuitka-compilation-report>
