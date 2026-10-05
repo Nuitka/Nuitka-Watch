@@ -5,6 +5,12 @@ shopt -s expand_aliases
 
 OS=`uname`
 echo "Running on $OS..."
+
+if [ -d "/opt/homebrew/bin" ]
+then
+    PATH="$PATH:/opt/homebrew/bin"
+fi
+
 if [[ $OS = MINGW* ]]
 then
     if ! command -v python3.10 &> /dev/null; then
