@@ -1139,6 +1139,53 @@
       <module_usage name="struct" finding="absolute" line="53" reason="import" />
     </module_usages>
   </module>
+  <module name="cloudpickle" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\cloudpickle\__init__.py" distribution="cloudpickle">
+    <optimization-time pass="1" time="volatile" micro_passes="2" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" reason="import" />
+      <module_usage name="cloudpickle" finding="absolute" line="1" reason="import" />
+      <module_usage name="cloudpickle.cloudpickle" finding="relative" line="1" reason="import fromlist" />
+      <module_usage name="cloudpickle.cloudpickle" finding="relative" line="2" reason="import" />
+    </module_usages>
+  </module>
+  <module name="cloudpickle.cloudpickle" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\cloudpickle\cloudpickle.py" distribution="cloudpickle">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="21" merged_total="4480" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="832" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="_collections_abc" finding="absolute" line="53" reason="import" />
+      <module_usage name="collections" finding="absolute" line="54" reason="import" />
+      <module_usage name="collections.ChainMap" finding="not-found" line="54" reason="import fromlist" />
+      <module_usage name="collections.OrderedDict" finding="not-found" line="54" reason="import fromlist" />
+      <module_usage name="abc" finding="absolute" line="55" reason="import" />
+      <module_usage name="builtins" finding="absolute" line="56" reason="import" />
+      <module_usage name="copyreg" finding="absolute" line="57" reason="import" />
+      <module_usage name="dataclasses" finding="absolute" line="58" reason="import" />
+      <module_usage name="dis" finding="absolute" line="59" reason="import" />
+      <module_usage name="enum" finding="absolute" line="60" reason="import" />
+      <module_usage name="io" finding="absolute" line="61" reason="import" />
+      <module_usage name="itertools" finding="absolute" line="62" reason="import" />
+      <module_usage name="logging" finding="absolute" line="63" reason="import" />
+      <module_usage name="opcode" finding="absolute" line="64" reason="import" />
+      <module_usage name="pickle" finding="absolute" line="65" reason="import" />
+      <module_usage name="pickle" finding="absolute" line="66" reason="import" />
+      <module_usage name="platform" finding="absolute" line="67" reason="import" />
+      <module_usage name="struct" finding="absolute" line="68" reason="import" />
+      <module_usage name="sys" finding="absolute" line="69" reason="import" />
+      <module_usage name="threading" finding="absolute" line="70" reason="import" />
+      <module_usage name="types" finding="absolute" line="71" reason="import" />
+      <module_usage name="typing" finding="absolute" line="72" reason="import" />
+      <module_usage name="uuid" finding="absolute" line="73" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="74" reason="import" />
+      <module_usage name="weakref" finding="absolute" line="75" reason="import" />
+      <module_usage name="types" finding="absolute" line="80" reason="import" />
+      <module_usage name="io" finding="absolute" line="955" reason="import" />
+      <module_usage name="io" finding="absolute" line="978" reason="import" />
+      <module_usage name="io" finding="absolute" line="1542" reason="import" />
+    </module_usages>
+  </module>
   <module name="cmd" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\cmd.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="1766" />
     <optimization-time pass="2" time="volatile" />
@@ -3462,8 +3509,8 @@
     </module_usages>
   </module>
   <module name="joblib._store_backends" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\_store_backends.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="2597" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="509" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="2614" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="512" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="3" reason="import" />
@@ -3569,53 +3616,6 @@
       <module_usage name="os" finding="absolute" line="1" reason="import" />
     </module_usages>
   </module>
-  <module name="joblib.externals.cloudpickle" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\cloudpickle\__init__.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="2" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" />
-    <code-generation-time time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" reason="import" />
-      <module_usage name="joblib.externals.cloudpickle" finding="absolute" line="1" reason="import" />
-      <module_usage name="joblib.externals.cloudpickle.cloudpickle" finding="relative" line="1" reason="import fromlist" />
-      <module_usage name="joblib.externals.cloudpickle.cloudpickle" finding="relative" line="2" reason="import" />
-    </module_usages>
-  </module>
-  <module name="joblib.externals.cloudpickle.cloudpickle" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\cloudpickle\cloudpickle.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="21" merged_total="4480" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="832" />
-    <code-generation-time time="volatile" />
-    <module_usages>
-      <module_usage name="_collections_abc" finding="absolute" line="53" reason="import" />
-      <module_usage name="collections" finding="absolute" line="54" reason="import" />
-      <module_usage name="collections.ChainMap" finding="not-found" line="54" reason="import fromlist" />
-      <module_usage name="collections.OrderedDict" finding="not-found" line="54" reason="import fromlist" />
-      <module_usage name="abc" finding="absolute" line="55" reason="import" />
-      <module_usage name="builtins" finding="absolute" line="56" reason="import" />
-      <module_usage name="copyreg" finding="absolute" line="57" reason="import" />
-      <module_usage name="dataclasses" finding="absolute" line="58" reason="import" />
-      <module_usage name="dis" finding="absolute" line="59" reason="import" />
-      <module_usage name="enum" finding="absolute" line="60" reason="import" />
-      <module_usage name="io" finding="absolute" line="61" reason="import" />
-      <module_usage name="itertools" finding="absolute" line="62" reason="import" />
-      <module_usage name="logging" finding="absolute" line="63" reason="import" />
-      <module_usage name="opcode" finding="absolute" line="64" reason="import" />
-      <module_usage name="pickle" finding="absolute" line="65" reason="import" />
-      <module_usage name="pickle" finding="absolute" line="66" reason="import" />
-      <module_usage name="platform" finding="absolute" line="67" reason="import" />
-      <module_usage name="struct" finding="absolute" line="68" reason="import" />
-      <module_usage name="sys" finding="absolute" line="69" reason="import" />
-      <module_usage name="threading" finding="absolute" line="70" reason="import" />
-      <module_usage name="types" finding="absolute" line="71" reason="import" />
-      <module_usage name="typing" finding="absolute" line="72" reason="import" />
-      <module_usage name="uuid" finding="absolute" line="73" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="74" reason="import" />
-      <module_usage name="weakref" finding="absolute" line="75" reason="import" />
-      <module_usage name="types" finding="absolute" line="80" reason="import" />
-      <module_usage name="io" finding="absolute" line="955" reason="import" />
-      <module_usage name="io" finding="absolute" line="978" reason="import" />
-      <module_usage name="io" finding="absolute" line="1542" reason="import" />
-    </module_usages>
-  </module>
   <module name="joblib.externals.loky" kind="CompiledPythonPackage" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\loky\__init__.py" distribution="joblib">
     <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="8" merged_total="20" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="10" />
@@ -3674,25 +3674,27 @@
     </module_usages>
   </module>
   <module name="joblib.externals.loky.backend.context" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\loky\backend\context.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="996" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="237" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="23" merged_total="1865" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="301" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="os" finding="absolute" line="12" reason="import" />
-      <module_usage name="sys" finding="absolute" line="13" reason="import" />
-      <module_usage name="math" finding="absolute" line="14" reason="import" />
-      <module_usage name="subprocess" finding="absolute" line="15" reason="import" />
-      <module_usage name="traceback" finding="absolute" line="16" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="17" reason="import" />
-      <module_usage name="multiprocessing" finding="absolute" line="18" reason="import" />
-      <module_usage name="multiprocessing" finding="absolute" line="19" reason="import" />
-      <module_usage name="multiprocessing.get_context" finding="not-found" line="19" reason="import fromlist" />
-      <module_usage name="multiprocessing.context" finding="absolute" line="20" reason="import" />
-      <module_usage name="concurrent.futures.process" finding="absolute" line="21" reason="import" />
-      <module_usage name="joblib.externals.loky.backend.process" finding="relative" line="24" reason="import" />
-      <module_usage name="psutil" finding="not-found" line="190" reason="import" />
-      <module_usage name="joblib.externals.loky.backend.queues" finding="relative" line="330" reason="import" />
-      <module_usage name="joblib.externals.loky.backend.queues" finding="relative" line="336" reason="import" />
+      <module_usage name="ctypes" finding="absolute" line="12" reason="import" />
+      <module_usage name="math" finding="absolute" line="13" reason="import" />
+      <module_usage name="multiprocessing" finding="absolute" line="14" reason="import" />
+      <module_usage name="os" finding="absolute" line="15" reason="import" />
+      <module_usage name="subprocess" finding="absolute" line="16" reason="import" />
+      <module_usage name="sys" finding="absolute" line="17" reason="import" />
+      <module_usage name="traceback" finding="absolute" line="18" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="19" reason="import" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="21" reason="import" />
+      <module_usage name="multiprocessing" finding="absolute" line="22" reason="import" />
+      <module_usage name="multiprocessing.get_context" finding="not-found" line="22" reason="import fromlist" />
+      <module_usage name="multiprocessing.context" finding="absolute" line="23" reason="import" />
+      <module_usage name="concurrent.futures.process" finding="absolute" line="24" reason="import" />
+      <module_usage name="joblib.externals.loky.backend.process" finding="relative" line="27" reason="import" />
+      <module_usage name="psutil" finding="not-found" line="205" reason="import" />
+      <module_usage name="joblib.externals.loky.backend.queues" finding="relative" line="442" reason="import" />
+      <module_usage name="joblib.externals.loky.backend.queues" finding="relative" line="448" reason="import" />
     </module_usages>
   </module>
   <module name="joblib.externals.loky.backend.popen_loky_win32" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\loky\backend\popen_loky_win32.py" distribution="joblib">
@@ -3750,6 +3752,9 @@
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="8" merged_total="475" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="103" />
     <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="cloudpickle" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="copyreg" finding="absolute" line="11" reason="import" />
       <module_usage name="io" finding="absolute" line="12" reason="import" />
@@ -3764,33 +3769,35 @@
       <module_usage name="functools" finding="absolute" line="73" reason="import" />
       <module_usage name="joblib.externals.loky.backend" finding="absolute" line="78" reason="import" />
       <module_usage name="joblib.externals.loky.backend._win_reduction" finding="relative" line="78" reason="import fromlist" />
-      <module_usage name="joblib.externals" finding="absolute" line="82" reason="import" />
-      <module_usage name="joblib.externals.cloudpickle" finding="relative" line="82" reason="import fromlist" />
-      <module_usage name="joblib.externals.cloudpickle" finding="absolute" line="110" reason="import" />
-      <module_usage name="joblib.externals.cloudpickle.CloudPickler" finding="not-found" line="110" reason="import fromlist" />
+      <module_usage name="cloudpickle" finding="absolute" line="82" reason="import" />
+      <module_usage name="cloudpickle" finding="absolute" line="110" reason="import" />
+      <module_usage name="cloudpickle.CloudPickler" finding="not-found" line="110" reason="import fromlist" />
       <module_usage name="importlib" finding="absolute" line="113" reason="import" />
       <module_usage name="io" finding="absolute" line="213" reason="import" />
       <module_usage name="multiprocessing.reduction" finding="absolute" line="221" reason="import" />
     </module_usages>
   </module>
   <module name="joblib.externals.loky.backend.resource_tracker" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\loky\backend\resource_tracker.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="19" merged_total="1931" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="314" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="1780" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="351" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="os" finding="absolute" line="41" reason="import" />
-      <module_usage name="shutil" finding="absolute" line="42" reason="import" />
-      <module_usage name="sys" finding="absolute" line="43" reason="import" />
-      <module_usage name="signal" finding="absolute" line="44" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="45" reason="import" />
-      <module_usage name="multiprocessing" finding="absolute" line="46" reason="import" />
-      <module_usage name="multiprocessing.util" finding="relative" line="46" reason="import fromlist" />
-      <module_usage name="multiprocessing.resource_tracker" finding="absolute" line="47" reason="import" />
-      <module_usage name="joblib.externals.loky.backend" finding="absolute" line="51" reason="import" />
-      <module_usage name="joblib.externals.loky.backend.spawn" finding="relative" line="51" reason="import fromlist" />
-      <module_usage name="_winapi" finding="absolute" line="54" reason="import" />
-      <module_usage name="msvcrt" finding="absolute" line="55" reason="import" />
-      <module_usage name="multiprocessing.reduction" finding="absolute" line="56" reason="import" />
+      <module_usage name="os" finding="absolute" line="64" reason="import" />
+      <module_usage name="shutil" finding="absolute" line="65" reason="import" />
+      <module_usage name="sys" finding="absolute" line="66" reason="import" />
+      <module_usage name="signal" finding="absolute" line="67" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="68" reason="import" />
+      <module_usage name="multiprocessing" finding="absolute" line="69" reason="import" />
+      <module_usage name="multiprocessing.util" finding="relative" line="69" reason="import fromlist" />
+      <module_usage name="base64" finding="absolute" line="70" reason="import" />
+      <module_usage name="json" finding="absolute" line="71" reason="import" />
+      <module_usage name="threading" finding="absolute" line="72" reason="import" />
+      <module_usage name="joblib.externals.loky.backend.stdlib_py314_resource_tracker" finding="relative" line="74" reason="import" />
+      <module_usage name="joblib.externals.loky.backend" finding="absolute" line="79" reason="import" />
+      <module_usage name="joblib.externals.loky.backend.spawn" finding="relative" line="79" reason="import fromlist" />
+      <module_usage name="_winapi" finding="absolute" line="82" reason="import" />
+      <module_usage name="msvcrt" finding="absolute" line="83" reason="import" />
+      <module_usage name="multiprocessing.reduction" finding="absolute" line="84" reason="import" />
     </module_usages>
   </module>
   <module name="joblib.externals.loky.backend.spawn" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\loky\backend\spawn.py" distribution="joblib">
@@ -3818,6 +3825,29 @@
       <module_usage name="ntpath" finding="absolute" line="228" reason="import" />
     </module_usages>
   </module>
+  <module name="joblib.externals.loky.backend.stdlib_py314_resource_tracker" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\loky\backend\stdlib_py314_resource_tracker.py" distribution="joblib">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="21" merged_total="2261" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="442" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="base64" finding="absolute" line="18" reason="import" />
+      <module_usage name="os" finding="absolute" line="19" reason="import" />
+      <module_usage name="signal" finding="absolute" line="20" reason="import" />
+      <module_usage name="sys" finding="absolute" line="21" reason="import" />
+      <module_usage name="threading" finding="absolute" line="22" reason="import" />
+      <module_usage name="time" finding="absolute" line="23" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="24" reason="import" />
+      <module_usage name="collections" finding="absolute" line="25" reason="import" />
+      <module_usage name="collections.deque" finding="not-found" line="25" reason="import fromlist" />
+      <module_usage name="types" finding="absolute" line="26" reason="import" />
+      <module_usage name="json" finding="absolute" line="28" reason="import" />
+      <module_usage name="multiprocessing" finding="absolute" line="31" reason="import" />
+      <module_usage name="multiprocessing.spawn" finding="relative" line="31" reason="import fromlist" />
+      <module_usage name="multiprocessing" finding="absolute" line="32" reason="import" />
+      <module_usage name="multiprocessing.util" finding="relative" line="32" reason="import fromlist" />
+      <module_usage name="multiprocessing.resource_tracker" finding="absolute" line="387" reason="import" />
+    </module_usages>
+  </module>
   <module name="joblib.externals.loky.backend.utils" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\loky\backend\utils.py" distribution="joblib">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="7" merged_total="677" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="6" merged_total="125" />
@@ -3838,12 +3868,15 @@
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="20" merged_total="935" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="127" />
     <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="cloudpickle" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="inspect" finding="absolute" line="1" reason="import" />
       <module_usage name="functools" finding="absolute" line="2" reason="import" />
-      <module_usage name="joblib.externals.cloudpickle" finding="absolute" line="3" reason="import" />
-      <module_usage name="joblib.externals.cloudpickle.dumps" finding="not-found" line="3" reason="import fromlist" />
-      <module_usage name="joblib.externals.cloudpickle.loads" finding="not-found" line="3" reason="import fromlist" />
+      <module_usage name="cloudpickle" finding="absolute" line="3" reason="import" />
+      <module_usage name="cloudpickle.dumps" finding="not-found" line="3" reason="import fromlist" />
+      <module_usage name="cloudpickle.loads" finding="not-found" line="3" reason="import fromlist" />
     </module_usages>
   </module>
   <module name="joblib.externals.loky.initializers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\loky\initializers.py" distribution="joblib">
@@ -3857,8 +3890,8 @@
     </module_usages>
   </module>
   <module name="joblib.externals.loky.process_executor" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\loky\process_executor.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="29" merged_total="7470" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="1035" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="29" merged_total="7525" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="1043" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="faulthandler" finding="absolute" line="61" reason="import" />
@@ -3878,6 +3911,7 @@
       <module_usage name="pickle" finding="absolute" line="75" reason="import" />
       <module_usage name="concurrent.futures" finding="absolute" line="76" reason="import" />
       <module_usage name="concurrent.futures.Executor" finding="not-found" line="76" reason="import fromlist" />
+      <module_usage name="concurrent.futures.InvalidStateError" finding="not-found" line="76" reason="import fromlist" />
       <module_usage name="concurrent.futures._base" finding="absolute" line="77" reason="import" />
       <module_usage name="concurrent.futures.process" finding="absolute" line="78" reason="import" />
       <module_usage name="multiprocessing.connection" finding="absolute" line="79" reason="import" />
@@ -3893,8 +3927,8 @@
     </module_usages>
   </module>
   <module name="joblib.externals.loky.reusable_executor" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\externals\loky\reusable_executor.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="22" merged_total="882" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="212" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="22" merged_total="921" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="223" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="time" finding="absolute" line="6" reason="import" />
@@ -3908,20 +3942,22 @@
     </module_usages>
   </module>
   <module name="joblib.func_inspect" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\func_inspect.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="1738" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="26" merged_total="346" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="1851" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="28" merged_total="372" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="9" reason="import" />
-      <module_usage name="inspect" finding="absolute" line="10" reason="import" />
-      <module_usage name="os" finding="absolute" line="11" reason="import" />
-      <module_usage name="re" finding="absolute" line="12" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="13" reason="import" />
-      <module_usage name="itertools" finding="absolute" line="14" reason="import" />
-      <module_usage name="tokenize" finding="absolute" line="15" reason="import" />
-      <module_usage name="joblib.logger" finding="relative" line="17" reason="import" />
-      <module_usage name="urllib" finding="absolute" line="84" reason="import" />
-      <module_usage name="urllib.parse" finding="absolute" line="90" reason="import" />
+      <module_usage name="hashlib" finding="absolute" line="10" reason="import" />
+      <module_usage name="inspect" finding="absolute" line="11" reason="import" />
+      <module_usage name="os" finding="absolute" line="12" reason="import" />
+      <module_usage name="re" finding="absolute" line="13" reason="import" />
+      <module_usage name="types" finding="absolute" line="14" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="15" reason="import" />
+      <module_usage name="itertools" finding="absolute" line="16" reason="import" />
+      <module_usage name="tokenize" finding="absolute" line="17" reason="import" />
+      <module_usage name="joblib.logger" finding="relative" line="19" reason="import" />
+      <module_usage name="urllib" finding="absolute" line="134" reason="import" />
+      <module_usage name="urllib.parse" finding="absolute" line="140" reason="import" />
     </module_usages>
   </module>
   <module name="joblib.hashing" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\hashing.py" distribution="joblib">
@@ -3959,12 +3995,12 @@
       <module_usage name="sys" finding="absolute" line="17" reason="import" />
       <module_usage name="time" finding="absolute" line="18" reason="import" />
       <module_usage name="joblib.disk" finding="relative" line="20" reason="import" />
-      <module_usage name="numpy" finding="absolute" line="49" reason="import" />
-      <module_usage name="ntpath" finding="absolute" line="107" reason="import" />
+      <module_usage name="numpy" finding="absolute" line="97" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="155" reason="import" />
     </module_usages>
   </module>
   <module name="joblib.memory" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\memory.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="3558" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="3559" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="681" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -3989,14 +4025,14 @@
       <module_usage name="joblib.logger" finding="relative" line="40" reason="import" />
       <module_usage name="ntpath" finding="absolute" line="121" reason="import" />
       <module_usage name="ntpath" finding="absolute" line="156" reason="import" />
-      <module_usage name="ntpath" finding="absolute" line="247" reason="import" />
-      <module_usage name="ntpath" finding="absolute" line="1033" reason="import" />
-      <module_usage name="functools" finding="absolute" line="1094" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="252" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="1046" reason="import" />
+      <module_usage name="functools" finding="absolute" line="1107" reason="import" />
     </module_usages>
   </module>
   <module name="joblib.numpy_pickle" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\numpy_pickle.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="2548" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="24" merged_total="503" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="2550" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="506" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="numpy" />
@@ -4006,14 +4042,13 @@
       <module_usage name="os" finding="absolute" line="8" reason="import" />
       <module_usage name="pickle" finding="absolute" line="9" reason="import" />
       <module_usage name="warnings" finding="absolute" line="10" reason="import" />
-      <module_usage name="pathlib" finding="absolute" line="11" reason="import" />
-      <module_usage name="joblib.backports" finding="relative" line="13" reason="import" />
-      <module_usage name="joblib.compressor" finding="relative" line="14" reason="import" />
-      <module_usage name="joblib.numpy_pickle_compat" finding="relative" line="30" reason="import" />
-      <module_usage name="joblib.numpy_pickle_utils" finding="relative" line="35" reason="import" />
-      <module_usage name="numpy" finding="absolute" line="331" reason="import" />
-      <module_usage name="numpy" finding="absolute" line="433" reason="import" />
-      <module_usage name="joblib._memmapping_reducer" finding="relative" line="648" reason="import" />
+      <module_usage name="joblib.backports" finding="relative" line="12" reason="import" />
+      <module_usage name="joblib.compressor" finding="relative" line="13" reason="import" />
+      <module_usage name="joblib.numpy_pickle_compat" finding="relative" line="29" reason="import" />
+      <module_usage name="joblib.numpy_pickle_utils" finding="relative" line="34" reason="import" />
+      <module_usage name="numpy" finding="absolute" line="337" reason="import" />
+      <module_usage name="numpy" finding="absolute" line="439" reason="import" />
+      <module_usage name="joblib._memmapping_reducer" finding="relative" line="654" reason="import" />
     </module_usages>
   </module>
   <module name="joblib.numpy_pickle_compat" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\numpy_pickle_compat.py" distribution="joblib">
@@ -4057,8 +4092,8 @@
     </module_usages>
   </module>
   <module name="joblib.parallel" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\joblib\parallel.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="5207" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="997" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="5248" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="1005" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="8" reason="import" />
@@ -6630,7 +6665,7 @@
     </module_usages>
   </module>
   <module name="numpy.lib._npyio_impl" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\numpy\lib\_npyio_impl.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="136" merged_total="12684" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="136" merged_total="12800" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="121" merged_total="1781" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -6750,7 +6785,7 @@
     </module_usages>
   </module>
   <module name="numpy.lib._twodim_base_impl" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\numpy\lib\_twodim_base_impl.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="830" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="833" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="199" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -8079,7 +8114,7 @@
     <module_usages />
   </module>
   <module name="scipy._lib._util" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\scipy\_lib\_util.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="30" merged_total="5232" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="30" merged_total="5242" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="724" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -10631,7 +10666,7 @@
     </module_usages>
   </module>
   <module name="scipy.linalg._decomp_cossin" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\scipy\linalg\_decomp_cossin.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="78" merged_total="744" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="78" merged_total="747" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="61" merged_total="156" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -23639,8 +23674,8 @@
     </module_usages>
   </module>
   <module name="threadpoolctl" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\threadpoolctl.py" distribution="threadpoolctl">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="24" merged_total="6395" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="1012" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="7778" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="1237" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="14" reason="import" />
@@ -23649,19 +23684,24 @@
       <module_usage name="ctypes" finding="absolute" line="17" reason="import" />
       <module_usage name="itertools" finding="absolute" line="18" reason="import" />
       <module_usage name="textwrap" finding="absolute" line="19" reason="import" />
-      <module_usage name="typing" finding="absolute" line="20" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="21" reason="import" />
-      <module_usage name="ctypes.util" finding="absolute" line="22" reason="import" />
+      <module_usage name="threading" finding="absolute" line="20" reason="import" />
+      <module_usage name="typing" finding="absolute" line="21" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="22" reason="import" />
       <module_usage name="abc" finding="absolute" line="23" reason="import" />
       <module_usage name="functools" finding="absolute" line="24" reason="import" />
       <module_usage name="contextlib" finding="absolute" line="25" reason="import" />
-      <module_usage name="ntpath" finding="absolute" line="548" reason="import" />
-      <module_usage name="ctypes.wintypes" finding="absolute" line="1049" reason="import" />
-      <module_usage name="pyodide_js._module" finding="not-found" line="1127" reason="import" />
-      <module_usage name="argparse" finding="absolute" line="1255" reason="import" />
-      <module_usage name="importlib" finding="absolute" line="1256" reason="import" />
-      <module_usage name="json" finding="absolute" line="1257" reason="import" />
-      <module_usage name="sys" finding="absolute" line="1258" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="688" reason="import" />
+      <module_usage name="ctypes.util" finding="absolute" line="1135" reason="import" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="1296" reason="import" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="1336" reason="import" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="1380" reason="import" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="1452" reason="import" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="1492" reason="import" />
+      <module_usage name="pyodide_js._module" finding="not-found" line="1539" reason="import" />
+      <module_usage name="argparse" finding="absolute" line="1677" reason="import" />
+      <module_usage name="importlib" finding="absolute" line="1678" reason="import" />
+      <module_usage name="json" finding="absolute" line="1679" reason="import" />
+      <module_usage name="sys" finding="absolute" line="1680" reason="import" />
     </module_usages>
   </module>
   <module name="timeit" kind="UncompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\timeit.py">
@@ -23782,7 +23822,7 @@
     </module_usages>
   </module>
   <module name="typing_extensions" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\setuptools\_vendor\typing_extensions.py" distribution="typing_extensions">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="36" merged_total="16458" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="36" merged_total="16461" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="2254" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -24317,10 +24357,10 @@
   <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.real_prefix}\vcruntime140.dll" package="" ignored="no" reason="Used by '_asyncio.pyd'" tags="copy" />
   <included_dll name="vcruntime140_1.dll" dest_path="vcruntime140_1.dll" source_path="${sys.real_prefix}\vcruntime140_1.dll" package="numpy" ignored="no" reason="Used by 'numpy.libs\msvcp140-263139962577ecda4cd9469ca360a746.dll'" tags="copy" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="1524" />
-    <optimization-time pass="2" time="volatile" module_count="1524" />
-    <optimization-time pass="all" time="volatile" module_count="1524" />
-    <code-generation-time time="volatile" module_count="932" />
+    <optimization-time pass="1" time="volatile" module_count="1525" />
+    <optimization-time pass="2" time="volatile" module_count="1525" />
+    <optimization-time pass="all" time="volatile" module_count="1525" />
+    <code-generation-time time="volatile" module_count="933" />
   </performance-totals>
   <python_binary filename="SklearnWalkPackage.exe" backend_resource_mode="coff_obj" reproducible="no" size="volatile" />
   <command_line>
@@ -24337,7 +24377,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=54767c9a4a51a14d68abbc49ce1c592e" />
+    <option value="--report-user-provided=pipenv_hash=6cde4ff343b66d7b0b3e6b7e3ba3f354" />
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
@@ -24361,11 +24401,12 @@
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
-    <distribution name="joblib" version="1.5.3" installer="pip" />
+    <distribution name="cloudpickle" version="3.1.2" installer="pip" />
+    <distribution name="joblib" version="1.6.0" installer="pip" />
     <distribution name="numpy" version="2.2.6" installer="pip" />
     <distribution name="scikit-learn" version="1.7.2" installer="pip" />
     <distribution name="scipy" version="1.15.3" installer="pip" />
-    <distribution name="threadpoolctl" version="3.6.0" installer="pip" />
+    <distribution name="threadpoolctl" version="3.7.0" installer="pip" />
     <distribution name="typing_extensions" version="4.12.2" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}\Scripts\python.exe" python_flavor="CPython Official" python_version="3.10.11" os_name="Windows" os_release="11" arch_name="x86_64" filesystem_encoding="utf-8">
@@ -24381,7 +24422,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>54767c9a4a51a14d68abbc49ce1c592e</pipenv_hash>
+    <pipenv_hash>6cde4ff343b66d7b0b3e6b7e3ba3f354</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}\SklearnWalkPackage.dist\SklearnWalkPackage.exe" />
 </nuitka-compilation-report>

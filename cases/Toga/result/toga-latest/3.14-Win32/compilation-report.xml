@@ -1330,6 +1330,23 @@
       <module_usage name="PIL.Image" finding="relative" line="11" reason="import fromlist" />
     </module_usages>
   </module>
+  <module name="WebView2" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\WebView2\__init__.py" distribution="dotnet-WebView2.WinForms">
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="pythonnet" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" reason="import" />
+      <module_usage name="os" finding="absolute" line="1" reason="import" />
+      <module_usage name="platform" finding="absolute" line="2" reason="import" />
+      <module_usage name="importlib.metadata" finding="absolute" line="3" reason="import" />
+      <module_usage name="pathlib" finding="absolute" line="4" reason="import" />
+      <module_usage name="pathlib.Path" finding="not-found" line="4" reason="import fromlist" />
+      <module_usage name="clr" finding="absolute" line="6" reason="import" />
+    </module_usages>
+  </module>
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="8" merged_total="81" />
     <optimization-time pass="2" time="volatile" />
@@ -3013,7 +3030,7 @@
   </module>
   <module name="cffi.api" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\cffi\api.py" distribution="cffi">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_cffi_recompiler" tags_used="use_cffi_recompiler" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="53" merged_total="5822" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="53" merged_total="5819" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="797" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -3722,7 +3739,7 @@
       <module_usage name="re" finding="absolute" line="283" reason="import" />
     </module_usages>
   </module>
-  <module name="ctypes" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\ctypes\__init__.py">
+  <module name="ctypes" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}\Lib\ctypes\__init__.py">
     <plugin-influence name="implicit-imports" influence="condition-used" condition="has_builtin_module(&quot;_ctypes&quot;)" tags_used="has_builtin_module" result="false" />
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="17" merged_total="8517" />
     <optimization-time pass="2" time="volatile" />
@@ -6567,6 +6584,101 @@
       <module_usage name="argparse" finding="absolute" line="1479" reason="import" />
     </module_usages>
   </module>
+  <module name="platformdirs" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\platformdirs\__init__.py" distribution="platformdirs">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="3" merged_total="509" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="10" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" reason="import" />
+      <module_usage name="__future__" finding="absolute" line="12" reason="import" />
+      <module_usage name="os" finding="absolute" line="14" reason="import" />
+      <module_usage name="sys" finding="absolute" line="15" reason="import" />
+      <module_usage name="platformdirs.api" finding="relative" line="18" reason="import" />
+      <module_usage name="platformdirs.version" finding="relative" line="19" reason="import" />
+      <module_usage name="platformdirs.version" finding="relative" line="20" reason="import" />
+      <module_usage name="platformdirs.windows" finding="absolute" line="27" reason="import" />
+      <module_usage name="platformdirs.android" finding="absolute" line="44" reason="import" />
+      <module_usage name="platformdirs.android" finding="absolute" line="47" reason="import" />
+    </module_usages>
+  </module>
+  <module name="platformdirs.android" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\platformdirs\android.py" distribution="platformdirs">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="34" merged_total="1118" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="34" merged_total="209" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" reason="import" />
+      <module_usage name="os" finding="absolute" line="5" reason="import" />
+      <module_usage name="re" finding="absolute" line="6" reason="import" />
+      <module_usage name="sys" finding="absolute" line="7" reason="import" />
+      <module_usage name="contextlib" finding="absolute" line="8" reason="import" />
+      <module_usage name="functools" finding="absolute" line="9" reason="import" />
+      <module_usage name="typing" finding="absolute" line="10" reason="import" />
+      <module_usage name="platformdirs.api" finding="relative" line="12" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="72" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="140" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="162" reason="import" />
+      <module_usage name="jnius" finding="not-found" line="243" reason="import" />
+      <module_usage name="jnius" finding="not-found" line="257" reason="import" />
+    </module_usages>
+  </module>
+  <module name="platformdirs.api" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\platformdirs\api.py" distribution="platformdirs">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="118" merged_total="2487" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="118" merged_total="374" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" reason="import" />
+      <module_usage name="os" finding="absolute" line="5" reason="import" />
+      <module_usage name="abc" finding="absolute" line="6" reason="import" />
+      <module_usage name="contextlib" finding="absolute" line="7" reason="import" />
+      <module_usage name="copy" finding="absolute" line="8" reason="import" />
+      <module_usage name="pathlib" finding="absolute" line="9" reason="import" />
+      <module_usage name="pathlib.Path" finding="not-found" line="9" reason="import fromlist" />
+      <module_usage name="ntpath" finding="absolute" line="145" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="684" reason="import" />
+    </module_usages>
+  </module>
+  <module name="platformdirs.version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\platformdirs\version.py" distribution="platformdirs">
+    <optimization-time pass="1" time="volatile" micro_passes="4" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" reason="import" />
+    </module_usages>
+  </module>
+  <module name="platformdirs.windows" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\platformdirs\windows.py" distribution="platformdirs">
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="35" merged_total="1327" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="260" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="5" reason="import" />
+      <module_usage name="os" finding="absolute" line="6" reason="import" />
+      <module_usage name="sys" finding="absolute" line="7" reason="import" />
+      <module_usage name="functools" finding="absolute" line="8" reason="import" />
+      <module_usage name="pathlib" finding="absolute" line="9" reason="import" />
+      <module_usage name="pathlib.Path" finding="not-found" line="9" reason="import fromlist" />
+      <module_usage name="typing" finding="absolute" line="10" reason="import" />
+      <module_usage name="platformdirs.api" finding="relative" line="12" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="49" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="96" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="105" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="142" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="172" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="187" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="220" reason="import" />
+      <module_usage name="ntpath" finding="absolute" line="226" reason="import" />
+      <module_usage name="winreg" finding="absolute" line="284" reason="import" />
+      <module_usage name="ctypes" finding="absolute" line="321" reason="import" />
+      <module_usage name="ctypes.HRESULT" finding="not-found" line="321" reason="import fromlist" />
+      <module_usage name="ctypes.POINTER" finding="not-found" line="321" reason="import fromlist" />
+      <module_usage name="ctypes.Structure" finding="not-found" line="321" reason="import fromlist" />
+      <module_usage name="ctypes.WinDLL" finding="not-found" line="321" reason="import fromlist" />
+      <module_usage name="ctypes.byref" finding="not-found" line="321" reason="import fromlist" />
+      <module_usage name="ctypes.wintypes" finding="relative" line="321" reason="import fromlist" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="321" reason="import" />
+      <module_usage name="ctypes" finding="absolute" line="383" reason="import" />
+    </module_usages>
+  </module>
   <module name="poplib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}\Lib\poplib.py">
     <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="1337" />
     <optimization-time pass="2" time="volatile" />
@@ -7357,7 +7469,7 @@
     </module_usages>
   </module>
   <module name="toga.app" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga\app.py" distribution="toga,toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="59" merged_total="4537" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="60" merged_total="4542" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="33" merged_total="528" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -7385,8 +7497,8 @@
       <module_usage name="toga.statusicons" finding="absolute" line="22" reason="import" />
       <module_usage name="toga.window" finding="absolute" line="23" reason="import" />
       <module_usage name="importlib.metadata" finding="absolute" line="262" reason="import" />
-      <module_usage name="toga.hardware.camera" finding="relative" line="715" reason="import" />
-      <module_usage name="toga.hardware.location" finding="relative" line="739" reason="import" />
+      <module_usage name="toga.hardware.camera" finding="relative" line="724" reason="import" />
+      <module_usage name="toga.hardware.location" finding="relative" line="748" reason="import" />
     </module_usages>
   </module>
   <module name="toga.colors" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga\colors.py" distribution="toga,toga-core">
@@ -7480,8 +7592,8 @@
     </module_usages>
   </module>
   <module name="toga.handlers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga\handlers.py" distribution="toga,toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="19" merged_total="1879" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="245" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="20" merged_total="1895" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="246" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
@@ -7576,9 +7688,12 @@
     </module_usages>
   </module>
   <module name="toga.paths" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga\paths.py" distribution="toga,toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="190" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="35" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="16" merged_total="418" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="74" />
     <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="platformdirs" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="functools" finding="absolute" line="1" reason="import" />
       <module_usage name="sys" finding="absolute" line="2" reason="import" />
@@ -7586,7 +7701,10 @@
       <module_usage name="pathlib.Path" finding="not-found" line="3" reason="import fromlist" />
       <module_usage name="toga" finding="absolute" line="5" reason="import" />
       <module_usage name="toga.platform" finding="absolute" line="6" reason="import" />
-      <module_usage name="toga.app" finding="absolute" line="35" reason="import" />
+      <module_usage name="toga.app" finding="absolute" line="21" reason="import" />
+      <module_usage name="toga.app" finding="absolute" line="23" reason="import" />
+      <module_usage name="platformdirs" finding="absolute" line="31" reason="import" />
+      <module_usage name="toga.app" finding="absolute" line="91" reason="import" />
     </module_usages>
   </module>
   <module name="toga.platform" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga\platform.py" distribution="toga,toga-core">
@@ -7758,8 +7876,8 @@
     </module_usages>
   </module>
   <module name="toga.style.layout" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga\style\layout.py" distribution="toga,toga-core">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="48" merged_total="3139" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="43" merged_total="507" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="48" merged_total="3132" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="43" merged_total="505" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="travertino" />
@@ -7860,8 +7978,8 @@
       <module_usage name="toga" finding="absolute" line="5" reason="import" />
       <module_usage name="toga.handlers" finding="absolute" line="6" reason="import" />
       <module_usage name="toga.widgets.base" finding="relative" line="8" reason="import" />
-      <module_usage name="toga.icons" finding="absolute" line="122" reason="import" />
-      <module_usage name="toga.icons" finding="absolute" line="133" reason="import" />
+      <module_usage name="toga.icons" finding="absolute" line="123" reason="import" />
+      <module_usage name="toga.icons" finding="absolute" line="134" reason="import" />
     </module_usages>
   </module>
   <module name="toga.widgets.canvas" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga\widgets\canvas\__init__.py" distribution="toga,toga-core">
@@ -7894,8 +8012,8 @@
       <module_usage name="toga.widgets.base" finding="relative" line="22" reason="import" />
       <module_usage name="toga.widgets.canvas.drawingaction" finding="relative" line="23" reason="import" />
       <module_usage name="toga.widgets.canvas.state" finding="relative" line="31" reason="import" />
-      <module_usage name="toga.images" finding="absolute" line="391" reason="import" />
-      <module_usage name="toga.images" finding="absolute" line="399" reason="import" />
+      <module_usage name="toga.images" finding="absolute" line="389" reason="import" />
+      <module_usage name="toga.images" finding="absolute" line="397" reason="import" />
     </module_usages>
   </module>
   <module name="toga.widgets.canvas.drawingaction" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga\widgets\canvas\drawingaction.py" distribution="toga,toga-core">
@@ -7949,8 +8067,8 @@
       <module_usage name="toga.images" finding="absolute" line="13" reason="import" />
       <module_usage name="toga.widgets.canvas.drawingaction" finding="relative" line="15" reason="import" />
       <module_usage name="toga.widgets.canvas.geometry" finding="relative" line="34" reason="import" />
-      <module_usage name="toga.widgets.canvas.canvas" finding="relative" line="921" reason="import" />
-      <module_usage name="toga.widgets.canvas.canvas" finding="relative" line="940" reason="import" />
+      <module_usage name="toga.widgets.canvas.canvas" finding="relative" line="920" reason="import" />
+      <module_usage name="toga.widgets.canvas.canvas" finding="relative" line="939" reason="import" />
     </module_usages>
   </module>
   <module name="toga.widgets.imageview" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga\widgets\imageview.py" distribution="toga,toga-core">
@@ -8062,14 +8180,14 @@
       <module_usage name="clr" finding="absolute" line="65" reason="import" />
       <module_usage name="toga_winforms.libs.user32" finding="relative" line="67" reason="import" />
       <module_usage name="toga_winforms.libs.win32constants" finding="relative" line="68" reason="import" />
-      <module_usage name="System.Windows.Forms" finding="not-found" line="95" reason="import" />
+      <module_usage name="System.Windows.Forms" finding="not-found" line="103" reason="import" />
       <module_usage name="toga_winforms.resources" finding="absolute" reason="implicit import: According to 'implicit-imports' configuration." />
       <module_usage name="ctypes.wintypes" finding="absolute" reason="implicit import: According to 'implicit-imports' configuration." />
     </module_usages>
   </module>
   <module name="toga_winforms.app" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\app.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="26" merged_total="1146" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="149" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="24" merged_total="1068" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="139" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="toga" />
@@ -8081,16 +8199,15 @@
       <module_usage name="sys" finding="absolute" line="3" reason="import" />
       <module_usage name="threading" finding="absolute" line="4" reason="import" />
       <module_usage name="System.Windows.Forms" finding="not-found" line="6" reason="import" />
-      <module_usage name="Microsoft.Win32" finding="not-found" line="7" reason="import" />
-      <module_usage name="System" finding="not-found" line="8" reason="import" />
-      <module_usage name="System.Media" finding="not-found" line="9" reason="import" />
-      <module_usage name="System.Net" finding="not-found" line="10" reason="import" />
-      <module_usage name="System.Windows.Threading" finding="not-found" line="11" reason="import" />
-      <module_usage name="toga.dialogs" finding="absolute" line="13" reason="import" />
-      <module_usage name="toga.handlers" finding="absolute" line="14" reason="import" />
-      <module_usage name="toga_winforms.libs.proactor" finding="relative" line="16" reason="import" />
-      <module_usage name="toga_winforms.screens" finding="relative" line="17" reason="import" />
-      <module_usage name="Microsoft.Win32" finding="not-found" line="219" reason="import" />
+      <module_usage name="System" finding="not-found" line="7" reason="import" />
+      <module_usage name="System.Media" finding="not-found" line="8" reason="import" />
+      <module_usage name="System.Net" finding="not-found" line="9" reason="import" />
+      <module_usage name="System.Windows.Threading" finding="not-found" line="10" reason="import" />
+      <module_usage name="toga.dialogs" finding="absolute" line="12" reason="import" />
+      <module_usage name="toga.handlers" finding="absolute" line="13" reason="import" />
+      <module_usage name="toga_winforms.libs.proactor" finding="relative" line="15" reason="import" />
+      <module_usage name="toga_winforms.screens" finding="relative" line="16" reason="import" />
+      <module_usage name="Microsoft.Win32" finding="not-found" line="193" reason="import" />
     </module_usages>
   </module>
   <module name="toga_winforms.colors" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\colors.py" distribution="toga-winforms">
@@ -8138,8 +8255,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.dialogs" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\dialogs.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="26" merged_total="2861" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="389" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="2907" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="396" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="toga" />
@@ -8154,7 +8271,6 @@
       <module_usage name="System.Windows.Forms" finding="not-found" line="10" reason="import" />
       <module_usage name="toga.handlers" finding="absolute" line="12" reason="import" />
       <module_usage name="toga_winforms.libs.user32" finding="relative" line="14" reason="import" />
-      <module_usage name="toga_winforms.libs.win32constants" finding="relative" line="15" reason="import" />
     </module_usages>
   </module>
   <module name="toga_winforms.factory" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\factory.py" distribution="toga-winforms">
@@ -8207,8 +8323,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.fonts" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\fonts.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="11" merged_total="663" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="92" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="11" merged_total="698" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="97" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="toga" />
@@ -8217,20 +8333,21 @@
     <module_usages>
       <module_usage name="System" finding="not-found" line="1" reason="import" />
       <module_usage name="System.Drawing" finding="not-found" line="2" reason="import" />
-      <module_usage name="System.Drawing.Text" finding="not-found" line="8" reason="import" />
-      <module_usage name="System.IO" finding="not-found" line="9" reason="import" />
-      <module_usage name="System.Runtime.InteropServices" finding="not-found" line="10" reason="import" />
-      <module_usage name="toga.fonts" finding="absolute" line="12" reason="import" />
+      <module_usage name="System.Drawing.Text" finding="not-found" line="9" reason="import" />
+      <module_usage name="System.IO" finding="not-found" line="10" reason="import" />
+      <module_usage name="System.Runtime.InteropServices" finding="not-found" line="11" reason="import" />
+      <module_usage name="toga.fonts" finding="absolute" line="13" reason="import" />
     </module_usages>
   </module>
   <module name="toga_winforms.icons" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\icons.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="7" merged_total="130" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="8" merged_total="136" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="3" merged_total="16" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="1" reason="import" />
-      <module_usage name="System" finding="not-found" line="3" reason="import" />
-      <module_usage name="System.Drawing" finding="not-found" line="4" reason="import" />
+      <module_usage name="typing" finding="absolute" line="2" reason="import" />
+      <module_usage name="System" finding="not-found" line="4" reason="import" />
+      <module_usage name="System.Drawing" finding="not-found" line="5" reason="import" />
     </module_usages>
   </module>
   <module name="toga_winforms.images" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\images.py" distribution="toga-winforms">
@@ -8252,7 +8369,7 @@
     </module_usages>
   </module>
   <module name="toga_winforms.keys" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\keys.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="746" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="745" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="185" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -8288,23 +8405,6 @@
       <module_usage name="ctypes.wintypes" finding="absolute" line="2" reason="import" />
       <module_usage name="toga_winforms.libs.win32misc" finding="relative" line="4" reason="import" />
       <module_usage name="toga_winforms.libs.win32structures" finding="relative" line="5" reason="import" />
-    </module_usages>
-  </module>
-  <module name="toga_winforms.libs.extensions" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\extensions.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="12" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="4" />
-    <code-generation-time time="volatile" />
-    <distribution-usages>
-      <distribution-usage name="pythonnet" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" reason="import" />
-      <module_usage name="platform" finding="absolute" line="2" reason="import" />
-      <module_usage name="pathlib" finding="absolute" line="3" reason="import" />
-      <module_usage name="pathlib.Path" finding="not-found" line="3" reason="import fromlist" />
-      <module_usage name="clr" finding="absolute" line="5" reason="import" />
-      <module_usage name="Microsoft.Web.WebView2.Core" finding="not-found" line="30" reason="import" />
-      <module_usage name="Microsoft.Web.WebView2.WinForms" finding="not-found" line="34" reason="import" />
     </module_usages>
   </module>
   <module name="toga_winforms.libs.fonts" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\fonts.py" distribution="toga-winforms">
@@ -8350,8 +8450,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.libs.proactor" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\proactor.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="1040" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="240" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="1081" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="249" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="toga" />
@@ -8397,22 +8497,22 @@
       <module_usage name="ctypes.wintypes" finding="absolute" line="1" reason="import" />
     </module_usages>
   </module>
-  <module name="toga_winforms.libs.user32" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\user32.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="16" merged_total="155" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="37" />
+  <module name="toga_winforms.libs.user32" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\user32.py" distribution="toga-winforms">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="17" merged_total="118" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="37" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="ctypes" finding="absolute" line="1" reason="import" />
       <module_usage name="ctypes.POINTER" finding="not-found" line="1" reason="import fromlist" />
+      <module_usage name="ctypes.c_int" finding="not-found" line="1" reason="import fromlist" />
       <module_usage name="ctypes.c_void_p" finding="not-found" line="1" reason="import fromlist" />
       <module_usage name="ctypes.windll" finding="not-found" line="1" reason="import fromlist" />
       <module_usage name="ctypes.wintypes" finding="absolute" line="2" reason="import" />
-      <module_usage name="System" finding="not-found" line="21" reason="import" />
-      <module_usage name="toga_winforms.libs.win32misc" finding="relative" line="23" reason="import" />
-      <module_usage name="toga_winforms.libs.win32structures" finding="relative" line="24" reason="import" />
+      <module_usage name="toga_winforms.libs.win32misc" finding="relative" line="22" reason="import" />
+      <module_usage name="toga_winforms.libs.win32structures" finding="relative" line="23" reason="import" />
     </module_usages>
   </module>
-  <module name="toga_winforms.libs.win32constants" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\win32constants.py" distribution="toga-winforms">
+  <module name="toga_winforms.libs.win32constants" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\win32constants.py" distribution="toga-winforms">
     <optimization-time pass="1" time="volatile" micro_passes="2" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
     <code-generation-time time="volatile" />
@@ -8437,9 +8537,9 @@
       <module_usage name="toga_winforms.libs.win32structures" finding="relative" line="6" reason="import" />
     </module_usages>
   </module>
-  <module name="toga_winforms.libs.win32structures" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\win32structures.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="10" merged_total="887" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="435" />
+  <module name="toga_winforms.libs.win32structures" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\win32structures.py" distribution="toga-winforms">
+    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="10" merged_total="938" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="460" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="ctypes.wintypes" finding="absolute" line="1" reason="import" />
@@ -8472,18 +8572,16 @@
     </module_usages>
   </module>
   <module name="toga_winforms.paths" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\paths.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="83" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="2" merged_total="12" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="9" merged_total="106" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="30" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="toga" />
       <distribution-usage name="toga-core" />
     </distribution-usages>
     <module_usages>
-      <module_usage name="functools" finding="absolute" line="1" reason="import" />
-      <module_usage name="pathlib" finding="absolute" line="2" reason="import" />
-      <module_usage name="pathlib.Path" finding="not-found" line="2" reason="import fromlist" />
-      <module_usage name="toga.app" finding="absolute" line="4" reason="import" />
+      <module_usage name="toga.app" finding="absolute" line="1" reason="import" />
+      <module_usage name="toga.paths" finding="absolute" line="2" reason="import" />
     </module_usages>
   </module>
   <module name="toga_winforms.resources" kind="CompiledPythonPackage" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\resources\__init__.py" distribution="toga-winforms">
@@ -8495,8 +8593,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.screens" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\screens.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="13" merged_total="255" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="81" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="14" merged_total="263" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="82" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="toga" />
@@ -8504,16 +8602,17 @@
     </distribution-usages>
     <module_usages>
       <module_usage name="ctypes.wintypes" finding="absolute" line="1" reason="import" />
-      <module_usage name="System.Drawing" finding="not-found" line="3" reason="import" />
-      <module_usage name="System.IO" finding="not-found" line="10" reason="import" />
-      <module_usage name="toga.app" finding="absolute" line="12" reason="import" />
-      <module_usage name="toga.screens" finding="absolute" line="13" reason="import" />
-      <module_usage name="toga.types" finding="absolute" line="14" reason="import" />
-      <module_usage name="toga_winforms.libs" finding="relative" line="16" reason="import" />
-      <module_usage name="toga_winforms.libs.shcore" finding="relative" line="16" reason="import fromlist" />
-      <module_usage name="toga_winforms.libs.user32" finding="relative" line="16" reason="import fromlist" />
-      <module_usage name="toga_winforms.libs.win32constants" finding="relative" line="17" reason="import" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="18" reason="import" />
+      <module_usage name="typing" finding="absolute" line="2" reason="import" />
+      <module_usage name="System.Drawing" finding="not-found" line="4" reason="import" />
+      <module_usage name="System.IO" finding="not-found" line="11" reason="import" />
+      <module_usage name="toga.app" finding="absolute" line="13" reason="import" />
+      <module_usage name="toga.screens" finding="absolute" line="14" reason="import" />
+      <module_usage name="toga.types" finding="absolute" line="15" reason="import" />
+      <module_usage name="toga_winforms.libs" finding="relative" line="17" reason="import" />
+      <module_usage name="toga_winforms.libs.shcore" finding="relative" line="17" reason="import fromlist" />
+      <module_usage name="toga_winforms.libs.user32" finding="relative" line="17" reason="import fromlist" />
+      <module_usage name="toga_winforms.libs.win32constants" finding="relative" line="18" reason="import" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="19" reason="import" />
     </module_usages>
   </module>
   <module name="toga_winforms.statusicons" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\statusicons.py" distribution="toga-winforms">
@@ -8554,14 +8653,15 @@
       <module_usage name="io" finding="absolute" line="3" reason="import" />
       <module_usage name="pathlib" finding="absolute" line="4" reason="import" />
       <module_usage name="pathlib.Path" finding="not-found" line="4" reason="import fromlist" />
-      <module_usage name="System.Windows.Forms" finding="not-found" line="6" reason="import" />
-      <module_usage name="PIL" finding="absolute" line="7" reason="import" />
-      <module_usage name="PIL.Image" finding="relative" line="7" reason="import fromlist" />
-      <module_usage name="PIL.ImageSequence" finding="relative" line="7" reason="import fromlist" />
-      <module_usage name="System.Drawing" finding="not-found" line="8" reason="import" />
-      <module_usage name="System.IO" finding="not-found" line="9" reason="import" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="11" reason="import" />
-      <module_usage name="io" finding="absolute" line="38" reason="import" />
+      <module_usage name="typing" finding="absolute" line="5" reason="import" />
+      <module_usage name="System.Windows.Forms" finding="not-found" line="7" reason="import" />
+      <module_usage name="PIL" finding="absolute" line="8" reason="import" />
+      <module_usage name="PIL.Image" finding="relative" line="8" reason="import fromlist" />
+      <module_usage name="PIL.ImageSequence" finding="relative" line="8" reason="import fromlist" />
+      <module_usage name="System.Drawing" finding="not-found" line="9" reason="import" />
+      <module_usage name="System.IO" finding="not-found" line="10" reason="import" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="12" reason="import" />
+      <module_usage name="io" finding="absolute" line="39" reason="import" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\widgets\base.py" distribution="toga-winforms">
@@ -8613,8 +8713,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.canvas" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\widgets\canvas.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="36" merged_total="1700" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="390" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="36" merged_total="1708" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="392" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="toga" />
@@ -8691,8 +8791,8 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.divider" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\widgets\divider.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="11" merged_total="120" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="33" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="11" merged_total="117" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="32" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="travertino" />
@@ -8737,10 +8837,11 @@
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.mapview" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\widgets\mapview.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="447" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="103" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="443" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="102" />
     <code-generation-time time="volatile" />
     <distribution-usages>
+      <distribution-usage name="dotnet-WebView2.WinForms" />
       <distribution-usage name="toga" />
       <distribution-usage name="toga-core" />
     </distribution-usages>
@@ -8750,15 +8851,17 @@
       <module_usage name="concurrent.futures" finding="absolute" line="3" reason="import" />
       <module_usage name="concurrent.futures.Future" finding="not-found" line="3" reason="import fromlist" />
       <module_usage name="System.Windows.Forms" finding="not-found" line="5" reason="import" />
-      <module_usage name="System" finding="not-found" line="6" reason="import" />
-      <module_usage name="System.Drawing" finding="not-found" line="7" reason="import" />
-      <module_usage name="System.Threading.Tasks" finding="not-found" line="8" reason="import" />
-      <module_usage name="toga" finding="absolute" line="10" reason="import" />
-      <module_usage name="toga.handlers" finding="absolute" line="11" reason="import" />
-      <module_usage name="toga.types" finding="absolute" line="12" reason="import" />
-      <module_usage name="toga_winforms.libs.extensions" finding="absolute" line="13" reason="import" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="19" reason="import" />
-      <module_usage name="toga.app" finding="absolute" line="95" reason="import" />
+      <module_usage name="WebView2" finding="absolute" line="6" reason="import" />
+      <module_usage name="Microsoft.Web.WebView2.Core" finding="not-found" line="7" reason="import" />
+      <module_usage name="Microsoft.Web.WebView2.WinForms" finding="not-found" line="10" reason="import" />
+      <module_usage name="System" finding="not-found" line="14" reason="import" />
+      <module_usage name="System.Drawing" finding="not-found" line="15" reason="import" />
+      <module_usage name="System.Threading.Tasks" finding="not-found" line="16" reason="import" />
+      <module_usage name="toga" finding="absolute" line="18" reason="import" />
+      <module_usage name="toga.handlers" finding="absolute" line="19" reason="import" />
+      <module_usage name="toga.types" finding="absolute" line="20" reason="import" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="22" reason="import" />
+      <module_usage name="toga.app" finding="absolute" line="98" reason="import" />
     </module_usages>
   </module>
   <module name="toga_winforms.widgets.multilinetextinput" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\widgets\multilinetextinput.py" distribution="toga-winforms">
@@ -9033,6 +9136,7 @@
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="163" />
     <code-generation-time time="volatile" />
     <distribution-usages>
+      <distribution-usage name="dotnet-WebView2.WinForms" />
       <distribution-usage name="toga" />
       <distribution-usage name="toga-core" />
     </distribution-usages>
@@ -9043,22 +9147,24 @@
       <module_usage name="webbrowser" finding="absolute" line="4" reason="import" />
       <module_usage name="http.cookiejar" finding="absolute" line="5" reason="import" />
       <module_usage name="System.Windows.Forms" finding="not-found" line="7" reason="import" />
-      <module_usage name="System" finding="not-found" line="8" reason="import" />
-      <module_usage name="System.Collections.Generic" finding="not-found" line="13" reason="import" />
-      <module_usage name="System.Drawing" finding="not-found" line="14" reason="import" />
-      <module_usage name="System.Threading.Tasks" finding="not-found" line="15" reason="import" />
-      <module_usage name="toga" finding="absolute" line="17" reason="import" />
-      <module_usage name="toga.handlers" finding="absolute" line="18" reason="import" />
-      <module_usage name="toga.widgets.webview" finding="absolute" line="19" reason="import" />
-      <module_usage name="toga_winforms.libs.extensions" finding="absolute" line="20" reason="import" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="27" reason="import" />
-      <module_usage name="toga.app" finding="absolute" line="94" reason="import" />
-      <module_usage name="toga.app" finding="absolute" line="108" reason="import" />
+      <module_usage name="WebView2" finding="absolute" line="8" reason="import" />
+      <module_usage name="Microsoft.Web.WebView2.Core" finding="not-found" line="9" reason="import" />
+      <module_usage name="Microsoft.Web.WebView2.WinForms" finding="not-found" line="13" reason="import" />
+      <module_usage name="System" finding="not-found" line="17" reason="import" />
+      <module_usage name="System.Collections.Generic" finding="not-found" line="22" reason="import" />
+      <module_usage name="System.Drawing" finding="not-found" line="23" reason="import" />
+      <module_usage name="System.Threading.Tasks" finding="not-found" line="24" reason="import" />
+      <module_usage name="toga" finding="absolute" line="26" reason="import" />
+      <module_usage name="toga.handlers" finding="absolute" line="27" reason="import" />
+      <module_usage name="toga.widgets.webview" finding="absolute" line="28" reason="import" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="30" reason="import" />
+      <module_usage name="toga.app" finding="absolute" line="97" reason="import" />
+      <module_usage name="toga.app" finding="absolute" line="111" reason="import" />
     </module_usages>
   </module>
   <module name="toga_winforms.window" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\toga_winforms\window.py" distribution="toga-winforms">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="39" merged_total="1977" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="39" merged_total="304" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="44" merged_total="2387" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="44" merged_total="371" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="toga" />
@@ -9066,20 +9172,30 @@
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
-      <module_usage name="System.Windows.Forms" finding="not-found" line="5" reason="import" />
-      <module_usage name="System.Drawing" finding="not-found" line="6" reason="import" />
-      <module_usage name="System.Drawing.Imaging" finding="not-found" line="7" reason="import" />
-      <module_usage name="System.IO" finding="not-found" line="8" reason="import" />
-      <module_usage name="toga.app" finding="absolute" line="10" reason="import" />
-      <module_usage name="toga.command" finding="absolute" line="11" reason="import" />
-      <module_usage name="toga.constants" finding="absolute" line="12" reason="import" />
-      <module_usage name="toga.constants.WindowState" finding="not-found" line="12" reason="import fromlist" />
-      <module_usage name="toga.handlers" finding="absolute" line="13" reason="import" />
-      <module_usage name="toga.types" finding="absolute" line="14" reason="import" />
-      <module_usage name="toga_winforms.container" finding="relative" line="16" reason="import" />
-      <module_usage name="toga_winforms.fonts" finding="relative" line="17" reason="import" />
-      <module_usage name="toga_winforms.screens" finding="relative" line="18" reason="import" />
-      <module_usage name="toga_winforms.widgets.base" finding="relative" line="19" reason="import" />
+      <module_usage name="ctypes" finding="absolute" line="3" reason="import" />
+      <module_usage name="ctypes" finding="absolute" line="4" reason="import" />
+      <module_usage name="ctypes.POINTER" finding="not-found" line="4" reason="import fromlist" />
+      <module_usage name="ctypes.cast" finding="not-found" line="4" reason="import fromlist" />
+      <module_usage name="ctypes.wintypes" finding="absolute" line="5" reason="import" />
+      <module_usage name="System.Windows.Forms" finding="not-found" line="8" reason="import" />
+      <module_usage name="System.Drawing" finding="not-found" line="9" reason="import" />
+      <module_usage name="System.Drawing.Imaging" finding="not-found" line="17" reason="import" />
+      <module_usage name="System.IO" finding="not-found" line="18" reason="import" />
+      <module_usage name="toga.app" finding="absolute" line="20" reason="import" />
+      <module_usage name="toga.command" finding="absolute" line="21" reason="import" />
+      <module_usage name="toga.constants" finding="absolute" line="22" reason="import" />
+      <module_usage name="toga.constants.WindowState" finding="not-found" line="22" reason="import fromlist" />
+      <module_usage name="toga.handlers" finding="absolute" line="23" reason="import" />
+      <module_usage name="toga.types" finding="absolute" line="24" reason="import" />
+      <module_usage name="toga_winforms.container" finding="relative" line="26" reason="import" />
+      <module_usage name="toga_winforms.fonts" finding="relative" line="27" reason="import" />
+      <module_usage name="toga_winforms.libs" finding="relative" line="28" reason="import" />
+      <module_usage name="toga_winforms.libs.win32constants" finding="relative" line="28" reason="import fromlist" />
+      <module_usage name="toga_winforms.libs.win32structures" finding="relative" line="28" reason="import fromlist" />
+      <module_usage name="toga_winforms.libs.comctl32" finding="relative" line="29" reason="import" />
+      <module_usage name="toga_winforms.libs.user32" finding="relative" line="30" reason="import" />
+      <module_usage name="toga_winforms.screens" finding="relative" line="36" reason="import" />
+      <module_usage name="toga_winforms.widgets.base" finding="relative" line="37" reason="import" />
     </module_usages>
   </module>
   <module name="token" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\token.py">
@@ -9298,13 +9414,14 @@
     </module_usages>
   </module>
   <module name="travertino.properties.shorthand" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\travertino\properties\shorthand.py" distribution="travertino">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="1580" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="303" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="1590" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="304" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="1" reason="import" />
       <module_usage name="collections.abc" finding="not-found" line="2" reason="import" />
-      <module_usage name="travertino.constants" finding="relative" line="4" reason="import" />
+      <module_usage name="typing" finding="absolute" line="3" reason="import" />
+      <module_usage name="travertino.constants" finding="relative" line="5" reason="import" />
     </module_usages>
   </module>
   <module name="travertino.properties.validated" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\travertino\properties\validated.py" distribution="travertino">
@@ -9325,8 +9442,8 @@
     <module_usages />
   </module>
   <module name="travertino.style" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}\Lib\site-packages\travertino\style.py" distribution="travertino">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="35" merged_total="1167" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="270" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="36" merged_total="1171" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="271" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="toga" />
@@ -9339,12 +9456,13 @@
       <module_usage name="collections.defaultdict" finding="not-found" line="4" reason="import fromlist" />
       <module_usage name="collections.abc" finding="not-found" line="5" reason="import" />
       <module_usage name="contextlib" finding="absolute" line="6" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="7" reason="import" />
-      <module_usage name="travertino.compat" finding="relative" line="9" reason="import" />
-      <module_usage name="travertino.properties.shorthand" finding="relative" line="10" reason="import" />
-      <module_usage name="travertino.properties.validated" finding="relative" line="11" reason="import" />
-      <module_usage name="toga" finding="absolute" line="112" reason="import" />
-      <module_usage name="toga.widgets.base" finding="absolute" line="114" reason="import" />
+      <module_usage name="typing" finding="absolute" line="7" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="8" reason="import" />
+      <module_usage name="travertino.compat" finding="relative" line="10" reason="import" />
+      <module_usage name="travertino.properties.shorthand" finding="relative" line="11" reason="import" />
+      <module_usage name="travertino.properties.validated" finding="relative" line="12" reason="import" />
+      <module_usage name="toga" finding="absolute" line="113" reason="import" />
+      <module_usage name="toga.widgets.base" finding="absolute" line="115" reason="import" />
     </module_usages>
   </module>
   <module name="types" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}\Lib\types.py">
@@ -9642,7 +9760,7 @@
     <memory_usage name="before_c_code_generation" value="volatile" />
     <memory_usage name="before_running_scons" value="volatile" />
   </performance>
-  <data_file name="pythonnet\runtime\Python.Runtime.dll" source="${sys.prefix}\Lib\site-packages\pythonnet\runtime\Python.Runtime.dll" size="445952" reason="package data for 'pythonnet'" tags="config,copy" />
+  <data_file name="pythonnet\runtime\Python.Runtime.dll" source="${sys.prefix}\Lib\site-packages\pythonnet\runtime\Python.Runtime.dll" size="451072" reason="package data for 'pythonnet'" tags="config,copy" />
   <data_file name="toga_winforms\resources\runtime.json" source="${sys.prefix}\Lib\site-packages\toga_winforms\resources\runtime.json" size="264" reason="package data directory 'resources' for 'toga_winforms'" tags="config,copy,data-dir-contents" />
   <data_file name="toga_winforms\resources\spinner.gif" source="${sys.prefix}\Lib\site-packages\toga_winforms\resources\spinner.gif" size="18277" reason="package data directory 'resources' for 'toga_winforms'" tags="config,copy,data-dir-contents" />
   <data_file name="toga_winforms\resources\toga.ico" source="${sys.prefix}\Lib\site-packages\toga_winforms\resources\toga.ico" size="370070" reason="package data directory 'resources' for 'toga_winforms'" tags="config,copy,data-dir-contents" />
@@ -9678,17 +9796,14 @@
   <included_extension name="pyexpat.pyd" dest_path="pyexpat.pyd" source_path="${sys.real_prefix}\DLLs\pyexpat.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
   <included_dll name="python314.dll" dest_path="python314.dll" source_path="${sys.real_prefix}\python314.dll" package="PIL" ignored="no" reason="Used by 'PIL\_avif.pyd'" tags="copy" />
   <included_extension name="select.pyd" dest_path="select.pyd" source_path="${sys.real_prefix}\DLLs\select.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
-  <included_dll name="Microsoft.Web.WebView2.Core.dll" dest_path="toga_winforms\libs\WebView2\Microsoft.Web.WebView2.Core.dll" source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\WebView2\Microsoft.Web.WebView2.Core.dll" package="toga_winforms" ignored="no" reason="Yaml config of 'toga_winforms'" tags="copy" />
-  <included_dll name="Microsoft.Web.WebView2.WinForms.dll" dest_path="toga_winforms\libs\WebView2\Microsoft.Web.WebView2.WinForms.dll" source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\WebView2\Microsoft.Web.WebView2.WinForms.dll" package="toga_winforms" ignored="no" reason="Yaml config of 'toga_winforms'" tags="copy" />
-  <included_dll name="WebView2Loader.dll" dest_path="toga_winforms\libs\WebView2\runtimes\win-x64\native\WebView2Loader.dll" source_path="${sys.prefix}\Lib\site-packages\toga_winforms\libs\WebView2\runtimes\win-x64\native\WebView2Loader.dll" package="toga_winforms" ignored="no" reason="Yaml config of 'toga_winforms'" tags="copy" />
   <included_extension name="unicodedata.pyd" dest_path="unicodedata.pyd" source_path="${sys.real_prefix}\DLLs\unicodedata.pyd" package="" ignored="no" reason="used extension module" tags="copy" />
   <included_dll name="vcruntime140.dll" dest_path="vcruntime140.dll" source_path="${sys.real_prefix}\vcruntime140.dll" package="PIL" ignored="no" reason="Used by 'PIL\_avif.pyd'" tags="copy" />
   <included_dll name="vcruntime140_1.dll" dest_path="vcruntime140_1.dll" source_path="${sys.real_prefix}\vcruntime140_1.dll" package="" ignored="no" reason="Used by '_wmi.pyd'" tags="copy" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="689" />
-    <optimization-time pass="2" time="volatile" module_count="689" />
-    <optimization-time pass="all" time="volatile" module_count="689" />
-    <code-generation-time time="volatile" module_count="228" />
+    <optimization-time pass="1" time="volatile" module_count="694" />
+    <optimization-time pass="2" time="volatile" module_count="694" />
+    <optimization-time pass="all" time="volatile" module_count="694" />
+    <code-generation-time time="volatile" module_count="233" />
   </performance-totals>
   <python_binary filename="TogaUsing.exe" backend_resource_mode="coff_obj" reproducible="no" size="volatile" />
   <command_line>
@@ -9697,7 +9812,7 @@
     <option value="--assume-yes-for-downloads" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=4671848bd98242ec10dca310b7845d2d" />
+    <option value="--report-user-provided=pipenv_hash=8f94ffff763c37586ad2b4fb46384083" />
     <option value="--devel-no-bytecode-to-compiled-fallback" />
   </command_line>
   <plugins>
@@ -9724,13 +9839,15 @@
   <distributions>
     <distribution name="cffi" version="2.1.1" installer="pip" />
     <distribution name="clr_loader" version="0.3.1" installer="pip" />
+    <distribution name="dotnet-WebView2.WinForms" version="1.0.4258.31" installer="pip" />
     <distribution name="pillow" version="12.3.0" installer="pip" />
+    <distribution name="platformdirs" version="4.12.3" installer="pip" />
     <distribution name="pycparser" version="3.0" installer="pip" />
-    <distribution name="pythonnet" version="3.1.0" installer="pip" />
-    <distribution name="toga" version="0.5.6" installer="pip" />
-    <distribution name="toga-core" version="0.5.6" installer="pip" />
-    <distribution name="toga-winforms" version="0.5.6" installer="pip" />
-    <distribution name="travertino" version="0.5.6" installer="pip" />
+    <distribution name="pythonnet" version="3.2.0" installer="pip" />
+    <distribution name="toga" version="0.5.7" installer="pip" />
+    <distribution name="toga-core" version="0.5.7" installer="pip" />
+    <distribution name="toga-winforms" version="0.5.7" installer="pip" />
+    <distribution name="travertino" version="0.5.7" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}\Scripts\python.exe" python_flavor="CPython Official" python_version="3.14.0" os_name="Windows" os_release="11" arch_name="x86_64" filesystem_encoding="utf-8" gil="yes">
     <search_path>
@@ -9744,7 +9861,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>4671848bd98242ec10dca310b7845d2d</pipenv_hash>
+    <pipenv_hash>8f94ffff763c37586ad2b4fb46384083</pipenv_hash>
   </user-data>
   <output run_filename="${cwd}\TogaUsing.dist\TogaUsing.exe" />
 </nuitka-compilation-report>
