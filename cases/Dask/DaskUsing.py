@@ -1,6 +1,7 @@
 # nuitka-project: --mode=standalone
 # nuitka-project: --noinclude-dask-mode=allow
 # nuitka-project: --noinclude-numba-mode=allow
+# nuitka-project: --python-flag=no_warnings
 
 import random
 
