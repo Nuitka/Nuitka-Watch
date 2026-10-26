@@ -101,7 +101,7 @@ via slash command; primary agent may handle directly for trivial edits.
 - On Windows, the watch runs under Git Bash (MSYS). `pipenv` is at
   `%LOCALAPPDATA%/Programs/Python/...` or `C:\Python314_64\Scripts\pipenv.exe` (mixed across
   machines, not in PowerShell's PATH -- use Git Bash).
-- Python versions per OS (from `run-watch.sh`): Windows 3.10/3.12/3.13/3.14, Linux 3.10-3.14, macOS
-  3.10-3.14.
+- Python versions per OS (from `run-watch.sh`): Windows 3.10/3.12/3.13/3.14/3.15, Linux
+  3.10-3.15, macOS 3.10-3.15.
 - `cases/*/result/*` files larger than 50 MB should be checked with `git diff --stat` before
   staging; prefer per-case `auto-stage.sh` review.

@@ -72,6 +72,18 @@ then
             }
         fi
     fi
+
+    if ! command -v python3.15 &> /dev/null; then
+        if [ -f "/c/Python315_64/python.exe" ]; then
+            python3.15() {
+                '/c/Python315_64/python.exe' "$@"
+            }
+        elif [ -f "$LOCALAPPDATA/Programs/Python/Python315/python.exe" ]; then
+            python3.15() {
+                "$LOCALAPPDATA/Programs/Python/Python315/python.exe" "$@"
+            }
+        fi
+    fi
 fi
 
 # This enables my private development slightly better.
@@ -91,12 +103,12 @@ fi
 
 if [ "$OS" = "Darwin" ]
 then
-    declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12" "3.13" "3.14")
+    declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12" "3.13" "3.14" "3.15")
 elif [ "$OS" = "Linux" ]
 then
-    declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12" "3.13" "3.14")
+    declare -a PYTHON_VERSIONS=("3.10" "3.11" "3.12" "3.13" "3.14" "3.15")
 else
-    declare -a PYTHON_VERSIONS=("3.10" "3.12" "3.13" "3.14")
+    declare -a PYTHON_VERSIONS=("3.10" "3.12" "3.13" "3.14" "3.15")
 fi
 
 # Allow limiting to a single Python version via --python-version=X argument.
