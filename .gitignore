@@ -52,3 +52,17 @@ doxygen-*
 .fl*
 # Lets use this for generated files.
 test-data*
+# Result folders are for watch output only. Everything that is not one of the
+# expected result files is ignored, e.g. scratch directories, caches, build
+# leftovers, and crash reports. New backends need their file names added here.
+cases/**/result/*/*-*/**
+!cases/**/result/*/*-*/compilation-report.xml
+!cases/**/result/*/*-*/compiled-*.txt
+!cases/**/result/*/*-*/Pipfile
+!cases/**/result/*/*-*/Pipfile.lock
+!cases/**/result/*/*-*/environment.yml
+!cases/**/result/*/*-*/environment.lock
+!cases/**/result/*/*-*/Pacman.txt
+!cases/**/result/*/*-*/Pacman.lock
+# Crash reports are always artifacts of a failed run.
+nuitka-crash-report.xml
