@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.3.2" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.4rc7" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment c_compiler="gcc" the_cc_name="gcc" the_compiler="gcc" />
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="6" merged_total="79" />
@@ -7,13 +7,15 @@
     <module_usages />
   </module>
   <module name="__hello__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/__hello__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="4" merged_total="160" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="4" merged_total="157" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
   <module name="__main__" kind="PythonMainModule" usage="root_module" reason="Root module" source_path="../../../Html5libUsing.py">
     <plugin-influence name="implicit-imports" influence="condition-used" condition="module_mode and plugin(&quot;pyside6&quot;)" tags_used="module_mode" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="7" merged_total="81" />
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="not standalone and plugin(&quot;pyqt5&quot;)" tags_used="standalone" result="false" />
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="not standalone and plugin(&quot;pyqt6&quot;)" tags_used="standalone" result="false" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="7" merged_total="60" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="7" merged_total="19" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -325,14 +327,14 @@
     </module_usages>
   </module>
   <module name="__phello__" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/__phello__/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
     </module_usages>
   </module>
   <module name="__phello__.spam" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/__phello__/spam.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
@@ -388,7 +390,7 @@
     <module_usages />
   </module>
   <module name="_collections_abc" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/_collections_abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="22" merged_total="8234" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="21" merged_total="8183" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="35" reason="import" />
@@ -398,12 +400,12 @@
     </module_usages>
   </module>
   <module name="_compat_pickle" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/_compat_pickle.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="4" merged_total="233" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="4" merged_total="291" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
   <module name="_compression" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/_compression.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="869" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="14" merged_total="995" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="io" finding="absolute" line="3" reason="import" />
@@ -454,7 +456,7 @@
     <module_usages />
   </module>
   <module name="_markupbase" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/_markupbase.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="37" merged_total="2518" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="36" merged_total="2514" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="8" reason="import" />
@@ -476,14 +478,13 @@
     <module_usages />
   </module>
   <module name="_osx_support" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/_osx_support.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="29" merged_total="2376" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="29" merged_total="2342" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" reason="import" />
       <module_usage name="re" finding="absolute" line="4" reason="import" />
       <module_usage name="sys" finding="absolute" line="5" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="39" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="46" reason="import" />
       <module_usage name="contextlib" finding="absolute" line="61" reason="import" />
       <module_usage name="tempfile" finding="absolute" line="63" reason="import" />
     </module_usages>
@@ -499,14 +500,14 @@
     <module_usages />
   </module>
   <module name="_py_abc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/_py_abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="13" merged_total="906" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="12" merged_total="900" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_weakrefset" finding="absolute" line="1" reason="import" />
     </module_usages>
   </module>
   <module name="_pydatetime" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/_pydatetime.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="66" merged_total="13393" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="66" merged_total="13363" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="time" finding="absolute" line="11" reason="import" />
@@ -519,7 +520,7 @@
     </module_usages>
   </module>
   <module name="_pydecimal" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/_pydecimal.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="128" merged_total="23664" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="127" merged_total="23448" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="math" finding="absolute" line="156" reason="import" />
@@ -534,7 +535,7 @@
     </module_usages>
   </module>
   <module name="_pyio" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/_pyio.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="44" merged_total="11762" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="43" merged_total="11606" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="5" reason="import" />
@@ -555,7 +556,7 @@
     </module_usages>
   </module>
   <module name="_pylong" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/_pylong.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="980" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="971" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="15" reason="import" />
@@ -588,7 +589,7 @@
     <module_usages />
   </module>
   <module name="_sitebuiltins" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/_sitebuiltins.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="10" merged_total="1305" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="10" merged_total="1281" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="11" reason="import" />
@@ -614,7 +615,7 @@
     <module_usages />
   </module>
   <module name="_strptime" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/_strptime.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="84" merged_total="2894" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="84" merged_total="3430" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="time" finding="absolute" line="13" reason="import" />
@@ -646,7 +647,7 @@
     <module_usages />
   </module>
   <module name="_threading_local" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/_threading_local.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="11" merged_total="883" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="11" merged_total="882" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="weakref" finding="absolute" line="131" reason="import" />
@@ -663,7 +664,7 @@
     </module_usages>
   </module>
   <module name="abc" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="12" merged_total="1284" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="11" merged_total="1254" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_abc" finding="absolute" line="85" reason="import" />
@@ -671,7 +672,7 @@
     </module_usages>
   </module>
   <module name="argparse" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/argparse.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="46" merged_total="14672" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="45" merged_total="17337" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="88" reason="import" />
@@ -692,7 +693,7 @@
     <module_usages />
   </module>
   <module name="ast" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/ast.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="117" merged_total="10405" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="116" merged_total="15370" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="27" reason="import" />
@@ -715,7 +716,7 @@
     </module_usages>
   </module>
   <module name="base64" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/base64.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="31" merged_total="2915" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="2905" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="9" reason="import" />
@@ -730,14 +731,14 @@
   </module>
   <module name="bisect" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/bisect.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_bisect&quot;)" tags_used="has_builtin_module" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="13" merged_total="286" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="278" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_bisect" finding="excluded" line="112" reason="import" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'bisect' for '_bisect'" />
     </module_usages>
   </module>
   <module name="bz2" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/bz2.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="26" merged_total="660" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="810" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="io" finding="absolute" line="13" reason="import" />
@@ -747,7 +748,7 @@
     </module_usages>
   </module>
   <module name="calendar" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/calendar.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="21" merged_total="7390" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="20" merged_total="7366" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="8" reason="import" />
@@ -759,7 +760,7 @@
     </module_usages>
   </module>
   <module name="cgi" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/cgi.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="40" merged_total="4631" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="40" merged_total="4614" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="io" finding="absolute" line="39" reason="import" />
@@ -778,7 +779,7 @@
     </module_usages>
   </module>
   <module name="cgitb" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/cgitb.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="23" merged_total="2825" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="22" merged_total="2810" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="inspect" finding="absolute" line="24" reason="import" />
@@ -797,7 +798,7 @@
     </module_usages>
   </module>
   <module name="chunk" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/chunk.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="11" merged_total="514" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="11" merged_total="513" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="warnings" finding="absolute" line="51" reason="import" />
@@ -805,7 +806,7 @@
     </module_usages>
   </module>
   <module name="cmd" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/cmd.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="1769" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="1748" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="string" finding="absolute" line="45" reason="import" />
@@ -816,7 +817,7 @@
     </module_usages>
   </module>
   <module name="code" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/code.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="12" merged_total="1247" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="12" merged_total="1231" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="8" reason="import" />
@@ -826,7 +827,7 @@
     </module_usages>
   </module>
   <module name="codecs" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/codecs.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="25" merged_total="4327" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="24" merged_total="4285" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="10" reason="import" />
@@ -835,7 +836,7 @@
     </module_usages>
   </module>
   <module name="codeop" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/codeop.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="9" merged_total="840" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="9" merged_total="832" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="35" reason="import" />
@@ -843,7 +844,7 @@
     </module_usages>
   </module>
   <module name="collections" kind="UncompiledPythonPackage" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/collections/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="73" merged_total="9009" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="73" merged_total="8955" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -877,12 +878,12 @@
     </module_usages>
   </module>
   <module name="colorsys" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/colorsys.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="19" merged_total="354" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="19" merged_total="352" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
   <module name="configparser" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/configparser.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="55" merged_total="9415" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="53" merged_total="9238" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="absolute" line="142" reason="import" />
@@ -903,7 +904,7 @@
     </module_usages>
   </module>
   <module name="contextlib" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/contextlib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="14" merged_total="5355" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="13" merged_total="5227" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="2" reason="import" />
@@ -924,7 +925,7 @@
     </module_usages>
   </module>
   <module name="copy" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/copy.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="1431" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="27" merged_total="1675" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="51" reason="import" />
@@ -933,7 +934,7 @@
     </module_usages>
   </module>
   <module name="copyreg" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/copyreg.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="656" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="621" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="34" reason="import" />
@@ -942,7 +943,7 @@
   </module>
   <module name="crypt" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/crypt.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_crypt&quot;)" tags_used="has_builtin_module" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="19" merged_total="455" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="558" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="3" reason="import" />
@@ -956,7 +957,7 @@
     </module_usages>
   </module>
   <module name="csv" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/csv.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="35" merged_total="4317" />
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="34" merged_total="4762" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="6" reason="import" />
@@ -967,7 +968,7 @@
     </module_usages>
   </module>
   <module name="dataclasses" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/dataclasses.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="62" merged_total="7167" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="61" merged_total="7131" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="1" reason="import" />
@@ -1009,7 +1010,7 @@
     </module_usages>
   </module>
   <module name="difflib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/difflib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="40" merged_total="10412" />
+    <optimization-time pass="1" time="volatile" micro_passes="9" max_branch_merge="40" merged_total="13203" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="heapq" finding="absolute" line="33" reason="import" />
@@ -1021,7 +1022,7 @@
     </module_usages>
   </module>
   <module name="dis" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/dis.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="55" merged_total="6309" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="55" merged_total="6276" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="3" reason="import" />
@@ -1046,7 +1047,7 @@
     </module_usages>
   </module>
   <module name="email._encoded_words" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/_encoded_words.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="736" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="733" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="42" reason="import" />
@@ -1060,7 +1061,7 @@
     </module_usages>
   </module>
   <module name="email._header_value_parser" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/_header_value_parser.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="76" merged_total="21820" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="68" merged_total="21540" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="70" reason="import" />
@@ -1077,7 +1078,7 @@
     </module_usages>
   </module>
   <module name="email._parseaddr" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/_parseaddr.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="68" merged_total="3599" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="60" merged_total="3530" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="time" finding="absolute" line="16" reason="import" />
@@ -1085,7 +1086,7 @@
     </module_usages>
   </module>
   <module name="email._policybase" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/_policybase.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="19" merged_total="1657" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="18" merged_total="1642" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="6" reason="import" />
@@ -1097,7 +1098,7 @@
     </module_usages>
   </module>
   <module name="email.base64mime" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/base64mime.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="9" merged_total="181" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="9" merged_total="178" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="base64" finding="absolute" line="37" reason="import" />
@@ -1105,7 +1106,7 @@
     </module_usages>
   </module>
   <module name="email.charset" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/charset.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="18" merged_total="820" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="18" merged_total="802" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="12" reason="import" />
@@ -1117,7 +1118,7 @@
     </module_usages>
   </module>
   <module name="email.contentmanager" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/contentmanager.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="17" merged_total="1739" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="17" merged_total="1724" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="1" reason="import" />
@@ -1137,12 +1138,12 @@
     </module_usages>
   </module>
   <module name="email.errors" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/errors.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="3094" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="2964" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
   <module name="email.feedparser" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/feedparser.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="116" merged_total="2337" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="115" merged_total="2322" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="24" reason="import" />
@@ -1156,7 +1157,7 @@
     </module_usages>
   </module>
   <module name="email.generator" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/generator.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="26" merged_total="1446" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="25" merged_total="2129" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="9" reason="import" />
@@ -1169,7 +1170,7 @@
     </module_usages>
   </module>
   <module name="email.header" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/header.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="19" merged_total="3916" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="19" merged_total="3888" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="13" reason="import" />
@@ -1182,7 +1183,7 @@
     </module_usages>
   </module>
   <module name="email.headerregistry" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/headerregistry.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="3018" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="12" merged_total="3554" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="6" reason="import" />
@@ -1195,7 +1196,7 @@
     </module_usages>
   </module>
   <module name="email.iterators" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/iterators.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="7" merged_total="198" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="7" merged_total="248" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="14" reason="import" />
@@ -1203,7 +1204,7 @@
     </module_usages>
   </module>
   <module name="email.message" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/message.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="49" merged_total="5368" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="48" merged_total="5340" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="9" reason="import" />
@@ -1234,7 +1235,7 @@
     </module_usages>
   </module>
   <module name="email.policy" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/policy.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="457" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="562" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="5" reason="import" />
@@ -1247,7 +1248,7 @@
     </module_usages>
   </module>
   <module name="email.quoprimime" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/quoprimime.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="702" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="20" merged_total="865" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="42" reason="import" />
@@ -1256,7 +1257,7 @@
   </module>
   <module name="email.utils" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/email/utils.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_socket&quot;)" tags_used="has_builtin_module" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="959" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="1182" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="25" reason="import" />
@@ -1275,7 +1276,7 @@
     </module_usages>
   </module>
   <module name="encodings" kind="UncompiledPythonPackage" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/encodings/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="576" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="572" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -1712,7 +1713,7 @@
     </module_usages>
   </module>
   <module name="encodings.idna" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/encodings/idna.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="1885" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="18" merged_total="2237" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="stringprep" finding="absolute" line="3" reason="import" />
@@ -2018,7 +2019,7 @@
     </module_usages>
   </module>
   <module name="encodings.punycode" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/encodings/punycode.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="17" merged_total="1998" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="17" merged_total="2315" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="codecs" finding="absolute" line="6" reason="import" />
@@ -2041,7 +2042,7 @@
     </module_usages>
   </module>
   <module name="encodings.rot_13" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/encodings/rot_13.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="8" merged_total="494" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="8" merged_total="492" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="codecs" finding="absolute" line="9" reason="import" />
@@ -2179,7 +2180,7 @@
   </module>
   <module name="enum" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/enum.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="plugin(&quot;pyside6&quot;)" tags_used="plugin" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="61" merged_total="14957" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="59" merged_total="14743" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="1" reason="import" />
@@ -2197,7 +2198,7 @@
     <module_usages />
   </module>
   <module name="filecmp" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/filecmp.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="1029" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="21" merged_total="1228" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="13" reason="import" />
@@ -2206,18 +2207,12 @@
       <module_usage name="types" finding="absolute" line="16" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="145" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="146" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="157" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="158" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="197" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="198" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="273" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="274" reason="import" />
       <module_usage name="sys" finding="absolute" line="301" reason="import" />
       <module_usage name="getopt" finding="absolute" line="302" reason="import" />
     </module_usages>
   </module>
   <module name="fileinput" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/fileinput.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="1013" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="1243" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="io" finding="absolute" line="68" reason="import" />
@@ -2232,7 +2227,7 @@
     </module_usages>
   </module>
   <module name="fnmatch" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/fnmatch.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="72" merged_total="933" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="70" merged_total="1107" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="12" reason="import" />
@@ -2247,7 +2242,7 @@
     </module_usages>
   </module>
   <module name="fractions" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/fractions.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="69" merged_total="4781" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="69" merged_total="4760" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="decimal" finding="absolute" line="6" reason="import" />
@@ -2261,7 +2256,7 @@
     </module_usages>
   </module>
   <module name="ftplib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/ftplib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="54" merged_total="3820" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="53" merged_total="4500" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="39" reason="import" />
@@ -2273,7 +2268,7 @@
     </module_usages>
   </module>
   <module name="functools" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/functools.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="20" merged_total="5880" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="21" merged_total="5844" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="17" reason="import" />
@@ -2295,7 +2290,7 @@
     </module_usages>
   </module>
   <module name="genericpath" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/genericpath.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="532" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="13" merged_total="618" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="6" reason="import" />
@@ -2303,7 +2298,7 @@
     </module_usages>
   </module>
   <module name="getopt" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/getopt.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="13" merged_total="1298" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="11" merged_total="1260" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="36" reason="import" />
@@ -2311,7 +2306,7 @@
     </module_usages>
   </module>
   <module name="getpass" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/getpass.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="919" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="10" merged_total="1079" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="contextlib" finding="absolute" line="17" reason="import" />
@@ -2325,25 +2320,23 @@
     </module_usages>
   </module>
   <module name="gettext" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/gettext.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="36" merged_total="4371" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="34" merged_total="4294" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="operator" finding="absolute" line="49" reason="import" />
       <module_usage name="os" finding="absolute" line="50" reason="import" />
       <module_usage name="re" finding="absolute" line="51" reason="import" />
       <module_usage name="sys" finding="absolute" line="52" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="62" reason="import" />
       <module_usage name="warnings" finding="absolute" line="175" reason="import" />
       <module_usage name="locale" finding="absolute" line="225" reason="import" />
       <module_usage name="builtins" finding="absolute" line="316" reason="import" />
       <module_usage name="struct" finding="absolute" line="344" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="506" reason="import" />
       <module_usage name="errno" finding="absolute" line="527" reason="import" />
       <module_usage name="copy" finding="absolute" line="544" reason="import" />
     </module_usages>
   </module>
   <module name="glob" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/glob.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="1255" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="13" merged_total="1493" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="contextlib" finding="absolute" line="3" reason="import" />
@@ -2355,12 +2348,11 @@
       <module_usage name="sys" finding="absolute" line="9" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="62" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="195" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="218" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="244" reason="import" />
     </module_usages>
   </module>
   <module name="graphlib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/graphlib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="18" merged_total="1383" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="17" merged_total="1368" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="1" reason="import" />
@@ -2372,7 +2364,7 @@
     <module_usages />
   </module>
   <module name="gzip" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/gzip.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="27" merged_total="3383" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="26" merged_total="3336" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="struct" finding="absolute" line="8" reason="import" />
@@ -2410,7 +2402,7 @@
   </module>
   <module name="heapq" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/heapq.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_heapq&quot;)" tags_used="has_builtin_module" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="30" merged_total="2173" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="30" merged_total="2704" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_heapq" finding="absolute" line="583" reason="import" />
@@ -2434,7 +2426,7 @@
     <module_usages />
   </module>
   <module name="html.parser" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/html/parser.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="67" merged_total="1216" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="66" merged_total="1219" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="11" reason="import" />
@@ -2459,8 +2451,8 @@
     </module_usages>
   </module>
   <module name="html5lib._ihatexml" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/_ihatexml.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="1196" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="234" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="1185" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="232" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
@@ -2470,8 +2462,8 @@
     </module_usages>
   </module>
   <module name="html5lib._inputstream" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/_inputstream.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="31" merged_total="4949" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="24" merged_total="800" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="31" merged_total="4926" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="24" merged_total="796" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="six" />
@@ -2493,8 +2485,8 @@
     </module_usages>
   </module>
   <module name="html5lib._tokenizer" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/_tokenizer.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="78" merged_total="6340" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="78" merged_total="1280" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="78" merged_total="6311" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="78" merged_total="1274" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="six" />
@@ -2538,7 +2530,7 @@
     </module_usages>
   </module>
   <module name="html5lib._trie.py" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/_trie/py.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="15" merged_total="373" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="459" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="86" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -2552,8 +2544,8 @@
     </module_usages>
   </module>
   <module name="html5lib._utils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/_utils.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="948" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="158" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="11" merged_total="1092" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="155" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="six" />
@@ -2588,7 +2580,7 @@
     </module_usages>
   </module>
   <module name="html5lib.filters.alphabeticalattributes" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/filters/alphabeticalattributes.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="9" merged_total="206" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="9" merged_total="256" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="50" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -2608,8 +2600,8 @@
     </module_usages>
   </module>
   <module name="html5lib.filters.inject_meta_charset" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/filters/inject_meta_charset.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="468" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="93" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="16" merged_total="555" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="92" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
@@ -2618,7 +2610,7 @@
     </module_usages>
   </module>
   <module name="html5lib.filters.optionaltags" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/filters/optionaltags.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="23" merged_total="776" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="23" merged_total="906" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="130" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -2628,8 +2620,8 @@
     </module_usages>
   </module>
   <module name="html5lib.filters.sanitizer" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/filters/sanitizer.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="16" merged_total="819" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="206" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="1016" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="204" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="six" />
@@ -2646,7 +2638,7 @@
     </module_usages>
   </module>
   <module name="html5lib.filters.whitespace" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/filters/whitespace.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="9" merged_total="180" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="9" merged_total="223" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="43" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -2658,8 +2650,8 @@
     </module_usages>
   </module>
   <module name="html5lib.html5parser" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/html5parser.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="59" merged_total="12034" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="58" merged_total="1810" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="59" merged_total="13825" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="59" merged_total="1809" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="six" />
@@ -2681,7 +2673,7 @@
     </module_usages>
   </module>
   <module name="html5lib.serializer" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/serializer.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="1661" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="1664" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="303" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -2724,8 +2716,8 @@
     </module_usages>
   </module>
   <module name="html5lib.treebuilders.base" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/treebuilders/base.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="1718" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="334" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="1711" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="333" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="six" />
@@ -2737,8 +2729,8 @@
     </module_usages>
   </module>
   <module name="html5lib.treebuilders.dom" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/treebuilders/dom.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="25" merged_total="1186" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="24" merged_total="264" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="1445" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="263" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
@@ -2758,7 +2750,7 @@
     </module_usages>
   </module>
   <module name="html5lib.treebuilders.etree" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/treebuilders/etree.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="32" merged_total="1865" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="2708" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="429" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -2780,8 +2772,8 @@
     </module_usages>
   </module>
   <module name="html5lib.treebuilders.etree_lxml" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/treebuilders/etree_lxml.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="39" merged_total="2494" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="39" merged_total="483" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="39" merged_total="2487" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="39" merged_total="482" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="six" />
@@ -2808,8 +2800,8 @@
     </module_usages>
   </module>
   <module name="html5lib.treewalkers" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/treewalkers/__init__.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="642" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="28" merged_total="118" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="32" merged_total="752" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="28" merged_total="117" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -2851,7 +2843,7 @@
     </module_usages>
   </module>
   <module name="html5lib.treewalkers.etree" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/treewalkers/etree.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="618" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="767" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="152" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -2869,7 +2861,7 @@
     </module_usages>
   </module>
   <module name="html5lib.treewalkers.etree_lxml" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/treewalkers/etree_lxml.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="20" merged_total="1457" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="20" merged_total="1455" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="273" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -2889,7 +2881,7 @@
     </module_usages>
   </module>
   <module name="html5lib.treewalkers.genshi" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/html5lib/treewalkers/genshi.py" distribution="html5lib">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="26" merged_total="558" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="702" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="26" merged_total="144" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -2903,7 +2895,7 @@
     </module_usages>
   </module>
   <module name="http" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/http/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="71" merged_total="517" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="70" merged_total="401" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -2911,7 +2903,7 @@
     </module_usages>
   </module>
   <module name="http.client" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/http/client.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="6565" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="7809" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="email.parser" finding="absolute" line="71" reason="import" />
@@ -2928,7 +2920,7 @@
     </module_usages>
   </module>
   <module name="http.cookiejar" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/http/cookiejar.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="36" merged_total="13939" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="36" merged_total="13757" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="31" reason="import" />
@@ -2949,7 +2941,7 @@
     </module_usages>
   </module>
   <module name="imaplib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/imaplib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="84" merged_total="7413" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="83" merged_total="7272" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="25" reason="import" />
@@ -2968,7 +2960,7 @@
     </module_usages>
   </module>
   <module name="imghdr" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/imghdr.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="290" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="343" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" reason="import" />
@@ -2976,11 +2968,10 @@
       <module_usage name="sys" finding="absolute" line="159" reason="import" />
       <module_usage name="os" finding="absolute" line="160" reason="import" />
       <module_usage name="glob" finding="absolute" line="166" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="167" reason="import" />
     </module_usages>
   </module>
   <module name="importlib" kind="UncompiledPythonPackage" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/importlib/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="7" merged_total="261" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="7" merged_total="323" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -2993,7 +2984,7 @@
     </module_usages>
   </module>
   <module name="importlib._abc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/_abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="85" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="81" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="importlib" finding="absolute" line="2" reason="import" />
@@ -3002,7 +2993,7 @@
     </module_usages>
   </module>
   <module name="importlib.abc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="1060" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="10" merged_total="1223" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="importlib" finding="absolute" line="2" reason="import" />
@@ -3035,9 +3026,10 @@
     </module_usages>
   </module>
   <module name="importlib.metadata" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/metadata/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="26" merged_total="6324" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="25" merged_total="6283" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
+      <module_usage name="os" finding="absolute" line="1" reason="import" />
       <module_usage name="os" finding="absolute" line="1" reason="import" />
       <module_usage name="re" finding="absolute" line="2" reason="import" />
       <module_usage name="abc" finding="absolute" line="3" reason="import" />
@@ -3074,7 +3066,7 @@
     </module_usages>
   </module>
   <module name="importlib.metadata._adapters" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/metadata/_adapters.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="322" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="399" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="1" reason="import" />
@@ -3087,7 +3079,7 @@
     </module_usages>
   </module>
   <module name="importlib.metadata._collections" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/metadata/_collections.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="8" merged_total="171" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="8" merged_total="168" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="1" reason="import" />
@@ -3102,14 +3094,14 @@
     </module_usages>
   </module>
   <module name="importlib.metadata._itertools" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/metadata/_itertools.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="8" merged_total="124" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="8" merged_total="149" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="itertools" finding="absolute" line="1" reason="import" />
     </module_usages>
   </module>
   <module name="importlib.metadata._meta" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/metadata/_meta.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="14" merged_total="238" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="14" merged_total="235" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="typing" finding="absolute" line="1" reason="import" />
@@ -3117,7 +3109,7 @@
     </module_usages>
   </module>
   <module name="importlib.metadata._text" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/metadata/_text.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="250" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="245" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="1" reason="import" />
@@ -3142,7 +3134,7 @@
     </module_usages>
   </module>
   <module name="importlib.resources._adapters" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/resources/_adapters.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="12" merged_total="1217" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="11" merged_total="1193" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="contextlib" finding="absolute" line="1" reason="import" />
@@ -3152,7 +3144,7 @@
     </module_usages>
   </module>
   <module name="importlib.resources._common" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/resources/_common.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="8" merged_total="522" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="8" merged_total="518" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -3176,7 +3168,7 @@
     <module_usages />
   </module>
   <module name="importlib.resources._legacy" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/resources/_legacy.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="291" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="6" merged_total="354" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="1" reason="import" />
@@ -3191,7 +3183,7 @@
     </module_usages>
   </module>
   <module name="importlib.resources.abc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/resources/abc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="959" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="944" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="1" reason="import" />
@@ -3205,7 +3197,7 @@
     </module_usages>
   </module>
   <module name="importlib.resources.readers" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/resources/readers.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="16" merged_total="941" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="1148" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="1" reason="import" />
@@ -3219,7 +3211,7 @@
     </module_usages>
   </module>
   <module name="importlib.resources.simple" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/resources/simple.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="574" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="9" merged_total="685" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="5" reason="import" />
@@ -3237,7 +3229,7 @@
     </module_usages>
   </module>
   <module name="importlib.util" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/importlib/util.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="774" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="943" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="importlib._abc" finding="relative" line="2" reason="import" />
@@ -3258,7 +3250,7 @@
     </module_usages>
   </module>
   <module name="inspect" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/inspect.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="54" merged_total="18982" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="54" merged_total="18844" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="144" reason="import" />
@@ -3301,7 +3293,7 @@
     </module_usages>
   </module>
   <module name="ipaddress" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/ipaddress.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="45" merged_total="9200" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="44" merged_total="9098" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="14" reason="import" />
@@ -3319,34 +3311,31 @@
     </module_usages>
   </module>
   <module name="json.decoder" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/json/decoder.py">
-    <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_json&quot;)" tags_used="has_builtin_module" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="43" merged_total="1627" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="43" merged_total="1604" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="3" reason="import" />
       <module_usage name="json" finding="absolute" line="5" reason="import" />
       <module_usage name="json.scanner" finding="relative" line="5" reason="import fromlist" />
-      <module_usage name="_json" finding="excluded" line="7" reason="import" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'json.decoder' for '_json'" />
+      <module_usage name="_json" finding="absolute" line="7" reason="import" />
     </module_usages>
   </module>
   <module name="json.encoder" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/json/encoder.py">
-    <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_json&quot;)" tags_used="has_builtin_module" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="1501" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="1491" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="3" reason="import" />
-      <module_usage name="_json" finding="excluded" line="6" reason="import" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'json.encoder' for '_json'" />
-      <module_usage name="_json" finding="excluded" line="10" reason="import" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'json.encoder' for '_json'" />
-      <module_usage name="_json" finding="excluded" line="14" reason="import" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'json.encoder' for '_json'" />
+      <module_usage name="_json" finding="absolute" line="6" reason="import" />
+      <module_usage name="_json" finding="absolute" line="10" reason="import" />
+      <module_usage name="_json" finding="absolute" line="14" reason="import" />
     </module_usages>
   </module>
   <module name="json.scanner" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/json/scanner.py">
-    <plugin-influence name="anti-bloat" influence="condition-used" condition="not has_builtin_module(&quot;_json&quot;)" tags_used="has_builtin_module" result="true" />
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="19" merged_total="198" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="3" reason="import" />
-      <module_usage name="_json" finding="excluded" line="5" reason="import" exclusion_reason="according to yaml 'no-auto-follow' configuration of 'json.scanner' for '_json'" />
+      <module_usage name="_json" finding="absolute" line="5" reason="import" />
     </module_usages>
   </module>
   <module name="keyword" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/keyword.py">
@@ -3355,7 +3344,7 @@
     <module_usages />
   </module>
   <module name="linecache" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/linecache.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="879" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="876" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="8" reason="import" />
@@ -3363,12 +3352,11 @@
       <module_usage name="os" finding="absolute" line="10" reason="import" />
       <module_usage name="tokenize" finding="absolute" line="11" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="119" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="124" reason="import" />
       <module_usage name="functools" finding="absolute" line="177" reason="import" />
     </module_usages>
   </module>
   <module name="locale" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/locale.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="38" merged_total="2567" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="38" merged_total="3194" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="13" reason="import" />
@@ -3389,7 +3377,7 @@
     </module_usages>
   </module>
   <module name="logging" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/logging/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="9128" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="10389" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -3416,7 +3404,7 @@
     </module_usages>
   </module>
   <module name="lzma" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/lzma.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="19" merged_total="554" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="678" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="24" reason="import" />
@@ -3428,7 +3416,7 @@
     </module_usages>
   </module>
   <module name="mailcap" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/mailcap.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="1724" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="2046" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" reason="import" />
@@ -3442,7 +3430,7 @@
     <module_usages />
   </module>
   <module name="mimetypes" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/mimetypes.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="29" merged_total="2021" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="28" merged_total="2298" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="26" reason="import" />
@@ -3455,7 +3443,7 @@
     </module_usages>
   </module>
   <module name="modulefinder" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/modulefinder.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="30" merged_total="4783" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="30" merged_total="4768" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="dis" finding="absolute" line="3" reason="import" />
@@ -3471,7 +3459,7 @@
     </module_usages>
   </module>
   <module name="netrc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/netrc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="31" merged_total="1661" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="31" merged_total="1634" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="5" reason="import" />
@@ -3481,7 +3469,7 @@
     </module_usages>
   </module>
   <module name="ntpath" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/ntpath.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="56" merged_total="5322" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="56" merged_total="5310" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="20" reason="import" />
@@ -3504,7 +3492,7 @@
     </module_usages>
   </module>
   <module name="nturl2path" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/nturl2path.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="23" merged_total="295" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="272" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="string" finding="absolute" line="17" reason="import" />
@@ -3513,7 +3501,7 @@
     </module_usages>
   </module>
   <module name="numbers" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/numbers.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="25" merged_total="684" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="24" merged_total="669" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="33" reason="import" />
@@ -3528,7 +3516,7 @@
     </module_usages>
   </module>
   <module name="operator" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/operator.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="12" merged_total="1637" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="12" merged_total="1627" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="22" reason="import" />
@@ -3538,7 +3526,7 @@
     </module_usages>
   </module>
   <module name="os" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/os.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="5302" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="5253" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="25" reason="import" />
@@ -3551,6 +3539,7 @@
       <module_usage name="posix" finding="absolute" line="64" reason="import" />
       <module_usage name="posix" finding="absolute" line="68" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="96" reason="import" />
+      <module_usage name="posixpath" finding="absolute" line="345" reason="import" />
       <module_usage name="warnings" finding="absolute" line="635" reason="import" />
       <module_usage name="_collections_abc" finding="absolute" line="670" reason="import" />
       <module_usage name="subprocess" finding="absolute" line="991" reason="import" />
@@ -3559,7 +3548,7 @@
     </module_usages>
   </module>
   <module name="pathlib" kind="UncompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/pathlib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="52" merged_total="9731" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="51" merged_total="9661" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="fnmatch" finding="absolute" line="8" reason="import" />
@@ -3581,7 +3570,8 @@
     </module_usages>
   </module>
   <module name="pickle" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/pickle.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="79" merged_total="9961" />
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="python3_or_higher and not deployment" tags_used="python3_or_higher,deployment" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="79" merged_total="9939" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="types" finding="absolute" line="26" reason="import" />
@@ -3602,10 +3592,11 @@
       <module_usage name="io" finding="absolute" line="1747" reason="import" />
       <module_usage name="io" finding="absolute" line="1763" reason="import" />
       <module_usage name="_pickle" finding="absolute" line="1769" reason="import" />
+      <module_usage name="functools" finding="absolute" line="1818" reason="import" />
     </module_usages>
   </module>
   <module name="pickletools" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/pickletools.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="50" merged_total="4036" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="49" merged_total="3958" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="codecs" finding="absolute" line="13" reason="import" />
@@ -3620,7 +3611,7 @@
     </module_usages>
   </module>
   <module name="pipes" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/pipes.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="26" merged_total="1195" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="25" merged_total="1185" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="60" reason="import" />
@@ -3631,7 +3622,7 @@
     </module_usages>
   </module>
   <module name="pkgutil" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/pkgutil.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="24" merged_total="1933" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="22" merged_total="2272" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="3" reason="import" />
@@ -3655,7 +3646,7 @@
   </module>
   <module name="platform" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/platform.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not macos" tags_used="macos" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="36" merged_total="5027" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="34" merged_total="4960" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="115" reason="import" />
@@ -3676,7 +3667,6 @@
       <module_usage name="java.lang" finding="not-found" line="524" reason="import" />
       <module_usage name="socket" finding="absolute" line="624" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="640" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="642" reason="import" />
       <module_usage name="subprocess" finding="absolute" line="660" reason="import" />
       <module_usage name="struct" finding="absolute" line="714" reason="import" />
       <module_usage name="vms_lib" finding="not-found" line="810" reason="import" />
@@ -3684,7 +3674,7 @@
     </module_usages>
   </module>
   <module name="poplib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/poplib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="33" merged_total="1299" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="32" merged_total="1482" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="errno" finding="absolute" line="16" reason="import" />
@@ -3696,7 +3686,7 @@
     </module_usages>
   </module>
   <module name="posixpath" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/posixpath.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="3179" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="30" merged_total="3133" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="25" reason="import" />
@@ -3712,7 +3702,7 @@
     </module_usages>
   </module>
   <module name="pprint" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/pprint.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="34" merged_total="4374" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="4333" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="37" reason="import" />
@@ -3724,7 +3714,7 @@
     </module_usages>
   </module>
   <module name="pstats" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/pstats.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="30" merged_total="6675" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="30" merged_total="7239" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="23" reason="import" />
@@ -3739,7 +3729,7 @@
     </module_usages>
   </module>
   <module name="py_compile" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/py_compile.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="844" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="839" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="enum" finding="absolute" line="6" reason="import" />
@@ -3754,7 +3744,7 @@
     </module_usages>
   </module>
   <module name="pyclbr" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/pyclbr.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="23" merged_total="1884" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="23" merged_total="1869" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="ast" finding="absolute" line="44" reason="import" />
@@ -3768,7 +3758,7 @@
     <module_usages />
   </module>
   <module name="queue" kind="UncompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/queue.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="1605" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="17" merged_total="1572" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="threading" finding="absolute" line="3" reason="import" />
@@ -3782,7 +3772,7 @@
     </module_usages>
   </module>
   <module name="quopri" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/quopri.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="1250" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="34" merged_total="1444" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="15" reason="import" />
@@ -3791,7 +3781,7 @@
     </module_usages>
   </module>
   <module name="random" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/random.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="49" merged_total="3752" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="49" merged_total="3734" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="warnings" finding="absolute" line="53" reason="import" />
@@ -3813,7 +3803,7 @@
     </module_usages>
   </module>
   <module name="re" kind="UncompiledPythonPackage" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/re/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="15" merged_total="1108" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="15" merged_total="1100" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -3835,7 +3825,7 @@
     <module_usages />
   </module>
   <module name="re._compiler" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/re/_compiler.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="138" merged_total="5198" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="134" merged_total="7094" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_sre" finding="absolute" line="13" reason="import" />
@@ -3847,14 +3837,14 @@
     </module_usages>
   </module>
   <module name="re._constants" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/re/_constants.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="528" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="523" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_sre" finding="absolute" line="18" reason="import" />
     </module_usages>
   </module>
   <module name="re._parser" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/re/_parser.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="225" merged_total="7513" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="210" merged_total="7345" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re._constants" finding="relative" line="15" reason="import" />
@@ -3868,7 +3858,7 @@
     </module_usages>
   </module>
   <module name="reprlib" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/reprlib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="17" merged_total="1226" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="17" merged_total="1204" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="5" reason="import" />
@@ -3877,7 +3867,7 @@
     </module_usages>
   </module>
   <module name="rlcompleter" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/rlcompleter.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="1138" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="1125" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="atexit" finding="absolute" line="32" reason="import" />
@@ -3908,7 +3898,7 @@
     <module_usages />
   </module>
   <module name="selectors" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/selectors.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="13" merged_total="2586" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="2541" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="8" reason="import" />
@@ -3921,7 +3911,7 @@
     </module_usages>
   </module>
   <module name="shlex" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/shlex.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="38" merged_total="1129" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="37" merged_total="1609" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="10" reason="import" />
@@ -3931,11 +3921,10 @@
       <module_usage name="collections.deque" finding="not-found" line="13" reason="import fromlist" />
       <module_usage name="io" finding="absolute" line="15" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="284" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="285" reason="import" />
     </module_usages>
   </module>
   <module name="shutil" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/shutil.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="8264" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="33" merged_total="9732" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="7" reason="import" />
@@ -3959,13 +3948,8 @@
       <module_usage name="posixpath" finding="absolute" line="304" reason="import" />
       <module_usage name="os" finding="absolute" line="308" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="365" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="434" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="451" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="505" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="506" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="616" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="641" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="664" reason="import" />
       <module_usage name="os" finding="absolute" line="675" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="685" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="706" reason="import" />
@@ -3977,7 +3961,6 @@
       <module_usage name="posixpath" finding="absolute" line="817" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="841" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="873" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="881" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="888" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="913" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="914" reason="import" />
@@ -3986,9 +3969,7 @@
       <module_usage name="grp" finding="absolute" line="930" reason="import" />
       <module_usage name="pwd" finding="absolute" line="948" reason="import" />
       <module_usage name="tarfile" finding="absolute" line="988" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="1020" reason="import" />
       <module_usage name="zipfile" finding="absolute" line="1037" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="1057" reason="import" />
       <module_usage name="zipfile" finding="absolute" line="1274" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="1288" reason="import" />
       <module_usage name="tarfile" finding="absolute" line="1304" reason="import" />
@@ -3996,7 +3977,7 @@
     </module_usages>
   </module>
   <module name="signal" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/signal.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="5" merged_total="308" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="5" merged_total="377" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_signal" finding="absolute" line="1" reason="import" />
@@ -4005,8 +3986,8 @@
     </module_usages>
   </module>
   <module name="six" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/six.py" distribution="six">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="3597" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="651" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="20" merged_total="4225" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="648" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="23" reason="import" />
@@ -4026,7 +4007,7 @@
     </module_usages>
   </module>
   <module name="sndhdr" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/sndhdr.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="633" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="785" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="warnings" finding="absolute" line="30" reason="import" />
@@ -4037,11 +4018,10 @@
       <module_usage name="sys" finding="absolute" line="250" reason="import" />
       <module_usage name="os" finding="absolute" line="251" reason="import" />
       <module_usage name="glob" finding="absolute" line="257" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="258" reason="import" />
     </module_usages>
   </module>
   <module name="socket" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/socket.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="27" merged_total="2553" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="29" merged_total="3169" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_socket" finding="absolute" line="52" reason="import" />
@@ -4057,7 +4037,7 @@
     </module_usages>
   </module>
   <module name="socketserver" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/socketserver.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="21" merged_total="5092" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="20" merged_total="5034" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="socket" finding="absolute" line="126" reason="import" />
@@ -4099,7 +4079,7 @@
     </module_usages>
   </module>
   <module name="ssl" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/ssl.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="46" merged_total="6073" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="45" merged_total="6014" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="94" reason="import" />
@@ -4128,14 +4108,14 @@
     </module_usages>
   </module>
   <module name="stat" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/stat.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="7" merged_total="218" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="7" merged_total="250" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_stat" finding="absolute" line="193" reason="import" />
     </module_usages>
   </module>
   <module name="statistics" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/statistics.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="4706" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="31" merged_total="5550" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="math" finding="absolute" line="130" reason="import" />
@@ -4157,7 +4137,7 @@
     </module_usages>
   </module>
   <module name="string" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/string.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="1338" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="1331" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_string" finding="absolute" line="21" reason="import" />
@@ -4183,7 +4163,7 @@
     </module_usages>
   </module>
   <module name="subprocess" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/subprocess.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="54" merged_total="11736" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="54" merged_total="13222" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="43" reason="import" />
@@ -4209,14 +4189,12 @@
       <module_usage name="grp" finding="absolute" line="906" reason="import" />
       <module_usage name="grp" finding="absolute" line="934" reason="import" />
       <module_usage name="pwd" finding="absolute" line="962" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="1521" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="1522" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="1524" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="1881" reason="import" />
     </module_usages>
   </module>
   <module name="symtable" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/symtable.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="18" merged_total="1810" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="18" merged_total="1779" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_symtable" finding="absolute" line="3" reason="import" />
@@ -4226,7 +4204,7 @@
   </module>
   <module name="sysconfig" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/sysconfig.py">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not win32" tags_used="win32" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="32" merged_total="3643" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="31" merged_total="3609" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" reason="import" />
@@ -4235,17 +4213,11 @@
       <module_usage name="posixpath" finding="absolute" line="6" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="120" reason="import" />
       <module_usage name="warnings" finding="absolute" line="226" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="230" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="279" reason="import" />
       <module_usage name="re" finding="absolute" line="327" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="451" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="458" reason="import" />
       <module_usage name="pprint" finding="absolute" line="471" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="520" reason="import" />
       <module_usage name="_imp" finding="absolute" line="543" reason="import" />
       <module_usage name="re" finding="absolute" line="572" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="606" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="685" reason="import" />
       <module_usage name="_aix_support" finding="absolute" line="806" reason="import" />
       <module_usage name="re" finding="absolute" line="810" reason="import" />
       <module_usage name="_osx_support" finding="absolute" line="816" reason="import" />
@@ -4253,7 +4225,7 @@
     </module_usages>
   </module>
   <module name="tarfile" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/tarfile.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="57" merged_total="17250" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="56" merged_total="17024" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="40" reason="import" />
@@ -4276,24 +4248,18 @@
       <module_usage name="posixpath" finding="absolute" line="768" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="769" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="804" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="807" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="811" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="813" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="814" reason="import" />
       <module_usage name="gzip" finding="absolute" line="1865" reason="import" />
       <module_usage name="bz2" finding="absolute" line="1898" reason="import" />
       <module_usage name="lzma" finding="absolute" line="1926" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="2025" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="2186" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="2277" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="2324" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="2332" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="2513" reason="import" />
       <module_usage name="zlib" finding="absolute" line="2633" reason="import" />
     </module_usages>
   </module>
   <module name="tempfile" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/tempfile.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="39" merged_total="3907" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="39" merged_total="3887" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="39" reason="import" />
@@ -4307,10 +4273,7 @@
       <module_usage name="types" finding="absolute" line="47" reason="import" />
       <module_usage name="weakref" finding="absolute" line="48" reason="import" />
       <module_usage name="_thread" finding="absolute" line="49" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="253" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="276" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="381" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="424" reason="import" />
       <module_usage name="io" finding="absolute" line="696" reason="import" />
       <module_usage name="io" finding="absolute" line="699" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="916" reason="import" />
@@ -4322,14 +4285,14 @@
     <module_usages />
   </module>
   <module name="textwrap" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/textwrap.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="39" merged_total="1238" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="39" merged_total="1462" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="8" reason="import" />
     </module_usages>
   </module>
   <module name="threading" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/threading.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="29" merged_total="6797" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="28" merged_total="6776" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="3" reason="import" />
@@ -4361,7 +4324,7 @@
     </module_usages>
   </module>
   <module name="timeit" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/timeit.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="1272" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="32" merged_total="1514" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="gc" finding="absolute" line="52" reason="import" />
@@ -4381,7 +4344,7 @@
     <module_usages />
   </module>
   <module name="tokenize" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/tokenize.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="36" merged_total="3363" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="36" merged_total="3294" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="codecs" finding="absolute" line="28" reason="import" />
@@ -4398,7 +4361,7 @@
     </module_usages>
   </module>
   <module name="tomllib" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/tomllib/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="3" merged_total="12" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="3" merged_total="9" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -4406,7 +4369,7 @@
     </module_usages>
   </module>
   <module name="tomllib._parser" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/tomllib/_parser.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="30" merged_total="5039" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="30" merged_total="5026" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="5" reason="import" />
@@ -4438,7 +4401,7 @@
     </module_usages>
   </module>
   <module name="trace" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/trace.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="22" merged_total="4981" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="21" merged_total="4933" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="io" finding="absolute" line="52" reason="import" />
@@ -4459,12 +4422,11 @@
       <module_usage name="posixpath" finding="absolute" line="137" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="147" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="151" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="271" reason="import" />
       <module_usage name="__main__" finding="not-found" line="439" reason="import" />
     </module_usages>
   </module>
   <module name="traceback" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/traceback.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="50" merged_total="6771" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="50" merged_total="6730" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="absolute" line="3" reason="import" />
@@ -4478,7 +4440,7 @@
     </module_usages>
   </module>
   <module name="tracemalloc" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/tracemalloc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="17" merged_total="4513" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="4479" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections.abc" finding="absolute" line="1" reason="import" />
@@ -4501,7 +4463,7 @@
     </module_usages>
   </module>
   <module name="typing" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/typing.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="26" merged_total="19755" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="25" merged_total="19506" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="22" reason="import" />
@@ -4537,7 +4499,7 @@
     </module_usages>
   </module>
   <module name="urllib.error" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/urllib/error.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="494" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="484" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="io" finding="absolute" line="13" reason="import" />
@@ -4546,7 +4508,7 @@
     </module_usages>
   </module>
   <module name="urllib.parse" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/urllib/parse.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="6793" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="6671" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="34" reason="import" />
@@ -4562,7 +4524,7 @@
   </module>
   <module name="urllib.request" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/urllib/request.py">
     <plugin-influence name="implicit-imports" influence="condition-used" condition="standalone and macos and python3_or_higher and not deployment" tags_used="standalone,macos" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="42" merged_total="21934" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="41" merged_total="21749" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="base64" finding="absolute" line="84" reason="import" />
@@ -4607,14 +4569,14 @@
     </module_usages>
   </module>
   <module name="urllib.response" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/urllib/response.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="9" merged_total="407" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="8" merged_total="395" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="tempfile" finding="absolute" line="9" reason="import" />
     </module_usages>
   </module>
   <module name="uu" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/uu.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="769" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="22" merged_total="895" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="binascii" finding="absolute" line="33" reason="import" />
@@ -4624,7 +4586,7 @@
     </module_usages>
   </module>
   <module name="warnings" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.12/warnings.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="28" merged_total="2777" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="27" merged_total="2752" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="3" reason="import" />
@@ -4640,7 +4602,7 @@
     </module_usages>
   </module>
   <module name="weakref" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/weakref.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="30" merged_total="6261" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="29" merged_total="7056" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="_weakref" finding="absolute" line="12" reason="import" />
@@ -4655,7 +4617,7 @@
     </module_usages>
   </module>
   <module name="webbrowser" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/webbrowser.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="3589" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="3534" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="5" reason="import" />
@@ -4670,8 +4632,8 @@
     </module_usages>
   </module>
   <module name="webencodings" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/webencodings/__init__.py" distribution="webencodings">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="15" merged_total="1143" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="154" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="14" merged_total="1135" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="153" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -4681,7 +4643,7 @@
     </module_usages>
   </module>
   <module name="webencodings.custom" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.12/site-packages/webencodings/custom.py" distribution="webencodings">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="1147" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="1423" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="276" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -4695,7 +4657,7 @@
     <module_usages />
   </module>
   <module name="xdrlib" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/xdrlib.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="1167" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="24" merged_total="1362" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="struct" finding="absolute" line="7" reason="import" />
@@ -4712,7 +4674,7 @@
     </module_usages>
   </module>
   <module name="xml.dom" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/dom/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="2930" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="15" merged_total="2921" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -4720,12 +4682,12 @@
     </module_usages>
   </module>
   <module name="xml.dom.NodeFilter" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/dom/NodeFilter.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="20" merged_total="75" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="19" merged_total="74" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
   <module name="xml.dom.domreg" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/dom/domreg.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="378" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="16" merged_total="449" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="9" reason="import" />
@@ -4733,7 +4695,7 @@
     </module_usages>
   </module>
   <module name="xml.dom.expatbuilder" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/dom/expatbuilder.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="31" merged_total="6782" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="30" merged_total="6702" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="xml.dom" finding="absolute" line="30" reason="import" />
@@ -4758,7 +4720,7 @@
     </module_usages>
   </module>
   <module name="xml.dom.minidom" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/dom/minidom.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="56" merged_total="13233" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="56" merged_total="13168" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="io" finding="absolute" line="18" reason="import" />
@@ -4783,7 +4745,7 @@
     </module_usages>
   </module>
   <module name="xml.dom.pulldom" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/dom/pulldom.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="23" merged_total="2627" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="23" merged_total="2613" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="xml.sax" finding="absolute" line="1" reason="import" />
@@ -4795,7 +4757,7 @@
     </module_usages>
   </module>
   <module name="xml.dom.xmlbuilder" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/dom/xmlbuilder.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="26" merged_total="1750" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="26" merged_total="1740" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="copy" finding="absolute" line="3" reason="import" />
@@ -4816,14 +4778,14 @@
     </module_usages>
   </module>
   <module name="xml.etree.ElementPath" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/etree/ElementPath.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="23" merged_total="3221" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="22" merged_total="3194" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="59" reason="import" />
     </module_usages>
   </module>
   <module name="xml.etree.ElementTree" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/etree/ElementTree.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="11701" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="32" merged_total="11535" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="95" reason="import" />
@@ -4870,7 +4832,7 @@
     </module_usages>
   </module>
   <module name="xml.sax" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/sax/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="203" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="200" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -4887,12 +4849,12 @@
     </module_usages>
   </module>
   <module name="xml.sax._exceptions" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/sax/_exceptions.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="749" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="724" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
   <module name="xml.sax.expatreader" kind="UncompiledPythonModule" usage="implicit import: According to 'implicit-imports' configuration." reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/sax/expatreader.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="37" merged_total="2243" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="36" merged_total="2227" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="xml.sax._exceptions" finding="absolute" line="8" reason="import" />
@@ -4912,12 +4874,12 @@
     </module_usages>
   </module>
   <module name="xml.sax.handler" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/sax/handler.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="17" merged_total="360" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="355" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
   <module name="xml.sax.saxutils" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/sax/saxutils.py">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="33" merged_total="1303" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="32" merged_total="1288" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="6" reason="import" />
@@ -4930,11 +4892,10 @@
       <module_usage name="xml.sax" finding="absolute" line="10" reason="import" />
       <module_usage name="xml.sax.xmlreader" finding="relative" line="10" reason="import fromlist" />
       <module_usage name="sys" finding="absolute" line="73" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="359" reason="import" />
     </module_usages>
   </module>
   <module name="xml.sax.xmlreader" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.12/xml/sax/xmlreader.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="19" merged_total="1285" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="19" merged_total="1275" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="xml.sax" finding="absolute" line="4" reason="import" />
@@ -4945,7 +4906,7 @@
     </module_usages>
   </module>
   <module name="zipfile" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/zipfile/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="44" merged_total="12494" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="44" merged_total="12401" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -4976,14 +4937,9 @@
       <module_usage name="posixpath" finding="absolute" line="1778" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="1780" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="1782" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="1787" reason="import" />
       <module_usage name="warnings" finding="absolute" line="1809" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="2094" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="2096" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="2113" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="2114" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="2116" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="2135" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="2136" reason="import" />
       <module_usage name="py_compile" finding="absolute" line="2164" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="2233" reason="import" />
@@ -4993,7 +4949,7 @@
     </module_usages>
   </module>
   <module name="zipfile._path" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/zipfile/_path/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="32" merged_total="1928" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="31" merged_total="1907" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -5005,6 +4961,7 @@
       <module_usage name="pathlib" finding="absolute" line="6" reason="import" />
       <module_usage name="re" finding="absolute" line="7" reason="import" />
       <module_usage name="zipfile._path.glob" finding="relative" line="9" reason="import" />
+      <module_usage name="posixpath" finding="absolute" line="383" reason="import" />
     </module_usages>
   </module>
   <module name="zipfile._path.glob" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.12/zipfile/_path/glob.py">
@@ -5091,6 +5048,7 @@
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
+    <plugin name="cute-dsl" user_enabled="no" />
     <plugin name="data-files" user_enabled="no" />
     <plugin name="delvewheel" user_enabled="no" />
     <plugin name="dll-files" user_enabled="no" />
@@ -5101,6 +5059,7 @@
     <plugin name="kivy" user_enabled="no" />
     <plugin name="matplotlib" user_enabled="no" />
     <plugin name="multiprocessing" user_enabled="no" />
+    <plugin name="numba" user_enabled="no" />
     <plugin name="options-nanny" user_enabled="no" />
     <plugin name="pbr-compat" user_enabled="no" />
     <plugin name="pkg-resources" user_enabled="no" />
