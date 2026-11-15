@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.4rc7" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.4rc8" nuitka_commercial_version="not installed" mode="standalone" completion="yes">
   <scons_environment c_compiler="gcc" the_cc_name="gcc" the_compiler="gcc" />
   <module name="__future__" kind="UncompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.14/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="8" merged_total="81" />
@@ -10812,7 +10812,8 @@
     </module_usages>
   </module>
   <module name="pydoc" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.14/pydoc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="72" merged_total="27187" />
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="python313_or_higher" tags_used="python313_or_higher" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="72" merged_total="27085" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="ast" finding="absolute" line="56" reason="import" />
@@ -10844,8 +10845,6 @@
       <module_usage name="posixpath" finding="absolute" line="104" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="477" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="573" reason="import" />
-      <module_usage name="pydoc_data" finding="absolute" line="583" reason="import" />
-      <module_usage name="pydoc_data.module_docs" finding="relative" line="583" reason="import fromlist" />
       <module_usage name="urllib.request" finding="absolute" line="853" reason="import" />
       <module_usage name="textwrap" finding="absolute" line="1828" reason="import" />
       <module_usage name="io" finding="absolute" line="2301" reason="import" />
@@ -10857,18 +10856,6 @@
       <module_usage name="posixpath" finding="absolute" line="2715" reason="import" />
       <module_usage name="posixpath" finding="absolute" line="2786" reason="import" />
     </module_usages>
-  </module>
-  <module name="pydoc_data" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.14/pydoc_data/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="2" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" reason="import" />
-    </module_usages>
-  </module>
-  <module name="pydoc_data.module_docs" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.14/pydoc_data/module_docs.py">
-    <optimization-time pass="1" time="volatile" micro_passes="2" />
-    <optimization-time pass="2" time="volatile" />
-    <module_usages />
   </module>
   <module name="pyexpat" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}/lib/python3.14/lib-dynload/pyexpat.cpython-314-x86_64-linux-gnu.so">
     <optimization-time pass="1" time="volatile" />
@@ -28880,9 +28867,9 @@
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="sklearn/utils/_fast_dict.so" reason="no outside dependencies allowed for 'sklearn.utils._fast_dict'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="sklearn/utils/_vector_sentinel.so" reason="no outside dependencies allowed for 'sklearn.utils._vector_sentinel'" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="1827" />
-    <optimization-time pass="2" time="volatile" module_count="1827" />
-    <optimization-time pass="all" time="volatile" module_count="1827" />
+    <optimization-time pass="1" time="volatile" module_count="1825" />
+    <optimization-time pass="2" time="volatile" module_count="1825" />
+    <optimization-time pass="all" time="volatile" module_count="1825" />
     <code-generation-time time="volatile" module_count="1148" />
   </performance-totals>
   <python_binary filename="SklearnWalkPackage.bin" backend_resource_mode="incbin" reproducible="yes" size="volatile" />
@@ -28909,7 +28896,6 @@
   </command_line>
   <plugins>
     <plugin name="anti-bloat" user_enabled="no" />
-    <plugin name="cute-dsl" user_enabled="no" />
     <plugin name="data-files" user_enabled="no" />
     <plugin name="delvewheel" user_enabled="no" />
     <plugin name="dll-files" user_enabled="no" />
