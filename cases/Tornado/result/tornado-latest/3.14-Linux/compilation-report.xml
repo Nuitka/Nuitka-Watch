@@ -1949,14 +1949,14 @@
       <module_usage name="compression._common._streams" finding="relative" line="4" reason="import fromlist" />
     </module_usages>
   </module>
-  <module name="concurrent" kind="UncompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.14/concurrent/__init__.py">
+  <module name="concurrent" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.14/concurrent/__init__.py">
     <optimization-time pass="1" time="volatile" micro_passes="2" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
     </module_usages>
   </module>
-  <module name="concurrent.futures" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.14/concurrent/futures/__init__.py">
+  <module name="concurrent.futures" kind="UncompiledPythonPackage" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.14/concurrent/futures/__init__.py">
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="11" merged_total="65" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
@@ -5857,8 +5857,8 @@
     <module_usages />
   </module>
   <module name="tornado.autoreload" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/autoreload.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="876" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="164" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="23" merged_total="861" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="161" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="46" reason="import" />
@@ -5866,206 +5866,213 @@
       <module_usage name="functools" finding="absolute" line="77" reason="import" />
       <module_usage name="importlib.abc" finding="absolute" line="78" reason="import" />
       <module_usage name="pkgutil" finding="absolute" line="80" reason="import" />
-      <module_usage name="traceback" finding="absolute" line="82" reason="import" />
-      <module_usage name="types" finding="absolute" line="83" reason="import" />
-      <module_usage name="subprocess" finding="absolute" line="84" reason="import" />
+      <module_usage name="subprocess" finding="absolute" line="81" reason="import" />
+      <module_usage name="traceback" finding="absolute" line="83" reason="import" />
+      <module_usage name="types" finding="absolute" line="84" reason="import" />
       <module_usage name="weakref" finding="absolute" line="85" reason="import" />
       <module_usage name="tornado" finding="absolute" line="87" reason="import" />
       <module_usage name="tornado.ioloop" finding="relative" line="87" reason="import fromlist" />
+      <module_usage name="tornado.process" finding="relative" line="87" reason="import fromlist" />
       <module_usage name="tornado.log" finding="absolute" line="88" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="89" reason="import" />
-      <module_usage name="tornado.process" finding="relative" line="89" reason="import fromlist" />
-      <module_usage name="signal" finding="absolute" line="92" reason="import" />
-      <module_usage name="typing" finding="absolute" line="96" reason="import" />
-      <module_usage name="functools" finding="absolute" line="127" reason="import" />
-      <module_usage name="optparse" finding="absolute" line="267" reason="import" />
+      <module_usage name="signal" finding="absolute" line="91" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="95" reason="import" />
+      <module_usage name="functools" finding="absolute" line="126" reason="import" />
+      <module_usage name="optparse" finding="absolute" line="266" reason="import" />
       <module_usage name="tornado.autoreload" finding="absolute" line="268" reason="import" />
       <module_usage name="runpy" finding="absolute" line="305" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.concurrent" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/concurrent.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="669" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="113" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="650" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="108" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="asyncio" finding="absolute" line="28" reason="import" />
-      <module_usage name="concurrent" finding="absolute" line="29" reason="import" />
-      <module_usage name="concurrent.futures" finding="relative" line="29" reason="import fromlist" />
-      <module_usage name="functools" finding="absolute" line="30" reason="import" />
-      <module_usage name="sys" finding="absolute" line="31" reason="import" />
-      <module_usage name="types" finding="absolute" line="32" reason="import" />
-      <module_usage name="tornado.log" finding="absolute" line="34" reason="import" />
-      <module_usage name="typing" finding="absolute" line="36" reason="import" />
-      <module_usage name="typing" finding="absolute" line="37" reason="import" />
-      <module_usage name="tornado.ioloop" finding="absolute" line="180" reason="import" />
+      <module_usage name="functools" finding="absolute" line="29" reason="import" />
+      <module_usage name="sys" finding="absolute" line="30" reason="import" />
+      <module_usage name="types" finding="absolute" line="31" reason="import" />
+      <module_usage name="typing" finding="absolute" line="32" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="33" reason="import" />
+      <module_usage name="concurrent" finding="absolute" line="34" reason="import" />
+      <module_usage name="concurrent.futures" finding="relative" line="34" reason="import fromlist" />
+      <module_usage name="typing" finding="absolute" line="35" reason="import" />
+      <module_usage name="tornado.log" finding="absolute" line="37" reason="import" />
+      <module_usage name="tornado.ioloop" finding="absolute" line="181" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.escape" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/escape.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="939" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="147" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="962" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="152" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="html" finding="absolute" line="28" reason="import" />
-      <module_usage name="json" finding="absolute" line="29" reason="import" />
-      <module_usage name="re" finding="absolute" line="30" reason="import" />
-      <module_usage name="urllib.parse" finding="absolute" line="31" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="33" reason="import" />
+      <module_usage name="binascii" finding="absolute" line="28" reason="import" />
+      <module_usage name="html" finding="absolute" line="29" reason="import" />
+      <module_usage name="json" finding="absolute" line="30" reason="import" />
+      <module_usage name="re" finding="absolute" line="31" reason="import" />
+      <module_usage name="typing" finding="absolute" line="32" reason="import" />
+      <module_usage name="urllib.parse" finding="absolute" line="33" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="34" reason="import" />
       <module_usage name="typing" finding="absolute" line="35" reason="import" />
-      <module_usage name="typing" finding="absolute" line="36" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="37" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.gen" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/gen.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="18" merged_total="3785" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="487" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="18" merged_total="3865" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="499" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="asyncio" finding="absolute" line="64" reason="import" />
       <module_usage name="builtins" finding="absolute" line="65" reason="import" />
       <module_usage name="collections" finding="absolute" line="66" reason="import" />
-      <module_usage name="collections.abc" finding="not-found" line="67" reason="import" />
-      <module_usage name="concurrent.futures" finding="absolute" line="68" reason="import" />
+      <module_usage name="concurrent.futures" finding="absolute" line="67" reason="import" />
+      <module_usage name="contextvars" finding="absolute" line="68" reason="import" />
       <module_usage name="datetime" finding="absolute" line="69" reason="import" />
       <module_usage name="functools" finding="absolute" line="70" reason="import" />
-      <module_usage name="functools" finding="absolute" line="71" reason="import" />
-      <module_usage name="inspect" finding="absolute" line="72" reason="import" />
-      <module_usage name="sys" finding="absolute" line="73" reason="import" />
-      <module_usage name="types" finding="absolute" line="74" reason="import" />
-      <module_usage name="tornado.concurrent" finding="absolute" line="76" reason="import" />
-      <module_usage name="tornado.ioloop" finding="absolute" line="84" reason="import" />
-      <module_usage name="tornado.log" finding="absolute" line="85" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="86" reason="import" />
-      <module_usage name="contextvars" finding="absolute" line="89" reason="import" />
-      <module_usage name="typing" finding="absolute" line="93" reason="import" />
-      <module_usage name="typing" finding="absolute" line="94" reason="import" />
+      <module_usage name="sys" finding="absolute" line="71" reason="import" />
+      <module_usage name="types" finding="absolute" line="72" reason="import" />
+      <module_usage name="typing" finding="absolute" line="73" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="74" reason="import" />
+      <module_usage name="functools" finding="absolute" line="75" reason="import" />
+      <module_usage name="inspect" finding="absolute" line="76" reason="import" />
+      <module_usage name="typing" finding="absolute" line="77" reason="import" />
+      <module_usage name="tornado.concurrent" finding="absolute" line="87" reason="import" />
+      <module_usage name="tornado.ioloop" finding="absolute" line="95" reason="import" />
+      <module_usage name="tornado.log" finding="absolute" line="96" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="97" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.http1connection" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/http1connection.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="31" merged_total="4828" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="639" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="5111" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="675" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="asyncio" finding="absolute" line="21" reason="import" />
       <module_usage name="logging" finding="absolute" line="22" reason="import" />
       <module_usage name="re" finding="absolute" line="23" reason="import" />
       <module_usage name="types" finding="absolute" line="24" reason="import" />
-      <module_usage name="tornado.concurrent" finding="absolute" line="26" reason="import" />
-      <module_usage name="tornado.escape" finding="absolute" line="31" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="32" reason="import" />
-      <module_usage name="tornado.gen" finding="relative" line="32" reason="import fromlist" />
-      <module_usage name="tornado" finding="absolute" line="33" reason="import" />
-      <module_usage name="tornado.httputil" finding="relative" line="33" reason="import fromlist" />
-      <module_usage name="tornado" finding="absolute" line="34" reason="import" />
-      <module_usage name="tornado.iostream" finding="relative" line="34" reason="import fromlist" />
-      <module_usage name="tornado.log" finding="absolute" line="35" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="36" reason="import" />
-      <module_usage name="typing" finding="absolute" line="39" reason="import" />
+      <module_usage name="zlib" finding="absolute" line="25" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="26" reason="import" />
+      <module_usage name="typing" finding="absolute" line="27" reason="import" />
+      <module_usage name="tornado" finding="absolute" line="29" reason="import" />
+      <module_usage name="tornado.gen" finding="relative" line="29" reason="import fromlist" />
+      <module_usage name="tornado.httputil" finding="relative" line="29" reason="import fromlist" />
+      <module_usage name="tornado.iostream" finding="relative" line="29" reason="import fromlist" />
+      <module_usage name="tornado.concurrent" finding="absolute" line="30" reason="import" />
+      <module_usage name="tornado.escape" finding="absolute" line="35" reason="import" />
+      <module_usage name="tornado.log" finding="absolute" line="36" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="37" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.httpclient" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/httpclient.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="2098" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="240" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="2121" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="241" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="datetime" finding="absolute" line="39" reason="import" />
       <module_usage name="functools" finding="absolute" line="40" reason="import" />
-      <module_usage name="io" finding="absolute" line="41" reason="import" />
-      <module_usage name="ssl" finding="absolute" line="42" reason="import" />
-      <module_usage name="time" finding="absolute" line="43" reason="import" />
-      <module_usage name="weakref" finding="absolute" line="44" reason="import" />
-      <module_usage name="tornado.concurrent" finding="absolute" line="46" reason="import" />
-      <module_usage name="tornado.escape" finding="absolute" line="51" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="52" reason="import" />
-      <module_usage name="tornado.gen" finding="relative" line="52" reason="import fromlist" />
-      <module_usage name="tornado.httputil" finding="relative" line="52" reason="import fromlist" />
-      <module_usage name="tornado.ioloop" finding="absolute" line="53" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="54" reason="import" />
-      <module_usage name="typing" finding="absolute" line="56" reason="import" />
+      <module_usage name="ssl" finding="absolute" line="41" reason="import" />
+      <module_usage name="time" finding="absolute" line="42" reason="import" />
+      <module_usage name="weakref" finding="absolute" line="43" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="44" reason="import" />
+      <module_usage name="io" finding="absolute" line="45" reason="import" />
+      <module_usage name="typing" finding="absolute" line="46" reason="import" />
+      <module_usage name="tornado" finding="absolute" line="48" reason="import" />
+      <module_usage name="tornado.gen" finding="relative" line="48" reason="import fromlist" />
+      <module_usage name="tornado.httputil" finding="relative" line="48" reason="import fromlist" />
+      <module_usage name="tornado.concurrent" finding="absolute" line="49" reason="import" />
+      <module_usage name="tornado.escape" finding="absolute" line="54" reason="import" />
+      <module_usage name="tornado.ioloop" finding="absolute" line="55" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="56" reason="import" />
       <module_usage name="functools" finding="absolute" line="135" reason="import" />
       <module_usage name="tornado.simple_httpclient" finding="absolute" line="187" reason="import" />
-      <module_usage name="tornado.options" finding="absolute" line="758" reason="import" />
+      <module_usage name="tornado.options" finding="absolute" line="761" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.httpserver" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/httpserver.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="15" merged_total="1504" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="183" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="15" merged_total="1491" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="181" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="socket" finding="absolute" line="28" reason="import" />
       <module_usage name="ssl" finding="absolute" line="29" reason="import" />
-      <module_usage name="tornado.escape" finding="absolute" line="31" reason="import" />
-      <module_usage name="tornado.http1connection" finding="absolute" line="32" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="33" reason="import" />
-      <module_usage name="tornado.httputil" finding="relative" line="33" reason="import fromlist" />
+      <module_usage name="typing" finding="absolute" line="30" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="31" reason="import" />
+      <module_usage name="typing" finding="absolute" line="32" reason="import" />
       <module_usage name="tornado" finding="absolute" line="34" reason="import" />
+      <module_usage name="tornado.httputil" finding="relative" line="34" reason="import fromlist" />
       <module_usage name="tornado.iostream" finding="relative" line="34" reason="import fromlist" />
-      <module_usage name="tornado" finding="absolute" line="35" reason="import" />
-      <module_usage name="tornado.netutil" finding="relative" line="35" reason="import fromlist" />
-      <module_usage name="tornado.tcpserver" finding="absolute" line="36" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="37" reason="import" />
-      <module_usage name="typing" finding="absolute" line="39" reason="import" />
-      <module_usage name="typing" finding="absolute" line="40" reason="import" />
+      <module_usage name="tornado.netutil" finding="relative" line="34" reason="import fromlist" />
+      <module_usage name="tornado.escape" finding="absolute" line="35" reason="import" />
+      <module_usage name="tornado.http1connection" finding="absolute" line="36" reason="import" />
+      <module_usage name="tornado.tcpserver" finding="absolute" line="37" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="38" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.httputil" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/httputil.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="29" merged_total="7091" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="952" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="29" merged_total="6968" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="938" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="calendar" finding="absolute" line="22" reason="import" />
-      <module_usage name="collections.abc" finding="not-found" line="23" reason="import" />
-      <module_usage name="copy" finding="absolute" line="24" reason="import" />
-      <module_usage name="dataclasses" finding="absolute" line="25" reason="import" />
-      <module_usage name="datetime" finding="absolute" line="26" reason="import" />
-      <module_usage name="email.utils" finding="absolute" line="27" reason="import" />
-      <module_usage name="functools" finding="absolute" line="28" reason="import" />
-      <module_usage name="http.client" finding="absolute" line="29" reason="import" />
+      <module_usage name="__future__" finding="absolute" line="22" reason="import" />
+      <module_usage name="calendar" finding="absolute" line="24" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="25" reason="import" />
+      <module_usage name="copy" finding="absolute" line="26" reason="import" />
+      <module_usage name="dataclasses" finding="absolute" line="27" reason="import" />
+      <module_usage name="datetime" finding="absolute" line="28" reason="import" />
+      <module_usage name="email.utils" finding="absolute" line="29" reason="import" />
       <module_usage name="http.cookies" finding="absolute" line="30" reason="import" />
       <module_usage name="re" finding="absolute" line="31" reason="import" />
-      <module_usage name="ssl" finding="absolute" line="32" reason="import" />
-      <module_usage name="time" finding="absolute" line="33" reason="import" />
-      <module_usage name="unicodedata" finding="absolute" line="34" reason="import" />
-      <module_usage name="urllib.parse" finding="absolute" line="35" reason="import" />
-      <module_usage name="tornado.escape" finding="absolute" line="37" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="38" reason="import" />
-      <module_usage name="typing" finding="absolute" line="44" reason="import" />
-      <module_usage name="typing" finding="absolute" line="45" reason="import" />
+      <module_usage name="time" finding="absolute" line="32" reason="import" />
+      <module_usage name="unicodedata" finding="absolute" line="33" reason="import" />
+      <module_usage name="functools" finding="absolute" line="34" reason="import" />
+      <module_usage name="http.client" finding="absolute" line="35" reason="import" />
+      <module_usage name="ssl" finding="absolute" line="36" reason="import" />
+      <module_usage name="urllib.parse" finding="absolute" line="37" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="38" reason="import" />
+      <module_usage name="tornado.escape" finding="absolute" line="40" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="41" reason="import" />
+      <module_usage name="typing" finding="absolute" line="47" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="48" reason="import" />
+      <module_usage name="typing" finding="absolute" line="49" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.ioloop" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/ioloop.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="54" merged_total="2587" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="54" merged_total="298" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="55" merged_total="2766" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="55" merged_total="324" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="asyncio" finding="absolute" line="26" reason="import" />
-      <module_usage name="concurrent.futures" finding="absolute" line="27" reason="import" />
-      <module_usage name="datetime" finding="absolute" line="28" reason="import" />
-      <module_usage name="functools" finding="absolute" line="29" reason="import" />
-      <module_usage name="numbers" finding="absolute" line="30" reason="import" />
-      <module_usage name="os" finding="absolute" line="31" reason="import" />
-      <module_usage name="sys" finding="absolute" line="32" reason="import" />
-      <module_usage name="time" finding="absolute" line="33" reason="import" />
-      <module_usage name="math" finding="absolute" line="34" reason="import" />
+      <module_usage name="__future__" finding="absolute" line="26" reason="import" />
+      <module_usage name="asyncio" finding="absolute" line="28" reason="import" />
+      <module_usage name="concurrent.futures" finding="absolute" line="29" reason="import" />
+      <module_usage name="datetime" finding="absolute" line="30" reason="import" />
+      <module_usage name="functools" finding="absolute" line="31" reason="import" />
+      <module_usage name="math" finding="absolute" line="32" reason="import" />
+      <module_usage name="numbers" finding="absolute" line="33" reason="import" />
+      <module_usage name="os" finding="absolute" line="34" reason="import" />
       <module_usage name="random" finding="absolute" line="35" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="36" reason="import" />
-      <module_usage name="inspect" finding="absolute" line="37" reason="import" />
-      <module_usage name="tornado.concurrent" finding="absolute" line="39" reason="import" />
-      <module_usage name="tornado.log" finding="absolute" line="46" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="47" reason="import" />
-      <module_usage name="typing" finding="absolute" line="49" reason="import" />
-      <module_usage name="typing" finding="absolute" line="50" reason="import" />
-      <module_usage name="tornado.platform.asyncio" finding="absolute" line="175" reason="import" />
-      <module_usage name="tornado.platform.asyncio" finding="absolute" line="283" reason="import" />
-      <module_usage name="tornado.platform.asyncio" finding="absolute" line="357" reason="import" />
-      <module_usage name="tornado.gen" finding="absolute" line="504" reason="import" />
-      <module_usage name="functools" finding="absolute" line="707" reason="import" />
-      <module_usage name="tornado.process" finding="absolute" line="730" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="760" reason="import" />
-      <module_usage name="tornado.gen" finding="relative" line="760" reason="import fromlist" />
+      <module_usage name="sys" finding="absolute" line="36" reason="import" />
+      <module_usage name="time" finding="absolute" line="37" reason="import" />
+      <module_usage name="typing" finding="absolute" line="38" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="39" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="40" reason="import" />
+      <module_usage name="inspect" finding="absolute" line="41" reason="import" />
+      <module_usage name="typing" finding="absolute" line="42" reason="import" />
+      <module_usage name="tornado.concurrent" finding="absolute" line="44" reason="import" />
+      <module_usage name="tornado.log" finding="absolute" line="51" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="52" reason="import" />
+      <module_usage name="tornado.platform.asyncio" finding="absolute" line="172" reason="import" />
+      <module_usage name="tornado.platform.asyncio" finding="absolute" line="280" reason="import" />
+      <module_usage name="tornado.platform.asyncio" finding="absolute" line="354" reason="import" />
+      <module_usage name="tornado.gen" finding="absolute" line="502" reason="import" />
+      <module_usage name="functools" finding="absolute" line="705" reason="import" />
+      <module_usage name="tornado.process" finding="absolute" line="728" reason="import" />
+      <module_usage name="tornado" finding="absolute" line="758" reason="import" />
+      <module_usage name="tornado.gen" finding="relative" line="758" reason="import fromlist" />
     </module_usages>
   </module>
   <module name="tornado.iostream" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/iostream.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="41" merged_total="6569" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="853" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="41" merged_total="7789" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="1023" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="asyncio" finding="absolute" line="26" reason="import" />
@@ -6074,91 +6081,99 @@
       <module_usage name="io" finding="absolute" line="29" reason="import" />
       <module_usage name="numbers" finding="absolute" line="30" reason="import" />
       <module_usage name="os" finding="absolute" line="31" reason="import" />
-      <module_usage name="socket" finding="absolute" line="32" reason="import" />
-      <module_usage name="ssl" finding="absolute" line="33" reason="import" />
-      <module_usage name="sys" finding="absolute" line="34" reason="import" />
-      <module_usage name="re" finding="absolute" line="35" reason="import" />
-      <module_usage name="tornado.concurrent" finding="absolute" line="37" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="38" reason="import" />
-      <module_usage name="tornado.ioloop" finding="relative" line="38" reason="import fromlist" />
-      <module_usage name="tornado.log" finding="absolute" line="39" reason="import" />
-      <module_usage name="tornado.netutil" finding="absolute" line="40" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="41" reason="import" />
-      <module_usage name="typing" finding="absolute" line="43" reason="import" />
-      <module_usage name="typing" finding="absolute" line="44" reason="import" />
-      <module_usage name="types" finding="absolute" line="55" reason="import" />
+      <module_usage name="re" finding="absolute" line="32" reason="import" />
+      <module_usage name="socket" finding="absolute" line="33" reason="import" />
+      <module_usage name="ssl" finding="absolute" line="34" reason="import" />
+      <module_usage name="sys" finding="absolute" line="35" reason="import" />
+      <module_usage name="typing" finding="absolute" line="36" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="37" reason="import" />
+      <module_usage name="re" finding="absolute" line="38" reason="import" />
+      <module_usage name="re.Pattern" finding="not-found" line="38" reason="import fromlist" />
+      <module_usage name="types" finding="absolute" line="39" reason="import" />
+      <module_usage name="typing" finding="absolute" line="40" reason="import" />
+      <module_usage name="tornado" finding="absolute" line="45" reason="import" />
+      <module_usage name="tornado.ioloop" finding="relative" line="45" reason="import fromlist" />
+      <module_usage name="tornado.concurrent" finding="absolute" line="46" reason="import" />
+      <module_usage name="tornado.log" finding="absolute" line="47" reason="import" />
+      <module_usage name="tornado.netutil" finding="absolute" line="48" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="49" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.locale" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/locale.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="42" merged_total="2417" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="42" merged_total="376" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="42" merged_total="2392" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="42" merged_total="372" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="codecs" finding="absolute" line="40" reason="import" />
-      <module_usage name="csv" finding="absolute" line="41" reason="import" />
-      <module_usage name="datetime" finding="absolute" line="42" reason="import" />
-      <module_usage name="gettext" finding="absolute" line="43" reason="import" />
-      <module_usage name="glob" finding="absolute" line="44" reason="import" />
-      <module_usage name="os" finding="absolute" line="45" reason="import" />
-      <module_usage name="re" finding="absolute" line="46" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="48" reason="import" />
-      <module_usage name="tornado.escape" finding="relative" line="48" reason="import fromlist" />
-      <module_usage name="tornado.log" finding="absolute" line="49" reason="import" />
-      <module_usage name="tornado._locale_data" finding="absolute" line="51" reason="import" />
-      <module_usage name="typing" finding="absolute" line="53" reason="import" />
+      <module_usage name="__future__" finding="absolute" line="40" reason="import" />
+      <module_usage name="codecs" finding="absolute" line="42" reason="import" />
+      <module_usage name="csv" finding="absolute" line="43" reason="import" />
+      <module_usage name="datetime" finding="absolute" line="44" reason="import" />
+      <module_usage name="gettext" finding="absolute" line="45" reason="import" />
+      <module_usage name="glob" finding="absolute" line="46" reason="import" />
+      <module_usage name="os" finding="absolute" line="47" reason="import" />
+      <module_usage name="re" finding="absolute" line="48" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="49" reason="import" />
+      <module_usage name="typing" finding="absolute" line="50" reason="import" />
+      <module_usage name="tornado" finding="absolute" line="52" reason="import" />
+      <module_usage name="tornado.escape" finding="relative" line="52" reason="import fromlist" />
+      <module_usage name="tornado._locale_data" finding="absolute" line="53" reason="import" />
+      <module_usage name="tornado.log" finding="absolute" line="54" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.log" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/log.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="867" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="165" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="857" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="163" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="logging" finding="absolute" line="30" reason="import" />
-      <module_usage name="logging.handlers" finding="absolute" line="31" reason="import" />
-      <module_usage name="sys" finding="absolute" line="32" reason="import" />
-      <module_usage name="tornado.escape" finding="absolute" line="34" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="35" reason="import" />
-      <module_usage name="colorama" finding="not-found" line="38" reason="import" />
-      <module_usage name="curses" finding="absolute" line="43" reason="import" />
-      <module_usage name="typing" finding="absolute" line="47" reason="import" />
-      <module_usage name="tornado.options" finding="absolute" line="224" reason="import" />
-      <module_usage name="tornado.options" finding="absolute" line="276" reason="import" />
+      <module_usage name="logging" finding="absolute" line="31" reason="import" />
+      <module_usage name="logging.handlers" finding="absolute" line="32" reason="import" />
+      <module_usage name="sys" finding="absolute" line="33" reason="import" />
+      <module_usage name="tornado.escape" finding="absolute" line="35" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="36" reason="import" />
+      <module_usage name="colorama" finding="not-found" line="39" reason="import" />
+      <module_usage name="curses" finding="absolute" line="44" reason="import" />
+      <module_usage name="typing" finding="absolute" line="48" reason="import" />
+      <module_usage name="tornado.options" finding="absolute" line="225" reason="import" />
+      <module_usage name="tornado.options" finding="absolute" line="277" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.netutil" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/netutil.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="2707" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="503" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="2752" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="17" merged_total="509" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="asyncio" finding="absolute" line="18" reason="import" />
       <module_usage name="concurrent.futures" finding="absolute" line="19" reason="import" />
       <module_usage name="errno" finding="absolute" line="20" reason="import" />
-      <module_usage name="os" finding="absolute" line="21" reason="import" />
-      <module_usage name="sys" finding="absolute" line="22" reason="import" />
+      <module_usage name="functools" finding="absolute" line="21" reason="import" />
+      <module_usage name="os" finding="absolute" line="22" reason="import" />
       <module_usage name="socket" finding="absolute" line="23" reason="import" />
       <module_usage name="ssl" finding="absolute" line="24" reason="import" />
       <module_usage name="stat" finding="absolute" line="25" reason="import" />
-      <module_usage name="tornado.concurrent" finding="absolute" line="27" reason="import" />
-      <module_usage name="tornado.ioloop" finding="absolute" line="28" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="29" reason="import" />
-      <module_usage name="typing" finding="absolute" line="31" reason="import" />
+      <module_usage name="sys" finding="absolute" line="26" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="27" reason="import" />
+      <module_usage name="typing" finding="absolute" line="28" reason="import" />
+      <module_usage name="tornado.concurrent" finding="absolute" line="30" reason="import" />
+      <module_usage name="tornado.ioloop" finding="absolute" line="31" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="32" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.options" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/options.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="25" merged_total="3722" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="419" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="25" merged_total="3658" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="411" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="datetime" finding="absolute" line="102" reason="import" />
       <module_usage name="numbers" finding="absolute" line="103" reason="import" />
-      <module_usage name="re" finding="absolute" line="104" reason="import" />
-      <module_usage name="sys" finding="absolute" line="105" reason="import" />
-      <module_usage name="os" finding="absolute" line="106" reason="import" />
+      <module_usage name="os" finding="absolute" line="104" reason="import" />
+      <module_usage name="re" finding="absolute" line="105" reason="import" />
+      <module_usage name="sys" finding="absolute" line="106" reason="import" />
       <module_usage name="textwrap" finding="absolute" line="107" reason="import" />
-      <module_usage name="tornado.escape" finding="absolute" line="109" reason="import" />
-      <module_usage name="tornado.log" finding="absolute" line="110" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="111" reason="import" />
-      <module_usage name="typing" finding="absolute" line="113" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="108" reason="import" />
+      <module_usage name="typing" finding="absolute" line="109" reason="import" />
+      <module_usage name="tornado.escape" finding="absolute" line="114" reason="import" />
+      <module_usage name="tornado.log" finding="absolute" line="115" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="116" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.platform" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/platform/__init__.py" distribution="tornado">
@@ -6170,8 +6185,8 @@
     </module_usages>
   </module>
   <module name="tornado.platform.asyncio" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/platform/asyncio.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="20" merged_total="4034" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="518" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="20" merged_total="3987" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="512" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="asyncio" finding="absolute" line="25" reason="import" />
@@ -6186,91 +6201,94 @@
       <module_usage name="threading" finding="absolute" line="34" reason="import" />
       <module_usage name="typing" finding="absolute" line="35" reason="import" />
       <module_usage name="warnings" finding="absolute" line="36" reason="import" />
-      <module_usage name="tornado.gen" finding="absolute" line="37" reason="import" />
-      <module_usage name="tornado.ioloop" finding="absolute" line="38" reason="import" />
-      <module_usage name="typing" finding="absolute" line="40" reason="import" />
-      <module_usage name="functools" finding="absolute" line="225" reason="import" />
-      <module_usage name="functools" finding="absolute" line="241" reason="import" />
-      <module_usage name="functools" finding="absolute" line="261" reason="import" />
-      <module_usage name="functools" finding="absolute" line="664" reason="import" />
-      <module_usage name="functools" finding="absolute" line="670" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="37" reason="import" />
+      <module_usage name="typing" finding="absolute" line="38" reason="import" />
+      <module_usage name="tornado.gen" finding="absolute" line="45" reason="import" />
+      <module_usage name="tornado.ioloop" finding="absolute" line="46" reason="import" />
+      <module_usage name="functools" finding="absolute" line="217" reason="import" />
+      <module_usage name="functools" finding="absolute" line="233" reason="import" />
+      <module_usage name="functools" finding="absolute" line="253" reason="import" />
+      <module_usage name="functools" finding="absolute" line="687" reason="import" />
+      <module_usage name="functools" finding="absolute" line="693" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.process" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/process.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="23" merged_total="1274" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="195" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="23" merged_total="1256" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="192" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="asyncio" finding="absolute" line="20" reason="import" />
-      <module_usage name="os" finding="absolute" line="21" reason="import" />
-      <module_usage name="multiprocessing" finding="absolute" line="22" reason="import" />
+      <module_usage name="multiprocessing" finding="absolute" line="21" reason="import" />
+      <module_usage name="os" finding="absolute" line="22" reason="import" />
       <module_usage name="signal" finding="absolute" line="23" reason="import" />
       <module_usage name="subprocess" finding="absolute" line="24" reason="import" />
       <module_usage name="sys" finding="absolute" line="25" reason="import" />
       <module_usage name="time" finding="absolute" line="26" reason="import" />
-      <module_usage name="binascii" finding="absolute" line="28" reason="import" />
-      <module_usage name="tornado.concurrent" finding="absolute" line="30" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="35" reason="import" />
-      <module_usage name="tornado.ioloop" finding="relative" line="35" reason="import fromlist" />
-      <module_usage name="tornado.iostream" finding="absolute" line="36" reason="import" />
-      <module_usage name="tornado.log" finding="absolute" line="37" reason="import" />
-      <module_usage name="typing" finding="absolute" line="39" reason="import" />
-      <module_usage name="typing" finding="absolute" line="40" reason="import" />
-      <module_usage name="random" finding="absolute" line="68" reason="import" />
+      <module_usage name="binascii" finding="absolute" line="27" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="28" reason="import" />
+      <module_usage name="typing" finding="absolute" line="29" reason="import" />
+      <module_usage name="tornado" finding="absolute" line="31" reason="import" />
+      <module_usage name="tornado.ioloop" finding="relative" line="31" reason="import fromlist" />
+      <module_usage name="tornado.concurrent" finding="absolute" line="32" reason="import" />
+      <module_usage name="tornado.iostream" finding="absolute" line="37" reason="import" />
+      <module_usage name="tornado.log" finding="absolute" line="38" reason="import" />
+      <module_usage name="random" finding="absolute" line="63" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.routing" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/routing.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="12" merged_total="4362" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="578" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="12" merged_total="4320" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="572" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="178" reason="import" />
-      <module_usage name="functools" finding="absolute" line="179" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="181" reason="import" />
-      <module_usage name="tornado.httputil" finding="relative" line="181" reason="import fromlist" />
-      <module_usage name="tornado.httpserver" finding="absolute" line="182" reason="import" />
-      <module_usage name="tornado.escape" finding="absolute" line="183" reason="import" />
-      <module_usage name="tornado.log" finding="absolute" line="184" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="185" reason="import" />
-      <module_usage name="typing" finding="absolute" line="187" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="179" reason="import" />
+      <module_usage name="functools" finding="absolute" line="180" reason="import" />
+      <module_usage name="re" finding="absolute" line="181" reason="import" />
+      <module_usage name="re.Pattern" finding="not-found" line="181" reason="import fromlist" />
+      <module_usage name="typing" finding="absolute" line="182" reason="import" />
+      <module_usage name="tornado" finding="absolute" line="188" reason="import" />
+      <module_usage name="tornado.httputil" finding="relative" line="188" reason="import fromlist" />
+      <module_usage name="tornado.escape" finding="absolute" line="189" reason="import" />
+      <module_usage name="tornado.httpserver" finding="absolute" line="190" reason="import" />
+      <module_usage name="tornado.log" finding="absolute" line="191" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="192" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.simple_httpclient" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/simple_httpclient.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="41" merged_total="3109" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="37" merged_total="475" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="39" merged_total="3220" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="33" merged_total="491" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="tornado.escape" finding="absolute" line="1" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="2" reason="import" />
-      <module_usage name="tornado.gen" finding="relative" line="2" reason="import fromlist" />
-      <module_usage name="tornado.version" finding="not-found" line="2" reason="import fromlist" />
-      <module_usage name="tornado.httpclient" finding="absolute" line="3" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="11" reason="import" />
-      <module_usage name="tornado.httputil" finding="relative" line="11" reason="import fromlist" />
-      <module_usage name="tornado.http1connection" finding="absolute" line="12" reason="import" />
-      <module_usage name="tornado.ioloop" finding="absolute" line="13" reason="import" />
-      <module_usage name="tornado.iostream" finding="absolute" line="14" reason="import" />
-      <module_usage name="tornado.netutil" finding="absolute" line="15" reason="import" />
-      <module_usage name="tornado.log" finding="absolute" line="21" reason="import" />
-      <module_usage name="tornado.tcpclient" finding="absolute" line="22" reason="import" />
-      <module_usage name="base64" finding="absolute" line="24" reason="import" />
-      <module_usage name="collections" finding="absolute" line="25" reason="import" />
-      <module_usage name="copy" finding="absolute" line="26" reason="import" />
-      <module_usage name="functools" finding="absolute" line="27" reason="import" />
-      <module_usage name="re" finding="absolute" line="28" reason="import" />
-      <module_usage name="socket" finding="absolute" line="29" reason="import" />
-      <module_usage name="ssl" finding="absolute" line="30" reason="import" />
-      <module_usage name="sys" finding="absolute" line="31" reason="import" />
-      <module_usage name="time" finding="absolute" line="32" reason="import" />
-      <module_usage name="io" finding="absolute" line="33" reason="import" />
-      <module_usage name="urllib.parse" finding="absolute" line="34" reason="import" />
-      <module_usage name="typing" finding="absolute" line="36" reason="import" />
-      <module_usage name="types" finding="absolute" line="37" reason="import" />
-      <module_usage name="typing" finding="absolute" line="38" reason="import" />
-      <module_usage name="functools" finding="absolute" line="179" reason="import" />
-      <module_usage name="functools" finding="absolute" line="196" reason="import" />
-      <module_usage name="functools" finding="absolute" line="336" reason="import" />
-      <module_usage name="functools" finding="absolute" line="359" reason="import" />
+      <module_usage name="base64" finding="absolute" line="1" reason="import" />
+      <module_usage name="collections" finding="absolute" line="2" reason="import" />
+      <module_usage name="copy" finding="absolute" line="3" reason="import" />
+      <module_usage name="functools" finding="absolute" line="4" reason="import" />
+      <module_usage name="re" finding="absolute" line="5" reason="import" />
+      <module_usage name="socket" finding="absolute" line="6" reason="import" />
+      <module_usage name="ssl" finding="absolute" line="7" reason="import" />
+      <module_usage name="sys" finding="absolute" line="8" reason="import" />
+      <module_usage name="time" finding="absolute" line="9" reason="import" />
+      <module_usage name="urllib.parse" finding="absolute" line="10" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="11" reason="import" />
+      <module_usage name="io" finding="absolute" line="12" reason="import" />
+      <module_usage name="types" finding="absolute" line="13" reason="import" />
+      <module_usage name="typing" finding="absolute" line="14" reason="import" />
+      <module_usage name="tornado" finding="absolute" line="16" reason="import" />
+      <module_usage name="tornado.gen" finding="relative" line="16" reason="import fromlist" />
+      <module_usage name="tornado.httputil" finding="relative" line="16" reason="import fromlist" />
+      <module_usage name="tornado.version" finding="not-found" line="16" reason="import fromlist" />
+      <module_usage name="tornado.concurrent" finding="absolute" line="17" reason="import" />
+      <module_usage name="tornado.escape" finding="absolute" line="18" reason="import" />
+      <module_usage name="tornado.http1connection" finding="absolute" line="19" reason="import" />
+      <module_usage name="tornado.httpclient" finding="absolute" line="20" reason="import" />
+      <module_usage name="tornado.ioloop" finding="absolute" line="28" reason="import" />
+      <module_usage name="tornado.iostream" finding="absolute" line="29" reason="import" />
+      <module_usage name="tornado.log" finding="absolute" line="30" reason="import" />
+      <module_usage name="tornado.netutil" finding="absolute" line="31" reason="import" />
+      <module_usage name="tornado.tcpclient" finding="absolute" line="37" reason="import" />
+      <module_usage name="functools" finding="absolute" line="175" reason="import" />
+      <module_usage name="functools" finding="absolute" line="192" reason="import" />
+      <module_usage name="functools" finding="absolute" line="360" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.speedups" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/speedups.abi3.so" distribution="tornado">
@@ -6279,139 +6297,142 @@
     <module_usages />
   </module>
   <module name="tornado.tcpclient" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/tcpclient.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="17" merged_total="1170" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="167" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="18" merged_total="1456" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="215" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="functools" finding="absolute" line="19" reason="import" />
-      <module_usage name="socket" finding="absolute" line="20" reason="import" />
+      <module_usage name="asyncio" finding="absolute" line="18" reason="import" />
+      <module_usage name="datetime" finding="absolute" line="19" reason="import" />
+      <module_usage name="functools" finding="absolute" line="20" reason="import" />
       <module_usage name="numbers" finding="absolute" line="21" reason="import" />
-      <module_usage name="datetime" finding="absolute" line="22" reason="import" />
+      <module_usage name="socket" finding="absolute" line="22" reason="import" />
       <module_usage name="ssl" finding="absolute" line="23" reason="import" />
-      <module_usage name="typing" finding="absolute" line="24" reason="import" />
-      <module_usage name="tornado.concurrent" finding="absolute" line="26" reason="import" />
-      <module_usage name="tornado.ioloop" finding="absolute" line="27" reason="import" />
-      <module_usage name="tornado.iostream" finding="absolute" line="28" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="29" reason="import" />
-      <module_usage name="tornado.gen" finding="relative" line="29" reason="import fromlist" />
-      <module_usage name="tornado.netutil" finding="absolute" line="30" reason="import" />
-      <module_usage name="tornado.gen" finding="absolute" line="31" reason="import" />
-      <module_usage name="typing" finding="absolute" line="33" reason="import" />
-      <module_usage name="functools" finding="absolute" line="130" reason="import" />
-      <module_usage name="functools" finding="absolute" line="272" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="24" reason="import" />
+      <module_usage name="typing" finding="absolute" line="25" reason="import" />
+      <module_usage name="tornado" finding="absolute" line="27" reason="import" />
+      <module_usage name="tornado.gen" finding="relative" line="27" reason="import fromlist" />
+      <module_usage name="tornado.concurrent" finding="absolute" line="28" reason="import" />
+      <module_usage name="tornado.ioloop" finding="absolute" line="29" reason="import" />
+      <module_usage name="tornado.iostream" finding="absolute" line="30" reason="import" />
+      <module_usage name="tornado.netutil" finding="absolute" line="31" reason="import" />
+      <module_usage name="functools" finding="absolute" line="155" reason="import" />
+      <module_usage name="functools" finding="absolute" line="326" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.tcpserver" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/tcpserver.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="601" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="107" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="596" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="106" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="errno" finding="absolute" line="18" reason="import" />
       <module_usage name="os" finding="absolute" line="19" reason="import" />
       <module_usage name="socket" finding="absolute" line="20" reason="import" />
       <module_usage name="ssl" finding="absolute" line="21" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="23" reason="import" />
-      <module_usage name="tornado.gen" finding="relative" line="23" reason="import fromlist" />
-      <module_usage name="tornado.log" finding="absolute" line="24" reason="import" />
-      <module_usage name="tornado.ioloop" finding="absolute" line="25" reason="import" />
-      <module_usage name="tornado.iostream" finding="absolute" line="26" reason="import" />
-      <module_usage name="tornado.netutil" finding="absolute" line="27" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="33" reason="import" />
-      <module_usage name="tornado.process" finding="relative" line="33" reason="import fromlist" />
-      <module_usage name="tornado.util" finding="absolute" line="34" reason="import" />
-      <module_usage name="typing" finding="absolute" line="36" reason="import" />
-      <module_usage name="typing" finding="absolute" line="37" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="22" reason="import" />
+      <module_usage name="typing" finding="absolute" line="23" reason="import" />
+      <module_usage name="tornado" finding="absolute" line="25" reason="import" />
+      <module_usage name="tornado.gen" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="tornado.process" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="tornado.ioloop" finding="absolute" line="26" reason="import" />
+      <module_usage name="tornado.iostream" finding="absolute" line="27" reason="import" />
+      <module_usage name="tornado.log" finding="absolute" line="28" reason="import" />
+      <module_usage name="tornado.netutil" finding="absolute" line="29" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="35" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.template" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/template.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="78" merged_total="7953" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="78" merged_total="1046" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="78" merged_total="7939" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="78" merged_total="1044" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="datetime" finding="absolute" line="199" reason="import" />
-      <module_usage name="io" finding="absolute" line="200" reason="import" />
-      <module_usage name="linecache" finding="absolute" line="201" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="202" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="203" reason="import" />
-      <module_usage name="re" finding="absolute" line="204" reason="import" />
-      <module_usage name="threading" finding="absolute" line="205" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="207" reason="import" />
-      <module_usage name="tornado.escape" finding="relative" line="207" reason="import fromlist" />
-      <module_usage name="tornado.log" finding="absolute" line="208" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="209" reason="import" />
-      <module_usage name="typing" finding="absolute" line="211" reason="import" />
-      <module_usage name="typing" finding="absolute" line="212" reason="import" />
+      <module_usage name="datetime" finding="absolute" line="212" reason="import" />
+      <module_usage name="linecache" finding="absolute" line="213" reason="import" />
+      <module_usage name="posixpath" finding="absolute" line="214" reason="import" />
+      <module_usage name="posixpath" finding="absolute" line="215" reason="import" />
+      <module_usage name="re" finding="absolute" line="216" reason="import" />
+      <module_usage name="threading" finding="absolute" line="217" reason="import" />
+      <module_usage name="typing" finding="absolute" line="218" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="219" reason="import" />
+      <module_usage name="io" finding="absolute" line="220" reason="import" />
+      <module_usage name="typing" finding="absolute" line="221" reason="import" />
+      <module_usage name="tornado" finding="absolute" line="223" reason="import" />
+      <module_usage name="tornado.escape" finding="relative" line="223" reason="import fromlist" />
+      <module_usage name="tornado.log" finding="absolute" line="224" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="225" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.util" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/util.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="1470" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="180" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="18" merged_total="1637" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="199" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="array" finding="absolute" line="13" reason="import" />
-      <module_usage name="asyncio" finding="absolute" line="14" reason="import" />
-      <module_usage name="inspect" finding="absolute" line="15" reason="import" />
-      <module_usage name="os" finding="absolute" line="16" reason="import" />
-      <module_usage name="re" finding="absolute" line="17" reason="import" />
-      <module_usage name="typing" finding="absolute" line="18" reason="import" />
-      <module_usage name="zlib" finding="absolute" line="19" reason="import" />
-      <module_usage name="typing" finding="absolute" line="21" reason="import" />
-      <module_usage name="tornado.speedups" finding="absolute" line="436" reason="import" />
+      <module_usage name="__future__" finding="absolute" line="13" reason="import" />
+      <module_usage name="array" finding="absolute" line="15" reason="import" />
+      <module_usage name="asyncio" finding="absolute" line="16" reason="import" />
+      <module_usage name="os" finding="absolute" line="17" reason="import" />
+      <module_usage name="re" finding="absolute" line="18" reason="import" />
+      <module_usage name="typing" finding="absolute" line="19" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="20" reason="import" />
+      <module_usage name="zlib" finding="absolute" line="21" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="22" reason="import" />
+      <module_usage name="inspect" finding="absolute" line="23" reason="import" />
+      <module_usage name="re" finding="absolute" line="24" reason="import" />
+      <module_usage name="re.Match" finding="not-found" line="24" reason="import fromlist" />
+      <module_usage name="typing" finding="absolute" line="25" reason="import" />
+      <module_usage name="tornado.speedups" finding="absolute" line="530" reason="import" />
     </module_usages>
   </module>
   <module name="tornado.web" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/tornado/web.py" distribution="tornado">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="116" merged_total="17634" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="2249" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="118" merged_total="19114" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="39" merged_total="2449" />
     <code-generation-time time="volatile" />
     <module_usages>
-      <module_usage name="base64" finding="absolute" line="59" reason="import" />
-      <module_usage name="binascii" finding="absolute" line="60" reason="import" />
-      <module_usage name="datetime" finding="absolute" line="61" reason="import" />
-      <module_usage name="email.utils" finding="absolute" line="62" reason="import" />
-      <module_usage name="functools" finding="absolute" line="63" reason="import" />
-      <module_usage name="gzip" finding="absolute" line="64" reason="import" />
-      <module_usage name="hashlib" finding="absolute" line="65" reason="import" />
-      <module_usage name="hmac" finding="absolute" line="66" reason="import" />
-      <module_usage name="http.cookies" finding="absolute" line="67" reason="import" />
-      <module_usage name="inspect" finding="absolute" line="68" reason="import" />
-      <module_usage name="io" finding="absolute" line="69" reason="import" />
-      <module_usage name="mimetypes" finding="absolute" line="70" reason="import" />
-      <module_usage name="numbers" finding="absolute" line="71" reason="import" />
-      <module_usage name="posixpath" finding="absolute" line="72" reason="import" />
-      <module_usage name="re" finding="absolute" line="73" reason="import" />
-      <module_usage name="socket" finding="absolute" line="74" reason="import" />
-      <module_usage name="sys" finding="absolute" line="75" reason="import" />
-      <module_usage name="threading" finding="absolute" line="76" reason="import" />
-      <module_usage name="time" finding="absolute" line="77" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="78" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="79" reason="import" />
-      <module_usage name="traceback" finding="absolute" line="80" reason="import" />
-      <module_usage name="types" finding="absolute" line="81" reason="import" />
-      <module_usage name="urllib.parse" finding="absolute" line="82" reason="import" />
-      <module_usage name="urllib.parse" finding="absolute" line="83" reason="import" />
-      <module_usage name="tornado.concurrent" finding="absolute" line="85" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="86" reason="import" />
-      <module_usage name="tornado.escape" finding="relative" line="86" reason="import fromlist" />
+      <module_usage name="asyncio" finding="absolute" line="59" reason="import" />
+      <module_usage name="base64" finding="absolute" line="60" reason="import" />
+      <module_usage name="binascii" finding="absolute" line="61" reason="import" />
+      <module_usage name="datetime" finding="absolute" line="62" reason="import" />
+      <module_usage name="email.utils" finding="absolute" line="63" reason="import" />
+      <module_usage name="functools" finding="absolute" line="64" reason="import" />
+      <module_usage name="gzip" finding="absolute" line="65" reason="import" />
+      <module_usage name="hashlib" finding="absolute" line="66" reason="import" />
+      <module_usage name="hmac" finding="absolute" line="67" reason="import" />
+      <module_usage name="http.cookies" finding="absolute" line="68" reason="import" />
+      <module_usage name="mimetypes" finding="absolute" line="69" reason="import" />
+      <module_usage name="numbers" finding="absolute" line="70" reason="import" />
+      <module_usage name="posixpath" finding="absolute" line="71" reason="import" />
+      <module_usage name="re" finding="absolute" line="72" reason="import" />
+      <module_usage name="socket" finding="absolute" line="73" reason="import" />
+      <module_usage name="stat" finding="absolute" line="74" reason="import" />
+      <module_usage name="string" finding="absolute" line="75" reason="import" />
+      <module_usage name="sys" finding="absolute" line="76" reason="import" />
+      <module_usage name="threading" finding="absolute" line="77" reason="import" />
+      <module_usage name="time" finding="absolute" line="78" reason="import" />
+      <module_usage name="traceback" finding="absolute" line="79" reason="import" />
+      <module_usage name="types" finding="absolute" line="80" reason="import" />
+      <module_usage name="urllib.parse" finding="absolute" line="81" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="82" reason="import" />
+      <module_usage name="inspect" finding="absolute" line="83" reason="import" />
+      <module_usage name="io" finding="absolute" line="84" reason="import" />
+      <module_usage name="urllib.parse" finding="absolute" line="85" reason="import" />
       <module_usage name="tornado" finding="absolute" line="87" reason="import" />
-      <module_usage name="tornado.gen" finding="relative" line="87" reason="import fromlist" />
-      <module_usage name="tornado.httpserver" finding="absolute" line="88" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="89" reason="import" />
-      <module_usage name="tornado.httputil" finding="relative" line="89" reason="import fromlist" />
-      <module_usage name="tornado" finding="absolute" line="90" reason="import" />
-      <module_usage name="tornado.iostream" finding="relative" line="90" reason="import fromlist" />
-      <module_usage name="tornado" finding="absolute" line="91" reason="import" />
-      <module_usage name="tornado.locale" finding="relative" line="91" reason="import fromlist" />
+      <module_usage name="tornado" finding="absolute" line="88" reason="import" />
+      <module_usage name="tornado.escape" finding="relative" line="88" reason="import fromlist" />
+      <module_usage name="tornado.gen" finding="relative" line="88" reason="import fromlist" />
+      <module_usage name="tornado.httputil" finding="relative" line="88" reason="import fromlist" />
+      <module_usage name="tornado.iostream" finding="relative" line="88" reason="import fromlist" />
+      <module_usage name="tornado.locale" finding="relative" line="88" reason="import fromlist" />
+      <module_usage name="tornado.template" finding="relative" line="88" reason="import fromlist" />
+      <module_usage name="tornado.concurrent" finding="absolute" line="89" reason="import" />
+      <module_usage name="tornado.escape" finding="absolute" line="90" reason="import" />
+      <module_usage name="tornado.httpserver" finding="absolute" line="91" reason="import" />
       <module_usage name="tornado.log" finding="absolute" line="92" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="93" reason="import" />
-      <module_usage name="tornado.template" finding="relative" line="93" reason="import fromlist" />
-      <module_usage name="tornado.escape" finding="absolute" line="94" reason="import" />
-      <module_usage name="tornado.routing" finding="absolute" line="95" reason="import" />
-      <module_usage name="tornado.util" finding="absolute" line="105" reason="import" />
+      <module_usage name="tornado.routing" finding="absolute" line="93" reason="import" />
+      <module_usage name="tornado.util" finding="absolute" line="103" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="107" reason="import" />
+      <module_usage name="types" finding="absolute" line="108" reason="import" />
       <module_usage name="typing" finding="absolute" line="109" reason="import" />
-      <module_usage name="types" finding="absolute" line="125" reason="import" />
-      <module_usage name="typing" finding="absolute" line="126" reason="import" />
-      <module_usage name="tornado" finding="absolute" line="2270" reason="import" />
-      <module_usage name="tornado.autoreload" finding="relative" line="2270" reason="import fromlist" />
+      <module_usage name="tornado" finding="absolute" line="2418" reason="import" />
+      <module_usage name="tornado.autoreload" finding="relative" line="2418" reason="import fromlist" />
     </module_usages>
   </module>
   <module name="trace" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.14/trace.py">
@@ -6843,7 +6864,7 @@
     <option value="--update-check=never" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=23d8e6cfd14834f29560559290ac192c" />
+    <option value="--report-user-provided=pipenv_hash=77bd09d2248ee303cc6b78f6c955ebda" />
     <option value="--report-user-provided=case_hash=7e83e27cf8a3154dbff115ac4134b0c1" />
     <option value="--report-user-provided=case_version=1" />
     <option value="--devel-no-bytecode-to-compiled-fallback" />
@@ -6871,7 +6892,7 @@
     <plugin name="transformers" user_enabled="no" />
   </plugins>
   <distributions>
-    <distribution name="tornado" version="6.5.8" installer="pip" />
+    <distribution name="tornado" version="6.6.1" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}/bin/python" python_flavor="Unknown" python_version="3.14.10" os_name="Linux" os_release="Debian-12" arch_name="x86_64" filesystem_encoding="utf-8" gil="yes">
     <search_path>
@@ -6883,7 +6904,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>23d8e6cfd14834f29560559290ac192c</pipenv_hash>
+    <pipenv_hash>77bd09d2248ee303cc6b78f6c955ebda</pipenv_hash>
     <case_hash>7e83e27cf8a3154dbff115ac4134b0c1</case_hash>
     <case_version>1</case_version>
   </user-data>

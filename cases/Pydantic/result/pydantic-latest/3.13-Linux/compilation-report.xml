@@ -2671,6 +2671,16 @@
       <module_usage name="_heapq" finding="absolute" line="595" reason="import" />
     </module_usages>
   </module>
+  <module name="hmac" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/hmac.py">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="639" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="warnings" finding="absolute" line="6" reason="import" />
+      <module_usage name="_hashlib" finding="absolute" line="8" reason="import" />
+      <module_usage name="_operator" finding="absolute" line="12" reason="import" />
+      <module_usage name="hashlib" finding="absolute" line="17" reason="import" />
+    </module_usages>
+  </module>
   <module name="html" kind="UncompiledPythonPackage" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.13/html/__init__.py">
     <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="10" merged_total="156" />
     <optimization-time pass="2" time="volatile" />
@@ -3527,7 +3537,7 @@
       <module_usage name="warnings" finding="absolute" line="3" reason="import" />
       <module_usage name="pydantic._migration" finding="relative" line="5" reason="import" />
       <module_usage name="pydantic.version" finding="relative" line="6" reason="import" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="427" reason="import" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="432" reason="import" />
       <module_usage name="pydantic.typing" finding="absolute" reason="implicit import: According to 'implicit-imports' configuration." />
       <module_usage name="pydantic.fields" finding="absolute" reason="implicit import: According to 'implicit-imports' configuration." />
       <module_usage name="pydantic.utils" finding="absolute" reason="implicit import: According to 'implicit-imports' configuration." />
@@ -3560,8 +3570,8 @@
     </module_usages>
   </module>
   <module name="pydantic._internal._config" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_config.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="12" merged_total="1286" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="207" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="13" merged_total="1389" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="223" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -3570,16 +3580,29 @@
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
       <module_usage name="warnings" finding="absolute" line="3" reason="import" />
-      <module_usage name="contextlib" finding="absolute" line="4" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="4" reason="import" />
       <module_usage name="re" finding="absolute" line="5" reason="import" />
       <module_usage name="re.Pattern" finding="not-found" line="5" reason="import fromlist" />
       <module_usage name="typing" finding="absolute" line="6" reason="import" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="14" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="15" reason="import" />
-      <module_usage name="pydantic.aliases" finding="relative" line="17" reason="import" />
-      <module_usage name="pydantic.config" finding="relative" line="18" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="19" reason="import" />
-      <module_usage name="pydantic.warnings" finding="relative" line="20" reason="import" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="13" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="14" reason="import" />
+      <module_usage name="pydantic.aliases" finding="relative" line="16" reason="import" />
+      <module_usage name="pydantic.config" finding="relative" line="17" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="18" reason="import" />
+      <module_usage name="pydantic.warnings" finding="relative" line="19" reason="import" />
+      <module_usage name="pydantic._internal._contextlib" finding="relative" line="20" reason="import" />
+    </module_usages>
+  </module>
+  <module name="pydantic._internal._contextlib" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_contextlib.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="11" merged_total="265" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="84" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="5" reason="import" />
+      <module_usage name="functools" finding="absolute" line="6" reason="import" />
+      <module_usage name="types" finding="absolute" line="7" reason="import" />
+      <module_usage name="typing" finding="absolute" line="8" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._core_metadata" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_core_metadata.py" distribution="pydantic">
@@ -3594,13 +3617,11 @@
     </module_usages>
   </module>
   <module name="pydantic._internal._core_utils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_core_utils.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="17" merged_total="525" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="125" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="13" merged_total="398" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="94" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
-      <distribution-usage name="typing_extensions" />
-      <distribution-usage name="typing-inspection" />
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
@@ -3611,24 +3632,18 @@
       <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="7" reason="import fromlist" />
       <module_usage name="pydantic_core.core_schema" finding="relative" line="7" reason="import fromlist" />
       <module_usage name="pydantic_core.core_schema" finding="absolute" line="7" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="8" reason="import" />
-      <module_usage name="typing_inspection" finding="absolute" line="9" reason="import" />
-      <module_usage name="typing_inspection.typing_objects" finding="relative" line="9" reason="import fromlist" />
-      <module_usage name="pydantic._internal" finding="absolute" line="11" reason="import" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="11" reason="import fromlist" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="12" reason="import" />
-      <module_usage name="rich.pretty" finding="not-found" line="159" reason="import" />
-      <module_usage name="pydantic" finding="absolute" line="162" reason="import" />
-      <module_usage name="pydantic.BaseModel" finding="not-found" line="162" reason="import fromlist" />
-      <module_usage name="pydantic.TypeAdapter" finding="not-found" line="162" reason="import fromlist" />
-      <module_usage name="pydantic.main" finding="absolute" line="162" reason="import" />
-      <module_usage name="pydantic.type_adapter" finding="absolute" line="162" reason="import" />
-      <module_usage name="pydantic.dataclasses" finding="absolute" line="163" reason="import" />
+      <module_usage name="rich.pretty" finding="not-found" line="141" reason="import" />
+      <module_usage name="pydantic" finding="absolute" line="144" reason="import" />
+      <module_usage name="pydantic.BaseModel" finding="not-found" line="144" reason="import fromlist" />
+      <module_usage name="pydantic.TypeAdapter" finding="not-found" line="144" reason="import fromlist" />
+      <module_usage name="pydantic.main" finding="absolute" line="144" reason="import" />
+      <module_usage name="pydantic.type_adapter" finding="absolute" line="144" reason="import" />
+      <module_usage name="pydantic.dataclasses" finding="absolute" line="145" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._dataclasses" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_dataclasses.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="15" merged_total="994" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="167" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="866" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="164" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -3641,23 +3656,23 @@
       <module_usage name="sys" finding="absolute" line="7" reason="import" />
       <module_usage name="warnings" finding="absolute" line="8" reason="import" />
       <module_usage name="collections.abc" finding="not-found" line="9" reason="import" />
-      <module_usage name="contextlib" finding="absolute" line="10" reason="import" />
-      <module_usage name="functools" finding="absolute" line="11" reason="import" />
-      <module_usage name="typing" finding="absolute" line="12" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="14" reason="import" />
-      <module_usage name="pydantic_core.ArgsKwargs" finding="not-found" line="14" reason="import fromlist" />
-      <module_usage name="pydantic_core.SchemaSerializer" finding="not-found" line="14" reason="import fromlist" />
-      <module_usage name="pydantic_core.SchemaValidator" finding="not-found" line="14" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="relative" line="14" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="14" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="20" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="22" reason="import" />
-      <module_usage name="pydantic.fields" finding="relative" line="23" reason="import" />
-      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="24" reason="import" />
-      <module_usage name="pydantic.warnings" finding="relative" line="25" reason="import" />
-      <module_usage name="pydantic._internal" finding="absolute" line="26" reason="import" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="26" reason="import fromlist" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="26" reason="import fromlist" />
+      <module_usage name="functools" finding="absolute" line="10" reason="import" />
+      <module_usage name="typing" finding="absolute" line="11" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="13" reason="import" />
+      <module_usage name="pydantic_core.ArgsKwargs" finding="not-found" line="13" reason="import fromlist" />
+      <module_usage name="pydantic_core.SchemaSerializer" finding="not-found" line="13" reason="import fromlist" />
+      <module_usage name="pydantic_core.SchemaValidator" finding="not-found" line="13" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="relative" line="13" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="13" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="19" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="21" reason="import" />
+      <module_usage name="pydantic.fields" finding="relative" line="22" reason="import" />
+      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="23" reason="import" />
+      <module_usage name="pydantic.warnings" finding="relative" line="24" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="25" reason="import" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._contextlib" finding="relative" line="26" reason="import" />
       <module_usage name="pydantic._internal._fields" finding="relative" line="27" reason="import" />
       <module_usage name="pydantic._internal._generate_schema" finding="relative" line="28" reason="import" />
       <module_usage name="pydantic._internal._generics" finding="relative" line="29" reason="import" />
@@ -3668,8 +3683,8 @@
     </module_usages>
   </module>
   <module name="pydantic._internal._decorators" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_decorators.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="37" merged_total="4372" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="34" merged_total="713" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="38" merged_total="4450" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="727" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -3694,40 +3709,39 @@
       <module_usage name="pydantic_core.core_schema" finding="absolute" line="15" reason="import" />
       <module_usage name="typing_extensions" finding="absolute" line="16" reason="import" />
       <module_usage name="pydantic.errors" finding="relative" line="18" reason="import" />
-      <module_usage name="pydantic._internal._core_utils" finding="relative" line="19" reason="import" />
-      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="20" reason="import" />
-      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="21" reason="import" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="22" reason="import" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="23" reason="import" />
-      <module_usage name="pydantic.fields" finding="relative" line="193" reason="import" />
-      <module_usage name="pydantic.fields" finding="relative" line="540" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="19" reason="import" />
+      <module_usage name="pydantic._internal._type_refs" finding="relative" line="19" reason="import fromlist" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="20" reason="import" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="21" reason="import" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="22" reason="import" />
+      <module_usage name="pydantic.fields" finding="relative" line="184" reason="import" />
+      <module_usage name="pydantic.fields" finding="relative" line="571" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._discriminated_union" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_discriminated_union.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="39" merged_total="2430" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="38" merged_total="351" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="42" merged_total="2653" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="41" merged_total="381" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
-      <module_usage name="collections.abc" finding="not-found" line="3" reason="import" />
-      <module_usage name="typing" finding="absolute" line="4" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="6" reason="import" />
-      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="6" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="relative" line="6" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="6" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="8" reason="import" />
-      <module_usage name="pydantic._internal" finding="absolute" line="9" reason="import" />
-      <module_usage name="pydantic._internal._core_utils" finding="relative" line="9" reason="import fromlist" />
-      <module_usage name="pydantic._internal._core_utils" finding="relative" line="10" reason="import" />
-      <module_usage name="pydantic.types" finding="relative" line="62" reason="import" />
+      <module_usage name="typing" finding="absolute" line="3" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="5" reason="import" />
+      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="5" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="relative" line="5" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="5" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="7" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="8" reason="import" />
+      <module_usage name="pydantic._internal._core_utils" finding="relative" line="8" reason="import fromlist" />
+      <module_usage name="pydantic._internal._core_utils" finding="relative" line="9" reason="import" />
+      <module_usage name="pydantic.types" finding="relative" line="61" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._docs_extraction" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_docs_extraction.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="609" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="121" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="19" merged_total="669" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="19" merged_total="133" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" reason="import" />
@@ -3739,8 +3753,8 @@
     </module_usages>
   </module>
   <module name="pydantic._internal._fields" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_fields.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="37" merged_total="3470" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="34" merged_total="576" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="47" merged_total="4533" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="43" merged_total="755" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -3761,23 +3775,24 @@
       <module_usage name="pydantic_core" finding="absolute" line="13" reason="import" />
       <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="13" reason="import fromlist" />
       <module_usage name="typing_extensions" finding="absolute" line="14" reason="import" />
-      <module_usage name="typing_inspection.introspection" finding="absolute" line="15" reason="import" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="17" reason="import" />
-      <module_usage name="pydantic.errors" finding="absolute" line="18" reason="import" />
-      <module_usage name="pydantic.aliases" finding="relative" line="20" reason="import" />
-      <module_usage name="pydantic._internal" finding="absolute" line="21" reason="import" />
-      <module_usage name="pydantic._internal._generics" finding="relative" line="21" reason="import fromlist" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="21" reason="import fromlist" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="22" reason="import" />
-      <module_usage name="pydantic._internal._docs_extraction" finding="relative" line="23" reason="import" />
-      <module_usage name="pydantic._internal._import_utils" finding="relative" line="24" reason="import" />
-      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="25" reason="import" />
+      <module_usage name="typing_inspection" finding="absolute" line="15" reason="import" />
+      <module_usage name="typing_inspection.typing_objects" finding="relative" line="15" reason="import fromlist" />
+      <module_usage name="typing_inspection.introspection" finding="absolute" line="16" reason="import" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="18" reason="import" />
+      <module_usage name="pydantic.errors" finding="absolute" line="19" reason="import" />
+      <module_usage name="pydantic.aliases" finding="relative" line="21" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="22" reason="import" />
+      <module_usage name="pydantic._internal._generics" finding="relative" line="22" reason="import fromlist" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="22" reason="import fromlist" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="23" reason="import" />
+      <module_usage name="pydantic._internal._docs_extraction" finding="relative" line="24" reason="import" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="25" reason="import" />
       <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="26" reason="import" />
       <module_usage name="pydantic._internal._repr" finding="relative" line="27" reason="import" />
       <module_usage name="pydantic._internal._utils" finding="relative" line="28" reason="import" />
-      <module_usage name="annotated_types" finding="absolute" line="67" reason="import" />
-      <module_usage name="annotated_types.BaseMetadata" finding="not-found" line="67" reason="import fromlist" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="713" reason="import" />
+      <module_usage name="annotated_types" finding="absolute" line="98" reason="import" />
+      <module_usage name="annotated_types.BaseMetadata" finding="not-found" line="98" reason="import fromlist" />
+      <module_usage name="pydantic.fields" finding="relative" line="311" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._forward_ref" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_forward_ref.py" distribution="pydantic">
@@ -3791,8 +3806,8 @@
     </module_usages>
   </module>
   <module name="pydantic._internal._generate_schema" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="73" merged_total="16903" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="58" merged_total="2768" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="81" merged_total="16828" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="49" merged_total="2693" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -3812,83 +3827,81 @@
       <module_usage name="typing" finding="absolute" line="13" reason="import" />
       <module_usage name="warnings" finding="absolute" line="14" reason="import" />
       <module_usage name="collections.abc" finding="not-found" line="15" reason="import" />
-      <module_usage name="contextlib" finding="absolute" line="16" reason="import" />
-      <module_usage name="copy" finding="absolute" line="17" reason="import" />
-      <module_usage name="decimal" finding="absolute" line="18" reason="import" />
-      <module_usage name="enum" finding="absolute" line="19" reason="import" />
-      <module_usage name="fractions" finding="absolute" line="20" reason="import" />
-      <module_usage name="functools" finding="absolute" line="21" reason="import" />
-      <module_usage name="inspect" finding="absolute" line="22" reason="import" />
-      <module_usage name="ipaddress" finding="absolute" line="23" reason="import" />
-      <module_usage name="itertools" finding="absolute" line="24" reason="import" />
-      <module_usage name="operator" finding="absolute" line="25" reason="import" />
-      <module_usage name="types" finding="absolute" line="26" reason="import" />
-      <module_usage name="typing" finding="absolute" line="27" reason="import" />
-      <module_usage name="uuid" finding="absolute" line="39" reason="import" />
-      <module_usage name="zoneinfo" finding="absolute" line="40" reason="import" />
-      <module_usage name="zoneinfo.ZoneInfo" finding="not-found" line="40" reason="import fromlist" />
-      <module_usage name="typing_extensions" finding="absolute" line="42" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="43" reason="import" />
-      <module_usage name="pydantic_core.MISSING" finding="not-found" line="43" reason="import fromlist" />
-      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="43" reason="import fromlist" />
-      <module_usage name="pydantic_core.MultiHostUrl" finding="not-found" line="43" reason="import fromlist" />
-      <module_usage name="pydantic_core.PydanticCustomError" finding="not-found" line="43" reason="import fromlist" />
-      <module_usage name="pydantic_core.PydanticSerializationUnexpectedValue" finding="not-found" line="43" reason="import fromlist" />
-      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="43" reason="import fromlist" />
-      <module_usage name="pydantic_core.Url" finding="not-found" line="43" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="relative" line="43" reason="import fromlist" />
-      <module_usage name="pydantic_core.to_jsonable_python" finding="not-found" line="43" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="43" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="54" reason="import" />
-      <module_usage name="typing_inspection" finding="absolute" line="55" reason="import" />
-      <module_usage name="typing_inspection.typing_objects" finding="relative" line="55" reason="import fromlist" />
-      <module_usage name="typing_inspection.introspection" finding="absolute" line="56" reason="import" />
-      <module_usage name="pydantic.aliases" finding="relative" line="58" reason="import" />
-      <module_usage name="pydantic.annotated_handlers" finding="relative" line="59" reason="import" />
-      <module_usage name="pydantic.config" finding="relative" line="60" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="61" reason="import" />
-      <module_usage name="pydantic.functional_validators" finding="relative" line="68" reason="import" />
-      <module_usage name="pydantic.json_schema" finding="relative" line="69" reason="import" />
-      <module_usage name="pydantic.version" finding="relative" line="70" reason="import" />
-      <module_usage name="pydantic.warnings" finding="relative" line="71" reason="import" />
-      <module_usage name="pydantic._internal" finding="absolute" line="77" reason="import" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="77" reason="import fromlist" />
-      <module_usage name="pydantic._internal._discriminated_union" finding="relative" line="77" reason="import fromlist" />
-      <module_usage name="pydantic._internal._known_annotated_metadata" finding="relative" line="77" reason="import fromlist" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="77" reason="import fromlist" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="77" reason="import fromlist" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="78" reason="import" />
-      <module_usage name="pydantic._internal._core_metadata" finding="relative" line="79" reason="import" />
-      <module_usage name="pydantic._internal._core_utils" finding="relative" line="80" reason="import" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="85" reason="import" />
-      <module_usage name="pydantic._internal._docs_extraction" finding="relative" line="99" reason="import" />
-      <module_usage name="pydantic._internal._fields" finding="relative" line="100" reason="import" />
-      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="107" reason="import" />
-      <module_usage name="pydantic._internal._generics" finding="relative" line="108" reason="import" />
-      <module_usage name="pydantic._internal._import_utils" finding="relative" line="109" reason="import" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="110" reason="import" />
-      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="111" reason="import" />
-      <module_usage name="pydantic._internal._schema_gather" finding="relative" line="112" reason="import" />
-      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="113" reason="import" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="114" reason="import" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="483" reason="import" />
-      <module_usage name="pydantic._internal._serializers" finding="relative" line="574" reason="import" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="575" reason="import" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="599" reason="import" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="646" reason="import" />
-      <module_usage name="pydantic.v1" finding="absolute" line="946" reason="import" />
-      <module_usage name="pydantic.v1.BaseModel" finding="not-found" line="946" reason="import fromlist" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="1713" reason="import" />
-      <module_usage name="pydantic._internal._serializers" finding="relative" line="1768" reason="import" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="1776" reason="import" />
-      <module_usage name="pydantic._internal" finding="absolute" line="1796" reason="import" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="1796" reason="import fromlist" />
-      <module_usage name="pydantic.dataclasses" finding="relative" line="1868" reason="import" />
+      <module_usage name="copy" finding="absolute" line="16" reason="import" />
+      <module_usage name="decimal" finding="absolute" line="17" reason="import" />
+      <module_usage name="enum" finding="absolute" line="18" reason="import" />
+      <module_usage name="fractions" finding="absolute" line="19" reason="import" />
+      <module_usage name="functools" finding="absolute" line="20" reason="import" />
+      <module_usage name="inspect" finding="absolute" line="21" reason="import" />
+      <module_usage name="ipaddress" finding="absolute" line="22" reason="import" />
+      <module_usage name="itertools" finding="absolute" line="23" reason="import" />
+      <module_usage name="operator" finding="absolute" line="24" reason="import" />
+      <module_usage name="types" finding="absolute" line="25" reason="import" />
+      <module_usage name="typing" finding="absolute" line="26" reason="import" />
+      <module_usage name="uuid" finding="absolute" line="37" reason="import" />
+      <module_usage name="zoneinfo" finding="absolute" line="38" reason="import" />
+      <module_usage name="zoneinfo.ZoneInfo" finding="not-found" line="38" reason="import fromlist" />
+      <module_usage name="typing_extensions" finding="absolute" line="40" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="41" reason="import" />
+      <module_usage name="pydantic_core.MISSING" finding="not-found" line="41" reason="import fromlist" />
+      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="41" reason="import fromlist" />
+      <module_usage name="pydantic_core.MultiHostUrl" finding="not-found" line="41" reason="import fromlist" />
+      <module_usage name="pydantic_core.PydanticCustomError" finding="not-found" line="41" reason="import fromlist" />
+      <module_usage name="pydantic_core.PydanticSerializationUnexpectedValue" finding="not-found" line="41" reason="import fromlist" />
+      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="41" reason="import fromlist" />
+      <module_usage name="pydantic_core.Url" finding="not-found" line="41" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="relative" line="41" reason="import fromlist" />
+      <module_usage name="pydantic_core.to_jsonable_python" finding="not-found" line="41" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="41" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="52" reason="import" />
+      <module_usage name="typing_inspection" finding="absolute" line="58" reason="import" />
+      <module_usage name="typing_inspection.typing_objects" finding="relative" line="58" reason="import fromlist" />
+      <module_usage name="typing_inspection.introspection" finding="absolute" line="59" reason="import" />
+      <module_usage name="pydantic.aliases" finding="relative" line="61" reason="import" />
+      <module_usage name="pydantic.annotated_handlers" finding="relative" line="62" reason="import" />
+      <module_usage name="pydantic.config" finding="relative" line="63" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="64" reason="import" />
+      <module_usage name="pydantic.functional_validators" finding="relative" line="71" reason="import" />
+      <module_usage name="pydantic.json_schema" finding="relative" line="72" reason="import" />
+      <module_usage name="pydantic.version" finding="relative" line="73" reason="import" />
+      <module_usage name="pydantic.warnings" finding="relative" line="74" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="80" reason="import" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="80" reason="import fromlist" />
+      <module_usage name="pydantic._internal._discriminated_union" finding="relative" line="80" reason="import fromlist" />
+      <module_usage name="pydantic._internal._known_annotated_metadata" finding="relative" line="80" reason="import fromlist" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="80" reason="import fromlist" />
+      <module_usage name="pydantic._internal._type_refs" finding="relative" line="80" reason="import fromlist" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="80" reason="import fromlist" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="81" reason="import" />
+      <module_usage name="pydantic._internal._contextlib" finding="relative" line="82" reason="import" />
+      <module_usage name="pydantic._internal._core_metadata" finding="relative" line="83" reason="import" />
+      <module_usage name="pydantic._internal._core_utils" finding="relative" line="84" reason="import" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="88" reason="import" />
+      <module_usage name="pydantic._internal._docs_extraction" finding="relative" line="103" reason="import" />
+      <module_usage name="pydantic._internal._fields" finding="relative" line="104" reason="import" />
+      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="111" reason="import" />
+      <module_usage name="pydantic._internal._generics" finding="relative" line="112" reason="import" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="113" reason="import" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="114" reason="import" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="115" reason="import" />
+      <module_usage name="pydantic._internal._schema_gather" finding="relative" line="116" reason="import" />
+      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="117" reason="import" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="118" reason="import" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="639" reason="import" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="733" reason="import" />
+      <module_usage name="pydantic.v1" finding="absolute" line="1073" reason="import" />
+      <module_usage name="pydantic.v1.BaseModel" finding="not-found" line="1073" reason="import fromlist" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="1845" reason="import" />
+      <module_usage name="pydantic._internal._serializers" finding="relative" line="1900" reason="import" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="1908" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="1928" reason="import" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="1928" reason="import fromlist" />
+      <module_usage name="pydantic.dataclasses" finding="relative" line="1998" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._generics" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_generics.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="37" merged_total="2242" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="34" merged_total="434" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="36" merged_total="2315" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="34" merged_total="451" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -3903,22 +3916,22 @@
       <module_usage name="collections" finding="absolute" line="7" reason="import" />
       <module_usage name="collections.ChainMap" finding="not-found" line="7" reason="import fromlist" />
       <module_usage name="collections.abc" finding="not-found" line="8" reason="import" />
-      <module_usage name="contextlib" finding="absolute" line="9" reason="import" />
-      <module_usage name="contextvars" finding="absolute" line="10" reason="import" />
-      <module_usage name="functools" finding="absolute" line="11" reason="import" />
-      <module_usage name="itertools" finding="absolute" line="12" reason="import" />
-      <module_usage name="types" finding="absolute" line="13" reason="import" />
-      <module_usage name="typing" finding="absolute" line="14" reason="import" />
-      <module_usage name="weakref" finding="absolute" line="15" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="17" reason="import" />
-      <module_usage name="typing_inspection" finding="absolute" line="18" reason="import" />
-      <module_usage name="typing_inspection.typing_objects" finding="relative" line="18" reason="import fromlist" />
-      <module_usage name="typing_inspection.introspection" finding="absolute" line="19" reason="import" />
-      <module_usage name="pydantic._internal" finding="absolute" line="21" reason="import" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="21" reason="import fromlist" />
-      <module_usage name="pydantic._internal._core_utils" finding="relative" line="22" reason="import" />
-      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="23" reason="import" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="24" reason="import" />
+      <module_usage name="contextvars" finding="absolute" line="9" reason="import" />
+      <module_usage name="functools" finding="absolute" line="10" reason="import" />
+      <module_usage name="itertools" finding="absolute" line="11" reason="import" />
+      <module_usage name="types" finding="absolute" line="12" reason="import" />
+      <module_usage name="typing" finding="absolute" line="13" reason="import" />
+      <module_usage name="weakref" finding="absolute" line="14" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="16" reason="import" />
+      <module_usage name="typing_inspection" finding="absolute" line="17" reason="import" />
+      <module_usage name="typing_inspection.typing_objects" finding="relative" line="17" reason="import fromlist" />
+      <module_usage name="typing_inspection.introspection" finding="absolute" line="18" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="20" reason="import" />
+      <module_usage name="pydantic._internal._type_refs" finding="relative" line="20" reason="import fromlist" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="20" reason="import fromlist" />
+      <module_usage name="pydantic._internal._contextlib" finding="relative" line="21" reason="import" />
+      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="22" reason="import" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="23" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._git" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_git.py" distribution="pydantic">
@@ -3942,17 +3955,9 @@
       <module_usage name="pydantic.fields" finding="absolute" line="18" reason="import" />
     </module_usages>
   </module>
-  <module name="pydantic._internal._internal_dataclass" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_internal_dataclass.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="1" merged_total="1" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" />
-    <code-generation-time time="volatile" />
-    <module_usages>
-      <module_usage name="sys" finding="absolute" line="1" reason="import" />
-    </module_usages>
-  </module>
   <module name="pydantic._internal._known_annotated_metadata" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_known_annotated_metadata.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="29" merged_total="1264" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="251" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="32" merged_total="1286" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="255" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -3974,15 +3979,14 @@
       <module_usage name="pydantic_core.core_schema" finding="absolute" line="10" reason="import" />
       <module_usage name="pydantic._internal._fields" finding="relative" line="12" reason="import" />
       <module_usage name="pydantic._internal._import_utils" finding="relative" line="13" reason="import" />
-      <module_usage name="annotated_types" finding="absolute" line="126" reason="import" />
-      <module_usage name="annotated_types" finding="absolute" line="156" reason="import" />
-      <module_usage name="annotated_types" finding="absolute" line="189" reason="import" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="191" reason="import" />
+      <module_usage name="annotated_types" finding="absolute" line="161" reason="import" />
+      <module_usage name="annotated_types" finding="absolute" line="194" reason="import" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="196" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._mock_val_ser" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_mock_val_ser.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="14" merged_total="414" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="114" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="14" merged_total="665" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="143" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -3997,17 +4001,16 @@
       <module_usage name="pydantic_core.SchemaValidator" finding="not-found" line="6" reason="import fromlist" />
       <module_usage name="pydantic.errors" finding="relative" line="8" reason="import" />
       <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="9" reason="import" />
-      <module_usage name="pydantic.dataclasses" finding="relative" line="197" reason="import" />
+      <module_usage name="pydantic.dataclasses" finding="relative" line="208" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._model_construction" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_model_construction.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="64" merged_total="5094" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="64" merged_total="716" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="65" merged_total="4657" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="65" merged_total="653" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
-      <distribution-usage name="typing-inspection" />
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" reason="import" />
@@ -4017,37 +4020,36 @@
       <module_usage name="warnings" finding="absolute" line="8" reason="import" />
       <module_usage name="weakref" finding="absolute" line="9" reason="import" />
       <module_usage name="abc" finding="absolute" line="10" reason="import" />
-      <module_usage name="functools" finding="absolute" line="11" reason="import" />
-      <module_usage name="types" finding="absolute" line="12" reason="import" />
-      <module_usage name="typing" finding="absolute" line="13" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="15" reason="import" />
-      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="15" reason="import fromlist" />
-      <module_usage name="pydantic_core.SchemaSerializer" finding="not-found" line="15" reason="import fromlist" />
-      <module_usage name="typing_extensions" finding="absolute" line="16" reason="import" />
-      <module_usage name="typing_inspection" finding="absolute" line="17" reason="import" />
-      <module_usage name="typing_inspection.typing_objects" finding="relative" line="17" reason="import fromlist" />
-      <module_usage name="pydantic.errors" finding="relative" line="19" reason="import" />
-      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="20" reason="import" />
-      <module_usage name="pydantic.warnings" finding="relative" line="21" reason="import" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="22" reason="import" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="23" reason="import" />
-      <module_usage name="pydantic._internal._fields" finding="relative" line="24" reason="import" />
-      <module_usage name="pydantic._internal._generate_schema" finding="relative" line="25" reason="import" />
-      <module_usage name="pydantic._internal._generics" finding="relative" line="26" reason="import" />
-      <module_usage name="pydantic._internal._import_utils" finding="relative" line="27" reason="import" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="28" reason="import" />
-      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="29" reason="import" />
-      <module_usage name="pydantic._internal._signature" finding="relative" line="30" reason="import" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="31" reason="import" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="37" reason="import" />
-      <module_usage name="pydantic.root_model" finding="relative" line="186" reason="import" />
-      <module_usage name="pydantic.fields" finding="relative" line="428" reason="import" />
-      <module_usage name="pydantic.fields" finding="relative" line="853" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="11" reason="import" />
+      <module_usage name="functools" finding="absolute" line="12" reason="import" />
+      <module_usage name="types" finding="absolute" line="13" reason="import" />
+      <module_usage name="typing" finding="absolute" line="14" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="16" reason="import" />
+      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="16" reason="import fromlist" />
+      <module_usage name="pydantic_core.SchemaSerializer" finding="not-found" line="16" reason="import fromlist" />
+      <module_usage name="typing_extensions" finding="absolute" line="17" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="23" reason="import" />
+      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="24" reason="import" />
+      <module_usage name="pydantic.warnings" finding="relative" line="25" reason="import" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="26" reason="import" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="27" reason="import" />
+      <module_usage name="pydantic._internal._fields" finding="relative" line="28" reason="import" />
+      <module_usage name="pydantic._internal._generate_schema" finding="relative" line="35" reason="import" />
+      <module_usage name="pydantic._internal._generics" finding="relative" line="36" reason="import" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="37" reason="import" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="38" reason="import" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="39" reason="import" />
+      <module_usage name="pydantic._internal._signature" finding="relative" line="40" reason="import" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="41" reason="import" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="42" reason="import" />
+      <module_usage name="pydantic.root_model" finding="relative" line="160" reason="import" />
+      <module_usage name="pydantic.fields" finding="relative" line="420" reason="import" />
+      <module_usage name="pydantic.fields" finding="relative" line="818" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._namespace_utils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_namespace_utils.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="864" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="162" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="891" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="168" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -4056,15 +4058,16 @@
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
       <module_usage name="sys" finding="absolute" line="3" reason="import" />
       <module_usage name="collections.abc" finding="not-found" line="4" reason="import" />
-      <module_usage name="contextlib" finding="absolute" line="5" reason="import" />
-      <module_usage name="functools" finding="absolute" line="6" reason="import" />
+      <module_usage name="functools" finding="absolute" line="5" reason="import" />
+      <module_usage name="types" finding="absolute" line="6" reason="import" />
       <module_usage name="typing" finding="absolute" line="7" reason="import" />
       <module_usage name="typing_extensions" finding="absolute" line="9" reason="import" />
+      <module_usage name="pydantic._internal._contextlib" finding="relative" line="11" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._repr" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_repr.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="13" merged_total="1197" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="167" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="13" merged_total="1204" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="168" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -4076,47 +4079,45 @@
       <module_usage name="collections.abc" finding="not-found" line="6" reason="import" />
       <module_usage name="typing" finding="absolute" line="7" reason="import" />
       <module_usage name="typing_extensions" finding="absolute" line="9" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="10" reason="import" />
-      <module_usage name="typing_inspection" finding="absolute" line="11" reason="import" />
-      <module_usage name="typing_inspection.typing_objects" finding="relative" line="11" reason="import fromlist" />
-      <module_usage name="typing_inspection.introspection" finding="absolute" line="12" reason="import" />
-      <module_usage name="pydantic._internal" finding="absolute" line="14" reason="import" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="14" reason="import fromlist" />
+      <module_usage name="typing_inspection" finding="absolute" line="10" reason="import" />
+      <module_usage name="typing_inspection.typing_objects" finding="relative" line="10" reason="import fromlist" />
+      <module_usage name="typing_inspection.introspection" finding="absolute" line="11" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="13" reason="import" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="13" reason="import fromlist" />
     </module_usages>
   </module>
   <module name="pydantic._internal._schema_gather" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_schema_gather.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="58" merged_total="1338" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="58" merged_total="275" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="10" merged_total="121" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="40" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
-      <distribution-usage name="typing_extensions" />
     </distribution-usages>
     <module_usages>
-      <module_usage name="__future__" finding="absolute" line="2" reason="import" />
-      <module_usage name="dataclasses" finding="absolute" line="4" reason="import" />
-      <module_usage name="typing" finding="absolute" line="5" reason="import" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="7" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="14" reason="import" />
+      <module_usage name="__future__" finding="absolute" line="1" reason="import" />
+      <module_usage name="typing" finding="absolute" line="3" reason="import" />
+      <module_usage name="pydantic_core._pydantic_core" finding="absolute" line="5" reason="import" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="6" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._schema_generation_shared" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_schema_generation_shared.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="13" merged_total="305" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="93" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="13" merged_total="302" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="92" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" reason="import" />
-      <module_usage name="typing" finding="absolute" line="5" reason="import" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="7" reason="import" />
-      <module_usage name="pydantic.annotated_handlers" finding="relative" line="9" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="5" reason="import" />
+      <module_usage name="typing" finding="absolute" line="6" reason="import" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="8" reason="import" />
+      <module_usage name="pydantic.annotated_handlers" finding="relative" line="10" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._serializers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_serializers.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="6" merged_total="140" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="5" merged_total="27" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="172" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="33" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -4131,11 +4132,12 @@
       <module_usage name="pydantic_core.PydanticOmit" finding="not-found" line="8" reason="import fromlist" />
       <module_usage name="pydantic_core.core_schema" finding="relative" line="8" reason="import fromlist" />
       <module_usage name="pydantic_core.core_schema" finding="absolute" line="8" reason="import" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="10" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._signature" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_signature.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="909" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="127" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="16" merged_total="893" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="16" merged_total="125" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -4143,19 +4145,39 @@
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
       <module_usage name="dataclasses" finding="absolute" line="3" reason="import" />
-      <module_usage name="inspect" finding="absolute" line="4" reason="import" />
-      <module_usage name="typing" finding="absolute" line="5" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="7" reason="import" />
-      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="7" reason="import fromlist" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="9" reason="import" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="10" reason="import" />
-      <module_usage name="pydantic.fields" finding="relative" line="56" reason="import" />
-      <module_usage name="itertools" finding="absolute" line="88" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="4" reason="import" />
+      <module_usage name="inspect" finding="absolute" line="5" reason="import" />
+      <module_usage name="typing" finding="absolute" line="6" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="8" reason="import" />
+      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="8" reason="import fromlist" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="10" reason="import" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="11" reason="import" />
+      <module_usage name="pydantic.fields" finding="relative" line="60" reason="import" />
+      <module_usage name="itertools" finding="absolute" line="94" reason="import" />
+    </module_usages>
+  </module>
+  <module name="pydantic._internal._type_refs" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_type_refs.py" distribution="pydantic">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="8" merged_total="427" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="84" />
+    <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="typing_extensions" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="__future__" finding="absolute" line="3" reason="import" />
+      <module_usage name="sys" finding="absolute" line="5" reason="import" />
+      <module_usage name="enum" finding="absolute" line="6" reason="import" />
+      <module_usage name="typing" finding="absolute" line="7" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="9" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="11" reason="import" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="11" reason="import fromlist" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="12" reason="import" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="13" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._typing_extra" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_typing_extra.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="13" merged_total="1732" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="13" merged_total="270" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="15" merged_total="1536" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="15" merged_total="243" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -4163,30 +4185,28 @@
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" reason="import" />
-      <module_usage name="collections.abc" finding="not-found" line="5" reason="import" />
-      <module_usage name="re" finding="absolute" line="6" reason="import" />
-      <module_usage name="sys" finding="absolute" line="7" reason="import" />
-      <module_usage name="types" finding="absolute" line="8" reason="import" />
-      <module_usage name="typing" finding="absolute" line="9" reason="import" />
+      <module_usage name="re" finding="absolute" line="5" reason="import" />
+      <module_usage name="sys" finding="absolute" line="6" reason="import" />
+      <module_usage name="types" finding="absolute" line="7" reason="import" />
+      <module_usage name="typing" finding="absolute" line="8" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="9" reason="import" />
       <module_usage name="functools" finding="absolute" line="10" reason="import" />
       <module_usage name="inspect" finding="absolute" line="11" reason="import" />
-      <module_usage name="typing" finding="absolute" line="12" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="14" reason="import" />
+      <module_usage name="types" finding="absolute" line="12" reason="import" />
+      <module_usage name="typing" finding="absolute" line="13" reason="import" />
       <module_usage name="typing_extensions" finding="absolute" line="15" reason="import" />
-      <module_usage name="typing_inspection" finding="absolute" line="16" reason="import" />
-      <module_usage name="typing_inspection.typing_objects" finding="relative" line="16" reason="import fromlist" />
-      <module_usage name="typing_inspection.introspection" finding="absolute" line="17" reason="import" />
-      <module_usage name="pydantic.version" finding="absolute" line="19" reason="import" />
-      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="21" reason="import" />
-      <module_usage name="types" finding="absolute" line="27" reason="import" />
-      <module_usage name="types" finding="absolute" line="28" reason="import" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="186" reason="import" />
-      <module_usage name="eval_type_backport" finding="not-found" line="517" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="16" reason="import" />
+      <module_usage name="typing_inspection" finding="absolute" line="17" reason="import" />
+      <module_usage name="typing_inspection.typing_objects" finding="relative" line="17" reason="import fromlist" />
+      <module_usage name="typing_inspection.introspection" finding="absolute" line="18" reason="import" />
+      <module_usage name="pydantic.version" finding="absolute" line="20" reason="import" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="22" reason="import" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="110" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._utils" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_utils.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="1878" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="356" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="1853" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="350" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -4196,39 +4216,38 @@
       <module_usage name="__future__" finding="absolute" line="6" reason="import" />
       <module_usage name="dataclasses" finding="absolute" line="8" reason="import" />
       <module_usage name="keyword" finding="absolute" line="9" reason="import" />
-      <module_usage name="sys" finding="absolute" line="10" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="11" reason="import" />
-      <module_usage name="weakref" finding="absolute" line="12" reason="import" />
-      <module_usage name="collections" finding="absolute" line="13" reason="import" />
-      <module_usage name="collections.OrderedDict" finding="not-found" line="13" reason="import fromlist" />
-      <module_usage name="collections.defaultdict" finding="not-found" line="13" reason="import fromlist" />
-      <module_usage name="collections.deque" finding="not-found" line="13" reason="import fromlist" />
+      <module_usage name="warnings" finding="absolute" line="10" reason="import" />
+      <module_usage name="weakref" finding="absolute" line="11" reason="import" />
+      <module_usage name="collections" finding="absolute" line="12" reason="import" />
+      <module_usage name="collections.OrderedDict" finding="not-found" line="12" reason="import fromlist" />
+      <module_usage name="collections.defaultdict" finding="not-found" line="12" reason="import fromlist" />
+      <module_usage name="collections.deque" finding="not-found" line="12" reason="import fromlist" />
+      <module_usage name="collections.abc" finding="not-found" line="13" reason="import" />
       <module_usage name="collections.abc" finding="not-found" line="14" reason="import" />
-      <module_usage name="collections.abc" finding="not-found" line="15" reason="import" />
-      <module_usage name="copy" finding="absolute" line="16" reason="import" />
-      <module_usage name="functools" finding="absolute" line="17" reason="import" />
-      <module_usage name="inspect" finding="absolute" line="18" reason="import" />
-      <module_usage name="itertools" finding="absolute" line="19" reason="import" />
-      <module_usage name="types" finding="absolute" line="20" reason="import" />
-      <module_usage name="typing" finding="absolute" line="21" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="23" reason="import" />
-      <module_usage name="pydantic_core.MISSING" finding="not-found" line="23" reason="import fromlist" />
-      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="23" reason="import fromlist" />
-      <module_usage name="typing_extensions" finding="absolute" line="24" reason="import" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="26" reason="import" />
-      <module_usage name="pydantic._internal" finding="absolute" line="28" reason="import" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="28" reason="import fromlist" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="28" reason="import fromlist" />
-      <module_usage name="pydantic._internal._import_utils" finding="relative" line="29" reason="import" />
+      <module_usage name="copy" finding="absolute" line="15" reason="import" />
+      <module_usage name="functools" finding="absolute" line="16" reason="import" />
+      <module_usage name="inspect" finding="absolute" line="17" reason="import" />
+      <module_usage name="itertools" finding="absolute" line="18" reason="import" />
+      <module_usage name="types" finding="absolute" line="19" reason="import" />
+      <module_usage name="typing" finding="absolute" line="20" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="22" reason="import" />
+      <module_usage name="pydantic_core.MISSING" finding="not-found" line="22" reason="import fromlist" />
+      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="22" reason="import fromlist" />
+      <module_usage name="typing_extensions" finding="absolute" line="23" reason="import" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="25" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="27" reason="import" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="27" reason="import fromlist" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="27" reason="import fromlist" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="28" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._internal._validators" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_internal/_validators.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="1261" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="228" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="13" merged_total="1430" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="266" />
     <code-generation-time time="volatile" />
     <distribution-usages>
-      <distribution-usage name="typing_extensions" />
       <distribution-usage name="pydantic_core" />
+      <distribution-usage name="typing_extensions" />
       <distribution-usage name="typing-inspection" />
     </distribution-usages>
     <module_usages>
@@ -4236,41 +4255,42 @@
       <module_usage name="collections.abc" finding="not-found" line="8" reason="import" />
       <module_usage name="math" finding="absolute" line="9" reason="import" />
       <module_usage name="re" finding="absolute" line="10" reason="import" />
-      <module_usage name="typing" finding="absolute" line="11" reason="import" />
-      <module_usage name="collections.abc" finding="not-found" line="12" reason="import" />
-      <module_usage name="decimal" finding="absolute" line="13" reason="import" />
-      <module_usage name="fractions" finding="absolute" line="14" reason="import" />
+      <module_usage name="sys" finding="absolute" line="11" reason="import" />
+      <module_usage name="typing" finding="absolute" line="12" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="13" reason="import" />
+      <module_usage name="decimal" finding="absolute" line="14" reason="import" />
       <module_usage name="ipaddress" finding="absolute" line="15" reason="import" />
       <module_usage name="typing" finding="absolute" line="16" reason="import" />
       <module_usage name="zoneinfo" finding="absolute" line="17" reason="import" />
       <module_usage name="zoneinfo.ZoneInfo" finding="not-found" line="17" reason="import fromlist" />
       <module_usage name="zoneinfo.ZoneInfoNotFoundError" finding="not-found" line="17" reason="import fromlist" />
-      <module_usage name="typing_extensions" finding="absolute" line="19" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="20" reason="import" />
-      <module_usage name="pydantic_core.PydanticCustomError" finding="not-found" line="20" reason="import fromlist" />
-      <module_usage name="pydantic_core.PydanticKnownError" finding="not-found" line="20" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="relative" line="20" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="20" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="21" reason="import" />
-      <module_usage name="typing_inspection" finding="absolute" line="22" reason="import" />
-      <module_usage name="typing_inspection.typing_objects" finding="relative" line="22" reason="import fromlist" />
-      <module_usage name="pydantic._internal._import_utils" finding="absolute" line="24" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="19" reason="import" />
+      <module_usage name="pydantic_core.PydanticCustomError" finding="not-found" line="19" reason="import fromlist" />
+      <module_usage name="pydantic_core.PydanticKnownError" finding="not-found" line="19" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="relative" line="19" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="19" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="20" reason="import" />
+      <module_usage name="typing_inspection" finding="absolute" line="21" reason="import" />
+      <module_usage name="typing_inspection.typing_objects" finding="relative" line="21" reason="import fromlist" />
+      <module_usage name="pydantic._internal._import_utils" finding="absolute" line="23" reason="import" />
+      <module_usage name="pydantic._internal._typing_extra" finding="absolute" line="24" reason="import" />
       <module_usage name="pydantic.errors" finding="absolute" line="25" reason="import" />
-      <module_usage name="importlib" finding="absolute" line="97" reason="import" />
+      <module_usage name="importlib" finding="absolute" line="99" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic._migration" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/_migration.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="136" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="35" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="18" merged_total="128" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="33" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="1" reason="import" />
-      <module_usage name="typing" finding="absolute" line="2" reason="import" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="4" reason="import" />
-      <module_usage name="pydantic.version" finding="relative" line="6" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="262" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="278" reason="import" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="280" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="2" reason="import" />
+      <module_usage name="typing" finding="absolute" line="3" reason="import" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="5" reason="import" />
+      <module_usage name="pydantic.version" finding="relative" line="7" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="263" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="279" reason="import" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="281" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.alias_generators" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/alias_generators.py" distribution="pydantic">
@@ -4282,8 +4302,8 @@
     </module_usages>
   </module>
   <module name="pydantic.aliases" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/aliases.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="448" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="5" merged_total="79" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="11" merged_total="428" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="5" merged_total="75" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -4291,11 +4311,10 @@
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" reason="import" />
       <module_usage name="dataclasses" finding="absolute" line="5" reason="import" />
-      <module_usage name="typing" finding="absolute" line="6" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="8" reason="import" />
-      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="8" reason="import fromlist" />
-      <module_usage name="pydantic._internal" finding="relative" line="10" reason="import" />
-      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="10" reason="import fromlist" />
+      <module_usage name="collections.abc" finding="not-found" line="6" reason="import" />
+      <module_usage name="typing" finding="absolute" line="7" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="9" reason="import" />
+      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="9" reason="import fromlist" />
     </module_usages>
   </module>
   <module name="pydantic.annotated_handlers" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/annotated_handlers.py" distribution="pydantic">
@@ -4320,8 +4339,8 @@
     </module_usages>
   </module>
   <module name="pydantic.color" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/color.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="23" max_branch_merge="30" merged_total="9977" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="431" />
+    <optimization-time pass="1" time="volatile" micro_passes="23" max_branch_merge="30" merged_total="9887" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="427" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -4330,24 +4349,25 @@
     <module_usages>
       <module_usage name="math" finding="absolute" line="15" reason="import" />
       <module_usage name="re" finding="absolute" line="16" reason="import" />
-      <module_usage name="colorsys" finding="absolute" line="17" reason="import" />
-      <module_usage name="typing" finding="absolute" line="18" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="20" reason="import" />
-      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="20" reason="import fromlist" />
-      <module_usage name="pydantic_core.PydanticCustomError" finding="not-found" line="20" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="relative" line="20" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="20" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="21" reason="import" />
-      <module_usage name="pydantic._internal" finding="relative" line="23" reason="import" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="23" reason="import fromlist" />
-      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="24" reason="import" />
-      <module_usage name="pydantic.json_schema" finding="relative" line="25" reason="import" />
-      <module_usage name="pydantic.warnings" finding="relative" line="26" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="17" reason="import" />
+      <module_usage name="colorsys" finding="absolute" line="18" reason="import" />
+      <module_usage name="typing" finding="absolute" line="19" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="21" reason="import" />
+      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="21" reason="import fromlist" />
+      <module_usage name="pydantic_core.PydanticCustomError" finding="not-found" line="21" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="relative" line="21" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="21" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="22" reason="import" />
+      <module_usage name="pydantic._internal" finding="relative" line="24" reason="import" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="24" reason="import fromlist" />
+      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="25" reason="import" />
+      <module_usage name="pydantic.json_schema" finding="relative" line="26" reason="import" />
+      <module_usage name="pydantic.warnings" finding="relative" line="27" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.config" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/config.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="10" merged_total="185" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="58" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="10" merged_total="182" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="57" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -4355,20 +4375,21 @@
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" reason="import" />
       <module_usage name="warnings" finding="absolute" line="5" reason="import" />
-      <module_usage name="re" finding="absolute" line="6" reason="import" />
-      <module_usage name="re.Pattern" finding="not-found" line="6" reason="import fromlist" />
-      <module_usage name="typing" finding="absolute" line="7" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="9" reason="import" />
-      <module_usage name="pydantic._migration" finding="relative" line="11" reason="import" />
-      <module_usage name="pydantic.aliases" finding="relative" line="12" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="13" reason="import" />
-      <module_usage name="pydantic.warnings" finding="relative" line="14" reason="import" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="1283" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="6" reason="import" />
+      <module_usage name="re" finding="absolute" line="7" reason="import" />
+      <module_usage name="re.Pattern" finding="not-found" line="7" reason="import fromlist" />
+      <module_usage name="typing" finding="absolute" line="8" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="10" reason="import" />
+      <module_usage name="pydantic._migration" finding="relative" line="12" reason="import" />
+      <module_usage name="pydantic.aliases" finding="relative" line="13" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="14" reason="import" />
+      <module_usage name="pydantic.warnings" finding="relative" line="15" reason="import" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="1282" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.dataclasses" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/dataclasses.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="36" merged_total="954" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="187" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="36" merged_total="939" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="185" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -4379,22 +4400,23 @@
       <module_usage name="functools" finding="absolute" line="6" reason="import" />
       <module_usage name="sys" finding="absolute" line="7" reason="import" />
       <module_usage name="types" finding="absolute" line="8" reason="import" />
-      <module_usage name="typing" finding="absolute" line="9" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="10" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="12" reason="import" />
-      <module_usage name="pydantic._internal" finding="relative" line="14" reason="import" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="14" reason="import fromlist" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="14" reason="import fromlist" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="14" reason="import fromlist" />
-      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="14" reason="import fromlist" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="14" reason="import fromlist" />
+      <module_usage name="collections.abc" finding="not-found" line="9" reason="import" />
+      <module_usage name="typing" finding="absolute" line="10" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="11" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="13" reason="import" />
       <module_usage name="pydantic._internal" finding="relative" line="15" reason="import" />
-      <module_usage name="pydantic._internal._dataclasses" finding="relative" line="15" reason="import fromlist" />
-      <module_usage name="pydantic._migration" finding="relative" line="16" reason="import" />
-      <module_usage name="pydantic.config" finding="relative" line="17" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="18" reason="import" />
-      <module_usage name="pydantic.fields" finding="relative" line="19" reason="import" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="162" reason="import" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="15" reason="import fromlist" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="15" reason="import fromlist" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="15" reason="import fromlist" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="15" reason="import fromlist" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="15" reason="import fromlist" />
+      <module_usage name="pydantic._internal" finding="relative" line="16" reason="import" />
+      <module_usage name="pydantic._internal._dataclasses" finding="relative" line="16" reason="import fromlist" />
+      <module_usage name="pydantic._migration" finding="relative" line="17" reason="import" />
+      <module_usage name="pydantic.config" finding="relative" line="18" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="19" reason="import" />
+      <module_usage name="pydantic.fields" finding="relative" line="20" reason="import" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="129" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.datetime_parse" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/datetime_parse.py" distribution="pydantic">
@@ -4435,7 +4457,7 @@
     </module_usages>
   </module>
   <module name="pydantic.deprecated.decorator" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/deprecated/decorator.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="25" merged_total="2032" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="25" merged_total="2035" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="338" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -4449,7 +4471,6 @@
       <module_usage name="typing_extensions" finding="absolute" line="6" reason="import" />
       <module_usage name="pydantic._internal" finding="relative" line="8" reason="import" />
       <module_usage name="pydantic._internal._config" finding="relative" line="8" reason="import fromlist" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="8" reason="import fromlist" />
       <module_usage name="pydantic.alias_generators" finding="relative" line="9" reason="import" />
       <module_usage name="pydantic.errors" finding="relative" line="10" reason="import" />
       <module_usage name="pydantic.functional_validators" finding="relative" line="11" reason="import" />
@@ -4459,8 +4480,8 @@
     </module_usages>
   </module>
   <module name="pydantic.deprecated.json" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/deprecated/json.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="327" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="74" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="11" merged_total="319" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="72" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -4470,28 +4491,29 @@
       <module_usage name="warnings" finding="absolute" line="2" reason="import" />
       <module_usage name="collections" finding="absolute" line="3" reason="import" />
       <module_usage name="collections.deque" finding="not-found" line="3" reason="import fromlist" />
-      <module_usage name="decimal" finding="absolute" line="4" reason="import" />
-      <module_usage name="enum" finding="absolute" line="5" reason="import" />
-      <module_usage name="ipaddress" finding="absolute" line="6" reason="import" />
-      <module_usage name="pathlib" finding="absolute" line="7" reason="import" />
-      <module_usage name="pathlib.Path" finding="not-found" line="7" reason="import fromlist" />
-      <module_usage name="re" finding="absolute" line="8" reason="import" />
-      <module_usage name="re.Pattern" finding="not-found" line="8" reason="import fromlist" />
-      <module_usage name="types" finding="absolute" line="9" reason="import" />
-      <module_usage name="typing" finding="absolute" line="10" reason="import" />
-      <module_usage name="uuid" finding="absolute" line="11" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="13" reason="import" />
-      <module_usage name="pydantic._internal._import_utils" finding="relative" line="15" reason="import" />
-      <module_usage name="pydantic.color" finding="relative" line="16" reason="import" />
-      <module_usage name="pydantic.networks" finding="relative" line="17" reason="import" />
-      <module_usage name="pydantic.types" finding="relative" line="18" reason="import" />
-      <module_usage name="pydantic.warnings" finding="relative" line="19" reason="import" />
-      <module_usage name="dataclasses" finding="absolute" line="92" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="4" reason="import" />
+      <module_usage name="decimal" finding="absolute" line="5" reason="import" />
+      <module_usage name="enum" finding="absolute" line="6" reason="import" />
+      <module_usage name="ipaddress" finding="absolute" line="7" reason="import" />
+      <module_usage name="pathlib" finding="absolute" line="8" reason="import" />
+      <module_usage name="pathlib.Path" finding="not-found" line="8" reason="import fromlist" />
+      <module_usage name="re" finding="absolute" line="9" reason="import" />
+      <module_usage name="re.Pattern" finding="not-found" line="9" reason="import fromlist" />
+      <module_usage name="types" finding="absolute" line="10" reason="import" />
+      <module_usage name="typing" finding="absolute" line="11" reason="import" />
+      <module_usage name="uuid" finding="absolute" line="12" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="14" reason="import" />
+      <module_usage name="pydantic._internal._import_utils" finding="relative" line="16" reason="import" />
+      <module_usage name="pydantic.color" finding="relative" line="17" reason="import" />
+      <module_usage name="pydantic.networks" finding="relative" line="18" reason="import" />
+      <module_usage name="pydantic.types" finding="relative" line="19" reason="import" />
+      <module_usage name="pydantic.warnings" finding="relative" line="20" reason="import" />
+      <module_usage name="dataclasses" finding="absolute" line="93" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.deprecated.parse" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/deprecated/parse.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="268" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="67" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="264" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="66" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -4501,12 +4523,13 @@
       <module_usage name="json" finding="absolute" line="3" reason="import" />
       <module_usage name="pickle" finding="absolute" line="4" reason="import" />
       <module_usage name="warnings" finding="absolute" line="5" reason="import" />
-      <module_usage name="enum" finding="absolute" line="6" reason="import" />
-      <module_usage name="pathlib" finding="absolute" line="7" reason="import" />
-      <module_usage name="pathlib.Path" finding="not-found" line="7" reason="import fromlist" />
-      <module_usage name="typing" finding="absolute" line="8" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="10" reason="import" />
-      <module_usage name="pydantic.warnings" finding="relative" line="12" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="6" reason="import" />
+      <module_usage name="enum" finding="absolute" line="7" reason="import" />
+      <module_usage name="pathlib" finding="absolute" line="8" reason="import" />
+      <module_usage name="pathlib.Path" finding="not-found" line="8" reason="import fromlist" />
+      <module_usage name="typing" finding="absolute" line="9" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="11" reason="import" />
+      <module_usage name="pydantic.warnings" finding="relative" line="13" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.env_settings" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/env_settings.py" distribution="pydantic">
@@ -4526,8 +4549,8 @@
     </module_usages>
   </module>
   <module name="pydantic.errors" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/errors.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="11" merged_total="1309" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="179" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="11" merged_total="1251" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="170" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -4535,20 +4558,19 @@
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" reason="import" />
-      <module_usage name="re" finding="absolute" line="5" reason="import" />
-      <module_usage name="typing" finding="absolute" line="6" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="8" reason="import" />
-      <module_usage name="typing_inspection.introspection" finding="absolute" line="9" reason="import" />
-      <module_usage name="pydantic._internal" finding="absolute" line="11" reason="import" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="11" reason="import fromlist" />
-      <module_usage name="pydantic._migration" finding="relative" line="13" reason="import" />
-      <module_usage name="pydantic.version" finding="relative" line="14" reason="import" />
+      <module_usage name="typing" finding="absolute" line="5" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="7" reason="import" />
+      <module_usage name="typing_inspection.introspection" finding="absolute" line="8" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="10" reason="import" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="10" reason="import fromlist" />
+      <module_usage name="pydantic._migration" finding="relative" line="12" reason="import" />
+      <module_usage name="pydantic.version" finding="relative" line="13" reason="import" />
       <module_usage name="decimal" finding="absolute" reason="implicit import: According to 'implicit-imports' configuration." />
     </module_usages>
   </module>
   <module name="pydantic.fields" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/fields.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="30" merged_total="5397" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="29" merged_total="745" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="46" merged_total="5817" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="811" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="annotated-types" />
@@ -4566,39 +4588,39 @@
       <module_usage name="copy" finding="absolute" line="10" reason="import" />
       <module_usage name="dataclasses" finding="absolute" line="11" reason="import" />
       <module_usage name="functools" finding="absolute" line="12" reason="import" />
-      <module_usage name="typing" finding="absolute" line="13" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="14" reason="import" />
-      <module_usage name="annotated_types" finding="absolute" line="16" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="17" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="18" reason="import" />
-      <module_usage name="pydantic_core.MISSING" finding="not-found" line="18" reason="import fromlist" />
-      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="18" reason="import fromlist" />
-      <module_usage name="typing_extensions" finding="absolute" line="19" reason="import" />
-      <module_usage name="typing_inspection" finding="absolute" line="20" reason="import" />
-      <module_usage name="typing_inspection.typing_objects" finding="relative" line="20" reason="import fromlist" />
-      <module_usage name="typing_inspection.introspection" finding="absolute" line="21" reason="import" />
-      <module_usage name="pydantic" finding="absolute" line="23" reason="import" />
-      <module_usage name="pydantic.types" finding="relative" line="23" reason="import fromlist" />
-      <module_usage name="pydantic._internal" finding="relative" line="24" reason="import" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="24" reason="import fromlist" />
-      <module_usage name="pydantic._internal._fields" finding="relative" line="24" reason="import fromlist" />
-      <module_usage name="pydantic._internal._generics" finding="relative" line="24" reason="import fromlist" />
-      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="24" reason="import fromlist" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="24" reason="import fromlist" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="24" reason="import fromlist" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="24" reason="import fromlist" />
-      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="25" reason="import" />
-      <module_usage name="pydantic.aliases" finding="relative" line="26" reason="import" />
-      <module_usage name="pydantic.config" finding="relative" line="27" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="28" reason="import" />
-      <module_usage name="pydantic.json_schema" finding="relative" line="29" reason="import" />
-      <module_usage name="pydantic.warnings" finding="relative" line="30" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="43" reason="import" />
+      <module_usage name="types" finding="absolute" line="13" reason="import" />
+      <module_usage name="typing" finding="absolute" line="14" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="15" reason="import" />
+      <module_usage name="annotated_types" finding="absolute" line="17" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="18" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="19" reason="import" />
+      <module_usage name="pydantic_core.MISSING" finding="not-found" line="19" reason="import fromlist" />
+      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="19" reason="import fromlist" />
+      <module_usage name="typing_extensions" finding="absolute" line="20" reason="import" />
+      <module_usage name="typing_inspection" finding="absolute" line="21" reason="import" />
+      <module_usage name="typing_inspection.typing_objects" finding="relative" line="21" reason="import fromlist" />
+      <module_usage name="typing_inspection.introspection" finding="absolute" line="22" reason="import" />
+      <module_usage name="pydantic" finding="absolute" line="24" reason="import" />
+      <module_usage name="pydantic.types" finding="relative" line="24" reason="import fromlist" />
+      <module_usage name="pydantic._internal" finding="relative" line="25" reason="import" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._fields" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._generics" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="26" reason="import" />
+      <module_usage name="pydantic.aliases" finding="relative" line="27" reason="import" />
+      <module_usage name="pydantic.config" finding="relative" line="28" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="29" reason="import" />
+      <module_usage name="pydantic.json_schema" finding="relative" line="30" reason="import" />
+      <module_usage name="pydantic.warnings" finding="relative" line="31" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="44" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.functional_validators" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/functional_validators.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="13" merged_total="2983" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="400" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="13" merged_total="3042" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="408" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -4609,24 +4631,25 @@
       <module_usage name="dataclasses" finding="absolute" line="5" reason="import" />
       <module_usage name="sys" finding="absolute" line="6" reason="import" />
       <module_usage name="warnings" finding="absolute" line="7" reason="import" />
-      <module_usage name="functools" finding="absolute" line="8" reason="import" />
-      <module_usage name="typing" finding="absolute" line="9" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="11" reason="import" />
-      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="11" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="relative" line="11" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="11" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="12" reason="import" />
-      <module_usage name="pydantic._internal" finding="relative" line="14" reason="import" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="14" reason="import fromlist" />
-      <module_usage name="pydantic._internal._generics" finding="relative" line="14" reason="import fromlist" />
-      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="14" reason="import fromlist" />
-      <module_usage name="pydantic.annotated_handlers" finding="relative" line="15" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="16" reason="import" />
-      <module_usage name="pydantic.version" finding="relative" line="17" reason="import" />
-      <module_usage name="pydantic.warnings" finding="relative" line="18" reason="import" />
-      <module_usage name="typing" finding="absolute" line="23" reason="import" />
-      <module_usage name="pydantic.errors" finding="absolute" line="213" reason="import" />
-      <module_usage name="pydantic._internal._generate_schema" finding="absolute" line="785" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="8" reason="import" />
+      <module_usage name="functools" finding="absolute" line="9" reason="import" />
+      <module_usage name="typing" finding="absolute" line="10" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="12" reason="import" />
+      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="12" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="relative" line="12" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="12" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="13" reason="import" />
+      <module_usage name="pydantic._internal" finding="relative" line="15" reason="import" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="15" reason="import fromlist" />
+      <module_usage name="pydantic._internal._generics" finding="relative" line="15" reason="import fromlist" />
+      <module_usage name="pydantic.annotated_handlers" finding="relative" line="16" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="17" reason="import" />
+      <module_usage name="pydantic.version" finding="relative" line="18" reason="import" />
+      <module_usage name="pydantic.warnings" finding="relative" line="19" reason="import" />
+      <module_usage name="typing" finding="absolute" line="24" reason="import" />
+      <module_usage name="pydantic.errors" finding="absolute" line="214" reason="import" />
+      <module_usage name="pydantic._internal._generate_schema" finding="absolute" line="801" reason="import" />
+      <module_usage name="pydantic._internal._generate_schema" finding="absolute" line="901" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.json" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/json.py" distribution="pydantic">
@@ -4639,8 +4662,8 @@
     </module_usages>
   </module>
   <module name="pydantic.json_schema" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/json_schema.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="107" merged_total="16391" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="2013" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="119" merged_total="18755" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="2295" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -4665,39 +4688,38 @@
       <module_usage name="re" finding="absolute" line="25" reason="import" />
       <module_usage name="re.Pattern" finding="not-found" line="25" reason="import fromlist" />
       <module_usage name="typing" finding="absolute" line="26" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="38" reason="import" />
       <module_usage name="pydantic_core" finding="absolute" line="39" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="40" reason="import" />
-      <module_usage name="pydantic_core.MISSING" finding="not-found" line="40" reason="import fromlist" />
-      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="40" reason="import fromlist" />
-      <module_usage name="pydantic_core.PydanticOmit" finding="not-found" line="40" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="relative" line="40" reason="import fromlist" />
-      <module_usage name="pydantic_core.to_jsonable_python" finding="not-found" line="40" reason="import fromlist" />
+      <module_usage name="pydantic_core.MISSING" finding="not-found" line="39" reason="import fromlist" />
+      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="39" reason="import fromlist" />
+      <module_usage name="pydantic_core.PydanticOmit" finding="not-found" line="39" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="relative" line="39" reason="import fromlist" />
+      <module_usage name="pydantic_core.to_jsonable_python" finding="not-found" line="39" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="39" reason="import" />
       <module_usage name="pydantic_core.core_schema" finding="absolute" line="40" reason="import" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="41" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="42" reason="import" />
-      <module_usage name="typing_inspection.introspection" finding="absolute" line="43" reason="import" />
-      <module_usage name="pydantic.warnings" finding="absolute" line="45" reason="import" />
-      <module_usage name="pydantic._internal" finding="relative" line="47" reason="import" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="47" reason="import fromlist" />
-      <module_usage name="pydantic._internal._core_metadata" finding="relative" line="47" reason="import fromlist" />
-      <module_usage name="pydantic._internal._core_utils" finding="relative" line="47" reason="import fromlist" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="47" reason="import fromlist" />
-      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="47" reason="import fromlist" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="47" reason="import fromlist" />
-      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="47" reason="import fromlist" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="47" reason="import fromlist" />
-      <module_usage name="pydantic.annotated_handlers" finding="relative" line="57" reason="import" />
-      <module_usage name="pydantic.config" finding="relative" line="58" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="59" reason="import" />
-      <module_usage name="pydantic._internal._dataclasses" finding="relative" line="1637" reason="import" />
-      <module_usage name="pydantic.main" finding="relative" line="1638" reason="import" />
-      <module_usage name="pydantic.type_adapter" finding="relative" line="2343" reason="import" />
-      <module_usage name="pydantic.main" finding="relative" line="2550" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="41" reason="import" />
+      <module_usage name="typing_inspection.introspection" finding="absolute" line="42" reason="import" />
+      <module_usage name="pydantic.warnings" finding="absolute" line="44" reason="import" />
+      <module_usage name="pydantic._internal" finding="relative" line="46" reason="import" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="46" reason="import fromlist" />
+      <module_usage name="pydantic._internal._core_metadata" finding="relative" line="46" reason="import fromlist" />
+      <module_usage name="pydantic._internal._core_utils" finding="relative" line="46" reason="import fromlist" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="46" reason="import fromlist" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="46" reason="import fromlist" />
+      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="46" reason="import fromlist" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="46" reason="import fromlist" />
+      <module_usage name="pydantic.annotated_handlers" finding="relative" line="55" reason="import" />
+      <module_usage name="pydantic.config" finding="relative" line="56" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="57" reason="import" />
+      <module_usage name="pydantic._internal._dataclasses" finding="relative" line="1787" reason="import" />
+      <module_usage name="pydantic.main" finding="relative" line="1788" reason="import" />
+      <module_usage name="pydantic.type_adapter" finding="relative" line="2551" reason="import" />
+      <module_usage name="pydantic.main" finding="relative" line="2760" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.main" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/main.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="78" merged_total="4838" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="78" merged_total="864" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="78" merged_total="5316" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="78" merged_total="960" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -4707,62 +4729,64 @@
       <module_usage name="__future__" finding="absolute" line="7" reason="import" />
       <module_usage name="operator" finding="absolute" line="9" reason="import" />
       <module_usage name="sys" finding="absolute" line="10" reason="import" />
-      <module_usage name="types" finding="absolute" line="11" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="12" reason="import" />
-      <module_usage name="collections.abc" finding="not-found" line="13" reason="import" />
-      <module_usage name="copy" finding="absolute" line="14" reason="import" />
-      <module_usage name="functools" finding="absolute" line="15" reason="import" />
-      <module_usage name="typing" finding="absolute" line="16" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="30" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="31" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="32" reason="import" />
-      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="32" reason="import fromlist" />
-      <module_usage name="pydantic_core.ValidationError" finding="not-found" line="32" reason="import fromlist" />
-      <module_usage name="typing_extensions" finding="absolute" line="33" reason="import" />
-      <module_usage name="pydantic" finding="absolute" line="35" reason="import" />
-      <module_usage name="pydantic.PydanticDeprecatedSince20" finding="not-found" line="35" reason="import fromlist" />
-      <module_usage name="pydantic.PydanticDeprecatedSince211" finding="not-found" line="35" reason="import fromlist" />
-      <module_usage name="pydantic._internal" finding="relative" line="36" reason="import" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="36" reason="import fromlist" />
-      <module_usage name="pydantic._internal._decorators" finding="relative" line="36" reason="import fromlist" />
-      <module_usage name="pydantic._internal._fields" finding="relative" line="36" reason="import fromlist" />
-      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="36" reason="import fromlist" />
-      <module_usage name="pydantic._internal._generics" finding="relative" line="36" reason="import fromlist" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="36" reason="import fromlist" />
-      <module_usage name="pydantic._internal._model_construction" finding="relative" line="36" reason="import fromlist" />
-      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="36" reason="import fromlist" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="36" reason="import fromlist" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="36" reason="import fromlist" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="36" reason="import fromlist" />
-      <module_usage name="pydantic._migration" finding="relative" line="49" reason="import" />
-      <module_usage name="pydantic.aliases" finding="relative" line="50" reason="import" />
-      <module_usage name="pydantic.annotated_handlers" finding="relative" line="51" reason="import" />
-      <module_usage name="pydantic.config" finding="relative" line="52" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="53" reason="import" />
-      <module_usage name="pydantic.json_schema" finding="relative" line="54" reason="import" />
-      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="55" reason="import" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1412" reason="import" />
-      <module_usage name="pydantic.deprecated.parse" finding="relative" line="1412" reason="import fromlist" />
-      <module_usage name="json" finding="absolute" line="1423" reason="import" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1466" reason="import" />
-      <module_usage name="pydantic.deprecated.parse" finding="relative" line="1466" reason="import fromlist" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1547" reason="import" />
-      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1547" reason="import fromlist" />
-      <module_usage name="json" finding="absolute" line="1608" reason="import" />
-      <module_usage name="pydantic.deprecated.json" finding="relative" line="1610" reason="import" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1652" reason="import" />
-      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1652" reason="import fromlist" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1666" reason="import" />
-      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1666" reason="import fromlist" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1681" reason="import" />
-      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1681" reason="import fromlist" />
-      <module_usage name="pydantic.deprecated" finding="relative" line="1695" reason="import" />
-      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1695" reason="import fromlist" />
+      <module_usage name="threading" finding="absolute" line="11" reason="import" />
+      <module_usage name="types" finding="absolute" line="12" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="13" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="14" reason="import" />
+      <module_usage name="copy" finding="absolute" line="15" reason="import" />
+      <module_usage name="functools" finding="absolute" line="16" reason="import" />
+      <module_usage name="typing" finding="absolute" line="17" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="31" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="32" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="33" reason="import" />
+      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="33" reason="import fromlist" />
+      <module_usage name="pydantic_core.ValidationError" finding="not-found" line="33" reason="import fromlist" />
+      <module_usage name="typing_extensions" finding="absolute" line="34" reason="import" />
+      <module_usage name="pydantic" finding="absolute" line="36" reason="import" />
+      <module_usage name="pydantic.PydanticDeprecatedSince20" finding="not-found" line="36" reason="import fromlist" />
+      <module_usage name="pydantic.PydanticDeprecatedSince211" finding="not-found" line="36" reason="import fromlist" />
+      <module_usage name="pydantic._internal" finding="relative" line="37" reason="import" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="37" reason="import fromlist" />
+      <module_usage name="pydantic._internal._decorators" finding="relative" line="37" reason="import fromlist" />
+      <module_usage name="pydantic._internal._fields" finding="relative" line="37" reason="import fromlist" />
+      <module_usage name="pydantic._internal._forward_ref" finding="relative" line="37" reason="import fromlist" />
+      <module_usage name="pydantic._internal._generics" finding="relative" line="37" reason="import fromlist" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="37" reason="import fromlist" />
+      <module_usage name="pydantic._internal._model_construction" finding="relative" line="37" reason="import fromlist" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="37" reason="import fromlist" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="37" reason="import fromlist" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="37" reason="import fromlist" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="37" reason="import fromlist" />
+      <module_usage name="pydantic._migration" finding="relative" line="50" reason="import" />
+      <module_usage name="pydantic.aliases" finding="relative" line="51" reason="import" />
+      <module_usage name="pydantic.annotated_handlers" finding="relative" line="52" reason="import" />
+      <module_usage name="pydantic.config" finding="relative" line="53" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="54" reason="import" />
+      <module_usage name="pydantic.json_schema" finding="relative" line="55" reason="import" />
+      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="56" reason="import" />
+      <module_usage name="pydantic.version" finding="relative" line="57" reason="import" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1480" reason="import" />
+      <module_usage name="pydantic.deprecated.parse" finding="relative" line="1480" reason="import fromlist" />
+      <module_usage name="json" finding="absolute" line="1491" reason="import" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1534" reason="import" />
+      <module_usage name="pydantic.deprecated.parse" finding="relative" line="1534" reason="import fromlist" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1615" reason="import" />
+      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1615" reason="import fromlist" />
+      <module_usage name="json" finding="absolute" line="1676" reason="import" />
+      <module_usage name="pydantic.deprecated.json" finding="relative" line="1678" reason="import" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1720" reason="import" />
+      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1720" reason="import fromlist" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1734" reason="import" />
+      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1734" reason="import fromlist" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1749" reason="import" />
+      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1749" reason="import fromlist" />
+      <module_usage name="pydantic.deprecated" finding="relative" line="1763" reason="import" />
+      <module_usage name="pydantic.deprecated.copy_internals" finding="relative" line="1763" reason="import fromlist" />
     </module_usages>
   </module>
   <module name="pydantic.mypy" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/mypy.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="32" merged_total="8551" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="32" merged_total="1213" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="33" merged_total="9010" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="33" merged_total="1279" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" reason="import" />
@@ -4770,65 +4794,67 @@
       <module_usage name="collections.abc" finding="not-found" line="6" reason="import" />
       <module_usage name="configparser" finding="absolute" line="7" reason="import" />
       <module_usage name="typing" finding="absolute" line="8" reason="import" />
-      <module_usage name="mypy.errorcodes" finding="not-found" line="10" reason="import" />
-      <module_usage name="mypy.expandtype" finding="not-found" line="11" reason="import" />
-      <module_usage name="mypy.nodes" finding="not-found" line="12" reason="import" />
-      <module_usage name="mypy.options" finding="not-found" line="46" reason="import" />
-      <module_usage name="mypy.plugin" finding="not-found" line="47" reason="import" />
-      <module_usage name="mypy.plugins.common" finding="not-found" line="56" reason="import" />
-      <module_usage name="mypy.semanal" finding="not-found" line="59" reason="import" />
-      <module_usage name="mypy.server.trigger" finding="not-found" line="60" reason="import" />
-      <module_usage name="mypy.state" finding="not-found" line="61" reason="import" />
-      <module_usage name="mypy.type_visitor" finding="not-found" line="62" reason="import" />
-      <module_usage name="mypy.typeops" finding="not-found" line="63" reason="import" />
-      <module_usage name="mypy.types" finding="not-found" line="64" reason="import" />
-      <module_usage name="mypy.typevars" finding="not-found" line="76" reason="import" />
-      <module_usage name="mypy.util" finding="not-found" line="77" reason="import" />
-      <module_usage name="mypy.version" finding="not-found" line="78" reason="import" />
-      <module_usage name="pydantic._internal" finding="absolute" line="80" reason="import" />
-      <module_usage name="pydantic._internal._fields" finding="relative" line="80" reason="import fromlist" />
-      <module_usage name="pydantic.version" finding="absolute" line="81" reason="import" />
-      <module_usage name="tomllib" finding="absolute" line="1401" reason="import" />
+      <module_usage name="mypy.types" finding="not-found" line="11" reason="import" />
+      <module_usage name="mypy.errorcodes" finding="not-found" line="12" reason="import" />
+      <module_usage name="mypy.expandtype" finding="not-found" line="13" reason="import" />
+      <module_usage name="mypy.nodes" finding="not-found" line="14" reason="import" />
+      <module_usage name="mypy.options" finding="not-found" line="49" reason="import" />
+      <module_usage name="mypy.plugin" finding="not-found" line="50" reason="import" />
+      <module_usage name="mypy.plugins.common" finding="not-found" line="59" reason="import" />
+      <module_usage name="mypy.semanal" finding="not-found" line="62" reason="import" />
+      <module_usage name="mypy.semanal_shared" finding="not-found" line="63" reason="import" />
+      <module_usage name="mypy.server.trigger" finding="not-found" line="64" reason="import" />
+      <module_usage name="mypy.state" finding="not-found" line="65" reason="import" />
+      <module_usage name="mypy.type_visitor" finding="not-found" line="66" reason="import" />
+      <module_usage name="mypy.typeops" finding="not-found" line="67" reason="import" />
+      <module_usage name="mypy.types" finding="not-found" line="68" reason="import" />
+      <module_usage name="mypy.typevars" finding="not-found" line="80" reason="import" />
+      <module_usage name="mypy.util" finding="not-found" line="81" reason="import" />
+      <module_usage name="mypy.version" finding="not-found" line="82" reason="import" />
+      <module_usage name="pydantic._internal" finding="absolute" line="84" reason="import" />
+      <module_usage name="pydantic._internal._fields" finding="relative" line="84" reason="import fromlist" />
+      <module_usage name="pydantic.version" finding="absolute" line="85" reason="import" />
+      <module_usage name="tomllib" finding="absolute" line="1458" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.networks" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/networks.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="4999" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="749" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="34" merged_total="5015" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="751" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
       <distribution-usage name="typing_extensions" />
     </distribution-usages>
     <module_usages>
-      <module_usage name="__future__" finding="absolute" line="3" reason="import" />
-      <module_usage name="dataclasses" finding="absolute" line="5" reason="import" />
-      <module_usage name="re" finding="absolute" line="6" reason="import" />
-      <module_usage name="dataclasses" finding="absolute" line="7" reason="import" />
-      <module_usage name="functools" finding="absolute" line="8" reason="import" />
-      <module_usage name="importlib.metadata" finding="absolute" line="9" reason="import" />
-      <module_usage name="ipaddress" finding="absolute" line="10" reason="import" />
-      <module_usage name="typing" finding="absolute" line="11" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="13" reason="import" />
-      <module_usage name="pydantic_core.MultiHostHost" finding="not-found" line="13" reason="import fromlist" />
-      <module_usage name="pydantic_core.PydanticCustomError" finding="not-found" line="13" reason="import fromlist" />
-      <module_usage name="pydantic_core.PydanticSerializationUnexpectedValue" finding="not-found" line="13" reason="import fromlist" />
-      <module_usage name="pydantic_core.SchemaSerializer" finding="not-found" line="13" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="relative" line="13" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="13" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="20" reason="import" />
-      <module_usage name="pydantic_core.MultiHostUrl" finding="not-found" line="20" reason="import fromlist" />
-      <module_usage name="pydantic_core" finding="absolute" line="21" reason="import" />
-      <module_usage name="pydantic_core.Url" finding="not-found" line="21" reason="import fromlist" />
-      <module_usage name="typing_extensions" finding="absolute" line="22" reason="import" />
-      <module_usage name="pydantic.errors" finding="absolute" line="24" reason="import" />
-      <module_usage name="pydantic._internal" finding="relative" line="26" reason="import" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="26" reason="import fromlist" />
-      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="26" reason="import fromlist" />
-      <module_usage name="pydantic._migration" finding="relative" line="27" reason="import" />
-      <module_usage name="pydantic.annotated_handlers" finding="relative" line="28" reason="import" />
-      <module_usage name="pydantic.json_schema" finding="relative" line="29" reason="import" />
-      <module_usage name="pydantic.type_adapter" finding="relative" line="30" reason="import" />
-      <module_usage name="email_validator" finding="not-found" line="966" reason="import" />
+      <module_usage name="__future__" finding="absolute" line="35" reason="import" />
+      <module_usage name="dataclasses" finding="absolute" line="37" reason="import" />
+      <module_usage name="re" finding="absolute" line="38" reason="import" />
+      <module_usage name="dataclasses" finding="absolute" line="39" reason="import" />
+      <module_usage name="functools" finding="absolute" line="40" reason="import" />
+      <module_usage name="importlib.metadata" finding="absolute" line="41" reason="import" />
+      <module_usage name="ipaddress" finding="absolute" line="42" reason="import" />
+      <module_usage name="typing" finding="absolute" line="43" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="45" reason="import" />
+      <module_usage name="pydantic_core.MultiHostHost" finding="not-found" line="45" reason="import fromlist" />
+      <module_usage name="pydantic_core.PydanticCustomError" finding="not-found" line="45" reason="import fromlist" />
+      <module_usage name="pydantic_core.PydanticSerializationUnexpectedValue" finding="not-found" line="45" reason="import fromlist" />
+      <module_usage name="pydantic_core.SchemaSerializer" finding="not-found" line="45" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="relative" line="45" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="45" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="52" reason="import" />
+      <module_usage name="pydantic_core.MultiHostUrl" finding="not-found" line="52" reason="import fromlist" />
+      <module_usage name="pydantic_core" finding="absolute" line="53" reason="import" />
+      <module_usage name="pydantic_core.Url" finding="not-found" line="53" reason="import fromlist" />
+      <module_usage name="typing_extensions" finding="absolute" line="54" reason="import" />
+      <module_usage name="pydantic.errors" finding="absolute" line="56" reason="import" />
+      <module_usage name="pydantic._internal" finding="relative" line="58" reason="import" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="58" reason="import fromlist" />
+      <module_usage name="pydantic._internal._schema_generation_shared" finding="relative" line="58" reason="import fromlist" />
+      <module_usage name="pydantic._migration" finding="relative" line="59" reason="import" />
+      <module_usage name="pydantic.annotated_handlers" finding="relative" line="60" reason="import" />
+      <module_usage name="pydantic.json_schema" finding="relative" line="61" reason="import" />
+      <module_usage name="pydantic.type_adapter" finding="relative" line="62" reason="import" />
+      <module_usage name="email_validator" finding="not-found" line="1040" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.parse" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/parse.py" distribution="pydantic">
@@ -4840,8 +4866,8 @@
     </module_usages>
   </module>
   <module name="pydantic.plugin" kind="CompiledPythonPackage" usage="import path parent" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/plugin/__init__.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="11" merged_total="525" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="168" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="11" merged_total="519" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="166" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -4849,32 +4875,33 @@
     </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
-      <module_usage name="__future__" finding="absolute" line="7" reason="import" />
-      <module_usage name="typing" finding="absolute" line="9" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="11" reason="import" />
-      <module_usage name="pydantic_core.CoreConfig" finding="not-found" line="11" reason="import fromlist" />
-      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="11" reason="import fromlist" />
-      <module_usage name="pydantic_core.ValidationError" finding="not-found" line="11" reason="import fromlist" />
-      <module_usage name="typing_extensions" finding="absolute" line="12" reason="import" />
-      <module_usage name="pydantic.config" finding="absolute" line="14" reason="import" />
+      <module_usage name="__future__" finding="absolute" line="3" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="5" reason="import" />
+      <module_usage name="typing" finding="absolute" line="6" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="8" reason="import" />
+      <module_usage name="pydantic_core.CoreConfig" finding="not-found" line="8" reason="import fromlist" />
+      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="8" reason="import fromlist" />
+      <module_usage name="pydantic_core.ValidationError" finding="not-found" line="8" reason="import fromlist" />
+      <module_usage name="typing_extensions" finding="absolute" line="9" reason="import" />
+      <module_usage name="pydantic.config" finding="absolute" line="11" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.plugin._loader" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/plugin/_loader.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="169" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="6" merged_total="43" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="6" merged_total="141" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="6" merged_total="36" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
-      <module_usage name="importlib.metadata" finding="absolute" line="3" reason="import" />
-      <module_usage name="os" finding="absolute" line="4" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="5" reason="import" />
-      <module_usage name="collections.abc" finding="not-found" line="6" reason="import" />
+      <module_usage name="os" finding="absolute" line="3" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="4" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="5" reason="import" />
+      <module_usage name="importlib.metadata" finding="absolute" line="6" reason="import" />
       <module_usage name="typing" finding="absolute" line="7" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.plugin._schema_validator" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/plugin/_schema_validator.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="14" merged_total="1066" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="148" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="784" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="150" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -4897,7 +4924,7 @@
     </module_usages>
   </module>
   <module name="pydantic.root_model" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/root_model.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="22" merged_total="354" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="22" merged_total="357" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="80" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -4906,17 +4933,18 @@
     </distribution-usages>
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" reason="import" />
-      <module_usage name="copy" finding="absolute" line="5" reason="import" />
-      <module_usage name="typing" finding="absolute" line="6" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="8" reason="import" />
-      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="8" reason="import fromlist" />
-      <module_usage name="typing_extensions" finding="absolute" line="9" reason="import" />
-      <module_usage name="pydantic" finding="absolute" line="11" reason="import" />
-      <module_usage name="pydantic.PydanticUserError" finding="not-found" line="11" reason="import fromlist" />
-      <module_usage name="pydantic._internal" finding="relative" line="12" reason="import" />
-      <module_usage name="pydantic._internal._model_construction" finding="relative" line="12" reason="import fromlist" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="12" reason="import fromlist" />
-      <module_usage name="pydantic.main" finding="relative" line="13" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="5" reason="import" />
+      <module_usage name="copy" finding="absolute" line="6" reason="import" />
+      <module_usage name="typing" finding="absolute" line="7" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="9" reason="import" />
+      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="9" reason="import fromlist" />
+      <module_usage name="typing_extensions" finding="absolute" line="10" reason="import" />
+      <module_usage name="pydantic" finding="absolute" line="12" reason="import" />
+      <module_usage name="pydantic.PydanticUserError" finding="not-found" line="12" reason="import fromlist" />
+      <module_usage name="pydantic._internal" finding="relative" line="13" reason="import" />
+      <module_usage name="pydantic._internal._model_construction" finding="relative" line="13" reason="import fromlist" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="13" reason="import fromlist" />
+      <module_usage name="pydantic.main" finding="relative" line="14" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.schema" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/schema.py" distribution="pydantic">
@@ -4928,8 +4956,8 @@
     </module_usages>
   </module>
   <module name="pydantic.type_adapter" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/type_adapter.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="25" merged_total="943" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="228" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="23" merged_total="985" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="23" merged_total="239" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="pydantic_core" />
@@ -4943,31 +4971,31 @@
       <module_usage name="dataclasses" finding="absolute" line="8" reason="import" />
       <module_usage name="types" finding="absolute" line="9" reason="import" />
       <module_usage name="typing" finding="absolute" line="10" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="20" reason="import" />
-      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="20" reason="import fromlist" />
-      <module_usage name="pydantic_core.SchemaSerializer" finding="not-found" line="20" reason="import fromlist" />
-      <module_usage name="pydantic_core.SchemaValidator" finding="not-found" line="20" reason="import fromlist" />
-      <module_usage name="pydantic_core.Some" finding="not-found" line="20" reason="import fromlist" />
-      <module_usage name="typing_extensions" finding="absolute" line="21" reason="import" />
-      <module_usage name="pydantic.errors" finding="absolute" line="23" reason="import" />
-      <module_usage name="pydantic.main" finding="absolute" line="24" reason="import" />
-      <module_usage name="pydantic._internal" finding="relative" line="26" reason="import" />
-      <module_usage name="pydantic._internal._config" finding="relative" line="26" reason="import fromlist" />
-      <module_usage name="pydantic._internal._generate_schema" finding="relative" line="26" reason="import fromlist" />
-      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="26" reason="import fromlist" />
-      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="26" reason="import fromlist" />
-      <module_usage name="pydantic._internal._repr" finding="relative" line="26" reason="import fromlist" />
-      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="26" reason="import fromlist" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="26" reason="import fromlist" />
-      <module_usage name="pydantic.config" finding="relative" line="27" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="28" reason="import" />
-      <module_usage name="pydantic.json_schema" finding="relative" line="29" reason="import" />
-      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="36" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="19" reason="import" />
+      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="19" reason="import fromlist" />
+      <module_usage name="pydantic_core.SchemaSerializer" finding="not-found" line="19" reason="import fromlist" />
+      <module_usage name="pydantic_core.SchemaValidator" finding="not-found" line="19" reason="import fromlist" />
+      <module_usage name="pydantic_core.Some" finding="not-found" line="19" reason="import fromlist" />
+      <module_usage name="typing_extensions" finding="absolute" line="20" reason="import" />
+      <module_usage name="pydantic.errors" finding="absolute" line="22" reason="import" />
+      <module_usage name="pydantic.main" finding="absolute" line="23" reason="import" />
+      <module_usage name="pydantic._internal" finding="relative" line="25" reason="import" />
+      <module_usage name="pydantic._internal._config" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._generate_schema" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._mock_val_ser" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._namespace_utils" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._repr" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._typing_extra" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="pydantic.config" finding="relative" line="26" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="27" reason="import" />
+      <module_usage name="pydantic.json_schema" finding="relative" line="28" reason="import" />
+      <module_usage name="pydantic.plugin._schema_validator" finding="relative" line="35" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/types.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="6048" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="1056" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="20" merged_total="5959" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="1061" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="annotated-types" />
@@ -4979,41 +5007,42 @@
       <module_usage name="base64" finding="absolute" line="5" reason="import" />
       <module_usage name="dataclasses" finding="absolute" line="6" reason="import" />
       <module_usage name="re" finding="absolute" line="7" reason="import" />
-      <module_usage name="collections.abc" finding="not-found" line="8" reason="import" />
-      <module_usage name="datetime" finding="absolute" line="9" reason="import" />
-      <module_usage name="decimal" finding="absolute" line="10" reason="import" />
-      <module_usage name="enum" finding="absolute" line="11" reason="import" />
-      <module_usage name="pathlib" finding="absolute" line="12" reason="import" />
-      <module_usage name="pathlib.Path" finding="not-found" line="12" reason="import fromlist" />
-      <module_usage name="re" finding="absolute" line="13" reason="import" />
-      <module_usage name="re.Pattern" finding="not-found" line="13" reason="import fromlist" />
-      <module_usage name="types" finding="absolute" line="14" reason="import" />
-      <module_usage name="typing" finding="absolute" line="15" reason="import" />
-      <module_usage name="uuid" finding="absolute" line="27" reason="import" />
-      <module_usage name="annotated_types" finding="absolute" line="29" reason="import" />
+      <module_usage name="secrets" finding="absolute" line="8" reason="import" />
+      <module_usage name="sys" finding="absolute" line="9" reason="import" />
+      <module_usage name="collections.abc" finding="not-found" line="10" reason="import" />
+      <module_usage name="datetime" finding="absolute" line="11" reason="import" />
+      <module_usage name="decimal" finding="absolute" line="12" reason="import" />
+      <module_usage name="enum" finding="absolute" line="13" reason="import" />
+      <module_usage name="pathlib" finding="absolute" line="14" reason="import" />
+      <module_usage name="pathlib.Path" finding="not-found" line="14" reason="import fromlist" />
+      <module_usage name="re" finding="absolute" line="15" reason="import" />
+      <module_usage name="re.Pattern" finding="not-found" line="15" reason="import fromlist" />
+      <module_usage name="types" finding="absolute" line="16" reason="import" />
+      <module_usage name="typing" finding="absolute" line="17" reason="import" />
+      <module_usage name="uuid" finding="absolute" line="28" reason="import" />
       <module_usage name="annotated_types" finding="absolute" line="30" reason="import" />
-      <module_usage name="annotated_types.BaseMetadata" finding="not-found" line="30" reason="import fromlist" />
-      <module_usage name="annotated_types.MaxLen" finding="not-found" line="30" reason="import fromlist" />
-      <module_usage name="annotated_types.MinLen" finding="not-found" line="30" reason="import fromlist" />
-      <module_usage name="pydantic_core" finding="absolute" line="31" reason="import" />
-      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="31" reason="import fromlist" />
-      <module_usage name="pydantic_core.PydanticCustomError" finding="not-found" line="31" reason="import fromlist" />
-      <module_usage name="pydantic_core.SchemaSerializer" finding="not-found" line="31" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="relative" line="31" reason="import fromlist" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" line="31" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="32" reason="import" />
-      <module_usage name="pydantic._internal" finding="relative" line="34" reason="import" />
-      <module_usage name="pydantic._internal._fields" finding="relative" line="34" reason="import fromlist" />
-      <module_usage name="pydantic._internal._internal_dataclass" finding="relative" line="34" reason="import fromlist" />
-      <module_usage name="pydantic._internal._utils" finding="relative" line="34" reason="import fromlist" />
-      <module_usage name="pydantic._internal._validators" finding="relative" line="34" reason="import fromlist" />
-      <module_usage name="pydantic._migration" finding="relative" line="35" reason="import" />
-      <module_usage name="pydantic.annotated_handlers" finding="relative" line="36" reason="import" />
-      <module_usage name="pydantic.errors" finding="relative" line="37" reason="import" />
-      <module_usage name="pydantic.json_schema" finding="relative" line="38" reason="import" />
-      <module_usage name="pydantic.warnings" finding="relative" line="39" reason="import" />
-      <module_usage name="pydantic.fields" finding="absolute" line="3068" reason="import" />
-      <module_usage name="pydantic._internal._discriminated_union" finding="absolute" line="3083" reason="import" />
+      <module_usage name="annotated_types" finding="absolute" line="31" reason="import" />
+      <module_usage name="annotated_types.BaseMetadata" finding="not-found" line="31" reason="import fromlist" />
+      <module_usage name="annotated_types.MaxLen" finding="not-found" line="31" reason="import fromlist" />
+      <module_usage name="annotated_types.MinLen" finding="not-found" line="31" reason="import fromlist" />
+      <module_usage name="pydantic_core" finding="absolute" line="32" reason="import" />
+      <module_usage name="pydantic_core.CoreSchema" finding="not-found" line="32" reason="import fromlist" />
+      <module_usage name="pydantic_core.PydanticCustomError" finding="not-found" line="32" reason="import fromlist" />
+      <module_usage name="pydantic_core.SchemaSerializer" finding="not-found" line="32" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="relative" line="32" reason="import fromlist" />
+      <module_usage name="pydantic_core.core_schema" finding="absolute" line="32" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="33" reason="import" />
+      <module_usage name="pydantic._internal" finding="relative" line="41" reason="import" />
+      <module_usage name="pydantic._internal._fields" finding="relative" line="41" reason="import fromlist" />
+      <module_usage name="pydantic._internal._utils" finding="relative" line="41" reason="import fromlist" />
+      <module_usage name="pydantic._internal._validators" finding="relative" line="41" reason="import fromlist" />
+      <module_usage name="pydantic._migration" finding="relative" line="42" reason="import" />
+      <module_usage name="pydantic.annotated_handlers" finding="relative" line="43" reason="import" />
+      <module_usage name="pydantic.errors" finding="relative" line="44" reason="import" />
+      <module_usage name="pydantic.json_schema" finding="relative" line="45" reason="import" />
+      <module_usage name="pydantic.warnings" finding="relative" line="46" reason="import" />
+      <module_usage name="pydantic.fields" finding="absolute" line="3110" reason="import" />
+      <module_usage name="pydantic._internal._discriminated_union" finding="absolute" line="3141" reason="import" />
     </module_usages>
   </module>
   <module name="pydantic.typing" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/typing.py" distribution="pydantic">
@@ -5123,8 +5152,8 @@
     </module_usages>
   </module>
   <module name="pydantic.v1.dataclasses" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/v1/dataclasses.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="1715" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="329" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="16" merged_total="1728" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="332" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -5160,7 +5189,7 @@
     </module_usages>
   </module>
   <module name="pydantic.v1.decorator" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/v1/decorator.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="25" merged_total="3014" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="25" merged_total="3104" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="373" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -5307,7 +5336,7 @@
     </module_usages>
   </module>
   <module name="pydantic.v1.networks" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/v1/networks.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="31" merged_total="5712" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="31" merged_total="5776" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="789" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -5389,8 +5418,8 @@
     </module_usages>
   </module>
   <module name="pydantic.v1.types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/v1/types.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="21" merged_total="10718" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="1479" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="21" merged_total="10833" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="21" merged_total="1495" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="1" reason="import" />
@@ -5546,8 +5575,8 @@
     </module_usages>
   </module>
   <module name="pydantic.warnings" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic/warnings.py" distribution="pydantic">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="11" merged_total="1094" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="343" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="11" merged_total="1179" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="11" merged_total="369" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="3" reason="import" />
@@ -5576,18 +5605,11 @@
   <module name="pydantic_core._pydantic_core" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic_core/_pydantic_core.cpython-313-x86_64-linux-gnu.so" distribution="pydantic_core">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
-    <distribution-usages>
-      <distribution-usage name="typing_extensions" />
-    </distribution-usages>
-    <module_usages>
-      <module_usage name="datetime" finding="absolute" reason="implicit import" />
-      <module_usage name="typing_extensions" finding="absolute" reason="implicit import" />
-      <module_usage name="pydantic_core.core_schema" finding="absolute" reason="implicit import" />
-    </module_usages>
+    <module_usages />
   </module>
-  <module name="pydantic_core.core_schema" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic_core/core_schema.py" distribution="pydantic_core">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="22" merged_total="14634" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="2328" />
+  <module name="pydantic_core.core_schema" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/pydantic_core/core_schema.py" distribution="pydantic_core">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="22" merged_total="13201" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="2504" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -5599,15 +5621,16 @@
       <module_usage name="collections.abc" finding="not-found" line="10" reason="import" />
       <module_usage name="datetime" finding="absolute" line="11" reason="import" />
       <module_usage name="decimal" finding="absolute" line="12" reason="import" />
-      <module_usage name="re" finding="absolute" line="13" reason="import" />
-      <module_usage name="re.Pattern" finding="not-found" line="13" reason="import fromlist" />
-      <module_usage name="typing" finding="absolute" line="14" reason="import" />
-      <module_usage name="typing_extensions" finding="absolute" line="16" reason="import" />
-      <module_usage name="typing" finding="absolute" line="21" reason="import" />
-      <module_usage name="typing" finding="absolute" line="26" reason="import" />
-      <module_usage name="pydantic_core" finding="absolute" line="35" reason="import" />
-      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="35" reason="import fromlist" />
-      <module_usage name="warnings" finding="absolute" line="4457" reason="import" />
+      <module_usage name="fractions" finding="absolute" line="13" reason="import" />
+      <module_usage name="re" finding="absolute" line="14" reason="import" />
+      <module_usage name="re.Pattern" finding="not-found" line="14" reason="import fromlist" />
+      <module_usage name="typing" finding="absolute" line="15" reason="import" />
+      <module_usage name="typing_extensions" finding="absolute" line="17" reason="import" />
+      <module_usage name="typing" finding="absolute" line="22" reason="import" />
+      <module_usage name="typing" finding="absolute" line="29" reason="import" />
+      <module_usage name="pydantic_core" finding="absolute" line="38" reason="import" />
+      <module_usage name="pydantic_core.PydanticUndefined" finding="not-found" line="38" reason="import fromlist" />
+      <module_usage name="warnings" finding="absolute" line="5089" reason="import" />
     </module_usages>
   </module>
   <module name="quopri" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.13/quopri.py">
@@ -5732,6 +5755,15 @@
       <module_usage name="itertools" finding="absolute" line="29" reason="import" />
       <module_usage name="threading" finding="absolute" line="30" reason="import" />
       <module_usage name="time" finding="absolute" line="31" reason="import" />
+    </module_usages>
+  </module>
+  <module name="secrets" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.13/secrets.py">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="4" merged_total="45" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="base64" finding="absolute" line="15" reason="import" />
+      <module_usage name="hmac" finding="absolute" line="17" reason="import" />
+      <module_usage name="random" finding="absolute" line="18" reason="import" />
     </module_usages>
   </module>
   <module name="select" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/select.cpython-313-x86_64-linux-gnu.so">
@@ -6314,8 +6346,8 @@
     </module_usages>
   </module>
   <module name="typing_inspection.introspection" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.13/site-packages/typing_inspection/introspection.py" distribution="typing-inspection">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="1765" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="342" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="26" merged_total="1912" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="372" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="typing_extensions" />
@@ -6633,10 +6665,10 @@
   <included_extension name="zlib.so" dest_path="zlib.so" source_path="${sys.real_prefix}/lib/python3.13/lib-dynload/zlib.cpython-313-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" tags="copy" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pydantic_core/_pydantic_core.so" reason="no outside dependencies allowed for 'pydantic_core._pydantic_core'" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="476" />
-    <optimization-time pass="2" time="volatile" module_count="476" />
-    <optimization-time pass="all" time="volatile" module_count="476" />
-    <code-generation-time time="volatile" module_count="96" />
+    <optimization-time pass="1" time="volatile" module_count="479" />
+    <optimization-time pass="2" time="volatile" module_count="479" />
+    <optimization-time pass="all" time="volatile" module_count="479" />
+    <code-generation-time time="volatile" module_count="97" />
   </performance-totals>
   <python_binary filename="PydanticUsing.bin" backend_resource_mode="incbin" reproducible="yes" size="volatile" />
   <command_line>
@@ -6647,7 +6679,7 @@
     <option value="--update-check=never" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=284016646bf3b4501671f3177f73950e" />
+    <option value="--report-user-provided=pipenv_hash=4e26d0cb00944593a61e5286f5f0ca31" />
     <option value="--report-user-provided=case_hash=bc81729f81239cdbe770a20b972cdd93" />
     <option value="--report-user-provided=case_version=1" />
   </command_line>
@@ -6675,9 +6707,9 @@
   </plugins>
   <distributions>
     <distribution name="annotated-types" version="0.8.0" installer="pip" />
-    <distribution name="pydantic" version="2.13.4" installer="pip" />
-    <distribution name="pydantic_core" version="2.46.4" installer="pip" />
-    <distribution name="typing-inspection" version="0.4.4" installer="pip" />
+    <distribution name="pydantic" version="2.14.3" installer="pip" />
+    <distribution name="pydantic_core" version="2.50.4" installer="pip" />
+    <distribution name="typing-inspection" version="0.4.5" installer="pip" />
     <distribution name="typing_extensions" version="4.16.0" installer="pip" />
   </distributions>
   <python python_exe="${sys.prefix}/bin/python" python_flavor="Unknown" python_version="3.13.1" os_name="Linux" os_release="Debian-12" arch_name="x86_64" filesystem_encoding="utf-8" gil="yes">
@@ -6690,7 +6722,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>284016646bf3b4501671f3177f73950e</pipenv_hash>
+    <pipenv_hash>4e26d0cb00944593a61e5286f5f0ca31</pipenv_hash>
     <case_hash>bc81729f81239cdbe770a20b972cdd93</case_hash>
     <case_version>1</case_version>
   </user-data>

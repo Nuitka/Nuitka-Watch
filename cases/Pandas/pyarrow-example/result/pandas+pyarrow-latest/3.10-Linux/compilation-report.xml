@@ -680,6 +680,13 @@
       <module_usage name="types" finding="absolute" line="6" reason="import" />
     </module_usages>
   </module>
+  <module name="_zoneinfo" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_zoneinfo.cpython-310-x86_64-linux-gnu.so">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="zoneinfo._common" finding="absolute" reason="implicit import: According to 'implicit-imports' configuration." />
+    </module_usages>
+  </module>
   <module name="abc" kind="UncompiledPythonModule" usage="stdlib" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.10/abc.py">
     <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="11" merged_total="1254" />
     <optimization-time pass="2" time="volatile" />
@@ -1648,6 +1655,23 @@
     <code-generation-time time="volatile" />
     <module_usages />
   </module>
+  <module name="dateutil._tzdata_impl" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/_tzdata_impl.py" distribution="python-dateutil">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="489" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="92" />
+    <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="six" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="contextlib" finding="absolute" line="7" reason="import" />
+      <module_usage name="importlib" finding="absolute" line="8" reason="import" />
+      <module_usage name="io" finding="absolute" line="9" reason="import" />
+      <module_usage name="os" finding="absolute" line="10" reason="import" />
+      <module_usage name="pkgutil" finding="absolute" line="11" reason="import" />
+      <module_usage name="sys" finding="absolute" line="12" reason="import" />
+      <module_usage name="six" finding="absolute" line="14" reason="import" />
+    </module_usages>
+  </module>
   <module name="dateutil._version" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/_version.py" distribution="python-dateutil">
     <optimization-time pass="1" time="volatile" micro_passes="4" />
     <optimization-time pass="2" time="volatile" micro_passes="1" />
@@ -1724,8 +1748,8 @@
     </module_usages>
   </module>
   <module name="dateutil.relativedelta" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/relativedelta.py" distribution="python-dateutil">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="45" merged_total="2214" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="43" merged_total="435" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="45" merged_total="2204" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="43" merged_total="434" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="six" />
@@ -1741,8 +1765,8 @@
     </module_usages>
   </module>
   <module name="dateutil.rrule" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/rrule.py" distribution="python-dateutil">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="98" merged_total="13205" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="97" merged_total="1864" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="98" merged_total="13570" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="97" merged_total="1915" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="six" />
@@ -1761,26 +1785,30 @@
       <module_usage name="dateutil._common" finding="relative" line="22" reason="import" />
       <module_usage name="math" finding="absolute" line="25" reason="import" />
       <module_usage name="fractions" finding="absolute" line="27" reason="import" />
-      <module_usage name="dateutil" finding="absolute" line="544" reason="import" />
-      <module_usage name="dateutil.easter" finding="relative" line="544" reason="import fromlist" />
-      <module_usage name="dateutil" finding="absolute" line="1498" reason="import" />
-      <module_usage name="dateutil.parser" finding="relative" line="1498" reason="import fromlist" />
-      <module_usage name="dateutil" finding="absolute" line="1567" reason="import" />
-      <module_usage name="dateutil.parser" finding="relative" line="1567" reason="import fromlist" />
-      <module_usage name="dateutil" finding="absolute" line="1580" reason="import" />
-      <module_usage name="dateutil.tz" finding="relative" line="1580" reason="import fromlist" />
-      <module_usage name="dateutil" finding="absolute" line="1704" reason="import" />
-      <module_usage name="dateutil.parser" finding="relative" line="1704" reason="import fromlist" />
+      <module_usage name="dateutil" finding="absolute" line="568" reason="import" />
+      <module_usage name="dateutil.easter" finding="relative" line="568" reason="import fromlist" />
+      <module_usage name="dateutil" finding="absolute" line="1522" reason="import" />
+      <module_usage name="dateutil.parser" finding="relative" line="1522" reason="import fromlist" />
+      <module_usage name="dateutil" finding="absolute" line="1591" reason="import" />
+      <module_usage name="dateutil.parser" finding="relative" line="1591" reason="import fromlist" />
+      <module_usage name="dateutil" finding="absolute" line="1604" reason="import" />
+      <module_usage name="dateutil.tz" finding="relative" line="1604" reason="import fromlist" />
+      <module_usage name="dateutil" finding="absolute" line="1731" reason="import" />
+      <module_usage name="dateutil.parser" finding="relative" line="1731" reason="import fromlist" />
     </module_usages>
   </module>
   <module name="dateutil.tz" kind="CompiledPythonPackage" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/tz/__init__.py" distribution="python-dateutil">
-    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="10" merged_total="53" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="10" merged_total="86" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="10" merged_total="26" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
-      <module_usage name="dateutil.tz.tz" finding="relative" line="2" reason="import" />
-      <module_usage name="dateutil.tz.tz" finding="relative" line="3" reason="import" />
+      <module_usage name="sys" finding="absolute" line="2" reason="import" />
+      <module_usage name="dateutil.tz" finding="absolute" line="4" reason="import" />
+      <module_usage name="dateutil.tz._tzpath" finding="relative" line="4" reason="import fromlist" />
+      <module_usage name="dateutil.tz._tzpath" finding="relative" line="5" reason="import" />
+      <module_usage name="dateutil.tz.tz" finding="relative" line="6" reason="import" />
+      <module_usage name="dateutil.tz.tz" finding="relative" line="7" reason="import" />
     </module_usages>
   </module>
   <module name="dateutil.tz._common" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/tz/_common.py" distribution="python-dateutil">
@@ -1811,45 +1839,90 @@
       <module_usage name="six.moves" finding="not-found" line="5" reason="import" />
     </module_usages>
   </module>
-  <module name="dateutil.tz.tz" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/tz/tz.py" distribution="python-dateutil">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="47" merged_total="7964" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="46" merged_total="1285" />
+  <module name="dateutil.tz._tzfile" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/tz/_tzfile.py" distribution="python-dateutil">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="29" merged_total="7743" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="27" merged_total="1252" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="six" />
     </distribution-usages>
     <module_usages>
-      <module_usage name="datetime" finding="absolute" line="10" reason="import" />
-      <module_usage name="struct" finding="absolute" line="11" reason="import" />
-      <module_usage name="time" finding="absolute" line="12" reason="import" />
-      <module_usage name="sys" finding="absolute" line="13" reason="import" />
-      <module_usage name="os" finding="absolute" line="14" reason="import" />
-      <module_usage name="bisect" finding="absolute" line="15" reason="import" />
-      <module_usage name="weakref" finding="absolute" line="16" reason="import" />
-      <module_usage name="collections" finding="absolute" line="17" reason="import" />
-      <module_usage name="collections.OrderedDict" finding="not-found" line="17" reason="import fromlist" />
-      <module_usage name="six" finding="absolute" line="19" reason="import" />
+      <module_usage name="bisect" finding="absolute" line="2" reason="import" />
+      <module_usage name="calendar" finding="absolute" line="3" reason="import" />
+      <module_usage name="functools" finding="absolute" line="4" reason="import" />
+      <module_usage name="io" finding="absolute" line="5" reason="import" />
+      <module_usage name="os" finding="absolute" line="6" reason="import" />
+      <module_usage name="re" finding="absolute" line="7" reason="import" />
+      <module_usage name="stat" finding="absolute" line="8" reason="import" />
+      <module_usage name="struct" finding="absolute" line="9" reason="import" />
+      <module_usage name="sys" finding="absolute" line="10" reason="import" />
+      <module_usage name="datetime" finding="absolute" line="11" reason="import" />
+      <module_usage name="six" finding="absolute" line="13" reason="import" />
+      <module_usage name="dateutil.tz._common" finding="relative" line="15" reason="import" />
+      <module_usage name="contextlib" finding="absolute" line="23" reason="import" />
+      <module_usage name="contextlib" finding="absolute" line="25" reason="import" />
+      <module_usage name="collections" finding="absolute" line="47" reason="import" />
+      <module_usage name="collections.OrderedDict" finding="not-found" line="47" reason="import fromlist" />
+      <module_usage name="six.moves" finding="not-found" line="49" reason="import" />
+      <module_usage name="io" finding="absolute" line="446" reason="import" />
+    </module_usages>
+  </module>
+  <module name="dateutil.tz._tzpath" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/tz/_tzpath.py" distribution="python-dateutil">
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="486" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="94" />
+    <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="six" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="zoneinfo" finding="absolute" line="2" reason="import" />
+      <module_usage name="os" finding="absolute" line="16" reason="import" />
+      <module_usage name="sys" finding="absolute" line="17" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="18" reason="import" />
       <module_usage name="six" finding="absolute" line="20" reason="import" />
-      <module_usage name="six.moves" finding="not-found" line="21" reason="import" />
-      <module_usage name="dateutil.tz._common" finding="relative" line="22" reason="import" />
-      <module_usage name="dateutil.tz._common" finding="relative" line="23" reason="import" />
-      <module_usage name="dateutil.tz._common" finding="relative" line="24" reason="import" />
-      <module_usage name="dateutil.tz._factories" finding="relative" line="26" reason="import" />
-      <module_usage name="dateutil.tz._factories" finding="relative" line="27" reason="import" />
-      <module_usage name="dateutil.tz.win" finding="relative" line="29" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="34" reason="import" />
-      <module_usage name="dateutil" finding="absolute" line="954" reason="import" />
-      <module_usage name="dateutil.relativedelta" finding="relative" line="954" reason="import fromlist" />
-      <module_usage name="dateutil.parser" finding="absolute" line="1081" reason="import" />
-      <module_usage name="dateutil.parser._parser" finding="relative" line="1081" reason="import fromlist" />
-      <module_usage name="dateutil" finding="absolute" line="1112" reason="import" />
-      <module_usage name="dateutil.relativedelta" finding="relative" line="1112" reason="import fromlist" />
-      <module_usage name="dateutil" finding="absolute" line="1266" reason="import" />
-      <module_usage name="dateutil.rrule" finding="relative" line="1266" reason="import fromlist" />
-      <module_usage name="posixpath" finding="absolute" line="1627" reason="import" />
-      <module_usage name="dateutil.zoneinfo" finding="absolute" line="1654" reason="import" />
-      <module_usage name="dateutil.zoneinfo.get_zonefile_instance" finding="not-found" line="1654" reason="import fromlist" />
-      <module_usage name="contextlib" finding="absolute" line="1833" reason="import" />
+    </module_usages>
+  </module>
+  <module name="dateutil.tz.tz" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/tz/tz.py" distribution="python-dateutil">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="47" merged_total="6302" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="46" merged_total="1021" />
+    <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="six" />
+    </distribution-usages>
+    <module_usages>
+      <module_usage name="bisect" finding="absolute" line="11" reason="import" />
+      <module_usage name="datetime" finding="absolute" line="12" reason="import" />
+      <module_usage name="os" finding="absolute" line="13" reason="import" />
+      <module_usage name="struct" finding="absolute" line="14" reason="import" />
+      <module_usage name="sys" finding="absolute" line="15" reason="import" />
+      <module_usage name="time" finding="absolute" line="16" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="17" reason="import" />
+      <module_usage name="weakref" finding="absolute" line="18" reason="import" />
+      <module_usage name="collections" finding="absolute" line="19" reason="import" />
+      <module_usage name="collections.OrderedDict" finding="not-found" line="19" reason="import fromlist" />
+      <module_usage name="six" finding="absolute" line="21" reason="import" />
+      <module_usage name="six" finding="absolute" line="22" reason="import" />
+      <module_usage name="six.moves" finding="not-found" line="23" reason="import" />
+      <module_usage name="dateutil" finding="relative" line="25" reason="import" />
+      <module_usage name="dateutil._tzdata_impl" finding="relative" line="25" reason="import fromlist" />
+      <module_usage name="dateutil.tz" finding="absolute" line="26" reason="import" />
+      <module_usage name="dateutil.tz._tzpath" finding="relative" line="26" reason="import fromlist" />
+      <module_usage name="dateutil.tz._common" finding="relative" line="27" reason="import" />
+      <module_usage name="dateutil.tz._factories" finding="relative" line="34" reason="import" />
+      <module_usage name="dateutil.tz._tzfile" finding="relative" line="35" reason="import" />
+      <module_usage name="dateutil.tz.win" finding="relative" line="38" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="43" reason="import" />
+      <module_usage name="dateutil" finding="absolute" line="416" reason="import" />
+      <module_usage name="dateutil.relativedelta" finding="relative" line="416" reason="import fromlist" />
+      <module_usage name="dateutil.parser" finding="absolute" line="543" reason="import" />
+      <module_usage name="dateutil.parser._parser" finding="relative" line="543" reason="import fromlist" />
+      <module_usage name="dateutil" finding="absolute" line="574" reason="import" />
+      <module_usage name="dateutil.relativedelta" finding="relative" line="574" reason="import fromlist" />
+      <module_usage name="dateutil" finding="absolute" line="728" reason="import" />
+      <module_usage name="dateutil.rrule" finding="relative" line="728" reason="import fromlist" />
+      <module_usage name="posixpath" finding="absolute" line="1097" reason="import" />
+      <module_usage name="posixpath" finding="absolute" line="1451" reason="import" />
+      <module_usage name="contextlib" finding="absolute" line="1456" reason="import" />
     </module_usages>
   </module>
   <module name="dateutil.tz.win" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/tz/win.py" distribution="python-dateutil">
@@ -1867,21 +1940,6 @@
       <module_usage name="ctypes" finding="absolute" line="17" reason="import" />
       <module_usage name="ctypes.wintypes" finding="absolute" line="18" reason="import" />
       <module_usage name="dateutil.tz._common" finding="relative" line="23" reason="import" />
-    </module_usages>
-  </module>
-  <module name="dateutil.zoneinfo" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/dateutil/zoneinfo/__init__.py" distribution="python-dateutil">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="10" merged_total="675" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="130" />
-    <code-generation-time time="volatile" />
-    <module_usages>
-      <module_usage name="os" finding="absolute" line="1" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="2" reason="import" />
-      <module_usage name="json" finding="absolute" line="3" reason="import" />
-      <module_usage name="tarfile" finding="absolute" line="5" reason="import" />
-      <module_usage name="pkgutil" finding="absolute" line="6" reason="import" />
-      <module_usage name="io" finding="absolute" line="7" reason="import" />
-      <module_usage name="dateutil.tz" finding="absolute" line="9" reason="import" />
-      <module_usage name="dateutil.tz.tzfile" finding="not-found" line="9" reason="import fromlist" />
     </module_usages>
   </module>
   <module name="decimal" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/decimal.py">
@@ -4119,7 +4177,7 @@
   </module>
   <module name="jinja2.lexer" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/jinja2/lexer.py" distribution="Jinja2">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="before_python3" tags_used="before_python3" result="false" />
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="53" merged_total="3119" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="53" merged_total="3144" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="46" merged_total="492" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -4135,7 +4193,7 @@
     </module_usages>
   </module>
   <module name="jinja2.loaders" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/jinja2/loaders.py" distribution="Jinja2">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="22" merged_total="4577" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="22" merged_total="4580" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="642" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -4205,7 +4263,7 @@
     </module_usages>
   </module>
   <module name="jinja2.parser" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/jinja2/parser.py" distribution="Jinja2">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="56" merged_total="3474" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="56" merged_total="3477" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="54" merged_total="689" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -4220,7 +4278,7 @@
     </module_usages>
   </module>
   <module name="jinja2.runtime" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/jinja2/runtime.py" distribution="Jinja2">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="29" merged_total="3470" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="29" merged_total="3473" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="616" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -4428,8 +4486,8 @@
     </module_usages>
   </module>
   <module name="markupsafe" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/markupsafe/__init__.py" distribution="MarkupSafe">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="45" merged_total="2506" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="326" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="45" merged_total="2488" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="45" merged_total="323" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -4441,8 +4499,8 @@
       <module_usage name="markupsafe._native" finding="relative" line="10" reason="import" />
       <module_usage name="html" finding="absolute" line="195" reason="import" />
       <module_usage name="html.unescape" finding="not-found" line="195" reason="import fromlist" />
-      <module_usage name="importlib.metadata" finding="absolute" line="384" reason="import" />
-      <module_usage name="warnings" finding="absolute" line="385" reason="import" />
+      <module_usage name="importlib.metadata" finding="absolute" line="394" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="395" reason="import" />
     </module_usages>
   </module>
   <module name="markupsafe._native" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/markupsafe/_native.py" distribution="MarkupSafe">
@@ -6477,7 +6535,7 @@
     </module_usages>
   </module>
   <module name="numpy.f2py.crackfortran" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/f2py/crackfortran.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="164" merged_total="29898" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="164" merged_total="29785" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="139" reason="import" />
@@ -11094,7 +11152,7 @@
     </module_usages>
   </module>
   <module name="pandas.core.generic" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pandas/core/generic.py" distribution="pandas">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="262" merged_total="27264" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="262" merged_total="27267" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="262" merged_total="3851" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -16276,8 +16334,8 @@
     <module_usages />
   </module>
   <module name="pytz" kind="CompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/pytz/__init__.py" distribution="pytz">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="1488" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="275" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="18" merged_total="1505" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="18" merged_total="279" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="setuptools" />
@@ -17488,6 +17546,58 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
+  <module name="zoneinfo" kind="UncompiledPythonPackage" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/zoneinfo/__init__.py">
+    <plugin-influence name="implicit-imports" influence="condition-used" condition="win32" tags_used="win32" result="false" />
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="2" merged_total="22" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" reason="import" />
+      <module_usage name="zoneinfo" finding="absolute" line="10" reason="import" />
+      <module_usage name="zoneinfo._tzpath" finding="relative" line="10" reason="import fromlist" />
+      <module_usage name="zoneinfo._common" finding="relative" line="11" reason="import" />
+      <module_usage name="_zoneinfo" finding="absolute" line="14" reason="import" />
+      <module_usage name="zoneinfo._zoneinfo" finding="relative" line="16" reason="import" />
+    </module_usages>
+  </module>
+  <module name="zoneinfo._common" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/zoneinfo/_common.py">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="27" merged_total="818" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="struct" finding="absolute" line="1" reason="import" />
+      <module_usage name="importlib.resources" finding="absolute" line="5" reason="import" />
+    </module_usages>
+  </module>
+  <module name="zoneinfo._tzpath" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/zoneinfo/_tzpath.py">
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="13" merged_total="1092" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="os" finding="absolute" line="1" reason="import" />
+      <module_usage name="sysconfig" finding="absolute" line="2" reason="import" />
+      <module_usage name="posixpath" finding="absolute" line="16" reason="import" />
+      <module_usage name="posixpath" finding="absolute" line="36" reason="import" />
+      <module_usage name="warnings" finding="absolute" line="40" reason="import" />
+      <module_usage name="posixpath" finding="absolute" line="54" reason="import" />
+      <module_usage name="posixpath" finding="absolute" line="80" reason="import" />
+      <module_usage name="importlib.resources" finding="absolute" line="114" reason="import" />
+    </module_usages>
+  </module>
+  <module name="zoneinfo._zoneinfo" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/zoneinfo/_zoneinfo.py">
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="31" merged_total="4622" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages>
+      <module_usage name="bisect" finding="absolute" line="1" reason="import" />
+      <module_usage name="calendar" finding="absolute" line="2" reason="import" />
+      <module_usage name="collections" finding="absolute" line="3" reason="import" />
+      <module_usage name="functools" finding="absolute" line="4" reason="import" />
+      <module_usage name="re" finding="absolute" line="5" reason="import" />
+      <module_usage name="weakref" finding="absolute" line="6" reason="import" />
+      <module_usage name="datetime" finding="absolute" line="7" reason="import" />
+      <module_usage name="zoneinfo" finding="absolute" line="9" reason="import" />
+      <module_usage name="zoneinfo._common" finding="relative" line="9" reason="import fromlist" />
+      <module_usage name="zoneinfo._tzpath" finding="relative" line="9" reason="import fromlist" />
+      <module_usage name="pickle" finding="absolute" line="209" reason="import" />
+    </module_usages>
+  </module>
   <performance>
     <memory_usage name="after_launch" value="volatile" />
     <memory_usage name="before_c_code_generation" value="volatile" />
@@ -17502,11 +17612,11 @@
   <data_file name="pandas/io/formats/templates/latex_table.tpl" source="${sys.prefix}/lib/python3.10/site-packages/pandas/io/formats/templates/latex_table.tpl" size="2221" reason="package data directory 'templates' for 'pandas.io.formats'" tags="config,copy,data-dir-contents" />
   <data_file name="pandas/io/formats/templates/string.tpl" source="${sys.prefix}/lib/python3.10/site-packages/pandas/io/formats/templates/string.tpl" size="344" reason="package data directory 'templates' for 'pandas.io.formats'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/CET" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/CET" size="2933" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/CST6CDT" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/CST6CDT" size="3592" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/Cuba" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Cuba" size="2416" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/CST6CDT" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/CST6CDT" size="2248" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/Cuba" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Cuba" size="2388" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/EET" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/EET" size="2262" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/EST" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/EST" size="182" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/EST5EDT" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/EST5EDT" size="3552" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/EST5EDT" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/EST5EDT" size="2248" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Egypt" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Egypt" size="2399" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Eire" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Eire" size="3492" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Factory" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Factory" size="116" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17528,12 +17638,12 @@
   <data_file name="pytz/zoneinfo/Libya" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Libya" size="625" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/MET" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/MET" size="2933" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/MST" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/MST" size="360" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/MST7MDT" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/MST7MDT" size="2460" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/MST7MDT" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/MST7MDT" size="2248" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/NZ" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/NZ" size="2437" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/NZ-CHAT" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/NZ-CHAT" size="2054" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Navajo" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Navajo" size="2460" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/PRC" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/PRC" size="561" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/PST8PDT" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/PST8PDT" size="2852" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/PST8PDT" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/PST8PDT" size="2248" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Poland" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Poland" size="2654" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Portugal" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Portugal" size="3527" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/ROC" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/ROC" size="761" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17547,11 +17657,11 @@
   <data_file name="pytz/zoneinfo/WET" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/WET" size="3527" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Zulu" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Zulu" size="114" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/iso3166.tab" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/iso3166.tab" size="4841" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/leapseconds" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/leapseconds" size="3694" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/tzdata.zi" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/tzdata.zi" size="104433" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/zone.tab" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/zone.tab" size="18813" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/zone1970.tab" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/zone1970.tab" size="17596" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/zonenow.tab" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/zonenow.tab" size="8248" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/leapseconds" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/leapseconds" size="3612" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/tzdata.zi" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/tzdata.zi" size="105017" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/zone.tab" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/zone.tab" size="18809" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/zone1970.tab" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/zone1970.tab" size="17592" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/zonenow.tab" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/zonenow.tab" size="8425" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Africa/Abidjan" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Africa/Abidjan" size="148" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Africa/Accra" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Africa/Accra" size="148" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Africa/Addis_Ababa" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Africa/Addis_Ababa" size="265" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17665,10 +17775,10 @@
   <data_file name="pytz/zoneinfo/America/Guayaquil" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Guayaquil" size="232" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Guyana" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Guyana" size="248" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Halifax" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Halifax" size="3424" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/America/Havana" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Havana" size="2416" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/America/Havana" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Havana" size="2388" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Hermosillo" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Hermosillo" size="388" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Indianapolis" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Indianapolis" size="1682" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/America/Inuvik" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Inuvik" size="2074" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/America/Inuvik" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Inuvik" size="1768" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Iqaluit" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Iqaluit" size="2202" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Jamaica" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Jamaica" size="482" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Jujuy" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Jujuy" size="1034" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17715,7 +17825,7 @@
   <data_file name="pytz/zoneinfo/America/Porto_Velho" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Porto_Velho" size="562" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Puerto_Rico" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Puerto_Rico" size="246" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Punta_Arenas" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Punta_Arenas" size="1902" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/America/Rainy_River" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Rainy_River" size="2868" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/America/Rainy_River" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Rainy_River" size="2566" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Rankin_Inlet" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Rankin_Inlet" size="2066" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Recife" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Recife" size="702" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Regina" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Regina" size="980" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17746,7 +17856,7 @@
   <data_file name="pytz/zoneinfo/America/Vancouver" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Vancouver" size="2590" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Virgin" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Virgin" size="246" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Whitehorse" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Whitehorse" size="1614" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/America/Winnipeg" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Winnipeg" size="2868" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/America/Winnipeg" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Winnipeg" size="2566" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Yakutat" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Yakutat" size="2305" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Yellowknife" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Yellowknife" size="2030" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/America/Argentina/Buenos_Aires" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/America/Argentina/Buenos_Aires" size="1062" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -17927,7 +18037,7 @@
   <data_file name="pytz/zoneinfo/Brazil/East" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Brazil/East" size="1430" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Brazil/West" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Brazil/West" size="590" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Canada/Atlantic" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Canada/Atlantic" size="3424" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
-  <data_file name="pytz/zoneinfo/Canada/Central" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Canada/Central" size="2868" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
+  <data_file name="pytz/zoneinfo/Canada/Central" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Canada/Central" size="2566" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Canada/Eastern" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Canada/Eastern" size="3494" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Canada/Mountain" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Canada/Mountain" size="2030" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
   <data_file name="pytz/zoneinfo/Canada/Newfoundland" source="${sys.prefix}/lib/python3.10/site-packages/pytz/zoneinfo/Canada/Newfoundland" size="3655" reason="package data directory 'zoneinfo' for 'pytz'" tags="config,copy,data-dir-contents" />
@@ -18143,6 +18253,7 @@
   <included_extension name="_statistics.so" dest_path="_statistics.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_statistics.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_struct.so" dest_path="_struct.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_struct.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_uuid.so" dest_path="_uuid.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_zoneinfo.so" dest_path="_zoneinfo.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/_zoneinfo.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="array.so" dest_path="array.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/array.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="binascii.so" dest_path="binascii.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/binascii.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="required extension module for CPython library startup" tags="copy" />
   <included_extension name="fcntl.so" dest_path="fcntl.so" source_path="${sys.real_prefix}/lib/python3.10/lib-dynload/fcntl.cpython-310-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
@@ -18266,10 +18377,10 @@
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pyarrow/_s3fs.so" reason="no outside dependencies allowed for 'pyarrow._s3fs'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pyarrow/lib.so" reason="no outside dependencies allowed for 'pyarrow.lib'" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="1021" />
-    <optimization-time pass="2" time="volatile" module_count="1021" />
-    <optimization-time pass="all" time="volatile" module_count="1021" />
-    <code-generation-time time="volatile" module_count="465" />
+    <optimization-time pass="1" time="volatile" module_count="1028" />
+    <optimization-time pass="2" time="volatile" module_count="1028" />
+    <optimization-time pass="all" time="volatile" module_count="1028" />
+    <code-generation-time time="volatile" module_count="467" />
   </performance-totals>
   <python_binary filename="PandasPyrarrowUsing.bin" backend_resource_mode="incbin" reproducible="yes" size="volatile" />
   <command_line>
@@ -18282,7 +18393,7 @@
     <option value="--update-check=never" />
     <option value="--report=compilation-report.xml" />
     <option value="--report-diffable" />
-    <option value="--report-user-provided=pipenv_hash=e7af09a360117cd3fe63762fe5eb060b" />
+    <option value="--report-user-provided=pipenv_hash=5ca571502165c78571bb2077094e849d" />
     <option value="--report-user-provided=case_hash=41e6014fcdd5ee8a174c3819d359eb47" />
     <option value="--report-user-provided=case_version=1" />
   </command_line>
@@ -18310,7 +18421,7 @@
   </plugins>
   <distributions>
     <distribution name="Jinja2" version="3.1.6" installer="pip" />
-    <distribution name="MarkupSafe" version="3.0.3" installer="pip" />
+    <distribution name="MarkupSafe" version="3.0.4" installer="pip" />
     <distribution name="backports.tarfile" version="1.2.0" installer="pip" />
     <distribution name="jaraco.collections" version="5.1.0" installer="pip" />
     <distribution name="jaraco.context" version="5.3.0" installer="pip" />
@@ -18322,8 +18433,8 @@
     <distribution name="pandas" version="2.3.3" installer="pip" />
     <distribution name="platformdirs" version="4.2.2" installer="pip" />
     <distribution name="pyarrow" version="25.0.1" installer="pip" />
-    <distribution name="python-dateutil" version="2.9.0.post0" installer="pip" />
-    <distribution name="pytz" version="2026.3.post1" installer="pip" />
+    <distribution name="python-dateutil" version="3.0.0" installer="pip" />
+    <distribution name="pytz" version="2026.6" installer="pip" />
     <distribution name="setuptools" version="75.6.0" installer="pip" />
     <distribution name="six" version="1.17.0" installer="pip" />
   </distributions>
@@ -18338,7 +18449,7 @@
     </search_path>
   </python>
   <user-data>
-    <pipenv_hash>e7af09a360117cd3fe63762fe5eb060b</pipenv_hash>
+    <pipenv_hash>5ca571502165c78571bb2077094e849d</pipenv_hash>
     <case_hash>41e6014fcdd5ee8a174c3819d359eb47</case_hash>
     <case_version>1</case_version>
   </user-data>
