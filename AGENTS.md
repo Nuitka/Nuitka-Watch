@@ -97,9 +97,11 @@ via slash command; primary agent may handle directly for trivial edits.
 
 ## Watch run mechanics
 
-- `run-watch.sh` hardcodes `--nuitka-binary=../Nuitka-develop/bin/nuitka`. To test against `../Py2C`
-  instead, either symlink or invoke `nuitka-watch` directly with
-  `--nuitka-binary=../Py2C/bin/nuitka`.
+- `run-watch.sh` runs every case twice, with `../Nuitka-develop/bin/nuitka` (standard) and
+  `../Nuitka-commercial/bin/nuitka` (commercial), writing to `result/standard/` and
+  `result/commercial/` respectively. It errors out when the two report different Nuitka versions;
+  the commercial package version is informational only. To test a single checkout, invoke
+  `nuitka-watch` directly with the desired `--nuitka-binary`.
 - On Windows, the watch runs under Git Bash (MSYS). `pipenv` is at
   `%LOCALAPPDATA%/Programs/Python/...` or `C:\Python314_64\Scripts\pipenv.exe` (mixed across
   machines, not in PowerShell's PATH -- use Git Bash).

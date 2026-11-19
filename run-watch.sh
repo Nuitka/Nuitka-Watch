@@ -126,12 +126,40 @@ if [ -n "$SELECTED_PYTHON_VERSION" ]; then
     PYTHON_VERSIONS=("$SELECTED_PYTHON_VERSION")
 fi
 
-echo "Doing Python versions $PYTHON_VERSIONS"
+# All cases are run for both result flavors. The Nuitka versions of the two
+# binaries have to match, the commercial package version is informational only.
+NUITKA_STANDARD_BINARY="../Nuitka-develop/bin/nuitka"
+NUITKA_COMMERCIAL_BINARY="../Nuitka-commercial/bin/nuitka"
+
+for NUITKA_BINARY in "$NUITKA_STANDARD_BINARY" "$NUITKA_COMMERCIAL_BINARY"
+do
+    if [ ! -f "$NUITKA_BINARY" ]
+    then
+        echo "Error, Nuitka binary '$NUITKA_BINARY' not found." >&2
+        exit 1
+    fi
+done
+
+VERSION_PYTHON="python${PYTHON_VERSIONS[0]}"
+
+NUITKA_STANDARD_VERSION=$("$VERSION_PYTHON" "$NUITKA_STANDARD_BINARY" --update-check=never --version | head -n 1)
+NUITKA_COMMERCIAL_VERSION=$("$VERSION_PYTHON" "$NUITKA_COMMERCIAL_BINARY" --update-check=never --version | head -n 1)
+
+if [ "$NUITKA_STANDARD_VERSION" != "$NUITKA_COMMERCIAL_VERSION" ]
+then
+    echo "Error, standard Nuitka version '$NUITKA_STANDARD_VERSION' does not match commercial Nuitka version '$NUITKA_COMMERCIAL_VERSION'." >&2
+    exit 1
+fi
+
+echo "Doing Nuitka $NUITKA_STANDARD_VERSION with standard and commercial flavors for Python versions $PYTHON_VERSIONS"
 
 for PYTHON_VERSION in "${PYTHON_VERSIONS[@]}"
 do
-    set -x
-    # python${PYTHON_VERSION} $NUITKA_WATCH/bin/nuitka --clean-cache=all
-    python${PYTHON_VERSION} $NUITKA_WATCH/bin/nuitka-watch --python-version=${PYTHON_VERSION} --nuitka-binary=../Nuitka-develop/bin/nuitka "${FILTERED_ARGS[@]}"
-    set +x
+    for NUITKA_BINARY in "$NUITKA_STANDARD_BINARY" "$NUITKA_COMMERCIAL_BINARY"
+    do
+        set -x
+        # python${PYTHON_VERSION} $NUITKA_WATCH/bin/nuitka --clean-cache=all
+        python${PYTHON_VERSION} $NUITKA_WATCH/bin/nuitka-watch --python-version=${PYTHON_VERSION} --nuitka-binary="$NUITKA_BINARY" "${FILTERED_ARGS[@]}"
+        set +x
+    done
 done
