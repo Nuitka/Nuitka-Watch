@@ -23,8 +23,9 @@ end-to-end before reporting back. Identical bugs usually exist in both; mirror f
 - `cases/<Case>/case.yml` -- case definitions (requirements, OS list, `python_version_req`,
   `version`).
 - `cases/<Case>/<Case>Using.py` -- the program compiled by a case.
-- `cases/<Case>/result/<result-name>/<python-version>-<OS>/` -- watch outputs:
-  `compilation-report.xml`, `compiled-stdout.txt`, `compiled-stderr.txt`, `Pipfile`, `Pipfile.lock`.
+- `cases/<Case>/result/<flavor>/<result-name>/<python-version>-<OS>/` -- watch outputs for the
+  `standard` or `commercial` Nuitka flavor: `compilation-report.xml`, `compiled-stdout.txt`,
+  `compiled-stderr.txt`, `Pipfile`, `Pipfile.lock`.
 - `nuitka-release.sh` / `pypi-update.sh` / `run-watch.sh` / `auto-stage.sh` -- driver scripts.
   `nuitka-release.sh` adds `--no-pipenv-update`; `pypi-update.sh` allows package updates.
 - `RELEASE_REVIEW_WORKFLOW.md` -- the canonical diff-review workflow. Follow it for release review
@@ -49,9 +50,10 @@ Do not commit. The user stages results themselves (see `auto-stage.sh`).
 
 Trigger: "debug the <case> <py> case", "reproduce with ../Py2C and fix".
 
-1. Find the case venv: `pipenv --venv` run from inside the case's `result/<name>/<py>-<OS>/`
-   directory. On Windows `pipenv` is at `%LOCALAPPDATA%/Programs/Python/...` or
-   `C:\Python314_64\Scripts\pipenv.exe` (not in PowerShell PATH -- use Git Bash). The venv lives at
+1. Find the case venv: `pipenv --venv` run from inside the case's
+   `result/<flavor>/<name>/<py>-<OS>/` directory (usually `standard`). On Windows `pipenv` is at
+   `%LOCALAPPDATA%/Programs/Python/...` or `C:\Python314_64\Scripts\pipenv.exe` (not in PowerShell
+   PATH -- use Git Bash). The venv lives at
    `%USERPROFILE%\.virtualenvs\<py>-<OS>-<hash>` (e.g. `C:\Users\kayha\.virtualenvs\...`).
 2. Reproduce the crash **before fixing**, using the exact watch command shape:
    ```

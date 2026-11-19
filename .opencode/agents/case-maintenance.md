@@ -38,8 +38,8 @@ compilation outputs except to remove stale result dirs.
 
 4. **Removing a result dir** the case no longer runs (e.g. dropping 3.14):
 
-   - `git rm -r cases/<Case>/result/<name>/<py>-<OS>/` -- it is usually committed, so `rm -rf` alone
-     is insufficient.
+   - `git rm -r cases/<Case>/result/*/<name>/<py>-<OS>/` -- it is usually committed, so `rm -rf`
+     alone is insufficient. Remove both the `standard` and `commercial` copies when present.
    - Check all OSes -- Linux/macOS `3.14` dirs may be pulled in later by the user; remove them all
      if present. Use `git ls-files cases/<Case>/result` to find them.
 

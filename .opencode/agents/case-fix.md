@@ -28,8 +28,8 @@ go into the Nuitka checkout (`../Py2C` or `../Nuitka-develop`), not into the res
 
 ## 1. Reproduce before fixing
 
-Find the case venv by running `pipenv --venv` from inside the case's `result/<name>/<py>-<OS>/`
-directory. On Windows `pipenv` is at `%LOCALAPPDATA%/Programs/Python/...` or
+Find the case venv by running `pipenv --venv` from inside the case's
+`result/<flavor>/<name>/<py>-<OS>/` directory (usually `standard`). On Windows `pipenv` is at `%LOCALAPPDATA%/Programs/Python/...` or
 `C:\Python314_64\Scripts\pipenv.exe` (mixed across machines, not in PowerShell PATH -- use Git
 Bash). The venv lives at `%USERPROFILE%\.virtualenvs\<py>-<OS>-<hash>` (e.g.
 `C:\Users\kayha\.virtualenvs\...`).
