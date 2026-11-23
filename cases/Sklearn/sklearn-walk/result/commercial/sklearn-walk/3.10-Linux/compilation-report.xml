@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.4rc11" nuitka_commercial_version="5.11.0" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.4rc12" nuitka_commercial_version="5.11.0" mode="standalone" completion="yes">
   <scons_environment c_compiler="gcc" the_cc_name="gcc" the_compiler="gcc" />
   <module name="__future__" kind="UncompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="6" merged_total="79" />
@@ -538,7 +538,7 @@
     </module_usages>
   </module>
   <module name="_pyio" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/_pyio.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="42" merged_total="11780" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="42" merged_total="11776" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="5" reason="import" />
@@ -676,7 +676,7 @@
     </module_usages>
   </module>
   <module name="argparse" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/argparse.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="44" merged_total="16986" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="44" merged_total="16994" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="88" reason="import" />
@@ -961,7 +961,7 @@
     </module_usages>
   </module>
   <module name="asyncio.selector_events" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/asyncio/selector_events.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="42" merged_total="6064" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="42" merged_total="5080" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="collections" finding="absolute" line="9" reason="import" />
@@ -2843,7 +2843,7 @@
     </module_usages>
   </module>
   <module name="fractions" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/fractions.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="49" merged_total="3520" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="49" merged_total="3519" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="decimal" finding="absolute" line="6" reason="import" />
@@ -2869,7 +2869,7 @@
     </module_usages>
   </module>
   <module name="functools" kind="UncompiledPythonModule" usage="import" reason="Technically required for CPython library startup." source_path="${sys.real_prefix}/lib/python3.10/functools.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="21" merged_total="5724" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="21" merged_total="5720" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="17" reason="import" />
@@ -3272,7 +3272,7 @@
     </module_usages>
   </module>
   <module name="importlib.metadata" kind="UncompiledPythonPackage" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/importlib/metadata/__init__.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="22" merged_total="6563" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="22" merged_total="6564" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
@@ -3353,7 +3353,7 @@
     </module_usages>
   </module>
   <module name="importlib.metadata._text" kind="UncompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/importlib/metadata/_text.py">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="246" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="14" merged_total="247" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="re" finding="absolute" line="1" reason="import" />
@@ -3502,8 +3502,9 @@
   </module>
   <module name="joblib._dask" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/joblib/_dask.py" distribution="joblib">
     <plugin-influence name="anti-bloat" influence="condition-used" condition="not use_dask" tags_used="use_dask" result="true" />
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="22" merged_total="2546" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="345" />
+    <plugin-influence name="anti-bloat" influence="condition-used" condition="not deployment" tags_used="deployment" result="true" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="22" merged_total="2570" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="22" merged_total="347" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
@@ -3948,8 +3949,8 @@
     </module_usages>
   </module>
   <module name="joblib.externals.loky.backend.synchronize" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/joblib/externals/loky/backend/synchronize.py" distribution="joblib">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="13" merged_total="2768" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="364" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="13" merged_total="2748" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="9" merged_total="360" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="15" reason="import" />
@@ -5443,8 +5444,8 @@
     </module_usages>
   </module>
   <module name="numpy._core._add_newdocs_scalars" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/_core/_add_newdocs_scalars.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="15" merged_total="584" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="95" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="15" merged_total="582" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="94" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="6" reason="import" />
@@ -5744,8 +5745,8 @@
     </module_usages>
   </module>
   <module name="numpy._core.numeric" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/_core/numeric.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="69" merged_total="4967" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="69" merged_total="821" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="69" merged_total="4963" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="68" merged_total="820" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="functools" finding="absolute" line="1" reason="import" />
@@ -6025,7 +6026,7 @@
     </module_usages>
   </module>
   <module name="numpy._typing._nbit_base" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/_typing/_nbit_base.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="12" merged_total="1042" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="12" merged_total="836" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="12" merged_total="206" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -6472,7 +6473,7 @@
     </module_usages>
   </module>
   <module name="numpy.f2py.rules" kind="UncompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/f2py/rules.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="67" merged_total="4006" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="67" merged_total="4016" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="49" reason="import" />
@@ -6712,7 +6713,7 @@
     </module_usages>
   </module>
   <module name="numpy.lib._function_base_impl" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="70" merged_total="12379" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="70" merged_total="10364" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="65" merged_total="2015" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -7203,7 +7204,7 @@
     </module_usages>
   </module>
   <module name="numpy.ma.core" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/numpy/ma/core.py" distribution="numpy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="136" merged_total="27084" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="136" merged_total="27085" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="136" merged_total="3762" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -7861,7 +7862,7 @@
     </module_usages>
   </module>
   <module name="pydoc" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/pydoc.py">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="72" merged_total="26907" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="72" merged_total="23601" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="builtins" finding="absolute" line="57" reason="import" />
@@ -7932,7 +7933,7 @@
     </module_usages>
   </module>
   <module name="random" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/random.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="37" merged_total="3672" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="37" merged_total="3074" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="warnings" finding="absolute" line="48" reason="import" />
@@ -8749,7 +8750,7 @@
     </module_usages>
   </module>
   <module name="scipy._lib.cobyqa.problem" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/_lib/cobyqa/problem.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="36" merged_total="4235" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="36" merged_total="3667" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="35" merged_total="568" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -9677,7 +9678,7 @@
     </module_usages>
   </module>
   <module name="scipy.integrate._rules._genz_malik" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/integrate/_rules/_genz_malik.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="25" merged_total="735" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="25" merged_total="611" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="124" />
     <code-generation-time time="volatile" />
     <module_usages>
@@ -9959,8 +9960,8 @@
     <module_usages />
   </module>
   <module name="scipy.interpolate._interpolate" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/interpolate/_interpolate.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="37" merged_total="8696" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="1225" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="37" merged_total="8692" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="36" merged_total="1224" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="numpy" />
@@ -10901,8 +10902,8 @@
     </module_usages>
   </module>
   <module name="scipy.linalg._decomp_qz" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/linalg/_decomp_qz.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="31" merged_total="864" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="214" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="31" merged_total="860" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="31" merged_total="212" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="numpy" />
@@ -11455,7 +11456,7 @@
     </module_usages>
   </module>
   <module name="scipy.ndimage._morphology" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/ndimage/_morphology.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="58" merged_total="3978" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="58" merged_total="3324" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="56" merged_total="654" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -11917,7 +11918,7 @@
     <module_usages />
   </module>
   <module name="scipy.optimize._lbfgsb_py" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/optimize/_lbfgsb_py.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="67" merged_total="1359" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="67" merged_total="1135" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="51" merged_total="224" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -12483,7 +12484,7 @@
     <module_usages />
   </module>
   <module name="scipy.optimize._qap" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/optimize/_qap.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="59" merged_total="2439" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="59" merged_total="2093" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="54" merged_total="346" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -12672,7 +12673,7 @@
     </module_usages>
   </module>
   <module name="scipy.optimize._tnc" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/optimize/_tnc.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="681" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="568" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="113" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -13080,8 +13081,8 @@
     </module_usages>
   </module>
   <module name="scipy.sparse._bsr" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/sparse/_bsr.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="50" merged_total="3232" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="49" merged_total="642" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="50" merged_total="3229" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="48" merged_total="641" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="numpy" />
@@ -13713,7 +13714,7 @@
     </module_usages>
   </module>
   <module name="scipy.sparse.linalg._eigen.lobpcg.lobpcg" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/sparse/linalg/_eigen/lobpcg/lobpcg.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="299" merged_total="3802" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="299" merged_total="3181" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="264" merged_total="621" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -14392,7 +14393,7 @@
     </module_usages>
   </module>
   <module name="scipy.special._basic" kind="CompiledPythonModule" usage="import fromlist" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/special/_basic.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="5832" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="4877" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="33" merged_total="955" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -14827,7 +14828,7 @@
     </module_usages>
   </module>
   <module name="scipy.stats._continuous_distns" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/stats/_continuous_distns.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="110" merged_total="67684" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="110" merged_total="67686" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="106" merged_total="8886" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -14946,7 +14947,7 @@
     </module_usages>
   </module>
   <module name="scipy.stats._distn_infrastructure" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="51" merged_total="26164" />
+    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="51" merged_total="26163" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="49" merged_total="3229" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -15486,7 +15487,7 @@
     </module_usages>
   </module>
   <module name="scipy.stats._qmc" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.10/site-packages/scipy/stats/_qmc.py" distribution="scipy">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="40" merged_total="6081" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="40" merged_total="5082" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="39" merged_total="999" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -17057,8 +17058,8 @@
     </module_usages>
   </module>
   <module name="sklearn.datasets._lfw" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/datasets/_lfw.py" distribution="scikit-learn">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="24" merged_total="2118" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="24" merged_total="353" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="24" merged_total="2114" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="24" merged_total="352" />
     <code-generation-time time="volatile" />
     <distribution-usages>
       <distribution-usage name="numpy" />
@@ -17173,7 +17174,7 @@
     </module_usages>
   </module>
   <module name="sklearn.datasets._samples_generator" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/datasets/_samples_generator.py" distribution="scikit-learn">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="66" merged_total="6025" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="66" merged_total="5018" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="61" merged_total="1007" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -18754,8 +18755,8 @@
     </module_usages>
   </module>
   <module name="sklearn.externals.array_api_compat.torch._aliases" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/externals/array_api_compat/torch/_aliases.py" distribution="scikit-learn">
-    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="3226" />
-    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="621" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="15" merged_total="3223" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="14" merged_total="620" />
     <code-generation-time time="volatile" />
     <module_usages>
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
@@ -19199,7 +19200,7 @@
     </module_usages>
   </module>
   <module name="sklearn.feature_selection._mutual_info" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/feature_selection/_mutual_info.py" distribution="scikit-learn">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="31" merged_total="1158" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="31" merged_total="970" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="30" merged_total="188" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -19569,7 +19570,7 @@
     </module_usages>
   </module>
   <module name="sklearn.inspection._partial_dependence" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/inspection/_partial_dependence.py" distribution="scikit-learn">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="52" merged_total="2619" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="52" merged_total="1869" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="48" merged_total="375" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -19997,7 +19998,7 @@
     </module_usages>
   </module>
   <module name="sklearn.linear_model._least_angle" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/linear_model/_least_angle.py" distribution="scikit-learn">
-    <optimization-time pass="1" time="volatile" micro_passes="8" max_branch_merge="191" merged_total="8126" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="191" merged_total="7120" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="184" merged_total="1006" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -20096,7 +20097,7 @@
     </module_usages>
   </module>
   <module name="sklearn.linear_model._omp" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/linear_model/_omp.py" distribution="scikit-learn">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="49" merged_total="3732" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="49" merged_total="3114" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="48" merged_total="618" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -21702,7 +21703,7 @@
     </module_usages>
   </module>
   <module name="sklearn.neural_network._multilayer_perceptron" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/neural_network/_multilayer_perceptron.py" distribution="scikit-learn">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="29" merged_total="4573" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="29" merged_total="3822" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="25" merged_total="751" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -21968,7 +21969,7 @@
     </module_usages>
   </module>
   <module name="sklearn.preprocessing._polynomial" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/preprocessing/_polynomial.py" distribution="scikit-learn">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="63" merged_total="4302" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="63" merged_total="3587" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="62" merged_total="715" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -22026,7 +22027,7 @@
     <module_usages />
   </module>
   <module name="sklearn.random_projection" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/random_projection.py" distribution="scikit-learn">
-    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="1019" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="20" merged_total="1015" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="20" merged_total="230" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -23337,7 +23338,7 @@
     <module_usages />
   </module>
   <module name="sklearn.utils.optimize" kind="CompiledPythonModule" usage="root_module" reason="Root module" source_path="${sys.prefix}/lib/python3.10/site-packages/sklearn/utils/optimize.py" distribution="scikit-learn">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="35" merged_total="1118" />
+    <optimization-time pass="1" time="volatile" micro_passes="5" max_branch_merge="35" merged_total="937" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="28" merged_total="181" />
     <code-generation-time time="volatile" />
     <distribution-usages>
@@ -23536,7 +23537,7 @@
     </module_usages>
   </module>
   <module name="ssl" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/ssl.py">
-    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="45" merged_total="6146" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="45" merged_total="6148" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="sys" finding="absolute" line="94" reason="import" />
@@ -23896,7 +23897,7 @@
     </module_usages>
   </module>
   <module name="typing" kind="UncompiledPythonModule" usage="import" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.10/typing.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="25" merged_total="17317" />
+    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="25" merged_total="17346" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="abc" finding="absolute" line="22" reason="import" />
@@ -23990,7 +23991,7 @@
     </module_usages>
   </module>
   <module name="urllib.response" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/urllib/response.py">
-    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="8" merged_total="395" />
+    <optimization-time pass="1" time="volatile" micro_passes="4" max_branch_merge="8" merged_total="503" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="tempfile" finding="absolute" line="9" reason="import" />
@@ -24006,7 +24007,7 @@
     </module_usages>
   </module>
   <module name="uuid" kind="UncompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.real_prefix}/lib/python3.10/uuid.py">
-    <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="36" merged_total="3206" />
+    <optimization-time pass="1" time="volatile" micro_passes="6" max_branch_merge="36" merged_total="2778" />
     <optimization-time pass="2" time="volatile" />
     <module_usages>
       <module_usage name="os" finding="absolute" line="47" reason="import" />
