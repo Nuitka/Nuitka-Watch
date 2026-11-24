@@ -16,11 +16,21 @@ just the final DLLs.
 - Local git worktree changes in this repository
 - The Nuitka release version under review, e.g. `4.1rc11`
 - The relevant upstream changelog excerpt or release notes
+- Run provenance:
+  - standard and commercial binary checkouts and their reported versions
+  - `NUITKA_EXTRA_OPTIONS` and `--nuitka-update-mode`
+  - whether `fake-x11-display.sh` was sourced for GUI cases
+  - whether the run was partial or resumed
+
+  The report `<command_line>` and `<user-data>` entries are the authoritative record; the
+  `nuitka_version` string alone does not identify the build.
 
 ## Scope
 
 - Prefer reviewing tracked result files under `cases/**/result/**`
-- Separate staged changes from unstaged and untracked changes
+- Staged changes are mostly what `auto-stage.sh` identified and the user accepted. They are
+  generally more informative, but are supposed to be harmless for the review. Still check them,
+  but treat unstaged and untracked changes as the primary review target.
 - Treat broad auto-generated report refreshes differently from
   hand-curated case changes
 - Do not review report schema compatibility itself; schema shape may
@@ -40,16 +50,33 @@ just the final DLLs.
    git diff --cached --name-only
    ```
 
+1b. Establish run provenance and completeness.
+
+   Read the report `<command_line>` and `<user-data>` entries. Confirm:
+
+   - standard/commercial binary versions and flavor
+   - `NUITKA_EXTRA_OPTIONS` and `--nuitka-update-mode`
+   - whether GUI cases had a usable X display (`fake-x11-display.sh`)
+   - whether the run is partial: `compiled-exit.txt`, non-empty stderr, short or empty stdout, or
+     later cases that were never refreshed
+
+   The `nuitka_version` string alone does not identify the build; two runs can report the same
+   version and differ by commit or options.
+
 2. Split the diff into buckets.
 
    Classify changes into:
 
-   - staged report version bumps
-   - unstaged tracked result refreshes
-   - new result trees for new cases
+   - staged changes: mostly `auto-stage.sh` output accepted by the user; generally more informative
+     but expected to be harmless for review
+   - unstaged tracked result refreshes: the primary review target
+   - untracked result trees for new cases or results not yet staged: the primary review target
    - non-result changes, if any
 
-3. Check whether staged XML changes are only version-header updates.
+3. Check whether staged XML changes are only version-header or optimization-time updates.
+
+   Staged changes are expected to be harmless. If they contain payload, plugin, or runtime-output
+   changes, treat that as a finding rather than assuming `auto-stage.sh` was correct.
 
    Typical command:
 
@@ -187,6 +214,12 @@ just the final DLLs.
 
 ## Review Heuristics
 
+- Staged changes are mostly `auto-stage.sh` output accepted by the user. They are expected to be
+  harmless, but still verify `completion="yes"`, version uniformity, and payload sets; use them as
+  context while treating unstaged/untracked changes as the primary review target.
+- Establish run provenance before judging a diff. Two runs can report the same `nuitka_version` and
+  differ by commit or options; use the report command line, `nuitka_extra_options` user data, and
+  partial-run indicators.
 - Ignore report schema compatibility and field-shape churn unless the XML
   becomes malformed, loses `completion="yes"`, or no longer lets you
   inspect the packaging graph.
@@ -217,6 +250,7 @@ just the final DLLs.
 
 Produce a concise review that answers:
 
+- What is the run provenance and is the run complete?
 - What changed by kind?
 - Which changes align with the Nuitka changelog?
 - Which changes are harmless auto-generated refresh noise?

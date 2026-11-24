@@ -44,6 +44,12 @@ Key invariants the primary agent must still enforce when handling Mode 1 directl
 `compiled-stdout.txt` loss is a regression even if `OK` is printed; build junk (`result/result/`,
 `.build/`, `.dist/`, `Pipfile`-only dirs) is flagged not silently fixed.
 
+Staged result changes are mostly what `auto-stage.sh` identified and the user accepted. They are
+generally more informative but expected to be harmless for review; unstaged and untracked changes
+are the primary review target. Always establish run provenance from the report
+`<command_line>`/`<user-data>` (binaries and versions, `NUITKA_EXTRA_OPTIONS`, update mode, X display,
+partial or resumed run); the `nuitka_version` string alone does not identify the build.
+
 Do not commit. The user stages results themselves (see `auto-stage.sh`).
 
 ## Mode 2: Reproduce and fix a failing case
@@ -103,6 +109,7 @@ via slash command; primary agent may handle directly for trivial edits.
   out if they report different Nuitka versions; the commercial package version is informational
   only. To test a single checkout, invoke `nuitka-watch` directly with the desired
   `--nuitka-binary`.
+
 - On Windows, the watch runs under Git Bash (MSYS). `pipenv` is at
   `%LOCALAPPDATA%/Programs/Python/...` or `C:\Python314_64\Scripts\pipenv.exe` (mixed across
   machines, not in PowerShell's PATH -- use Git Bash).
@@ -110,3 +117,23 @@ via slash command; primary agent may handle directly for trivial edits.
   3.10-3.15, macOS 3.10-3.15.
 - `cases/*/result/*` files larger than 50 MB should be checked with `git diff --stat` before
   staging; prefer per-case `auto-stage.sh` review.
+
+### `NUITKA_EXTRA_OPTIONS`
+
+- `nuitka-watch` appends `NUITKA_EXTRA_OPTIONS` to every Nuitka compilation in the invocation. It
+  is not used for the driver itself or the standard/commercial version check. The value is split on
+  whitespace, so quote the environment variable in the shell.
+- `run-watch.sh` applies the same extra options to both flavors. Commercial-only options such as
+  `--enable-plugin=protection` will fail the standard build; run those directly with
+  `--nuitka-binary=../Nuitka-commercial/bin/nuitka` and a narrowed `--python-version` or base
+  directory.
+- The updated watch tool records a hash under
+  `<user-data><nuitka_extra_options>...</nuitka_extra_options>` and recompiles when it changes.
+  For older reports without that entry, it falls back to checking the current option tokens against
+  the report's `<command_line>`.
+- With `--nuitka-update-mode=newer`, a resumed run recompiles only the cases whose reports lack the
+  current options; completed cases skip. `force` is only needed for older reports or when option
+  provenance is uncertain.
+- Extra options are part of run provenance: the same `nuitka_version` with different
+  `NUITKA_EXTRA_OPTIONS` is not the same build. The report `<command_line>` and the
+  `nuitka_extra_options` hash are authoritative for review.

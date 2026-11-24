@@ -27,6 +27,15 @@ here; AGENTS.md Mode 1 is only a pointer to it.
 
 ## Additional invariants (reinforce, do not duplicate the workflow)
 
+- Staged result changes are mostly `auto-stage.sh` output accepted by the user. They are expected
+  to be harmless; still verify completion, version uniformity, and payload sets, but focus findings
+  on unstaged and untracked changes.
+- Establish run provenance from the report `<command_line>` and `<user-data>`: binary
+  checkouts/versions, `NUITKA_EXTRA_OPTIONS`, `--nuitka-update-mode`, whether `fake-x11-display.sh`
+  was sourced, and whether the run is partial. The same `nuitka_version` does not mean the same
+  build.
+- Flag partial runs: `compiled-exit.txt`, non-empty stderr, short or empty stdout, or later cases
+  that were never refreshed.
 - For every changed `compilation-report.xml` line 2 must be `completion="yes"`;
   `completion="exception"` is a hard regression -- report exception type, failing module/function
   and file:line from the traceback.
