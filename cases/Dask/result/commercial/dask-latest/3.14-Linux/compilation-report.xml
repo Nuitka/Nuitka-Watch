@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8'?>
-<nuitka-compilation-report nuitka_version="4.4rc13" nuitka_commercial_version="5.11.0" mode="standalone" completion="yes">
+<nuitka-compilation-report nuitka_version="4.4rc14" nuitka_commercial_version="5.11.0" mode="standalone" completion="yes">
   <scons_environment c_compiler="gcc" the_cc_name="gcc" the_compiler="gcc" />
   <module name="__future__" kind="UncompiledPythonModule" usage="stdlib" reason="Including as part of the non-excluded parts of standard library." source_path="${sys.real_prefix}/lib/python3.14/__future__.py">
     <optimization-time pass="1" time="volatile" micro_passes="7" max_branch_merge="8" merged_total="81" />
@@ -4490,6 +4490,9 @@
     <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="28" merged_total="153" />
     <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="28" merged_total="49" />
     <code-generation-time time="volatile" />
+    <distribution-usages>
+      <distribution-usage name="pyarrow" />
+    </distribution-usages>
     <module_usages>
       <module_usage name="os" finding="absolute" line="1" reason="import" />
       <module_usage name="__future__" finding="absolute" line="1" reason="import" />
@@ -4549,6 +4552,10 @@
       <module_usage name="dask.dataframe.io.to_orc" finding="not-found" line="56" reason="import fromlist" />
       <module_usage name="dask.dataframe.io.to_sql" finding="not-found" line="56" reason="import fromlist" />
       <module_usage name="dask.dataframe.utils" finding="absolute" line="73" reason="import" />
+      <module_usage name="pyarrow._substrait" finding="absolute" reason="implicit import: According to 'implicit-imports' configuration." />
+      <module_usage name="pyarrow._parquet_encryption" finding="absolute" reason="implicit import: According to 'implicit-imports' configuration." />
+      <module_usage name="pyarrow.substrait" finding="absolute" reason="implicit import: According to 'implicit-imports' configuration." />
+      <module_usage name="pyarrow.parquet.encryption" finding="absolute" reason="implicit import: According to 'implicit-imports' configuration." />
     </module_usages>
   </module>
   <module name="dask.dataframe._compat" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/dask/dataframe/_compat.py" distribution="dask">
@@ -32384,7 +32391,17 @@
     <optimization-time pass="2" time="volatile" />
     <module_usages />
   </module>
+  <module name="pyarrow._parquet_encryption" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/_parquet_encryption.cpython-314-x86_64-linux-gnu.so" distribution="pyarrow">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
   <module name="pyarrow._s3fs" kind="PythonExtensionModule" usage="import" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/_s3fs.cpython-314-x86_64-linux-gnu.so" distribution="pyarrow">
+    <optimization-time pass="1" time="volatile" />
+    <optimization-time pass="2" time="volatile" />
+    <module_usages />
+  </module>
+  <module name="pyarrow._substrait" kind="PythonExtensionModule" usage="plugin:implicit-imports" reason="Extension module needed for standalone mode." source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/_substrait.cpython-314-x86_64-linux-gnu.so" distribution="pyarrow">
     <optimization-time pass="1" time="volatile" />
     <optimization-time pass="2" time="volatile" />
     <module_usages />
@@ -32622,6 +32639,22 @@
       <module_usage name="pyarrow.dataset" finding="absolute" line="157" reason="import" />
       <module_usage name="pyarrow.dataset" finding="absolute" line="1410" reason="import" />
       <module_usage name="pyarrow.dataset" finding="absolute" line="2280" reason="import" />
+    </module_usages>
+  </module>
+  <module name="pyarrow.parquet.encryption" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/parquet/encryption.py" distribution="pyarrow">
+    <optimization-time pass="1" time="volatile" micro_passes="2" max_branch_merge="7" merged_total="14" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="7" merged_total="7" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="pyarrow._parquet_encryption" finding="absolute" line="19" reason="import" />
+    </module_usages>
+  </module>
+  <module name="pyarrow.substrait" kind="CompiledPythonModule" usage="plugin:implicit-imports" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/substrait.py" distribution="pyarrow">
+    <optimization-time pass="1" time="volatile" micro_passes="3" max_branch_merge="8" merged_total="45" />
+    <optimization-time pass="2" time="volatile" micro_passes="1" max_branch_merge="8" merged_total="13" />
+    <code-generation-time time="volatile" />
+    <module_usages>
+      <module_usage name="pyarrow._substrait" finding="absolute" line="19" reason="import" />
     </module_usages>
   </module>
   <module name="pyarrow.types" kind="CompiledPythonModule" usage="import" reason="Instructed by user to follow to all modules." source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/types.py" distribution="pyarrow">
@@ -54075,6 +54108,7 @@
   <included_dll name="libarrow_compute.so.2600" dest_path="libarrow_compute.so.2600" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/libarrow_compute.so.2600" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" tags="copy" />
   <included_dll name="libarrow_dataset.so.2600" dest_path="libarrow_dataset.so.2600" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/libarrow_dataset.so.2600" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" tags="copy" />
   <included_dll name="libarrow_python.so.2600" dest_path="libarrow_python.so.2600" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/libarrow_python.so.2600" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" tags="copy" />
+  <included_dll name="libarrow_python_parquet_encryption.so.2600" dest_path="libarrow_python_parquet_encryption.so.2600" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/libarrow_python_parquet_encryption.so.2600" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_parquet_encryption.so'" tags="copy" />
   <included_dll name="libarrow_s3.so.2600" dest_path="libarrow_s3.so.2600" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/libarrow_s3.so.2600" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_s3fs.so'" tags="copy" />
   <included_dll name="libarrow_substrait.so.2600" dest_path="libarrow_substrait.so.2600" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/libarrow_substrait.so.2600" package="pyarrow" ignored="no" reason="Used by 'pyarrow/_acero.so'" tags="copy" />
   <included_dll name="libbz2.so.1.0" dest_path="libbz2.so.1.0" source_path="/lib/x86_64-linux-gnu/libbz2.so.1.0" package="" ignored="no" reason="Used by '_bz2.so'" tags="copy" />
@@ -54190,7 +54224,9 @@
   <included_extension name="_json.so" dest_path="pyarrow/_json.so" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/_json.cpython-314-x86_64-linux-gnu.so" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_orc.so" dest_path="pyarrow/_orc.so" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/_orc.cpython-314-x86_64-linux-gnu.so" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_parquet.so" dest_path="pyarrow/_parquet.so" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/_parquet.cpython-314-x86_64-linux-gnu.so" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_parquet_encryption.so" dest_path="pyarrow/_parquet_encryption.so" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/_parquet_encryption.cpython-314-x86_64-linux-gnu.so" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="_s3fs.so" dest_path="pyarrow/_s3fs.so" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/_s3fs.cpython-314-x86_64-linux-gnu.so" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
+  <included_extension name="_substrait.so" dest_path="pyarrow/_substrait.so" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/_substrait.cpython-314-x86_64-linux-gnu.so" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="lib.so" dest_path="pyarrow/lib.so" source_path="${sys.prefix}/lib/python3.14/site-packages/pyarrow/lib.cpython-314-x86_64-linux-gnu.so" package="pyarrow" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="pyexpat.so" dest_path="pyexpat.so" source_path="${sys.real_prefix}/lib/python3.14/lib-dynload/pyexpat.cpython-314-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
   <included_extension name="readline.so" dest_path="readline.so" source_path="${sys.real_prefix}/lib/python3.14/lib-dynload/readline.cpython-314-x86_64-linux-gnu.so" package="" ignored="no" reason="used extension module" tags="copy" />
@@ -54377,7 +54413,9 @@
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pyarrow/_json.so" reason="no outside dependencies allowed for 'pyarrow._json'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pyarrow/_orc.so" reason="no outside dependencies allowed for 'pyarrow._orc'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pyarrow/_parquet.so" reason="no outside dependencies allowed for 'pyarrow._parquet'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pyarrow/_parquet_encryption.so" reason="no outside dependencies allowed for 'pyarrow._parquet_encryption'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pyarrow/_s3fs.so" reason="no outside dependencies allowed for 'pyarrow._s3fs'" />
+  <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pyarrow/_substrait.so" reason="no outside dependencies allowed for 'pyarrow._substrait'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="pyarrow/lib.so" reason="no outside dependencies allowed for 'pyarrow.lib'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="scipy/_lib/_uarray/_uarray.so" reason="no outside dependencies allowed for 'scipy._lib._uarray._uarray'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="scipy/fft/_duccfft/pyduccfft.so" reason="no outside dependencies allowed for 'scipy.fft._duccfft.pyduccfft'" />
@@ -54436,10 +54474,10 @@
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="sklearn/utils/_fast_dict.so" reason="no outside dependencies allowed for 'sklearn.utils._fast_dict'" />
   <excluded_dll name="/lib/x86_64-linux-gnu/libgcc_s.so.1" used_by="sklearn/utils/_vector_sentinel.so" reason="no outside dependencies allowed for 'sklearn.utils._vector_sentinel'" />
   <performance-totals>
-    <optimization-time pass="1" time="volatile" module_count="2974" />
-    <optimization-time pass="2" time="volatile" module_count="2974" />
-    <optimization-time pass="all" time="volatile" module_count="2974" />
-    <code-generation-time time="volatile" module_count="1898" />
+    <optimization-time pass="1" time="volatile" module_count="2978" />
+    <optimization-time pass="2" time="volatile" module_count="2978" />
+    <optimization-time pass="all" time="volatile" module_count="2978" />
+    <code-generation-time time="volatile" module_count="1900" />
   </performance-totals>
   <python_binary filename="DaskUsing.bin" backend_resource_mode="incbin" reproducible="yes" size="volatile" />
   <command_line>
