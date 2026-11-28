@@ -18,6 +18,34 @@ permission:
     grep*: allow
     ls*: allow
     cat*: allow
+    cd*: allow
+    Set-Location*: allow
+    Push-Location*: allow
+    Pop-Location*: allow
+    Get-*: allow
+    Test-*: allow
+    Select-*: allow
+    Where-Object*: allow
+    ForEach-Object*: allow
+    Sort-Object*: allow
+    Group-Object*: allow
+    Compare-Object*: allow
+    Measure-Object*: allow
+    Format-Table*: allow
+    Format-List*: allow
+    Format-Wide*: allow
+    Format-Custom*: allow
+    Out-String*: allow
+    ConvertTo-*: allow
+    ConvertFrom-*: allow
+    Join-Path*: allow
+    Split-Path*: allow
+    Resolve-Path*: allow
+    Write-Output*: allow
+    Write-Host*: allow
+    '$_.DirectoryName.Replace*': allow
+    DistMap*: allow
+    '*.ContainsKey(*': allow
     rm*: allow
     '*': ask
 ---
