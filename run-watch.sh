@@ -111,12 +111,16 @@ else
     declare -a PYTHON_VERSIONS=("3.10" "3.12" "3.13" "3.14" "3.15")
 fi
 
-# Allow limiting to a single Python version via --python-version=X argument.
+# Allow limiting to a single Python version via --python-version=X argument,
+# and to the standard flavor only via --standard-only argument.
 FILTERED_ARGS=()
 SELECTED_PYTHON_VERSION=""
+STANDARD_ONLY=0
 for arg in "$@"; do
     if [[ "$arg" == --python-version=* ]]; then
         SELECTED_PYTHON_VERSION="${arg#--python-version=}"
+    elif [[ "$arg" == --standard-only ]]; then
+        STANDARD_ONLY=1
     else
         FILTERED_ARGS+=("$arg")
     fi
@@ -140,7 +144,7 @@ fi
 
 NUITKA_BINARIES=("$NUITKA_STANDARD_BINARY")
 
-if [ -f "$NUITKA_COMMERCIAL_BINARY" ]
+if [ -f "$NUITKA_COMMERCIAL_BINARY" ] && [ "$STANDARD_ONLY" -eq 0 ]
 then
     NUITKA_BINARIES+=("$NUITKA_COMMERCIAL_BINARY")
 fi
